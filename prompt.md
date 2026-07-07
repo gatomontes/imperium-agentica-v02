@@ -33,16 +33,39 @@ Before proposing architecture, writing code, creating files, naming concepts, mo
 1. `README.md` — constitutional orientation.
 2. `current-step.md` — active operational context.
 3. `next-steps.md` — pending operational queue.
-4. `ideas.md` — raw pre-draft candidates, only if relevant.
-5. `drafts/` — shaped but unproven artifacts, only if relevant.
+4. `drafts/terminology.md` — canonical term definitions and controlled vocabulary.
+5. `ideas.md` — raw pre-draft candidates, only if relevant.
+6. `drafts/` — shaped but unproven artifacts, only if relevant.
 
 Treat `README.md` as constitutional doctrine.
 
 Treat `current-step.md` and `next-steps.md` as continuity surfaces, not doctrine and not a roadmap.
 
+Treat `drafts/terminology.md` as the canonical vocabulary surface, while remembering it remains a draft artifact.
+
 Treat `ideas.md` as pre-draft staging, not doctrine, not a backlog, and not an archive.
 
 Treat `drafts/` as shaped but unproven work, not admitted architecture.
+
+---
+
+## Canonical Term Resolution
+
+Controlled terms are defined in `drafts/terminology.md` using the `@canon:` marker.
+
+The marker acts as a pseudo-variable for canonical meaning.
+
+Before using, redefining, renaming, extending, or creating a controlled term, resolve it from `drafts/terminology.md`.
+
+If a term has an `@canon:` entry, use that definition.
+
+If a term does not have an `@canon:` entry, do not assume it is canonical.
+
+If a proposed term conflicts with an existing `@canon:` definition, surface the conflict before writing.
+
+If a term is directional, do not treat it as admitted architecture.
+
+If a term is restricted, avoid it unless the context explicitly requires it.
 
 ---
 
