@@ -22,9 +22,21 @@ Standardize terms before terms start pretending to be structure.
 
 ## Canonical Definition Mechanism
 
-A canonical definition is marked with the `@canon:` prefix.
+Canonical definitions use two related markers:
 
-Format:
+```text
+@canon:<term-id>
+```
+
+inside this file defines a canonical term.
+
+```text
+@canon(<term-id>)
+```
+
+outside this file references a canonical term and instructs the reader to resolve it here.
+
+Definition format:
 
 ```text
 @canon:<term-id>
@@ -38,7 +50,7 @@ Notes: <optional clarification>
 
 A term with an `@canon:` marker is the canonical definition for that term inside Imperium.
 
-When an LLM encounters a controlled term, it must resolve the term here before using, redefining, renaming, or extending it.
+When an LLM encounters `@canon(<term-id>)`, it must search this file for `@canon:<term-id>` before interpreting, using, redefining, renaming, or extending that term.
 
 If a term is not listed here, the LLM must not assume it is canonical.
 
@@ -211,7 +223,8 @@ Files changed:
 Assumptions introduced:
 
 - Controlled terminology will reduce operator and LLM ambiguity.
-- `@canon:` markers can act as pseudo-variables for canonical definitions.
+- `@canon:` markers define canonical terms.
+- `@canon(<term-id>)` references canonical terms from other documents.
 - Canonical definitions can remain draft-bound until proven.
 
 Behavior proven:
@@ -227,4 +240,4 @@ Risks remaining:
 
 Recommended next smallest step:
 
-- Update `prompt.md` so future LLM sessions must resolve controlled terms through `drafts/terminology.md` before using or extending them.
+- Use `@canon(<term-id>)` in another document only when a controlled term needs explicit resolution.
