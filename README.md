@@ -109,6 +109,24 @@ Anything else is conceptual mass.
 
 ---
 
+## LLM Reading Order
+
+A future LLM session should read the repository in this order:
+
+1. `README.md` — constitutional orientation.
+2. `current-step.md` — active operational context.
+3. `next-steps.md` — pending operational queue.
+4. `ideas.md` — raw pre-draft candidates, only if needed.
+5. `drafts/` — shaped but unproven artifacts, only if relevant to the current step.
+
+Do not reconstruct intent from chat history before reading these files.
+
+Do not treat operational files as doctrine.
+
+Do not treat draft files as admitted architecture.
+
+---
+
 ## Repository Layout Principle
 
 The repository layout is not merely organization.
@@ -154,6 +172,39 @@ No structure is sacred.
 A concept may return to an earlier state when later complexity contests it.
 
 It must then earn promotion again.
+
+---
+
+## Progress Principle
+
+Progress is not memory.
+
+Progress must be visible.
+
+Imperium uses two operational trail files:
+
+```text
+/current-step.md
+/next-steps.md
+```
+
+`current-step.md` describes the active operational focus and must provide enough context for an LLM to continue without relying on chat history.
+
+`next-steps.md` is an ordered queue of candidate next actions.
+
+It is not a roadmap.
+
+When a step becomes current, remove it from `next-steps.md` and place it in `current-step.md`.
+
+Do not duplicate active work across both files.
+
+When the current step is completed, revised, invalidated, or demoted, update `current-step.md` accordingly.
+
+If there is no active step, `current-step.md` must say so explicitly.
+
+These files do not admit a planning layer.
+
+They exist to reduce confusion for future LLM sessions.
 
 ---
 
