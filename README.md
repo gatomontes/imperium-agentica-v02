@@ -123,11 +123,25 @@ Movement is current evidence.
 
 Every new concept begins in uncertainty unless there is already evidence that it belongs elsewhere.
 
-The default home for uncertain work is:
+The pre-draft home for raw candidate ideas is:
+
+```text
+/ideas.md
+```
+
+The default home for shaped but unproven artifacts is:
 
 ```text
 /drafts
 ```
+
+`ideas.md` is not doctrine, not a backlog, and not an archive.
+
+It holds ideas that have not yet earned their own draft artifact.
+
+When an idea becomes a draft, is rejected, is merged, is absorbed, or is superseded, it is removed from `ideas.md`.
+
+The repository history preserves the movement.
 
 Files may be promoted, demoted, renamed, split, merged, retired, restored, or deleted as evidence changes.
 
