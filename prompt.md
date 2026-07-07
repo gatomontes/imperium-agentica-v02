@@ -53,7 +53,9 @@ Treat `drafts/` as shaped but unproven work, not admitted architecture.
 
 Controlled terms are defined in `drafts/terminology.md` using the `@canon:` marker.
 
-The marker acts as a pseudo-variable for canonical meaning.
+Controlled terms are referenced from other documents using `@canon(<term-id>)`.
+
+`@canon(<term-id>)` is a reader instruction: search `drafts/terminology.md` for `@canon:<term-id>` before interpreting the term.
 
 Before using, redefining, renaming, extending, or creating a controlled term, resolve it from `drafts/terminology.md`.
 
