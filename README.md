@@ -109,6 +109,40 @@ Anything else is conceptual mass.
 
 ---
 
+## Repository Layout Principle
+
+The repository layout is not merely organization.
+
+It is provenance.
+
+A file's location records its present burden of proof.
+
+Movement is not graduation.
+
+Movement is current evidence.
+
+Every new concept begins in uncertainty unless there is already evidence that it belongs elsewhere.
+
+The default home for uncertain work is:
+
+```text
+/drafts
+```
+
+Files may be promoted, demoted, renamed, split, merged, retired, restored, or deleted as evidence changes.
+
+No location is permanent.
+
+No admission is irreversible.
+
+No structure is sacred.
+
+A concept may return to an earlier state when later complexity contests it.
+
+It must then earn promotion again.
+
+---
+
 ## Operating Principle
 
 Imperium v02 discovers its architecture.
