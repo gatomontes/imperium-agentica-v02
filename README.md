@@ -87,6 +87,28 @@ The standards are not.
 
 ---
 
+## Main Objective
+
+Imperium exists to discover, test, strengthen, and refine the behaviors that produce reliable agentic patterns.
+
+Its ultimate direction is the engineering, governance, forging, deployment, and continuous refinement of fortified archetypes and the operatives formed from them.
+
+But v02 does not begin by assuming that ecosystem.
+
+It does not begin by assuming archetypes, operatives, governance, deployment, runtime, or forge.
+
+Those names are directional, not admitted architecture.
+
+They become real only when repeated evidence proves that the behavior beneath them is necessary, stable, and worth preserving.
+
+This must remain the main objective at all times:
+
+> Build only what strengthens the proven pattern or the operative formed from it.
+
+Anything else is conceptual mass.
+
+---
+
 ## Operating Principle
 
 Imperium v02 discovers its architecture.
