@@ -22,22 +22,23 @@ Do not duplicate active work across both files.
 
 ## Queue
 
-### 1. Apply Imperium governance to the next proposed concept
+### 1. Review the next proposed concept against Imperium governance
 
 Reason:
-The governance draft says the next smallest step is to apply Imperium governance before creating any code or additional structure.
+The governance draft says the next smallest step is to test proposed concepts before creating any code or additional structure.
 
 Relevant files:
 
 - `README.md`
 - `drafts/governance.md`
+- `drafts/terminology.md`
 - `current-step.md`
 
 Promotion condition:
-This becomes current after the operational trail files are admitted and the next Imperium concept is proposed.
+This becomes current after the next Imperium concept is proposed and the operator asks for review or approval.
 
 Removal or demotion condition:
-Remove or demote this step if the governance draft is revised, removed, or found too ceremonial before it is applied.
+Remove or demote this step if the governance draft is revised, removed, or found too ceremonial before it is used.
 
 ---
 
