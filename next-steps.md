@@ -22,7 +22,46 @@ Do not duplicate active work across both files.
 
 ## Queue
 
-### 1. Review the next proposed concept against Imperium governance
+### 1. Review whether Mayo's Governance reduces confusion or creates conceptual mass
+
+Reason:
+`drafts/mayos-governance.md` introduces a higher construction doctrine to distinguish Mayo's Governance from Imperium governance. The distinction may help future LLM sessions, but it may also harden into premature hierarchy.
+
+Relevant files:
+
+- `README.md`
+- `current-step.md`
+- `drafts/mayos-governance.md`
+- `drafts/governance.md`
+- `drafts/terminology.md`
+
+Promotion condition:
+This becomes current after the Mayo's Governance draft is used by at least one future LLM session, or if the operator asks to revise, promote, simplify, or canonize the doctrine.
+
+Removal or demotion condition:
+Remove or demote this step if the draft is deleted, merged into another document, or proves unnecessary.
+
+---
+
+### 2. Decide whether `Mayo's Governance` needs canonical terminology
+
+Reason:
+The term may become a recurring controlled concept. Canonical terminology should only be added if repeated use shows that uncontrolled interpretation creates ambiguity.
+
+Relevant files:
+
+- `drafts/mayos-governance.md`
+- `drafts/terminology.md`
+
+Promotion condition:
+This becomes current if multiple documents begin referencing Mayo's Governance or if an LLM session misinterprets it as Imperium runtime architecture.
+
+Removal or demotion condition:
+Remove or demote this step if the term remains understandable without canonical control.
+
+---
+
+### 3. Review the next proposed concept against Imperium governance
 
 Reason:
 The governance draft says the next smallest step is to test proposed concepts before creating any code or additional structure.
@@ -42,7 +81,7 @@ Remove or demote this step if the governance draft is revised, removed, or found
 
 ---
 
-### 2. Review whether `drafts/governance.md` remains too noun-heavy
+### 4. Review whether `drafts/governance.md` remains too noun-heavy
 
 Reason:
 The governance draft itself identifies noun-heaviness and premature scope language as remaining risks.
@@ -59,7 +98,7 @@ Remove or demote this step if the draft is deleted, superseded, or proves clear 
 
 ---
 
-### 3. Decide whether progress tracking needs revision after first use
+### 5. Decide whether progress tracking needs revision after first use
 
 Reason:
 `current-step.md` and `next-steps.md` are new operational surfaces. Their usefulness is unproven until a step moves between them.
