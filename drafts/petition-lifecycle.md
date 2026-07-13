@@ -201,7 +201,7 @@ A Work Order should identify:
 Source petition:
 Expected output:
 Production objective:
-Assigned mode or persona:
+Production lane:
 Required inputs:
 Constraints:
 Reporting path:
@@ -211,6 +211,38 @@ First production pass:
 The Work Order is where production begins.
 
 The Petition is where production is requested.
+
+The Work Order must not assume Mayo's private tools are Imperium components.
+
+MGov Builder, MGov Reviewer, and Blackquill may be used by the operator to construct or inspect Imperium artifacts, but they are not admitted as Imperium production roles, routing stages, or architectural elements.
+
+---
+
+## Private Construction Tools Boundary
+
+Mayo's private tools remain outside Imperium.
+
+These include, at minimum:
+
+- Mayo's Governance parent persona
+- MGov Builder
+- MGov Reviewer
+- Blackquill as critique or refinement lens
+
+They may shape Imperium.
+
+They may help the operator draft, revise, or inspect Imperium artifacts.
+
+They are not produced by Imperium.
+
+They are not owned by Imperium.
+
+They do not sit inside Imperium's production line.
+
+```text
+Mayo's private tools may build Imperium.
+Imperium does not contain Mayo's private tools.
+```
 
 ---
 
@@ -243,6 +275,9 @@ This draft does not admit:
 - a governance layer
 - an operative hierarchy
 - a database or ledger
+- MGov Builder as an Imperium component
+- MGov Reviewer as an Imperium component
+- Blackquill as an Imperium component
 
 Those may be proposed later only if repeated pressure proves them necessary.
 
@@ -259,6 +294,7 @@ Review or revise this draft if:
 - every incomplete request is rejected instead of clarified
 - the Petition becomes a hidden command authority
 - Citadel or Foundry mechanics are reintroduced by implication
+- Mayo's private tools are treated as Imperium architecture
 - the production line is designed before the entry boundary is tested
 
 ---
@@ -275,6 +311,7 @@ Assumptions introduced:
 - The Petition can be operator-facing and conversation-shaped.
 - Doability is a simple routing threshold at this stage.
 - Work Orders, not Petitions, enter production.
+- Mayo's private tools can help construct Imperium without becoming Imperium architecture.
 
 Behavior proven:
 
@@ -286,6 +323,7 @@ Risks remaining:
 - Petition may become another ceremonial noun.
 - Doability may drift into either over-analysis or rubber-stamping.
 - Work Order mechanics may be overbuilt before Petition intake is tested.
+- The distinction between private construction tools and Imperium mechanics may need reinforcement through use.
 
 Recommended next smallest step:
 
