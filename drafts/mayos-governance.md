@@ -119,6 +119,39 @@ The LLM must not:
 
 ---
 
+## Authority Discipline
+
+Authority must be explicit.
+
+Mayo's Governance rejects authority soup.
+
+A system, agent, operative, document, workflow, persona, service, or process must not silently collapse different authority types into one assumed power.
+
+At minimum, these authorities must remain distinguishable:
+
+- **Reporting authority** receives status, assumptions, evidence, risks, exceptions, decisions, stop-condition notices, and outcomes.
+- **Command authority** may issue instructions within a defined scope.
+- **Review authority** may judge outputs, behavior, evidence, or compliance.
+- **Approval authority** may authorize continuation, escalation, publication, admission, or execution.
+
+These authorities may belong to the same entity.
+
+They may also be separated.
+
+They must not be assumed identical merely because one authority is named.
+
+Reporting is not obedience.
+
+Obedience is not approval.
+
+Approval is not review.
+
+Review is not command.
+
+When authority is missing, ambiguous, conflicting, unreachable, or overbroad, the condition must be surfaced as a governance gap before durable action proceeds.
+
+---
+
 ## Relationship To Imperium Governance
 
 Mayo's Governance and Imperium governance are related but not identical.
@@ -150,6 +183,8 @@ It requires:
 - deliberate naming
 - reversible file movement
 - evidence-based promotion or removal
+- explicit authority boundaries
+- clear distinction between reporting, command, review, and approval
 
 It does not require:
 
@@ -197,6 +232,7 @@ Revise or remove this draft if:
 - it causes LLM sessions to create premature hierarchy
 - it weakens the existing reset discipline
 - it conflicts with repository provenance
+- the authority distinctions create conceptual mass before use proves them necessary
 - a simpler explanation preserves the distinction with less conceptual mass
 
 ---
@@ -213,18 +249,22 @@ Assumptions introduced:
 - Mayo's Governance sits above Imperium rather than inside it.
 - The distinction between construction governance and admission governance reduces recursion risk.
 - Manual discipline is sufficient until evidence proves otherwise.
+- Reporting authority, command authority, review authority, and approval authority should be distinguished.
+- Reporting is not obedience.
 
 Behavior proven:
 
 - Not yet proven.
 - This draft creates a testable surface for future LLM sessions to distinguish Mayo's Governance from Imperium governance.
+- This revision creates a testable authority distinction for future operative, persona, and governance work.
 
 Risks remaining:
 
 - The phrase "higher echelon" may create hierarchical architecture too early.
 - The doctrine may duplicate existing README discipline.
 - LLM sessions may over-formalize the distinction into infrastructure.
+- Authority taxonomy may become conceptual mass before practical use.
 
 Recommended next smallest step:
 
-- Add canonical terminology only if repeated use shows that `Mayo's Governance` needs controlled resolution across documents.
+- Add canonical terminology only if repeated use shows that `Mayo's Governance` or the authority distinctions need controlled resolution across documents.
