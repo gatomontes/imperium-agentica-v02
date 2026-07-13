@@ -6,9 +6,9 @@ Draft.
 
 This file defines the provisional Work Order boundary for Imperium production.
 
-It does not admit a production runtime, queue engine, automated router, Citadel, Foundry, operative hierarchy, or implementation system.
+It does not admit a production runtime, queue engine, automated router, Citadel, Foundry, operative hierarchy, pass engine, or implementation system.
 
-It defines the first governed production request formed after a Petition is marked doable.
+It defines the authorization boundary that appears after a Petition is marked doable and before a Job begins.
 
 ---
 
@@ -16,21 +16,28 @@ It defines the first governed production request formed after a Petition is mark
 
 A Petition requests evaluation.
 
-A Work Order begins production.
+A Work Order authorizes work.
 
-A Work Order is created only after a Petition is marked doable.
+A Job performs the authorized work.
+
+A Product is the resulting artifact.
 
 ```text
 Raw intent
 → Petition
 → Doability evaluation
 → Work Order
-→ Production line
+→ Job
+→ Product
 ```
 
-The Work Order is not the final product.
+A Work Order is created only after a Petition is marked doable.
 
-It is the admitted production item that tells Imperium what kind of product is being made, why it is being made, and what minimum boundaries govern the first production pass.
+A Work Order is not the Job.
+
+A Work Order does not itself perform production.
+
+It authorizes a Job by naming the product type, production objective, authority boundary, constraints, reporting path, and initial conditions under which the Job may proceed.
 
 ---
 
@@ -38,24 +45,68 @@ It is the admitted production item that tells Imperium what kind of product is b
 
 A Petition may be conversational, exploratory, incomplete, or provisional.
 
-A Work Order must be production-shaped.
+A Work Order must be authorization-shaped.
 
-A Work Order must identify:
-
-```text
-Source petition:
-Product type:
-Production objective:
-Required inputs:
-Known constraints:
-Reporting path:
-First production pass:
-Completion target:
-```
+A Petition becomes eligible for Work Order conversion only when it is marked doable and has a recognized product type.
 
 Do not convert a Petition into a Work Order merely because it sounds actionable.
 
-A Petition becomes a Work Order only when it is marked doable and has a recognized product type.
+A Work Order should identify:
+
+```text
+Source petition:
+Doability mark:
+Authorized product type:
+Production objective:
+Authority granted:
+Known constraints:
+Required inputs:
+Reporting path:
+Job authorization:
+Initial Job boundary:
+Completion target:
+```
+
+The Petition asks whether work may be considered.
+
+The Work Order says work may be attempted.
+
+The Job defines how the work will be carried out.
+
+---
+
+## Relationship To Job
+
+A Job is the organized work authorized by a Work Order.
+
+A Job is the series of preparatory, execution, review, revision, and delivery steps involved in completing the authorized work.
+
+A Work Order authorizes one Job unless explicitly stated otherwise.
+
+A Job should identify:
+
+```text
+Source Work Order:
+Job objective:
+Expected product:
+Required inputs:
+Preparatory steps:
+Execution steps:
+Review or check steps:
+Revision steps if needed:
+Reporting moments:
+Stop conditions:
+Completion criteria:
+Delivery target:
+```
+
+A Job may require multiple passes.
+
+Those passes belong to the Job, not to the Work Order.
+
+The Work Order preserves authorization.
+
+The Job preserves execution structure.
 
 ---
 
@@ -237,6 +288,7 @@ Examples may include:
 
 - Petition Form
 - Work Order Form
+- Job Form
 - Review Form
 - Operative Spec Form
 - End Report Form
@@ -270,29 +322,32 @@ If a Petition appears to request an unknown product type, mark it as Needs Clari
 A Work Order should answer:
 
 ```text
-What product is being made?
-Why is it being made?
-What Petition authorized production?
-What information is required?
-What constraints are known?
-What is the first production pass?
+What Petition authorized consideration?
+What doability mark permits conversion?
+What product type is authorized?
+Why is this product being authorized?
+What authority is granted to create the Job?
+What constraints are known before the Job begins?
+What information is required for the Job?
 How will progress or output be reported?
-What does completion mean for this Work Order?
+What does completion mean for this authorization?
 ```
 
 If these cannot be answered, the Petition may not be ready for Work Order conversion.
 
-Incomplete information may still permit a Work Order if the first production pass is explicitly exploratory, bounded, and reportable.
+Incomplete information may still permit a Work Order if the authorized Job is explicitly exploratory, bounded, and reportable.
 
 ---
 
-## First Production Pass
+## Job Boundary
 
 A Work Order does not need to solve the entire production path.
 
-It must identify the first production pass.
+It must authorize the Job boundary.
 
-The first pass may be:
+The Job boundary should state the first organized movement of production.
+
+The first Job movement may be:
 
 - draft
 - outline
@@ -305,7 +360,7 @@ The first pass may be:
 - form completion
 - bounded prototype
 
-The first pass must be smaller than the final product when the final product is uncertain.
+The first Job movement must be smaller than the final product when the final product is uncertain.
 
 ---
 
@@ -333,13 +388,16 @@ Those may be proposed later only if repeated production pressure proves them nec
 Review or revise this draft if:
 
 - Work Order becomes a decorative synonym for task
+- Job becomes a decorative synonym for task
 - every Petition becomes a Work Order automatically
+- every Work Order creates a Job automatically without explicit authorization
 - the product catalog grows faster than actual use
 - generic Template reappears without naming what it templates or who uses it
 - Work Orders begin assigning private MGov tools as Imperium architecture
-- the first production pass becomes too large
+- Jobs begin hiding authority that should remain in the Work Order
+- Job steps become too large for bounded production
 - completion target is confused with final admission
-- production mechanics are designed before Petition and Work Order boundaries are tested
+- production mechanics are designed before Petition, Work Order, and Job boundaries are tested
 
 ---
 
@@ -352,6 +410,8 @@ Files changed:
 Assumptions introduced:
 
 - Imperium needs a Work Order boundary after Petition doability.
+- A Work Order authorizes a Job rather than performing production itself.
+- A Job is the organized series of preparation, execution, review, revision, and delivery steps needed to complete the authorized work.
 - Work Orders require a recognized product type.
 - The initial product catalog can remain provisional and leanable.
 - Production Form is clearer than generic Template.
@@ -359,14 +419,15 @@ Assumptions introduced:
 Behavior proven:
 
 - Not yet proven.
-- This draft creates a test surface for converting a doable Petition into a production-shaped request.
+- This draft creates a test surface for converting a doable Petition into authorized Job production.
 
 Risks remaining:
 
 - Product types may still be too many.
 - Work Order may become ceremony if not tested against a real Petition.
-- Production mechanics may be overbuilt before first-pass production is understood.
+- Job may become ceremony if not tested against real production.
+- Production mechanics may be overbuilt before first Job execution is understood.
 
 Recommended next smallest step:
 
-- Convert one real doable Petition into a Work Order and decide whether the fields are sufficient or excessive.
+- Convert one real doable Petition into a Work Order, authorize a small Job, and decide whether the Petition → Work Order → Job distinction reduces ambiguity or creates ceremony.
