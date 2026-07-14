@@ -79,6 +79,7 @@ Operator
 
 - `conscription.md`
 - `guildhall.md`
+- `garrison-roster.md`
 - `foundry.md`
 - `citadel.md`
 - `pit.md`
@@ -103,6 +104,7 @@ Operator
 - `cognitive-map.md`
 - `lifecycle.md`
 - `production-artifacts.md`
+- `test-mission-001.md`
 
 ---
 
@@ -113,6 +115,7 @@ Secretariat receives and reports.
 Castellan orchestrates missions.
 Conscription orchestrates operatives.
 Guildhall researches profession patterns.
+Garrison roster exposes admitted operative availability for search.
 Foundry builds operatives.
 Citadel governs operative compliance.
 Pit tests operatives.
@@ -127,6 +130,24 @@ Judicature evaluates returns.
 Chamber of Scribes writes final reports.
 Secretariat delivers final reports.
 ```
+
+---
+
+## Stress Tests
+
+Current manual stress test:
+
+```text
+drafts2/test-mission-001.md
+```
+
+First exposed gap addressed:
+
+```text
+drafts2/garrison-roster.md
+```
+
+The roster draft exists so Conscription can test reuse before recruitment instead of assuming every mission need requires new Foundry work.
 
 ---
 
@@ -156,6 +177,7 @@ This directory does not admit:
 - Do not assume professional competence replaces mission instruction.
 - Do not assume operator intent is already mission understanding.
 - Do not assign disposition before before/after knowledge exists.
+- Do not let Garrison roster become a deployment authority.
 
 ---
 
@@ -166,3 +188,4 @@ This directory does not admit:
 - Whether `Vellum` should return as internal canonical mission record.
 - Whether `Final Report` is sufficient for operator-facing closure.
 - Which names survive use and which are only naming pressure.
+- Whether the Garrison roster fields are sufficient or excessive after the next dry run.
