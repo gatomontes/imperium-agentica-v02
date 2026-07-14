@@ -14,6 +14,20 @@ Names from Imperium v01 may appear here only as quarantined candidates or delibe
 
 ---
 
+## Current Official Draft Map
+
+The current official cognitive map is:
+
+```text
+drafts2/cognitive-map.md
+```
+
+Official means active for orientation and future drafting.
+
+Official does not mean admitted architecture, runtime design, implementation contract, service topology, database schema, UI plan, or final terminology.
+
+---
+
 ## Core Mission
 
 Imperium produces operatives.
@@ -83,6 +97,12 @@ Operator
 - `judicature.md`
 - `chamber-of-scribes.md`
 - `secretariat.md`
+
+### Cross-Cutting Map and Artifact Files
+
+- `cognitive-map.md`
+- `lifecycle.md`
+- `production-artifacts.md`
 
 ---
 
