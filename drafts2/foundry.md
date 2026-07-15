@@ -6,22 +6,26 @@ Draft.
 
 This file defines the provisional Foundry for Imperium v02.
 
-It does not admit implementation architecture, code generation runtime, autonomous build system, or product-specific workflow library.
+It does not admit implementation architecture, code-generation runtime, autonomous build machinery, or deployment-medium-specific packaging.
 
 ---
 
 ## Purpose
 
-The Foundry builds operatives.
+The Foundry forges canonical persona specifications.
 
-It receives an operative commission from the Conscription, uses relevant Guildhall profession research and Citadel governance doctrine, and produces an operative candidate for testing.
+Forging is the elaboration, from scratch, of a persona specification capable of practicing a Guildhall-defined profession and inheriting its profession-specific, governable boundaries.
+
+The Foundry does not build a mission-specific operative.
+
+A forged persona is a portable, dormant asset that may later be packaged for a deployment medium and activated as an operative, or adapted into a platform-specific skill, prompt, agent template, evaluator, or other usable artifact.
 
 ---
 
 ## Core Question
 
 ```text
-What operative must be built from this commission, profession brief, and governance boundary?
+How must this profession and its governance doctrine be cognitively constituted as a concrete, testable persona?
 ```
 
 ---
@@ -30,51 +34,89 @@ What operative must be built from this commission, profession brief, and governa
 
 The Foundry may use:
 
-- operative commission from Conscription
-- profession brief from Guildhall
-- applicable Citadel operative governance doctrine
-- operator constraints passed through the mission chain
-- existing operative patterns from Garrison, if authorized
+- approved work specification
+- profession specification from Guildhall
+- applicable Persona Governance Doctrine from Studium
+- operator constraints preserved in the work specification
+- relevant tested persona patterns, when reuse is authorized
+
+---
+
+## Responsibilities
+
+The Foundry may elaborate:
+
+- professional identity and cognitive posture
+- domain competencies and knowledge requirements
+- reasoning and decision methods
+- evidentiary and epistemic behavior
+- standard workflows
+- communication and output contracts
+- tool-use expectations
+- self-verification behavior
+- profession-specific scope, prohibitions, and escalation behavior inherited from the governing inputs
+- testable acceptance criteria
+
+The Foundry integrates governance doctrine into the persona.
+
+It does not invent missing authority or independently author the doctrine it implements.
 
 ---
 
 ## Output
 
-The Foundry produces an `Operative Candidate`.
+The Foundry produces a `Persona Specification Candidate`.
 
-An Operative Candidate should include:
+A Persona Specification Candidate may include:
 
 ```text
-Name / placeholder:
+Persona identity:
+Profession:
 Purpose:
-Profession pattern:
-Mission-relevant capability:
-Scope:
-Non-scope:
-Authority assumptions:
+Cognitive posture:
+Required competencies:
+Required knowledge:
+Reasoning methods:
+Expected workflows:
+Tool-use expectations:
 Expected inputs:
 Expected outputs:
-Reporting expectations:
-Stop conditions:
+Evidence duties:
+Scope:
+Non-scope:
+Prohibited conduct:
+Escalation behavior:
+Self-verification:
 Failure signals:
+Acceptance criteria:
 Open risks:
 ```
 
+The candidate remains canonical and deployment-medium agnostic.
+
 ---
 
-## Relationship To Citadel
+## Relationship To Studium
 
-Citadel supplies operative governance doctrine and compliance expectations.
+Foundry and Studium work iteratively.
 
-The Foundry must not treat style, name, or fluency as proof of operative readiness.
+Studium provides Persona Governance Doctrine.
+
+Foundry may expose ambiguity, contradiction, or non-operable language while embodying that doctrine.
+
+Studium may refine the doctrine in response.
+
+Foundry must not weaken doctrine merely to make persona construction easier.
 
 ---
 
 ## Relationship To Pit
 
-The Foundry does not admit operatives.
+The Foundry sends Persona Specification Candidates to the Pit for testing.
 
-The Foundry sends operative candidates to the Pit for testing.
+Failed or weak candidates may return to Foundry and Studium with preserved findings for revision.
+
+The Foundry does not admit its own output.
 
 ---
 
@@ -83,21 +125,24 @@ The Foundry sends operative candidates to the Pit for testing.
 The Foundry must not:
 
 - decide mission intent
-- choose deployment tools or keys
-- launch operatives
+- redefine the profession supplied by Guildhall
+- invent missing authority
+- package the persona for a deployment medium
+- activate the persona as an operative
+- choose deployment tools or credentials
+- launch deployments
 - bypass the Pit
 - admit its own output to Garrison
-- invent missing authority
-- create reusable product workflows before repeated jobs prove need
 
 ---
 
 ## Boundary Maxim
 
 ```text
-Foundry makes.
-Pit tests.
-Garrison holds what survived.
+Guildhall specifies the profession.
+Studium writes its governable doctrine.
+Foundry forges the persona.
+Pit tests the whole.
 ```
 
 ---
@@ -106,8 +151,9 @@ Garrison holds what survived.
 
 Review or revise this draft if:
 
-- Foundry starts producing untested operatives as admitted products
-- Foundry creates workflows per product before repeated need
-- Foundry treats naming as behavior
-- Foundry bypasses Guildhall when profession pattern is unclear
-- Foundry bypasses Citadel when governance boundary is needed
+- Foundry starts producing mission-bound operatives instead of canonical personas
+- Foundry becomes a deployment-medium adapter
+- Foundry treats naming, style, or fluency as professional competence
+- Foundry bypasses Guildhall when the profession is unclear
+- Foundry invents or silently weakens governable boundaries
+- persona construction proves too trivial to justify a separate Foundry
