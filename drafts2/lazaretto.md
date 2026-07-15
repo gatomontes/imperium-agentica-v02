@@ -2,115 +2,79 @@
 
 ## Status
 
-Draft.
+Draft port.
 
-This file defines a narrowed v02 Lazaretto.
+Lazaretto is La Cortine's dedicated inward port for Theatre data and mission returns.
 
-It does not admit the v01 receiving-port machinery, live intake ledger implementation, quarantine system, or constitutional chamber network.
-
----
-
-## Purpose
-
-The Lazaretto is La Cortine's dedicated mission-return entry from Theatre into Citadel.
-
-It preserves what came back from mission execution before Judicature evaluates it.
-
-It is the return dock, not a continuing-service port and not the judge.
-
----
+It does not admit live sanitation implementation, quarantine infrastructure, malware analysis runtime, or evidence-verification authority.
 
 ## Core Question
 
 ```text
-What came back, from whom, under what mission, with what uncertainty?
+What may safely enter Citadel, what was changed or quarantined, and what provenance must be preserved?
 ```
 
----
+## Inputs
+
+Lazaretto may receive from active or ending deployments:
+
+- operational data packets
+- operative reports
+- observations and claimed evidence
+- artifacts and attachments
+- telemetry summaries
+- drift and failure signals
+- tool and access outcomes
+- completed, terminated, recalled, or failed mission returns
 
 ## Responsibilities
 
-The Lazaretto may receive and preserve:
+Lazaretto may:
 
-- operative reports
-- final dossier material
-- produced artifacts
-- evidence
-- observations
-- telemetry summaries
-- boundary contacts
-- failures
-- tool-use outcomes
-- key/access outcomes
-- returned attachments
-- uncertainty notes
+- preserve the raw packet immutably
+- validate packet structure and declared provenance
+- sanitize hostile or unsafe content
+- normalize safe internal representation
+- redact secrets or protected data under explicit rule
+- quarantine suspicious material
+- distinguish raw, sanitized, redacted, and quarantined material
+- record every transformation
+- release safe internal packets to Curia
 
----
+Sanitation is not substantive verification.
 
-## Output
+Lazaretto does not decide whether evidence proves a claim or whether the operative complied with doctrine.
 
-The Lazaretto may produce a `Return Package` for Judicature.
-
-A Return Package may include:
+## Product
 
 ```text
-Mission reference:
-Operative reference:
-Deployment package reference:
-Returned materials:
-Claimed outcomes:
-Observed failures:
-Evidence included:
+Raw packet reference:
+Sanitized packet:
+Quarantined material reference:
+Redactions:
+Transformation record:
+Provenance:
 Uncertainty:
-Missing returns:
-Custody notes:
+Mission:
+Deployment:
+Operative version:
+Release status:
 ```
 
----
+## Relationship To Curia
 
-## Relationship To Judicature
+Curia receives sanitized packets and convenes Officers to understand, verify, deliberate, and direct.
 
-Judicature evaluates the return.
-
-Lazaretto receives and preserves the return.
-
-Lazaretto does not decide what the return means.
-
----
+Lazaretto does not interpret operational meaning or bypass Curia.
 
 ## Non-Authority
 
-The Lazaretto must not:
-
-- route continuing tool or access requests
-- perform Barbican duties
-
-- judge mission success
-- rewrite operative reports
-- decide value
-- produce final operator reports
-- decide disposition
-- bypass Judicature
-- treat returned claims as verified facts by default
-
----
+Lazaretto must not judge mission success, verify substantive evidence, issue directives, route continuing provider requests, perform Barbican duties, rewrite operative claims, decide disposition, or produce final reports.
 
 ## Boundary Maxim
 
 ```text
-Lazaretto receives.
-Judicature evaluates.
-Scribes write.
-Secretariat delivers.
+Lazaretto sanitizes.
+Curia convenes.
+Officers deliberate and direct.
 ```
-
----
-
-## Failure Signals
-
-Review or revise this draft if:
-
-- Lazaretto turns into an evidence court
-- Lazaretto edits returns instead of preserving them
-- mission claims become facts merely by returning
-- returns bypass Judicature and go straight to final report
