@@ -14,18 +14,18 @@ It does not admit implementation architecture, code-generation runtime, autonomo
 
 The Foundry forges canonical persona specifications.
 
-Forging is the elaboration, from scratch, of a persona specification capable of practicing a Guildhall-defined profession and inheriting its profession-specific, governable boundaries.
+Forging is the elaboration, from scratch, of a persona specification capable of practicing a Guildhall-defined profession while inheriting its governable doctrine and applicable canonized human traits.
 
-The Foundry does not build a mission-specific operative.
+The Foundry does not build an operative.
 
-A forged persona is a portable, dormant asset that may later be packaged for a deployment medium and activated as an operative, or adapted into a platform-specific skill, prompt, agent template, evaluator, or other usable artifact.
+A forged persona is a canonical, portable asset that may later be admitted to Garrison and recruited by Conscription into a deployment-medium-specific operative.
 
 ---
 
 ## Core Question
 
 ```text
-How must this profession and its governance doctrine be cognitively constituted as a concrete, testable persona?
+How must this profession, governance doctrine, and human-trait canon be cognitively constituted as a concrete, testable persona?
 ```
 
 ---
@@ -37,6 +37,7 @@ The Foundry may use:
 - approved work specification
 - profession specification from Guildhall
 - applicable Persona Governance Doctrine from Studium
+- applicable canonized human traits from Hagiography
 - operator constraints preserved in the work specification
 - relevant tested persona patterns, when reuse is authorized
 
@@ -55,11 +56,12 @@ The Foundry may elaborate:
 - tool-use expectations
 - self-verification behavior
 - profession-specific scope, prohibitions, and escalation behavior inherited from the governing inputs
+- coherent embodiment of applicable human traits
 - testable acceptance criteria
 
-The Foundry integrates governance doctrine into the persona.
+The Foundry integrates Guildhall specification, Studium doctrine, and Hagiography traits into the persona.
 
-It does not invent missing authority or independently author the doctrine it implements.
+It does not independently author those inputs.
 
 ---
 
@@ -74,10 +76,12 @@ Persona identity:
 Profession:
 Purpose:
 Cognitive posture:
+Canonized human traits:
 Required competencies:
 Required knowledge:
 Reasoning methods:
 Expected workflows:
+Communication behavior:
 Tool-use expectations:
 Expected inputs:
 Expected outputs:
@@ -110,11 +114,25 @@ Foundry must not weaken doctrine merely to make persona construction easier.
 
 ---
 
+## Relationship To Hagiography
+
+Foundry and Hagiography work iteratively.
+
+Hagiography supplies canonized human traits applicable to the persona.
+
+Foundry may expose incoherent, performative, conflicting, or professionally harmful traits during construction.
+
+Hagiography may refine the trait canon in response.
+
+Foundry must not mistake theatrical style for human credibility.
+
+---
+
 ## Relationship To Pit
 
 The Foundry sends Persona Specification Candidates to the Pit for testing.
 
-Failed or weak candidates may return to Foundry and Studium with preserved findings for revision.
+Failed or weak candidates may return to Foundry, Studium, Hagiography, or the relevant combination with preserved findings for revision.
 
 The Foundry does not admit its own output.
 
@@ -127,10 +145,11 @@ The Foundry must not:
 - decide mission intent
 - redefine the profession supplied by Guildhall
 - invent missing authority
-- package the persona for a deployment medium
-- activate the persona as an operative
+- author Persona Governance Doctrine
+- canonize human traits
+- recruit the persona into an operative
 - choose deployment tools or credentials
-- launch deployments
+- deploy operatives
 - bypass the Pit
 - admit its own output to Garrison
 
@@ -141,6 +160,7 @@ The Foundry must not:
 ```text
 Guildhall specifies the profession.
 Studium writes its governable doctrine.
+Hagiography canonizes its human traits.
 Foundry forges the persona.
 Pit tests the whole.
 ```
@@ -151,9 +171,10 @@ Pit tests the whole.
 
 Review or revise this draft if:
 
-- Foundry starts producing mission-bound operatives instead of canonical personas
+- Foundry starts producing operatives instead of canonical personas
 - Foundry becomes a deployment-medium adapter
 - Foundry treats naming, style, or fluency as professional competence
 - Foundry bypasses Guildhall when the profession is unclear
 - Foundry invents or silently weakens governable boundaries
+- Foundry substitutes decorative personality for canonized human traits
 - persona construction proves too trivial to justify a separate Foundry
