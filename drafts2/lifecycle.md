@@ -4,9 +4,9 @@
 
 Draft.
 
-This file describes the provisional end-to-end Imperium v02 lifecycle discussed by the operator.
+This file describes the provisional end-to-end Imperium v02 lifecycle.
 
-It does not admit automation, runtime implementation, UI, database, service topology, or disposition authority.
+It does not admit automation, runtime implementation, UI, database, service topology, a named launching entity, or disposition authority.
 
 ---
 
@@ -16,99 +16,145 @@ It does not admit automation, runtime implementation, UI, database, service topo
 Operator
 → Secretariat
 → Castellan
-→ Conscription
-→ Garrison search
-→ Guildhall if profession research is needed
-→ Foundry if operative must be built
-→ Citadel governance check
-→ Pit test
-→ Garrison admission
-→ Catapult summons operative
-→ Inquisition investigates mission terrain
-→ Armory issues tools
-→ Locksmith issues keys
-→ Catapult assembles Deployment Package
-→ Theatre execution
-→ Lazaretto receives returns
-→ Judicature produces Findings
-→ Chamber of Scribes writes Final Report
-→ Secretariat delivers to Operator
+→ Guildhall
+→ Garrison search by resolved profession
+    ├─ admitted persona found
+    │    → Conscription
+    └─ no suitable persona
+         → Studium
+         → Hagiography when applicable
+         → Foundry
+         → Pit
+         → Garrison
+         → Conscription
+
+Conscription
+→ Operative
+→ Operator handoff
+   or
+→ Muster
+↔ Inquisition
+↔ Armory / Locksmith
+→ Deployment Package
+→ unnamed launch boundary
+→ Theatre
+→ Lazaretto
+→ Judicature
+→ Findings
+→ Chamber of Scribes
+→ Final Report
+→ Secretariat
+→ Operator
 ```
 
 ---
 
-## Mission Side
+## Mission Formation
 
 ```text
 Secretariat
+→ Petition
 → Castellan
-→ Catapult
-↔ Inquisition
-→ Mission Dossier / Deployment Package
+→ Mission Need
+→ Work Specification
 ```
 
-Mission formation is not mission briefing.
+Castellan forms mission meaning and specifies required work.
 
-The Castellan forms mission need.
-
-The Catapult prepares the mission launch.
-
-The Inquisition investigates mission terrain for the Catapult.
+Mission formation is not profession resolution, persona forging, recruitment, mission assembly, or execution.
 
 ---
 
-## Personnel Side
+## Persona Production
 
 ```text
-Castellan
+Work Specification
+→ Guildhall
+→ Profession Specification
+→ Garrison search
+    ├─ persona found
+    └─ persona absent
+         → Studium doctrine
+         → Hagiography canon when applicable
+         → Foundry persona candidate
+         → Pit findings
+         → Garrison admission
+```
+
+Guildhall specifies profession.
+
+Studium authors Persona Governance Doctrine.
+
+Hagiography canonizes evidenced, transferable traits.
+
+Foundry forges the Persona Specification Candidate.
+
+Pit tests the integrated persona.
+
+Garrison holds admitted canonical personas.
+
+---
+
+## Recruitment
+
+```text
+Admitted Canonical Persona
++ deployment-medium contract
 → Conscription
-↔ Garrison
-↔ Guildhall
-→ Foundry
-↔ Citadel
-→ Pit
-→ Garrison
+→ Operative
 ```
 
-The Castellan asks for operative capability.
+Conscription is recruitment.
 
-The Conscription orchestrates operative supply.
+The operative is medium-specific but not mission-bound or deployed.
 
-The Garrison is searched before building.
-
-Guildhall researches profession patterns.
-
-Foundry builds operative candidates.
-
-Citadel supplies operative governance doctrine.
-
-Pit stress-tests candidates.
-
-Garrison holds admitted operatives.
+It may be delivered directly to the operator.
 
 ---
 
-## Deployment Side
+## Mission Assembly
 
 ```text
-Garrisoned operative
-→ Catapult
-↔ Inquisition
-↔ Armory / Locksmith
+Operative
++ Work Specification
++ Mission Inquest
++ tools
++ access
++ rules and constraints
++ reporting and return conditions
+→ Muster
+→ Deployment Package
+```
+
+Inquisition investigates mission terrain.
+
+Armory supplies authorized tools.
+
+Locksmith supplies authorized access.
+
+Muster assembles these around the operative for one mission.
+
+A Deployment Package marked Ready For Launch is not itself launched.
+
+---
+
+## Execution Boundary
+
+```text
+Deployment Package
+→ unnamed launch boundary
 → Theatre
 ```
 
-The Catapult summons personnel and assembles the deployment package.
+The current doctrine does not name a launching institution.
 
-Armory concerns tools.
+Muster does not launch or execute.
 
-Locksmith concerns keys and access.
-
-Theatre is mission terrain.
+Theatre is mission execution terrain.
 
 ---
 
-## Return Side
+## Return
 
 ```text
 Theatre
@@ -129,15 +175,7 @@ Scribes write.
 
 Secretariat delivers.
 
----
-
-## Parked Disposition
-
-Disposition is not assigned yet.
-
-Disposition requires before/after knowledge.
-
-Current endpoint is Findings reported to the operator through a Final Report.
+Disposition remains parked pending before/after knowledge.
 
 ```text
 No correction without contrast.
@@ -147,34 +185,13 @@ No correction without contrast.
 
 ## Anti-Collapse Rules
 
-- Do not assume operator intent is mission understanding.
-- Do not assume professional competence replaces mission briefing.
-- Do not assume every mission requires new operative construction.
-- Do not assume Garrison storage is deployment.
-- Do not assume Findings authorize correction.
-- Do not assume Final Report is Vellum.
-- Do not recreate v01 constitutional machinery by naming alone.
-
----
-
-## Current Short Form
-
-```text
-Secretariat receives.
-Castellan forms mission need.
-Conscription supplies operative capability.
-Guildhall informs profession.
-Foundry builds.
-Citadel governs.
-Pit tests.
-Garrison holds.
-Catapult launches.
-Inquisition investigates mission terrain.
-Armory equips.
-Locksmith unlocks.
-Theatre happens.
-Lazaretto receives.
-Judicature finds.
-Scribes report.
-Secretariat returns.
-```
+- Operator intent is not mission understanding.
+- Mission formation is not mission assembly.
+- Professional competence is not mission instruction.
+- Canonical persona is not operative.
+- Operative is not Deployment Package.
+- Ready For Launch is not launched.
+- Muster is not launch or execution.
+- Theatre output is not judgment.
+- Findings do not authorize correction.
+- Final Report is not automatically Vellum.
