@@ -30,7 +30,7 @@ Petition
 → Deployment Package
 → Theatre Return
 → Return Package
-→ Judicature Findings
+→ Curia Findings
 → Final Report
 → Delivery Package
 ```
@@ -158,13 +158,13 @@ Raw mission output or consequence exposed by Theatre.
 
 Lazaretto's preserved return before judgment.
 
-## Judicature Findings
+## Curia Findings
 
-Judicature's evaluation of returns without disposition.
+Curia's evaluation of returns without disposition.
 
 ## Final Report
 
-Chamber of Scribes' operator-facing report written from Judicature Findings.
+Chamber of Scribes' operator-facing report written from Curia Findings.
 
 It is not automatically Vellum.
 
