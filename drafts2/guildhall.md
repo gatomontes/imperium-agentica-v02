@@ -6,27 +6,27 @@ Draft.
 
 This file defines the provisional Guildhall for Imperium v02.
 
-It does not admit a profession database, labor taxonomy, training runtime, or permanent ontology.
+It does not admit a permanent profession ontology, labor taxonomy, training runtime, or implementation database.
 
 ---
 
 ## Purpose
 
-The Guildhall researches profession patterns for operative construction and selection.
+The Guildhall stewards professions used in persona construction.
 
-It answers what kind of professional behavior, standards, capabilities, constraints, tools, risks, and failure modes should inform an operative.
+It identifies which human profession or combination of professions maps to a work specification, researches the profession, compiles its scope and responsibilities, and maintains the professional roster from which persona work may be commissioned.
 
 ---
 
 ## Core Question
 
 ```text
-What professional pattern is this operative meant to embody?
+What profession is capable of performing this work, and what constitutes legitimate practice of it?
 ```
 
-The Guildhall researches the profession.
+The Guildhall defines the profession before a persona is forged from it.
 
-It does not decide mission intent.
+It does not decide mission intent or construct the persona.
 
 ---
 
@@ -34,53 +34,67 @@ It does not decide mission intent.
 
 The Guildhall may:
 
-- identify relevant profession or role patterns
-- research domain expectations
-- describe professional capabilities
-- describe professional limits
-- identify common tools and methods
-- identify standards of competence
-- identify risks and failure modes
-- provide role intelligence to Conscription and Foundry
+- map an approved work specification to one or more human professions
+- research professional practice and domain expectations
+- compile professional scope and responsibilities
+- identify required competencies, knowledge, tools, and methods
+- identify standards of competence and evidence
+- identify professional limits, prohibitions, dependencies, and escalation duties
+- identify common risks, failure modes, and negligent behavior
+- build and maintain a provisional roster of profession specifications
+- issue a profession specification to Studium and Foundry
 
 ---
 
 ## Product
 
-The Guildhall may produce a provisional `Profession Brief`.
+The Guildhall may produce and steward a provisional `Profession Specification`.
 
-A Profession Brief may include:
+A Profession Specification may include:
 
 ```text
-Profession / role pattern:
-Relevant domain:
+Profession:
+Work pattern:
+Domain:
+Scope of practice:
 Core responsibilities:
-Expected capabilities:
-Expected tools:
+Required competencies:
+Required knowledge:
+Expected tools and methods:
+Decision authority:
+Professional boundaries:
+Prohibited conduct:
+Evidence and record duties:
+Escalation duties:
 Standards of competence:
 Common failure modes:
-Non-scope:
-Risks:
-Implications for operative design:
+Dependencies on other professions:
+Open questions:
 ```
+
+The Profession Specification describes the office to be embodied.
+
+It is not yet a persona and does not activate an operative.
 
 ---
 
-## Relationship To Conscription
+## Relationship To Studium
 
-Conscription asks Guildhall for profession intelligence when it needs to know what kind of operative should be supplied or raised.
+The Guildhall supplies the profession specification from which Studium develops Persona Governance Doctrine.
 
-Guildhall informs Conscription.
+Guildhall discovers and compiles professional practice.
 
-It does not orchestrate operative supply.
+Studium translates the governable portions of that practice into explicit doctrine for a persona.
 
 ---
 
 ## Relationship To Foundry
 
-Foundry may use Guildhall research when building an operative.
+The Guildhall issues the profession specification that initiates persona construction.
 
-Guildhall does not build the operative.
+Foundry uses that specification together with applicable Studium doctrine to forge a canonical persona specification.
+
+Guildhall does not forge the persona.
 
 ---
 
@@ -90,9 +104,9 @@ The Guildhall must not:
 
 - decide mission intent
 - write mission dossiers
-- select Garrisoned operatives
-- build operatives directly
-- admit operatives
+- construct personas
+- package personas for a deployment medium
+- activate operatives
 - launch deployments
 - issue tools or keys
 - judge mission returns
@@ -102,10 +116,9 @@ The Guildhall must not:
 ## Boundary Maxims
 
 ```text
-Guildhall researches professions.
-Inquisition investigates missions.
-Conscription coordinates operatives.
-Foundry builds operatives.
+Guildhall stewards professions.
+Studium develops persona governance doctrine.
+Foundry forges personas.
 ```
 
 ---
@@ -116,5 +129,6 @@ Review or revise this draft if:
 
 - Guildhall becomes a general research office for all mission facts
 - Guildhall starts choosing mission tactics
-- every role becomes a new permanent profession category
-- profession research becomes too heavy before a build requires it
+- every requested task becomes a permanent profession
+- profession research becomes heavier than the work specification requires
+- Guildhall begins constructing personas instead of specifying professions
