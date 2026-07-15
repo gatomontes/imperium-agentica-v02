@@ -56,9 +56,11 @@ Conscription
 → Operative
 → handoff to Operator
    or
-→ Catapult
+→ Muster
 ↔ Inquisition
 ↔ Armory / Locksmith
+→ Deployment Package
+→ unnamed launch boundary
 → Theatre
 → Lazaretto
 → Judicature
@@ -202,17 +204,19 @@ Does not: define profession, forge persona, alter doctrine or traits, or deploy
 
 If the medium cannot preserve required competence, doctrine, or traits, Conscription refuses the transformation.
 
-### Catapult
+### Muster
 
-Prepares and deploys an existing operative for a mission.
+Assembles an existing operative for a particular mission.
 
 ```text
 Input: Operative + authorized mission requirements
-Product: Deployment Package + Deployment
-Does not: select or forge persona, recruit, rewrite doctrine, or judge returns
+Product: mission-bound Deployment Package
+Does not: select or forge persona, recruit, launch, execute, rewrite doctrine, or judge returns
 ```
 
-Catapult obtains mission intelligence from Inquisition, tools from Armory, and authorized access from Locksmith.
+Muster obtains mission intelligence from Inquisition, tools from Armory, and authorized access from Locksmith. It binds them with the operative, mission brief, rules, reporting, return, launch, and termination conditions.
+
+The current doctrine does not name a separate launching entity.
 
 ---
 
@@ -288,11 +292,12 @@ When deployment is requested:
 
 ```text
 Operative
-→ Catapult
+→ Muster
 ↔ Inquisition
 ↔ Armory
 ↔ Locksmith
 → Deployment Package
+→ unnamed launch boundary
 → Theatre
 ```
 
@@ -356,11 +361,11 @@ Existing operatives remain bound to the persona, doctrine, and canon versions fr
 
 ```text
 Castellan = mission orchestration
-Catapult = deployment orchestration
+Muster = mission assembly
 Conscription = recruitment process, not orchestration
 ```
 
-The current map does not admit a separate operative-orchestration sovereign.
+The current map does not admit a separate operative-orchestration or launch sovereign.
 
 Guildhall resolves profession and persona availability. Production entities create missing persona artifacts. Conscription transforms the selected admitted persona.
 
@@ -378,6 +383,8 @@ This map does not admit:
 - permanent pass engine
 - product-specific workflow library
 - separate activation state
+- a named launching entity
+- Catapult
 - Conscription as operative orchestration
 - Citadel as persona-governance steward
 - Foundry as operative builder
@@ -399,7 +406,8 @@ Foundry forges the canonical persona.
 Pit tests the whole persona.
 Garrison holds admitted personas.
 Conscription recruits a persona into an operative.
-Catapult deploys the operative.
+Muster assembles the operative into a mission-bound Deployment Package.
+The launch boundary remains unnamed.
 Lazaretto receives.
 Judicature finds.
 Chamber of Scribes reports.
