@@ -4,19 +4,9 @@
 
 Draft.
 
-This file names provisional artifacts that move between the drafts2 offices.
+This file names provisional artifacts that move between Imperium v02 cognitive entities.
 
-It does not admit schemas, templates, implementation objects, database records, UI forms, or final canonical terminology.
-
----
-
-## Purpose
-
-Imperium needs named handoff artifacts so offices do not silently exchange vague intent.
-
-These artifacts are not permanent merely because they are named here.
-
-They may be leaned, merged, renamed, split, or removed through use.
+It does not admit schemas, implementation objects, database records, UI forms, runtime behavior, or final terminology.
 
 ---
 
@@ -25,289 +15,178 @@ They may be leaned, merged, renamed, split, or removed through use.
 ```text
 Petition
 → Mission Need
-→ Operative Capability Request
-→ Profession Brief
-→ Operative Commission
-→ Operative Candidate
+→ Work Specification
+→ Profession Specification
+→ Persona Governance Doctrine
+→ Human-Trait Canon when applicable
+→ Persona Specification Candidate
 → Pit Findings
 → Garrison Record
+→ Operative
 → Mission Inquest
 → Mission Dossier
+→ Tool Grant
+→ Access Grant
 → Deployment Package
+→ Theatre Return
 → Return Package
 → Judicature Findings
 → Final Report
 → Delivery Package
 ```
 
-This chain is provisional.
+The chain may branch, iterate, or stop.
 
-Not every mission needs every artifact.
+Not every mission requires every optional artifact, but omitted decisions must be explicit.
 
 ---
 
 ## Petition
 
-Operator intent shaped by Secretariat into a request that can enter mission formation.
-
-See existing `drafts/petition-lifecycle.md` for earlier draft treatment.
-
----
+Secretariat-shaped operator intent entering mission formation.
 
 ## Mission Need
 
-A Castellan-level expression of what mission is being formed and what operative capability is required.
+Castellan's expression of the mission being formed.
 
-It should not contain detailed deployment procedure.
+## Work Specification
 
----
+Castellan's approved specification of the work required.
 
-## Operative Capability Request
+It does not decide the profession or deployment procedure.
 
-A Castellan-to-Conscription handoff identifying needed operative capability.
+## Profession Specification
 
-It asks Conscription to supply, raise, or report absence of a suitable operative.
+Guildhall's specification of the profession capable of legitimate practice.
 
----
+## Persona Governance Doctrine
 
-## Profession Brief
+Studium's explicit governable obligations for a persona practicing the profession.
 
-A Guildhall product describing the professional pattern relevant to an operative.
+## Human-Trait Canon
 
-Possible fields:
+Hagiography's evidenced, bounded, transferable traits derived from Saints.
 
-```text
-Profession / role pattern:
-Domain:
-Responsibilities:
-Capabilities:
-Tools:
-Standards:
-Failure modes:
-Risks:
-Implications for operative design:
-```
+A finding that no distinct canon is required must be explicit.
 
----
+## Persona Specification Candidate
 
-## Operative Commission
+Foundry's canonical, deployment-medium-agnostic persona candidate.
 
-A Conscription-to-Foundry handoff authorizing operative construction or revision.
-
-Possible fields:
-
-```text
-Capability needed:
-Reason existing Garrison operative is insufficient:
-Profession brief reference:
-Mission relevance:
-Constraints:
-Required operative outputs:
-Governance expectations:
-```
-
----
-
-## Operative Candidate
-
-A Foundry product sent to the Pit.
-
-It is not admitted.
-
-Possible fields:
-
-```text
-Purpose:
-Profession pattern:
-Scope:
-Non-scope:
-Expected inputs:
-Expected outputs:
-Reporting expectations:
-Stop conditions:
-Failure signals:
-Risks:
-```
-
----
+It is not an operative.
 
 ## Pit Findings
 
-A Pit product describing how an operative candidate survived or failed pressure.
+Evidence of how the integrated persona survived or failed pressure, with revision or admission recommendation.
 
-Possible outcomes:
-
-```text
-Recommend admission
-Recommend revision
-Recommend rejection
-Require retest
-Insufficient evidence
-```
-
-Recommendation is not admission unless Garrison rules later make it so.
-
----
+Recommendation is not admission.
 
 ## Garrison Record
 
-A record of an admitted operative available for future use.
+The admitted canonical persona record with exact profession, doctrine, canon, Pit, restriction, and version references.
 
-Possible fields:
+## Operative
 
-```text
-Operative identity:
-Capabilities:
-Constraints:
-Admission basis:
-Test history:
-Readiness status:
-Revision history:
-Availability:
-```
+Conscription's deployment-medium-specific embodiment of an admitted canonical persona.
 
----
+An operative is not mission-bound and may be handed to the operator without deployment.
 
 ## Mission Inquest
 
-An Inquisition product investigating mission terrain for Catapult.
-
-Possible fields:
-
-```text
-Mission question:
-Terrain:
-Known facts:
-Unknowns:
-Assumptions:
-Constraints:
-Risks:
-Sources:
-Operational implications:
-Questions for operative:
-Reporting implications:
-```
-
----
+Inquisition's evidence about mission terrain, facts, unknowns, constraints, risks, and operational implications.
 
 ## Mission Dossier
 
-A Catapult product, informed by Inquisition, telling the operative what this mission requires.
+Muster's mission-specific instructions, informed by Castellan work and Inquisition evidence.
 
 Professional competence does not replace mission instruction.
 
-Possible fields:
+## Tool Grant
 
-```text
-Mission objective:
-Context:
-Assigned operative:
-Expected outcome:
-Scope:
-Non-scope:
-Rules of engagement:
-Reporting requirements:
-Escalation triggers:
-Return expectations:
-```
+Armory's authorized tools, usage conditions, denials, and risk constraints for the mission.
 
----
+## Access Grant
+
+Locksmith's authorized credentials, permissions, expiration, revocation, and denial conditions.
 
 ## Deployment Package
 
-A Catapult product bundling mission instructions, operative assignment, tools, keys, and constraints.
+Muster's mission-bound assembly.
 
 Possible fields:
 
 ```text
-Assigned operative:
-Mission dossier:
+Deployment Package identity:
+Mission reference:
+Work Specification reference:
+Operative identity and version:
+Canonical Persona reference:
+Mission Inquest reference:
+Mission Dossier:
 Tools issued:
-Keys / access issued:
-Constraints:
-Launch conditions:
+Access issued:
+Rules of engagement:
+Mission-specific constraints:
+Reporting requirements:
+Escalation triggers:
 Return channel:
+Launch conditions:
+Termination conditions:
+Unresolved blockers:
+Assembly status:
 ```
 
----
+Possible assembly states:
+
+```text
+Assembly Pending
+Blocked
+Ready For Launch
+Superseded
+Cancelled
+```
+
+Ready For Launch is not launch.
+
+The current doctrine does not name a launching institution.
+
+## Theatre Return
+
+Raw mission output or consequence exposed by Theatre.
 
 ## Return Package
 
-A Lazaretto product preserving what returned from Theatre before evaluation.
-
-Possible fields:
-
-```text
-Mission reference:
-Operative reference:
-Returned materials:
-Claimed outcomes:
-Evidence included:
-Failures:
-Uncertainty:
-Missing returns:
-Custody notes:
-```
-
----
+Lazaretto's preserved return before judgment.
 
 ## Judicature Findings
 
-A Judicature product evaluating returns without assigning disposition.
-
-Possible fields:
-
-```text
-Findings summary:
-Evidence considered:
-Uncertainty:
-Unsupported claims:
-Suspected failure points:
-Before/after comparison needed:
-Reportable conclusion:
-```
-
----
+Judicature's evaluation of returns without disposition.
 
 ## Final Report
 
-A Chamber of Scribes product written from Judicature Findings for operator understanding.
-
-It is operator-facing.
+Chamber of Scribes' operator-facing report written from Judicature Findings.
 
 It is not automatically Vellum.
 
----
-
 ## Delivery Package
 
-A Secretariat product or handling bundle for delivery to the operator.
+Secretariat's administrative delivery bundle.
 
-Possible formats:
-
-```text
-email body
-PDF
-CSV
-JSON
-Markdown
-ZIP bundle
-archive-only notice
-```
-
-The Secretariat may package and transmit.
-
-It must not alter findings.
+It must not alter substantive findings.
 
 ---
 
-## Vellum Boundary
+## Traceability
 
-`Vellum` remains parked.
+Every artifact preserves exact upstream version references.
 
-If admitted later, it may become an internal canonical mission record.
+Existing operatives remain bound to the canonical persona, doctrine, and canon versions from which they were recruited.
 
-It should not be equated automatically with the Final Report.
+A revised persona requires a new Conscription event.
+
+A revised mission assembly requires a new Deployment Package version.
+
+Historical artifacts are superseded, not overwritten.
 
 ---
 
@@ -316,8 +195,10 @@ It should not be equated automatically with the Final Report.
 Review or revise this file if:
 
 - artifact names become bureaucracy before use
-- every office invents its own document type
+- mission assembly begins before an operative exists
+- Muster alters the persona or operative
+- Ready For Launch is mistaken for launch
+- Mission Dossier is written without Inquisition evidence
+- tools or access lack authorization provenance
 - Final Report and Vellum collapse without decision
-- Delivery Package changes substantive findings
-- Mission Dossier is written without Inquisition support
-- Operative Commission bypasses Garrison search
+- Delivery Package changes findings
