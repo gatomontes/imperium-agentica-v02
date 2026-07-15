@@ -6,26 +6,26 @@ Draft.
 
 This file defines the provisional Garrison for Imperium v02.
 
-It does not admit implementation storage, deployment automation, persistent agent registry schema, or external orchestration authority.
+It does not admit implementation storage, deployment automation, persistent registry schema, or external orchestration authority.
 
 ---
 
 ## Purpose
 
-The Garrison holds admitted operatives.
+The Garrison holds admitted persona specifications.
 
-It is the roster and reserve of operatives available for future mission use, delivery, or external orchestration.
+It is the inventory of tested, reusable professional personas available for deployment-medium packaging, delivery, adaptation, or later activation.
 
-The Garrison is not merely storage.
+A persona in Garrison is not necessarily an operative.
 
-It is the deployment-ready surface for admitted operatives.
+It remains a portable, dormant specification until it is packaged for a deployment medium and activated for work.
 
 ---
 
 ## Core Question
 
 ```text
-Which admitted operatives are available, fit, constrained, retired, or awaiting use?
+Which admitted personas are available, qualified, constrained, superseded, or retired?
 ```
 
 ---
@@ -34,52 +34,56 @@ Which admitted operatives are available, fit, constrained, retired, or awaiting 
 
 The Garrison may preserve:
 
-- admitted operative identity
-- operative purpose
-- profession pattern
-- capabilities
-- constraints
+- admitted persona identity
+- profession specification reference
+- purpose
+- capabilities and competencies
+- governable boundaries
 - known limits
 - test history
-- readiness status
 - revision history
-- availability status
-- deployment history when available
+- qualification status
+- availability for packaging
+- known deployment-medium packages derived from the persona
+- activation history when available
 
 ---
 
-## Relationship To Conscription
+## Relationship To Recruitment
 
-Conscription searches the Garrison before commissioning new operative construction.
+Recruitment searches Garrison for an admitted persona that satisfies the requested professional capability.
 
-The Garrison is the first answer to operative need.
+Recruitment packages the selected persona as a deployment-medium-specific asset.
+
+Garrison does not perform that packaging.
 
 ---
 
-## Relationship To Catapult
+## Relationship To Activation
 
-Catapult may summon personnel from the Garrison for deployment preparation.
+Activation binds a deployment-ready asset to actual service as an operative.
 
-The Garrison does not brief, tool, key, or launch the operative.
+Garrison may supply the admitted persona from which that asset is packaged.
+
+Garrison does not brief, tool, credential, activate, or launch the operative.
 
 ---
 
 ## Possible Statuses
 
 ```text
+Candidate
 Admitted
 Available
 Reserved
-Summoned
-Deployed
-Returned
 Needs Review
 Needs Revision
+Superseded
 Quarantined
 Retired
 ```
 
-These statuses are provisional.
+These statuses are provisional and describe persona inventory, not operative runtime state.
 
 ---
 
@@ -87,14 +91,15 @@ These statuses are provisional.
 
 The Garrison must not:
 
-- build operatives
+- forge personas
 - admit untested candidates without rule
 - determine mission needs
+- package deployment-medium-specific assets
+- activate operatives
 - write mission dossiers
-- issue tools or keys
-- launch operatives
-- judge returns
-- decide disposition before that authority exists
+- issue tools or credentials
+- launch deployments
+- judge mission returns
 
 ---
 
@@ -102,8 +107,8 @@ The Garrison must not:
 
 ```text
 Garrison holds what survived.
-Conscription searches Garrison before building.
-Catapult summons from Garrison before launch.
+Recruitment packages what is selected.
+Activation places the package into service as an operative.
 ```
 
 ---
@@ -113,6 +118,6 @@ Catapult summons from Garrison before launch.
 Review or revise this draft if:
 
 - Garrison becomes a deployment controller
-- Garrison accepts untested operatives
-- Garrison status becomes false certainty
-- Conscription bypasses Garrison search by default
+- Garrison accepts untested personas
+- persona inventory status is confused with operative runtime state
+- Garrison begins owning deployment-medium packaging
