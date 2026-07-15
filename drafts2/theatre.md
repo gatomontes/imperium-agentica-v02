@@ -46,11 +46,11 @@ The Theatre may produce or expose:
 
 ---
 
-## Relationship To Catapult
+## Relationship To Muster
 
-Catapult launches toward the Theatre.
+Muster prepares the mission-bound Deployment Package for the launch boundary leading to Theatre.
 
-Catapult does not own everything that happens there.
+Muster does not launch, execute, or own what happens there. The current doctrine does not name a separate launching entity.
 
 ---
 
@@ -91,5 +91,5 @@ Review or revise this draft if:
 
 - Theatre activity becomes self-authorizing
 - execution results are treated as final truth without return handling
-- Catapult bypasses Lazaretto and interprets outcomes directly
+- Muster bypasses Lazaretto and interprets outcomes directly
 - Theatre becomes a hidden runtime architecture before implementation is admitted
