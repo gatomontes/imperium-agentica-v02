@@ -100,7 +100,7 @@ Conscription
 
 ### Mission Assembly and Execution Boundary
 
-- `catapult.md`
+- `muster.md`
 - `inquisition.md`
 - `armory-locksmith.md`
 - `theatre.md`
@@ -249,7 +249,6 @@ This directory does not admit:
 - authority to act externally
 - separate activation state
 - named launching entity
-- Catapult
 - Conscription as operative orchestration
 - Citadel as persona-governance steward
 - Foundry as operative builder
