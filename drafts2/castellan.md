@@ -52,15 +52,15 @@ The Castellan does not determine professional truth.
 
 ---
 
-## Relationship To Catapult
+## Relationship To Muster
 
 The Castellan forms mission need.
 
-The Catapult prepares activation, briefs the operative, and launches the mission.
+Muster assembles the operative, mission intelligence, tools, access, and constraints into a mission-bound Deployment Package.
 
 Mission formation is not mission briefing.
 
-The Castellan should not issue detailed mission procedures when the Catapult, informed by Inquisition, can prepare them closer to launch.
+The Castellan should not issue detailed mission procedures when Muster, informed by Inquisition, can assemble them at the mission boundary.
 
 ---
 
@@ -108,7 +108,7 @@ Later deployment preparation:
 Garrisoned persona
 → Conscription
 → Operative
-→ Catapult
+→ Muster
 ```
 
 ---
@@ -119,7 +119,7 @@ Garrisoned persona
 Castellan forms missions and specifies work.
 Guildhall determines the profession.
 Foundry forges the persona.
-Catapult briefs and launches the activated operative.
+Muster assembles the mission-bound Deployment Package.
 Judicature judges returns.
 ```
 
