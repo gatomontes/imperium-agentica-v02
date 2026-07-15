@@ -20,6 +20,8 @@ The Locksmith concerns keys and access.
 
 Both are dangerous because they touch capability and external power.
 
+They support initial Muster assembly internally and continuing deployed operations through Barbican.
+
 ---
 
 ## Armory
@@ -60,7 +62,7 @@ The Armory must not:
 
 ### Purpose
 
-The Locksmith supplies keys, credentials, access bindings, permission constraints, or lock/unlock conditions required for a deployment.
+The Locksmith retains credentials and performs authorized access, unlock, or authenticated operations required by a deployment. Credentials do not pass to the operative, Barbican, Muster, or Theatre.
 
 For now, keys are conceptual and provisional.
 
@@ -72,7 +74,9 @@ What access is required, permitted, denied, or constrained for this mission?
 
 ### Possible Outputs
 
-- key/access list
+- ticket or entitlement requirement
+- performed authenticated operation
+- opaque session or permitted result
 - credential requirement
 - permission boundary
 - access denial
@@ -93,11 +97,13 @@ The Locksmith must not:
 
 ---
 
-## Relationship To Muster
+## Relationships To Muster And Barbican
 
 The Muster requests tool and key support as part of Deployment Package assembly.
 
-Armory and Locksmith do not launch by themselves.
+For continuing missions, deployed operatives present tool or access tickets through Barbican. Barbican forwards them to the appropriate provider and returns the provider's result or refusal.
+
+Armory and Locksmith do not launch. Barbican does not fulfill. Muster does not mediate continuing requests.
 
 ---
 
@@ -106,7 +112,10 @@ Armory and Locksmith do not launch by themselves.
 ```text
 Armory equips.
 Locksmith unlocks.
-Muster assembles.
+Muster assembles initial mission requirements.
+Barbican exposes continuing provider access.
+Armory supplies or performs tools.
+Locksmith retains credentials and performs unlocks.
 Capability is not authorization.
 ```
 
