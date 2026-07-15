@@ -146,9 +146,9 @@ Superseded
 Cancelled
 ```
 
-Ready For Launch is not launch.
+Ready For Launch is not launch. Iron Gate performs the launch transition.
 
-The current doctrine does not name a launching institution.
+Ready For Launch packages pass outward through La Cortine's Iron Gate.
 
 ## Theatre Return
 
@@ -197,6 +197,10 @@ Review or revise this file if:
 - artifact names become bureaucracy before use
 - mission assembly begins before an operative exists
 - Muster alters the persona or operative
+- La Cortine acquires acting authority
+- Iron Gate handles continuing support
+- Barbican carries credentials or receives completed missions
+- Lazaretto handles continuing requests
 - Ready For Launch is mistaken for launch
 - Mission Dossier is written without Inquisition evidence
 - tools or access lack authorization provenance
