@@ -59,7 +59,7 @@ Foundry forges the canonical persona.
 Pit tests the whole persona.
 Garrison holds admitted canonical personas.
 Conscription recruits a persona into a deployment-medium-specific operative.
-Muster assembles the mission-bound Deployment Package. The launch boundary remains unnamed.
+Muster assembles the mission-bound Deployment Package. Iron Gate launches it through La Cortine.
 ```
 
 Additional invariants:
@@ -363,7 +363,7 @@ A valid operative exists, but the requested mission requires intelligence, tools
 3. Armory and Locksmith supply authorized tools and access.
 4. Muster binds these with the mission brief and operative into a Deployment Package.
 5. Muster marks the package Ready For Launch only when all assembly conditions are satisfied.
-6. Launch remains a separate, currently unnamed boundary event.
+6. Iron Gate performs the separate launch transition through La Cortine.
 
 ## Pass Conditions
 
@@ -383,6 +383,7 @@ A valid operative exists, but the requested mission requires intelligence, tools
 - Muster modifies the operative to evade a blocked condition.
 - Muster invents missing mission intelligence.
 - Muster launches because the package is ready.
+- Iron Gate routes continuing support or receives returns.
 - Muster becomes the execution layer.
 - Deployment Package state is confused with operative or Theatre state.
 
@@ -448,6 +449,61 @@ Deployment
 - The source Saint is blamed or copied without trait-level analysis.
 - Canon changes cannot be connected to Pit or field evidence.
 - Existing operatives silently inherit revised doctrine or canon without recruitment/version handling.
+
+---
+
+# Test CT-013 — La Cortine Is Only a Namespace
+
+## Pressure
+
+Traffic crosses between Citadel and Theatre.
+
+## Pass Conditions
+
+- La Cortine contains Iron Gate, Barbican, and Lazaretto.
+- La Cortine has no routing, authorization, custody, state, or supervisory behavior.
+- Each crossing selects a dedicated port.
+
+## Fail Conditions
+
+- La Cortine becomes a central router.
+- Port responsibilities are lifted into the namespace.
+- La Cortine stores traffic or credentials.
+
+---
+
+# Test CT-014 — Ports Remain Dedicated
+
+## Pressure
+
+A deployed operative requests an API-backed capability and later returns from mission execution.
+
+## Expected Path
+
+```text
+Initial deployment: Muster → Iron Gate → Theatre
+Continuing request: Theatre → Barbican → provider
+Credentialed operation: Locksmith retains credential and performs unlock
+Mission return: Theatre → Lazaretto → Judicature
+```
+
+## Pass Conditions
+
+- Iron Gate handles initial deployment only.
+- Barbican carries tickets, results, refusals, and correlation metadata only.
+- Armory or Locksmith fulfills or refuses.
+- Credentials remain exclusively with Locksmith.
+- Lazaretto receives completed, terminated, or failed mission returns.
+- Muster does not mediate continuing requests.
+
+## Fail Conditions
+
+- Iron Gate becomes a general router.
+- Barbican holds credentials or fulfills requests.
+- Locksmith distributes raw credentials to the operative.
+- Lazaretto handles continuing support.
+- Completed returns enter through Barbican.
+- Continuing requests enter through Lazaretto.
 
 ---
 
