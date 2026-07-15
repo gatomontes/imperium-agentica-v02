@@ -4,13 +4,13 @@
 
 Draft port.
 
-The Iron Gate is La Cortine's dedicated initial-deployment exit from Citadel to Theatre.
+The Iron Gate is La Cortine's dedicated outward mission-traffic port from Citadel to Theatre.
 
-## Input
+## Outward Traffic
 
-```text
-Deployment Package: Ready For Launch
-```
+- Deployment Package: Ready For Launch from Muster
+- clarification, remediation, and parameter directives from Curia
+- pause, resume, recall, and termination orders from Curia
 
 ## Transition
 
@@ -20,11 +20,11 @@ Muster
 → Theatre
 ```
 
-The Iron Gate records the exact Deployment Package and operative version crossing outward and performs the launch transition.
+The Iron Gate records exact outward traffic, authority, mission, deployment, operative version, and correlation. Initial passage performs launch; later passage carries authorized direction to an active deployment.
 
 ## Non-Authority
 
-The Iron Gate must not assemble missions, route continuing requests, supply tools, carry credentials, receive returns, execute missions, or judge outcomes.
+The Iron Gate must not assemble missions, handle Barbican provider traffic, supply tools, carry credentials, receive returns, execute missions, or judge outcomes.
 
 ## Boundary Maxim
 
