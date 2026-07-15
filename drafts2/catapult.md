@@ -16,7 +16,7 @@ The Catapult prepares activation, mission briefing, and launch of deployment-med
 
 It is the mission-deployment preparation and launch surface.
 
-Recruitment packages a canonical persona for the selected deployment medium.
+Conscription packages a canonical persona for the selected deployment medium.
 
 The Catapult receives that deployment-ready asset, incorporates mission intelligence, requests tools and credentials, binds the assignment context required for activation, and launches the resulting operative toward the Theatre.
 
@@ -47,7 +47,7 @@ The Catapult may assemble a `Deployment Package`.
 A Deployment Package may include:
 
 ```text
-Recruited asset:
+Conscripted asset:
 Persona specification reference:
 Deployment medium:
 Mission dossier:
@@ -66,13 +66,13 @@ Termination conditions:
 
 The Deployment Package is mission-specific.
 
-It is distinct from recruitment's deployment-medium-specific packaging of the persona.
+It is distinct from conscription's deployment-medium-specific packaging of the persona.
 
 ---
 
-## Relationship To Recruitment And Activation
+## Relationship To Conscription And Activation
 
-Recruitment produces the deployment-medium-specific asset.
+Conscription produces the deployment-medium-specific asset.
 
 The Catapult must not reforge the canonical persona or silently alter its Persona Governance Doctrine.
 
@@ -115,7 +115,7 @@ The Catapult must not:
 - invent mission purpose without Castellan mission formation
 - forge or rewrite the canonical persona
 - weaken Studium doctrine
-- treat recruitment packaging as prior activation
+- treat conscription packaging as prior activation
 - activate an unadmitted persona package unless explicitly authorized for test
 - fabricate mission research
 - issue unauthorized tools or credentials
@@ -127,7 +127,7 @@ The Catapult must not:
 ## Boundary Maxims
 
 ```text
-Recruitment packages the persona for the medium.
+Conscription packages the persona for the medium.
 Catapult prepares activation, briefs, and launches.
 Inquisition investigates.
 Armory equips.
@@ -142,7 +142,7 @@ Theatre exposes consequence.
 Review or revise this draft if:
 
 - Catapult becomes a sovereign mission commander
-- Catapult duplicates recruitment's platform packaging
+- Catapult duplicates conscription's platform packaging
 - mission dossiers are written without Inquisition support
 - tools and credentials are issued without authorization boundary
 - activation is confused with packaging
