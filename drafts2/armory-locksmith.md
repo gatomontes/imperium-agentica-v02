@@ -12,7 +12,7 @@ It does not admit real credential management, tool execution, external integrati
 
 ## Purpose
 
-The Armory and Locksmith support the Catapult during deployment preparation.
+The Armory and Locksmith support the Muster during deployment preparation.
 
 The Armory concerns tools.
 
@@ -51,7 +51,7 @@ The Armory must not:
 - select operatives
 - issue access credentials
 - launch deployments
-- authorize tools beyond Catapult constraints
+- authorize tools beyond mission constraints preserved by Muster
 - judge mission returns
 
 ---
@@ -93,9 +93,9 @@ The Locksmith must not:
 
 ---
 
-## Relationship To Catapult
+## Relationship To Muster
 
-The Catapult requests tool and key support as part of Deployment Package assembly.
+The Muster requests tool and key support as part of Deployment Package assembly.
 
 Armory and Locksmith do not launch by themselves.
 
@@ -106,7 +106,7 @@ Armory and Locksmith do not launch by themselves.
 ```text
 Armory equips.
 Locksmith unlocks.
-Catapult launches.
+Muster assembles.
 Capability is not authorization.
 ```
 
