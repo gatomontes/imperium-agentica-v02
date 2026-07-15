@@ -6,22 +6,22 @@ Draft.
 
 This file defines the provisional Pit for Imperium v02.
 
-It does not admit automated evaluation infrastructure, benchmark harness, adversarial runtime, or final admission authority.
+It does not admit automated evaluation infrastructure, a permanent benchmark harness, adversarial runtime, or final deployment authority.
 
 ---
 
 ## Purpose
 
-The Pit stress-tests operative candidates.
+The Pit stress-tests Persona Specification Candidates.
 
-It exposes weakness before an operative is admitted to the Garrison or prepared for deployment.
+It exposes weakness before a persona is admitted to Garrison, packaged for a deployment medium, or activated as an operative.
 
 ---
 
 ## Core Question
 
 ```text
-Does this operative survive pressure well enough to be admitted, revised, or rejected?
+Does this persona remain professionally competent and governably bounded under pressure?
 ```
 
 ---
@@ -30,17 +30,19 @@ Does this operative survive pressure well enough to be admitted, revised, or rej
 
 The Pit may test for:
 
+- profession mismatch
+- competency gaps
 - scope drift
 - authority confusion
-- reporting failure
+- evidentiary weakness
 - unsafe initiative
 - hidden assumptions
 - refusal weakness
-- mission misunderstanding
-- profession-pattern mismatch
-- tool/key misuse risk
+- prohibited conduct
+- escalation failure
+- reporting failure
 - inability to surface uncertainty
-- inability to stop or escalate
+- incoherence between cognition and governance doctrine
 
 ---
 
@@ -48,11 +50,11 @@ The Pit may test for:
 
 The Pit may receive:
 
-- operative candidate from Foundry
-- profession brief from Guildhall
-- Citadel governance expectations
-- operative commission from Conscription
-- known mission constraints when relevant
+- Persona Specification Candidate from Foundry
+- profession specification from Guildhall
+- applicable Persona Governance Doctrine from Studium
+- approved work specification
+- known deployment assumptions when they are relevant to the test
 
 ---
 
@@ -71,19 +73,23 @@ Admission recommendation is not admission unless Garrison admission rules later 
 
 ---
 
-## Relationship To Foundry
+## Relationship To Foundry And Studium
 
-Failed or weak candidates may return to Foundry for revision.
+Failed or weak candidates may return to Foundry for cognitive revision, to Studium for doctrinal revision, or to both when the failure crosses their boundary.
 
-The Pit must preserve what failed and why.
+The Pit must preserve what failed, under which pressure, and why.
+
+The Pit tests doctrine.
+
+It does not invent doctrine.
 
 ---
 
 ## Relationship To Garrison
 
-Only candidates that survive testing may be considered for Garrison.
+Only persona specifications that survive testing may be considered for Garrison admission.
 
-The Pit does not store operatives.
+The Pit does not store personas, package deployment assets, or activate operatives.
 
 ---
 
@@ -91,19 +97,20 @@ The Pit does not store operatives.
 
 The Pit must not:
 
-- build operatives
-- rewrite profession research
-- issue deployment tools
-- launch operatives
+- forge personas
+- rewrite profession specifications
+- author Persona Governance Doctrine
+- package personas for deployment media
+- activate or launch operatives
 - decide mission disposition
-- treat a single clean test as permanent proof
+- treat one clean test as permanent proof
 
 ---
 
 ## Boundary Maxim
 
 ```text
-The Pit proves weakness before the world does.
+The Pit proves weakness before deployment does.
 ```
 
 ---
@@ -112,7 +119,8 @@ The Pit proves weakness before the world does.
 
 Review or revise this draft if:
 
-- Pit testing becomes ceremonial approval
+- testing becomes ceremonial approval
 - failed tests do not produce actionable revision information
 - Pit starts inventing doctrine instead of testing against it
 - every candidate passes because it sounds competent
+- mission execution results are confused with persona fitness tests
