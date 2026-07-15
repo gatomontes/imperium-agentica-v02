@@ -67,9 +67,9 @@ Conscription
 ↔ Inquisition
 ↔ Armory / Locksmith
 → Deployment Package
-→ unnamed launch boundary
+→ La Cortine / Iron Gate
 → Theatre
-→ Lazaretto
+→ La Cortine / Lazaretto
 → Judicature
 → Chamber of Scribes
 → Secretariat
@@ -98,9 +98,12 @@ Conscription
 
 - `conscription.md`
 
-### Mission Assembly and Execution Boundary
+### Mission Assembly and Cortine Boundary
 
 - `muster.md`
+- `la-cortine.md`
+- `iron-gate.md`
+- `barbican.md`
 - `inquisition.md`
 - `armory-locksmith.md`
 - `theatre.md`
@@ -133,7 +136,11 @@ Foundry cognitively fits those inputs into canonical personas.
 Pit tests integrated persona candidates.
 Garrison holds admitted canonical personas.
 Conscription recruits personas into deployment-medium-specific operatives.
-Muster assembles operatives, mission intelligence, tools, access, rules, and conditions into mission-bound Deployment Packages.
+Muster assembles mission-bound Deployment Packages.
+Iron Gate launches initial deployments.
+Barbican exposes continuing Armory and Locksmith support.
+Lazaretto receives mission returns.
+La Cortine merely contains these ports.
 Inquisition investigates mission terrain.
 Armory issues tools.
 Locksmith issues keys and access.
@@ -165,7 +172,7 @@ admitted canonical persona
 → deployed operative
 ```
 
-No separate activation state or named launching entity is currently admitted.
+No separate activation state is admitted. Iron Gate is the dedicated launch port.
 
 ---
 
@@ -248,7 +255,6 @@ This directory does not admit:
 - UI screens
 - authority to act externally
 - separate activation state
-- named launching entity
 - Conscription as operative orchestration
 - Citadel as persona-governance steward
 - Foundry as operative builder
