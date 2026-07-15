@@ -6,23 +6,28 @@ Draft.
 
 This file records the current official cognitive map for Imperium v02.
 
-Official means active for orientation and future drafting.
+Official means active for orientation, drafting, and constitutional testing.
 
-Official does not mean admitted architecture, runtime design, implementation contract, service topology, database schema, UI plan, or final terminology.
-
-This map may be revised, leaned, split, renamed, demoted, or removed when use exposes better boundaries.
+It does not admit runtime architecture, implementation topology, database schema, service layout, UI design, autonomous external authority, or final terminology.
 
 ---
 
 ## Core Thesis
 
-Imperium v02 is currently understood as an operative-producing system.
+Imperium v02 produces operatives from governed, tested, reusable personas.
 
-It receives operator intent, forms a mission need, supplies or raises operatives, prepares deployment, receives returns, evaluates findings, writes a final report, and returns that report to the operator.
+Its primary production distinction is:
 
-Imperium does not currently claim to be the external orchestration layer that executes all agentic work in the world.
+```text
+profession
+→ governance doctrine
+→ human-trait canon
+→ canonical persona
+→ deployment-medium-specific operative
+→ deployment
+```
 
-Imperium raises, governs, tests, admits, deploys, receives, evaluates, and reports on operative work.
+Imperium may also prepare deployment, receive returns, evaluate findings, write a final report, and return that report to the operator.
 
 ---
 
@@ -32,13 +37,25 @@ Imperium raises, governs, tests, admits, deploys, receives, evaluates, and repor
 Operator
 → Secretariat
 → Castellan
-→ Conscription
-↔ Guildhall
-→ Garrison search
-→ Foundry if no suitable operative exists
-↔ Citadel
-→ Pit
-→ Garrison
+→ Guildhall
+→ Garrison search by resolved profession
+    ├─ suitable admitted persona found
+    │    → Conscription
+    │
+    └─ no suitable admitted persona
+         → Studium
+         → Hagiography when human-trait canon is applicable
+         → Foundry
+         ↔ Guildhall / Studium / Hagiography for revision
+         → Pit
+         ↔ Foundry / Studium / Hagiography / Guildhall from findings
+         → Garrison
+         → Conscription
+
+Conscription
+→ Operative
+→ handoff to Operator
+   or
 → Catapult
 ↔ Inquisition
 ↔ Armory / Locksmith
@@ -52,268 +69,242 @@ Operator
 → Operator
 ```
 
+A branch may stop when its requested product has been delivered.
+
+An operative may be handed back without being deployed by Imperium.
+
 ---
 
-## Map Shape
+## Canonical Artifact Chain
 
 ```text
-Secretariat
-  point of entry and operator-facing administrative surface
-        ↓
-Castellan
-  mission orchestration
-        ↓
-Conscription
-  operative orchestration / recruitment
-        ↔
-Guildhall
-  research of professions
-        ↓
-Garrison search
-  reuse existing admitted operative when possible
-        ↓ if no suitable operative exists
-Foundry
-  operative building
-        ↔
-Citadel
-  operative governance doctrine
-        ↓
-Pit
-  operative stress test
-        ↓ admission
-Garrison
-  admitted operative roster and holding surface
-        ↓ deployment activation
-Catapult
-  deployment and mission launch orchestration
-        ↔
-Inquisition
-  mission intelligence
-        ↔
-Armory / Locksmith
-  tools and keys/access
-        ↓
-Theatre
-  outside-world mission terrain
-        ↓
-Lazaretto
-  receiving dock for returns
-        ↓
-Judicature
-  evaluation of returns and findings
-        ↓
-Chamber of Scribes
-  final report composition
-        ↓
-Secretariat
-  delivery and operator-facing administrative closure
+Operator intent
+→ Petition
+→ Mission Need
+→ Work Specification
+→ Profession Specification
+→ Persona Governance Doctrine
+→ Human-Trait Canon when applicable
+→ Persona Specification Candidate
+→ Pit Findings
+→ Admitted Canonical Persona
+→ Operative
+→ Deployment Package
+→ Deployment
+→ Return Material
+→ Findings
+→ Final Report
 ```
 
+The chain may iterate or stop.
+
+Artifacts must not be collapsed merely because the work appears simple.
+
 ---
 
-## Orchestration Hierarchy
+## Production Map
+
+### Secretariat
+
+Receives operator intent, shapes administrative intake, and delivers final reports or requested artifacts.
 
 ```text
-Castellan = mission orchestration
-Conscription = operative orchestration
-Catapult = deployment orchestration
+Product: Petition / delivery
+Does not: form missions, define professions, forge personas, recruit, deploy, or judge
 ```
 
 ### Castellan
 
-The Castellan sits above Conscription and Catapult.
+Forms the mission need and issues the approved Work Specification.
 
-It coordinates the mission as a mission.
+```text
+Product: Mission Need + Work Specification
+Does not: determine profession, forge persona, recruit, brief, or deploy
+```
 
-It does not research professions, build operatives, issue tools, issue keys, launch deployments, receive returns, judge findings, or write final reports.
+### Guildhall
+
+Maps the Work Specification to a legitimate profession and produces the Profession Specification.
+
+After resolving the profession, Guildhall may search Garrison for a suitable admitted persona. If none exists, it issues persona-construction work toward the production path.
+
+```text
+Product: Profession Specification
+Does not: author persona governance, canonize traits, forge, recruit, or deploy
+```
+
+### Studium
+
+Translates the governable dimensions of professional practice into Persona Governance Doctrine.
+
+```text
+Product: Persona Governance Doctrine
+Does not: redefine profession, forge persona, recruit, or deploy
+```
+
+Studium supersedes the narrowed v02 Citadel in this production path.
+
+### Hagiography
+
+Studies high-performing real-world humans called Saints and canonizes evidenced, transferable traits.
+
+Saints are sources of evidence, not whole-person templates.
+
+```text
+Product: Human-Trait Canon
+Does not: define profession, author doctrine, forge persona, recruit, or deploy
+```
+
+Hagiography may remain dormant when no distinct human-trait canon is applicable, but that determination must be explicit rather than silently assumed.
+
+### Foundry
+
+Cognitively fits profession, governance doctrine, applicable human-trait canon, and preserved operator constraints into a concrete Persona Specification Candidate.
+
+```text
+Product: Persona Specification Candidate
+Does not: produce an operative, package for a platform, admit, recruit, or deploy
+```
+
+Foundry may return conflicts to Guildhall, Studium, or Hagiography.
+
+### Pit
+
+Stress-tests the integrated Persona Specification Candidate for professional competence, governable boundaries, and human coherence.
+
+```text
+Product: Pit Findings + recommendation
+Does not: forge, repair its own test subject, admit, recruit, or deploy
+```
+
+Failures return to the responsible upstream sources with preserved evidence.
+
+### Garrison
+
+Holds admitted canonical personas and their qualification, restriction, test, and revision references.
+
+```text
+Product: admitted persona inventory
+Does not: hold active mission state, recruit, grant tools or credentials, or deploy
+```
 
 ### Conscription
 
-The Conscription sits under mission orchestration and owns operative supply.
+Performs recruitment.
 
-It searches the Garrison before commissioning new work.
+It selects an admitted persona from Garrison and converts it into the concrete asset required by a deployment medium.
 
-It consults the Guildhall when profession research is needed.
+```text
+Input: Admitted Canonical Persona + deployment-medium contract
+Product: Operative
+Does not: define profession, forge persona, alter doctrine or traits, or deploy
+```
 
-It commissions the Foundry only when an existing admitted operative cannot satisfy the need.
+If the medium cannot preserve required competence, doctrine, or traits, Conscription refuses the transformation.
 
 ### Catapult
 
-The Catapult sits under mission orchestration and owns deployment preparation and launch.
+Prepares and deploys an existing operative for a mission.
 
-It receives the operative from the Garrison or Conscription path, obtains mission intelligence from the Inquisition, receives tools from the Armory, receives keys or access from the Locksmith, prepares the deployment package, and launches toward the Theatre.
+```text
+Input: Operative + authorized mission requirements
+Product: Deployment Package + Deployment
+Does not: select or forge persona, recruit, rewrite doctrine, or judge returns
+```
 
-The Catapult owns mission briefing closer to launch.
-
-Mission formation is not mission briefing.
+Catapult obtains mission intelligence from Inquisition, tools from Armory, and authorized access from Locksmith.
 
 ---
 
-## Layer Split
-
-### Intake
+## State Distinctions
 
 ```text
-Secretariat
+Saint ≠ trait
+trait ≠ Human-Trait Canon
+Human-Trait Canon ≠ persona
+Persona Specification Candidate ≠ admitted persona
+admitted persona ≠ operative
+operative ≠ Deployment Package
+Deployment Package ≠ deployment
+deployment ≠ return
+return ≠ finding
+finding ≠ Final Report
 ```
 
-The Secretariat receives operator intent, shapes administrative intake, asks delivery and packaging questions when needed, and returns final reports to the operator.
-
-The Secretariat reports and delivers. It does not judge, build, deploy, or alter findings.
-
-### Mission Formation
+The current state vocabulary is:
 
 ```text
-Castellan
+admitted canonical persona
+→ recruited operative
+→ deployed operative
 ```
 
-The Castellan coordinates mission formation and mission-level routing.
-
-It may identify that operative capability is required and activate Conscription.
-
-It may route toward Catapult when deployment preparation is needed.
-
-### Operative Supply and Production
-
-```text
-Conscription
-Guildhall
-Garrison
-Foundry
-Citadel
-Pit
-```
-
-This layer searches, researches, raises, builds, governs, tests, and admits operatives.
-
-Foundry makes.
-
-Pit tests.
-
-Garrison holds what survives.
-
-Guildhall researches profession patterns.
-
-Citadel provides operative governance doctrine.
-
-### Deployment Preparation and Launch
-
-```text
-Catapult
-Inquisition
-Armory
-Locksmith
-Theatre
-```
-
-The Catapult prepares and launches.
-
-The Inquisition investigates mission terrain.
-
-The Armory issues tools.
-
-The Locksmith issues keys and access.
-
-The Theatre is outside-world terrain.
-
-### Return, Judgment, and Reporting
-
-```text
-Lazaretto
-Judicature
-Chamber of Scribes
-Secretariat
-```
-
-The Lazaretto receives returns.
-
-The Judicature evaluates returns and produces findings.
-
-The Chamber of Scribes writes the final operator-facing report from findings.
-
-The Secretariat delivers the report to the operator in the required format or package.
+No separate activation state is currently admitted.
 
 ---
 
-## Primary Doctrinal Lines
+## Reuse Before Construction
+
+Reuse applies to personas.
 
 ```text
-The Secretariat receives and returns.
-The Castellan forms and coordinates missions.
-The Conscription supplies operatives.
-The Guildhall researches professions.
-The Foundry builds operatives.
-The Citadel governs operative doctrine.
-The Pit stress-tests operatives.
-The Garrison holds admitted operatives.
-The Catapult prepares and launches deployments.
-The Inquisition investigates mission terrain.
-The Armory issues tools.
-The Locksmith issues keys and access.
-The Theatre is the outside-world terrain.
-The Lazaretto receives returns.
-The Judicature evaluates findings.
-The Chamber of Scribes writes the final report.
-The Secretariat delivers it to the operator.
+Resolve profession.
+Search Garrison for a suitable admitted persona.
+If found, recruit it through Conscription.
+If absent, construct and test a new persona.
 ```
+
+Existing does not mean suitable.
+
+Admitted does not mean recruitable into every medium.
+
+Operative does not mean deployed.
 
 ---
 
-## Product and Reporting Flow
+## Procedural Compression
 
-```text
-Operator intent
-→ Petition / intake record
-→ Mission need
-→ Operative need
-→ Existing operative or new operative commission
-→ Operative candidate
-→ Tested operative
-→ Admitted operative
-→ Deployment package
-→ Theatre action
-→ Return material
-→ Findings
-→ Final Report
-→ Operator delivery
-```
+Some persona construction may be cognitively minimal.
+
+Procedural steps may be performed together or without a separately operating Foundry agency only when the following remain explicit and distinguishable:
+
+- Guildhall owns the profession decision
+- Studium owns the doctrine decision, including an explicit finding that no distinct doctrine is required
+- Hagiography owns the trait-canon decision, including an explicit finding that no distinct canon is required
+- a canonical persona specification exists before Conscription
+- Conscription only performs deployment-medium transformation
+
+Compression is procedural economy.
+
+It is not authority transfer or artifact erasure.
 
 ---
 
-## Mission Dossier Boundary
+## Deployment Boundary
 
-The mission dossier belongs near launch, not high in mission formation.
+The operative can be handed to the operator without Imperium deployment.
 
-The Inquisition produces mission intelligence.
-
-The Catapult assembles the mission dossier and deployment package.
-
-The Castellan forms the mission need but does not need to issue detailed mission procedures.
+When deployment is requested:
 
 ```text
-Mission formation is not mission briefing.
+Operative
+→ Catapult
+↔ Inquisition
+↔ Armory
+↔ Locksmith
+→ Deployment Package
+→ Theatre
 ```
 
----
+Tools are not authority.
 
-## Reuse Before Build
+Credentials are not mission understanding.
 
-The Conscription must search the Garrison before commissioning the Foundry.
-
-```text
-Reuse before recruitment.
-Recruit before building.
-Build before deployment.
-Test before admission.
-```
-
-A new operative should not be built merely because a new mission exists.
+The existence of an operative does not authorize launch.
 
 ---
 
 ## Return Boundary
-
-For now, the return path stops at findings and operator reporting.
 
 ```text
 Theatre
@@ -326,11 +317,9 @@ Theatre
 → Operator
 ```
 
-Disposition is not assigned.
+Disposition remains unassigned.
 
 Disposition requires before/after knowledge that has not yet been defined.
-
-Judicature may produce findings, but it must not prescribe correction as if the comparative machinery already exists.
 
 ```text
 No correction without contrast.
@@ -338,35 +327,42 @@ No correction without contrast.
 
 ---
 
-## Delivery Formats
+## Traceability Requirement
 
-The Secretariat may ask administrative delivery questions for the final report or reporting package.
+Every derived artifact must preserve references to the exact upstream versions from which it was produced.
 
-Examples:
-
-```text
-email body
-PDF
-CSV
-JSON
-Markdown
-ZIP bundle
-archive only
-```
-
-A ZIP bundle may contain multiple final artifacts, such as:
+Minimum chain:
 
 ```text
-final-report.pdf
-findings.csv
-evidence-index.json
-attachments/
-readme.md
+Deployment
+→ Operative version
+→ Canonical Persona version
+→ Pit Findings version
+→ Profession Specification version
+→ Persona Governance Doctrine version
+→ Human-Trait Canon version when applicable
+→ Saint evidence records
 ```
 
-The Secretariat packages and delivers.
+Revisions create new versions or supersession records.
 
-It must not change the substance of findings.
+They do not overwrite historical evidence.
+
+Existing operatives remain bound to the persona, doctrine, and canon versions from which they were recruited. Applying a revised canonical persona requires a new Conscription event and a new operative version.
+
+---
+
+## Orchestration Boundaries
+
+```text
+Castellan = mission orchestration
+Catapult = deployment orchestration
+Conscription = recruitment process, not orchestration
+```
+
+The current map does not admit a separate operative-orchestration sovereign.
+
+Guildhall resolves profession and persona availability. Production entities create missing persona artifacts. Conscription transforms the selected admitted persona.
 
 ---
 
@@ -375,48 +371,37 @@ It must not change the substance of findings.
 This map does not admit:
 
 - runtime architecture
-- external autonomous execution authority
+- external autonomous authority
 - service topology
 - database schema
 - UI implementation
 - permanent pass engine
 - product-specific workflow library
+- separate activation state
+- Conscription as operative orchestration
+- Citadel as persona-governance steward
+- Foundry as operative builder
+- Garrison as operative inventory
 - disposition authority
 - before/after knowledge machinery
 - Vellum as a v02 artifact
-- old v01 constitutional machinery by implication
 
 ---
 
-## Risks
+## Constitutional Summary
 
-- Names may smuggle v01 machinery back into v02.
-- Castellan may become too sovereign if mission orchestration is not bounded.
-- Conscription may build too often if Garrison search is weak.
-- Catapult may become execution layer instead of deployment preparation layer.
-- Inquisition may overreach from investigation into command or judgment.
-- Judicature may imply disposition before before/after comparison exists.
-- Secretariat may drift from administrative communication into authorship or judgment.
-
----
-
-## Batch Summary
-
-Files changed:
-
-- `drafts2/cognitive-map.md`
-
-Assumptions introduced:
-
-- The current diagram is the official draft cognitive map.
-- Castellan, Conscription, and Catapult form distinct orchestration levels.
-- Catapult owns mission briefing and deployment packaging.
-- Disposition remains parked.
-
-Behavior proven:
-
-- Not yet proven.
-
-Recommended next smallest step:
-
-- Test one operator request through the map and identify which offices must act, which can remain dormant, and where the first ambiguity appears.
+```text
+Castellan specifies the work.
+Guildhall specifies the profession.
+Studium authors its Persona Governance Doctrine.
+Hagiography canonizes applicable human traits from Saints.
+Foundry forges the canonical persona.
+Pit tests the whole persona.
+Garrison holds admitted personas.
+Conscription recruits a persona into an operative.
+Catapult deploys the operative.
+Lazaretto receives.
+Judicature finds.
+Chamber of Scribes reports.
+Secretariat delivers.
+```
