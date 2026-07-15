@@ -165,9 +165,9 @@ Theatre is the execution terrain.
 
 Muster prepares a Deployment Package for the launch boundary leading to Theatre.
 
-The current doctrine does not name a separate launching entity.
+Muster presents a Ready For Launch Deployment Package to the Iron Gate, La Cortine's dedicated deployment exit.
 
-Muster does not control what happens in Theatre and does not receive or judge Theatre returns.
+Muster does not manage continuing Barbican traffic and does not control what happens in Theatre and does not receive or judge Theatre returns.
 
 ---
 
@@ -199,6 +199,8 @@ Inquisition investigates.
 Armory equips.
 Locksmith unlocks.
 Muster assembles.
+Iron Gate launches.
+Barbican sustains continuing operations.
 Theatre exposes consequence.
 ```
 
