@@ -49,11 +49,11 @@ The Garrison may preserve:
 
 ---
 
-## Relationship To Recruitment
+## Relationship To Conscription
 
-Recruitment searches Garrison for an admitted persona that satisfies the requested professional capability.
+Conscription searches Garrison for an admitted persona that satisfies the requested professional capability.
 
-Recruitment packages the selected persona as a deployment-medium-specific asset.
+Conscription packages the selected persona as a deployment-medium-specific asset.
 
 Garrison does not perform that packaging.
 
@@ -107,7 +107,7 @@ The Garrison must not:
 
 ```text
 Garrison holds what survived.
-Recruitment packages what is selected.
+Conscription packages what is selected.
 Activation places the package into service as an operative.
 ```
 
