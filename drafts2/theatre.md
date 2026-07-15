@@ -46,11 +46,15 @@ The Theatre may produce or expose:
 
 ---
 
-## Relationship To Muster
+## Relationships Across La Cortine
 
-Muster prepares the mission-bound Deployment Package for the launch boundary leading to Theatre.
+Muster prepares the mission-bound Deployment Package.
 
-Muster does not launch, execute, or own what happens there. The current doctrine does not name a separate launching entity.
+Iron Gate launches it through La Cortine into Theatre.
+
+During execution, the deployed operative may present tool or access tickets through Barbican to Armory or Locksmith.
+
+Completed, terminated, or failed mission returns enter Citadel through Lazaretto.
 
 ---
 
