@@ -6,24 +6,26 @@ Draft.
 
 This file defines the provisional Catapult for Imperium v02.
 
-It does not admit live deployment automation, external execution authority, credential management implementation, or runtime orchestration.
+It does not admit live deployment automation, external execution authority, credential-management implementation, or runtime orchestration.
 
 ---
 
 ## Purpose
 
-The Catapult prepares and launches admitted operatives into mission execution.
+The Catapult prepares activation, mission briefing, and launch of deployment-medium-specific assets into mission execution as operatives.
 
-It is the deployment-preparation and launch surface.
+It is the mission-deployment preparation and launch surface.
 
-The Catapult summons personnel from the Garrison, prepares the deployment package, coordinates mission investigation through the Inquisition, requests tools from the Armory, requests keys from the Locksmith, and sends the operative toward the Theatre.
+Recruitment packages a canonical persona for the selected deployment medium.
+
+The Catapult receives that deployment-ready asset, incorporates mission intelligence, requests tools and credentials, binds the assignment context required for activation, and launches the resulting operative toward the Theatre.
 
 ---
 
 ## Core Question
 
 ```text
-What must this operative receive before launch so it can perform this mission under constraint?
+What must this deployment-ready asset receive before activation and launch so the operative can perform the mission under constraint?
 ```
 
 ---
@@ -32,11 +34,9 @@ What must this operative receive before launch so it can perform this mission un
 
 The Castellan forms the mission.
 
-The Catapult briefs and launches it.
+The Catapult prepares activation, briefs the operative, and launches it.
 
-The Castellan should not need to issue detailed mission procedures higher in the chain.
-
-Mission procedure belongs close to deployment, where Inquisition, Armory, Locksmith, and Garrisoned operative constraints can be assembled.
+Mission procedure belongs close to deployment, where Inquisition findings, Armory tools, Locksmith credentials, the recruited asset, and mission constraints can be assembled.
 
 ---
 
@@ -47,18 +47,38 @@ The Catapult may assemble a `Deployment Package`.
 A Deployment Package may include:
 
 ```text
-Assigned operative:
+Recruited asset:
+Persona specification reference:
+Deployment medium:
 Mission dossier:
 Mission brief:
 Tools issued:
-Keys / access issued:
+Credentials / access issued:
 Rules of engagement:
-Constraints:
+Mission-specific constraints:
 Reporting requirements:
 Escalation triggers:
 Return channel:
+Activation conditions:
 Launch conditions:
+Termination conditions:
 ```
+
+The Deployment Package is mission-specific.
+
+It is distinct from recruitment's deployment-medium-specific packaging of the persona.
+
+---
+
+## Relationship To Recruitment And Activation
+
+Recruitment produces the deployment-medium-specific asset.
+
+The Catapult must not reforge the canonical persona or silently alter its Persona Governance Doctrine.
+
+Activation places the recruited asset into actual mission service as an operative.
+
+Packaging is not activation.
 
 ---
 
@@ -66,7 +86,7 @@ Launch conditions:
 
 The Inquisition investigates mission terrain for the Catapult.
 
-The Catapult uses the Mission Inquest to assemble a mission dossier and brief.
+The Catapult uses the Mission Inquest to assemble the mission dossier and brief.
 
 ---
 
@@ -74,9 +94,9 @@ The Catapult uses the Mission Inquest to assemble a mission dossier and brief.
 
 Armory supplies tools.
 
-Locksmith supplies keys, credentials, access bindings, or permission constraints.
+Locksmith supplies credentials, access bindings, or permission constraints.
 
-For now, keys are conceptual and provisional.
+For now, credentials are conceptual and provisional.
 
 ---
 
@@ -93,11 +113,12 @@ The Catapult launches toward the Theatre but does not control everything that ha
 The Catapult must not:
 
 - invent mission purpose without Castellan mission formation
-- launch unadmitted operatives unless explicitly authorized for test
+- forge or rewrite the canonical persona
+- weaken Studium doctrine
+- treat recruitment packaging as prior activation
+- activate an unadmitted persona package unless explicitly authorized for test
 - fabricate mission research
-- issue unauthorized tools
-- issue unauthorized keys
-- ignore Citadel constraints
+- issue unauthorized tools or credentials
 - judge mission results
 - decide disposition
 
@@ -106,7 +127,8 @@ The Catapult must not:
 ## Boundary Maxims
 
 ```text
-Catapult briefs and launches.
+Recruitment packages the persona for the medium.
+Catapult prepares activation, briefs, and launches.
 Inquisition investigates.
 Armory equips.
 Locksmith unlocks.
@@ -120,7 +142,9 @@ Theatre exposes consequence.
 Review or revise this draft if:
 
 - Catapult becomes a sovereign mission commander
+- Catapult duplicates recruitment's platform packaging
 - mission dossiers are written without Inquisition support
-- tools and keys are issued without authorization boundary
+- tools and credentials are issued without authorization boundary
+- activation is confused with packaging
 - Catapult controls Theatre returns instead of Lazaretto receiving them
 - launch packaging changes mission meaning without Castellan trace
