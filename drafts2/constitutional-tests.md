@@ -484,7 +484,7 @@ A deployed operative requests an API-backed capability and later returns from mi
 Initial deployment: Muster → Iron Gate → Theatre
 Continuing request: Theatre → Barbican → provider
 Credentialed operation: Locksmith retains credential and performs unlock
-Mission return: Theatre → Lazaretto → Judicature
+Mission return: Theatre → Lazaretto → Curia
 ```
 
 ## Pass Conditions
@@ -504,6 +504,46 @@ Mission return: Theatre → Lazaretto → Judicature
 - Lazaretto handles continuing support.
 - Completed returns enter through Barbican.
 - Continuing requests enter through Lazaretto.
+
+---
+
+# Test CT-015 — Curia Convenes Officers
+
+## Pressure
+
+An active operative returns an approval recommendation without the references required by mission and doctrine.
+
+## Expected Path
+
+```text
+Theatre packet
+→ Lazaretto raw preservation and sanitation
+→ Curia session
+→ convened Officers compare packet with mission and doctrine
+→ EVIDENCE_DEFICIENCY
+→ remediation directive
+→ Iron Gate
+→ active operative
+```
+
+## Pass Conditions
+
+- Lazaretto sanitizes but does not substantively verify.
+- Curia contains no offices.
+- Required Officers and represented authority are recorded.
+- Officers distinguish observation, inference, claim, and evidence.
+- Absence of evidence does not become approval.
+- Deliberation, dissent, decision, and directive remain traceable.
+- Authorized direction exits through Iron Gate.
+
+## Fail Conditions
+
+- Curia acts without Officers.
+- Curia decomposes into internal offices.
+- Lazaretto decides evidentiary sufficiency.
+- Operative claims are accepted as facts.
+- Iron Gate deliberates or decides.
+- Barbican carries mission-control directives.
 
 ---
 
