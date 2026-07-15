@@ -108,7 +108,7 @@ The Garrison must not:
 ```text
 Garrison holds what survived.
 Conscription recruits what is selected.
-Catapult deploys the resulting operative.
+Muster assembles the resulting operative for a mission.
 ```
 
 ---
