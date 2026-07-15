@@ -131,5 +131,5 @@ Review or revise this draft if:
 - Castellan becomes an all-knowing mission commander
 - Castellan writes mission procedures without investigation
 - Castellan begins defining professions or personas
-- Castellan absorbs recruitment or deployment authority
+- Castellan absorbs Conscription or deployment authority
 - Castellan starts deciding disposition before before/after knowledge exists
