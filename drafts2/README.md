@@ -104,7 +104,7 @@ Operator
 - `cognitive-map.md`
 - `lifecycle.md`
 - `production-artifacts.md`
-- `test-mission-001.md`
+- `constitutional-tests.md`
 
 ---
 
@@ -133,21 +133,17 @@ Secretariat delivers final reports.
 
 ---
 
-## Stress Tests
+## Constitutional Tests
 
-Current manual stress test:
-
-```text
-drafts2/test-mission-001.md
-```
-
-First exposed gap addressed:
+The current manual constitutional suite is:
 
 ```text
-drafts2/garrison-roster.md
+drafts2/constitutional-tests.md
 ```
 
-The roster draft exists so Conscription can test reuse before recruitment instead of assuming every mission need requires new Foundry work.
+It tests the current persona-to-operative ontology and the authority boundaries among Guildhall, Studium, Hagiography, Foundry, Pit, Garrison, Conscription, and Catapult.
+
+The retired Test Mission 001 chain is not authoritative and has been deleted.
 
 ---
 
