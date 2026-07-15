@@ -16,14 +16,14 @@ The name is heavy and must remain narrowly bounded.
 
 The Inquisition investigates mission terrain for deployment.
 
-It helps the Catapult understand what the operative is being sent to do, what facts and constraints matter, what assumptions are hidden, and what unknowns must be surfaced before launch.
+It helps the Muster understand what the operative is being sent to do, what facts and constraints matter, what assumptions are hidden, and what unknowns must be surfaced before mission assembly can be completed.
 
 ---
 
 ## Core Question
 
 ```text
-What must be understood about this mission before the operative is briefed and launched?
+What must be understood about this mission before the operative can be bound to it?
 ```
 
 ---
@@ -68,11 +68,11 @@ Reporting implications:
 
 ---
 
-## Relationship To Catapult
+## Relationship To Muster
 
-The Catapult uses the Mission Inquest to prepare the Mission Dossier and Deployment Package.
+The Muster uses the Mission Inquest to prepare the Mission Dossier and Deployment Package.
 
-The Inquisition does not launch.
+The Inquisition does not assemble or launch.
 
 ---
 
@@ -119,4 +119,4 @@ Review or revise this draft if:
 - mission investigation becomes judgment
 - the name causes role inflation
 - Inquisition starts writing final reports
-- Inquisition bypasses Catapult and briefs operatives directly without handoff
+- Inquisition bypasses Muster and briefs operatives directly without handoff
