@@ -12,20 +12,16 @@ It does not admit live deployment automation, external execution authority, cred
 
 ## Purpose
 
-The Catapult prepares activation, mission briefing, and launch of deployment-medium-specific assets into mission execution as operatives.
+The Catapult prepares and deploys operatives into mission execution.
 
-It is the mission-deployment preparation and launch surface.
-
-Conscription packages a canonical persona for the selected deployment medium.
-
-The Catapult receives that deployment-ready asset, incorporates mission intelligence, requests tools and credentials, binds the assignment context required for activation, and launches the resulting operative toward the Theatre.
+It receives a deployment-medium-specific operative from Conscription, incorporates mission intelligence, requests tools and credentials, assembles the mission-specific deployment package, and launches the operative toward the Theatre.
 
 ---
 
 ## Core Question
 
 ```text
-What must this deployment-ready asset receive before activation and launch so the operative can perform the mission under constraint?
+What must this operative receive before deployment so it can perform the mission under constraint?
 ```
 
 ---
@@ -34,9 +30,11 @@ What must this deployment-ready asset receive before activation and launch so th
 
 The Castellan forms the mission.
 
-The Catapult prepares activation, briefs the operative, and launches it.
+Conscription produces the operative.
 
-Mission procedure belongs close to deployment, where Inquisition findings, Armory tools, Locksmith credentials, the recruited asset, and mission constraints can be assembled.
+The Catapult briefs and deploys it.
+
+Mission procedure belongs close to deployment, where Inquisition findings, Armory tools, Locksmith credentials, operative constraints, and mission conditions can be assembled.
 
 ---
 
@@ -47,7 +45,7 @@ The Catapult may assemble a `Deployment Package`.
 A Deployment Package may include:
 
 ```text
-Conscripted asset:
+Operative:
 Persona specification reference:
 Deployment medium:
 Mission dossier:
@@ -59,26 +57,21 @@ Mission-specific constraints:
 Reporting requirements:
 Escalation triggers:
 Return channel:
-Activation conditions:
 Launch conditions:
 Termination conditions:
 ```
 
 The Deployment Package is mission-specific.
 
-It is distinct from conscription's deployment-medium-specific packaging of the persona.
+It is distinct from Conscription's conversion of the canonical persona into an operative.
 
 ---
 
-## Relationship To Conscription And Activation
+## Relationship To Conscription
 
-Conscription produces the deployment-medium-specific asset.
+Conscription produces the deployment-medium-specific operative.
 
-The Catapult must not reforge the canonical persona or silently alter its Persona Governance Doctrine.
-
-Activation places the recruited asset into actual mission service as an operative.
-
-Packaging is not activation.
+The Catapult must not reforge the canonical persona or silently alter its Persona Governance Doctrine or canonized human traits.
 
 ---
 
@@ -104,7 +97,7 @@ For now, credentials are conceptual and provisional.
 
 The Theatre is the execution terrain.
 
-The Catapult launches toward the Theatre but does not control everything that happens there.
+The Catapult launches the operative toward the Theatre but does not control everything that happens there.
 
 ---
 
@@ -115,8 +108,8 @@ The Catapult must not:
 - invent mission purpose without Castellan mission formation
 - forge or rewrite the canonical persona
 - weaken Studium doctrine
-- treat conscription packaging as prior activation
-- activate an unadmitted persona package unless explicitly authorized for test
+- alter canonized Hagiography traits
+- duplicate Conscription's platform-specific transformation
 - fabricate mission research
 - issue unauthorized tools or credentials
 - judge mission results
@@ -127,8 +120,8 @@ The Catapult must not:
 ## Boundary Maxims
 
 ```text
-Conscription packages the persona for the medium.
-Catapult prepares activation, briefs, and launches.
+Conscription produces the operative.
+Catapult briefs and deploys.
 Inquisition investigates.
 Armory equips.
 Locksmith unlocks.
@@ -142,9 +135,8 @@ Theatre exposes consequence.
 Review or revise this draft if:
 
 - Catapult becomes a sovereign mission commander
-- Catapult duplicates conscription's platform packaging
+- Catapult duplicates Conscription's platform work
 - mission dossiers are written without Inquisition support
 - tools and credentials are issued without authorization boundary
-- activation is confused with packaging
 - Catapult controls Theatre returns instead of Lazaretto receiving them
-- launch packaging changes mission meaning without Castellan trace
+- deployment packaging changes mission meaning without Castellan trace
