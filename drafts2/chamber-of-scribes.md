@@ -12,7 +12,7 @@ It does not admit v01 Vellum, canonical mission record machinery, publication ru
 
 ## Purpose
 
-The Chamber of Scribes writes final operator-facing reports from Judicature Findings.
+The Chamber of Scribes writes final operator-facing reports from Curia findings.
 
 It converts findings into a clear report without changing their meaning.
 
@@ -26,9 +26,9 @@ How should the findings be written so the operator can understand what happened,
 
 ---
 
-## Relationship To Judicature
+## Relationship To Curia
 
-Judicature produces Findings.
+Curia produces Findings.
 
 The Chamber of Scribes writes the Final Report from those Findings.
 
@@ -90,7 +90,7 @@ The Chamber of Scribes must not:
 - decide disposition
 - deliver reports directly unless Secretariat is bypassed by explicit instruction
 - package credentials or deployment materials
-- act as Judicature
+- act as Curia
 - act as Secretariat
 
 ---
@@ -98,7 +98,7 @@ The Chamber of Scribes must not:
 ## Boundary Maxims
 
 ```text
-Judicature judges.
+Curia judges.
 Scribes write.
 Secretariat delivers.
 ```
