@@ -18,7 +18,7 @@ It receives a shaped Petition or operator need from the Secretariat, forms the m
 
 The Castellan coordinates the mission at the highest internal level.
 
-It does not determine the profession, forge personas, package deployment-medium assets, launch deployments, or judge returns.
+It does not determine the profession, forge personas, recruit personas into operatives, deploy operatives, or judge returns.
 
 ---
 
@@ -84,11 +84,11 @@ The Castellan must not:
 - perform Guildhall research
 - forge personas
 - author Persona Governance Doctrine
-- package personas for a deployment medium
+- recruit personas into operatives
 - admit personas to Garrison
 - issue tools or credentials
 - write detailed mission dossiers by assumption
-- activate or launch operatives
+- deploy operatives
 - judge returns
 - assign disposition before before/after knowledge exists
 
@@ -105,8 +105,9 @@ Secretariat
 Later deployment preparation:
 
 ```text
-Deployment-medium-specific asset
-→ activation
+Garrisoned persona
+→ Conscription
+→ Operative
 → Catapult
 ```
 
