@@ -64,7 +64,7 @@ Conscription
 → Theatre
 ↔ La Cortine / Barbican ↔ Armory / Locksmith
 → Lazaretto
-→ Judicature
+→ Curia
 → Findings
 → Chamber of Scribes
 → Final Report
@@ -326,7 +326,7 @@ La Cortine does not route or authorize. Each port has dedicated traffic.
 ```text
 Muster → Iron Gate → Theatre
 Theatre ↔ Barbican ↔ Armory / Locksmith
-Theatre → Lazaretto → Judicature
+Theatre → Lazaretto → Curia
 ```
 
 Credentials remain with Locksmith. Barbican carries tickets and permitted results, never secrets.
@@ -338,7 +338,7 @@ Credentials remain with Locksmith. Barbican carries tickets and permitted result
 ```text
 Theatre
 → Lazaretto
-→ Judicature
+→ Curia
 → Findings
 → Chamber of Scribes
 → Final Report
@@ -431,7 +431,7 @@ Conscription recruits a persona into an operative.
 Muster assembles the operative into a mission-bound Deployment Package.
 Iron Gate performs the launch crossing.
 Lazaretto receives.
-Judicature finds.
+Curia finds.
 Chamber of Scribes reports.
 Secretariat delivers.
 ```
