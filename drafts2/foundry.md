@@ -37,7 +37,7 @@ The Foundry may use:
 - approved work specification
 - profession specification from Guildhall
 - applicable Persona Governance Doctrine from Studium
-- applicable canonized human traits from Hagiography
+- applicable Human-Trait Canon derived by Hagiography from high-performing real-world humans
 - operator constraints preserved in the work specification
 - relevant tested persona patterns, when reuse is authorized
 
@@ -118,13 +118,13 @@ Foundry must not weaken doctrine merely to make persona construction easier.
 
 Foundry and Hagiography work iteratively.
 
-Hagiography supplies canonized human traits applicable to the persona.
+Hagiography supplies canonized, transferable traits evidenced in high-performing real-world humans.
 
 Foundry may expose incoherent, performative, conflicting, or professionally harmful traits during construction.
 
-Hagiography may refine the trait canon in response.
+Hagiography may refine or decanonize traits in response.
 
-Foundry must not mistake theatrical style for human credibility.
+Foundry must not imitate a source human or mistake reputation, theatrical style, or biography for transferable performance.
 
 ---
 
