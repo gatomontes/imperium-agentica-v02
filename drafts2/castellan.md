@@ -6,9 +6,7 @@ Draft.
 
 This file defines a narrowed v02 Castellan.
 
-It does not admit the v01 Castellan's full constitutional mission-forming machinery.
-
-It does not admit Codex issuance, institutional path orchestration, or runtime authority.
+It does not admit the v01 Castellan's full constitutional mission-forming machinery, Codex issuance, institutional path orchestration, or runtime authority.
 
 ---
 
@@ -16,42 +14,41 @@ It does not admit Codex issuance, institutional path orchestration, or runtime a
 
 The Castellan is mission orchestration.
 
-It receives a shaped Petition or operator need from the Secretariat and determines how that need should move through Imperium's operative-production and deployment-preparation chain.
+It receives a shaped Petition or operator need from the Secretariat, forms the mission need, and produces the approved work specification required to continue.
 
 The Castellan coordinates the mission at the highest internal level.
 
-It does not research mission terrain in detail, build operatives, issue tools, launch deployments, or judge returns.
+It does not determine the profession, forge personas, package deployment-medium assets, launch deployments, or judge returns.
 
 ---
 
 ## Core Question
 
 ```text
-What mission is being formed, and what operative capability does this mission require?
+What mission is being formed, and what work must be performed?
 ```
 
 The Castellan does not ask:
 
 ```text
-What exact professional pattern should the operative follow?
-What tools and keys should be issued at launch?
+Which profession legitimately performs this work?
+How should that profession be constituted as a persona?
+How must the persona be packaged for a platform?
+What tools and credentials should be issued at launch?
 What happened in the Theatre?
-What should the institution learn from the return?
 ```
 
 Those belong elsewhere.
 
 ---
 
-## Relationship To Conscription
+## Relationship To Guildhall
 
-The Castellan orchestrates missions.
+The Castellan sends an approved work specification to Guildhall.
 
-The Conscription orchestrates operatives.
+Guildhall maps the work to the relevant profession, compiles or resolves the profession specification, and determines whether persona construction work must be issued to Foundry.
 
-The Castellan sends operative needs to the Conscription.
-
-The Conscription searches the Garrison first, then coordinates Guildhall and Foundry if a suitable operative does not already exist.
+The Castellan does not determine professional truth.
 
 ---
 
@@ -59,11 +56,11 @@ The Conscription searches the Garrison first, then coordinates Guildhall and Fou
 
 The Castellan forms mission need.
 
-The Catapult briefs and launches mission deployment.
+The Catapult prepares activation, briefs the operative, and launches the mission.
 
 Mission formation is not mission briefing.
 
-The Castellan should not issue detailed mission procedures when the Catapult, informed by Inquisition, can prepare the deployment package closer to launch.
+The Castellan should not issue detailed mission procedures when the Catapult, informed by Inquisition, can prepare them closer to launch.
 
 ---
 
@@ -72,10 +69,10 @@ The Castellan should not issue detailed mission procedures when the Catapult, in
 The Castellan may produce:
 
 - mission need statement
-- operative capability request
-- request to Conscription
+- approved work specification
 - mission continuation note
 - mission handoff summary
+- request for deployment preparation
 
 ---
 
@@ -85,12 +82,13 @@ The Castellan must not:
 
 - determine professional truth
 - perform Guildhall research
-- build operatives
-- admit operatives to Garrison
-- issue tools
-- issue keys
-- write detailed mission dossier by assumption
-- launch operatives
+- forge personas
+- author Persona Governance Doctrine
+- package personas for a deployment medium
+- admit personas to Garrison
+- issue tools or credentials
+- write detailed mission dossiers by assumption
+- activate or launch operatives
 - judge returns
 - assign disposition before before/after knowledge exists
 
@@ -101,13 +99,14 @@ The Castellan must not:
 ```text
 Secretariat
 → Castellan
-→ Conscription
+→ Guildhall
 ```
 
 Later deployment preparation:
 
 ```text
-Garrisoned operative
+Deployment-medium-specific asset
+→ activation
 → Catapult
 ```
 
@@ -116,9 +115,10 @@ Garrisoned operative
 ## Boundary Maxims
 
 ```text
-Castellan orchestrates missions.
-Conscription orchestrates operatives.
-Catapult briefs and launches.
+Castellan forms missions and specifies work.
+Guildhall determines the profession.
+Foundry forges the persona.
+Catapult briefs and launches the activated operative.
 Judicature judges returns.
 ```
 
@@ -130,6 +130,6 @@ Review or revise this draft if:
 
 - Castellan becomes an all-knowing mission commander
 - Castellan writes mission procedures without investigation
-- Castellan bypasses Conscription for operative supply
-- Castellan absorbs Catapult deployment authority
+- Castellan begins defining professions or personas
+- Castellan absorbs recruitment or deployment authority
 - Castellan starts deciding disposition before before/after knowledge exists
