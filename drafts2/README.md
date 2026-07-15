@@ -63,9 +63,11 @@ Conscription
 → Operative
 → Operator handoff
    or
-→ Catapult
+→ Muster
 ↔ Inquisition
 ↔ Armory / Locksmith
+→ Deployment Package
+→ unnamed launch boundary
 → Theatre
 → Lazaretto
 → Judicature
@@ -96,7 +98,7 @@ Conscription
 
 - `conscription.md`
 
-### Deployment Preparation and Launch
+### Mission Assembly and Execution Boundary
 
 - `catapult.md`
 - `inquisition.md`
@@ -131,7 +133,7 @@ Foundry cognitively fits those inputs into canonical personas.
 Pit tests integrated persona candidates.
 Garrison holds admitted canonical personas.
 Conscription recruits personas into deployment-medium-specific operatives.
-Catapult briefs and deploys operatives.
+Muster assembles operatives, mission intelligence, tools, access, rules, and conditions into mission-bound Deployment Packages.
 Inquisition investigates mission terrain.
 Armory issues tools.
 Locksmith issues keys and access.
@@ -163,7 +165,7 @@ admitted canonical persona
 → deployed operative
 ```
 
-No separate activation state is currently admitted.
+No separate activation state or named launching entity is currently admitted.
 
 ---
 
@@ -246,6 +248,8 @@ This directory does not admit:
 - UI screens
 - authority to act externally
 - separate activation state
+- named launching entity
+- Catapult
 - Conscription as operative orchestration
 - Citadel as persona-governance steward
 - Foundry as operative builder
