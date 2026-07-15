@@ -60,8 +60,9 @@ Conscription
 ↔ Inquisition
 ↔ Armory / Locksmith
 → Deployment Package
-→ unnamed launch boundary
+→ La Cortine / Iron Gate
 → Theatre
+↔ La Cortine / Barbican ↔ Armory / Locksmith
 → Lazaretto
 → Judicature
 → Findings
@@ -216,7 +217,7 @@ Does not: select or forge persona, recruit, launch, execute, rewrite doctrine, o
 
 Muster obtains mission intelligence from Inquisition, tools from Armory, and authorized access from Locksmith. It binds them with the operative, mission brief, rules, reporting, return, launch, and termination conditions.
 
-The current doctrine does not name a separate launching entity.
+Iron Gate is La Cortine's dedicated deployment exit.
 
 ---
 
@@ -297,7 +298,7 @@ Operative
 ↔ Armory
 ↔ Locksmith
 → Deployment Package
-→ unnamed launch boundary
+→ Iron Gate
 → Theatre
 ```
 
@@ -306,6 +307,29 @@ Tools are not authority.
 Credentials are not mission understanding.
 
 The existence of an operative does not authorize launch.
+
+---
+
+## La Cortine Boundary
+
+La Cortine is the non-acting cognitive namespace for the wall between Citadel and Theatre.
+
+```text
+La Cortine
+├── Iron Gate — initial deployment exit
+├── Barbican — continuing operational-support port
+└── Lazaretto — mission-return entry
+```
+
+La Cortine does not route or authorize. Each port has dedicated traffic.
+
+```text
+Muster → Iron Gate → Theatre
+Theatre ↔ Barbican ↔ Armory / Locksmith
+Theatre → Lazaretto → Judicature
+```
+
+Credentials remain with Locksmith. Barbican carries tickets and permitted results, never secrets.
 
 ---
 
@@ -383,7 +407,6 @@ This map does not admit:
 - permanent pass engine
 - product-specific workflow library
 - separate activation state
-- a named launching entity
 - Conscription as operative orchestration
 - Citadel as persona-governance steward
 - Foundry as operative builder
@@ -406,7 +429,7 @@ Pit tests the whole persona.
 Garrison holds admitted personas.
 Conscription recruits a persona into an operative.
 Muster assembles the operative into a mission-bound Deployment Package.
-The launch boundary remains unnamed.
+Iron Gate performs the launch crossing.
 Lazaretto receives.
 Judicature finds.
 Chamber of Scribes reports.
