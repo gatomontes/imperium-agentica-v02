@@ -39,7 +39,7 @@ Conscription
 → La Cortine / Iron Gate
 → Theatre
 → La Cortine / Lazaretto
-→ Judicature
+→ Curia
 → Findings
 → Chamber of Scribes
 → Final Report
@@ -167,7 +167,7 @@ Barbican carries provider tickets and results. Locksmith retains credentials.
 ```text
 Theatre
 → Lazaretto
-→ Judicature
+→ Curia
 → Findings
 → Chamber of Scribes
 → Final Report
@@ -177,7 +177,7 @@ Theatre
 
 Lazaretto receives.
 
-Judicature evaluates.
+Curia evaluates.
 
 Scribes write.
 
