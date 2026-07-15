@@ -77,7 +77,7 @@ Possible operative forms may include:
 
 An operative may be handed back to the operator as a platform-specific skill or agent package.
 
-Deployment is a separate Catapult responsibility.
+Mission assembly is a separate Muster responsibility. Launch and Theatre execution remain downstream.
 
 ---
 
@@ -87,7 +87,7 @@ Deployment is a separate Catapult responsibility.
 Foundry forges a canonical persona.
 Garrison holds the admitted persona.
 Conscription recruits the persona into a deployment-medium-specific operative.
-Catapult prepares and deploys the operative for a mission.
+Muster assembles the operative, mission intelligence, tools, access, and constraints into a Deployment Package.
 ```
 
 ---
