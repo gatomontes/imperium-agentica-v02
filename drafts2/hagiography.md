@@ -6,23 +6,55 @@ Draft.
 
 This file defines the provisional Hagiography for Imperium v02.
 
-It does not admit a personality taxonomy, simulated biography system, theatrical character generator, or claim that human traits are universally desirable.
+It does not admit celebrity worship, fictional biography, personality typing, theatrical character generation, or the assumption that success makes every trait worthy of inheritance.
 
 ---
 
 ## Purpose
 
-Hagiography researches and canonizes the human traits to be embodied in a persona.
+Hagiography studies high-performing real-world humans and canonizes transferable traits evidenced by their performance.
 
-It gives Foundry an explicit human-trait canon rather than leaving temperament, demeanor, communication, and interpersonal conduct to accidental model behavior or decorative prompting.
+Within Hagiography, these exemplary humans are provisionally called `Saints`.
+
+A Saint is not treated as morally perfect, universally exemplary, or worthy of imitation in full.
+
+A Saint is a real person whose demonstrated performance provides evidence for one or more traits relevant to persona construction.
+
+Hagiography supplies Foundry with evidenced human traits from which canonized persona templates may be built.
 
 ---
 
 ## Core Question
 
 ```text
-Which human traits should this persona embody, and how must they be expressed without compromising its profession or governance doctrine?
+Which evidenced traits of high-performing real humans should be inherited by this persona, under what conditions, and with what limits?
 ```
+
+---
+
+## Saint
+
+A provisional Saint record may identify:
+
+```text
+Real-world human:
+Field or profession:
+Demonstrated high performance:
+Evidence:
+Observed trait:
+Behavior through which the trait appears:
+Conditions in which it succeeds:
+Costs or risks:
+Non-transferable context:
+Conflicting evidence:
+Confidence:
+```
+
+The person is the source of evidence.
+
+The trait is the candidate inheritance.
+
+The whole person is never imported as the persona.
 
 ---
 
@@ -30,13 +62,15 @@ Which human traits should this persona embody, and how must they be expressed wi
 
 Hagiography may:
 
-- identify human traits relevant to the persona's work
-- distinguish durable traits from superficial style
-- describe how traits appear in reasoning, communication, and conduct
-- identify tensions among traits
-- identify traits that would impair professional competence or governability
-- canonize selected traits as explicit persona inputs
-- revise trait canon when Foundry or Pit exposes incoherence
+- identify high-performing real-world humans relevant to a profession or work pattern
+- gather evidence of their demonstrated performance
+- distinguish observed behavior from reputation, mythology, and inference
+- identify traits materially connected to that performance
+- distinguish transferable traits from context-bound advantages
+- identify the costs, risks, contradictions, and failure modes of those traits
+- compare the same trait across multiple Saints
+- canonize supported traits as explicit inputs to persona construction
+- revise or decanonize traits when Foundry, Pit, or later evidence exposes weakness
 
 ---
 
@@ -47,22 +81,37 @@ Hagiography may produce a provisional `Human-Trait Canon`.
 A Human-Trait Canon may include:
 
 ```text
-Applicable persona or profession:
-Selected traits:
-Reason each trait is relevant:
-Behavioral expression:
-Communication expression:
+Applicable profession or persona:
+Source Saint or Saints:
+Performance evidence:
+Canonized trait:
+Observed behavioral expression:
+Reason for inheritance:
+Conditions of usefulness:
 Limits and counterweights:
-Conflicts with other traits:
 Profession risks:
 Governance risks:
+Conflicting evidence:
+Confidence:
 Failure signals:
 Open questions:
 ```
 
-Canonization means the traits are deliberate inputs to persona construction.
+Canonization means the trait has sufficient evidence and relevance to become a deliberate persona-construction input.
 
-It does not make them constitutional, universal, or morally authoritative.
+It does not declare the Saint infallible or the trait universally desirable.
+
+---
+
+## Relationship To Persona
+
+A persona is a canonized template built in part from traits derived from Saints.
+
+The persona may inherit traits from multiple Saints.
+
+It must not impersonate, reproduce, or claim the identity of any source human.
+
+Its traits remain bounded by the Guildhall profession specification and Studium governance doctrine.
 
 ---
 
@@ -70,17 +119,19 @@ It does not make them constitutional, universal, or morally authoritative.
 
 Hagiography supplies the Human-Trait Canon used by Foundry during persona construction.
 
+Foundry embodies the applicable traits together with the profession specification and Persona Governance Doctrine.
+
 Foundry may return traits that prove incoherent, non-operable, performative, or professionally harmful when embodied.
 
-Hagiography does not forge the persona.
+Hagiography does not perform the complete forging of the persona.
 
 ---
 
 ## Relationship To Studium
 
-Hagiography traits must remain compatible with Persona Governance Doctrine.
+Canonized traits must remain compatible with Persona Governance Doctrine.
 
-A human trait does not excuse prohibited conduct, weaken evidence duties, expand authority, or override escalation requirements.
+A Saint's demonstrated behavior does not automatically grant authority, excuse prohibited conduct, weaken evidence duties, or override escalation requirements.
 
 Conflicts must be surfaced rather than silently resolved by Foundry.
 
@@ -88,9 +139,9 @@ Conflicts must be surfaced rather than silently resolved by Foundry.
 
 ## Relationship To Pit
 
-The Pit may test whether canonized traits remain coherent and bounded under pressure.
+The Pit may test whether inherited traits remain effective, coherent, and bounded under pressure.
 
-Hagiography may revise the Human-Trait Canon from preserved findings.
+Hagiography may revise or decanonize traits from preserved findings.
 
 Hagiography does not run the test or admit the persona.
 
@@ -100,22 +151,25 @@ Hagiography does not run the test or admit the persona.
 
 Hagiography must not:
 
+- treat fame, status, reputation, or mythology as performance evidence
+- canonize a person in full
+- treat high performance as moral perfection
+- import identity, biography, or personal claims into a persona
 - define the profession
 - author Persona Governance Doctrine
-- forge personas
-- turn biography or aesthetic flavor into evidence of competence
-- canonize traits merely because they appear human-like
+- complete persona forging
 - recruit personas into operatives
 - deploy operatives
 
 ---
 
-## Boundary Maxim
+## Boundary Maxims
 
 ```text
-Hagiography canonizes human traits.
-Foundry embodies them.
-Pit tests whether they remain credible and bounded.
+Saints are evidenced sources, not perfect beings.
+Hagiography canonizes transferable traits, not whole people.
+Foundry forges the persona from profession, doctrine, and canon.
+Pit tests what was inherited.
 ```
 
 ---
@@ -124,8 +178,10 @@ Pit tests whether they remain credible and bounded.
 
 Review or revise this draft if:
 
-- Hagiography becomes a character-writing office
-- human traits remain decorative rather than behavioral
-- traits conflict with professional competence or governance doctrine
-- every persona receives the same preferred temperament
+- Hagiography becomes celebrity worship or character writing
+- reputation substitutes for evidence
+- correlation between a trait and performance is treated as causation without scrutiny
+- liabilities and context are stripped from admired traits
+- personas imitate source humans instead of inheriting bounded traits
+- every persona receives the same favored canon
 - trait canonization proves too minimal to justify separate stewardship
