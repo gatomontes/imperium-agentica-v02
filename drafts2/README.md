@@ -70,7 +70,7 @@ Conscription
 → La Cortine / Iron Gate
 → Theatre
 → La Cortine / Lazaretto
-→ Judicature
+→ Curia
 → Chamber of Scribes
 → Secretariat
 → Operator
@@ -111,7 +111,7 @@ Conscription
 ### Return, Judgment, and Reporting
 
 - `lazaretto.md`
-- `judicature.md`
+- `curia.md`
 - `chamber-of-scribes.md`
 - `secretariat.md`
 
@@ -145,8 +145,8 @@ Inquisition investigates mission terrain.
 Armory issues tools.
 Locksmith issues keys and access.
 Theatre exposes consequence.
-Lazaretto receives returns.
-Judicature evaluates returns and produces findings.
+Lazaretto sanitizes field packets and returns.
+Curia convenes Officers around sanitized field data and produces findings.
 Chamber of Scribes writes final reports.
 Secretariat delivers final reports.
 ```
