@@ -384,7 +384,6 @@ This map does not admit:
 - product-specific workflow library
 - separate activation state
 - a named launching entity
-- Catapult
 - Conscription as operative orchestration
 - Citadel as persona-governance steward
 - Foundry as operative builder
