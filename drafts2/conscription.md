@@ -6,26 +6,26 @@ Draft process.
 
 This file defines the provisional Conscription behavior for Imperium v02.
 
-Conscription is recruitment: the process that packages a persona for a deployment medium.
+Conscription is recruitment.
 
-It does not admit a runtime service, autonomous staffing authority, or permanent recruitment agency.
+It does not admit a runtime service, autonomous staffing authority, or the former operative-orchestration agency.
 
 ---
 
 ## Purpose
 
-Conscription packages an admitted canonical persona specification as a deployment-medium-specific asset.
+Conscription converts an admitted canonical persona into a deployment-medium-specific operative.
 
-It converts a portable persona into a form that a particular platform or execution environment can accept.
+It selects the appropriate persona from Garrison and packages that persona in the concrete form required by a particular platform or execution environment.
 
-Conscription does not forge the persona and does not by itself activate an operative.
+Conscription does not forge the persona and does not deploy the operative.
 
 ---
 
 ## Core Question
 
 ```text
-How must this admitted persona be packaged for the selected deployment medium without losing its professional competence or governable boundaries?
+How must this admitted persona be embodied in the selected deployment medium without losing its professional competence, human traits, or governable boundaries?
 ```
 
 ---
@@ -39,7 +39,7 @@ Conscription may use:
 - platform format and technical contract
 - available model and tool interfaces
 - packaging constraints
-- assignment context when required by the medium
+- assignment context required to form the operative
 
 ---
 
@@ -49,19 +49,23 @@ Conscription may:
 
 - select an admitted persona that satisfies the requested professional capability
 - translate the canonical persona into the target platform's artifact format
-- preserve profession-specific competencies and governable boundaries
+- preserve profession-specific competencies
+- preserve Studium governance doctrine
+- preserve applicable Hagiography traits
 - bind platform tool schemas and interface contracts
 - produce platform manifests, skills, prompts, templates, or agent definitions
 - record deviations forced by the deployment medium
-- refuse packaging when the medium cannot preserve required behavior
+- refuse conscription when the medium cannot preserve required behavior
 
 ---
 
 ## Output
 
-Conscription produces a `Deployment-Medium-Specific Asset`.
+Conscription produces an `Operative`.
 
-Examples may include:
+An Operative is the deployment-medium-specific embodiment of an admitted persona.
+
+Possible operative forms may include:
 
 - Codex skill
 - ChatGPT agent configuration
@@ -71,9 +75,9 @@ Examples may include:
 - n8n worker package
 - Imperium-native runtime package
 
-The packaged asset is deployment-ready but not necessarily active.
+An operative may be handed back to the operator as a platform-specific skill or agent package.
 
-Activation places it into actual service as an operative.
+Deployment is a separate Catapult responsibility.
 
 ---
 
@@ -81,25 +85,24 @@ Activation places it into actual service as an operative.
 
 ```text
 Foundry forges a canonical persona.
-Conscription packages that persona for a deployment medium.
-Activation places the package into service as an operative.
+Garrison holds the admitted persona.
+Conscription recruits the persona into a deployment-medium-specific operative.
+Catapult prepares and deploys the operative for a mission.
 ```
-
-A persona may also be handed back to the operator as a platform-specific skill or other packaged asset without being activated by Imperium.
 
 ---
 
 ## Non-Authority
 
-Recruitment must not:
+Conscription must not:
 
 - define the profession
 - alter Persona Governance Doctrine
+- alter canonized human traits
 - forge a new canonical persona
 - silently drop required boundaries to satisfy a platform
 - decide mission intent
-- grant credentials or authority not supplied through the deployment path
-- treat packaging as activation
+- grant tools, credentials, or authority not supplied through the deployment path
 - launch the operative
 
 ---
@@ -108,8 +111,8 @@ Recruitment must not:
 
 Review or revise this draft if:
 
-- Conscription becomes a cognitive office rather than a packaging process
-- platform adaptation changes the profession or doctrine
+- Conscription returns to operative orchestration
+- platform adaptation changes the profession, doctrine, or canonical traits
 - every deployment medium requires unrelated persona reconstruction
-- packaged assets are mistaken for active operatives
-- the packaging work proves trivial enough to remain an unnamed Foundry or deployment operation
+- operatives are mistaken for deployed missions
+- the transformation proves too trivial to justify a named process
