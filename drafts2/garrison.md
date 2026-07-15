@@ -14,11 +14,11 @@ It does not admit implementation storage, deployment automation, persistent regi
 
 The Garrison holds admitted persona specifications.
 
-It is the inventory of tested, reusable professional personas available for deployment-medium packaging, delivery, adaptation, or later activation.
+It is the inventory of tested, reusable professional personas available for Conscription, delivery, adaptation, or future revision.
 
-A persona in Garrison is not necessarily an operative.
+A persona in Garrison is not an operative.
 
-It remains a portable, dormant specification until it is packaged for a deployment medium and activated for work.
+It remains a canonical, portable specification until Conscription embodies it for a deployment medium.
 
 ---
 
@@ -36,6 +36,8 @@ The Garrison may preserve:
 
 - admitted persona identity
 - profession specification reference
+- Studium doctrine reference
+- Hagiography trait reference
 - purpose
 - capabilities and competencies
 - governable boundaries
@@ -43,9 +45,18 @@ The Garrison may preserve:
 - test history
 - revision history
 - qualification status
-- availability for packaging
-- known deployment-medium packages derived from the persona
-- activation history when available
+- availability for Conscription
+- operative forms previously derived from the persona
+
+---
+
+## Relationship To Guildhall
+
+Guildhall may activate a Garrison search after resolving the profession required by an approved work specification.
+
+If a suitable admitted persona exists, it may proceed to Conscription.
+
+If none exists, Guildhall may issue persona-construction work to Foundry.
 
 ---
 
@@ -53,19 +64,9 @@ The Garrison may preserve:
 
 Conscription searches Garrison for an admitted persona that satisfies the requested professional capability.
 
-Conscription packages the selected persona as a deployment-medium-specific asset.
+Conscription recruits the selected persona into a deployment-medium-specific operative.
 
-Garrison does not perform that packaging.
-
----
-
-## Relationship To Activation
-
-Activation binds a deployment-ready asset to actual service as an operative.
-
-Garrison may supply the admitted persona from which that asset is packaged.
-
-Garrison does not brief, tool, credential, activate, or launch the operative.
+Garrison does not perform that transformation.
 
 ---
 
@@ -83,7 +84,7 @@ Quarantined
 Retired
 ```
 
-These statuses are provisional and describe persona inventory, not operative runtime state.
+These statuses are provisional and describe persona inventory, not operative mission state.
 
 ---
 
@@ -94,11 +95,10 @@ The Garrison must not:
 - forge personas
 - admit untested candidates without rule
 - determine mission needs
-- package deployment-medium-specific assets
-- activate operatives
+- recruit personas into operatives
 - write mission dossiers
 - issue tools or credentials
-- launch deployments
+- deploy operatives
 - judge mission returns
 
 ---
@@ -107,8 +107,8 @@ The Garrison must not:
 
 ```text
 Garrison holds what survived.
-Conscription packages what is selected.
-Activation places the package into service as an operative.
+Conscription recruits what is selected.
+Catapult deploys the resulting operative.
 ```
 
 ---
@@ -119,5 +119,5 @@ Review or revise this draft if:
 
 - Garrison becomes a deployment controller
 - Garrison accepts untested personas
-- persona inventory status is confused with operative runtime state
-- Garrison begins owning deployment-medium packaging
+- persona inventory status is confused with operative mission state
+- Garrison begins owning deployment-medium transformation
