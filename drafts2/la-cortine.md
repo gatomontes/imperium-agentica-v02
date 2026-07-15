@@ -12,9 +12,9 @@ It is a namespace, not an actor, office, router, authority, or runtime service.
 
 ```text
 La Cortine
-├── Iron Gate — initial deployment exit
+├── Iron Gate — outward mission traffic
 ├── Barbican — continuing operational-support port
-└── Lazaretto — mission-return entry
+└── Lazaretto — sanitized field-data and mission-return entry
 ```
 
 Traffic meaning is determined by the selected port. La Cortine does not classify, redirect, authorize, inspect, store, launch, supply, receive, or judge traffic.
