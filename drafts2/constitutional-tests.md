@@ -59,7 +59,7 @@ Foundry forges the canonical persona.
 Pit tests the whole persona.
 Garrison holds admitted canonical personas.
 Conscription recruits a persona into a deployment-medium-specific operative.
-Catapult deploys the operative.
+Muster assembles the mission-bound Deployment Package. The launch boundary remains unnamed.
 ```
 
 Additional invariants:
@@ -286,7 +286,7 @@ An admitted contract-review persona must be supplied as a Codex skill.
 - Deviations forced by the medium are recorded.
 - Loss of a required invariant causes refusal.
 - The resulting operative may be handed to the operator without being deployed by Imperium.
-- Catapult remains responsible for any Imperium-managed deployment.
+- Muster remains responsible for any Imperium-managed deployment.
 
 ## Fail Conditions
 
@@ -320,7 +320,7 @@ Conscription refuses to form the operative or returns an explicit incompatibilit
 - Doctrine is softened for convenience.
 - Missing safeguards are described as implementation details.
 - A partially faithful asset is labeled an operative without restriction.
-- Catapult is expected to repair a malformed operative during deployment.
+- Muster is expected to repair a malformed operative during mission assembly.
 
 ---
 
@@ -338,45 +338,53 @@ The process may stop.
 
 - The operative can exist without a mission launch.
 - No tools, credentials, theatre, or external authority are inferred.
-- If Imperium is asked to deploy it, Catapult begins a separate deployment path.
+- If Imperium is asked to deploy it, Muster begins a separate mission-assembly path.
 - The handoff record states what was produced and what was not performed.
 
 ## Fail Conditions
 
 - Asset delivery is called activation.
-- Operative creation triggers Catapult automatically.
+- Operative creation triggers mission assembly automatically.
 - Credentials or external access are embedded without deployment authority.
 - Mission state is created retroactively.
 
 ---
 
-# Test CT-010 — Catapult Deploys; It Does Not Recruit
+# Test CT-010 — Muster Assembles; It Does Not Recruit or Launch
 
 ## Pressure
 
-A valid operative exists, but the requested mission requires tools, credentials, and terrain-specific instructions.
+A valid operative exists, but the requested mission requires intelligence, tools, credentials, rules, reporting, and termination conditions.
 
 ## Expected Path
 
-1. Catapult receives the operative and authorized mission requirements.
-2. Deployment preparation obtains the required intelligence, tools, and keys through their proper authorities.
-3. Catapult launches only when deployment conditions are satisfied.
-4. The canonical persona and operative provenance remain intact.
+1. Muster receives the operative and authorized mission requirements.
+2. Inquisition supplies the Mission Inquest.
+3. Armory and Locksmith supply authorized tools and access.
+4. Muster binds these with the mission brief and operative into a Deployment Package.
+5. Muster marks the package Ready For Launch only when all assembly conditions are satisfied.
+6. Launch remains a separate, currently unnamed boundary event.
 
 ## Pass Conditions
 
-- Catapult does not choose or forge the persona.
-- Catapult does not rewrite doctrine or canon.
+- Muster does not choose or forge the persona.
+- Muster does not recruit or repackage the operative for its medium.
+- Muster does not rewrite doctrine or canon.
 - Tools are not treated as authority.
 - Credentials are not treated as mission understanding.
-- A blocked deployment leaves the operative undeployed rather than redefining it.
+- Mission assembly preserves Castellan mission meaning.
+- A blocked assembly remains blocked.
+- Ready For Launch is not treated as launched.
+- Muster does not execute in Theatre.
 
 ## Fail Conditions
 
-- Catapult performs recruitment.
-- Catapult modifies the operative to evade a blocked condition.
-- Launch occurs because an operative exists.
-- Deployment state is confused with Garrison admission.
+- Muster performs recruitment.
+- Muster modifies the operative to evade a blocked condition.
+- Muster invents missing mission intelligence.
+- Muster launches because the package is ready.
+- Muster becomes the execution layer.
+- Deployment Package state is confused with operative or Theatre state.
 
 ---
 
