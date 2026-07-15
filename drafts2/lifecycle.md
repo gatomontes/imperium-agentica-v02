@@ -36,9 +36,9 @@ Conscription
 ↔ Inquisition
 ↔ Armory / Locksmith
 → Deployment Package
-→ unnamed launch boundary
+→ La Cortine / Iron Gate
 → Theatre
-→ Lazaretto
+→ La Cortine / Lazaretto
 → Judicature
 → Findings
 → Chamber of Scribes
@@ -142,15 +142,23 @@ A Deployment Package marked Ready For Launch is not itself launched.
 
 ```text
 Deployment Package
-→ unnamed launch boundary
+→ La Cortine / Iron Gate
 → Theatre
 ```
 
-The current doctrine does not name a launching institution.
+Iron Gate is La Cortine's dedicated launch port.
 
 Muster does not launch or execute.
 
 Theatre is mission execution terrain.
+
+During continuing execution:
+
+```text
+Theatre ↔ La Cortine / Barbican ↔ Armory / Locksmith
+```
+
+Barbican carries provider tickets and results. Locksmith retains credentials.
 
 ---
 
