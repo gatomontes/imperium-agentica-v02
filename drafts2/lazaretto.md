@@ -12,11 +12,11 @@ It does not admit the v01 receiving-port machinery, live intake ledger implement
 
 ## Purpose
 
-The Lazaretto receives returns from the Theatre.
+The Lazaretto is La Cortine's dedicated mission-return entry from Theatre into Citadel.
 
 It preserves what came back from mission execution before Judicature evaluates it.
 
-It is the return dock, not the judge.
+It is the return dock, not a continuing-service port and not the judge.
 
 ---
 
@@ -81,6 +81,9 @@ Lazaretto does not decide what the return means.
 ## Non-Authority
 
 The Lazaretto must not:
+
+- route continuing tool or access requests
+- perform Barbican duties
 
 - judge mission success
 - rewrite operative reports
