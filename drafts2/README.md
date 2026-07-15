@@ -4,39 +4,41 @@
 
 Draft.
 
-This directory captures the current Imperium v02 artifact map discussed by the operator.
+This directory captures the current Imperium v02 cognitive and artifact model.
 
-These files are exploratory.
+These files are exploratory doctrine. They do not admit runtime architecture, automation, implementation hierarchy, database schema, service layout, UI contract, external authority, or final terminology.
 
-They do not admit runtime architecture, automation, implementation hierarchy, database schema, service layout, UI contract, or final terminology.
-
-Names from Imperium v01 may appear here only as quarantined candidates or deliberately narrowed reuses.
+Names from Imperium v01 may appear only as quarantined candidates or deliberately narrowed reuses.
 
 ---
 
 ## Current Official Draft Map
 
-The current official cognitive map is:
-
 ```text
 drafts2/cognitive-map.md
 ```
 
-Official means active for orientation and future drafting.
-
-Official does not mean admitted architecture, runtime design, implementation contract, service topology, database schema, UI plan, or final terminology.
+Official means active for orientation, drafting, and constitutional testing.
 
 ---
 
 ## Core Mission
 
-Imperium produces operatives.
+Imperium produces deployment-medium-specific operatives from governed, tested, reusable canonical personas.
 
-Imperium does not primarily execute missions in the world.
+```text
+operator intent
+→ work specification
+→ profession specification
+→ persona governance doctrine
+→ applicable human-trait canon
+→ persona candidate
+→ tested and admitted canonical persona
+→ recruited operative
+→ optional deployment
+```
 
-Imperium receives operator intent, forms mission need, supplies or raises operatives, prepares deployment, receives returns, judges findings, and reports back to the operator.
-
-Another orchestration or execution layer may later pick up admitted operatives for actual agentic work.
+An operative may be handed back to the operator without Imperium deploying it.
 
 ---
 
@@ -46,22 +48,28 @@ Another orchestration or execution layer may later pick up admitted operatives f
 Operator
 → Secretariat
 → Castellan
-→ Conscription
-↔ Guildhall
+→ Guildhall
 → Garrison search
-→ Foundry if no suitable operative exists
-↔ Citadel
-→ Pit
-→ Garrison
+    ├─ persona found → Conscription
+    └─ persona absent
+         → Studium
+         → Hagiography when applicable
+         → Foundry
+         → Pit
+         → Garrison
+         → Conscription
+
+Conscription
+→ Operative
+→ Operator handoff
+   or
 → Catapult
 ↔ Inquisition
 ↔ Armory / Locksmith
 → Theatre
 → Lazaretto
 → Judicature
-→ Findings
 → Chamber of Scribes
-→ Final Report
 → Secretariat
 → Operator
 ```
@@ -75,15 +83,18 @@ Operator
 - `secretariat.md`
 - `castellan.md`
 
-### Operative Orchestration and Production
+### Profession and Persona Production
 
-- `conscription.md`
 - `guildhall.md`
-- `garrison-roster.md`
+- `studium.md`
+- `hagiography.md`
 - `foundry.md`
-- `citadel.md`
 - `pit.md`
 - `garrison.md`
+
+### Recruitment
+
+- `conscription.md`
 
 ### Deployment Preparation and Launch
 
@@ -99,7 +110,7 @@ Operator
 - `chamber-of-scribes.md`
 - `secretariat.md`
 
-### Cross-Cutting Map and Artifact Files
+### Cross-Cutting Artifacts
 
 - `cognitive-map.md`
 - `lifecycle.md`
@@ -111,39 +122,114 @@ Operator
 ## Primary Distinctions
 
 ```text
-Secretariat receives and reports.
-Castellan orchestrates missions.
-Conscription orchestrates operatives.
-Guildhall researches profession patterns.
-Garrison roster exposes admitted operative availability for search.
-Foundry builds operatives.
-Citadel governs operative compliance.
-Pit tests operatives.
-Garrison holds admitted operatives.
-Catapult prepares and launches deployments.
+Secretariat receives and delivers.
+Castellan forms missions and specifies work.
+Guildhall determines and specifies professions.
+Studium authors Persona Governance Doctrine.
+Hagiography derives Human-Trait Canon from evidenced Saints.
+Foundry cognitively fits those inputs into canonical personas.
+Pit tests integrated persona candidates.
+Garrison holds admitted canonical personas.
+Conscription recruits personas into deployment-medium-specific operatives.
+Catapult briefs and deploys operatives.
 Inquisition investigates mission terrain.
 Armory issues tools.
-Locksmith issues keys.
-Theatre is execution terrain.
+Locksmith issues keys and access.
+Theatre exposes consequence.
 Lazaretto receives returns.
-Judicature evaluates returns.
+Judicature evaluates returns and produces findings.
 Chamber of Scribes writes final reports.
 Secretariat delivers final reports.
 ```
 
 ---
 
+## Artifact and State Distinctions
+
+```text
+Saint ≠ trait
+trait canon ≠ persona
+persona ≠ operative
+operative ≠ deployment
+return ≠ finding
+finding ≠ report
+```
+
+Current operative states:
+
+```text
+admitted canonical persona
+→ recruited operative
+→ deployed operative
+```
+
+No separate activation state is currently admitted.
+
+---
+
+## Reuse Rule
+
+```text
+Resolve profession.
+Search Garrison for a suitable admitted persona.
+Recruit when found.
+Construct, test, and admit when absent.
+```
+
+Reuse applies to canonical personas, not already deployed operatives.
+
+---
+
+## Minimal Cognitive Fitting
+
+Persona construction may be procedurally compressed when the work is trivial, but the following decisions and artifacts must remain distinguishable:
+
+- Guildhall profession decision
+- Studium doctrine decision
+- Hagiography trait-canon decision
+- canonical persona specification
+- Conscription's separate deployment-medium transformation
+
+Compression does not transfer authority or erase artifacts.
+
+---
+
+## Provenance Rule
+
+Derived artifacts preserve exact upstream version references.
+
+```text
+Deployment
+→ Operative
+→ Canonical Persona
+→ Pit Findings
+→ Profession Specification
+→ Persona Governance Doctrine
+→ Human-Trait Canon when applicable
+→ Saint evidence
+```
+
+Revisions create new versions or supersession records.
+
+Existing operatives remain bound to the versions from which they were recruited. Applying a revised persona requires a new Conscription event.
+
+---
+
 ## Constitutional Tests
 
-The current manual constitutional suite is:
+Suite:
 
 ```text
 drafts2/constitutional-tests.md
 ```
 
-It tests the current persona-to-operative ontology and the authority boundaries among Guildhall, Studium, Hagiography, Foundry, Pit, Garrison, Conscription, and Catapult.
+Results:
 
-The retired Test Mission 001 chain is not authoritative and has been deleted.
+```text
+tests/
+```
+
+The retired Test Mission 001 chain has been deleted.
 
 ---
 
@@ -159,6 +245,11 @@ This directory does not admit:
 - service topology
 - UI screens
 - authority to act externally
+- separate activation state
+- Conscription as operative orchestration
+- Citadel as persona-governance steward
+- Foundry as operative builder
+- Garrison as operative inventory
 - disposition authority
 - before/after knowledge machinery
 - Vellum as a v02 artifact
@@ -167,13 +258,14 @@ This directory does not admit:
 
 ## Design Warnings
 
-- Do not let old v01 names smuggle old v01 machinery.
-- Do not let offices become sovereign because their names are strong.
-- Do not create reusable workflows before repeated jobs prove need.
-- Do not assume professional competence replaces mission instruction.
-- Do not assume operator intent is already mission understanding.
+- Do not let old v01 names smuggle old machinery.
+- Do not let strong names create sovereign offices.
+- Do not confuse professional competence with mission instruction.
+- Do not confuse procedural compression with authority collapse.
+- Do not mutate canonical personas during recruitment.
+- Do not mistake operative existence for deployment authority.
 - Do not assign disposition before before/after knowledge exists.
-- Do not let Garrison roster become a deployment authority.
+- Do not overwrite provenance when doctrine, canon, persona, or operative versions change.
 
 ---
 
@@ -181,7 +273,7 @@ This directory does not admit:
 
 - Who or what eventually owns disposition?
 - What before/after knowledge surface is required before disposition?
-- Whether `Vellum` should return as internal canonical mission record.
+- Whether `Vellum` should return as an internal canonical mission record.
 - Whether `Final Report` is sufficient for operator-facing closure.
 - Which names survive use and which are only naming pressure.
-- Whether the Garrison roster fields are sufficient or excessive after the next dry run.
+- Whether the provisional artifact fields remain sufficient after repeated dry runs.
