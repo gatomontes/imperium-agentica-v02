@@ -2,11 +2,15 @@
 
 ## Status
 
-Draft.
+Approved Draft Map.
+
+Verified against the full Imperium Agentica cognitive diagram on 2026-07-15.
 
 This file records the current official cognitive map for Imperium v02.
 
 Official means active for orientation, drafting, and constitutional testing.
+
+The verified diagram preserves both conditional production searches, the Curial Officer line, outbound mission orchestration, and the three dedicated Cortine ports.
 
 It does not admit runtime architecture, implementation topology, database schema, service layout, UI design, autonomous external authority, or final terminology.
 
