@@ -109,6 +109,7 @@ Conscription
 - `spur.md`
 - `commission.md`
 - `curia.md`
+- `provider-intervention-ledgers.md`
 
 The Gesta supplies evidenced Officer-Trait Canon to Collegium and Smith.
 
