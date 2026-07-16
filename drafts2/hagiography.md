@@ -20,7 +20,7 @@ A Saint is not treated as morally perfect, universally exemplary, or worthy of i
 
 A Saint is a real person whose demonstrated performance provides evidence for one or more traits relevant to persona construction.
 
-Hagiography supplies Foundry and the Citadel Officer line with evidenced human traits from which canonical personas and Officers may be built.
+Hagiography supplies Foundry with evidenced human traits from which canonical professional personas may be built.
 
 ---
 
@@ -115,17 +115,15 @@ Its traits remain bounded by the Guildhall profession specification and Studium 
 
 ---
 
-## Relationship To Collegium And Smith
+## Relationship To The Gesta
 
-Collegium may request evidenced traits relevant to Curial Officer composition, such as disciplined dissent, epistemic humility, decisiveness under uncertainty, authority restraint, or cross-domain deliberation.
+Hagiography and The Gesta steward different human-evidence questions.
 
-Hagiography supplies applicable Human-Trait Canon.
+Hagiography concerns exemplary humanity within professional persona construction.
 
-Collegium uses the canon to state Officer requirements.
+The Gesta concerns exemplary Officer conduct within Curial deliberation and direction.
 
-Smith embodies the applicable traits in an Officer Specification Candidate.
-
-Hagiography does not determine Curia composition, define Officer authority, select Officers, forge Officers, or commission them.
+Neither substitutes for the other.
 
 ---
 
@@ -171,8 +169,7 @@ Hagiography must not:
 - import identity, biography, or personal claims into a persona
 - define the profession
 - author Persona Governance Doctrine
-- complete persona or Officer forging
-- select, admit, or commission Officers
+- complete persona forging
 - recruit personas into operatives
 - deploy operatives
 
