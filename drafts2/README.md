@@ -100,12 +100,15 @@ Conscription
 
 ### Citadel Officers and Curia
 
+- `gesta.md`
 - `collegium.md`
 - `preceptory.md`
 - `smith.md`
 - `spur.md`
 - `commission.md`
 - `curia.md`
+
+The Gesta supplies evidenced Officer-Trait Canon to Collegium and Smith.
 
 `Praetorium` is reserved for future Imperium Officers and is not currently defined.
 
