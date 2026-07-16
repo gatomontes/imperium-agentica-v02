@@ -98,6 +98,17 @@ Conscription
 
 - `conscription.md`
 
+### Citadel Officers and Curia
+
+- `collegium.md`
+- `preceptory.md`
+- `smith.md`
+- `spur.md`
+- `commission.md`
+- `curia.md`
+
+`Praetorium` is reserved for future Imperium Officers and is not currently defined.
+
 ### Mission Assembly and Cortine Boundary
 
 - `muster.md`
