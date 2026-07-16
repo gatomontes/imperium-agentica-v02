@@ -9,8 +9,8 @@ The Iron Gate is La Cortine's dedicated outward mission-traffic port from Citade
 ## Outward Traffic
 
 - Deployment Package: Ready For Launch from Muster
-- clarification, remediation, and parameter directives from Curia
-- pause, resume, recall, and termination orders from Curia
+- clarification, remediation, and parameter instructions operationalized by Muster from authorized Curia decisions
+- pause, resume, recall, and termination instructions presented by Muster
 
 ## Transition
 
@@ -20,7 +20,7 @@ Muster
 → Theatre
 ```
 
-The Iron Gate records exact outward traffic, authority, mission, deployment, operative version, and correlation. Initial passage performs launch; later passage carries authorized direction to an active deployment.
+The Iron Gate records exact outward traffic, authority, mission, deployment, operative version, and correlation. Initial passage performs launch; later passage carries Muster-orchestrated authorized direction to an active deployment.
 
 ## Non-Authority
 
