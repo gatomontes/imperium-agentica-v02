@@ -12,11 +12,13 @@ It does not admit live deployment automation, external execution authority, cred
 
 ## Purpose
 
-Muster assembles an operative for a particular mission.
+Muster owns outbound mission orchestration.
+
+It assembles an operative for initial deployment and operationalizes authorized Curia decisions for continuing missions.
 
 It receives a deployment-medium-specific operative from Conscription, incorporates mission intelligence, obtains authorized tools and access, binds mission instructions and constraints, and produces a mission-bound Deployment Package.
 
-Muster does not forge the persona, recruit the operative, launch the deployment, execute the mission, or judge the return.
+Muster does not forge the persona, recruit the operative, make Curia decisions, launch the deployment, execute the mission, or judge the return.
 
 ---
 
@@ -156,6 +158,18 @@ Muster assembles these into the Deployment Package.
 Availability is not authorization.
 
 Access is not mission understanding.
+
+---
+
+## Relationship To Curia
+
+Curia convenes Officers who understand, verify, deliberate, and authorize what must happen next.
+
+Muster receives authorized Curia decisions and converts them into outbound mission instructions, Deployment Package amendments, pause/resume/recall/termination instructions, or other mission-control artifacts.
+
+Muster preserves the authority, reasoning reference, mission meaning, and active deployment provenance.
+
+Curia does not address Iron Gate directly.
 
 ---
 
