@@ -35,6 +35,7 @@ Curia:
 the shared surface on which Officers receive, deliberate, decide, and direct
 
 Officer ≠ Operative
+Liaison ≠ Commissioned Officer
 
 Officer deliberates and directs within Citadel.
 Operative executes within Theatre.
@@ -97,6 +98,28 @@ These are Officers in the session, not offices inside Curia.
 Composition is recorded and may change by session.
 
 Praetorium is reserved for Imperium Officers at the outer echelon. It is not part of Curia's Citadel Officer line.
+
+---
+
+## Standing Liaisons
+
+Curia contains standing institutional Liaisons separate from Commissioned Officers.
+
+A Liaison is automatically assigned when its represented provider is relevant to the mission.
+
+Liaisons:
+
+- do not occupy Curia Vacancies
+- do not count toward quorum
+- do not vote, concur, or veto
+- are not produced by Smith or tested by Spur
+- require no Commission
+- query only the mission-scoped institutional records their provider recognizes
+- report provider facts without interpreting mission meaning
+
+Armory and Locksmith Liaisons query their respective Intervention Ledgers and report request counts, intervention classes, authorization, attempts, success, failure, refusal, timestamps, and correlation.
+
+They never receive credentials.
 
 ---
 
