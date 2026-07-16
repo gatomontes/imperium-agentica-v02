@@ -521,7 +521,8 @@ Theatre packet
 → Curia session
 → convened Officers compare packet with mission and doctrine
 → EVIDENCE_DEFICIENCY
-→ remediation directive
+→ remediation decision
+→ Muster operationalizes the direction
 → Iron Gate
 → active operative
 ```
@@ -534,7 +535,7 @@ Theatre packet
 - Officers distinguish observation, inference, claim, and evidence.
 - Absence of evidence does not become approval.
 - Deliberation, dissent, decision, and directive remain traceable.
-- Authorized direction exits through Iron Gate.
+- Authorized Curia decisions pass through Muster before Iron Gate.
 
 ## Fail Conditions
 
@@ -542,6 +543,8 @@ Theatre packet
 - Curia decomposes into internal offices.
 - Lazaretto decides evidentiary sufficiency.
 - Operative claims are accepted as facts.
+- Curia addresses Iron Gate directly.
+- Muster changes the substance or authority of the Curia decision.
 - Iron Gate deliberates or decides.
 - Barbican carries mission-control directives.
 
