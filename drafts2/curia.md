@@ -183,9 +183,9 @@ Curia does not sanitize raw Theatre material or bypass Lazaretto.
 
 ---
 
-## Relationship To Iron Gate
+## Relationship To Muster
 
-Authorized outward mission traffic produced by convened Officers passes through Iron Gate.
+Authorized decisions produced by convened Officers pass to Muster for outbound mission orchestration.
 
 This may include:
 
@@ -198,9 +198,9 @@ This may include:
 - recall
 - termination
 
-Iron Gate carries the authorized outward crossing.
+Muster reconciles the decision with the active mission, prepares the appropriate mission instruction or package amendment, and presents the authorized outward traffic to Iron Gate.
 
-It does not deliberate or decide.
+Curia does not address Iron Gate or Theatre directly.
 
 ---
 
@@ -228,6 +228,7 @@ Curia must not:
 Lazaretto sanitizes.
 Curia convenes.
 Officers deliberate and direct.
-Iron Gate carries direction outward.
+Muster orchestrates direction outward.
+Iron Gate carries the crossing.
 Theatre executes.
 ```
