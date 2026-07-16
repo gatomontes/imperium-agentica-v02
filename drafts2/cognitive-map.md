@@ -210,7 +210,7 @@ If the medium cannot preserve required competence, doctrine, or traits, Conscrip
 ```text
 Castellan Mission Need + Work Specification
 → Collegium
-↔ Hagiography for applicable Officer traits
+↔ The Gesta for applicable Officer traits
 → Curia Composition Requirement
 → Preceptory search
     ├── Officer found → Commission
