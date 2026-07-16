@@ -208,7 +208,9 @@ If the medium cannot preserve required competence, doctrine, or traits, Conscrip
 ### Citadel Officer Line
 
 ```text
-Collegium
+Castellan Mission Need + Work Specification
+→ Collegium
+→ Curia Composition Requirement
 → Preceptory search
     ├── Officer found → Commission
     └── Officer absent → Smith → Spur → Preceptory → Commission
