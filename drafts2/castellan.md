@@ -52,6 +52,16 @@ The Castellan does not determine professional truth.
 
 ---
 
+## Relationship To Collegium
+
+Castellan sends the Mission Need and approved Work Specification to Collegium.
+
+Collegium determines the Curial Officer composition required for that mission and sends the requirements to Preceptory.
+
+Castellan does not select or commission Officers.
+
+---
+
 ## Relationship To Muster
 
 The Castellan forms mission need.
@@ -100,6 +110,11 @@ The Castellan must not:
 Secretariat
 → Castellan
 → Guildhall
+
+Castellan
+→ Collegium
+→ Curia Composition Requirement
+→ Preceptory
 ```
 
 Later deployment preparation:
