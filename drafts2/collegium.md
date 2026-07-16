@@ -52,7 +52,7 @@ Open composition gaps:
 
 Collegium may request The Gesta evidence about exemplary Officer conduct and the transferable traits relevant to Curial service.
 
-Collegium determines the required Officer composition, including applicable trait requirements and counterweights.
+Collegium determines the required Officer composition, including applicable Officer virtues, trait requirements, and counterweights.
 
 Smith embodies applicable Officer-Trait Canon when a required Officer must be forged.
 
