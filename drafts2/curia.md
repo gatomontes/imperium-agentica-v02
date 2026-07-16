@@ -77,7 +77,7 @@ Curia may place these beside:
 ## Officer Supply
 
 ```text
-Collegium defines the seat.
+Collegium receives the Castellan mission and determines the required Officer composition.
 Preceptory searches the Citadel Officer corps.
 Smith forges a missing Officer.
 Spur tests the Officer.
@@ -85,6 +85,8 @@ Preceptory holds what passed.
 Commission binds the Officer to mission and authority.
 Curia convenes Commissioned Officers.
 ```
+
+Preceptory resolves Collegium's Curia Composition Requirement against admitted Officers.
 
 A Curia session convenes only the Commissioned Officers required by the mission and decision.
 
