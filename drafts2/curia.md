@@ -74,15 +74,27 @@ Curia may place these beside:
 
 ---
 
-## Officers
+## Officer Supply
 
-A Curia session convenes only the Officers required by the mission and decision.
+```text
+Collegium defines the seat.
+Preceptory searches the Citadel Officer corps.
+Smith forges a missing Officer.
+Spur tests the Officer.
+Preceptory holds what passed.
+Commission binds the Officer to mission and authority.
+Curia convenes Commissioned Officers.
+```
+
+A Curia session convenes only the Commissioned Officers required by the mission and decision.
 
 Possible represented functions may include mission authority, professional or domain competence, governance, intelligence, evidence assurance, technical capability, or other mission-specific authority.
 
 These are Officers in the session, not offices inside Curia.
 
 Composition is recorded and may change by session.
+
+Praetorium is reserved for Imperium Officers at the outer echelon. It is not part of Curia's Citadel Officer line.
 
 ---
 
