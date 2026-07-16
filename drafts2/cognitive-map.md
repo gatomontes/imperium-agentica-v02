@@ -205,6 +205,20 @@ Does not: define profession, forge persona, alter doctrine or traits, or deploy
 
 If the medium cannot preserve required competence, doctrine, or traits, Conscription refuses the transformation.
 
+### Citadel Officer Line
+
+```text
+Collegium
+→ Preceptory search
+    ├── Officer found → Commission
+    └── Officer absent → Smith → Spur → Preceptory → Commission
+→ Curia
+```
+
+Preceptory holds Citadel Officers.
+
+Praetorium is reserved for future Imperium Officers at the outer echelon and is not currently admitted.
+
 ### Muster
 
 Assembles an existing operative for a particular mission.
