@@ -21,7 +21,7 @@ Which Officers must be available to Curia for this mission, with what competence
 - mission domain and expected terrain
 - known risks and uncertainty
 - applicable professional and governance requirements
-- applicable Human-Trait Canon from Hagiography
+- applicable Officer-Trait Canon from The Gesta
 - anticipated evidence, capability, and escalation needs
 - expected classes of Curial decision
 
@@ -50,11 +50,11 @@ Officer substitution limits:
 Open composition gaps:
 ```
 
-Collegium may request Hagiography evidence about exemplary humans and the transferable traits relevant to Curial service.
+Collegium may request The Gesta evidence about exemplary Officer conduct and the transferable traits relevant to Curial service.
 
 Collegium determines the required Officer composition, including applicable trait requirements and counterweights.
 
-Smith embodies applicable Hagiography canon when a required Officer must be forged.
+Smith embodies applicable Officer-Trait Canon when a required Officer must be forged.
 
 Preceptory searches for admitted Officers satisfying those requirements.
 
