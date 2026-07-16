@@ -26,6 +26,57 @@ Reputation, rank, victory, fame, and mythology are not sufficient evidence.
 
 The whole human is never imported.
 
+## Leadership As An Officer Virtue
+
+The Gesta may canonize leadership as a composite Curial virtue.
+
+```text
+Leadership:
+the demonstrated capacity to produce coordinated, responsible action under uncertainty while preserving truth, dissent, authority boundaries, and accountability
+```
+
+Leadership is not inferred from charisma, dominance, confidence, rank, popularity, victory, or reputation.
+
+Its possible constituent virtues include:
+
+- judgment
+- decisiveness
+- responsibility
+- clarity
+- courage
+- authority restraint
+- epistemic humility
+- stewardship
+- protection of dissent
+- willingness to bear consequence
+
+Behavioral evidence may include:
+
+- forming a coherent decision from incomplete information
+- distinguishing urgency from recklessness
+- inviting material dissent before commitment
+- making authority and responsibility explicit
+- deciding when delay is more dangerous than uncertainty
+- refusing to disguise uncertainty as confidence
+- changing direction when evidence changes
+- protecting Officers who surface inconvenient facts
+- preserving institutional purpose under pressure
+
+Leadership requires explicit counterweights:
+
+```text
+decisiveness ↔ restraint
+confidence ↔ epistemic humility
+command presence ↔ protection of dissent
+speed ↔ evidence discipline
+loyalty ↔ institutional duty
+vision ↔ operational reality
+```
+
+Failure signals include charismatic substitution for evidence, premature certainty, domination of other Officers, suppression of dissent, responsibility avoidance, scapegoating, and unauthorized expansion of mission purpose.
+
+---
+
 ## Product
 
 The Gesta produces an `Officer-Trait Canon`.
@@ -37,11 +88,12 @@ Applicable Officer role:
 Source human or humans:
 Documented deed or decision:
 Performance evidence:
-Observed Officer trait:
+Observed Officer virtue or trait:
 Behavioral expression:
 Authority conditions:
 Conditions of usefulness:
 Costs and risks:
+Constituent virtues:
 Required counterweights:
 Group-dynamics risks:
 Conflicting evidence:
