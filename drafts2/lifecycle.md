@@ -162,6 +162,32 @@ Barbican carries provider tickets and results. Locksmith retains credentials.
 
 ---
 
+## Live Mission Control Loop
+
+```text
+Theatre
+→ Lazaretto
+→ Curia
+→ authorized Officer decision
+→ Muster
+→ outbound mission instruction
+→ Iron Gate
+→ Theatre
+```
+
+Curia convenes Officers to understand, verify, deliberate, and authorize.
+
+Muster owns outbound mission orchestration. It operationalizes the authorized Curia decision without changing its substance or authority.
+
+Iron Gate carries the outward crossing. Curia does not address Iron Gate or Theatre directly.
+
+Barbican provider traffic remains separate and bypasses Muster:
+
+```text
+Theatre ↔ Barbican ↔ Armory / Locksmith
+```
+
+
 ## Return
 
 ```text
