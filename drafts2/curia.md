@@ -77,7 +77,7 @@ Curia may place these beside:
 ## Officer Supply
 
 ```text
-Collegium receives the Castellan mission and determines the required Officer composition.
+Collegium receives the Castellan mission, consults The Gesta for applicable Officer traits, and determines the required Officer composition.
 Preceptory searches the Citadel Officer corps.
 Smith forges a missing Officer.
 Spur tests the Officer.
