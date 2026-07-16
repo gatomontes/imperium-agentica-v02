@@ -20,6 +20,8 @@ drafts2/cognitive-map.md
 
 Official means active for orientation, drafting, and constitutional testing.
 
+Current map status: `Approved Draft Map`, verified 2026-07-15.
+
 ---
 
 ## Core Mission
