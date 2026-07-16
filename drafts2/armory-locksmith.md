@@ -130,3 +130,14 @@ Review or revise this draft if:
 - access is implied rather than explicit
 - Armory or Locksmith begin deciding mission scope
 - real credential behavior is implied before implementation authority exists
+
+
+## Intervention Ledgers
+
+Armory and Locksmith preserve append-only, mission-correlated records of every operative intervention request, provider decision, attempted operation, result, refusal, and failure.
+
+Locksmith records credential-backed operations without storing credential values in the intervention record.
+
+Standing Curia Liaisons may issue mission-scoped, read-only queries against their respective provider ledger.
+
+Liaisons do not perform, authorize, alter, or interpret interventions.
