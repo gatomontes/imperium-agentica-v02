@@ -22,6 +22,8 @@ Official means active for orientation, drafting, and constitutional testing.
 
 Current map status: `Approved Draft Map`, last structurally verified 2026-07-17.
 
+Latest theoretical constitutional result: `27 PASS / 0 FAIL` in `tests/cognitive/constitutional-test-run-012.md`.
+
 ---
 
 ## Core Mission
