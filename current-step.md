@@ -12,31 +12,31 @@ It is the operational continuity surface for the currently active step.
 
 ## Step
 
-Define the source, scope, continuity, and withdrawal of the CEO President's decision authority.
+Define concurrent Curia-session isolation and standing-role capacity.
 
 ---
 
 ## Why This Step Is Current
 
-The cognitive layer now gives the CEO President sole mission decision and closure authority.
+CEO authority provenance, withdrawal, and succession are now bounded by the Executive Mandate and passed theoretical Run 012 at 27 PASS / 0 FAIL.
 
-The CEO role has construction provenance through Studium, The Gesta, Smith, Spur, Preceptory, and a versioned Standing Curia Assignment. That provenance establishes qualification and assignment, but it does not explain where executive authority originates or how it can be suspended, withdrawn, transferred, or constrained.
+Concurrent missions create concurrent Muster instances and Curia sessions. The cognitive model must now prevent packets, provider records, Minutes, counsel, directives, terminal returns, closure records, and operative releases from crossing mission boundaries.
 
-Mission closure and operative release are now bounded and passed theoretical Run 011. Authority provenance is therefore the next unresolved structural dependency.
+The standing CEO and Chief of Staff may also face overlapping sessions. Their standing status does not prove unlimited cognitive capacity or justify silent delegation.
 
 ---
 
 ## Relevant Files
 
-- `README.md`
-- `layers/cognitive/README.md`
 - `layers/cognitive/drafts/cognitive-map.md`
 - `layers/cognitive/drafts/curia.md`
-- `layers/cognitive/drafts/ceo-president.md`
-- `layers/cognitive/drafts/standing-curia-role-requirements.md`
+- `layers/cognitive/drafts/chief-of-staff.md`
+- `layers/cognitive/drafts/muster.md`
+- `layers/cognitive/drafts/provider-intervention-ledgers.md`
+- `layers/cognitive/drafts/executive-mandate.md`
 - `layers/cognitive/drafts/mission-closure-and-release-contract.md`
 - `tests/cognitive/constitutional-tests.md`
-- `tests/cognitive/constitutional-test-run-011.md`
+- `tests/cognitive/constitutional-test-run-012.md`
 - `next-steps.md`
 
 ---
@@ -44,39 +44,41 @@ Mission closure and operative release are now bounded and passed theoretical Run
 ## Known Distinctions
 
 ```text
-Officer qualification ≠ executive authority
-Preceptory admission ≠ executive authority
-Standing Curia Assignment ≠ source of authority
-CEO decision ≠ CoS orchestration
-authority withdrawal ≠ Officer deletion
-authority withdrawal ≠ mission disposition by implication
+standing role ≠ unlimited capacity
+concurrent Curia sessions ≠ shared mission state
+concurrent Muster instances ≠ shared mission binding
+provider identity ≠ mission correlation
+similar ticket ≠ same intervention
+one mission closure ≠ another mission release
+capacity exhaustion ≠ authority transfer
 ```
 
 ---
 
 ## Questions Under Test
 
-1. What represented authority authorizes the CEO to decide for Imperium?
-2. What artifact records that authority without prematurely admitting an upper-echelon institution?
-3. What is the authority's scope: mission, class of missions, standing mandate, or another bounded form?
-4. Who or what may suspend, withdraw, supersede, or constrain it?
-5. What happens to active missions when CEO authority becomes unavailable or contested?
-6. How is an admitted successor bound without treating appointment as self-authorization?
-7. Which authority facts must appear in every Curia Minute and Mission Closure Record?
+1. What minimum identity binds every mission-scoped artifact and event?
+2. What constitutes one Curia session and one Muster instance?
+3. Which records may be shared as standing reference, and which must remain mission-isolated?
+4. How are provider requests with similar operations prevented from cross-correlation?
+5. How are advisory session assignments isolated and ended?
+6. What happens when the CEO or CoS cannot responsibly serve another concurrent session?
+7. Can a mission wait, hold, or queue without inventing procedure or transferring authority?
+8. What collision must a theoretical scenario create to prove the boundary?
 
 ---
 
 ## Constraints
 
-- Preserve one decision-maker inside Curia.
-- Do not make the CEO self-authorizing.
-- Do not confuse Officer construction provenance with authority provenance.
-- Do not invent Praetorium, a board, sovereign office, ministry, service, or runtime merely to fill the gap.
-- Preserve the operator or represented authority as a possible source without assuming its final form.
-- Make suspension, withdrawal, supersession, and contested authority explicit states.
-- Do not allow CoS, Collegium, Preceptory, Smith, or Muster to inherit executive authority by vacancy.
-- Keep changes within the cognitive draft layer.
-- Test the contract theoretically before considering production admission.
+- Remain at the cognitive structural level.
+- Preserve one CEO decision-maker for every authorized Curia decision.
+- Do not infer unlimited capacity from standing assignment.
+- Do not create duplicate CEO authority, implicit deputies, or an acting CEO by overload.
+- Do not allow CoS, counselors, Muster, or operatives to inherit authority.
+- Keep Curia sessions, Muster instances, Deployment Packages, provider ledgers, Minutes, closure records, and release records mission-correlated.
+- Preserve shared canonical personas and standing Officer specifications without sharing mutable mission state.
+- Treat capacity exhaustion as an explicit constraint, not an authorization shortcut.
+- Test with interleaved missions before considering production admission.
 
 ---
 
@@ -84,19 +86,19 @@ authority withdrawal ≠ mission disposition by implication
 
 This step is complete when:
 
-- a minimal authority-grant artifact or equivalent contract is defined
-- its issuer, grantee, scope, effective interval, constraints, and supersession rules are traceable
-- CEO qualification, assignment, and authority remain distinct
-- authority withdrawal and contested authority have bounded mission effects
-- no other Curia participant becomes decision-maker by default
-- Curia Minutes and closure records cite the active authority version
-- at least one constitutional test and one theoretical mission trace exercise grant, withdrawal, or succession
-- the latest test run records the result and remaining gaps
+- a minimal concurrency and isolation contract is defined
+- mission, deployment, Curia-session, Muster-instance, ticket, and artifact correlation are bounded
+- shared standing references are distinguished from mission-local state
+- CEO and CoS capacity unavailability has an explicit non-transfer outcome
+- cross-mission closure or release is structurally impossible
+- at least one constitutional test pressures isolation
+- an interleaved two-mission trace tests provider, Curia, Muster, and closure collisions
+- the latest theoretical run records the result and remaining gaps
 
 ---
 
 ## After Completion
 
-Move concurrent Curia-session isolation and standing-role capacity into `current-step.md`.
+Run a draft-to-production admission review only if the operator requests it and the structural evidence supports a minimal coherent promotion set.
 
-Do not begin operational procedure design merely because authority provenance is bounded.
+Do not begin procedural modeling merely because concurrency is bounded.
