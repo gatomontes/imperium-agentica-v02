@@ -23,6 +23,7 @@ Petition
 → Pit Findings
 → Garrison Record
 → Operative
+→ Mission Correlation Spine + Operative Binding
 → Mission Inquest
 → Mission Dossier
 → Tool Grant
@@ -30,7 +31,11 @@ Petition
 → Deployment Package
 → Theatre Return
 → Return Package
-→ Curia Findings
+→ Situation Picture
+→ Curia Minute + authorized decision
+→ Terminal Field Packet
+→ Mission Closure Record
+→ Operative Release Record
 → Final Report
 → Delivery Package
 ```
@@ -38,6 +43,15 @@ Petition
 The chain may branch, iterate, or stop.
 
 Not every mission requires every optional artifact, but omitted decisions must be explicit.
+
+Authority and participation bind across the chain without replacing it:
+
+```text
+Executive Mandate
++ Standing Curia Assignments
++ mission-specific Curia Session Assignments when counsel is required
+→ authorized Curia participation and decision
+```
 
 ---
 
@@ -52,6 +66,12 @@ It preserves separation when missions overlap.
 The Chief of Staff's mission-scoped finding that the standing CEO and CoS can responsibly serve a Curia session under the applicable Executive Mandate and capacity constraints.
 
 It is an availability finding, not a mission decision or authority grant.
+
+## Curia Session Assignment
+
+The Chief of Staff's record binding one suitable, Preceptory-admitted Advisory Officer to one mission-specific Curia session after Collegium resolves the Advisory Role Requirement.
+
+It scopes counsel, evidence, dissent, conflicts, and end conditions. It grants no executive authority.
 
 ## Executive Mandate
 
@@ -195,13 +215,21 @@ Raw mission output or consequence exposed by Theatre.
 
 Lazaretto's preserved return before judgment.
 
-## Curia Findings
+## Situation Picture
 
-Curia's evaluation of returns without disposition.
+The Chief of Staff's correlated presentation of sanitized mission state, evidence, provider views, uncertainty, counsel, and authority conditions.
+
+It is not a decision.
+
+## Curia Minute
+
+The mission-scoped record of admitted evidence, counsel, dissent, Executive Mandate verification, CEO decision, rationale, and authorized handoff.
+
+It distinguishes reports, findings, advice, and decision.
 
 ## Final Report
 
-Chamber of Scribes' operator-facing report written from Curia Findings.
+Chamber of Scribes' operator-facing report written after closure from the Mission Closure Record, final Curia Minute, and their cited evidence.
 
 It is not automatically Vellum.
 
@@ -245,7 +273,8 @@ Review or revise this file if:
 - authority vacancy silently transfers decision power
 - mission identity is inferred from similar content
 - one mission's closure or release affects another
-- Final Report and Vellum collapse without decision
+- Final Report precedes the Mission Closure Record or rewrites its disposition
+- Final Report and Vellum collapse without evidence of a distinct record need
 - Delivery Package changes findings
 
 ## Terminal Mission Artifacts
