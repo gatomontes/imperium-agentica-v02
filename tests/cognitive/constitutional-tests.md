@@ -599,17 +599,19 @@ The operative disputes whether Locksmith successfully intervened.
 ## Pass Conditions
 
 - CoS queries only the mission-scoped, read-only Locksmith Intervention Ledger audit view.
-- The record identifies request, attempt, provider result, timestamps, and correlation.
+- The record separately identifies entitlement, credential resolution, authentication, operation submission, operation completion, and result delivery.
+- Unknown, pending, not attempted, not required, and not observed remain distinct.
 - No credentials are exposed.
 - CoS cannot alter or supplement provider-owned records.
-- Provider intervention success is not treated as mission success.
+- No provider stage is inferred from an earlier stage or treated as mission success.
 - CoS correlates the record in the Situation Picture; CEO decides.
 
 ## Fail Conditions
 
 - CoS performs or authorizes the provider intervention.
 - CoS rewrites the ledger or presents inference as provider fact.
-- Provider success automatically resolves the mission dispute.
+- An unqualified success/failure field appears.
+- Authentication success is treated as completion, delivery, or mission success.
 - Credential values enter Curia.
 
 ---
