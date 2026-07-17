@@ -20,7 +20,7 @@ layers/cognitive/drafts/cognitive-map.md
 
 Official means active for orientation, drafting, and constitutional testing.
 
-Current map status: `Approved Draft Map`, last structurally verified 2026-07-17.
+Current map status: `Approved Draft Map`, structurally re-verified 2026-07-17 against Executive Mandate, Curia Session Assignment, closure, and concurrency contracts.
 
 Latest theoretical constitutional result: `28 PASS / 0 FAIL` in `tests/cognitive/constitutional-test-run-013.md`.
 
@@ -111,7 +111,7 @@ Conscription
 - `preceptory.md`
 - `smith.md`
 - `spur.md`
-- `commission.md`
+- `session-assignment.md`
 - `ceo-president.md`
 - `chief-of-staff.md`
 - `standing-curia-role-requirements.md`
@@ -124,7 +124,7 @@ Conscription
 
 Studium supplies Officer Governance Doctrine to Smith. The Gesta supplies evidenced Officer-Trait Canon to Smith only.
 
-`Praetorium` is reserved for future Imperium Officers and is not currently defined.
+`Commission` has been eliminated. `Praetorium` is reserved for future Imperium Officers and is not currently defined.
 
 ### Mission Assembly and Cortine Boundary
 
