@@ -11,9 +11,10 @@ It contains no offices.
 Its initial standing composition is deliberately minimal:
 
 - one CEO persona serving as President and sole decision-maker
+- one Chief of Staff persona responsible for Curial Orchestration
 - applicable standing institutional Liaisons
 
-Curia may later convene advisory Officers when the CEO activates Collegium during a mission.
+Curia may later convene advisory Officers when the Chief of Staff engages Collegium during a mission.
 
 It does not admit a permanent department hierarchy, collective decision authority, autonomous decision engine, runtime command center, or universal sovereign council.
 
@@ -36,6 +37,9 @@ standing institutional responsibility
 President:
 the standing CEO persona who presides over Curia and makes its sole decision
 
+Chief of Staff:
+the standing Curia participant who orchestrates information, counsel, session flow, record, and authorized handoff without deciding
+
 Officer:
 a standing, admitted advisory persona convened for competence relevant to a particular Curia session
 
@@ -45,19 +49,22 @@ a standing, institution-recognized interface that reports provider facts
 Curia:
 the shared surface on which the President receives reports and counsel, then decides and directs
 
-President ≠ Officer
+President ≠ Chief of Staff
+Chief of Staff ≠ Muster
 Officer ≠ Operative
 Liaison ≠ Officer
 
+The Chief of Staff orchestrates Curia.
 The President decides.
 Officers analyze, advise, verify, challenge, and preserve dissent.
 Liaisons report institutional facts.
+Muster orchestrates the authorized decision outward.
 The Operative executes within Theatre.
 ```
 
 Curia does not analyze or decide independently.
 
-Convened Officers perform those acts according to represented authority.
+The Chief of Staff organizes Curial activity but has no substantive decision authority. Convened Officers provide counsel. The CEO President alone decides.
 
 ---
 
@@ -93,13 +100,14 @@ Curia may place these beside:
 
 Curia does not require Collegium to pre-compose every mission.
 
-A mission begins with the standing CEO President and whichever standing Liaisons are applicable. No counselor, quorum, or mission-dedicated Officer corps is presumed.
+A mission begins with the standing CEO President, the standing Chief of Staff, and whichever standing Liaisons are applicable. No counselor, quorum, or mission-dedicated Officer corps is presumed.
 
-During the mission, the CEO may determine that competent judgment requires distinct counsel. The CEO then activates Collegium with a specific counsel need.
+During the mission, a need for distinct counsel may arise. The Chief of Staff frames that need and engages Collegium as part of Curial Orchestration.
 
 ```text
 active Curia session
-→ CEO identifies a counsel need
+→ counsel need arises
+→ Chief of Staff engages Collegium
 → Collegium resolves the required advisory role
 → Preceptory searches the standing Officer corps
     ├── suitable Officer found → session assignment
@@ -138,15 +146,25 @@ They never receive credentials.
 
 ---
 
-## Responsibilities Of The President And Convened Officers
+## Responsibilities Of The Chief Of Staff, President, And Convened Officers
+
+The Chief of Staff:
+
+- assembles and maintains the Situation Picture presented within Curia
+- manages Curia session flow and agenda
+- obtains applicable Liaison reports
+- frames counsel needs and engages Collegium
+- brings session-assigned Officers and their counsel into Curia
+- ensures findings, evidence, uncertainty, and dissent reach the President
+- maintains the Curia Minute
+- hands the President's authorized decision to Muster without reinterpretation
 
 The CEO President:
 
-- receives sanitized mission material, Liaison reports, and any Officer counsel
-- activates Collegium when distinct advisory competence is necessary
+- receives the organized Situation Picture, Liaison reports, and any Officer counsel
 - remains the sole Curia decision-maker
-- issues the authorized decision that Muster operationalizes
-- records the authority basis and rationale in the Curia Minute
+- states the decision, rationale, and authority basis
+- authorizes the direction handed to Muster
 
 Convened Officers may:
 
@@ -190,9 +208,10 @@ Deployment:
 Packet set:
 Situation picture:
 President:
+Chief of Staff:
 Liaisons present:
 Officers convened:
-Counsel need and Collegium activation:
+Counsel need and Collegium engagement:
 Authority represented:
 Observations:
 Operative claims:
@@ -238,7 +257,7 @@ Curia does not sanitize raw Theatre material or bypass Lazaretto.
 
 ## Relationship To Muster
 
-Authorized decisions made by the CEO President pass to Muster for outbound mission orchestration.
+The Chief of Staff hands decisions authorized by the CEO President to Muster for outbound mission orchestration.
 
 This may include:
 
@@ -263,7 +282,7 @@ Curia must not:
 
 - become a hierarchy of internal offices
 - require convened Officers before a demonstrated counsel need exists
-- allow an Officer, Liaison, quorum, or majority to displace the President's sole decision authority
+- allow the Chief of Staff, an Officer, Liaison, quorum, or majority to displace the President's sole decision authority
 - conceal which authority made a decision
 - treat operative claims as verified merely because they arrived
 - bypass Lazaretto sanitation
@@ -283,6 +302,7 @@ Lazaretto sanitizes.
 Curia convenes.
 Liaisons report.
 Officers counsel when called.
+The Chief of Staff orchestrates Curia.
 The President decides.
 Muster orchestrates direction outward.
 Iron Gate carries the crossing.
