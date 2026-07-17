@@ -4,9 +4,25 @@
 
 Draft standing Curia role.
 
-The Chief of Staff is Curia's internal orchestration layer.
+The Chief of Staff is the standing Staff Officer assigned as Curia's internal orchestration layer.
+
+It is qualified through the Studium–Gesta–Smith–Spur–Preceptory Officer line and placed through a Standing Curia Assignment.
 
 The role exists to release the CEO President from session coordination without transferring substantive decision authority.
+
+## Provenance
+
+```text
+CoS Standing Curia Role Requirement
+→ Studium: Staff Officer Governance Doctrine
+→ The Gesta: Staff Officer-Trait Canon
+→ Smith: CoS Officer Specification Candidate
+→ Spur: Staff Officer Fitness Findings
+→ Preceptory admission
+→ Standing Curia Assignment
+```
+
+Every Curia Minute records the CoS Officer Specification and Standing Curia Assignment versions in force.
 
 ## Core Question
 
