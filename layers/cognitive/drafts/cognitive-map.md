@@ -215,9 +215,20 @@ If the medium cannot preserve required competence, doctrine, or traits, Conscrip
 
 ### CEO-Led Curia And Citadel Officer Line
 
-Curia initially consists of the standing CEO President and the standing Chief of Staff.
+Curia initially consists of a standing Executive Officer assigned as CEO President and a standing Staff Officer assigned as Chief of Staff.
+
+Both are produced through Studium + The Gesta → Smith → Spur → Preceptory and placed through versioned Standing Curia Assignments.
 
 The Chief of Staff owns Curial Orchestration and directly reads permitted mission-scoped provider audit views. The CEO is the sole decision-maker.
+
+Curia Officer classes remain distinct:
+
+```text
+Standing Role Requirement → Studium + The Gesta → Smith → Spur → Preceptory
+    ├── Executive Officer → Standing Curia Assignment → CEO President
+    ├── Staff Officer → Standing Curia Assignment → Chief of Staff
+    └── Advisory Officer → Curia Session Assignment → Counselor
+```
 
 ```text
 active Curia session
