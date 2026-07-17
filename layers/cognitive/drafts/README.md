@@ -112,6 +112,7 @@ Conscription
 - `chief-of-staff.md`
 - `standing-curia-role-requirements.md`
 - `counsel-availability-contract.md`
+- `mission-closure-and-release-contract.md`
 - `curia.md`
 - `provider-intervention-ledgers.md`
 
