@@ -109,6 +109,7 @@ Conscription
 - `spur.md`
 - `commission.md`
 - `chief-of-staff.md`
+- `counsel-availability-contract.md`
 - `curia.md`
 - `provider-intervention-ledgers.md`
 
