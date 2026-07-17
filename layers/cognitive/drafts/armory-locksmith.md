@@ -138,6 +138,6 @@ Armory and Locksmith preserve append-only, mission-correlated records of every o
 
 Locksmith records credential-backed operations without storing credential values in the intervention record.
 
-Standing Curia Liaisons may issue mission-scoped, read-only queries against their respective provider ledger.
+The Chief of Staff may issue mission-scoped, read-only queries against each provider ledger for Curia's Situation Picture.
 
-Liaisons do not perform, authorize, alter, or interpret interventions.
+The Chief of Staff does not perform, authorize, alter, or rewrite interventions and never receives credential values.
