@@ -108,12 +108,22 @@ Provenance requires stable subject and source identities and versions.
 
 It does not define what those artifacts mean.
 
-Canonical artifact-definition origin remains unresolved and external to this contract.
+Canonical artifact-definition origin follows the native-concern ownership rule:
+
+```text
+one artifact contract
+→ one native concern
+→ one canonical semantic definition
+```
+
+The native artifact contract declares which provenance relations are required for that artifact and version.
+
+Provenance evaluates completeness relative to that cited contract. It does not define the requirements itself.
 
 ## Unresolved Questions
 
-- What minimum assertions are required for every derived artifact?
-- Which assertions are optional by artifact class?
+- Is any universal assertion required across all artifact classes beyond subject identity and canonical contract reference?
+- How should optional relations be distinguished from missing required relations?
 - Who may revise the canonical relation vocabulary?
 - Is semantic fidelity part of provenance or an artifact-specific assurance rule?
 - What disposition applies to authorized but provenance-partial urgent action?
