@@ -118,6 +118,7 @@ Conscription
 - `executive-mandate.md`
 - `counsel-availability-contract.md`
 - `mission-closure-and-release-contract.md`
+- `mission-concurrency-and-isolation-contract.md`
 - `curia.md`
 - `provider-intervention-ledgers.md`
 
@@ -195,6 +196,9 @@ operative release ≠ reuse authority
 closure record ≠ final report
 Officer qualification ≠ Standing Curia Assignment
 Standing Curia Assignment ≠ Executive Mandate
+shared governed reference ≠ shared mission state
+standing role ≠ unlimited capacity
+one mission closure ≠ another mission release
 ```
 
 Current operative states:
@@ -345,7 +349,6 @@ This directory does not admit:
 
 ## Current Parked Issues
 
-- Concurrent Curia-session isolation and standing-role capacity.
 - Whether `Vellum` should return as an internal canonical mission record.
 - Which names survive use and which are only naming pressure.
 - Whether the provisional artifact fields remain sufficient after repeated dry runs.
