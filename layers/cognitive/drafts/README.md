@@ -113,6 +113,7 @@ Conscription
 - `ceo-president.md`
 - `chief-of-staff.md`
 - `standing-curia-role-requirements.md`
+- `executive-mandate.md`
 - `counsel-availability-contract.md`
 - `mission-closure-and-release-contract.md`
 - `curia.md`
@@ -168,7 +169,7 @@ Inquisition investigates mission terrain.
 Armory provides authorized tools and records mission-scoped interventions.
 Locksmith retains credentials, performs authorized access operations, and records their staged outcomes.
 Theatre exposes consequence.
-Curia receives sanitized field data; the Chief of Staff orchestrates and the CEO alone decides.
+Curia receives sanitized field data; the Chief of Staff orchestrates and verifies authority, and the CEO alone decides under an effective Executive Mandate.
 The CEO closes missions with a terminal disposition.
 Muster releases the operative's mission binding after authorized closure.
 Chamber of Scribes writes final reports from the closure record.
@@ -190,6 +191,8 @@ completion claim ≠ closure
 closure ≠ operative release
 operative release ≠ reuse authority
 closure record ≠ final report
+Officer qualification ≠ Standing Curia Assignment
+Standing Curia Assignment ≠ Executive Mandate
 ```
 
 Current operative states:
@@ -238,6 +241,11 @@ Compression does not transfer authority or erase artifacts.
 Derived artifacts preserve exact upstream version references.
 
 ```text
+Curia decision
+→ Executive Mandate version
+→ CEO Standing Curia Assignment version
+→ CEO Officer Specification version
+
 Deployment
 → Operative
 → Canonical Persona
@@ -335,7 +343,6 @@ This directory does not admit:
 
 ## Current Parked Issues
 
-- Source, scope, and withdrawal of CEO authority.
 - Concurrent Curia-session isolation and standing-role capacity.
 - Whether `Vellum` should return as an internal canonical mission record.
 - Which names survive use and which are only naming pressure.
