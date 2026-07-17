@@ -16,7 +16,7 @@ What advisory role is required for this specific counsel need, and which standin
 
 ## Activation
 
-The Chief of Staff engages Collegium from Curia with a concrete counsel need. The Chief of Staff may frame a need surfaced by the President, the Situation Picture, a Liaison report, or an evident competence gap.
+The Chief of Staff engages Collegium from Curia with a concrete counsel need. The Chief of Staff may frame a need surfaced by the President, the Situation Picture, a provider audit record, or an evident competence gap.
 
 Examples include:
 
