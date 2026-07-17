@@ -44,6 +44,8 @@ The Chief of Staff:
 - records COUNSEL_UNAVAILABLE, affected dependencies, and Capability Gap Records
 - coordinates CEO-authorized holds, constraints, deferrals, or admitted escalation
 - ensures evidence, findings, advice, uncertainty, and dissent reach the President
+- assembles Closure and Terminal Situation Pictures
+- records wind-down, terminal-return, disposition, and unresolved-obligation evidence
 - maintains the Curia Minute
 - records the President's decision, rationale, and authority basis
 - hands the authorized decision to Muster
@@ -55,6 +57,7 @@ The Chief of Staff does not:
 - make, veto, or revise the President's decision
 - become a second decision-maker
 - provide domain counsel merely by orchestrating it
+- choose a terminal disposition or declare mission closure
 - decide whether affected work may proceed
 - treat an unavailable counselor as authorization for an ad hoc substitute
 - select Officers independently of Collegium and Preceptory
