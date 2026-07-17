@@ -73,6 +73,8 @@ Conscription
 → Theatre
 → La Cortine / Lazaretto
 → Curia
+→ Mission Closure Record
+→ Muster / Operative Release Record
 → Chamber of Scribes
 → Secretariat
 → Operator
@@ -142,7 +144,6 @@ Studium supplies Officer Governance Doctrine to Smith. The Gesta supplies eviden
 - `cognitive-map.md`
 - `lifecycle.md`
 - `production-artifacts.md`
-- `constitutional-tests.md`
 
 ---
 
@@ -158,18 +159,19 @@ Foundry cognitively fits those inputs into canonical personas.
 Pit tests integrated persona candidates.
 Garrison holds admitted canonical personas.
 Conscription recruits personas into deployment-medium-specific operatives.
-Muster assembles mission-bound Deployment Packages.
-Iron Gate launches initial deployments.
+Muster assembles Deployment Packages and orchestrates authorized outbound mission traffic.
+Iron Gate carries outward mission traffic into Theatre.
 Barbican exposes continuing Armory and Locksmith support.
-Lazaretto receives mission returns.
+Lazaretto receives and sanitizes mission returns.
 La Cortine merely contains these ports.
 Inquisition investigates mission terrain.
-Armory issues tools.
-Locksmith issues keys and access.
+Armory provides authorized tools and records mission-scoped interventions.
+Locksmith retains credentials, performs authorized access operations, and records their staged outcomes.
 Theatre exposes consequence.
-Lazaretto sanitizes field packets and returns.
-Curia convenes Officers around sanitized field data and produces findings.
-Chamber of Scribes writes final reports.
+Curia receives sanitized field data; the Chief of Staff orchestrates and the CEO alone decides.
+The CEO closes missions with a terminal disposition.
+Muster releases the operative's mission binding after authorized closure.
+Chamber of Scribes writes final reports from the closure record.
 Secretariat delivers final reports.
 ```
 
@@ -183,7 +185,11 @@ trait canon ≠ persona
 persona ≠ operative
 operative ≠ deployment
 return ≠ finding
-finding ≠ report
+finding ≠ decision
+completion claim ≠ closure
+closure ≠ operative release
+operative release ≠ reuse authority
+closure record ≠ final report
 ```
 
 Current operative states:
@@ -191,10 +197,12 @@ Current operative states:
 ```text
 admitted canonical persona
 → recruited operative
+→ mission-bound operative
 → deployed operative
+→ released operative
 ```
 
-No separate activation state is admitted. Iron Gate is the dedicated launch port.
+No separate activation state is admitted. Iron Gate is the dedicated outward mission port. Release ends one mission binding; it does not delete the operative or authorize reuse.
 
 ---
 
@@ -252,7 +260,7 @@ Existing operatives remain bound to the versions from which they were recruited.
 Theatre
 → Lazaretto
 → Curia
-→ authorized Officer decision
+→ authorized CEO decision
 → Muster
 → outbound mission instruction
 → Iron Gate
@@ -277,7 +285,7 @@ Theatre ↔ Barbican ↔ Armory / Locksmith
 Suite:
 
 ```text
-layers/cognitive/drafts/constitutional-tests.md
+tests/cognitive/cognitive/constitutional-tests.md
 ```
 
 Results:
@@ -307,8 +315,6 @@ This directory does not admit:
 - Citadel as persona-governance steward
 - Foundry as operative builder
 - Garrison as operative inventory
-- disposition authority
-- before/after knowledge machinery
 - Vellum as a v02 artifact
 
 ---
@@ -321,16 +327,16 @@ This directory does not admit:
 - Do not confuse procedural compression with authority collapse.
 - Do not mutate canonical personas during recruitment.
 - Do not mistake operative existence for deployment authority.
-- Do not assign disposition before before/after knowledge exists.
+- Do not treat an operative completion claim as mission closure.
+- Do not release a mission binding before authorized closure.
 - Do not overwrite provenance when doctrine, canon, persona, or operative versions change.
 
 ---
 
 ## Current Parked Issues
 
-- Who or what eventually owns disposition?
-- What before/after knowledge surface is required before disposition?
+- Source, scope, and withdrawal of CEO authority.
+- Concurrent Curia-session isolation and standing-role capacity.
 - Whether `Vellum` should return as an internal canonical mission record.
-- Whether `Final Report` is sufficient for operator-facing closure.
 - Which names survive use and which are only naming pressure.
 - Whether the provisional artifact fields remain sufficient after repeated dry runs.
