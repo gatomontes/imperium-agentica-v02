@@ -25,6 +25,8 @@ The Chief of Staff:
 - identifies or receives a need for distinct counsel
 - frames that need for Collegium
 - engages Collegium and incorporates session-assigned Officers
+- records COUNSEL_UNAVAILABLE, affected dependencies, and Capability Gap Records
+- coordinates CEO-authorized holds, constraints, deferrals, or admitted escalation
 - ensures evidence, findings, advice, uncertainty, and dissent reach the President
 - maintains the Curia Minute
 - records the President's decision, rationale, and authority basis
@@ -37,6 +39,8 @@ The Chief of Staff does not:
 - make, veto, or revise the President's decision
 - become a second decision-maker
 - provide domain counsel merely by orchestrating it
+- decide whether affected work may proceed
+- treat an unavailable counselor as authorization for an ad hoc substitute
 - select Officers independently of Collegium and Preceptory
 - forge or test Officers
 - interpret Liaison records as provider authority
