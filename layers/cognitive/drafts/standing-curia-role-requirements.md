@@ -29,7 +29,7 @@ Current roles:
 | Chief of Staff | Staff Officer | Standing Curia Assignment |
 | Counselor | Advisory Officer | Curia Session Assignment |
 
-A standing assignment is not a mission-specific commission and is not an Executive Mandate.
+A standing assignment is not a mission-specific commission, is not an Executive Mandate, and does not imply unlimited concurrent-session capacity.
 
 ## CEO President Requirement
 
@@ -116,6 +116,8 @@ Every Curia Minute identifies the standing CEO and CoS specification versions in
 A standing persona is replaced only by another Preceptory-admitted candidate qualified for the same Officer class and role.
 
 Replacement creates a new Standing Curia Assignment and explicit supersession record. It never silently mutates the incumbent specification or historical Minutes.
+
+Concurrent sessions require a mission-scoped Session Admission Finding. Capacity unavailability withholds affected session work; it does not transfer the standing role or its authority.
 
 Replacement review is triggered by:
 
