@@ -153,7 +153,9 @@ The Chief of Staff:
 - never receives credential values
 - preserves provider, mission, deployment, ticket, timestamp, and correlation provenance
 - distinguishes provider intervention facts from mission interpretation
-- does not treat provider success as mission success
+- preserves the distinct provider-observed intervention stages
+- does not infer a later stage from an earlier one
+- does not treat any provider stage as mission success
 - presents unresolved conflicts to the President
 
 Armory and Locksmith remain the owners and authors of their records.
@@ -223,7 +225,7 @@ Packet set:
 Situation picture:
 President Officer Specification + Standing Assignment:
 Chief of Staff Officer Specification + Standing Assignment:
-Provider audit views queried:
+Provider audit views and staged outcomes queried:
 Officers convened:
 Counsel need and Collegium engagement:
 Counsel availability finding:
