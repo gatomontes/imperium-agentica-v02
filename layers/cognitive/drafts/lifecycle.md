@@ -1,4 +1,4 @@
-# Drafts2 Lifecycle
+# Cognitive Lifecycle
 
 ## Status
 
@@ -6,7 +6,7 @@ Draft.
 
 This file describes the provisional end-to-end Imperium v02 lifecycle.
 
-It does not admit automation, runtime implementation, UI, database, service topology, a named launching entity, or disposition authority.
+It does not admit automation, runtime implementation, UI, database, service topology, a named launching entity or runtime implementation.
 
 ---
 
@@ -40,7 +40,8 @@ Conscription
 → Theatre
 → La Cortine / Lazaretto
 → Curia
-→ Findings
+→ Mission Closure Record
+→ Operative Release Record
 → Chamber of Scribes
 → Final Report
 → Secretariat
@@ -168,14 +169,14 @@ Barbican carries provider tickets and results. Locksmith retains credentials.
 Theatre
 → Lazaretto
 → Curia
-→ authorized Officer decision
+→ authorized CEO decision
 → Muster
 → outbound mission instruction
 → Iron Gate
 → Theatre
 ```
 
-Curia convenes Officers to understand, verify, deliberate, and authorize.
+The Chief of Staff orchestrates Curia. Advisory Officers counsel when assigned. The CEO alone decides.
 
 Muster owns outbound mission orchestration. It operationalizes the authorized Curia decision without changing its substance or authority.
 
@@ -188,31 +189,34 @@ Theatre ↔ Barbican ↔ Armory / Locksmith
 ```
 
 
-## Return
+## Return, Closure, And Release
 
 ```text
 Theatre
 → Lazaretto
-→ Curia
-→ Findings
+→ Curia closure assessment
+→ CEO BEGIN_WIND_DOWN
+→ Muster
+→ Iron Gate
+→ Theatre terminal return
+→ Lazaretto
+→ Curia terminal decision
+→ MISSION_CLOSED + disposition
+→ Muster Operative Release Record
 → Chamber of Scribes
 → Final Report
 → Secretariat
 → Operator
 ```
 
-Lazaretto receives.
+An operative completion claim is evidence, not closure.
 
-Curia evaluates.
-
-Scribes write.
-
-Secretariat delivers.
-
-Disposition remains parked pending before/after knowledge.
+The CEO closes. Muster releases the mission binding. Scribes report from the closure record. Secretariat delivers.
 
 ```text
 No correction without contrast.
+No closure without disposition.
+No release without closure.
 ```
 
 ---
@@ -228,4 +232,7 @@ No correction without contrast.
 - Muster is not launch or execution.
 - Theatre output is not judgment.
 - Findings do not authorize correction.
+- Completion claim is not closure.
+- Closure is not operative release.
+- Release is not reuse authority.
 - Final Report is not automatically Vellum.
