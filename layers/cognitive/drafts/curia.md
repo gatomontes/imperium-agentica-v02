@@ -12,7 +12,6 @@ Its initial standing composition is deliberately minimal:
 
 - one CEO persona serving as President and sole decision-maker
 - one Chief of Staff persona responsible for Curial Orchestration
-- applicable standing institutional Liaisons
 
 Curia may later convene advisory Officers when the Chief of Staff engages Collegium during a mission.
 
@@ -43,8 +42,8 @@ the standing Curia participant who orchestrates information, counsel, session fl
 Officer:
 a standing, admitted advisory persona convened for competence relevant to a particular Curia session
 
-Liaison:
-a standing, institution-recognized interface that reports provider facts
+Provider audit view:
+a mission-scoped, read-only projection of an Armory or Locksmith Intervention Ledger available to the Chief of Staff
 
 Curia:
 the shared surface on which the President receives reports and counsel, then decides and directs
@@ -52,12 +51,11 @@ the shared surface on which the President receives reports and counsel, then dec
 President ≠ Chief of Staff
 Chief of Staff ≠ Muster
 Officer ≠ Operative
-Liaison ≠ Officer
+provider record ≠ mission judgment
 
-The Chief of Staff orchestrates Curia.
+The Chief of Staff orchestrates Curia and reads permitted provider audit views.
 The President decides.
 Officers analyze, advise, verify, challenge, and preserve dissent.
-Liaisons report institutional facts.
 Muster orchestrates the authorized decision outward.
 The Operative executes within Theatre.
 ```
@@ -100,7 +98,7 @@ Curia may place these beside:
 
 Curia does not require Collegium to pre-compose every mission.
 
-A mission begins with the standing CEO President, the standing Chief of Staff, and whichever standing Liaisons are applicable. No counselor, quorum, or mission-dedicated Officer corps is presumed.
+A mission begins with the standing CEO President and the standing Chief of Staff. No counselor, Liaison, quorum, or mission-dedicated Officer corps is presumed.
 
 During the mission, a need for distinct counsel may arise. The Chief of Staff frames that need and engages Collegium as part of Curial Orchestration.
 
@@ -140,25 +138,21 @@ Counsel absence creates a Capability Gap Record. It does not automatically autho
 
 ---
 
-## Standing Liaisons
+## Provider Record Access
 
-Curia contains standing institutional Liaisons separate from Commissioned Officers.
+The Chief of Staff may issue mission-scoped, read-only queries against Armory and Locksmith Intervention Ledgers when their records are relevant to the Situation Picture.
 
-A Liaison is automatically assigned when its represented provider is relevant to the mission.
+The Chief of Staff:
 
-Liaisons:
+- receives only the permitted audit view
+- cannot alter, append, supersede, or delete provider records
+- never receives credential values
+- preserves provider, mission, deployment, ticket, timestamp, and correlation provenance
+- distinguishes provider intervention facts from mission interpretation
+- does not treat provider success as mission success
+- presents unresolved conflicts to the President
 
-- do not occupy Curia Vacancies
-- do not count toward quorum
-- do not vote, concur, or veto
-- are not produced by Smith or tested by Spur
-- require no Commission
-- query only the mission-scoped institutional records their provider recognizes
-- report provider facts without interpreting mission meaning
-
-Armory and Locksmith Liaisons query their respective Intervention Ledgers and report request counts, intervention classes, authorization, attempts, success, failure, refusal, timestamps, and correlation.
-
-They never receive credentials.
+Armory and Locksmith remain the owners and authors of their records.
 
 ---
 
@@ -168,7 +162,7 @@ The Chief of Staff:
 
 - assembles and maintains the Situation Picture presented within Curia
 - manages Curia session flow and agenda
-- obtains applicable Liaison reports
+- obtains applicable mission-scoped provider audit records
 - frames counsel needs and engages Collegium
 - brings session-assigned Officers and their counsel into Curia
 - ensures findings, evidence, uncertainty, and dissent reach the President
@@ -177,7 +171,7 @@ The Chief of Staff:
 
 The CEO President:
 
-- receives the organized Situation Picture, Liaison reports, and any Officer counsel
+- receives the organized Situation Picture, provider audit records, and any Officer counsel
 - remains the sole Curia decision-maker
 - states the decision, rationale, and authority basis
 - authorizes the direction handed to Muster
@@ -225,7 +219,7 @@ Packet set:
 Situation picture:
 President:
 Chief of Staff:
-Liaisons present:
+Provider audit views queried:
 Officers convened:
 Counsel need and Collegium engagement:
 Counsel availability finding:
@@ -301,7 +295,7 @@ Curia must not:
 
 - become a hierarchy of internal offices
 - require convened Officers before a demonstrated counsel need exists
-- allow the Chief of Staff, an Officer, Liaison, quorum, or majority to displace the President's sole decision authority
+- allow the Chief of Staff, an Officer, quorum, or majority to displace the President's sole decision authority
 - conceal which authority made a decision
 - treat operative claims as verified merely because they arrived
 - bypass Lazaretto sanitation
@@ -321,7 +315,8 @@ Curia must not:
 ```text
 Lazaretto sanitizes.
 Curia convenes.
-Liaisons report.
+Providers record.
+The Chief of Staff reads and correlates.
 Officers counsel when called.
 The Chief of Staff orchestrates Curia.
 The President decides.
