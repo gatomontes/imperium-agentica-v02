@@ -21,7 +21,7 @@ The Chief of Staff:
 - receives sanitized mission packets entering Curia from Lazaretto
 - assembles and maintains the Situation Picture
 - manages Curia session flow and agenda
-- obtains applicable Armory and Locksmith Liaison reports
+- issues mission-scoped, read-only queries against applicable Armory and Locksmith Intervention Ledgers
 - identifies or receives a need for distinct counsel
 - frames that need for Collegium
 - engages Collegium and incorporates session-assigned Officers
@@ -43,7 +43,9 @@ The Chief of Staff does not:
 - treat an unavailable counselor as authorization for an ad hoc substitute
 - select Officers independently of Collegium and Preceptory
 - forge or test Officers
-- interpret Liaison records as provider authority
+- treat provider audit records as provider authority beyond what they actually record
+- treat provider intervention success as mission success
+- alter or supplement provider-owned ledger records
 - direct Iron Gate or Theatre
 - perform Muster's outbound orchestration
 - carry tools or credentials
