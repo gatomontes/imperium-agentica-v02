@@ -14,57 +14,66 @@ When a step becomes active, remove it from this file and place it in `current-st
 
 ## Queue
 
-### 1. Promote Cognitive Baseline CB-001
+### 1. Define the procedural-layer boundary
 
 Reason:
 
-Admission Review 002 approved a dependency-closed 36-file cognitive baseline with recorded limits after Run 014 passed 29/29 and Mission 009 completed the integrated Petition-to-delivery trace.
+CB-001 admits the cognitive structure but deliberately leaves procedures at zero. Before writing workflows, the repository needs a minimal definition of what the procedural layer may express and what remains cognitive or runtime.
 
-Required work:
+Questions:
 
-1. copy all 36 exact manifest files into `layers/cognitive/production/`
-2. update status and CB-001 evidence headers without changing substance
-3. create and verify the production manifest
-4. only then delete the exact draft counterparts
-5. replace the draft index with the residual empty-state index
-6. update cognitive and operational status records
+- Does the layer use `layers/procedural/drafts` and `layers/procedural/production`?
+- What is a procedure versus a cognitive responsibility?
+- How does a procedure cite CB-001 without redefining it?
+- What evidence admits a procedure?
+- What procedure should be traced first?
 
 Promotion condition:
 
-Explicit operator approval of the CB-001 status transition.
+Explicit operator approval to begin procedural-layer design.
 
 Removal or demotion condition:
 
-Do not promote if the operator elects to keep the admitted candidate draft-bound or contests the manifest.
+Defer if the operator wants further cognitive scenarios before procedural work.
 
 ---
 
-### 2. Reconsider Vellum only if closure records expose a record gap
+### 2. Trace the first admitted cognitive path as a procedure
 
 Reason:
 
-Mission Closure Record, Curia Minutes, Operative Release Record, and Final Report may already provide sufficient internal and operator-facing memory. Vellum should not return on name or precedent alone.
+After the procedural boundary exists, translate one narrow CB-001 path into an explicit procedure without attempting the whole lifecycle.
+
+Candidate:
+
+```text
+Theatre return
+→ Lazaretto sanitation
+→ Curia session
+→ CEO decision
+→ Muster outbound instruction
+```
 
 Promotion condition:
 
-This becomes current only when repeated scenarios reveal a specific canonical mission-record behavior that existing artifacts cannot preserve.
+The procedural boundary and draft structure are approved.
 
 Removal or demotion condition:
 
-Remove it if the existing artifact set remains sufficient.
+Choose a different narrow path if it exposes procedural distinctions more effectively.
 
 ---
 
-### 3. Begin procedural modeling only after structural stabilization
+### 3. Reconsider Vellum only if a record gap appears
 
 Reason:
 
-The cognitive map is structural, not operational. Procedures should be derived from tested authority and artifact boundaries rather than used to conceal unresolved ontology.
+Mission Closure Record, Curia Minutes, Operative Release Record, Final Report, and Delivery Package currently preserve the required record chain.
 
 Promotion condition:
 
-This becomes current after the operator judges the cognitive structure sufficiently stable and explicitly authorizes procedural work.
+A cognitive or procedural scenario demonstrates a specific canonical record behavior these artifacts cannot preserve.
 
 Removal or demotion condition:
 
-Demote it whenever new scenarios reopen structural ownership, authority, or boundary questions.
+Remove it if repeated use continues to show no distinct need.
