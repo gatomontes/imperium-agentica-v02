@@ -144,14 +144,16 @@ Does not: author persona governance, canonize traits, forge, recruit, or deploy
 
 ### Studium
 
-Translates the governable dimensions of professional practice into Persona Governance Doctrine.
+Stewards distinct governance doctrine for professional personas and Curial Officers.
 
 ```text
-Product: Persona Governance Doctrine
-Does not: redefine profession, forge persona, recruit, or deploy
+Guildhall input → Persona Governance Doctrine → Foundry
+Collegium input → Officer Governance Doctrine → Smith
+
+Does not: redefine profession or advisory role, forge persona or Officer, canonize traits, recruit, or deploy
 ```
 
-Studium supersedes the narrowed v02 Citadel in this production path.
+The two doctrine artifacts share a steward but remain cognitively distinct.
 
 ### Hagiography
 
@@ -224,8 +226,10 @@ active Curia session
 → Advisory Role Requirement
 → Preceptory search
     ├── suitable standing Officer found → Curia session assignment
-    └── durable role absent → Smith ← The Gesta → Officer-Trait Canon
-                              → Spur → Preceptory → Curia session assignment
+    └── durable role absent
+         → Collegium → Studium → Officer Governance Doctrine → Smith
+         → The Gesta → Officer-Trait Canon → Smith
+         → Smith → Spur → Preceptory → Curia session assignment
 → Officer advises
 → Chief of Staff organizes counsel and record
 → CEO decides
@@ -485,7 +489,7 @@ This map does not admit:
 ```text
 Castellan specifies the work.
 Guildhall specifies the profession.
-Studium authors its Persona Governance Doctrine.
+Studium authors Persona Governance Doctrine and Officer Governance Doctrine.
 Hagiography canonizes applicable human traits from Saints.
 Foundry forges the canonical persona.
 Pit tests the whole persona.
