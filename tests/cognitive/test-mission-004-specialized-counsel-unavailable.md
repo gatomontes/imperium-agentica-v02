@@ -5,55 +5,54 @@
 ```text
 Mode: theoretical cognitive trace
 Date: 2026-07-17
-Result: BLOCKED BY COGNITIVE GAP
+Rerun: 001
+Result: PASS
 ```
 
 ## Pressure
 
-During an active mission, the CEO receives a specialized safety question whose consequences are material and whose answer exceeds the CEO's competent judgment.
-
-The decision cannot responsibly be made from the current Situation Picture.
+During an active mission, a specialized safety question exceeds the CEO's competent judgment. Its consequences are material. Preceptory contains no suitable standing Officer, and the need has not yet proven durable.
 
 ## Trace
 
-1. Lazaretto releases the relevant field packet to Curia.
-2. The Chief of Staff identifies and frames the counsel need.
+1. Lazaretto releases the relevant packet to Curia.
+2. The Chief of Staff frames the counsel need.
 3. Collegium produces an Advisory Role Requirement.
-4. Collegium searches Preceptory.
-5. No suitable standing Officer exists.
-6. The need appears mission-specific; repeated evidence has not established a durable Officer role.
-7. Smith therefore cannot be invoked automatically under current doctrine.
-8. The CEO must not decide beyond competence.
-9. CoS and Collegium cannot invent temporary authority.
+4. Preceptory returns no suitable Officer.
+5. Collegium returns `COUNSEL_UNAVAILABLE` and a Capability Gap Record.
+6. The CEO refuses to decide the specialized substance.
+7. The affected decision enters `DECISION_WITHHELD`.
+8. The CEO identifies which dependent actions must be held.
+9. One unrelated evidence-gathering task is found separable and may continue.
+10. The Chief of Staff records the finding, withheld scope, separability rationale, gap, and disposition in the Curia Minute.
+11. The Chief of Staff hands the authorized hold and constrained continuation to Muster.
+12. Muster operationalizes both without inventing counsel or altering authority.
 
-## Point Of Failure
-
-The cognitive map provides no admitted state or disposition for:
+## Curia Minute
 
 ```text
-required counsel
-+ no suitable standing Officer
-+ no justified durable role
-+ active mission awaiting direction
+Counsel requirement: specialized safety judgment
+Preceptory result: no suitable Officer
+Finding: COUNSEL_UNAVAILABLE
+Affected decision: safety approval
+State: DECISION_WITHHELD
+Dependent actions: deployment expansion held
+Separable work: evidence collection only
+Disposition: HOLD_AFFECTED_ACTION + CONSTRAIN_SCOPE
+Durable role status: unproven
+Capability Gap Record: created
 ```
-
-Possible future responses include pause, constrain, defer, escalate, obtain external counsel, or terminate. None is currently authorized as the default.
 
 ## Judgment
 
 ```text
-BLOCKED BY COGNITIVE GAP
+PASS
 ```
 
-The system fails safely by refusing to invent competence, but the active mission is left in an undefined state.
+The mission no longer enters an undefined wait. Missing counsel withholds the affected decision without manufacturing competence, automatically forging an Officer, or stopping unrelated work.
 
-## Gap Exposed — Counsel-Unavailable Contract
+## Remaining Boundaries
 
-A future artifact must define:
-
-- the mission state while necessary counsel is unavailable
-- who may pause or constrain pending work
-- whether external non-Officer counsel can be consulted
-- when absence demonstrates a durable Preceptory gap
-- how urgency affects escalation without creating authority
-- how the state and eventual resolution enter the Curia Minute
+- No external-advisor pathway is admitted.
+- A newly justified Officer would not resolve the active absence until forged, tested, admitted, and assigned.
+- CEO/CoS provenance remains unresolved.
