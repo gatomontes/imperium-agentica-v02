@@ -992,6 +992,34 @@ The reviewer resolves every normative producer, consumer, authority, boundary, a
 
 ---
 
+# Test CT-030 — Admission Manifest Is Materialized And Atomically Promotable
+
+## Pressure
+
+An approved dependency-closed promotion manifest names artifacts whose responsibilities are exercised by the model, but one or more named source files are absent or a partial move is attempted.
+
+## Pass Conditions
+
+- All 36 CB-001 source paths exist before promotion begins.
+- Each source file contains a bounded responsibility and non-authority consistent with the tested model.
+- Secretariat, Guildhall, Foundry, and Pit exist as standalone definitions rather than inferred behavior hidden in maps or tests.
+- Every production counterpart is created with CB-001, Review 003, and Run 015 admission metadata.
+- All production counterparts are verified before any source deletion.
+- Only the exact verified draft counterparts are deleted.
+- The production manifest and residual draft index are updated after the move.
+- Failure before full verification leaves source files intact.
+
+## Fail Conditions
+
+- A manifest entry is treated as existing merely because another document names it.
+- Missing definitions are silently omitted from production.
+- Draft files are deleted before all production counterparts verify.
+- Partial promotion is accepted.
+- Status metadata changes substantive cognitive boundaries.
+- Historical tests or admission reviews are moved or rewritten.
+
+---
+
 ## Suite Result
 
 The suite passes only if every test preserves the distinctions:
@@ -1017,6 +1045,8 @@ standing role ≠ unlimited capacity
 one mission closure ≠ another mission release
 Curia Session Assignment ≠ Executive Mandate
 cognitive admission ≠ implementation authority
+manifest reference ≠ materialized artifact
+admission approval ≠ partial promotion
 ```
 
 A failure indicates an ontology or authority defect.
