@@ -2,28 +2,20 @@
 
 ## Status
 
-Draft process.
+Dormant draft process.
 
-Commission binds an admitted Preceptory Officer to a particular mission and defined represented authority.
+The initial CEO-led Curia does not require Commission.
 
-```text
-Admitted Officer
-+ mission assignment
-+ represented authority
-+ decision scope
-+ prohibited decisions
-+ escalation conditions
-+ situation access
-→ Commissioned Curia Officer
-```
+The CEO President is a standing Curia authority. Standing institutional Liaisons require no Commission. A suitable standing Officer selected from Preceptory receives a scoped Curia session assignment for mission-specific counsel; that assignment does not make the Officer a decision-maker.
 
-Commission does not forge or retest the Officer, expand authority, or convene the Curia session.
+Commission is retained only as a candidate future process for an exceptional case requiring temporary represented authority beyond ordinary advisory participation.
 
-A Commissioned Officer becomes a Curia participant only when convened for a particular session.
+No such case is presently admitted.
 
+Commission must not be used to:
 
-## Liaison Exclusion
-
-Standing Curia Liaisons are not commissioned.
-
-Mission context scopes their recognized, read-only institutional queries, but does not create a new Liaison identity or grant deliberative authority.
+- create routine mission-dedicated staff
+- grant voting or shared decision authority
+- convert a Liaison into an Officer
+- displace the CEO President
+- bypass Preceptory qualification
