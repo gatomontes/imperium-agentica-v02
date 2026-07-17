@@ -2,7 +2,7 @@
 
 ## Status
 
-Active.
+No active step.
 
 This file is not doctrine, a roadmap, or architecture.
 
@@ -10,65 +10,49 @@ It is the operational continuity surface for the currently active step.
 
 ---
 
-## Step
+## Last Completed Step
 
-Review the cognitive draft layer for production admission as a dependency-closed baseline.
+Review the cognitive draft layer for production admission.
 
----
+## Result
 
-## Why This Step Is Current
+```text
+Review: Cognitive Production Admission Review 001
+Evidence: Constitutional Test Run 013
+Suite: 28 PASS / 0 FAIL
+Decision: DEFER
+Production changes: none
+```
 
-The cognitive model has passed 28 theoretical constitutional tests with no presently unbounded structural gap.
+The active cognitive ontology is a dependency-closed candidate baseline. Individual promotion would create production artifacts whose authority or meaning depends on draft-only entities.
 
-Production remains empty. Admission now requires determining whether the evidence supports a coherent active baseline without splitting mutually dependent entities and contracts across draft and production status.
+No new structural defect was found.
 
----
+Admission is deferred because:
 
-## Review Questions
+- cross-cutting artifact records are not fully reconciled
+- the latest authority and concurrency refinements have not been visually re-verified against the full cognitive map
+- no single post-Run-013 scenario traces Petition through final delivery
+- dependency closure has not itself been constitutionally tested
 
-1. Which artifacts are structurally active, and which are dormant, obsolete, or merely cross-cutting aids?
-2. Does each candidate satisfy every admission criterion in `layers/cognitive/README.md`?
-3. Can any artifact be promoted independently without normative dependency on draft-only artifacts?
-4. Are the cognitive map, lifecycle, artifact registry, and tests mutually consistent?
-5. Has the full lifecycle been exercised as an integrated scenario after the latest authority and concurrency changes?
-6. What evidence gap, if any, blocks promotion?
-7. What exact dependency-closed set should move if admission is approved?
-
----
-
-## Relevant Files
-
-- `layers/cognitive/README.md`
-- `layers/cognitive/drafts/README.md`
-- `layers/cognitive/drafts/`
-- `layers/cognitive/production/README.md`
-- `tests/cognitive/README.md`
-- `tests/cognitive/constitutional-tests.md`
-- `tests/cognitive/constitutional-test-run-013.md`
-- `next-steps.md`
+`commission.md` remains dormant and excluded.
 
 ---
 
-## Constraints
+## Next Eligible Step
 
-- Do not promote by name, elegance, or test count alone.
-- Do not admit a partial set that relies normatively on draft-only contracts.
-- Keep dormant `commission.md` out of the active baseline unless evidence activates it.
-- Treat theoretical tests as cognitive evidence, not operational proof.
-- Record inconsistencies and evidence gaps explicitly.
-- Make the admission decision traceable.
-- Do not begin procedural or runtime work.
+Close the production-admission evidence gap.
+
+This requires operator approval because it expands testing into a new integrated Mission 009 and prepares a possible status-changing re-review.
+
+See `next-steps.md`.
 
 ---
 
-## Completion Criteria
+## Constraints While Awaiting Direction
 
-This step is complete when:
-
-- an admission evidence matrix covers every active artifact group
-- dormant and excluded artifacts are explicit
-- dependency closure is evaluated
-- cross-cutting document drift is recorded
-- the integrated-scenario evidence question is answered
-- the review produces ADMIT, ADMIT WITH RECORDED LIMITS, or DEFER
-- the exact next action is recorded
+- Do not promote artifacts automatically.
+- Do not promote a partial dependency set.
+- Do not activate Commission or Praetorium.
+- Do not begin procedural or runtime modeling.
+- Preserve the draft baseline and historical test evidence.
