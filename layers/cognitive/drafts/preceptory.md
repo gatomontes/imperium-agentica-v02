@@ -4,7 +4,11 @@
 
 Draft.
 
-Preceptory holds admitted, tested, reusable Citadel Officer specifications as a standing Officer corps.
+Preceptory holds admitted, tested, reusable Citadel Officer specifications across three classes:
+
+- Executive Officers
+- Staff Officers
+- Advisory Officers
 
 It does not hold mission-dedicated staff.
 
@@ -17,9 +21,21 @@ Advisory Role Requirement
     └── durable role absent → Smith → Spur → Preceptory
 ```
 
-A session assignment scopes the Officer's counsel to the mission and Curia session. It does not transfer the CEO's decision authority.
+Assignment types remain distinct:
 
-Preceptory describes qualification and availability, not active Curia participation.
+```text
+Standing Curia Assignment:
+places an admitted Executive or Staff Officer into a persistent Curia role
+
+Curia Session Assignment:
+places an admitted Advisory Officer into one mission-specific Curia session
+```
+
+A session assignment scopes counsel and does not transfer CEO decision authority.
+
+A standing assignment records placement, versions, effective time, supersession, and replacement conditions. It does not itself create executive authority.
+
+Preceptory describes qualification and availability. Assignment records describe active Curia participation.
 
 Preceptory is for Citadel Officers.
 
