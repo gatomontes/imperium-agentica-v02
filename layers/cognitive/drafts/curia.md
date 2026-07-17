@@ -212,6 +212,7 @@ A Curia session may produce:
 - Recall Order
 - Termination Order
 - terminal mission findings
+- Mission Closure Record
 - escalation or authority-deficiency record
 
 Every Curia decision produces a `Curia Minute`.
@@ -244,6 +245,8 @@ Decision rationale and authority basis:
 Operational directive:
 Mission-parameter amendment:
 Required follow-up:
+Closure state and disposition:
+Mission Closure Record:
 ```
 
 ---
@@ -261,6 +264,31 @@ Directive: provide cited evidence; dependent approval remains paused
 ```
 
 This is conformance verification against an existing contract, not invention of new mission authority.
+
+---
+
+## Mission Closure
+
+An operative completion claim does not close the mission.
+
+Curia applies the Mission Closure and Operative Release Contract:
+
+```text
+closure assessment
+→ CEO BEGIN_WIND_DOWN
+→ CLOSURE_PENDING
+→ Muster operationalizes wind-down
+→ Theatre Terminal Field Packet
+→ Lazaretto
+→ Terminal Situation Picture
+→ CEO MISSION_CLOSED + disposition
+→ Mission Closure Record
+→ Muster Operative Release Record
+```
+
+The CEO alone selects COMPLETED, PARTIALLY_COMPLETED, FAILED, or TERMINATED.
+
+If no terminal packet can be obtained, its absence remains explicit and may not be converted into successful completion.
 
 ---
 
@@ -312,6 +340,8 @@ Curia must not:
 - leave a required-counsel absence in an unrecorded wait
 - silently expand mission purpose
 - erase dissent, uncertainty, or provenance
+- accept an operative completion claim as mission closure
+- release an operative
 - execute in Theatre
 
 ---
