@@ -2,7 +2,7 @@
 
 ## Status
 
-Authority and Provenance boundary proposals are active in `current-step.md` and awaiting operator judgment.
+No active step.
 
 This file is not doctrine, a roadmap, or architecture.
 
@@ -14,111 +14,96 @@ When a step becomes current, remove it from this file and place it in `current-s
 
 ## Queue
 
-### 1. Materialize approved Authority and Provenance layer drafts
+### 1. Define authority grant specializations
 
-Activation condition:
-
-The operator approves the names, boundaries, repository shapes, and one-contract minimum.
-
-Expected creation:
+Required cases:
 
 ```text
-layers/authority/README.md
-layers/authority/drafts/README.md
-layers/authority/production/README.md
-layers/authority/drafts/authority-contract.md
-
-layers/provenance/README.md
-layers/provenance/drafts/README.md
-layers/provenance/production/README.md
-layers/provenance/drafts/provenance-contract.md
+root Principal and Authority Basis
+mission authority
+persona and Officer admission authority
+Tool and Access Grant authority
+Standing Curia Assignment issuance authority
+initial and continuing launch authority
+closure and release authority
 ```
-
-Constraints:
-
-- no institution required
-- no Codex, Vellum, station logs, or mission-wide log
-- no runtime implementation
-- no migration of CB-001 production files
-- draft contracts cite existing evidence without claiming production admission
-
----
-
-### 2. Establish independent Authority and Provenance tests
-
-Reason:
-
-Each draft contract must survive its own pressure suite before cross-layer convergence testing.
-
-Candidate locations after drafts exist:
-
-```text
-tests/authority/
-tests/provenance/
-```
-
-Activation condition:
-
-The approved layer structures and first draft contracts exist.
-
----
-
-### 3. Resolve canonical artifact-definition origin
-
-Reason:
-
-Authority and provenance reference artifact identity and version, but neither defines artifact meaning.
 
 Questions:
 
-- Is artifact meaning adequately cognitive?
-- Should entity files remain canonical for their products?
-- What role should `production-artifacts.md` retain?
-- Does an information-contract layer have an independent question and lifecycle?
-- How are definition conflicts resolved without making maps or procedures authoritative?
-
-Activation condition:
-
-Authority and Provenance draft boundaries exist.
-
----
-
-### 4. Re-evaluate CB-001 placement without silent revision
-
-Reason:
-
-`lifecycle.md` has a procedural native concern. Authority, provenance, and artifact contracts also currently reside inside the cognitive baseline.
+- Which cases are distinct grants?
+- Which are profiles of one grant contract?
+- Which permit delegation?
+- Which must remain non-delegable?
+- Can the operator serve as the first Principal without admitting an upper-echelon institution?
+- How does each grant cite provenance and its native artifact contract?
 
 Expected product:
 
-- KEEP, MOVE, SPLIT, or DEMOTE recommendation for contested files
-- dependency impact analysis
-- explicit operator approval
-- new cognitive test run before any production movement
+- smallest grant-profile model
+- no grant proliferation
+- independent authority test run
+- authority–provenance convergence rerun
 
 Activation condition:
 
-Parallel dependency-layer boundaries and artifact-definition origin are resolved.
+Explicit operator approval.
 
 ---
 
-### 5. Redefine the procedural-layer boundary
+### 2. Prepare the first dependency-closed migration manifest
 
-Reason:
+Candidate relocations:
+
+```text
+layers/cognitive/production/executive-mandate.md
+→ layers/authority/
+
+layers/cognitive/production/mission-concurrency-and-isolation-contract.md
+→ layers/provenance/
+
+layers/cognitive/production/provider-intervention-ledgers.md
+→ layers/provenance/
+```
+
+Required before movement:
+
+- target draft contracts
+- normalized references
+- target-layer tests
+- cognitive regression tests
+- convergence tests
+- atomic creation and verification
+- explicit operator production-admission approval
+
+---
+
+### 3. Split contested CB-001 contracts
+
+Candidates:
+
+- `counsel-availability-contract.md`
+- `mission-closure-and-release-contract.md`
+- `lifecycle.md`
+- `production-artifacts.md`
+- prescriptive or foreign-contract sections inside entity files
+
+Activation condition:
+
+Authority and provenance contracts are stable and the procedural boundary is approved.
+
+---
+
+### 4. Redefine the procedural-layer boundary
 
 Procedure is only what is supposed to happen, in what order, and under which conditions.
 
-It consumes externally defined responsibility, authority, artifact, provenance, and evidence dependencies.
-
-Activation condition:
-
-Required dependency origins are admitted or explicitly unresolved with an authorized stop rule.
+It must cite admitted responsibility, authority, provenance, artifact, and evidence definitions.
 
 ---
 
-### 6. Trace the first narrow procedure
+### 5. Trace the first narrow procedure
 
-Recommended candidate:
+Candidate:
 
 ```text
 Theatre return
@@ -133,11 +118,11 @@ Theatre return
 
 Activation condition:
 
-The reduced procedural boundary and structure are approved.
+All required dependency origins are admitted or explicitly unresolved with an authorized stop rule.
 
 ---
 
-### 7. Establish procedural testing and admission
+### 6. Establish procedural testing and admission
 
 Activation condition:
 
@@ -145,20 +130,8 @@ At least one draft procedure exists.
 
 ---
 
-### 8. Reconsider provenance devices only if a representation gap appears
-
-Candidates include Codex, Vellum, station logs, a mission-wide record, or smaller unnamed devices.
+### 7. Reconsider Vellum only if a record gap appears
 
 Activation condition:
 
-A scenario proves that required lineage cannot be preserved or accessed through existing artifacts.
-
-A device must answer a demonstrated access or representation gap. It must not be created merely because provenance exists.
-
----
-
-### 9. Reconsider Vellum only if a distinct mission-wide record gap appears
-
-Activation condition:
-
-Existing linked artifacts and Mission Correlation Spine cannot provide required mission-wide traversability without inference.
+A scenario demonstrates a canonical record behavior existing artifacts cannot preserve.
