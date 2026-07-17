@@ -4,7 +4,7 @@
 
 Approved Draft Map.
 
-Verified against the full Imperium Agentica cognitive diagram on 2026-07-15.
+Structurally re-verified against the approved cognitive diagram and current authority, session-assignment, closure, and concurrency contracts on 2026-07-17.
 
 This file records the current official cognitive map for Imperium v02.
 
@@ -12,7 +12,9 @@ Official means active for orientation, drafting, and constitutional testing.
 
 The verified diagram preserves both conditional production searches, the Curial Officer line, outbound mission orchestration, and the three dedicated Cortine ports. Concurrent missions instantiate separate mission-bound Muster and Curia surfaces.
 
-The Curia composition has since been refined: a standing CEO President is the sole decision-maker under an effective Executive Mandate; a standing Chief of Staff owns Curial Orchestration and verifies mandate status and scope; the Chief of Staff directly reads permitted mission-scoped provider audit views; and Collegium is engaged on demand by the Chief of Staff when distinct counsel becomes necessary.
+The diagram topology remains valid without adding a Commission node. Executive Mandate, Curia Session Assignment, and mission-correlation identities are artifacts and bindings over the shown entities, not additional acting institutions.
+
+The Curia composition has been refined: a standing CEO President is the sole decision-maker under an effective Executive Mandate; a standing Chief of Staff owns Curial Orchestration and verifies mandate status and scope; the Chief of Staff directly reads permitted mission-scoped provider audit views; and Collegium is engaged on demand by the Chief of Staff when distinct counsel becomes necessary.
 
 It does not admit runtime architecture, implementation topology, database schema, service layout, UI design, autonomous external authority, or final terminology.
 
@@ -231,7 +233,7 @@ Curia Officer classes remain distinct:
 Standing Role Requirement → Studium + The Gesta → Smith → Spur → Preceptory
     ├── Executive Officer → Standing Curia Assignment → CEO President
     ├── Staff Officer → Standing Curia Assignment → Chief of Staff
-    └── Advisory Officer → Curia Session Assignment → Counselor
+    └── Advisory Officer → mission-specific Curia Session Assignment → Counselor
 ```
 
 ```text
@@ -258,7 +260,7 @@ The counselor is standing; the counsel is mission-specific.
 
 Preceptory holds reusable Citadel Officers. Smith creates an Officer only for a justified durable capability gap, not merely for one mission.
 
-Commission is dormant and is not required for the CEO, Chief of Staff, or ordinary advisory session assignments.
+Commission is eliminated. A bounded Curia Session Assignment records advisory participation without a commissioning office or protocol.
 
 Praetorium is reserved for future Imperium Officers at the outer echelon and is not currently admitted.
 
