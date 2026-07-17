@@ -34,7 +34,6 @@ Activation, rationale, and resulting counsel are recorded in the Curia Minute.
 - sanitized Situation Picture
 - governing mission requirements and doctrine
 - required competence and domain knowledge
-- applicable Officer-Trait Canon from The Gesta
 - urgency, conflicts, and authority boundaries
 
 ## Product
@@ -67,9 +66,9 @@ If one exists, Collegium assigns that Officer to the active Curia session as cou
 
 If no suitable Officer exists, Collegium may refer a justified durable role gap to Smith. A one-off mission need does not by itself justify forging a new Officer persona.
 
-Collegium may consult The Gesta for exemplary Officer conduct and transferable traits relevant to the advisory role.
+When a durable role gap is admitted, Collegium supplies its Advisory Role Requirement to Studium for Officer Governance Doctrine and to Smith for construction. The Gesta supports Smith with the applicable Officer-Trait Canon.
 
-Collegium does not forge, test, admit, commission, convene, or grant decision authority.
+Collegium does not author governance doctrine, select traits, forge, test, admit, commission, convene, or grant decision authority.
 
 ## Boundary Maxim
 
