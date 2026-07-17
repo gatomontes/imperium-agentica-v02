@@ -2,68 +2,82 @@
 
 ## Status
 
-Draft.
+Draft on-demand Curia capability.
 
-Collegium receives the formed mission from Castellan and determines the Curial Officers required to understand, govern, and direct it.
+Collegium is activated by the CEO President during an active mission when the need for distinct counsel arises.
 
-It may also steward reusable Officer Role Specifications, but it is mission-responsive rather than merely a static role catalog.
+It does not automatically receive every Castellan mission, pre-compose Curia, or impose a standing quorum.
 
 ## Core Question
 
 ```text
-Which Officers must be available to Curia for this mission, with what competence, represented authority, and decision scope?
+What advisory role is required for this specific counsel need, and which standing Officer is suitable to provide it?
 ```
+
+## Activation
+
+The CEO activates Collegium from Curia and states a concrete counsel need.
+
+Examples include:
+
+- verifying an evidence-sensitive finding
+- interpreting a domain outside the CEO's competent judgment
+- challenging a high-impact assumption
+- assessing governance or technical risk
+
+Activation, rationale, and resulting counsel are recorded in the Curia Minute.
 
 ## Inputs
 
-- Mission Need
-- approved Work Specification
-- mission domain and expected terrain
-- known risks and uncertainty
-- applicable professional and governance requirements
+- active mission and deployment references
+- the CEO's stated counsel need
+- sanitized Situation Picture
+- governing mission requirements and doctrine
+- required competence and domain knowledge
 - applicable Officer-Trait Canon from The Gesta
-- anticipated evidence, capability, and escalation needs
-- expected classes of Curial decision
+- urgency, conflicts, and authority boundaries
 
 ## Product
 
-Collegium produces a `Curia Composition Requirement`.
+Collegium produces an `Advisory Role Requirement`.
 
 It may include:
 
 ```text
 Mission:
-Required Officer roles:
-Reason each role is required:
+Curia session:
+Counsel need:
+Required advisory role:
+Reason the role is required:
 Required competence:
 Required domain knowledge:
-Authority to be represented:
-Permitted decision scope:
-Prohibited decisions:
 Evidence duties:
 Dissent duties:
 Conflicts of interest:
-Required collaboration:
-Quorum or concurrence requirements:
-Escalation conditions:
-Officer substitution limits:
-Open composition gaps:
+Advice scope:
+Prohibited authority:
+Urgency:
+Suitability criteria:
+Open capability gap:
 ```
 
-Collegium may request The Gesta evidence about exemplary Officer conduct and the transferable traits relevant to Curial service.
+Collegium searches Preceptory for a suitable standing Officer.
 
-Collegium determines the required Officer composition, including applicable Officer virtues, trait requirements, and counterweights.
+If one exists, Collegium assigns that Officer to the active Curia session as counselor. The Officer advises; the CEO remains the sole decision-maker.
 
-Smith embodies applicable Officer-Trait Canon when a required Officer must be forged.
+If no suitable Officer exists, Collegium may refer a justified durable role gap to Smith. A one-off mission need does not by itself justify forging a new Officer persona.
 
-Preceptory searches for admitted Officers satisfying those requirements.
+Collegium may consult The Gesta for exemplary Officer conduct and transferable traits relevant to the advisory role.
 
-Collegium does not forge, test, admit, commission, or convene Officers, and it does not silently treat mission briefing as Officer qualification.
+Collegium does not forge, test, admit, commission, convene, or grant decision authority.
 
 ## Boundary Maxim
 
 ```text
 Castellan forms the mission.
-Collegium determines its Curial Officer requirements.
-Preceptory resolves the corps.
+The CEO identifies the need for counsel.
+Collegium resolves the advisory role.
+Preceptory supplies a suitable standing Officer.
+The Officer advises.
+The CEO decides.
 ```
