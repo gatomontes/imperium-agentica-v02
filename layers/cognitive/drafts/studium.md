@@ -82,10 +82,11 @@ Open ambiguities:
 An Officer Governance Doctrine may include:
 
 ```text
-Applicable advisory role:
-Authorized advisory conduct:
+Applicable Officer role:
+Officer class: Executive / Staff / Advisory
+Authorized class-specific conduct:
 Mandatory evidence behavior:
-Prohibited decisions:
+Decision authority or prohibition:
 Conditions upon access and participation:
 Uncertainty and disclosure duties:
 Dissent obligations:
