@@ -12,6 +12,8 @@ Official means active for orientation, drafting, and constitutional testing.
 
 The verified diagram preserves both conditional production searches, the Curial Officer line, outbound mission orchestration, and the three dedicated Cortine ports.
 
+The Curia composition has since been refined: a standing CEO President is the sole decision-maker; applicable Liaisons are standing institutional interfaces; and Collegium is activated on demand by the CEO during a mission when distinct counsel becomes necessary.
+
 It does not admit runtime architecture, implementation topology, database schema, service layout, UI design, autonomous external authority, or final terminology.
 
 ---
@@ -209,20 +211,31 @@ Does not: define profession, forge persona, alter doctrine or traits, or deploy
 
 If the medium cannot preserve required competence, doctrine, or traits, Conscription refuses the transformation.
 
-### Citadel Officer Line
+### CEO-Led Curia And Citadel Officer Line
+
+Curia initially consists of the standing CEO President and applicable standing institutional Liaisons.
+
+The CEO is the sole decision-maker. Liaisons report provider facts and do not deliberate or decide.
 
 ```text
-Castellan Mission Need + Work Specification
-→ Collegium
+active Curia session
+→ CEO identifies a counsel need
+→ CEO activates Collegium
 ↔ The Gesta for applicable Officer traits
-→ Curia Composition Requirement
+→ Advisory Role Requirement
 → Preceptory search
-    ├── Officer found → Commission
-    └── Officer absent → Smith → Spur → Preceptory → Commission
-→ Curia
+    ├── suitable standing Officer found → Curia session assignment
+    └── durable role absent → Smith → Spur → Preceptory → Curia session assignment
+→ Officer advises
+→ CEO decides
+→ Curia Minute
 ```
 
-Preceptory holds Citadel Officers.
+The counselor is standing; the counsel is mission-specific.
+
+Preceptory holds reusable Citadel Officers. Smith creates an Officer only for a justified durable capability gap, not merely for one mission.
+
+Commission is dormant and is not required for the CEO, Liaisons, or ordinary advisory session assignments.
 
 Praetorium is reserved for future Imperium Officers at the outer echelon and is not currently admitted.
 
@@ -360,14 +373,14 @@ Credentials remain with Locksmith. Barbican carries tickets and permitted result
 Theatre
 → Lazaretto
 → Curia
-→ authorized Officer decision
+→ CEO President decision recorded in Curia Minute
 → Muster
 → outbound mission instruction
 → Iron Gate
 → Theatre
 ```
 
-Curia convenes Officers to understand, verify, deliberate, and authorize.
+Curia begins with the standing CEO President and applicable Liaisons. The CEO may activate Collegium to obtain counsel from suitable standing Officers. Officers advise; the CEO alone decides.
 
 Muster owns outbound mission orchestration. It operationalizes the authorized Curia decision without changing its substance or authority.
 
