@@ -387,6 +387,54 @@ It does not yet justify a named authority layer.
 
 ---
 
+## Theoretical Test Run A-001
+
+```text
+Mode: authority-origin semantic pressure
+Cases: A-01 through A-07
+Result: 7 PASS / 0 FAIL
+```
+
+| Test | Result | Finding |
+|---|---|---|
+| A-01 | PASS | Qualification and assignment remain distinct from authority. |
+| A-02 | PASS | A mandate with unresolved root authority is ineffective for the affected action. |
+| A-03 | PASS | Capability remains distinct from authorization. |
+| A-04 | PASS | Internal decision authority does not silently become external-launch authority. |
+| A-05 | PASS | Derived authority cannot exceed its parent. |
+| A-06 | PASS | Testing recommendation and custody do not create admission authority. |
+| A-07 | PASS WITH CONDITION | The operator can serve as represented Principal without a new institution only when the operator's authority basis is explicit and independently traceable. |
+
+## Layer Test
+
+Authority demonstrates:
+
+- an independent core question
+- invariants distinct from responsibility and provenance
+- specialized contracts and grants
+- independent versioning, suspension, withdrawal, expiry, and supersession
+- failure states that do not belong to procedure
+- consumers across cognitive, procedural, and future runtime concerns
+- reasons to change that do not require changing entity responsibility
+
+An independent actor is not required for a layer. A layer is a separation of concern, not necessarily an institution.
+
+Result:
+
+```text
+AUTHORITY CONCERN: LAYER-WORTHY
+INSTITUTION: NOT JUSTIFIED
+FINAL NAME: NOT ADMITTED
+```
+
+Recommended boundary:
+
+> The authority layer defines how permission enters Imperium, how it is bounded and delegated, and how it becomes unavailable. It does not define responsibility, provenance, procedure, or execution.
+
+The candidate Represented Principal + Authority Basis + specialized Authority Grant grammar survives the first pressure run.
+
+---
+
 ## Invalidation Conditions
 
 Discard or revise the candidate model if:
