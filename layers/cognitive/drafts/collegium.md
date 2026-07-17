@@ -58,13 +58,21 @@ Prohibited authority:
 Urgency:
 Suitability criteria:
 Open capability gap:
+Counsel availability:
+Affected decision:
+Dependent actions:
+One-off or durable assessment:
 ```
 
 Collegium searches Preceptory for a suitable standing Officer.
 
 If one exists, Collegium assigns that Officer to the active Curia session as counselor. The Officer advises; the CEO remains the sole decision-maker.
 
-If no suitable Officer exists, Collegium may refer a justified durable role gap to Smith. A one-off mission need does not by itself justify forging a new Officer persona.
+If no suitable Officer exists, Collegium returns `COUNSEL_UNAVAILABLE` and a Capability Gap Record to Curia.
+
+The affected decision is governed by the Counsel Availability Contract. Collegium does not solve the active absence by inventing competence.
+
+Collegium may refer a justified durable role gap to Smith. A one-off mission need does not by itself justify forging a new Officer persona, and construction is not immediate resolution of the active mission.
 
 When a durable role gap is admitted, Collegium supplies its Advisory Role Requirement to Studium for Officer Governance Doctrine and to Smith for construction. The Gesta supports Smith with the applicable Officer-Trait Canon.
 
