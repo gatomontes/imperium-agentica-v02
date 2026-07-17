@@ -95,7 +95,7 @@ Confidentiality duties:
 Escalation triggers:
 Relationship to President:
 Relationship to Chief of Staff:
-Relationship to Liaisons:
+Relationship to provider audit records:
 Relationship to other Officers:
 Accountability expectations:
 Violation signals:
