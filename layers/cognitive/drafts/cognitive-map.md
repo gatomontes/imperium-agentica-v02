@@ -12,7 +12,7 @@ Official means active for orientation, drafting, and constitutional testing.
 
 The verified diagram preserves both conditional production searches, the Curial Officer line, outbound mission orchestration, and the three dedicated Cortine ports.
 
-The Curia composition has since been refined: a standing CEO President is the sole decision-maker; a standing Chief of Staff owns Curial Orchestration; the Chief of Staff directly reads permitted mission-scoped provider audit views; and Collegium is engaged on demand by the Chief of Staff when distinct counsel becomes necessary.
+The Curia composition has since been refined: a standing CEO President is the sole decision-maker under an effective Executive Mandate; a standing Chief of Staff owns Curial Orchestration and verifies mandate status and scope; the Chief of Staff directly reads permitted mission-scoped provider audit views; and Collegium is engaged on demand by the Chief of Staff when distinct counsel becomes necessary.
 
 It does not admit runtime architecture, implementation topology, database schema, service layout, UI design, autonomous external authority, or final terminology.
 
@@ -100,6 +100,7 @@ Operator intent
 → Admitted Canonical Persona
 → Operative
 → Deployment Package
++ effective Executive Mandate for Curia decisions
 → Deployment
 → Return Material
 → Terminal Field Packet
@@ -220,9 +221,9 @@ If the medium cannot preserve required competence, doctrine, or traits, Conscrip
 
 Curia initially consists of a standing Executive Officer assigned as CEO President and a standing Staff Officer assigned as Chief of Staff.
 
-Both are produced through Studium + The Gesta → Smith → Spur → Preceptory and placed through versioned Standing Curia Assignments.
+Both are produced through Studium + The Gesta → Smith → Spur → Preceptory and placed through versioned Standing Curia Assignments. The CEO's decision authority is granted separately by a versioned Executive Mandate.
 
-The Chief of Staff owns Curial Orchestration and directly reads permitted mission-scoped provider audit views. The CEO is the sole decision-maker.
+The Chief of Staff owns Curial Orchestration, directly reads permitted mission-scoped provider audit views, and verifies the Executive Mandate. The CEO is the sole decision-maker only while the mandate is effective, matching, and in scope.
 
 Curia Officer classes remain distinct:
 
@@ -247,7 +248,8 @@ active Curia session
          → if durable: Collegium → Studium + The Gesta → Smith → Spur → Preceptory
 → assigned Officer advises when available
 → Chief of Staff organizes counsel and record
-→ CEO decides
+→ CoS verifies Executive Mandate
+→ CEO decides within scope
 → Curia Minute
 → Chief of Staff hands authorized decision to Muster
 ```
@@ -507,7 +509,6 @@ This map does not admit:
 - Citadel as persona-governance steward
 - Foundry as operative builder
 - Garrison as operative inventory
-- disposition authority
 - before/after knowledge machinery
 - Vellum as a v02 artifact
 
@@ -528,7 +529,7 @@ Muster assembles the operative into a mission-bound Deployment Package and later
 Iron Gate performs the launch crossing.
 Lazaretto receives.
 The Chief of Staff orchestrates Curia.
-The CEO decides and closes.
+The Executive Mandate authorizes. The CEO decides and closes within scope.
 Muster releases the mission binding.
 Chamber of Scribes reports.
 Secretariat delivers.
