@@ -108,7 +108,9 @@ Conscription
 - `smith.md`
 - `spur.md`
 - `commission.md`
+- `ceo-president.md`
 - `chief-of-staff.md`
+- `standing-curia-role-requirements.md`
 - `counsel-availability-contract.md`
 - `curia.md`
 - `provider-intervention-ledgers.md`
