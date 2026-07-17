@@ -12,7 +12,7 @@ Official means active for orientation, drafting, and constitutional testing.
 
 The verified diagram preserves both conditional production searches, the Curial Officer line, outbound mission orchestration, and the three dedicated Cortine ports.
 
-The Curia composition has since been refined: a standing CEO President is the sole decision-maker; a standing Chief of Staff owns Curial Orchestration; applicable Liaisons are standing institutional interfaces; and Collegium is engaged on demand by the Chief of Staff when distinct counsel becomes necessary.
+The Curia composition has since been refined: a standing CEO President is the sole decision-maker; a standing Chief of Staff owns Curial Orchestration; the Chief of Staff directly reads permitted mission-scoped provider audit views; and Collegium is engaged on demand by the Chief of Staff when distinct counsel becomes necessary.
 
 It does not admit runtime architecture, implementation topology, database schema, service layout, UI design, autonomous external authority, or final terminology.
 
@@ -215,9 +215,9 @@ If the medium cannot preserve required competence, doctrine, or traits, Conscrip
 
 ### CEO-Led Curia And Citadel Officer Line
 
-Curia initially consists of the standing CEO President, the standing Chief of Staff, and applicable standing institutional Liaisons.
+Curia initially consists of the standing CEO President and the standing Chief of Staff.
 
-The Chief of Staff owns Curial Orchestration. The CEO is the sole decision-maker. Liaisons report provider facts and do not deliberate or decide.
+The Chief of Staff owns Curial Orchestration and directly reads permitted mission-scoped provider audit views. The CEO is the sole decision-maker.
 
 ```text
 active Curia session
@@ -242,7 +242,7 @@ The counselor is standing; the counsel is mission-specific.
 
 Preceptory holds reusable Citadel Officers. Smith creates an Officer only for a justified durable capability gap, not merely for one mission.
 
-Commission is dormant and is not required for the CEO, Liaisons, or ordinary advisory session assignments.
+Commission is dormant and is not required for the CEO, Chief of Staff, or ordinary advisory session assignments.
 
 Praetorium is reserved for future Imperium Officers at the outer echelon and is not currently admitted.
 
@@ -387,13 +387,19 @@ Theatre
 → Theatre
 ```
 
-Curia begins with the standing CEO President, the standing Chief of Staff, and applicable Liaisons. The Chief of Staff orchestrates the session and engages Collegium when counsel is needed. Officers advise; the CEO alone decides. The Chief of Staff records and hands the authorized decision to Muster.
+Curia begins with the standing CEO President and the standing Chief of Staff. The Chief of Staff reads applicable provider audit views and orchestrates the session and engages Collegium when counsel is needed. Officers advise; the CEO alone decides. The Chief of Staff records and hands the authorized decision to Muster.
 
 Muster owns outbound mission orchestration. It operationalizes the authorized Curia decision without changing its substance or authority.
 
 Iron Gate carries the outward crossing. Curia does not address Iron Gate or Theatre directly.
 
 When required counsel is unavailable, the affected decision path enters `DECISION_WITHHELD`. The CEO may hold, constrain, defer, or use an already admitted escalation route without deciding the missing substance. Unrelated work requires an explicit separability finding.
+
+Internal Curia observability does not use Barbican:
+
+```text
+Chief of Staff → mission-scoped read-only audit view → Armory / Locksmith ledgers
+```
 
 Barbican provider traffic remains separate and bypasses Muster:
 
