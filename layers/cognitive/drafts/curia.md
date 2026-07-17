@@ -33,14 +33,17 @@ What is happening in the mission, does it conform to its governing requirements,
 Office:
 standing institutional responsibility
 
+Officer:
+a tested and Preceptory-admitted Curia persona belonging to an Executive, Staff, or Advisory class
+
 President:
-the standing CEO persona who presides over Curia and makes its sole decision
+the standing Executive Officer assigned as CEO who presides over Curia and makes its sole decision
 
 Chief of Staff:
-the standing Curia participant who orchestrates information, counsel, session flow, record, and authorized handoff without deciding
+the standing Staff Officer who orchestrates information, counsel, session flow, record, and authorized handoff without deciding
 
-Officer:
-a standing, admitted advisory persona convened for competence relevant to a particular Curia session
+Counselor:
+an Advisory Officer given a mission-specific Curia Session Assignment
 
 Provider audit view:
 a mission-scoped, read-only projection of an Armory or Locksmith Intervention Ledger available to the Chief of Staff
@@ -48,6 +51,7 @@ a mission-scoped, read-only projection of an Armory or Locksmith Intervention Le
 Curia:
 the shared surface on which the President receives reports and counsel, then decides and directs
 
+Executive Officer ≠ Staff Officer ≠ Advisory Officer
 President ≠ Chief of Staff
 Chief of Staff ≠ Muster
 Officer ≠ Operative
@@ -98,7 +102,7 @@ Curia may place these beside:
 
 Curia does not require Collegium to pre-compose every mission.
 
-A mission begins with the standing CEO President and the standing Chief of Staff. No counselor, quorum, or mission-dedicated Officer corps is presumed.
+A mission begins with the Executive Officer and Staff Officer identified by the current Standing Curia Assignments. No counselor, quorum, or mission-dedicated Officer corps is presumed.
 
 During the mission, a need for distinct counsel may arise. The Chief of Staff frames that need and engages Collegium as part of Curial Orchestration.
 
@@ -217,8 +221,8 @@ Mission:
 Deployment:
 Packet set:
 Situation picture:
-President:
-Chief of Staff:
+President Officer Specification + Standing Assignment:
+Chief of Staff Officer Specification + Standing Assignment:
 Provider audit views queried:
 Officers convened:
 Counsel need and Collegium engagement:
