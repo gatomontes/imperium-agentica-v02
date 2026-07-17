@@ -71,7 +71,8 @@ Conscription
 ↔ La Cortine / Barbican ↔ Armory / Locksmith
 → Lazaretto
 → Curia
-→ Findings
+→ Mission Closure Record
+→ Operative Release Record
 → Chamber of Scribes
 → Final Report
 → Secretariat
@@ -101,7 +102,9 @@ Operator intent
 → Deployment Package
 → Deployment
 → Return Material
-→ Findings
+→ Terminal Field Packet
+→ Mission Closure Record
+→ Operative Release Record
 → Final Report
 ```
 
@@ -284,8 +287,10 @@ admitted persona ≠ operative
 operative ≠ Deployment Package
 Deployment Package ≠ deployment
 deployment ≠ return
-return ≠ finding
-finding ≠ Final Report
+completion claim ≠ closure
+closure ≠ operative release
+operative release ≠ reuse authority
+Mission Closure Record ≠ Final Report
 ```
 
 The current state vocabulary is:
@@ -419,25 +424,29 @@ Theatre ↔ Barbican ↔ Armory / Locksmith
 ```
 
 
-## Return Boundary
+## Return, Closure, And Release Boundary
 
 ```text
 Theatre
 → Lazaretto
-→ Curia
-→ Findings
+→ Curia closure assessment
+→ CEO BEGIN_WIND_DOWN
+→ Muster → Iron Gate → Theatre
+→ Terminal Field Packet → Lazaretto
+→ CEO MISSION_CLOSED + disposition
+→ Mission Closure Record
+→ Muster Operative Release Record
 → Chamber of Scribes
 → Final Report
 → Secretariat
 → Operator
 ```
 
-Disposition remains unassigned.
-
-Disposition requires before/after knowledge that has not yet been defined.
+An operative completion claim is not closure. Lazaretto does not decide completion. The CEO closes. Muster releases the mission binding. Scribes report.
 
 ```text
-No correction without contrast.
+No closure without disposition.
+No release without closure.
 ```
 
 ---
@@ -515,11 +524,12 @@ Foundry forges the canonical persona.
 Pit tests the whole persona.
 Garrison holds admitted personas.
 Conscription recruits a persona into an operative.
-Muster assembles the operative into a mission-bound Deployment Package.
+Muster assembles the operative into a mission-bound Deployment Package and later releases that binding after authorized closure.
 Iron Gate performs the launch crossing.
 Lazaretto receives.
 The Chief of Staff orchestrates Curia.
-The CEO decides.
+The CEO decides and closes.
+Muster releases the mission binding.
 Chamber of Scribes reports.
 Secretariat delivers.
 ```
