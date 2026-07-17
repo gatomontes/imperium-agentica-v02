@@ -395,7 +395,7 @@ Disposition: `EXTRACT FOR TESTING`.
 
 The next test should determine whether artifact meaning requires an independent information-contract surface or only a strict canonical-origin rule inside the cognitive layer.
 
-### 5. Provenance Is Strong And Cross-Cutting
+### 5. Provenance Is Strong But Its Origin Is Distributed
 
 CB-001 consistently requires:
 
@@ -408,9 +408,13 @@ CB-001 consistently requires:
 
 Its current strongest general origin is the Traceability section of `production-artifacts.md`, specialized by concurrency, provider-ledger, assignment, mandate, and closure contracts.
 
-Disposition: `KEEP` as a cross-cutting invariant for now.
+Strength is not origin.
 
-Do not create a provenance layer unless provenance develops an independent lifecycle, actors, artifacts, and admission rules.
+A procedure still cannot know which provenance definition is canonical, who may define or revise it, or which rule governs when the distributed requirements differ.
+
+Disposition: `EXTRACT FOR TESTING`.
+
+Test provenance as an origin problem across identity, lineage, version, correlation, transformation, custody, supersession, and exact-match requirements. This does not yet admit a provenance layer; the concern may ultimately belong to an information-and-record contract surface.
 
 ### 6. Proof Is Contextual, Not A Single Missing Universal Contract
 
@@ -478,7 +482,7 @@ Disposition: `KEEP`, with the map explicitly non-originating for authority, arti
 | Ownership | `KEEP` under responsibility | No independent lifecycle demonstrated |
 | Authority origin and delegation | `EXTRACT FOR TESTING` | Multiple local contracts terminate at unresolved grantors |
 | Artifact and information contracts | `EXTRACT FOR TESTING` | Definitions are distributed and canonical ownership is ambiguous |
-| Provenance | `KEEP` as cross-cutting invariant | Strong rule, but no independent layer behavior |
+| Provenance origin and lineage | `EXTRACT FOR TESTING` | Strong distributed rules do not provide one canonical origin |
 | General proof or assurance layer | `PARK` | Sufficiency remains context-specific |
 | Cognitive map | `KEEP` | Structural orientation remains cognitive |
 | Lifecycle ordering | `EXTRACT FOR TESTING` | Native concern matches procedure |
@@ -516,12 +520,13 @@ The procedure must not repair these gaps.
 
 ## Recommended Next Work
 
-1. Pressure the authority-origin chain first because it blocks assignment, decision, grants, mission binding, and launch.
-2. Test whether one minimal authority model can cover these grants without rebuilding an upper-echelon institution.
-3. Then resolve canonical artifact-definition ownership.
-4. Re-evaluate `lifecycle.md` after those origins are known.
-5. Keep provenance cross-cutting and proof contextual unless new evidence forces extraction.
-6. Do not create or populate `layers/procedural/` yet.
+1. Pressure authority origin and provenance origin together; both are required before procedure can safely cite an authorized, traceable transition.
+2. Test whether one minimal authority model can cover assignment, admission, grants, mission binding, decision, and launch without rebuilding an upper-echelon institution.
+3. Test whether provenance belongs to artifact/information contracts or demonstrates an independent lifecycle.
+4. Resolve canonical artifact-definition ownership alongside provenance because lineage depends on stable artifact identity and version meaning.
+5. Re-evaluate `lifecycle.md` after those origins are known.
+6. Keep proof contextual unless new evidence forces extraction.
+7. Do not create or populate `layers/procedural/` yet.
 
 ---
 
@@ -532,6 +537,6 @@ Revise or discard this analysis if:
 - the proposed domains merely rename distinctions already bounded by CB-001
 - extraction duplicates rather than clarifies authority
 - artifact contracts do not exhibit an independent lifecycle
-- provenance is adequately governed as a repository-wide invariant
+- provenance gains a canonical origin without extraction or is adequately governed by an admitted information contract
 - proof standards remain necessarily local
 - the classification adds more conceptual mass than the ambiguity it removes
