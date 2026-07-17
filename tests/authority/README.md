@@ -7,7 +7,8 @@ Pressure authority-origin, grant, scope, delegation, loss, and non-transfer sema
 Current suite:
 
 - `authority-tests.md` — AT-001 through AT-010
-- latest result: `authority-test-run-001.md`
+- authority origin: `authority-test-run-001.md` — 10 PASS / 0 FAIL
+- grant profiles: `authority-grant-profile-run-001.md` — 15 PASS / 0 FAIL
 
 Draft under test:
 
