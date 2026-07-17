@@ -1,28 +1,26 @@
 # Cognitive Production
 
-No cognitive artifacts are admitted to production yet.
-
-Artifacts enter this directory only after the admission criteria in `../README.md` are satisfied by scenario evidence.
+No cognitive artifacts have been moved into production yet.
 
 Production means admitted for current use, not permanent or implemented in software.
 
 ## Latest Admission Review
 
 ```text
-Review: tests/cognitive/production-admission-review-001.md
+Review: tests/cognitive/production-admission-review-002.md
 Date: 2026-07-17
-Decision: DEFER
-Production changes: none
+Decision: ADMIT WITH RECORDED LIMITS
+Manifest: Cognitive Baseline CB-001
+Manifest size: 36 files
+Evidence: Constitutional Test Run 014 — 29 PASS / 0 FAIL
+Integrated scenario: Test Mission 009 — PASS
+Production changes in review: none
 ```
 
-The reviewed model is a tightly coupled candidate baseline. Piecemeal promotion would create normative dependencies from production artifacts into draft-only entities.
+The exact dependency-closed promotion manifest is recorded in Review 002.
 
-Before re-review:
+Partial promotion is prohibited.
 
-1. reconcile the cross-cutting map, lifecycle, and artifact registry
-2. re-verify the current cognitive map
-3. run an integrated Petition-to-delivery scenario
-4. test dependency closure
-5. record a new constitutional run and exact promotion manifest
+A separate promotion transition must create and verify all 36 production files before deleting their draft counterparts.
 
-`commission.md` remains dormant and excluded.
+Admission does not mean implementation, runtime validation, autonomy, external authority, permanence, or procedural completeness.
