@@ -116,8 +116,11 @@ A future LLM session should read the repository in this order:
 1. `README.md` — constitutional orientation.
 2. `current-step.md` — active operational context.
 3. `next-steps.md` — pending operational queue.
-4. `ideas.md` — raw pre-draft candidates, only if needed.
-5. `drafts/` — shaped but unproven artifacts, only if relevant to the current step.
+4. `layers/cognitive/README.md` — cognitive-layer boundary and admission rules.
+5. `layers/cognitive/drafts/` — shaped but unproven cognitive artifacts, only if relevant.
+6. `tests/cognitive/` — cognitive scenarios and theoretical results, only when testing or tracing.
+7. `ideas.md` — raw pre-draft candidates, only if needed.
+8. `drafts/` — other shaped but unproven repository artifacts, only if relevant to the current step.
 
 Do not reconstruct intent from chat history before reading these files.
 
@@ -152,6 +155,21 @@ The default home for shaped but unproven artifacts is:
 ```text
 /drafts
 ```
+
+Layer-specific artifacts live within their layer. Cognitive artifacts use:
+
+```text
+/layers/cognitive/drafts
+/layers/cognitive/production
+```
+
+Cognitive tests and theoretical run results use:
+
+```text
+/tests/cognitive
+```
+
+`production` means admitted for current use, not permanent or implemented in software.
 
 `ideas.md` is not doctrine, not a backlog, and not an archive.
 
