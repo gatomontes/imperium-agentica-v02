@@ -65,7 +65,7 @@ Responsibility: KEEP in cognitive
 Ownership: KEEP under responsibility
 Authority origin: EXTRACT FOR TESTING
 Artifact contracts: EXTRACT FOR TESTING
-Provenance: KEEP cross-cutting
+Provenance origin: EXTRACT FOR TESTING
 General proof layer: PARK
 Cognitive map: KEEP
 Lifecycle ordering: EXTRACT FOR TESTING
@@ -85,13 +85,14 @@ Principal blockers:
 - Tool Grant and Access Grant authority
 - initial mission-binding and external-launch authority
 - canonical artifact-definition ownership
+- canonical provenance origin and revision authority
 
 No production artifact has been changed or demoted.
 
 Pending operator judgment:
 
 - approve or revise the dispositions
-- choose whether authority-origin testing begins next
+- choose whether authority-origin and provenance-origin testing begin next
 
 ---
 
