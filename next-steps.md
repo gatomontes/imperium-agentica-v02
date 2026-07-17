@@ -4,166 +4,106 @@
 
 Operational queue.
 
-This file is not doctrine.
-
-This file is not a roadmap.
-
-This file is not architecture.
+This file is not doctrine, a roadmap, or architecture.
 
 It is an ordered list of candidate next actions.
 
-Steps may be reordered, removed, demoted, promoted, replaced, or moved into `current-step.md` as evidence changes.
-
-When a step becomes active, remove it from this file and place it in `current-step.md`.
-
-Do not duplicate active work across both files.
+When a step becomes active, remove it from this file and place it in `current-step.md`. Do not duplicate active work across both files.
 
 ---
 
 ## Queue
 
-### 1. Test Petition as Imperium point of entry
+### 1. Define concurrent mission isolation and standing-role capacity
 
 Reason:
-`drafts/petition-lifecycle.md` proposes Petition as the provisional operator-facing point of entry. This should be tested before adding production machinery, routing logic, or Work Order mechanics.
+
+Concurrent missions create concurrent Muster instances and Curia sessions. The cognitive model must prevent packets, Minutes, provider records, counsel, authority references, and release actions from crossing mission boundaries. It must also state what happens when the standing CEO or CoS cannot responsibly serve all active sessions.
 
 Relevant files:
 
-- `README.md`
-- `current-step.md`
-- `drafts/petition-lifecycle.md`
-- `drafts/mayos-governance.md`
+- `layers/cognitive/drafts/curia.md`
+- `layers/cognitive/drafts/chief-of-staff.md`
+- `layers/cognitive/drafts/muster.md`
+- `layers/cognitive/drafts/provider-intervention-ledgers.md`
+- `layers/cognitive/drafts/mission-closure-and-release-contract.md`
+- `tests/cognitive/constitutional-tests.md`
 
 Promotion condition:
-This becomes current when the operator provides or approves a real request to shape into a Petition.
+
+This becomes current after CEO authority provenance is bounded and tested.
 
 Removal or demotion condition:
-Remove or demote this step if Petition proves ceremonial, too vague, or less useful than a simpler intake form.
+
+Remove or demote it if scenarios show that existing mission correlation and standing-role contracts already preserve isolation without an additional cognitive contract.
 
 ---
 
-### 2. Define minimal Work Order conversion
+### 2. Run a concurrent-mission collision scenario
 
 Reason:
-A Petition is not production. If a Petition is marked doable, Imperium needs a small boundary for converting it into a Work Order without overbuilding the production line.
 
-Relevant files:
-
-- `drafts/petition-lifecycle.md`
+A structural contract is insufficient until a trace pressures it. The scenario should interleave at least two missions, similar provider requests, conflicting Curia timing, and one closure event to test cross-mission contamination.
 
 Promotion condition:
-This becomes current after at least one Petition is marked doable or after testing shows that Work Order conversion is the next missing boundary.
+
+This becomes current after the concurrency contract identifies the entities, artifacts, and invariants under test.
 
 Removal or demotion condition:
-Remove or demote this step if Petition testing shows Work Order conversion is premature or unnecessary.
+
+Remove or merge it if the concurrency contract itself includes a sufficiently concrete trace.
 
 ---
 
-### 3. Define simple doability and intake marks through use
+### 3. Review draft-to-production admission evidence
 
 Reason:
-Doability should remain a routing threshold, not a complex feasibility engine. The next useful work is to test whether the current marks are enough: Doable, Needs Clarification, Out Of Scope, Blocked, and Deferred.
+
+The cognitive draft layer now has a substantial connected ontology and repeated theoretical tests. Production must remain empty until the evidence shows which contracts are stable enough for admission as a minimal coherent set.
 
 Relevant files:
 
-- `drafts/petition-lifecycle.md`
+- `layers/cognitive/README.md`
+- `layers/cognitive/drafts/`
+- `layers/cognitive/production/README.md`
+- `tests/cognitive/`
 
 Promotion condition:
-This becomes current if Petition testing shows that doability marks are too vague, too many, too few, or hard to apply.
+
+This becomes current only after authority provenance and concurrency have passed theoretical tests and the operator requests an admission review.
 
 Removal or demotion condition:
-Remove or demote this step if the current marks remain clear through early Petition use.
+
+Keep all artifacts in drafts if unresolved structural gaps still alter responsibilities or authority boundaries.
 
 ---
 
-### 4. Review whether Petition creates enough boundary before production
+### 4. Reconsider Vellum only if closure records expose a record gap
 
 Reason:
-Petition is meant to prevent raw intent from becoming production too early. After one or more uses, review whether it actually clarifies the entry boundary or merely adds ceremony.
 
-Relevant files:
-
-- `README.md`
-- `current-step.md`
-- `drafts/petition-lifecycle.md`
+Mission Closure Record, Curia Minutes, Operative Release Record, and Final Report may already provide sufficient internal and operator-facing memory. Vellum should not return on name or precedent alone.
 
 Promotion condition:
-This becomes current after at least one operator request is shaped into a Petition and either converted, clarified, deferred, blocked, or rejected.
+
+This becomes current only when repeated scenarios reveal a specific canonical mission-record behavior that existing artifacts cannot preserve.
 
 Removal or demotion condition:
-Remove or demote this step if Petition is replaced by a simpler point-of-entry mechanism.
+
+Remove it if the existing artifact set remains sufficient.
 
 ---
 
-### 5. Review whether Mayo's Governance should remain draft-bound or become provisionally usable posture
+### 5. Begin procedural modeling only after structural stabilization
 
 Reason:
-Mayo's Governance now has parent, builder, and reviewer personas, and has been used to guide multiple drafts. These remain Mayo-side private construction tools, not Imperium components. It may be useful to mark MGov as provisionally usable posture while preserving that boundary.
 
-Relevant files:
-
-- `drafts/mayos-governance.md`
-- `drafts/mayos-governance-persona.md`
-- `drafts/mgov-builder-persona.md`
-- `drafts/mgov-reviewer-persona.md`
+The cognitive map is structural, not operational. Procedures should be derived from tested authority and artifact boundaries rather than used to conceal unresolved ontology.
 
 Promotion condition:
-This becomes current if the operator asks to promote, canonize, simplify, freeze, or revise MGov posture.
+
+This becomes current after the operator judges the cognitive structure sufficiently stable and explicitly authorizes procedural work.
 
 Removal or demotion condition:
-Remove or demote this step if MGov remains intentionally draft-bound until more Imperium-level artifacts are produced.
 
----
-
-### 6. Decide whether `Mayo's Governance` needs canonical terminology
-
-Reason:
-The term has become recurring across multiple documents. Canonical terminology may be useful if uncontrolled interpretation creates ambiguity, especially around the distinction between MGov posture and Imperium architecture.
-
-Relevant files:
-
-- `drafts/mayos-governance.md`
-- `drafts/mayos-governance-persona.md`
-- `drafts/terminology.md`
-
-Promotion condition:
-This becomes current if an LLM session misinterprets Mayo's Governance as Imperium runtime architecture or if references become hard to track.
-
-Removal or demotion condition:
-Remove or demote this step if the term remains understandable without canonical control.
-
----
-
-### 7. Review whether `drafts/governance.md` remains too noun-heavy
-
-Reason:
-The governance draft itself identifies noun-heaviness and premature scope language as remaining risks.
-
-Relevant files:
-
-- `drafts/governance.md`
-
-Promotion condition:
-This becomes current after the governance draft is used at least once, or if confusion appears before use.
-
-Removal or demotion condition:
-Remove or demote this step if the draft is deleted, superseded, or proves clear enough through use.
-
----
-
-### 8. Decide whether progress tracking needs revision after first use
-
-Reason:
-`current-step.md` and `next-steps.md` are operational continuity surfaces. Their usefulness is unproven until a step moves between them.
-
-Relevant files:
-
-- `current-step.md`
-- `next-steps.md`
-- `README.md`
-
-Promotion condition:
-This becomes current after the first step is moved from `next-steps.md` into `current-step.md` and completed, revised, returned, or deleted.
-
-Removal or demotion condition:
-Remove or demote this step if progress tracking creates ceremony without improving LLM continuity.
+Demote it whenever new scenarios reopen structural ownership, authority, or boundary questions.
