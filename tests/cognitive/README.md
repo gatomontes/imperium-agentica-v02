@@ -8,10 +8,10 @@ These tests evaluate ontology, authority, artifact boundaries, and traceability.
 
 ## Current Suite
 
-- `constitutional-tests.md` — CT-001 through CT-028
-- latest result: `constitutional-test-run-013.md`
-- current result: **28 PASS / 0 FAIL**
-- latest scenario: `test-mission-008-concurrent-mission-collision.md`
+- `constitutional-tests.md` — CT-001 through CT-029
+- latest result: `constitutional-test-run-014.md`
+- current result: **29 PASS / 0 FAIL**
+- latest scenario: `test-mission-009-integrated-petition-to-delivery.md`
 
 ## Current Proven Distinctions
 
@@ -29,6 +29,8 @@ authority vacancy ≠ authority transfer
 shared governed reference ≠ shared mission state
 standing role ≠ unlimited capacity
 one mission closure ≠ another mission release
+Curia Session Assignment ≠ Executive Mandate
+cognitive admission ≠ implementation authority
 ```
 
 ## Run Records
@@ -37,10 +39,11 @@ Run records preserve the theoretical result at the time each design change was e
 
 ## Latest Admission Review
 
-- `production-admission-review-001.md`
-- decision: **DEFER**
-- reason: dependency-closed baseline requires cross-document reconciliation and integrated evidence
-- production changes: none
+- `production-admission-review-002.md`
+- decision: **ADMIT WITH RECORDED LIMITS**
+- manifest: Cognitive Baseline CB-001 — 36 files
+- evidence: Run 014 and integrated Mission 009
+- production changes: none; promotion remains a separate status transition
 
 ## Current Structural Status
 
