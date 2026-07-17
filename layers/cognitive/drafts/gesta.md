@@ -85,6 +85,7 @@ Possible fields:
 
 ```text
 Applicable Officer role:
+Officer class: Executive / Staff / Advisory
 Source human or humans:
 Documented deed or decision:
 Performance evidence:
