@@ -2,7 +2,7 @@
 
 ## Status
 
-Authority-grant profile design is active in `current-step.md`.
+No active step.
 
 This file is not doctrine, a roadmap, or architecture.
 
