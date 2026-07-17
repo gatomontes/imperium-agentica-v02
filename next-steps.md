@@ -2,65 +2,19 @@
 
 ## Status
 
-Operational queue prepared for a fresh chat.
+Procedural-layer boundary definition is active in `current-step.md`.
 
 This file is not doctrine, a roadmap, or architecture.
 
 It is an ordered list of candidate next actions.
 
-When a step becomes active, remove it from this file and place it in `current-step.md`. Do not duplicate active work across both files.
+When a step becomes current, remove it from this file and place it in `current-step.md`. Do not duplicate active work across both files.
 
 ---
 
 ## Queue
 
-### 1. Define the procedural-layer boundary
-
-Reason:
-
-CB-001 admits the cognitive structure but deliberately leaves procedures at zero. Before writing workflows, the repository needs a minimal definition of what the procedural layer may express and what remains cognitive or runtime.
-
-Required distinctions:
-
-```text
-cognitive entity:
-owns meaning, authority, responsibility, or artifact boundaries
-
-procedure:
-orders admitted responsibilities and artifacts for a repeatable situation
-
-runtime:
-implements, stores, schedules, transports, or executes procedures
-```
-
-Questions:
-
-- Should the layer use `layers/procedural/drafts/` and `layers/procedural/production/`?
-- What admission criteria apply to a procedure?
-- How must a procedure cite CB-001 entities, artifacts, versions, and authority?
-- How are alternate paths, refusal, timeout, correction, and termination represented without choosing runtime machinery?
-- What evidence would invalidate or demote a procedure?
-- What narrow procedure should be traced first?
-
-Expected product:
-
-- a procedural-layer README proposal
-- draft/production admission boundaries
-- a minimal procedure artifact contract
-- a recommended first procedure
-- explicit non-admissions
-
-Activation condition:
-
-Explicit operator approval in the fresh chat.
-
-Removal or demotion condition:
-
-Defer if further cognitive scenarios are requested before procedural work.
-
----
-
-### 2. Trace the first narrow procedure
+### 1. Trace the first narrow procedure
 
 Recommended candidate:
 
@@ -97,7 +51,7 @@ Choose another narrow path if the operator identifies a more revealing first pro
 
 ---
 
-### 3. Establish procedural testing and admission
+### 2. Establish procedural testing and admission
 
 Reason:
 
@@ -120,7 +74,7 @@ At least one draft procedure exists.
 
 ---
 
-### 4. Reconsider Vellum only if a record gap appears
+### 3. Reconsider Vellum only if a record gap appears
 
 Reason:
 
