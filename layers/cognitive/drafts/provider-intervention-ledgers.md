@@ -55,21 +55,18 @@ Operative
 ## Curia Observability Path
 
 ```text
-Curia
-→ standing Provider Liaison
-→ mission-scoped ledger query
-→ provider ledger
-→ recognized response
-→ Liaison report
+Chief of Staff
+→ mission-scoped read-only query
+→ Armory / Locksmith Intervention Ledger
+→ permitted provider audit view
 → Curia Situation Picture
 ```
 
 Providers perform and record interventions.
 
-Liaisons query and report those records.
+The Chief of Staff reads and correlates permitted records without altering them or treating provider intervention success as mission success.
 
 Session-assigned Officers may advise on the records when relevant.
 
-The Chief of Staff incorporates reports and counsel into the Situation Picture.
-
 The CEO President alone decides.
+
