@@ -736,10 +736,25 @@ The CEO issues an urgent remediation decision.
 
 The map places a CEO and CoS permanently inside Curia.
 
+## Expected Path
+
+```text
+Standing Curia Role Requirement
+→ class-specific Officer Governance Doctrine
+→ class-specific Officer-Trait Canon
+→ Smith Officer Specification Candidate
+→ Spur class-specific Fitness Findings
+→ Preceptory admission
+→ versioned Standing Curia Assignment
+```
+
 ## Pass Conditions
 
-- The origin, governance doctrine, construction, stress testing, admission, version, and replacement conditions of each standing persona are traceable.
-- Their standing status does not arise merely from being drawn inside Curia.
+- CEO is an Executive Officer and CoS is a Staff Officer.
+- Their role requirements, governance doctrine, traits, construction, stress testing, admission, versions, standing assignments, and replacement conditions are traceable.
+- Every Curia Minute binds the active CEO and CoS specification and assignment versions.
+- Standing assignment does not masquerade as the source of executive authority.
+- Replacement requires an admitted successor and explicit supersession.
 
 ## Fail Conditions
 
