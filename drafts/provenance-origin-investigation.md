@@ -445,6 +445,65 @@ No extraction is authorized yet.
 
 ---
 
+## Theoretical Test Run P-001
+
+```text
+Mode: provenance-origin semantic pressure
+Cases: P-01 through P-08
+Result: 8 PASS / 0 FAIL
+```
+
+| Test | Result | Finding |
+|---|---|---|
+| P-01 | PASS | Content similarity cannot replace mission correlation. |
+| P-02 | PASS | Sanitized material without raw lineage and transformation history is provenance-broken. |
+| P-03 | PASS | Missing authority lineage produces a provenance defect without provenance deciding authority validity. |
+| P-04 | PASS | Observed provider stages remain distinct; later stages are not inferred. |
+| P-05 | PASS | Supersession preserves historical identity and prior decision references. |
+| P-06 | PASS | Citation alone is insufficient when a derived report silently omits a required source condition. |
+| P-07 | PASS | Complete provenance remains compatible with a false claim. |
+| P-08 | PASS | Historically valid authority does not repair lost lineage. |
+
+## Layer Test
+
+Provenance demonstrates:
+
+- an independent core question
+- reusable lineage relations
+- invariants distinct from authority and proof
+- independent complete, partial, contested, broken, mismatch, and unresolved-source findings
+- transformation, correlation, custody, version, and supersession behavior
+- consumers across authority, artifacts, procedure, and future runtime concerns
+- reasons to change that do not require changing entity responsibility
+
+An independent actor is not required for a layer.
+
+The earlier concern that a provenance layer lacked an actor was therefore an invalid criterion.
+
+### Candidate Comparison Result
+
+| Candidate | Result | Finding |
+|---|---|---|
+| P1 — remain only a cognitive cross-cutting rule | FAIL | Provenance has independent change reasons and failure states; leaving it embedded continues cognitive overload. |
+| P2 — absorb into a general information-and-record surface | INCONCLUSIVE | Artifact identity and provenance interact, but artifact meaning and lineage answer different questions. |
+| P3 — independent provenance layer | PASS FOR BOUNDARY | Provenance can own lineage semantics without owning artifact meaning, authority, truth, or runtime storage. |
+
+Result:
+
+```text
+PROVENANCE CONCERN: LAYER-WORTHY
+INSTITUTION: NOT REQUIRED
+FINAL NAME: NOT ADMITTED
+```
+
+Recommended boundary:
+
+> The provenance layer defines required lineage, correlation, transformation, custody, version, and supersession relations. It does not define artifact meaning, truth, evidence sufficiency, authority, procedure, or storage.
+
+Artifact identity remains a referenced dependency. Provenance can require an identity and version without becoming their semantic origin.
+
+---
+
 ## Invalidation Conditions
 
 Discard or revise the candidate model if:
