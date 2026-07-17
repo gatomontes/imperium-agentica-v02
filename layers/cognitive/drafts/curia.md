@@ -119,7 +119,7 @@ active Curia session
 → Chief of Staff engages Collegium
 → Collegium resolves the required advisory role
 → Preceptory searches the standing Officer corps
-    ├── suitable Officer found → session assignment → Officer advises
+    ├── suitable Officer found → CoS records Curia Session Assignment → Officer advises
     └── no suitable Officer
          → COUNSEL_UNAVAILABLE
          → CEO withholds affected decision
