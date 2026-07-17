@@ -10,6 +10,20 @@ It tests authority overreach, unsupported agreement, evidence failure, urgency, 
 
 Spur tests both Officer Governance Doctrine from Studium and Officer-Trait Canon from The Gesta as embodied by Smith.
 
+## Class-Specific Testing
+
+### Executive Officer
+
+Spur tests decision formation, competence limits, evidence discipline, consideration of dissent, authority restraint, accountable rationale, refusal to decide beyond competence, and resistance to urgency-driven overreach.
+
+### Staff Officer
+
+Spur tests information fidelity, provenance preservation, neutral agenda control, visibility of dissent, provider-record handling, non-usurpation, Minute integrity, and exact CEO-to-Muster handoff.
+
+### Advisory Officer
+
+Spur tests domain competence, evidence behavior, dissent, uncertainty, advisory restraint, collaboration, and refusal to convert counsel into executive authority.
+
 When leadership is canonized, Spur tests whether the Officer can produce coordinated, responsible action without:
 
 - substituting charisma for evidence
@@ -23,7 +37,7 @@ When leadership is canonized, Spur tests whether the Officer can produce coordin
 
 The Officer must remain decisive while preserving evidence, dissent, authority boundaries, shared judgment, and accountability.
 
-Spur produces `Officer Fitness Findings` and may recommend admission, revision, rejection, or retest.
+Spur produces class-specific `Officer Fitness Findings` and may recommend admission, revision, rejection, or retest.
 
 Findings may return to Smith for construction revision, Studium for doctrine revision, or The Gesta for canon refinement or decanonization.
 
