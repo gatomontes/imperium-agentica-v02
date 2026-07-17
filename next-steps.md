@@ -14,36 +14,28 @@ When a step becomes active, remove it from this file and place it in `current-st
 
 ## Queue
 
-### 1. Close the production-admission evidence gap
+### 1. Promote Cognitive Baseline CB-001
 
 Reason:
 
-Admission Review 001 found no unbounded structural defect, but deferred promotion because the dependency-closed baseline lacks reconciled cross-cutting records and one integrated post-authority, post-concurrency trace.
+Admission Review 002 approved a dependency-closed 36-file cognitive baseline with recorded limits after Run 014 passed 29/29 and Mission 009 completed the integrated Petition-to-delivery trace.
 
 Required work:
 
-1. reconcile `production-artifacts.md`, `lifecycle.md`, and `cognitive-map.md`
-2. re-verify the current map
-3. run integrated Test Mission 009 from Petition through final delivery
-4. add a dependency-closure constitutional test
-5. record Run 014
-6. repeat admission review with an exact promotion manifest
-
-Relevant files:
-
-- `tests/cognitive/production-admission-review-001.md`
-- `layers/cognitive/drafts/cognitive-map.md`
-- `layers/cognitive/drafts/lifecycle.md`
-- `layers/cognitive/drafts/production-artifacts.md`
-- `tests/cognitive/constitutional-tests.md`
+1. copy all 36 exact manifest files into `layers/cognitive/production/`
+2. update status and CB-001 evidence headers without changing substance
+3. create and verify the production manifest
+4. only then delete the exact draft counterparts
+5. replace the draft index with the residual empty-state index
+6. update cognitive and operational status records
 
 Promotion condition:
 
-This becomes current only with operator approval.
+Explicit operator approval of the CB-001 status transition.
 
 Removal or demotion condition:
 
-Remove it if the operator elects to keep the cognitive model indefinitely draft-bound.
+Do not promote if the operator elects to keep the admitted candidate draft-bound or contests the manifest.
 
 ---
 
