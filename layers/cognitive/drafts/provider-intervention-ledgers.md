@@ -68,4 +68,8 @@ Providers perform and record interventions.
 
 Liaisons query and report those records.
 
-Commissioned Officers interpret and decide.
+Session-assigned Officers may advise on the records when relevant.
+
+The Chief of Staff incorporates reports and counsel into the Situation Picture.
+
+The CEO President alone decides.
