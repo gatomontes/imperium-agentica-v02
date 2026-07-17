@@ -134,9 +134,11 @@ Review or revise this draft if:
 
 ## Intervention Ledgers
 
-Armory and Locksmith preserve append-only, mission-correlated records of every operative intervention request, provider decision, attempted operation, result, refusal, and failure.
+Armory and Locksmith preserve append-only, mission-correlated records of every operative intervention request and each separately observed intervention stage: entitlement, credential resolution, authentication, submission, completion, and result delivery.
 
 Locksmith records credential-backed operations without storing credential values in the intervention record.
+
+Unqualified `success` or `failure` is prohibited. Provider ledgers never claim mission success.
 
 The Chief of Staff may issue mission-scoped, read-only queries against each provider ledger for Curia's Situation Picture.
 
