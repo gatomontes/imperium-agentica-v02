@@ -1,4 +1,4 @@
-# Drafts2 Artifact Map
+# Cognitive Draft Artifact Map
 
 ## Status
 
@@ -20,7 +20,7 @@ layers/cognitive/drafts/cognitive-map.md
 
 Official means active for orientation, drafting, and constitutional testing.
 
-Current map status: `Approved Draft Map`, verified 2026-07-15.
+Current map status: `Approved Draft Map`, last structurally verified 2026-07-17.
 
 ---
 
@@ -108,10 +108,11 @@ Conscription
 - `smith.md`
 - `spur.md`
 - `commission.md`
+- `chief-of-staff.md`
 - `curia.md`
 - `provider-intervention-ledgers.md`
 
-The Gesta supplies evidenced Officer-Trait Canon to Collegium and Smith.
+Studium supplies Officer Governance Doctrine to Smith. The Gesta supplies evidenced Officer-Trait Canon to Smith only.
 
 `Praetorium` is reserved for future Imperium Officers and is not currently defined.
 
