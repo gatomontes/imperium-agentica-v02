@@ -110,10 +110,14 @@ active Curia session
 → Chief of Staff engages Collegium
 → Collegium resolves the required advisory role
 → Preceptory searches the standing Officer corps
-    ├── suitable Officer found → session assignment
-    └── durable role absent → Smith → Spur → Preceptory → session assignment
-→ Officer advises within Curia
-→ CEO decides
+    ├── suitable Officer found → session assignment → Officer advises
+    └── no suitable Officer
+         → COUNSEL_UNAVAILABLE
+         → CEO withholds affected decision
+         → hold / constrain / defer / admitted escalation
+         → Capability Gap Record
+         → Smith only if a durable role is justified
+→ CEO decides only when competent counsel is no longer missing
 ```
 
 The counselor is standing; the counsel is mission-specific.
@@ -121,6 +125,18 @@ The counselor is standing; the counsel is mission-specific.
 Smith is invoked only when the missing capability represents a justified, durable Officer role—not merely because one mission needs advice.
 
 Preceptory holds reusable Citadel Officers. Praetorium remains reserved for future Imperium Officers at the outer echelon.
+
+---
+
+## Counsel Unavailable
+
+When required counsel is absent, Curia applies the `Counsel Availability Contract`.
+
+The CEO does not decide the specialized substance. The affected decision enters `DECISION_WITHHELD`. The Chief of Staff records the scope and dependencies and hands any authorized hold or constraint to Muster.
+
+Unrelated work may continue only when the CEO explicitly finds it separable.
+
+Counsel absence creates a Capability Gap Record. It does not automatically authorize Smith or mission-specific staff.
 
 ---
 
@@ -212,6 +228,9 @@ Chief of Staff:
 Liaisons present:
 Officers convened:
 Counsel need and Collegium engagement:
+Counsel availability finding:
+Withheld decision and dependent actions:
+Capability gap record:
 Authority represented:
 Observations:
 Operative claims:
@@ -289,6 +308,8 @@ Curia must not:
 - directly provide Armory or Locksmith services
 - carry credentials
 - rewrite Persona Governance Doctrine
+- treat urgency as permission to decide beyond competence
+- leave a required-counsel absence in an unrecorded wait
 - silently expand mission purpose
 - erase dissent, uncertainty, or provenance
 - execute in Theatre
