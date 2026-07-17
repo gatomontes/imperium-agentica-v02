@@ -208,3 +208,59 @@ Can one cognitive cross-cutting contract provide a canonical minimum, or does pr
 Who or what may decide the disposition of an authorized-but-untraceable transition?
 
 That decision itself requires authority and provenance and must not be silently assigned to procedure.
+
+---
+
+## Theoretical Convergence Run AP-001
+
+```text
+Mode: parallel-origin and convergence evaluation
+Path: Theatre return to outward direction
+Result: PASS WITH BLOCKERS
+```
+
+### Passed Distinctions
+
+- authority and provenance remain independently evaluable
+- neither concern inherits or repairs the other
+- both may be required for transition eligibility
+- procedure can consume their findings without owning their definitions
+- runtime implementation remains outside both concerns
+
+### Remaining Blockers
+
+Authority:
+
+- root Principal and Authority Basis
+- grant specialization and delegation rules
+- launch and capability-grant authority
+
+Provenance:
+
+- minimum lineage contract
+- canonical provenance-revision authority
+- relationship to artifact identity and version meaning
+
+Shared external dependency:
+
+- canonical artifact definitions
+
+### Structural Result
+
+```text
+Authority layer candidate ─┐
+                           ├─→ Procedure consumes findings
+Provenance layer candidate ┘
+
+Artifact-definition origin remains separate and unresolved.
+```
+
+The two layer candidates are parallel, not sequential.
+
+Their contracts may cross-reference:
+
+- an authority grant cites provenance
+- a provenance assertion may cite an authority grant
+
+Cross-reference does not merge ownership.
+
