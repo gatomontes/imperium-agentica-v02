@@ -17,7 +17,7 @@ When the CEO activates Collegium during an active mission, Collegium resolves an
 ```text
 Advisory Role Requirement
 → Preceptory search
-    ├── suitable standing Officer found → Curia session assignment
+    ├── suitable standing Officer found → CoS records Curia Session Assignment
     └── durable role absent → Smith → Spur → Preceptory
 ```
 
@@ -31,7 +31,7 @@ Curia Session Assignment:
 places an admitted Advisory Officer into one mission-specific Curia session
 ```
 
-A session assignment scopes counsel and does not transfer CEO decision authority.
+A Curia Session Assignment is recorded by the Chief of Staff after Collegium resolves suitability and Preceptory confirms admission. It scopes counsel and does not transfer CEO decision authority.
 
 A standing assignment records placement, versions, effective time, supersession, and replacement conditions. It does not itself create executive authority.
 
