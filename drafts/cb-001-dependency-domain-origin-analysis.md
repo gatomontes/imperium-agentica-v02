@@ -65,7 +65,35 @@ An absent definition is an exposed dependency gap. It is not permission for the 
 | Provenance | Production-artifact traceability, Mission Correlation Spine, provider ledgers, concurrency/isolation, and exact-match closure rules | Strong invariant, unclear sovereign origin. |
 | Proof | Pit Findings, mission evidence, Lazaretto non-verification, Curia assessment, mandate verification, and admission tests | No general proof standard is admitted; sufficiency appears contextual and distributed. |
 
-These are preliminary classifications, not final layer assignments.
+These are preliminary origin findings, not final layer assignments.
+
+---
+
+## Definition-Tracing Method
+
+The 36 CB-001 files will not be classified into primary and secondary domains.
+
+Each file will instead be examined through four relations:
+
+```text
+Native concern:
+what the file actually defines
+
+Referenced dependency:
+an external definition the file consumes
+
+Restatement:
+a definition repeated for orientation but originating elsewhere
+
+Unresolved dependency:
+a required definition whose legitimate origin cannot yet be found
+```
+
+A referenced dependency does not become secondary ownership.
+
+A restatement does not become a competing origin.
+
+An unresolved dependency does not authorize the reviewing file to fill the gap.
 
 ---
 
@@ -238,12 +266,12 @@ A concern earns a separate layer only if it demonstrates:
 
 ## Next Analysis
 
-1. Classify all 36 CB-001 production artifacts by primary and secondary domain.
-2. Distinguish true origins from maps, summaries, and restatements.
+1. Trace each of the 36 CB-001 production artifacts by native concern, referenced dependency, restatement, and unresolved dependency.
+2. Distinguish true origins from maps, summaries, and orientation text.
 3. Locate unresolved references such as authority basis, evidence sufficiency, and artifact-definition ownership.
-4. Identify which concerns are adequately cognitive.
-5. Recommend `KEEP`, `EXTRACT FOR TESTING`, or `PARK` for each candidate domain.
-6. Test the classification against a minimal statement of the live mission return-and-direction procedure.
+4. Identify which definitions are adequately cognitive and which merely reside in the cognitive baseline provisionally.
+5. Recommend `KEEP`, `EXTRACT FOR TESTING`, or `PARK` only after the origin trace is complete.
+6. Test the traced dependencies against a minimal statement of the live mission return-and-direction procedure.
 7. Do not create a procedural layer until every dependency referenced by that statement has a legitimate origin or is explicitly recorded as unresolved.
 
 ---
