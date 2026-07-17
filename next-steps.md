@@ -2,7 +2,7 @@
 
 ## Status
 
-Procedural-layer boundary definition is active in `current-step.md`.
+CB-001 dependency-domain origin analysis is active in `current-step.md`.
 
 This file is not doctrine, a roadmap, or architecture.
 
@@ -14,7 +14,57 @@ When a step becomes current, remove it from this file and place it in `current-s
 
 ## Queue
 
-### 1. Trace the first narrow procedure
+### 1. Decide the disposition of candidate dependency domains
+
+Reason:
+
+The active analysis may show that authority, artifact meaning, provenance, or proof has no single legitimate origin, or that the concern is already adequately bounded inside the cognitive layer.
+
+Candidate decisions:
+
+```text
+KEEP
+EXTRACT FOR TESTING
+PARK
+```
+
+Constraints:
+
+- do not create a layer merely because a concern can be named
+- do not demote or repartition CB-001 without separate evidence and approval
+- prefer cross-cutting invariants over institutions when no independent lifecycle exists
+- preserve existing admitted distinctions during evaluation
+
+Activation condition:
+
+The 36-file domain classification is complete.
+
+---
+
+### 2. Redefine the procedural-layer boundary
+
+Reason:
+
+Procedure must be reduced to what is supposed to happen, in what order, and under which conditions.
+
+It may reference admitted external definitions but must not originate responsibility, authority, ownership, artifacts, provenance, or proof standards.
+
+Expected product:
+
+- reduced procedural definition
+- minimal procedure artifact shape
+- dependency-reference rule
+- unresolved-dependency stop rule
+- smallest justified repository structure
+- explicit non-admissions
+
+Activation condition:
+
+The candidate dependency-domain disposition is approved.
+
+---
+
+### 3. Trace the first narrow procedure
 
 Recommended candidate:
 
@@ -31,19 +81,19 @@ Theatre return
 
 Reason:
 
-This path exercises boundary crossing, sanitation, correlation, capacity, authority, decision recording, and outbound orchestration without attempting the entire lifecycle.
+This path exercises expected ordering and conditional branches without attempting the entire lifecycle.
 
 Constraints:
 
-- cite production CB-001 artifacts
-- do not redefine cognitive ownership
-- preserve refusal and withheld-decision paths
-- do not introduce services, queues, databases, or automation
-- save theoretical results under `tests/procedural/` if that structure is approved
+- procedure states only what is supposed to happen
+- every responsibility, authority, artifact, provenance, and proof dependency must cite an admitted external origin
+- an unresolved dependency stops the trace
+- do not introduce services, queues, databases, automation, or runtime proof
+- closure remains outside the first trace
 
 Activation condition:
 
-The procedural boundary and repository structure are approved.
+The reduced procedural boundary and repository structure are approved.
 
 Removal or demotion condition:
 
@@ -51,22 +101,11 @@ Choose another narrow path if the operator identifies a more revealing first pro
 
 ---
 
-### 2. Establish procedural testing and admission
+### 4. Establish procedural testing and admission
 
 Reason:
 
-A procedure must be pressured before admission. Passing cognitive tests does not automatically validate ordering, handoffs, exceptional paths, or procedural completeness.
-
-Candidate evidence:
-
-- happy-path trace
-- missing or quarantined return
-- unavailable standing-role capacity
-- unavailable or contested authority
-- required counsel unavailable
-- correlation mismatch
-- remediation loop
-- closure interaction where relevant
+A procedure must be pressured before admission. Passing cognitive tests does not validate expected ordering, branches, omissions, or stop conditions.
 
 Activation condition:
 
@@ -74,7 +113,7 @@ At least one draft procedure exists.
 
 ---
 
-### 3. Reconsider Vellum only if a record gap appears
+### 5. Reconsider Vellum only if a record gap appears
 
 Reason:
 
