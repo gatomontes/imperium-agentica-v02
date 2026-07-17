@@ -4,7 +4,7 @@
 
 Active.
 
-Activated by operator on 2026-07-17.
+Direction refined by operator on 2026-07-17.
 
 This file is not doctrine, a roadmap, or architecture.
 
@@ -14,34 +14,49 @@ It is the operational continuity surface for the currently active step.
 
 ## Active Step
 
-Define the procedural-layer boundary and decide its repository structure before translating CB-001 into procedures.
+Identify the legitimate origins of responsibility, authority, ownership, artifact meaning, provenance, and proof within Cognitive Baseline CB-001 before creating a procedural layer.
 
-## Objective
-
-Distinguish:
+Working analysis:
 
 ```text
-cognitive responsibility
-≠ procedure
-≠ runtime implementation
+drafts/cb-001-dependency-domain-origin-analysis.md
 ```
 
-Then propose the smallest procedural draft structure and the first narrow path to trace.
+## Reason
+
+The first procedural-boundary proposal assigned upstream responsibilities to procedure.
+
+The corrected boundary is:
+
+```text
+procedure
+= what is supposed to happen,
+  in what order,
+  under which conditions
+```
+
+A procedure may reference responsibility, authority, artifacts, provenance, and proof standards.
+
+It must not originate or refine them.
+
+An absent definition is a dependency gap, not permission for procedural invention.
 
 ## Required Product
 
-- a procedural-layer boundary proposal
-- draft and production admission boundaries
-- a minimal procedure artifact contract
-- a recommended first procedure
-- explicit non-admissions
-- operator approval or revision
+- classification of all 36 CB-001 artifacts by primary and secondary domain
+- distinction between true origins and maps or restatements
+- identification of unresolved dependency origins
+- recommendation to KEEP, EXTRACT FOR TESTING, or PARK each candidate domain
+- a reduced procedural boundary based only on externally defined dependencies
+- explicit operator approval before any new layer is created
 
 ## Current Constraint
 
-Do not create `layers/procedural/`, `tests/procedural/`, or any procedure artifact until the operator approves the proposed boundary and structure.
+Do not create `layers/procedural/`, `tests/procedural/`, or any other proposed layer.
 
-Procedures must cite CB-001. They must not redefine cognitive ownership or introduce runtime machinery.
+Do not demote or repartition CB-001 during analysis.
+
+Candidate domains are analytical lenses, not admitted architecture.
 
 ---
 
@@ -66,10 +81,6 @@ Suite: 30 PASS / 0 FAIL
 Promotion: COMPLETE
 ```
 
-The cognitive production baseline is admitted structurally.
-
-Procedural and runtime layers remain unadmitted and unimplemented.
-
 ---
 
 ## Active-Step Reading Set
@@ -82,9 +93,10 @@ Procedural and runtime layers remain unadmitted and unimplemented.
 6. `layers/cognitive/production/cognitive-map.md`
 7. `layers/cognitive/production/lifecycle.md`
 8. `layers/cognitive/production/production-artifacts.md`
-9. `tests/cognitive/README.md`
-10. `tests/cognitive/constitutional-test-run-015.md`
-11. `tests/cognitive/production-admission-review-003.md`
+9. `drafts/cb-001-dependency-domain-origin-analysis.md`
+10. `tests/cognitive/README.md`
+11. `tests/cognitive/constitutional-test-run-015.md`
+12. `tests/cognitive/production-admission-review-003.md`
 
 ---
 
@@ -97,6 +109,6 @@ Procedural and runtime layers remain unadmitted and unimplemented.
 - Commission is eliminated.
 - Praetorium remains reserved and undefined.
 - Vellum remains unadmitted without a demonstrated record gap.
-- Procedures must cite CB-001 rather than redefine cognitive ownership.
-- No procedural institution may be invented before behavior requires it.
+- Procedure expresses expected ordering; it does not originate dependencies.
+- No new layer is admitted merely because a concern can be named.
 - Runtime, service, schema, UI, scheduling, and automation decisions remain out of scope.
