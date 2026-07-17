@@ -32,14 +32,15 @@ Conscription
 → Operative
 → Operator handoff
    or
-→ Muster
+→ Mission Correlation Spine + Operative Binding
+→ Muster instance
 ↔ Inquisition
 ↔ Armory / Locksmith
 → Deployment Package
 → La Cortine / Iron Gate
 → Theatre
 → La Cortine / Lazaretto
-→ Curia
+→ mission-specific Curia Session
 → Mission Closure Record
 → Operative Release Record
 → Chamber of Scribes
@@ -117,13 +118,14 @@ It may be delivered directly to the operator.
 
 ```text
 Operative
++ Mission Identity and Operative Binding
 + Work Specification
 + Mission Inquest
 + tools
 + access
 + rules and constraints
 + reporting and return conditions
-→ Muster
+→ mission-specific Muster instance
 → Deployment Package
 ```
 
@@ -168,7 +170,9 @@ Barbican carries provider tickets and results. Locksmith retains credentials.
 ```text
 Theatre
 → Lazaretto
-→ Curia
+→ mission-specific Curia Session
+→ CoS Session Admission Finding
+→ effective Executive Mandate verification
 → authorized CEO decision
 → Muster
 → outbound mission instruction
@@ -176,7 +180,7 @@ Theatre
 → Theatre
 ```
 
-The Chief of Staff orchestrates Curia. Advisory Officers counsel when assigned. The CEO alone decides.
+The Chief of Staff orchestrates the mission-specific Curia session. When counsel is required, Collegium resolves suitability, Preceptory supplies the admitted Officer, and the Chief of Staff records a Curia Session Assignment. The CEO alone decides under an effective, matching Executive Mandate.
 
 Muster owns outbound mission orchestration. It operationalizes the authorized Curia decision without changing its substance or authority.
 
@@ -195,6 +199,7 @@ Theatre ↔ Barbican ↔ Armory / Locksmith
 Theatre
 → Lazaretto
 → Curia closure assessment
+→ effective Executive Mandate verification
 → CEO BEGIN_WIND_DOWN
 → Muster
 → Iron Gate
@@ -202,7 +207,8 @@ Theatre
 → Lazaretto
 → Curia terminal decision
 → MISSION_CLOSED + disposition
-→ Muster Operative Release Record
+→ Mission Closure Record
+→ exact-match Muster Operative Release Record
 → Chamber of Scribes
 → Final Report
 → Secretariat
@@ -235,4 +241,7 @@ No release without closure.
 - Completion claim is not closure.
 - Closure is not operative release.
 - Release is not reuse authority.
+- Shared governed reference is not shared mission state.
+- Curia Session Assignment is not Executive Mandate.
+- One mission closure is not another mission release.
 - Final Report is not automatically Vellum.
