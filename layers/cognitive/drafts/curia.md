@@ -98,7 +98,7 @@ Curia may place these beside:
 
 Curia does not require Collegium to pre-compose every mission.
 
-A mission begins with the standing CEO President and the standing Chief of Staff. No counselor, Liaison, quorum, or mission-dedicated Officer corps is presumed.
+A mission begins with the standing CEO President and the standing Chief of Staff. No counselor, quorum, or mission-dedicated Officer corps is presumed.
 
 During the mission, a need for distinct counsel may arise. The Chief of Staff frames that need and engages Collegium as part of Curial Orchestration.
 
