@@ -285,13 +285,13 @@ Theatre ↔ Barbican ↔ Armory / Locksmith
 Suite:
 
 ```text
-tests/cognitive/cognitive/constitutional-tests.md
+tests/cognitive/constitutional-tests.md
 ```
 
 Results:
 
 ```text
-tests/
+tests/cognitive/
 ```
 
 The retired Test Mission 001 chain has been deleted.
