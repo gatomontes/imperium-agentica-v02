@@ -14,7 +14,40 @@ When a step becomes active, remove it from this file and place it in `current-st
 
 ## Queue
 
-### 1. Reconsider Vellum only if closure records expose a record gap
+### 1. Close the production-admission evidence gap
+
+Reason:
+
+Admission Review 001 found no unbounded structural defect, but deferred promotion because the dependency-closed baseline lacks reconciled cross-cutting records and one integrated post-authority, post-concurrency trace.
+
+Required work:
+
+1. reconcile `production-artifacts.md`, `lifecycle.md`, and `cognitive-map.md`
+2. re-verify the current map
+3. run integrated Test Mission 009 from Petition through final delivery
+4. add a dependency-closure constitutional test
+5. record Run 014
+6. repeat admission review with an exact promotion manifest
+
+Relevant files:
+
+- `tests/cognitive/production-admission-review-001.md`
+- `layers/cognitive/drafts/cognitive-map.md`
+- `layers/cognitive/drafts/lifecycle.md`
+- `layers/cognitive/drafts/production-artifacts.md`
+- `tests/cognitive/constitutional-tests.md`
+
+Promotion condition:
+
+This becomes current only with operator approval.
+
+Removal or demotion condition:
+
+Remove it if the operator elects to keep the cognitive model indefinitely draft-bound.
+
+---
+
+### 2. Reconsider Vellum only if closure records expose a record gap
 
 Reason:
 
@@ -30,7 +63,7 @@ Remove it if the existing artifact set remains sufficient.
 
 ---
 
-### 2. Begin procedural modeling only after structural stabilization
+### 3. Begin procedural modeling only after structural stabilization
 
 Reason:
 
