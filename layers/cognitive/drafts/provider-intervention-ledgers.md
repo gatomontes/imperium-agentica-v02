@@ -4,7 +4,7 @@
 
 Draft artifact doctrine.
 
-Armory and Locksmith each maintain an append-only record of interventions requested by operatives for specific missions.
+Armory and Locksmith each maintain an append-only record of interventions requested by operatives for specific missions. Ticket identities are unique and never reused across missions.
 
 ```text
 Armory Intervention Ledger
@@ -36,6 +36,7 @@ Failure stage and class:
 Unknown or pending stages:
 Response timestamp:
 Correlation identity:
+Cross-mission reference when explicitly admitted:
 Applicable policy reference:
 ```
 
@@ -105,7 +106,7 @@ Chief of Staff
 
 Providers perform and record interventions.
 
-The Chief of Staff reads and correlates permitted records without altering them or treating provider intervention success as mission success.
+The Chief of Staff reads and correlates permitted records without altering them or treating provider intervention success as mission success. Same-provider or same-operation records from different missions remain distinct and cannot satisfy one another.
 
 Session-assigned Officers may advise on the records when relevant.
 
