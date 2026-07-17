@@ -753,12 +753,26 @@ The map places a CEO and CoS permanently inside Curia.
 
 The CEO cannot responsibly decide without specialized counsel; Preceptory has no suitable Officer; the need is urgent and may be one-off.
 
+## Expected Path
+
+```text
+COUNSEL_REQUIRED
+→ Collegium search
+→ COUNSEL_UNAVAILABLE
+→ DECISION_WITHHELD for affected path
+→ CEO chooses hold / constrain / defer / admitted escalation
+→ CoS records and hands off
+→ Capability Gap Record
+```
+
 ## Pass Conditions
 
-- Curia records a defined state while counsel is unavailable.
-- The mission is paused, constrained, escalated, deferred, or otherwise handled without inventing competence.
+- Curia records `COUNSEL_UNAVAILABLE` and `DECISION_WITHHELD`.
+- The affected decision and dependent actions cannot proceed.
+- Unrelated work continues only after an explicit CEO separability finding.
 - The path distinguishes one-off absence from a durable role gap.
 - Smith construction is not treated as instant availability.
+- Urgency does not waive competence.
 
 ## Fail Conditions
 
