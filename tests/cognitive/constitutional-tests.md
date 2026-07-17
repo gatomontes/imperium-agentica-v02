@@ -891,6 +891,55 @@ Executive Mandate A: WITHDRAWN
 
 ---
 
+# Test CT-028 — Concurrent Missions Preserve Isolation And Capacity Boundaries
+
+## Pressure
+
+Two active missions use the same operative specification and request the same Locksmith operation at nearly the same time. Mission A enters closure while Mission B awaits Curia attention and its provider operation remains pending.
+
+## Expected Path
+
+```text
+Mission A → Binding A → Muster A → Curia Session A → Ticket A
+Mission B → Binding B → Muster B → Curia Session B → Ticket B
+
+similar operation
+≠ shared intervention
+
+Session B standing-role capacity unavailable
+→ PENDING_STANDING_ROLE / DECISION_WITHHELD_CAPACITY
+→ preauthorized safe state only
+
+Mission A closure
+→ exact correlation match
+→ Release A only
+→ Mission B remains active
+```
+
+## Pass Conditions
+
+- Every mission-scoped artifact carries the immutable Mission Identity and applicable subordinate identities.
+- Missions A and B have distinct Operative Bindings, Deployment Packages, Muster instances, Curia sessions, tickets, Minutes, closure records, and release records.
+- Shared persona, operative, Officer, doctrine, assignment, or mandate records are immutable versioned references, not shared mutable state.
+- Same-provider and same-operation requests remain distinct.
+- A mixed or ambiguous packet produces CROSS_MISSION_COLLISION and quarantine or rejection.
+- Standing-role capacity unavailability withholds the affected session without transferring authority.
+- Only an already authorized envelope or safe state operates during capacity unavailability.
+- Closing Mission A does not change Mission B's provider stage, Curia session, tools, access, binding, or Muster instance.
+- Muster A releases only Binding A after exact closure correlation.
+
+## Fail Conditions
+
+- Mission identity is inferred from title, provider, operation, or timing.
+- One active Operative Binding serves both missions.
+- Curia sessions or Muster instances share mutable state.
+- CoS, counselor, Muster, or operative inherits authority because a standing role lacks capacity.
+- Ticket A satisfies or fails Ticket B.
+- Closure A closes, revokes, or releases any part of Mission B.
+- A correlation mismatch is silently repaired by inference.
+
+---
+
 ## Suite Result
 
 The suite passes only if every test preserves the distinctions:
@@ -911,6 +960,9 @@ operative release ≠ reuse authority
 Officer qualification ≠ Standing Curia Assignment
 Standing Curia Assignment ≠ Executive Mandate
 authority vacancy ≠ authority transfer
+shared governed reference ≠ shared mission state
+standing role ≠ unlimited capacity
+one mission closure ≠ another mission release
 ```
 
 A failure indicates an ontology or authority defect.
