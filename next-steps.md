@@ -2,7 +2,7 @@
 
 ## Status
 
-CB-001 dependency-domain origin analysis is active in `current-step.md`.
+Authority-origin and provenance-origin investigation is active in `current-step.md` and awaiting operator judgment.
 
 This file is not doctrine, a roadmap, or architecture.
 
@@ -14,45 +14,86 @@ When a step becomes current, remove it from this file and place it in `current-s
 
 ## Queue
 
-### 1. Decide the disposition of candidate dependency domains
+### 1. Define the minimal authority and provenance layer boundaries
 
 Reason:
 
-The completed trace shows that authority and provenance lack single legitimate origins, while artifact meaning remains canonically ambiguous and proof remains contextual.
-
-Candidate decisions:
-
-```text
-KEEP
-EXTRACT FOR TESTING
-PARK
-```
-
-Constraints:
-
-- do not create a layer merely because a concern can be named
-- do not demote or repartition CB-001 without separate evidence and approval
-- do not mistake a widely repeated invariant for a canonical origin
-- prefer cross-cutting contracts over institutions when no independent actor or lifecycle exists
-- preserve existing admitted distinctions during evaluation
-
-Activation condition:
-
-The 36-file definition trace is complete.
-
----
-
-### 2. Redefine the procedural-layer boundary
-
-Reason:
-
-Procedure must be reduced to what is supposed to happen, in what order, and under which conditions.
-
-It may reference admitted external definitions but must not originate responsibility, authority, ownership, artifacts, provenance, or proof standards.
+The first pressure runs found both concerns layer-worthy and parallel, without requiring institutions.
 
 Expected product:
 
-- reduced procedural definition
+- final concern names
+- smallest repository structures
+- draft and production boundaries
+- minimal semantic contracts
+- independent admission and invalidation criteria
+- explicit cross-reference rules
+- explicit non-admissions
+
+Constraints:
+
+- authority must not define provenance
+- provenance must not validate authority
+- neither layer may originate cognitive responsibility, procedure, or runtime
+- do not create institutions merely to host a concern
+- do not introduce schemas, services, storage, or permission implementations
+
+Activation condition:
+
+Operator approves or revises the investigation findings.
+
+---
+
+### 2. Resolve canonical artifact-definition origin
+
+Reason:
+
+Authority and provenance both reference artifact identity and version, but neither should define what an artifact means.
+
+Questions:
+
+- Is artifact meaning adequately cognitive?
+- Should entity files remain canonical for their products?
+- What role should `production-artifacts.md` retain?
+- Does an information-contract layer have an independent question and lifecycle?
+- How are definition conflicts resolved without making maps or procedures authoritative?
+
+Activation condition:
+
+Authority and provenance boundaries are approved.
+
+---
+
+### 3. Re-evaluate CB-001 placement without silent revision
+
+Reason:
+
+`lifecycle.md` has a procedural native concern under the corrected boundary. Authority, provenance, and artifact contracts also currently reside inside the cognitive baseline.
+
+Expected product:
+
+- KEEP, MOVE, SPLIT, or DEMOTE recommendation for contested files
+- dependency impact analysis
+- explicit operator approval
+- new cognitive test run before any production movement
+
+Activation condition:
+
+The parallel dependency-layer boundaries and artifact-definition origin are resolved.
+
+---
+
+### 4. Redefine the procedural-layer boundary
+
+Reason:
+
+Procedure is only what is supposed to happen, in what order, and under which conditions.
+
+It consumes externally defined responsibility, authority, artifact, provenance, and evidence dependencies.
+
+Expected product:
+
+- reduced procedure definition
 - minimal procedure artifact shape
 - dependency-reference rule
 - unresolved-dependency stop rule
@@ -61,11 +102,11 @@ Expected product:
 
 Activation condition:
 
-The candidate dependency-origin disposition is approved.
+Required dependency origins are admitted or explicitly unresolved with an authorized stop rule.
 
 ---
 
-### 3. Trace the first narrow procedure
+### 5. Trace the first narrow procedure
 
 Recommended candidate:
 
@@ -80,33 +121,21 @@ Theatre return
 → Muster outbound instruction
 ```
 
-Reason:
-
-This path exercises expected ordering and conditional branches without attempting the entire lifecycle.
-
 Constraints:
 
-- procedure states only what is supposed to happen
-- every responsibility, authority, artifact, provenance, and proof dependency must cite an admitted external origin
-- an unresolved dependency stops the trace
-- do not introduce services, queues, databases, automation, or runtime proof
+- procedure states only expected ordering and branches
+- every dependency cites an admitted external origin
+- unresolved authority, provenance, artifact, or proof dependencies stop the trace
+- no runtime machinery
 - closure remains outside the first trace
 
 Activation condition:
 
-The reduced procedural boundary and repository structure are approved.
-
-Removal or demotion condition:
-
-Choose another narrow path if the operator identifies a more revealing first procedure.
+The reduced procedural boundary and structure are approved.
 
 ---
 
-### 4. Establish procedural testing and admission
-
-Reason:
-
-A procedure must be pressured before admission. Passing cognitive tests does not validate expected ordering, branches, omissions, or stop conditions.
+### 6. Establish procedural testing and admission
 
 Activation condition:
 
@@ -114,16 +143,8 @@ At least one draft procedure exists.
 
 ---
 
-### 5. Reconsider Vellum only if a record gap appears
-
-Reason:
-
-Mission Closure Record, Curia Minutes, Operative Release Record, Final Report, and Delivery Package currently preserve the required record chain.
+### 7. Reconsider Vellum only if a record gap appears
 
 Activation condition:
 
-A cognitive or procedural scenario demonstrates a specific canonical record behavior these artifacts cannot preserve.
-
-Removal or demotion condition:
-
-Remove it if repeated use continues to show no distinct need.
+A cognitive, dependency-layer, or procedural scenario demonstrates a specific canonical record behavior existing artifacts cannot preserve.
