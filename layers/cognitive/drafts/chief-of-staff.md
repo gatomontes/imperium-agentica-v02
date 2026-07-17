@@ -37,6 +37,8 @@ The Chief of Staff:
 - receives sanitized mission packets entering Curia from Lazaretto
 - assembles and maintains the Situation Picture
 - manages Curia session flow and agenda
+- maintains a separate Curia Session identity and mission-correlation spine for every mission
+- records the Session Admission Finding and standing-role capacity state
 - issues mission-scoped, read-only queries against applicable Armory and Locksmith Intervention Ledgers
 - identifies or receives a need for distinct counsel
 - frames that need for Collegium
@@ -48,7 +50,8 @@ The Chief of Staff:
 - records wind-down, terminal-return, disposition, and unresolved-obligation evidence
 - maintains the Curia Minute
 - records the President's decision, rationale, and authority basis
-- hands the authorized decision to Muster
+- rejects or quarantines cross-mission packets, provider views, counsel, Minutes, and decisions
+- hands the authorized decision only to the matching mission-specific Muster instance
 
 ## Boundaries
 
@@ -67,6 +70,10 @@ The Chief of Staff does not:
 - treat any provider-observed stage as mission success
 - alter or supplement provider-owned ledger records
 - direct Iron Gate or Theatre
+- merge mutable state across Curia sessions
+- infer correlation from similar titles, operations, providers, or timestamps
+- treat standing assignment as unlimited concurrent capacity
+- transfer authority or orchestration by capacity failure
 - perform Muster's outbound orchestration
 - carry tools or credentials
 
