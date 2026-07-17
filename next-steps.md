@@ -14,30 +14,7 @@ When a step becomes active, remove it from this file and place it in `current-st
 
 ## Queue
 
-### 1. Review draft-to-production admission evidence
-
-Reason:
-
-The cognitive draft layer now has a substantial connected ontology and repeated theoretical tests. Production must remain empty until the evidence shows which contracts are stable enough for admission as a minimal coherent set.
-
-Relevant files:
-
-- `layers/cognitive/README.md`
-- `layers/cognitive/drafts/`
-- `layers/cognitive/production/README.md`
-- `tests/cognitive/`
-
-Promotion condition:
-
-This becomes current only after authority provenance and concurrency have passed theoretical tests and the operator requests an admission review.
-
-Removal or demotion condition:
-
-Keep all artifacts in drafts if unresolved structural gaps still alter responsibilities or authority boundaries.
-
----
-
-### 2. Reconsider Vellum only if closure records expose a record gap
+### 1. Reconsider Vellum only if closure records expose a record gap
 
 Reason:
 
@@ -53,7 +30,7 @@ Remove it if the existing artifact set remains sufficient.
 
 ---
 
-### 3. Begin procedural modeling only after structural stabilization
+### 2. Begin procedural modeling only after structural stabilization
 
 Reason:
 
