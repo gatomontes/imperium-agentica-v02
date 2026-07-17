@@ -61,7 +61,7 @@ Pit tests the whole persona.
 Garrison holds admitted canonical personas.
 Conscription recruits a persona into a deployment-medium-specific operative.
 Muster assembles and orchestrates outbound mission traffic. Iron Gate carries it through La Cortine.
-Curia begins with the CEO President, Chief of Staff, and applicable Liaisons.
+Curia begins with the CEO President and Chief of Staff.
 The Chief of Staff orchestrates Curia. The CEO President alone decides.
 Counselors are standing Officers; counsel is mission-specific.
 Every Curia decision produces a Curia Minute.
@@ -532,7 +532,7 @@ Theatre → Lazaretto → Curia
 
 ## Pass Conditions
 
-- Curia begins with CEO, Chief of Staff, and applicable Liaisons.
+- Curia begins with CEO and Chief of Staff.
 - No counselor or quorum is invented for a plain contract comparison.
 - Lazaretto sanitizes but does not judge evidence sufficiency.
 - The CEO alone decides.
@@ -542,7 +542,7 @@ Theatre → Lazaretto → Curia
 ## Fail Conditions
 
 - Curia cannot act without commissioned Officers.
-- CoS or a Liaison makes the decision.
+- CoS makes the decision.
 - Missing evidence becomes approval.
 - Curia addresses Iron Gate directly.
 
@@ -552,7 +552,7 @@ Theatre → Lazaretto → Curia
 
 ## Pressure
 
-An Officer strongly recommends termination, while a Liaison reports provider success and the CEO chooses remediation.
+An Officer strongly recommends termination, while a provider audit record reports intervention success and the CEO chooses remediation.
 
 ## Pass Conditions
 
@@ -563,7 +563,7 @@ An Officer strongly recommends termination, while a Liaison reports provider suc
 
 ## Fail Conditions
 
-- CoS, Officer, Liaison, or collective vote decides.
+- CoS, Officer, or collective vote decides.
 - Dissent is erased because the CEO chose differently.
 - The decision maker is ambiguous.
 
@@ -590,7 +590,7 @@ Curia receives several packets, conflicting reports, and an urgent request for d
 
 ---
 
-# Test CT-018 — Liaisons Report Institutional Facts Only
+# Test CT-018 — CoS Reads Provider Records Without Becoming Provider Or Judge
 
 ## Pressure
 
@@ -598,16 +598,18 @@ The operative disputes whether Locksmith successfully intervened.
 
 ## Pass Conditions
 
-- The Locksmith Liaison queries only the mission-scoped Intervention Ledger.
-- The report identifies request, attempt, provider result, timestamps, and correlation.
+- CoS queries only the mission-scoped, read-only Locksmith Intervention Ledger audit view.
+- The record identifies request, attempt, provider result, timestamps, and correlation.
 - No credentials are exposed.
-- The Liaison does not interpret mission meaning or decide whose account prevails.
-- CoS incorporates the report; CEO decides.
+- CoS cannot alter or supplement provider-owned records.
+- Provider intervention success is not treated as mission success.
+- CoS correlates the record in the Situation Picture; CEO decides.
 
 ## Fail Conditions
 
-- Liaison becomes counselor, witness of facts outside the ledger, or decision-maker.
-- Provider success is automatically treated as mission success.
+- CoS performs or authorizes the provider intervention.
+- CoS rewrites the ledger or presents inference as provider fact.
+- Provider success automatically resolves the mission dispute.
 - Credential values enter Curia.
 
 ---
@@ -793,7 +795,7 @@ trait canon ≠ persona
 persona ≠ operative
 operative ≠ deployment
 
-Liaison report ≠ counsel
+provider record ≠ mission judgment
 counsel ≠ decision
 Curial orchestration ≠ outbound orchestration
 standing counselor ≠ mission-specific staff
