@@ -14,7 +14,7 @@ It does not admit live deployment automation, external execution authority, cred
 
 Muster owns outbound mission orchestration.
 
-It assembles an operative for initial deployment and operationalizes authorized Curia decisions for continuing missions.
+It assembles an operative for initial deployment, operationalizes authorized Curia decisions for continuing missions, and releases the mission binding after authorized closure.
 
 It receives a deployment-medium-specific operative from Conscription, incorporates mission intelligence, obtains authorized tools and access, binds mission instructions and constraints, and produces a mission-bound Deployment Package.
 
@@ -165,11 +165,31 @@ Access is not mission understanding.
 
 Curia convenes Officers who understand, verify, deliberate, and authorize what must happen next.
 
-Muster receives authorized Curia decisions and converts them into outbound mission instructions, Deployment Package amendments, pause/resume/recall/termination instructions, or other mission-control artifacts.
+Muster receives authorized Curia decisions and converts them into outbound mission instructions, Deployment Package amendments, pause/resume/recall/termination instructions, closure wind-down instructions, or other mission-control artifacts.
 
 Muster preserves the authority, reasoning reference, mission meaning, and active deployment provenance.
 
 Curia does not address Iron Gate directly.
+
+---
+
+## Relationship To Closure And Release
+
+Muster does not decide that a mission is complete.
+
+When the CEO authorizes BEGIN_WIND_DOWN, Muster operationalizes the required stop, recall, finalization, or Terminal Field Packet instruction through Iron Gate.
+
+Only after receiving an authorized MISSION_CLOSED and Mission Closure Record does Muster terminate the mission binding around the operative.
+
+Muster then:
+
+- coordinates mission-scoped tool deactivation or return with Armory
+- coordinates mission-scoped access revocation or expiry with Locksmith
+- records unresolved provider obligations
+- produces the Operative Release Record
+- ends the mission-specific Muster instance
+
+Release does not delete the operative, alter its canonical persona, erase history, or authorize reuse.
 
 ---
 
@@ -200,7 +220,8 @@ Muster must not:
 - treat assembly as launch
 - execute the mission
 - receive or judge mission results
-- decide disposition
+- decide disposition or closure
+- release an operative before authorized MISSION_CLOSED
 
 ---
 
@@ -212,7 +233,7 @@ Conscription produces the operative.
 Inquisition investigates.
 Armory equips.
 Locksmith unlocks.
-Muster assembles.
+Muster assembles, operationalizes, and releases mission binding.
 Iron Gate launches.
 Barbican sustains continuing operations.
 Theatre exposes consequence.
