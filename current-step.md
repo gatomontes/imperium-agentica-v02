@@ -43,7 +43,7 @@ An absent definition is a dependency gap, not permission for procedural inventio
 
 ## Required Product
 
-- classification of all 36 CB-001 artifacts by primary and secondary domain
+- definition tracing for all 36 CB-001 artifacts using native concern, referenced dependency, restatement, and unresolved dependency
 - distinction between true origins and maps or restatements
 - identification of unresolved dependency origins
 - recommendation to KEEP, EXTRACT FOR TESTING, or PARK each candidate domain
@@ -56,7 +56,7 @@ Do not create `layers/procedural/`, `tests/procedural/`, or any other proposed l
 
 Do not demote or repartition CB-001 during analysis.
 
-Candidate domains are analytical lenses, not admitted architecture.
+Candidate domains are analytical lenses, not admitted architecture. Referenced dependencies are not secondary layers or secondary ownership.
 
 ---
 
