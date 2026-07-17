@@ -4,72 +4,79 @@
 
 Active.
 
-This file is not doctrine.
+This file is not doctrine, a roadmap, or architecture.
 
-This file is not a roadmap.
-
-This file is not architecture.
-
-This file is an operational continuity surface for the currently active step.
+It is the operational continuity surface for the currently active step.
 
 ---
 
 ## Step
 
-Test whether Mayo's Governance can be expressed as higher construction doctrine without admitting it as Imperium runtime architecture.
+Define the source, scope, continuity, and withdrawal of the CEO President's decision authority.
 
 ---
 
 ## Why This Step Is Current
 
-The operator identified a missing abstraction layer while restarting Imperium v02.
+The cognitive layer now gives the CEO President sole mission decision and closure authority.
 
-The confusion was caused by trying to apply Mayo's Governance inside Imperium.
+The CEO role has construction provenance through Studium, The Gesta, Smith, Spur, Preceptory, and a versioned Standing Curia Assignment. That provenance establishes qualification and assignment, but it does not explain where executive authority originates or how it can be suspended, withdrawn, transferred, or constrained.
 
-The current resolution is that Mayo's Governance sits above Imperium as the discipline governing Imperium's making.
-
-This distinction must be made clear enough that future LLM sessions can follow it without inventing ministries, runtimes, authority structures, or additional architecture.
+Mission closure and operative release are now bounded and passed theoretical Run 011. Authority provenance is therefore the next unresolved structural dependency.
 
 ---
 
 ## Relevant Files
 
 - `README.md`
-- `drafts/governance.md`
-- `drafts/mayos-governance.md`
-- `drafts/terminology.md`
+- `layers/cognitive/README.md`
+- `layers/cognitive/drafts/cognitive-map.md`
+- `layers/cognitive/drafts/curia.md`
+- `layers/cognitive/drafts/ceo-president.md`
+- `layers/cognitive/drafts/standing-curia-role-requirements.md`
+- `layers/cognitive/drafts/mission-closure-and-release-contract.md`
+- `tests/cognitive/constitutional-tests.md`
+- `tests/cognitive/constitutional-test-run-011.md`
 - `next-steps.md`
 
 ---
 
-## Context For LLM
+## Known Distinctions
 
-Read `README.md` first.
+```text
+Officer qualification ≠ executive authority
+Preceptory admission ≠ executive authority
+Standing Curia Assignment ≠ source of authority
+CEO decision ≠ CoS orchestration
+authority withdrawal ≠ Officer deletion
+authority withdrawal ≠ mission disposition by implication
+```
 
-Treat it as constitutional orientation.
+---
 
-Then read this file.
+## Questions Under Test
 
-Use `drafts/mayos-governance.md` to understand the current doctrinal distinction under test.
-
-Use `drafts/governance.md` to distinguish Imperium admission governance from Mayo's construction governance.
-
-Do not treat Mayo's Governance as a runtime layer.
-
-Do not create a ministry, service, schema, command, law interpreter, or agent hierarchy for it.
-
-Do not promote the draft into admitted architecture unless repeated repository use proves it necessary.
+1. What represented authority authorizes the CEO to decide for Imperium?
+2. What artifact records that authority without prematurely admitting an upper-echelon institution?
+3. What is the authority's scope: mission, class of missions, standing mandate, or another bounded form?
+4. Who or what may suspend, withdraw, supersede, or constrain it?
+5. What happens to active missions when CEO authority becomes unavailable or contested?
+6. How is an admitted successor bound without treating appointment as self-authorization?
+7. Which authority facts must appear in every Curia Minute and Mission Closure Record?
 
 ---
 
 ## Constraints
 
-- Preserve the distinction between construction governance and Imperium governance.
-- Do not admit a governance layer merely because the language feels constitutional.
-- Do not convert higher-echelon language into hierarchy, folders, services, or runtime authority.
-- Keep the doctrine usable by future LLM sessions.
-- Surface any ambiguity that could cause recursion or premature authority.
-- Keep changes small and reviewable.
+- Preserve one decision-maker inside Curia.
+- Do not make the CEO self-authorizing.
+- Do not confuse Officer construction provenance with authority provenance.
+- Do not invent Praetorium, a board, sovereign office, ministry, service, or runtime merely to fill the gap.
+- Preserve the operator or represented authority as a possible source without assuming its final form.
+- Make suspension, withdrawal, supersession, and contested authority explicit states.
+- Do not allow CoS, Collegium, Preceptory, Smith, or Muster to inherit executive authority by vacancy.
+- Keep changes within the cognitive draft layer.
+- Test the contract theoretically before considering production admission.
 
 ---
 
@@ -77,18 +84,19 @@ Do not promote the draft into admitted architecture unless repeated repository u
 
 This step is complete when:
 
-- `drafts/mayos-governance.md` exists.
-- The draft clearly states that Mayo's Governance governs Imperium's making, not Imperium's runtime.
-- The draft distinguishes Mayo's Governance from Imperium governance.
-- The operational trail points future LLM sessions to the new draft.
-- Remaining risks are visible enough for later review.
+- a minimal authority-grant artifact or equivalent contract is defined
+- its issuer, grantee, scope, effective interval, constraints, and supersession rules are traceable
+- CEO qualification, assignment, and authority remain distinct
+- authority withdrawal and contested authority have bounded mission effects
+- no other Curia participant becomes decision-maker by default
+- Curia Minutes and closure records cite the active authority version
+- at least one constitutional test and one theoretical mission trace exercise grant, withdrawal, or succession
+- the latest test run records the result and remaining gaps
 
 ---
 
 ## After Completion
 
-Review whether the Mayo's Governance draft reduces confusion or creates new conceptual mass.
+Move concurrent Curia-session isolation and standing-role capacity into `current-step.md`.
 
-If it reduces confusion, consider whether controlled terminology is needed.
-
-If it creates conceptual mass, revise, demote, simplify, or remove it.
+Do not begin operational procedure design merely because authority provenance is bounded.
