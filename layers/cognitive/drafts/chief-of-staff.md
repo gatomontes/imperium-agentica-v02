@@ -60,7 +60,8 @@ The Chief of Staff does not:
 - select Officers independently of Collegium and Preceptory
 - forge or test Officers
 - treat provider audit records as provider authority beyond what they actually record
-- treat provider intervention success as mission success
+- collapse entitlement, credential resolution, authentication, submission, completion, result delivery, or mission outcome into one success judgment
+- treat any provider-observed stage as mission success
 - alter or supplement provider-owned ledger records
 - direct Iron Gate or Theatre
 - perform Muster's outbound orchestration
