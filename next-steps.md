@@ -2,7 +2,7 @@
 
 ## Status
 
-Authority-origin and provenance-origin investigation is active in `current-step.md` and awaiting operator judgment.
+Authority and Provenance boundary proposals are active in `current-step.md` and awaiting operator judgment.
 
 This file is not doctrine, a roadmap, or architecture.
 
@@ -14,41 +14,60 @@ When a step becomes current, remove it from this file and place it in `current-s
 
 ## Queue
 
-### 1. Define the minimal authority and provenance layer boundaries
-
-Reason:
-
-The first pressure runs found both concerns layer-worthy and parallel, without requiring institutions.
-
-Expected product:
-
-- final concern names
-- smallest repository structures
-- draft and production boundaries
-- minimal semantic contracts
-- independent admission and invalidation criteria
-- explicit cross-reference rules
-- explicit non-admissions
-
-Constraints:
-
-- authority must not define provenance
-- provenance must not validate authority
-- neither layer may originate cognitive responsibility, procedure, or runtime
-- do not create institutions merely to host a concern
-- do not introduce schemas, services, storage, or permission implementations
+### 1. Materialize approved Authority and Provenance layer drafts
 
 Activation condition:
 
-Operator approves or revises the investigation findings.
+The operator approves the names, boundaries, repository shapes, and one-contract minimum.
+
+Expected creation:
+
+```text
+layers/authority/README.md
+layers/authority/drafts/README.md
+layers/authority/production/README.md
+layers/authority/drafts/authority-contract.md
+
+layers/provenance/README.md
+layers/provenance/drafts/README.md
+layers/provenance/production/README.md
+layers/provenance/drafts/provenance-contract.md
+```
+
+Constraints:
+
+- no institution required
+- no Codex, Vellum, station logs, or mission-wide log
+- no runtime implementation
+- no migration of CB-001 production files
+- draft contracts cite existing evidence without claiming production admission
 
 ---
 
-### 2. Resolve canonical artifact-definition origin
+### 2. Establish independent Authority and Provenance tests
 
 Reason:
 
-Authority and provenance both reference artifact identity and version, but neither should define what an artifact means.
+Each draft contract must survive its own pressure suite before cross-layer convergence testing.
+
+Candidate locations after drafts exist:
+
+```text
+tests/authority/
+tests/provenance/
+```
+
+Activation condition:
+
+The approved layer structures and first draft contracts exist.
+
+---
+
+### 3. Resolve canonical artifact-definition origin
+
+Reason:
+
+Authority and provenance reference artifact identity and version, but neither defines artifact meaning.
 
 Questions:
 
@@ -60,15 +79,15 @@ Questions:
 
 Activation condition:
 
-Authority and provenance boundaries are approved.
+Authority and Provenance draft boundaries exist.
 
 ---
 
-### 3. Re-evaluate CB-001 placement without silent revision
+### 4. Re-evaluate CB-001 placement without silent revision
 
 Reason:
 
-`lifecycle.md` has a procedural native concern under the corrected boundary. Authority, provenance, and artifact contracts also currently reside inside the cognitive baseline.
+`lifecycle.md` has a procedural native concern. Authority, provenance, and artifact contracts also currently reside inside the cognitive baseline.
 
 Expected product:
 
@@ -79,11 +98,11 @@ Expected product:
 
 Activation condition:
 
-The parallel dependency-layer boundaries and artifact-definition origin are resolved.
+Parallel dependency-layer boundaries and artifact-definition origin are resolved.
 
 ---
 
-### 4. Redefine the procedural-layer boundary
+### 5. Redefine the procedural-layer boundary
 
 Reason:
 
@@ -91,22 +110,13 @@ Procedure is only what is supposed to happen, in what order, and under which con
 
 It consumes externally defined responsibility, authority, artifact, provenance, and evidence dependencies.
 
-Expected product:
-
-- reduced procedure definition
-- minimal procedure artifact shape
-- dependency-reference rule
-- unresolved-dependency stop rule
-- smallest justified repository structure
-- explicit non-admissions
-
 Activation condition:
 
 Required dependency origins are admitted or explicitly unresolved with an authorized stop rule.
 
 ---
 
-### 5. Trace the first narrow procedure
+### 6. Trace the first narrow procedure
 
 Recommended candidate:
 
@@ -121,21 +131,13 @@ Theatre return
 → Muster outbound instruction
 ```
 
-Constraints:
-
-- procedure states only expected ordering and branches
-- every dependency cites an admitted external origin
-- unresolved authority, provenance, artifact, or proof dependencies stop the trace
-- no runtime machinery
-- closure remains outside the first trace
-
 Activation condition:
 
 The reduced procedural boundary and structure are approved.
 
 ---
 
-### 6. Establish procedural testing and admission
+### 7. Establish procedural testing and admission
 
 Activation condition:
 
@@ -143,8 +145,20 @@ At least one draft procedure exists.
 
 ---
 
-### 7. Reconsider Vellum only if a record gap appears
+### 8. Reconsider provenance devices only if a representation gap appears
+
+Candidates include Codex, Vellum, station logs, a mission-wide record, or smaller unnamed devices.
 
 Activation condition:
 
-A cognitive, dependency-layer, or procedural scenario demonstrates a specific canonical record behavior existing artifacts cannot preserve.
+A scenario proves that required lineage cannot be preserved or accessed through existing artifacts.
+
+A device must answer a demonstrated access or representation gap. It must not be created merely because provenance exists.
+
+---
+
+### 9. Reconsider Vellum only if a distinct mission-wide record gap appears
+
+Activation condition:
+
+Existing linked artifacts and Mission Correlation Spine cannot provide required mission-wide traversability without inference.
