@@ -2,9 +2,9 @@
 
 ## Status
 
-Active — definition trace complete; awaiting operator review.
+Active — authority and provenance investigation complete; awaiting operator judgment.
 
-Direction refined by operator on 2026-07-17.
+Activated by operator on 2026-07-17.
 
 This file is not doctrine, a roadmap, or architecture.
 
@@ -14,117 +14,123 @@ It is the operational continuity surface for the currently active step.
 
 ## Active Step
 
-Identify the legitimate origins of responsibility, authority, ownership, artifact meaning, provenance, and proof within Cognitive Baseline CB-001 before creating a procedural layer.
+Investigate authority origin and provenance origin as parallel concerns before creating a procedural layer.
 
-Working analysis:
-
-```text
-drafts/cb-001-dependency-domain-origin-analysis.md
-```
-
-## Reason
-
-The first procedural-boundary proposal assigned upstream responsibilities to procedure.
-
-The corrected boundary is:
-
-```text
-procedure
-= what is supposed to happen,
-  in what order,
-  under which conditions
-```
-
-A procedure may reference responsibility, authority, artifacts, provenance, and proof standards.
-
-It must not originate or refine them.
-
-An absent definition is a dependency gap, not permission for procedural invention.
-
-## Required Product
-
-- definition tracing for all 36 CB-001 artifacts using native concern, referenced dependency, restatement, and unresolved dependency
-- distinction between true origins and maps or restatements
-- identification of unresolved dependency origins
-- recommendation to KEEP, EXTRACT FOR TESTING, or PARK each candidate domain
-- a reduced procedural boundary based only on externally defined dependencies
-- explicit operator approval before any new layer is created
-
-## Analysis Result
-
-The 36-file definition trace is complete in:
+## Working Analyses
 
 ```text
 drafts/cb-001-dependency-domain-origin-analysis.md
+drafts/authority-origin-investigation.md
+drafts/provenance-origin-investigation.md
+drafts/authority-provenance-convergence-test.md
 ```
 
-Preliminary dispositions:
+## Results
+
+### Authority
 
 ```text
-Responsibility: KEEP in cognitive
-Ownership: KEEP under responsibility
-Authority origin: EXTRACT FOR TESTING
-Artifact contracts: EXTRACT FOR TESTING
-Provenance origin: EXTRACT FOR TESTING
-General proof layer: PARK
-Cognitive map: KEEP
-Lifecycle ordering: EXTRACT FOR TESTING
-Procedural layer: PARK pending dependencies
-Runtime layer: PARK
+Theoretical Test Run A-001
+7 PASS / 0 FAIL
+
+AUTHORITY CONCERN: LAYER-WORTHY
+INSTITUTION: NOT JUSTIFIED
+FINAL NAME: NOT ADMITTED
 ```
 
-Principal contest:
+Candidate minimum:
 
-`lifecycle.md` has a procedural native concern under the corrected boundary, although it is currently admitted inside CB-001.
+```text
+Represented Principal
++ Authority Basis
++ specialized Authority Grant
+```
 
-Principal blockers:
+Authority defines how permission enters Imperium, how it is bounded or delegated, and how it becomes unavailable.
 
-- Mandating Principal and authority basis
-- standing-assignment authority
-- persona and Officer admission authority
-- Tool Grant and Access Grant authority
-- initial mission-binding and external-launch authority
-- canonical artifact-definition ownership
-- canonical provenance origin and revision authority
+It does not define responsibility, provenance, procedure, or execution.
 
-No production artifact has been changed or demoted.
+### Provenance
 
-Pending operator judgment:
+```text
+Theoretical Test Run P-001
+8 PASS / 0 FAIL
 
-- approve or revise the dispositions
-- choose whether authority-origin and provenance-origin testing begin next
+PROVENANCE CONCERN: LAYER-WORTHY
+INSTITUTION: NOT REQUIRED
+FINAL NAME: NOT ADMITTED
+```
+
+Provenance defines lineage, correlation, transformation, custody, version, and supersession relations.
+
+It does not define artifact meaning, truth, evidence sufficiency, authority, procedure, or storage.
+
+### Convergence
+
+```text
+Theoretical Convergence Run AP-001
+PASS WITH BLOCKERS
+```
+
+Authority and provenance are parallel, not sequential.
+
+Neither inherits or repairs the other.
+
+A future procedure may require both findings but may define neither.
+
+Shared unresolved dependency:
+
+```text
+canonical artifact identity and definition ownership
+```
 
 ---
 
-## Current Constraint
+## Principal Findings
 
-Do not create `layers/procedural/`, `tests/procedural/`, or any other proposed layer.
+- Imperium does not manufacture authority.
+- Authority must be rooted in a represented Principal whose authority basis exists independently of Imperium.
+- A common authority grammar is justified; a common authority institution is not.
+- Provenance has independent semantics, failure states, and change reasons.
+- Lack of an independent actor does not disqualify a layer.
+- Provenance should not remain merely a distributed cognitive invariant.
+- Provenance may reference artifact identity without defining artifact meaning.
+- The authority and provenance candidates may cross-reference without merging ownership.
+- `lifecycle.md` remains contested as procedural material currently admitted inside CB-001.
+- No production artifact has been changed or demoted.
 
-Do not demote or repartition CB-001 during analysis.
+---
 
-Candidate domains are analytical lenses, not admitted architecture. Referenced dependencies are not secondary layers or secondary ownership.
+## Pending Operator Judgment
+
+Approve, revise, or reject:
+
+1. Authority is a layer-worthy concern with no required institution.
+2. Provenance is a parallel layer-worthy concern with no required institution.
+3. Their final names and repository structures remain unadmitted.
+4. Canonical artifact-definition origin must be investigated separately.
+5. The procedural layer remains parked.
+
+---
+
+## Current Constraints
+
+- Do not create authority, provenance, artifact, or procedural layer directories before operator approval.
+- Do not demote or repartition CB-001 during analysis.
+- Do not let authority define provenance.
+- Do not let provenance validate authority.
+- Do not introduce services, schemas, storage, UI, scheduling, automation, or permission-system implementation.
 
 ---
 
 ## Last Completed Step
 
-Promote Cognitive Baseline CB-001 from cognitive drafts into cognitive production.
+Complete the 36-file CB-001 definition-origin trace.
 
-## Verified Result
+Evidence:
 
 ```text
-Baseline: CB-001
-Manifest: 36 files
-Production creation: 36 / 36
-Production verification: 36 / 36 exact
-Draft deletion after verification: 36 / 36
-Cognitive drafts: no active artifacts
-Commission: deleted
-Replacement: session-assignment.md
-Admission: Production Admission Review 003
-Evidence: Constitutional Test Run 015
-Suite: 30 PASS / 0 FAIL
-Promotion: COMPLETE
+drafts/cb-001-dependency-domain-origin-analysis.md
 ```
 
 ---
@@ -136,25 +142,23 @@ Promotion: COMPLETE
 3. `next-steps.md`
 4. `layers/cognitive/README.md`
 5. `layers/cognitive/production/README.md`
-6. `layers/cognitive/production/cognitive-map.md`
-7. `layers/cognitive/production/lifecycle.md`
-8. `layers/cognitive/production/production-artifacts.md`
-9. `drafts/cb-001-dependency-domain-origin-analysis.md`
-10. `tests/cognitive/README.md`
-11. `tests/cognitive/constitutional-test-run-015.md`
-12. `tests/cognitive/production-admission-review-003.md`
+6. `drafts/cb-001-dependency-domain-origin-analysis.md`
+7. `drafts/authority-origin-investigation.md`
+8. `drafts/provenance-origin-investigation.md`
+9. `drafts/authority-provenance-convergence-test.md`
+10. `layers/cognitive/production/executive-mandate.md`
+11. `layers/cognitive/production/production-artifacts.md`
+12. `layers/cognitive/production/mission-concurrency-and-isolation-contract.md`
+13. `layers/cognitive/production/provider-intervention-ledgers.md`
+14. `layers/cognitive/production/lifecycle.md`
 
 ---
 
 ## Invariants To Preserve
 
-- CB-001 is the current admitted cognitive baseline.
-- Cognitive production admission is not implementation or external authority.
-- Production artifacts are not silently edited.
-- Contested cognitive concepts require explicit revision or demotion.
-- Commission is eliminated.
-- Praetorium remains reserved and undefined.
-- Vellum remains unadmitted without a demonstrated record gap.
-- Procedure expresses expected ordering; it does not originate dependencies.
+- CB-001 remains the current admitted cognitive baseline until explicitly revised or demoted.
+- Responsibility, authority, provenance, procedure, and runtime remain distinct.
+- An authority grant requires provenance but provenance does not make it valid.
+- A provenance chain may be complete while its claim is false or unauthorized.
+- A procedure expresses expected ordering and cannot originate dependencies.
 - No new layer is admitted merely because a concern can be named.
-- Runtime, service, schema, UI, scheduling, and automation decisions remain out of scope.
