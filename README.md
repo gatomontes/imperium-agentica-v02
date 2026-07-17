@@ -118,10 +118,14 @@ A future LLM session should read the repository in this order:
 3. `next-steps.md` — pending operational queue.
 4. `layers/cognitive/README.md` — cognitive-layer boundary and admission rules.
 5. `layers/cognitive/production/` — admitted cognitive baseline, when cognitive structure is relevant.
-6. `layers/cognitive/drafts/` — shaped but unproven cognitive artifacts, only if relevant.
-7. `tests/cognitive/` — cognitive scenarios and theoretical results, only when testing or tracing.
-8. `ideas.md` — raw pre-draft candidates, only if needed.
-9. `drafts/` — other shaped but unproven repository artifacts, only if relevant to the current step.
+6. `layers/authority/README.md` — approved authority boundary.
+7. `layers/authority/drafts/` — shaped but unproven authority contracts, only if relevant.
+8. `layers/provenance/README.md` — approved provenance boundary.
+9. `layers/provenance/drafts/` — shaped but unproven provenance contracts, only if relevant.
+10. `layers/cognitive/drafts/` — shaped but unproven cognitive artifacts, only if relevant.
+11. `tests/` — theoretical suites and immutable run records, only when testing or tracing.
+12. `ideas.md` — raw pre-draft candidates, only if needed.
+13. `drafts/` — cross-layer working analyses, only if relevant to the current step.
 
 Do not reconstruct intent from chat history before reading these files.
 
@@ -169,6 +173,24 @@ Cognitive tests and theoretical run results use:
 ```text
 /tests/cognitive
 ```
+
+Approved authority and provenance layer boundaries use:
+
+```text
+/layers/authority/drafts
+/layers/authority/production
+/layers/provenance/drafts
+/layers/provenance/production
+```
+
+Their theoretical tests use:
+
+```text
+/tests/authority
+/tests/provenance
+```
+
+Neither layer currently has an admitted production baseline.
 
 `production` means admitted for current use, not permanent or implemented in software.
 
