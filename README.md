@@ -117,10 +117,11 @@ A future LLM session should read the repository in this order:
 2. `current-step.md` — active operational context.
 3. `next-steps.md` — pending operational queue.
 4. `layers/cognitive/README.md` — cognitive-layer boundary and admission rules.
-5. `layers/cognitive/drafts/` — shaped but unproven cognitive artifacts, only if relevant.
-6. `tests/cognitive/` — cognitive scenarios and theoretical results, only when testing or tracing.
-7. `ideas.md` — raw pre-draft candidates, only if needed.
-8. `drafts/` — other shaped but unproven repository artifacts, only if relevant to the current step.
+5. `layers/cognitive/production/` — admitted cognitive baseline, when cognitive structure is relevant.
+6. `layers/cognitive/drafts/` — shaped but unproven cognitive artifacts, only if relevant.
+7. `tests/cognitive/` — cognitive scenarios and theoretical results, only when testing or tracing.
+8. `ideas.md` — raw pre-draft candidates, only if needed.
+9. `drafts/` — other shaped but unproven repository artifacts, only if relevant to the current step.
 
 Do not reconstruct intent from chat history before reading these files.
 
@@ -156,7 +157,7 @@ The default home for shaped but unproven artifacts is:
 /drafts
 ```
 
-Layer-specific artifacts live within their layer. Cognitive artifacts use:
+Layer-specific artifacts live within their layer. The admitted cognitive baseline is `CB-001`. Cognitive artifacts use:
 
 ```text
 /layers/cognitive/drafts
