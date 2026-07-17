@@ -41,6 +41,28 @@ Not every mission requires every optional artifact, but omitted decisions must b
 
 ---
 
+## Executive Mandate
+
+The versioned authority artifact binding a qualified, assigned CEO President to bounded Curia decision authority.
+
+Possible fields:
+
+```text
+Mandate identity and version:
+Mandating Principal and authority basis:
+Grantee Officer identity and specification:
+Standing Curia Assignment:
+Decision domain and mission scope:
+Permitted and prohibited decisions:
+Competence and counsel constraints:
+Effective interval:
+Suspension, withdrawal, expiry, and supersession rules:
+Authority-loss safe-state instruction:
+Status:
+```
+
+It does not qualify, admit, assign, or construct the CEO. Only an EFFECTIVE mandate supports a new substantive decision.
+
 ## Petition
 
 Secretariat-shaped operator intent entering mission formation.
@@ -178,7 +200,7 @@ It must not alter substantive findings.
 
 ## Traceability
 
-Every artifact preserves exact upstream version references.
+Every artifact preserves exact upstream version references. Every Curia decision also preserves the active CEO Officer Specification, Standing Curia Assignment, and Executive Mandate versions.
 
 Existing operatives remain bound to the canonical persona, doctrine, and canon versions from which they were recruited.
 
@@ -204,6 +226,8 @@ Review or revise this file if:
 - Ready For Launch is mistaken for launch
 - Mission Dossier is written without Inquisition evidence
 - tools or access lack authorization provenance
+- a CEO decision lacks an effective, matching Executive Mandate
+- authority vacancy silently transfers decision power
 - Final Report and Vellum collapse without decision
 - Delivery Package changes findings
 
