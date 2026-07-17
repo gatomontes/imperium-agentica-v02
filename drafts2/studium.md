@@ -6,7 +6,7 @@ Draft.
 
 This file defines the provisional Studium for Imperium v02.
 
-It supersedes the narrowed v02 Citadel as the candidate steward of Persona Governance Doctrine.
+It supersedes the narrowed v02 Citadel as the candidate steward of governance doctrine for both professional personas and Curial Officers.
 
 It does not admit a general legal authority, constitutional court, universal governance layer, or runtime enforcement service.
 
@@ -14,18 +14,23 @@ It does not admit a general legal authority, constitutional court, universal gov
 
 ## Purpose
 
-The Studium develops and stewards Persona Governance Doctrine.
+The Studium develops and stewards two distinct governance artifacts:
 
-It receives profession specifications from Guildhall and expresses the governable dimensions of professional practice as explicit doctrine that can be embodied in a persona and tested.
+- `Persona Governance Doctrine` for Foundry
+- `Officer Governance Doctrine` for Smith
 
-The Studium is concerned with how a synthetic practitioner must remain governable while practicing a profession.
+It receives Profession Specifications from Guildhall and expresses the governable dimensions of professional practice as doctrine embodied by Foundry.
+
+It also receives durable Advisory Role Requirements from Collegium and expresses the governable dimensions of Curial counsel as doctrine embodied by Smith.
+
+The two doctrines share a steward but must not be collapsed. A professional operative and a Curial Officer exercise different functions and authority.
 
 ---
 
 ## Core Question
 
 ```text
-What must a persona practicing this profession obey, expose, preserve, refuse, and escalate to remain governable?
+What must a persona or Officer obey, expose, preserve, refuse, and escalate to remain governable within its distinct role?
 ```
 
 ---
@@ -54,9 +59,9 @@ It does not grant authority merely because a human profession traditionally poss
 
 ## Product
 
-The Studium may produce and steward `Persona Governance Doctrine`.
+The Studium may produce and steward `Persona Governance Doctrine` and `Officer Governance Doctrine`.
 
-A doctrine artifact may include:
+A Persona Governance Doctrine may include:
 
 ```text
 Applicable profession:
@@ -69,6 +74,29 @@ Disclosure duties:
 Refusal conditions:
 Escalation triggers:
 Stop conditions:
+Accountability expectations:
+Violation signals:
+Open ambiguities:
+```
+
+An Officer Governance Doctrine may include:
+
+```text
+Applicable advisory role:
+Authorized advisory conduct:
+Mandatory evidence behavior:
+Prohibited decisions:
+Conditions upon access and participation:
+Uncertainty and disclosure duties:
+Dissent obligations:
+Conflict-of-interest conditions:
+Recusal conditions:
+Confidentiality duties:
+Escalation triggers:
+Relationship to President:
+Relationship to Chief of Staff:
+Relationship to Liaisons:
+Relationship to other Officers:
 Accountability expectations:
 Violation signals:
 Open ambiguities:
@@ -100,13 +128,27 @@ Studium may refine the doctrine without assuming Foundry's persona-engineering r
 
 ---
 
+## Relationship To Collegium And Smith
+
+Collegium supplies the durable Advisory Role Requirement after Preceptory reveals a justified standing capability gap.
+
+Studium authors the corresponding Officer Governance Doctrine.
+
+Smith embodies that doctrine alongside the Advisory Role Requirement and Officer-Trait Canon from The Gesta.
+
+Smith may return ambiguities, contradictions, or non-operable provisions to Studium without assuming doctrine authority.
+
+---
+
 ## Relationship To Pit
 
-The Pit tests whether the persona remains within Studium doctrine under pressure.
+Pit tests whether a persona remains within Persona Governance Doctrine under pressure.
 
-Failures may reveal weak persona construction, weak doctrine, or an unresolved contradiction between them.
+Spur tests whether an Officer remains within Officer Governance Doctrine under Curial pressure.
 
-Studium does not run the test or admit the persona.
+Failures may reveal weak construction, weak doctrine, or an unresolved contradiction between them.
+
+Studium does not run either test or admit either candidate.
 
 ---
 
@@ -117,7 +159,9 @@ The Studium must not:
 - become a synonym for all Imperium governance
 - define mission intent
 - redefine the profession without returning the issue to Guildhall
-- forge the persona
+- forge the persona or Officer
+- canonize human or Officer traits
+- determine Curia composition
 - package deployment-medium-specific assets
 - activate operatives
 - launch deployments
@@ -130,8 +174,10 @@ The Studium must not:
 
 ```text
 Guildhall specifies professional practice.
-Studium expresses how its persona remains governable.
-Foundry embodies both.
+Collegium specifies the durable advisory role.
+Studium authors the distinct governance doctrine.
+Foundry embodies Persona Governance Doctrine.
+Smith embodies Officer Governance Doctrine.
 ```
 
 ---
@@ -142,6 +188,7 @@ Review or revise this draft if:
 
 - Studium becomes a general governance layer
 - doctrine merely repeats the profession specification without transformation
-- Studium begins constructing personas
-- Foundry and Studium cannot maintain a meaningful cognitive boundary
-- Persona Governance Doctrine proves too minimal to justify separate stewardship
+- Studium begins constructing personas or Officers
+- Foundry, Smith, and Studium cannot maintain meaningful cognitive boundaries
+- either governance doctrine proves too minimal to justify separate stewardship
+- Persona Governance Doctrine and Officer Governance Doctrine become indistinguishable
