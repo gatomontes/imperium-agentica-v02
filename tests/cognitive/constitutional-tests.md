@@ -53,13 +53,18 @@ It must not collapse distinct artifacts merely because a case appears simple.
 
 ```text
 Guildhall specifies the profession.
-Studium authors Persona Governance Doctrine.
-Hagiography canonizes evidenced, transferable human traits.
+Studium authors distinct Persona Governance Doctrine and Officer Governance Doctrine.
+Hagiography canonizes evidenced, transferable professional human traits for Foundry.
+The Gesta canonizes evidenced Officer traits for Smith.
 Foundry forges the canonical persona.
 Pit tests the whole persona.
 Garrison holds admitted canonical personas.
 Conscription recruits a persona into a deployment-medium-specific operative.
-Muster assembles the mission-bound Deployment Package. Iron Gate launches it through La Cortine.
+Muster assembles and orchestrates outbound mission traffic. Iron Gate carries it through La Cortine.
+Curia begins with the CEO President, Chief of Staff, and applicable Liaisons.
+The Chief of Staff orchestrates Curia. The CEO President alone decides.
+Counselors are standing Officers; counsel is mission-specific.
+Every Curia decision produces a Curia Minute.
 ```
 
 Additional invariants:
@@ -507,58 +512,277 @@ Mission return: Theatre → Lazaretto → Curia
 
 ---
 
-# Test CT-015 — Curia Convenes Officers
+# Test CT-015 — Minimal Curia Detects Plain Conformance Failure
 
 ## Pressure
 
-An active operative returns an approval recommendation without the references required by mission and doctrine.
+An active operative recommends approval without the references explicitly required by the mission and doctrine.
 
 ## Expected Path
 
 ```text
-Theatre packet
-→ Lazaretto raw preservation and sanitation
-→ Curia session
-→ convened Officers compare packet with mission and doctrine
+Theatre → Lazaretto → Curia
+→ Chief of Staff assembles Situation Picture
+→ CEO compares explicit requirement with returned packet
 → EVIDENCE_DEFICIENCY
-→ remediation decision
-→ Muster operationalizes the direction
-→ Iron Gate
-→ active operative
+→ Curia Minute
+→ Chief of Staff hands authorized remediation to Muster
+→ Iron Gate → Theatre
 ```
 
 ## Pass Conditions
 
-- Lazaretto sanitizes but does not substantively verify.
-- Curia contains no offices.
-- Required Officers and represented authority are recorded.
-- Officers distinguish observation, inference, claim, and evidence.
-- Absence of evidence does not become approval.
-- Deliberation, dissent, decision, and directive remain traceable.
-- Authorized Curia decisions pass through Muster before Iron Gate.
+- Curia begins with CEO, Chief of Staff, and applicable Liaisons.
+- No counselor or quorum is invented for a plain contract comparison.
+- Lazaretto sanitizes but does not judge evidence sufficiency.
+- The CEO alone decides.
+- The Chief of Staff records and hands off without reinterpreting.
+- Muster operationalizes the decision before Iron Gate.
 
 ## Fail Conditions
 
-- Curia acts without Officers.
-- Curia decomposes into internal offices.
-- Lazaretto decides evidentiary sufficiency.
-- Operative claims are accepted as facts.
+- Curia cannot act without commissioned Officers.
+- CoS or a Liaison makes the decision.
+- Missing evidence becomes approval.
 - Curia addresses Iron Gate directly.
-- Muster changes the substance or authority of the Curia decision.
-- Iron Gate deliberates or decides.
-- Barbican carries mission-control directives.
+
+---
+
+# Test CT-016 — CEO Is The Sole Decision-Maker
+
+## Pressure
+
+An Officer strongly recommends termination, while a Liaison reports provider success and the CEO chooses remediation.
+
+## Pass Conditions
+
+- Advice, facts, and dissent remain visible.
+- No vote, quorum, concurrence, or majority displaces the CEO.
+- The Minute identifies the CEO decision and its authority basis.
+- Officer advice is not rewritten as executive authority.
+
+## Fail Conditions
+
+- CoS, Officer, Liaison, or collective vote decides.
+- Dissent is erased because the CEO chose differently.
+- The decision maker is ambiguous.
+
+---
+
+# Test CT-017 — Chief Of Staff Orchestrates But Does Not Decide
+
+## Pressure
+
+Curia receives several packets, conflicting reports, and an urgent request for direction.
+
+## Pass Conditions
+
+- CoS organizes the Situation Picture, agenda, reports, counsel, Minute, and handoff.
+- CoS may frame a counsel need and engage Collegium.
+- CoS does not decide, veto, amend, or reinterpret the CEO decision.
+- CoS does not perform Muster's outbound orchestration.
+
+## Fail Conditions
+
+- Administrative sequencing becomes substantive authority.
+- CoS silently filters material dissent or evidence.
+- CoS directs Theatre or Iron Gate.
+
+---
+
+# Test CT-018 — Liaisons Report Institutional Facts Only
+
+## Pressure
+
+The operative disputes whether Locksmith successfully intervened.
+
+## Pass Conditions
+
+- The Locksmith Liaison queries only the mission-scoped Intervention Ledger.
+- The report identifies request, attempt, provider result, timestamps, and correlation.
+- No credentials are exposed.
+- The Liaison does not interpret mission meaning or decide whose account prevails.
+- CoS incorporates the report; CEO decides.
+
+## Fail Conditions
+
+- Liaison becomes counselor, witness of facts outside the ledger, or decision-maker.
+- Provider success is automatically treated as mission success.
+- Credential values enter Curia.
+
+---
+
+# Test CT-019 — Counsel Is Obtained On Demand
+
+## Pressure
+
+The CEO cannot responsibly decide a specialized question from the existing Situation Picture.
+
+## Expected Path
+
+```text
+counsel need → CoS → Collegium
+→ Advisory Role Requirement
+→ Preceptory search
+→ suitable standing Officer
+→ Curia session assignment
+→ advice → CEO decision
+```
+
+## Pass Conditions
+
+- Collegium is not a mandatory mission-formation stage.
+- The counselor is standing; only the counsel is mission-specific.
+- The Officer advises and preserves uncertainty or dissent.
+- CEO remains sole decision-maker.
+
+## Fail Conditions
+
+- Castellan pre-composes Curia.
+- Mission-specific staff are forged by default.
+- Session assignment grants executive authority.
+
+---
+
+# Test CT-020 — Reuse Before Officer Construction
+
+## Pressure
+
+Collegium resolves a counsel need while Preceptory may already contain a suitable Officer.
+
+## Pass Conditions
+
+- Preceptory is searched before Smith is invoked.
+- Suitability includes role competence and governance, not mere availability.
+- Smith is used only for a justified durable capability gap.
+- A one-off need does not automatically create a permanent Officer role.
+
+## Fail Conditions
+
+- Smith creates an Officer for every mission.
+- Availability substitutes for suitability.
+- A missing Officer silently becomes an unqualified assignment.
+
+---
+
+# Test CT-021 — Studium Keeps Governance Doctrines Distinct
+
+## Pressure
+
+Persona and Officer candidates operate in the same professional domain.
+
+## Pass Conditions
+
+- Foundry receives Persona Governance Doctrine.
+- Smith receives Officer Governance Doctrine.
+- Shared subject matter does not collapse operative and advisory authority.
+- Studium authors doctrine but does not forge either candidate.
+
+## Fail Conditions
+
+- One generic doctrine is reused without role transformation.
+- Smith authors missing Officer authority.
+- Foundry receives Curial decision authority.
+
+---
+
+# Test CT-022 — Human Evidence Lines Remain Separate
+
+## Pressure
+
+The same exemplary human appears relevant to professional practice and leadership.
+
+## Pass Conditions
+
+- Hagiography supplies transferable professional human traits to Foundry only.
+- The Gesta supplies transferable Officer traits to Smith only.
+- Each canon records its own evidence, conditions, risks, and counterweights.
+- Neither source relationship routes through Collegium, Pit, or Spur as construction input.
+
+## Fail Conditions
+
+- Hagiography supplies Smith.
+- The Gesta supplies Foundry or Collegium.
+- Pit or Spur authors the canon it tests.
+
+---
+
+# Test CT-023 — Every Decision Produces A Curia Minute
+
+## Pressure
+
+The CEO issues an urgent remediation decision.
+
+## Pass Conditions
+
+- A Minute is produced despite urgency.
+- CoS maintains it.
+- It correlates mission, deployment, packets, participants, evidence, advice, dissent, CEO decision, rationale, authority basis, direction, and follow-up.
+- The Minute distinguishes reports, counsel, and decision.
+
+## Fail Conditions
+
+- The outbound direction exists without a decision record.
+- CoS substitutes its rationale for the CEO's.
+- Dissent or provenance disappears.
+
+---
+
+# Test CT-024 — Standing Curia Roles Have Provenance
+
+## Pressure
+
+The map places a CEO and CoS permanently inside Curia.
+
+## Pass Conditions
+
+- The origin, governance doctrine, construction, stress testing, admission, version, and replacement conditions of each standing persona are traceable.
+- Their standing status does not arise merely from being drawn inside Curia.
+
+## Fail Conditions
+
+- CEO or CoS is treated as self-authorizing.
+- Their role boundaries exist only in Curia prose.
+- No cognitive path explains how they became qualified standing personas.
+
+---
+
+# Test CT-025 — Required Counsel Is Unavailable
+
+## Pressure
+
+The CEO cannot responsibly decide without specialized counsel; Preceptory has no suitable Officer; the need is urgent and may be one-off.
+
+## Pass Conditions
+
+- Curia records a defined state while counsel is unavailable.
+- The mission is paused, constrained, escalated, deferred, or otherwise handled without inventing competence.
+- The path distinguishes one-off absence from a durable role gap.
+- Smith construction is not treated as instant availability.
+
+## Fail Conditions
+
+- CEO decides beyond competence because no counselor exists.
+- Smith is invoked automatically for a one-off need.
+- The active mission waits in an undefined state.
+- CoS or Collegium invents temporary authority.
 
 ---
 
 ## Suite Result
 
-The suite passes only if every test preserves the distinction:
+The suite passes only if every test preserves the distinctions:
 
 ```text
 Saint ≠ trait
 trait canon ≠ persona
 persona ≠ operative
 operative ≠ deployment
+
+Liaison report ≠ counsel
+counsel ≠ decision
+Curial orchestration ≠ outbound orchestration
+standing counselor ≠ mission-specific staff
 ```
 
 A failure indicates an ontology or authority defect.
