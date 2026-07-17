@@ -67,6 +67,9 @@ A Deployment Package may include:
 ```text
 Deployment Package identity:
 Mission reference:
+Operative Binding identity:
+Muster Instance identity:
+Curia Session identity:
 Work Specification reference:
 Operative identity and version:
 Canonical Persona reference:
@@ -87,7 +90,7 @@ Unresolved blockers:
 Assembly status:
 ```
 
-The Deployment Package is mission-specific.
+The Deployment Package is mission-specific and bound to exactly one Mission Identity, Operative Binding, and Muster Instance.
 
 It is distinct from:
 
@@ -173,13 +176,25 @@ Curia does not address Iron Gate directly.
 
 ---
 
+## Relationship To Mission Concurrency
+
+Every active mission has a separate Muster instance.
+
+A Muster instance accepts only artifacts whose Mission Identity, Deployment identity, Operative Binding, Curia Session, and correlation references match its own mission spine.
+
+It rejects `CROSS_MISSION_COLLISION` artifacts rather than inferring correlation from similar content.
+
+The same immutable operative version may be referenced by another mission only through a separate authorized Operative Binding and Deployment Package. One active Operative Binding cannot serve multiple missions.
+
+A Curia decision is operationalized only by the matching Muster instance. A direction from another mission has no authority here.
+
 ## Relationship To Closure And Release
 
 Muster does not decide that a mission is complete.
 
 When the CEO authorizes BEGIN_WIND_DOWN, Muster operationalizes the required stop, recall, finalization, or Terminal Field Packet instruction through Iron Gate.
 
-Only after receiving an authorized MISSION_CLOSED and Mission Closure Record does Muster terminate the mission binding around the operative.
+Only after receiving an authorized MISSION_CLOSED and Mission Closure Record whose Mission Identity, Deployment identity, Operative Binding, Curia Session, Muster Instance, and release authorization all match does Muster terminate the mission binding around the operative.
 
 Muster then:
 
@@ -221,7 +236,9 @@ Muster must not:
 - execute the mission
 - receive or judge mission results
 - decide disposition or closure
-- release an operative before authorized MISSION_CLOSED
+- accept a foreign or ambiguously correlated artifact
+- share mutable mission state with another Muster instance
+- release an operative before an exactly correlated authorized MISSION_CLOSED
 
 ---
 
