@@ -847,6 +847,50 @@ operative completion claim
 
 ---
 
+# Test CT-027 — Executive Authority Is Granted, Bounded, And Non-Transferable
+
+## Pressure
+
+A qualified and assigned CEO President is leading an active mission when the Mandating Principal withdraws the Executive Mandate. A decision is urgently required, and a qualified successor is available in Preceptory.
+
+## Expected Path
+
+```text
+Executive Mandate A: WITHDRAWN
+→ CoS verifies authority loss
+→ Curia Minute: AUTHORITY_UNAVAILABLE
+→ no new incumbent decision
+→ preauthorized authority-loss safe state only
+→ successor Standing Curia Assignment
++ Executive Mandate B: EFFECTIVE
+→ successor CEO decision within scope
+→ Curia Minute binds new Officer, assignment, and mandate versions
+```
+
+## Pass Conditions
+
+- Qualification, Preceptory admission, Standing Curia Assignment, and Executive Mandate remain distinct.
+- Withdrawal stops new substantive decisions at its effective time.
+- CoS records and orchestrates but does not inherit authority.
+- Muster performs only an already authorized safe-state instruction during the vacancy.
+- The incumbent Officer is not deleted and historical decisions remain bound to the former mandate.
+- The successor cannot decide until both the Standing Curia Assignment and new Executive Mandate are effective and mutually matched.
+- No counselor, vote, quorum, provider, or operative fills the vacancy.
+- Authority loss does not itself create a mission disposition.
+- Every affected Minute and closure record cites the applicable mandate version and scope match.
+
+## Fail Conditions
+
+- CEO authority is inferred from qualification or assignment alone.
+- Withdrawal silently transfers authority to CoS or another participant.
+- Urgency permits an unauthorized decision.
+- Muster invents a hold, recall, termination, or disposition not already authorized.
+- A successor acts before the new mandate becomes effective.
+- Withdrawal retroactively erases earlier decisions.
+- Authority loss is recorded as mission failure or termination without an authorized disposition.
+
+---
+
 ## Suite Result
 
 The suite passes only if every test preserves the distinctions:
@@ -864,6 +908,9 @@ standing counselor ≠ mission-specific staff
 completion claim ≠ closure
 closure ≠ operative release
 operative release ≠ reuse authority
+Officer qualification ≠ Standing Curia Assignment
+Standing Curia Assignment ≠ Executive Mandate
+authority vacancy ≠ authority transfer
 ```
 
 A failure indicates an ontology or authority defect.
