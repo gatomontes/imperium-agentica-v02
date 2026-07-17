@@ -71,6 +71,8 @@ The Operative executes within Theatre.
 
 Curia does not analyze or decide independently.
 
+Every concurrent mission has a separate Curia Session identity and mutable Situation Picture. Shared Officer, doctrine, persona, and mandate records are referenced by version; mission state is never merged.
+
 The Chief of Staff organizes Curial activity but has no substantive decision authority. Convened Officers provide counsel. The CEO President alone decides.
 
 ---
@@ -134,6 +136,16 @@ Smith is invoked only when the missing capability represents a justified, durabl
 Preceptory holds reusable Citadel Officers. Praetorium remains reserved for future Imperium Officers at the outer echelon.
 
 ---
+
+## Concurrent Sessions And Capacity
+
+Before a mission-specific Curia session becomes OPEN, the Chief of Staff records a Session Admission Finding covering CEO availability, CoS availability, Executive Mandate scope, conflicting commitments, and applicable capacity constraints.
+
+If either standing role cannot responsibly serve the session, the session enters `PENDING_STANDING_ROLE` or `DECISION_WITHHELD_CAPACITY`.
+
+Capacity unavailability does not create an acting CEO or CoS, transfer authority, merge sessions, or authorize a new hold or disposition. The mission remains inside its already authorized envelope or safe state.
+
+Packets, provider views, counsel assignments, Minutes, closure records, and release references must match the session's Mission Identity. A mismatch produces `CROSS_MISSION_COLLISION` and quarantine or rejection, not inferred correlation.
 
 ## Counsel Unavailable
 
@@ -229,6 +241,10 @@ The Minute may include:
 ```text
 Mission:
 Deployment:
+Curia Session identity:
+Muster Instance identity:
+Operative Binding identity:
+Session Admission Finding and capacity state:
 Packet set:
 Situation picture:
 President Officer Specification + Standing Assignment:
@@ -342,7 +358,9 @@ Curia must not:
 - allow the Chief of Staff, an Officer, quorum, or majority to displace the President's sole decision authority
 - conceal which authority made a decision
 - permit a CEO decision without an effective, matching, in-scope Executive Mandate
-- transfer decision authority by vacancy
+- transfer decision authority by vacancy or capacity exhaustion
+- merge mutable mission state across concurrent Curia sessions
+- infer mission correlation from semantic similarity
 - treat operative claims as verified merely because they arrived
 - bypass Lazaretto sanitation
 - directly provide Armory or Locksmith services
