@@ -10,7 +10,7 @@ This file records the current official cognitive map for Imperium v02.
 
 Official means active for orientation, drafting, and constitutional testing.
 
-The verified diagram preserves both conditional production searches, the Curial Officer line, outbound mission orchestration, and the three dedicated Cortine ports.
+The verified diagram preserves both conditional production searches, the Curial Officer line, outbound mission orchestration, and the three dedicated Cortine ports. Concurrent missions instantiate separate mission-bound Muster and Curia surfaces.
 
 The Curia composition has since been refined: a standing CEO President is the sole decision-maker under an effective Executive Mandate; a standing Chief of Staff owns Curial Orchestration and verifies mandate status and scope; the Chief of Staff directly reads permitted mission-scoped provider audit views; and Collegium is engaged on demand by the Chief of Staff when distinct counsel becomes necessary.
 
@@ -268,6 +268,7 @@ Assembles an existing operative for a particular mission.
 
 ```text
 Input: Operative + authorized mission requirements
+Per mission: unique Operative Binding + Muster Instance + Curia Session correlation
 Product: mission-bound Deployment Package
 Does not: select or forge persona, recruit, launch, execute, rewrite doctrine, or judge returns
 ```
@@ -292,6 +293,9 @@ deployment ≠ return
 completion claim ≠ closure
 closure ≠ operative release
 operative release ≠ reuse authority
+shared governed reference ≠ shared mission state
+standing role ≠ unlimited capacity
+one mission closure ≠ another mission release
 Mission Closure Record ≠ Final Report
 ```
 
@@ -405,7 +409,7 @@ Theatre
 → Theatre
 ```
 
-Curia begins with the standing CEO President and the standing Chief of Staff. The Chief of Staff reads applicable provider audit views and orchestrates the session and engages Collegium when counsel is needed. Officers advise; the CEO alone decides. The Chief of Staff records and hands the authorized decision to Muster.
+Each mission has a distinct Curia Session identity. Curia begins with the standing CEO President and the standing Chief of Staff. The Chief of Staff reads applicable provider audit views and orchestrates the session and engages Collegium when counsel is needed. Officers advise; the CEO alone decides. The Chief of Staff records and hands the authorized decision to Muster.
 
 Muster owns outbound mission orchestration. It operationalizes the authorized Curia decision without changing its substance or authority.
 
@@ -443,6 +447,8 @@ Theatre
 → Secretariat
 → Operator
 ```
+
+Closure and release require an exact Mission, Deployment, Operative Binding, Curia Session, and Muster Instance match. One mission cannot close or release another.
 
 An operative completion claim is not closure. Lazaretto does not decide completion. The CEO closes. Muster releases the mission binding. Scribes report.
 
