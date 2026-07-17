@@ -49,7 +49,6 @@ Present:
 
 - CEO President
 - Chief of Staff
-- no provider Liaison required
 - no counselor initially assigned
 
 The Chief of Staff places the packet beside the explicit Work Specification and doctrine. This is a direct contract comparison; no specialized counselor is required.
@@ -77,7 +76,7 @@ The Chief of Staff records:
 - mission, deployment, and packet correlation
 - explicit evidence requirement
 - returned claim and missing artifacts
-- absence of Liaisons and counselors
+- absence of counselors and provider audit queries
 - CEO finding, decision, rationale, and authority basis
 - outbound remediation direction
 
