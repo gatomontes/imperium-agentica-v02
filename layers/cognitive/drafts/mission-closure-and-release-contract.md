@@ -111,7 +111,7 @@ The Chief of Staff assembles a Terminal Situation Picture from:
 - unresolved obligations, uncertainty, and dissent
 - confirmation of execution cessation or its unresolved status
 
-The CEO alone decides whether to return for more work or issue:
+The CEO alone, under an effective Executive Mandate covering the terminal decision, decides whether to return for more work or issue:
 
 ```text
 MISSION_CLOSED
@@ -121,7 +121,7 @@ MISSION_CLOSED
 + accepted unresolved matters
 ```
 
-Every closure decision produces a final Curia Minute and Mission Closure Record.
+Every closure decision produces a final Curia Minute and Mission Closure Record. Authority loss alone is not a terminal disposition. Without an effective mandate, closure is withheld unless a previously authorized terminal safe-state instruction explicitly supplies the permitted disposition and conditions.
 
 ## Mission Closure Record
 
@@ -138,6 +138,7 @@ Unfinished work:
 Outstanding effects and obligations:
 Final disposition:
 CEO specification and Standing Assignment:
+Executive Mandate identity, version, status, Principal, and scope match:
 CoS specification and Standing Assignment:
 Counsel and dissent:
 Decision rationale:
@@ -206,6 +207,7 @@ This contract does not allow:
 - an operative to close its own mission
 - Lazaretto to decide completion
 - CoS to choose disposition
+- any participant to inherit closure authority from a mandate vacancy
 - Muster to judge results
 - Scribes to revise the closure decision
 - closure merely because work stopped
