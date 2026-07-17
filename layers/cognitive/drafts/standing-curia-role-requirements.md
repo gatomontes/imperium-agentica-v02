@@ -6,7 +6,7 @@ Draft constitutional input.
 
 This artifact defines the minimum qualification requirements for the two standing personas resident in Curia.
 
-It addresses provenance and fitness. It does not establish the ultimate source of executive authority.
+It addresses provenance, fitness, and placement. It does not itself create executive authority; that authority is recorded separately by an effective Executive Mandate.
 
 ## Officer Classes
 
@@ -29,7 +29,7 @@ Current roles:
 | Chief of Staff | Staff Officer | Standing Curia Assignment |
 | Counselor | Advisory Officer | Curia Session Assignment |
 
-A standing assignment is not a mission-specific commission.
+A standing assignment is not a mission-specific commission and is not an Executive Mandate.
 
 ## CEO President Requirement
 
@@ -106,10 +106,10 @@ Assignment effective time:
 Assignment status:
 Supersedes:
 Replacement conditions:
-Authority instrument reference when admitted:
+Executive Mandate reference when effective:
 ```
 
-Every Curia Minute identifies the standing CEO and CoS specification versions in force for that session.
+Every Curia Minute identifies the standing CEO and CoS specification versions in force for that session and the effective Executive Mandate version supporting any CEO decision.
 
 ## Replacement And Supersession
 
@@ -126,7 +126,7 @@ Replacement review is triggered by:
 - inability to perform the standing function
 - an admitted authority instruction when such authority exists
 
-Who ultimately authorizes executive appointment or removal remains part of the deferred upper-echelon authority question.
+Executive authority is granted, constrained, suspended, withdrawn, or superseded through the Executive Mandate. The Mandating Principal is recorded as an artifact role without yet admitting a final upper-echelon institution. Replacement is not complete until the admitted successor has both a Standing Curia Assignment and an effective Executive Mandate.
 
 ## Boundary Maxim
 
@@ -135,5 +135,6 @@ Smith constructs fitness for a role.
 Spur tests it.
 Preceptory admits it.
 Standing assignment places it.
-None of these alone creates executive authority.
+The Executive Mandate authorizes it.
+None of qualification, admission, or assignment alone creates executive authority.
 ```
