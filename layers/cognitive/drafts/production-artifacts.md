@@ -206,3 +206,26 @@ Review or revise this file if:
 - tools or access lack authorization provenance
 - Final Report and Vellum collapse without decision
 - Delivery Package changes findings
+
+## Terminal Mission Artifacts
+
+### Terminal Field Packet
+
+Theatre's final correlated return. It is a completion claim and cessation report, not closure authority.
+
+### Mission Closure Record
+
+The CEO-authorized terminal assessment, disposition, unresolved obligations, authority basis, and release authorization.
+
+### Operative Release Record
+
+Muster's record that the mission binding, scoped tools, and scoped access have been ended or explicitly left unresolved after MISSION_CLOSED.
+
+```text
+Terminal Field Packet ≠ Mission Closure Record
+Mission Closure Record ≠ Operative Release Record
+Operative Release Record ≠ reuse authority
+```
+
+---
+
