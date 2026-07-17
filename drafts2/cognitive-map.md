@@ -12,7 +12,7 @@ Official means active for orientation, drafting, and constitutional testing.
 
 The verified diagram preserves both conditional production searches, the Curial Officer line, outbound mission orchestration, and the three dedicated Cortine ports.
 
-The Curia composition has since been refined: a standing CEO President is the sole decision-maker; applicable Liaisons are standing institutional interfaces; and Collegium is activated on demand by the CEO during a mission when distinct counsel becomes necessary.
+The Curia composition has since been refined: a standing CEO President is the sole decision-maker; a standing Chief of Staff owns Curial Orchestration; applicable Liaisons are standing institutional interfaces; and Collegium is engaged on demand by the Chief of Staff when distinct counsel becomes necessary.
 
 It does not admit runtime architecture, implementation topology, database schema, service layout, UI design, autonomous external authority, or final terminology.
 
@@ -213,22 +213,24 @@ If the medium cannot preserve required competence, doctrine, or traits, Conscrip
 
 ### CEO-Led Curia And Citadel Officer Line
 
-Curia initially consists of the standing CEO President and applicable standing institutional Liaisons.
+Curia initially consists of the standing CEO President, the standing Chief of Staff, and applicable standing institutional Liaisons.
 
-The CEO is the sole decision-maker. Liaisons report provider facts and do not deliberate or decide.
+The Chief of Staff owns Curial Orchestration. The CEO is the sole decision-maker. Liaisons report provider facts and do not deliberate or decide.
 
 ```text
 active Curia session
-→ CEO identifies a counsel need
-→ CEO activates Collegium
-↔ The Gesta for applicable Officer traits
+→ counsel need arises
+→ Chief of Staff engages Collegium
 → Advisory Role Requirement
 → Preceptory search
     ├── suitable standing Officer found → Curia session assignment
-    └── durable role absent → Smith → Spur → Preceptory → Curia session assignment
+    └── durable role absent → Smith ← The Gesta → Officer-Trait Canon
+                              → Spur → Preceptory → Curia session assignment
 → Officer advises
+→ Chief of Staff organizes counsel and record
 → CEO decides
 → Curia Minute
+→ Chief of Staff hands authorized decision to Muster
 ```
 
 The counselor is standing; the counsel is mission-specific.
@@ -380,7 +382,7 @@ Theatre
 → Theatre
 ```
 
-Curia begins with the standing CEO President and applicable Liaisons. The CEO may activate Collegium to obtain counsel from suitable standing Officers. Officers advise; the CEO alone decides.
+Curia begins with the standing CEO President, the standing Chief of Staff, and applicable Liaisons. The Chief of Staff orchestrates the session and engages Collegium when counsel is needed. Officers advise; the CEO alone decides. The Chief of Staff records and hands the authorized decision to Muster.
 
 Muster owns outbound mission orchestration. It operationalizes the authorized Curia decision without changing its substance or authority.
 
@@ -444,8 +446,9 @@ Existing operatives remain bound to the persona, doctrine, and canon versions fr
 ## Orchestration Boundaries
 
 ```text
-Castellan = mission orchestration
-Muster = mission assembly
+Castellan = mission formation
+Chief of Staff = Curial Orchestration
+Muster = outbound mission orchestration
 Conscription = recruitment process, not orchestration
 ```
 
@@ -491,7 +494,8 @@ Conscription recruits a persona into an operative.
 Muster assembles the operative into a mission-bound Deployment Package.
 Iron Gate performs the launch crossing.
 Lazaretto receives.
-Curia finds.
+The Chief of Staff orchestrates Curia.
+The CEO decides.
 Chamber of Scribes reports.
 Secretariat delivers.
 ```
