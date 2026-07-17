@@ -24,17 +24,58 @@ Intervention class:
 Requested action:
 Requested scope:
 Request timestamp:
-Entitlement result:
-Provider decision:
-Operation attempted:
-Operation result:
-Success / failure:
-Refusal class:
-Failure class:
+Entitlement status:
+Credential resolution status:
+Authentication status:
+Operation submission status:
+Operation completion status:
+Result-delivery status:
+Provider-observed result reference:
+Refusal stage and class:
+Failure stage and class:
+Unknown or pending stages:
 Response timestamp:
 Correlation identity:
 Applicable policy reference:
 ```
+
+## Staged Outcome Semantics
+
+An Intervention Ledger must not contain an unqualified `success` or `failure` field.
+
+Each stage records only the provider-observed state of that stage:
+
+```text
+Entitlement status:
+NOT_EVALUATED | AUTHORIZED | DENIED | EXPIRED | UNKNOWN
+
+Credential resolution status:
+NOT_REQUIRED | NOT_ATTEMPTED | RESOLVED | FAILED | UNKNOWN
+
+Authentication status:
+NOT_REQUIRED | NOT_ATTEMPTED | ACCEPTED | REJECTED | UNKNOWN
+
+Operation submission status:
+NOT_ATTEMPTED | ACCEPTED | REJECTED | UNKNOWN
+
+Operation completion status:
+NOT_OBSERVED | PENDING | COMPLETED | FAILED | UNKNOWN
+
+Result-delivery status:
+NOT_EXPECTED | PENDING | DELIVERED | PARTIAL | FAILED | UNKNOWN
+```
+
+A later stage must not retroactively redefine an earlier stage.
+
+Examples:
+
+- authentication `ACCEPTED` does not imply operation `COMPLETED`
+- operation `COMPLETED` does not imply result `DELIVERED`
+- result `DELIVERED` does not imply the mission objective succeeded
+
+The provider ledger does not record mission success. It records intervention-stage facts only.
+
+Unknown, pending, not attempted, not required, and not observed are distinct. Absence of a later-stage observation must not be converted into success or failure.
 
 Locksmith records credential-backed activity without recording or exposing credential values.
 
