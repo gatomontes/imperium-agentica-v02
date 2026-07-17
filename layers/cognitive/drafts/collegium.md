@@ -66,7 +66,7 @@ One-off or durable assessment:
 
 Collegium searches Preceptory for a suitable standing Officer.
 
-If one exists, Collegium assigns that Officer to the active Curia session as counselor. The Officer advises; the CEO remains the sole decision-maker.
+If one exists, Collegium returns the suitability match to the Chief of Staff. The Chief of Staff records a Curia Session Assignment binding that Officer to the active session as counselor. The Officer advises; the CEO remains the sole decision-maker.
 
 If no suitable Officer exists, Collegium returns `COUNSEL_UNAVAILABLE` and a Capability Gap Record to Curia.
 
@@ -76,7 +76,7 @@ Collegium may refer a justified durable role gap to Smith. A one-off mission nee
 
 When a durable role gap is admitted, Collegium supplies its Advisory Role Requirement to Studium for Officer Governance Doctrine and to Smith for construction. The Gesta supports Smith with the applicable Officer-Trait Canon.
 
-Collegium does not author governance doctrine, select traits, forge, test, admit, commission, convene, or grant decision authority.
+Collegium does not author governance doctrine, select traits, forge, test, admit, bind the session assignment, convene, or grant decision authority.
 
 ## Boundary Maxim
 
