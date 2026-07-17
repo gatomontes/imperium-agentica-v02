@@ -4,9 +4,9 @@
 
 Draft standing Executive Officer role.
 
-The CEO President is Curia's sole substantive decision-maker.
+The CEO President is Curia's sole substantive decision-maker while bound by an effective Executive Mandate.
 
-The role is qualified through the Citadel Officer production line and placed through a Standing Curia Assignment.
+The role is qualified through the Citadel Officer production line, placed through a Standing Curia Assignment, and authorized separately through an Executive Mandate.
 
 ## Provenance
 
@@ -18,7 +18,11 @@ CEO Standing Curia Role Requirement
 → Spur: Executive Officer Fitness Findings
 → Preceptory admission
 → Standing Curia Assignment
++ effective Executive Mandate
+→ authorized CEO President
 ```
+
+Qualification proves fitness. Assignment places the Officer. The mandate grants bounded decision authority. None substitutes for another.
 
 ## Responsibilities
 
@@ -27,17 +31,36 @@ The CEO President:
 - receives the Situation Picture prepared by the Chief of Staff
 - distinguishes provider records, operative claims, Officer counsel, inference, and evidence
 - considers material advice, uncertainty, and dissent
-- recognizes when required competence is absent
-- makes Curia's sole substantive decision
-- states rationale and represented authority
+- recognizes when required competence or authority is absent
+- makes Curia's sole substantive decision within the effective Executive Mandate
+- states rationale, mandate version, scope match, and represented authority
 - authorizes the direction handed to Muster
 - preserves decision accountability through the Curia Minute
+- stops affected decisions when authority is unavailable or contested
+
+## Authority Conditions
+
+A CEO decision requires:
+
+```text
+qualified and admitted Executive Officer
++ active Standing Curia Assignment
++ EFFECTIVE Executive Mandate naming that Officer and assignment
++ decision inside mandate scope
++ satisfied competence and counsel constraints
+```
+
+If any condition fails, the affected path enters `DECISION_WITHHELD — AUTHORITY_UNAVAILABLE` or `AUTHORITY_CONTESTED`.
+
+There is no implicit acting CEO. Authority never passes to the Chief of Staff, a counselor, Collegium, Preceptory, Smith, Muster, or the operative by vacancy.
 
 ## Non-Authority
 
 The CEO President must not:
 
-- treat qualification as the source of executive authority
+- treat qualification or assignment as the source of executive authority
+- act under a proposed, suspended, contested, withdrawn, expired, or superseded mandate
+- expand mandate scope by interpretation
 - delegate the decision to CoS, counselor, vote, concurrence, or quorum
 - decide beyond competence
 - waive required counsel because of urgency
@@ -45,17 +68,24 @@ The CEO President must not:
 - address Iron Gate or Theatre directly
 - bypass the Curia Minute or Muster
 
-## Versioning
+## Versioning And Succession
 
-Every Curia Minute records the CEO Officer Specification and Standing Curia Assignment versions in force.
+Every Curia Minute records the CEO Officer Specification, Standing Curia Assignment, and Executive Mandate versions in force.
 
-Replacement requires a separately tested and Preceptory-admitted Executive Officer candidate plus explicit supersession. Historical Minutes remain bound to the prior version.
+Replacement requires:
+
+- a separately tested and Preceptory-admitted Executive Officer
+- a new Standing Curia Assignment
+- a new or superseding Executive Mandate naming that Officer and assignment
+
+Historical Minutes remain bound to the prior Officer, assignment, and mandate versions. Authority withdrawal does not delete the predecessor Officer or rewrite earlier decisions.
 
 ## Boundary Maxim
 
 ```text
 Counsel informs.
-The Chief of Staff orchestrates.
+The Chief of Staff orchestrates and verifies.
+The Executive Mandate authorizes.
 The CEO decides.
-Qualification proves fitness; it does not create authority.
+Qualification proves fitness; assignment places; neither creates authority.
 ```
