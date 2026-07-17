@@ -2,13 +2,46 @@
 
 ## Status
 
-No active step.
+Active.
 
-Fresh-chat handoff prepared on 2026-07-17.
+Activated by operator on 2026-07-17.
 
 This file is not doctrine, a roadmap, or architecture.
 
 It is the operational continuity surface for the currently active step.
+
+---
+
+## Active Step
+
+Define the procedural-layer boundary and decide its repository structure before translating CB-001 into procedures.
+
+## Objective
+
+Distinguish:
+
+```text
+cognitive responsibility
+≠ procedure
+≠ runtime implementation
+```
+
+Then propose the smallest procedural draft structure and the first narrow path to trace.
+
+## Required Product
+
+- a procedural-layer boundary proposal
+- draft and production admission boundaries
+- a minimal procedure artifact contract
+- a recommended first procedure
+- explicit non-admissions
+- operator approval or revision
+
+## Current Constraint
+
+Do not create `layers/procedural/`, `tests/procedural/`, or any procedure artifact until the operator approves the proposed boundary and structure.
+
+Procedures must cite CB-001. They must not redefine cognitive ownership or introduce runtime machinery.
 
 ---
 
@@ -39,9 +72,7 @@ Procedural and runtime layers remain unadmitted and unimplemented.
 
 ---
 
-## Fresh-Chat Reading Order
-
-A new session must read:
+## Active-Step Reading Set
 
 1. `README.md`
 2. `current-step.md`
@@ -50,31 +81,10 @@ A new session must read:
 5. `layers/cognitive/production/README.md`
 6. `layers/cognitive/production/cognitive-map.md`
 7. `layers/cognitive/production/lifecycle.md`
-8. `tests/cognitive/README.md`
-9. `tests/cognitive/constitutional-test-run-015.md`
-10. `tests/cognitive/production-admission-review-003.md`
-
-Do not reconstruct the project from prior chat history before reading these files.
-
----
-
-## Next Eligible Step
-
-Define the procedural-layer boundary and decide its repository structure before translating CB-001 into procedures.
-
-The new session should first distinguish:
-
-```text
-cognitive responsibility
-≠ procedure
-≠ runtime implementation
-```
-
-It should then recommend the smallest procedural draft structure and the first narrow path to trace.
-
-Do not create the procedural layer until the operator approves that boundary and structure.
-
-See `next-steps.md`.
+8. `layers/cognitive/production/production-artifacts.md`
+9. `tests/cognitive/README.md`
+10. `tests/cognitive/constitutional-test-run-015.md`
+11. `tests/cognitive/production-admission-review-003.md`
 
 ---
 
