@@ -92,20 +92,30 @@ These are semantic findings, not runtime states.
 
 Only `AUTHORITY_EFFECTIVE` for the exact action and scope supports a new authorized action.
 
-## Existing Specialized Contracts
+## Grant Profile Model
 
-Candidate specializations:
+The tested profile model is defined in:
 
-- Executive Mandate — CEO decision authority
-- Tool Grant — mission-scoped capability authority
-- Access Grant — mission-scoped access authority
-- mission authority — authorization to form and bind a mission
-- launch authority — authorization for outward external action
-- closure authority — authorization for terminal disposition
+```text
+authority-grant-profiles.md
+```
 
-Standing and session assignments are placement or participation contracts. They are not automatically Authority Grants.
+Current profiles:
 
-Admission recommendations are not admission authority.
+```text
+INTERNAL_ADMISSION
+INTERNAL_PLACEMENT
+MISSION_ENVELOPE
+EXECUTIVE_DECISION
+CAPABILITY_TOOL
+CAPABILITY_ACCESS
+```
+
+Executive Mandate, Tool Grant, and Access Grant remain specialized native authority artifacts.
+
+Standing and session assignments remain placement or participation contracts rather than substantive grants.
+
+Launch, closure, and release remain explicit Mission Envelope actions or authorized consequences. They do not require separate root grant profiles.
 
 ## Provenance Boundary
 
