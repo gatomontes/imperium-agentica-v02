@@ -104,7 +104,7 @@ SUPERSEDED:
 replaced by a later mandate version
 ```
 
-Only an EFFECTIVE mandate supports a new substantive Curia decision.
+Only an EFFECTIVE mandate supports a new substantive Curia decision. Mandate scope does not prove that the standing CEO or CoS has capacity to serve a particular concurrent session.
 
 ## Authority Verification
 
@@ -176,6 +176,7 @@ The Executive Mandate must not:
 - erase competence or required-counsel limits
 - retroactively rewrite historical decisions
 - turn authority loss into an inferred mission disposition
+- imply unlimited session capacity
 - admit Praetorium or another upper-echelon institution by implication
 
 ## Boundary Maxim
