@@ -10,7 +10,7 @@ It contains no offices.
 
 Its initial standing composition is deliberately minimal:
 
-- one CEO persona serving as President and sole decision-maker
+- one CEO persona serving as President and sole decision-maker under an effective Executive Mandate
 - one Chief of Staff persona responsible for Curial Orchestration
 
 Curia may later convene advisory Officers when the Chief of Staff engages Collegium during a mission.
@@ -48,6 +48,9 @@ an Advisory Officer given a mission-specific Curia Session Assignment
 Provider audit view:
 a mission-scoped, read-only projection of an Armory or Locksmith Intervention Ledger available to the Chief of Staff
 
+Executive Mandate:
+the versioned artifact by which represented authority grants bounded decision authority to the qualified and assigned CEO President
+
 Curia:
 the shared surface on which the President receives reports and counsel, then decides and directs
 
@@ -56,6 +59,8 @@ President ≠ Chief of Staff
 Chief of Staff ≠ Muster
 Officer ≠ Operative
 provider record ≠ mission judgment
+Officer qualification ≠ Standing Curia Assignment
+Standing Curia Assignment ≠ Executive Mandate
 
 The Chief of Staff orchestrates Curia and reads permitted provider audit views.
 The President decides.
@@ -102,7 +107,7 @@ Curia may place these beside:
 
 Curia does not require Collegium to pre-compose every mission.
 
-A mission begins with the Executive Officer and Staff Officer identified by the current Standing Curia Assignments. No counselor, quorum, or mission-dedicated Officer corps is presumed.
+A mission begins with the Executive Officer and Staff Officer identified by the current Standing Curia Assignments. The CEO may decide only while an effective Executive Mandate names that Officer and assignment and covers the mission and decision. No counselor, quorum, or mission-dedicated Officer corps is presumed.
 
 During the mission, a need for distinct counsel may arise. The Chief of Staff frames that need and engages Collegium as part of Curial Orchestration.
 
@@ -172,14 +177,16 @@ The Chief of Staff:
 - frames counsel needs and engages Collegium
 - brings session-assigned Officers and their counsel into Curia
 - ensures findings, evidence, uncertainty, and dissent reach the President
+- verifies the Executive Mandate identity, status, grantee, assignment, effective interval, and scope match
+- records AUTHORITY_UNAVAILABLE or AUTHORITY_CONTESTED without granting or inheriting authority
 - maintains the Curia Minute
 - hands the President's authorized decision to Muster without reinterpretation
 
 The CEO President:
 
 - receives the organized Situation Picture, provider audit records, and any Officer counsel
-- remains the sole Curia decision-maker
-- states the decision, rationale, and authority basis
+- remains the sole Curia decision-maker while the Executive Mandate is effective and in scope
+- states the decision, rationale, Executive Mandate version, scope match, and authority basis
 - authorizes the direction handed to Muster
 
 Convened Officers may:
@@ -225,6 +232,9 @@ Deployment:
 Packet set:
 Situation picture:
 President Officer Specification + Standing Assignment:
+Executive Mandate identity, version, status, and Mandating Principal:
+Mandate scope match and authority verification:
+Authority deficiency or contest:
 Chief of Staff Officer Specification + Standing Assignment:
 Provider audit views and staged outcomes queried:
 Officers convened:
@@ -286,7 +296,7 @@ closure assessment
 → Muster Operative Release Record
 ```
 
-The CEO alone selects COMPLETED, PARTIALLY_COMPLETED, FAILED, or TERMINATED.
+The CEO alone selects COMPLETED, PARTIALLY_COMPLETED, FAILED, or TERMINATED under an effective Executive Mandate covering the terminal decision. Authority loss does not itself create a disposition.
 
 If no terminal packet can be obtained, its absence remains explicit and may not be converted into successful completion.
 
@@ -331,6 +341,8 @@ Curia must not:
 - require convened Officers before a demonstrated counsel need exists
 - allow the Chief of Staff, an Officer, quorum, or majority to displace the President's sole decision authority
 - conceal which authority made a decision
+- permit a CEO decision without an effective, matching, in-scope Executive Mandate
+- transfer decision authority by vacancy
 - treat operative claims as verified merely because they arrived
 - bypass Lazaretto sanitation
 - directly provide Armory or Locksmith services
@@ -355,6 +367,7 @@ Providers record.
 The Chief of Staff reads and correlates.
 Officers counsel when called.
 The Chief of Staff orchestrates Curia.
+The Executive Mandate authorizes.
 The President decides.
 Muster orchestrates direction outward.
 Iron Gate carries the crossing.
