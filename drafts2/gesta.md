@@ -102,14 +102,6 @@ Failure signals:
 Open questions:
 ```
 
-## Relationship To Collegium
-
-Collegium may request Officer traits and counterweights applicable to a mission's Curia composition.
-
-The Gesta supplies evidenced Officer-Trait Canon.
-
-Collegium determines which Officer roles, represented authority, and trait requirements the mission needs.
-
 ## Relationship To Smith
 
 Smith embodies the applicable Officer-Trait Canon in an Officer Specification Candidate.
@@ -132,6 +124,8 @@ The Gesta must not define mission intent, determine Curia composition, define Of
 Hagiography studies exemplary professional humanity.
 The Gesta studies exemplary Officer conduct.
 Collegium specifies the Curial need.
-Smith embodies the Officer canon.
+Studium authors Officer Governance Doctrine.
+The Gesta supports Smith with Officer-Trait Canon.
+Smith embodies doctrine and canon.
 Spur tests it under pressure.
 ```
