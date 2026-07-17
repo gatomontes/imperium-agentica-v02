@@ -12,34 +12,37 @@ It is the operational continuity surface for the currently active step.
 
 ## Last Completed Step
 
-Close the cognitive production-admission evidence gap and repeat the admission review.
+Promote Cognitive Baseline CB-001 from cognitive drafts into cognitive production.
 
 ## Result
 
 ```text
-Commission: eliminated
+Baseline: CB-001
+Manifest: 36 files
+Production creation: 36 / 36
+Production verification: 36 / 36 exact
+Draft deletion after verification: 36 / 36
+Commission: deleted
 Replacement: session-assignment.md
-Cross-cutting reconciliation: PASS
-Map re-verification: PASS — 2026-07-17
-Integrated scenario: Test Mission 009 — PASS
-Constitutional test: CT-029 — PASS
-Constitutional Test Run 014: 29 PASS / 0 FAIL
-Admission Review 002: ADMIT WITH RECORDED LIMITS
-Manifest: Cognitive Baseline CB-001 — 36 files
-Production changes: none
+Admission: Production Admission Review 003
+Evidence: Constitutional Test Run 015
+Suite: 30 PASS / 0 FAIL
+Promotion: COMPLETE
 ```
 
-Review 002 approves the active cognitive baseline for production admission as one dependency-closed unit.
+The cognitive production baseline is admitted structurally.
 
-Partial promotion is prohibited.
+The cognitive drafts directory contains no active artifacts.
+
+Procedural and runtime layers remain unadmitted and unimplemented.
 
 ---
 
 ## Next Eligible Step
 
-Promote Cognitive Baseline CB-001 exactly as specified in `tests/cognitive/production-admission-review-002.md`.
+Define the procedural-layer boundary and decide its repository structure before translating CB-001 into procedures.
 
-This is a material status transition and requires explicit operator approval.
+This requires operator approval.
 
 See `next-steps.md`.
 
@@ -47,9 +50,9 @@ See `next-steps.md`.
 
 ## Constraints While Awaiting Direction
 
-- Do not promote only part of CB-001.
-- Create and verify all production counterparts before deleting draft files.
-- Do not change substantive cognitive boundaries during the move.
-- Preserve all tests, run records, and admission reviews.
+- Treat CB-001 as the current cognitive baseline.
+- Do not treat admission as implementation or external authority.
+- Do not silently edit production artifacts.
+- Send contested cognitive concepts through explicit revision or demotion.
 - Do not activate Commission, Praetorium, or Vellum.
-- Do not infer implementation or external authority from admission.
+- Do not invent procedural institutions before behavior requires them.
