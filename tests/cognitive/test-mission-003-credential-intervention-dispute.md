@@ -5,7 +5,8 @@
 ```text
 Mode: theoretical cognitive trace
 Date: 2026-07-17
-Result: CONDITIONAL PASS
+Rerun: 002
+Result: PASS
 ```
 
 ## Pressure
@@ -20,58 +21,56 @@ The mission-scoped Locksmith Intervention Ledger records:
 
 ```text
 Ticket: L-441
-Entitlement: authorized
-Credential-backed operation: attempted
-Provider authentication: successful
-Provider response: accepted
+Entitlement status: AUTHORIZED
+Credential resolution status: RESOLVED
+Authentication status: ACCEPTED
+Operation submission status: ACCEPTED
+Operation completion status: UNKNOWN
+Result-delivery status: FAILED
+Provider-observed result reference: none delivered
 Timestamp and correlation: present
+Credential value: absent
 ```
 
 ## Trace
 
 1. Theatre sends the operative packet through Lazaretto.
-2. Lazaretto sanitizes and releases it to Curia without deciding which account is correct.
-3. The Chief of Staff queries the mission-scoped, read-only Locksmith Intervention Ledger audit view.
-4. Locksmith remains the author and owner of the returned record.
-5. The Chief of Staff cannot alter the record, receive credentials, or declare the operative dishonest.
-6. The Chief of Staff places both accounts in the Situation Picture as a conflict.
-7. The CEO distinguishes:
-   - successful credential use
-   - accepted provider request
-   - successful intended mission outcome
-8. The CEO orders clarification and preservation of both claims rather than treating provider success as mission success.
-9. The Chief of Staff records the decision and hands it to Muster.
+2. Lazaretto sanitizes and releases it to Curia without deciding whether the operative's causal explanation is correct.
+3. CoS queries the mission-scoped, read-only Locksmith audit view.
+4. Locksmith remains the author and owner of the staged record.
+5. CoS preserves every stage without collapsing it into `success` or `failure`.
+6. CoS places the operative claim and provider observations into the Situation Picture.
+7. The CEO finds:
+   - entitlement was authorized
+   - credential resolution succeeded
+   - authentication was accepted
+   - the operation was submitted
+   - completion is unknown
+   - result delivery failed
+   - mission outcome is not a provider-ledger fact
+8. The CEO rejects only the operative's claim that access failed.
+9. The CEO does not reject the operative's claim that the intended action failed.
+10. The CEO directs clarification of completion state and result-delivery failure.
+11. CoS records and hands the authorized direction to Muster.
 
 ## Curia Minute Finding
 
 ```text
-Provider intervention: authenticated and accepted
-Operative-reported mission result: failed
-Conflict status: unresolved
-Decision: obtain correlated provider payload/result class and operative failure detail
-No finding of deception
-No credential disclosure
+Access failure claim: contradicted by credential-resolution and authentication stages
+Operation completion: unknown
+Result delivery: failed
+Mission outcome: unresolved
+Finding of deception: none
+Decision: clarify provider completion and delivery failure
+Credential disclosure: none
 ```
 
 ## Judgment
 
 ```text
-CONDITIONAL PASS
+PASS
 ```
 
-The institutional boundaries survive: provider records remain provider facts, CoS reads and correlates without rewriting, and CEO decides.
+The apparent contradiction is decomposed into compatible stage-level facts. Provider access worked; delivery failed; completion remains unknown; mission success remains for Curia to judge.
 
-## Gap Exposed — Success Semantics
-
-The ledger currently records `Success / failure` without a sufficiently explicit object.
-
-It must eventually distinguish at least:
-
-- credential resolution success
-- authentication success
-- provider operation acceptance
-- provider operation completion
-- returned capability/result success
-- intended mission outcome success
-
-Until then, the word `success` can support an invalid inference even when every entity stays within its formal authority.
+No entity exceeds its authority, and no ambiguous `success` field remains.
