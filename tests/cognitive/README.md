@@ -8,10 +8,10 @@ These tests evaluate ontology, authority, artifact boundaries, and traceability.
 
 ## Current Suite
 
-- `constitutional-tests.md` — CT-001 through CT-026
-- latest result: `constitutional-test-run-011.md`
-- current result: **26 PASS / 0 FAIL**
-- latest scenario: `test-mission-006-completion-closure-release.md`
+- `constitutional-tests.md` — CT-001 through CT-027
+- latest result: `constitutional-test-run-012.md`
+- current result: **27 PASS / 0 FAIL**
+- latest scenario: `test-mission-007-mandate-withdrawal-succession.md`
 
 ## Current Proven Distinctions
 
@@ -23,6 +23,9 @@ counsel ≠ decision
 completion claim ≠ closure
 closure ≠ operative release
 operative release ≠ reuse authority
+qualification ≠ assignment
+assignment ≠ Executive Mandate
+authority vacancy ≠ authority transfer
 ```
 
 ## Run Records
@@ -31,5 +34,4 @@ Run records preserve the theoretical result at the time each design change was e
 
 ## Remaining Structural Gaps
 
-1. Source, scope, and withdrawal of CEO authority.
-2. Concurrent Curia-session isolation and standing-role capacity.
+1. Concurrent Curia-session isolation and standing-role capacity.
