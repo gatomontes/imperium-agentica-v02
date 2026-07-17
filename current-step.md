@@ -2,7 +2,7 @@
 
 ## Status
 
-Active.
+Active — definition trace complete; awaiting operator review.
 
 Direction refined by operator on 2026-07-17.
 
@@ -49,6 +49,51 @@ An absent definition is a dependency gap, not permission for procedural inventio
 - recommendation to KEEP, EXTRACT FOR TESTING, or PARK each candidate domain
 - a reduced procedural boundary based only on externally defined dependencies
 - explicit operator approval before any new layer is created
+
+## Analysis Result
+
+The 36-file definition trace is complete in:
+
+```text
+drafts/cb-001-dependency-domain-origin-analysis.md
+```
+
+Preliminary dispositions:
+
+```text
+Responsibility: KEEP in cognitive
+Ownership: KEEP under responsibility
+Authority origin: EXTRACT FOR TESTING
+Artifact contracts: EXTRACT FOR TESTING
+Provenance: KEEP cross-cutting
+General proof layer: PARK
+Cognitive map: KEEP
+Lifecycle ordering: EXTRACT FOR TESTING
+Procedural layer: PARK pending dependencies
+Runtime layer: PARK
+```
+
+Principal contest:
+
+`lifecycle.md` has a procedural native concern under the corrected boundary, although it is currently admitted inside CB-001.
+
+Principal blockers:
+
+- Mandating Principal and authority basis
+- standing-assignment authority
+- persona and Officer admission authority
+- Tool Grant and Access Grant authority
+- initial mission-binding and external-launch authority
+- canonical artifact-definition ownership
+
+No production artifact has been changed or demoted.
+
+Pending operator judgment:
+
+- approve or revise the dispositions
+- choose whether authority-origin testing begins next
+
+---
 
 ## Current Constraint
 
