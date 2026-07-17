@@ -41,6 +41,18 @@ Not every mission requires every optional artifact, but omitted decisions must b
 
 ---
 
+## Mission Correlation Spine
+
+The immutable Mission Identity and subordinate identities binding every mission-scoped artifact, event, session, instance, ticket, closure, and release.
+
+It preserves separation when missions overlap.
+
+## Session Admission Finding
+
+The Chief of Staff's mission-scoped finding that the standing CEO and CoS can responsibly serve a Curia session under the applicable Executive Mandate and capacity constraints.
+
+It is an availability finding, not a mission decision or authority grant.
+
 ## Executive Mandate
 
 The versioned authority artifact binding a qualified, assigned CEO President to bounded Curia decision authority.
@@ -140,6 +152,9 @@ Possible fields:
 ```text
 Deployment Package identity:
 Mission reference:
+Operative Binding identity:
+Muster Instance identity:
+Curia Session identity:
 Work Specification reference:
 Operative identity and version:
 Canonical Persona reference:
@@ -228,6 +243,8 @@ Review or revise this file if:
 - tools or access lack authorization provenance
 - a CEO decision lacks an effective, matching Executive Mandate
 - authority vacancy silently transfers decision power
+- mission identity is inferred from similar content
+- one mission's closure or release affects another
 - Final Report and Vellum collapse without decision
 - Delivery Package changes findings
 
