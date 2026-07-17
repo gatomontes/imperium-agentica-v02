@@ -21,8 +21,6 @@ A session assignment scopes the Officer's counsel to the mission and Curia sessi
 
 Preceptory describes qualification and availability, not active Curia participation.
 
-Standing institutional Liaisons are not held by Preceptory.
-
 Preceptory is for Citadel Officers.
 
 `Praetorium` is reserved for Imperium Officers at the outer echelon and is not admitted or defined here.
