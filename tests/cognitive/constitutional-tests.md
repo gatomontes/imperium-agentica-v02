@@ -541,7 +541,7 @@ Theatre → Lazaretto → Curia
 
 ## Fail Conditions
 
-- Curia cannot act without commissioned Officers.
+- Curia cannot act without session-assigned Advisory Officers.
 - CoS makes the decision.
 - Missing evidence becomes approval.
 - Curia addresses Iron Gate directly.
@@ -940,6 +940,58 @@ Mission A closure
 
 ---
 
+# Test CT-029 — Production Candidate Is Dependency-Closed
+
+## Pressure
+
+The active cognitive model is proposed for production admission after focused tests pass. The reviewer attempts to promote only the most mature contracts while leaving their required entities and artifact owners in drafts.
+
+## Expected Path
+
+```text
+Petition
+→ Mission formation
+→ profession and persona production or governed reuse
+→ recruitment
+→ mission correlation and Muster assembly
+→ Cortine crossing and Theatre execution
+→ provider intervention when required
+→ Lazaretto return
+→ Curia session, mandate verification, and optional counsel assignment
+→ CEO decision and Curia Minute
+→ closure and exact release
+→ Final Report
+→ Secretariat delivery
+```
+
+The reviewer resolves every normative producer, consumer, authority, boundary, and record dependency before admission.
+
+## Pass Conditions
+
+- The candidate manifest is dependency-closed across the complete active lifecycle.
+- Every active artifact owner required by another candidate artifact is included.
+- Cross-cutting map, lifecycle, and artifact registry describe the same authority and artifact chain.
+- Curia Session Assignment replaces Commission without recreating a commissioning office or protocol.
+- Executive Mandate, standing assignments, and session assignments remain distinct.
+- Mission Correlation Spine binds assembly, provider records, Curia, closure, and release.
+- Final Report depends on the Mission Closure Record and final Curia Minute.
+- Focused tests are supplemented by one integrated Petition-to-delivery trace.
+- Dormant, undefined, parked, procedural, and runtime concepts are explicitly excluded.
+- Admission limits remain visible: cognitive acceptance is not implementation or external authority.
+
+## Fail Conditions
+
+- A production artifact normatively depends on a draft-only artifact omitted from the manifest.
+- Mature-looking contracts are promoted without their producers or consumers.
+- Commission reappears as hidden machinery.
+- The artifact registry retains a pre-closure chain.
+- The map, lifecycle, and registry disagree.
+- The Final Report substitutes for closure.
+- A passing test count is treated as operational proof.
+- Production admission silently authorizes runtime or external action.
+
+---
+
 ## Suite Result
 
 The suite passes only if every test preserves the distinctions:
@@ -963,6 +1015,8 @@ authority vacancy ≠ authority transfer
 shared governed reference ≠ shared mission state
 standing role ≠ unlimited capacity
 one mission closure ≠ another mission release
+Curia Session Assignment ≠ Executive Mandate
+cognitive admission ≠ implementation authority
 ```
 
 A failure indicates an ontology or authority defect.
