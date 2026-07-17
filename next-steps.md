@@ -37,7 +37,7 @@ Constraints:
 
 Activation condition:
 
-The 36-file domain classification is complete.
+The 36-file definition trace is complete.
 
 ---
 
@@ -60,7 +60,7 @@ Expected product:
 
 Activation condition:
 
-The candidate dependency-domain disposition is approved.
+The candidate dependency-origin disposition is approved.
 
 ---
 
