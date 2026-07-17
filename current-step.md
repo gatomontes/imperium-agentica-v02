@@ -2,9 +2,9 @@
 
 ## Status
 
-Active.
+No active step.
 
-Activated by operator on 2026-07-17.
+Authority-grant profile design completed on 2026-07-17.
 
 This file is not doctrine, a roadmap, or architecture.
 
@@ -12,69 +12,132 @@ It is the operational continuity surface for the currently active step.
 
 ---
 
-## Active Step
+## Last Completed Step
 
 Define and pressure the smallest authority-grant profile model.
 
-## Questions
+## Verified Result
 
-- Which apparent grants are genuinely distinct?
-- Which are bounded action profiles under one Authority Grant contract?
-- Which permit delegation?
-- Which must remain non-delegable?
-- Can the operator serve as the first Principal without acquiring universal external authority?
-- Can mission binding, launch, continuing action, closure, and release share one bounded mission envelope without collapsing decision authority?
-- How does every profile cite provenance and native artifact contracts?
+```text
+Authority Origin Test Run 001:
+10 PASS / 0 FAIL
 
-## Required Product
+Authority Grant Profile Run 001:
+15 PASS / 0 FAIL
 
-- minimal grant-profile model
-- root Authority Basis distinction
-- no unnecessary grant artifacts
-- independent profile test suite and run
-- authority–provenance convergence rerun
-- production-readiness finding
-- no production admission or migration without separate approval
+Provenance Test Run 002:
+10 PASS / 0 FAIL
 
-## Working Set
+Artifact-Definition Origin Run 001:
+8 PASS / 0 FAIL
 
-- `layers/authority/drafts/authority-origin-contract.md`
-- `layers/authority/drafts/authority-grant-profiles.md` when created
-- `layers/provenance/drafts/provenance-contract.md`
-- `tests/authority/`
-- `tests/authority-provenance-convergence-run-002.md`
-- `drafts/cb-001-layer-placement-review.md`
+Authority–Provenance Convergence Run 003:
+PASS
+```
 
-## Constraints
+## Admitted Draft Finding
 
-- Do not create an authority institution.
-- Do not turn responsibility, competence, capability, assignment, or provenance into authority.
-- Do not let operator authority over Imperium imply authority over external systems or people.
-- Do not create separate grants when bounded action scope is sufficient.
-- Do not edit or migrate CB-001 production.
-- Do not admit authority production.
-- Do not introduce runtime permission machinery.
+Six authority profiles are sufficient:
+
+```text
+INTERNAL_ADMISSION
+INTERNAL_PLACEMENT
+MISSION_ENVELOPE
+EXECUTIVE_DECISION
+CAPABILITY_TOOL
+CAPABILITY_ACCESS
+```
+
+Separate grant profiles are not justified for:
+
+```text
+launch
+closure
+release
+individual instructions
+```
+
+Launch and terminal actions must be explicit Mission Envelope action classes.
+
+Substantive decisions also require an effective Executive Decision grant.
+
+Release is an authorized consequence of exactly matched closure.
+
+## Root Boundary
+
+```text
+IMPERIUM_STEWARDSHIP
+→ internal admission and placement only
+
+CONTROLLED_RESOURCE
+DELEGATED_AUTHORITY
+LEGAL_OR_CONTRACTUAL_AUTHORITY
+→ may support external mission action within represented scope
+```
+
+The operator may be the first internal Principal.
+
+Operator stewardship of Imperium does not imply universal external authority.
+
+## Production Status
+
+```text
+Authority production: EMPTY
+Provenance production: EMPTY
+CB-001 production: UNCHANGED
+Migration: NOT AUTHORIZED
+```
 
 ---
 
-## Last Completed Step
+## Next Eligible Step
 
-Establish and pressure the minimal authority and provenance layer boundaries, resolve artifact-definition ownership, and review CB-001 placement.
-
-Verified:
+Prepare the first dependency-closed migration and production-admission manifest for:
 
 ```text
-Authority Test Run 001: 10 PASS / 0 FAIL
-Provenance Test Run 002: 10 PASS / 0 FAIL
-Artifact-Definition Origin Run 001: 8 PASS / 0 FAIL
-Authority–Provenance Convergence Run 002:
-PASS WITH OPEN AUTHORITY CASES
+executive-mandate.md
+→ authority
+
+mission-concurrency-and-isolation-contract.md
+→ provenance
+
+provider-intervention-ledgers.md
+→ provenance
 ```
+
+The preflight must identify all references, required splits, target metadata, regression tests, atomic movement rules, and rollback conditions.
+
+No production movement may occur without explicit operator approval after reviewing the manifest.
+
+See `next-steps.md`.
+
+---
+
+## Reading Set
+
+1. `README.md`
+2. `current-step.md`
+3. `next-steps.md`
+4. `layers/authority/README.md`
+5. `layers/authority/drafts/authority-origin-contract.md`
+6. `layers/authority/drafts/authority-grant-profiles.md`
+7. `layers/provenance/README.md`
+8. `layers/provenance/drafts/provenance-contract.md`
+9. `tests/authority/authority-test-run-001.md`
+10. `tests/authority/authority-grant-profile-run-001.md`
+11. `tests/provenance/provenance-test-run-002.md`
+12. `tests/authority-provenance-convergence-run-003.md`
+13. `drafts/cb-001-layer-placement-review.md`
+
+---
 
 ## Invariants To Preserve
 
 - Authority and provenance remain parallel.
 - One artifact contract has one native concern.
+- No grant profile implies an authority institution.
+- Operator internal stewardship is not external authority.
+- Instructions are not automatically grants.
 - Procedure remains parked.
 - Authority and provenance production remain empty.
-- CB-001 remains unchanged.
+- CB-001 remains unchanged until an approved atomic migration.
