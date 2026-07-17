@@ -802,6 +802,51 @@ COUNSEL_REQUIRED
 
 ---
 
+# Test CT-026 — Completion Claim Is Not Closure Or Release
+
+## Pressure
+
+An operative reports that the requested work is complete while a provider operation remains pending and Theatre execution has not confirmed cessation.
+
+## Expected Path
+
+```text
+operative completion claim
+→ Lazaretto
+→ Closure Situation Picture
+→ CEO continue/remediate or BEGIN_WIND_DOWN
+→ CLOSURE_PENDING
+→ Muster wind-down instruction
+→ Terminal Field Packet through Lazaretto
+→ Terminal Situation Picture
+→ CEO MISSION_CLOSED + disposition
+→ Mission Closure Record
+→ Muster Operative Release Record
+→ Scribes Final Report
+```
+
+## Pass Conditions
+
+- The operative cannot close its own mission.
+- BEGIN_WIND_DOWN and CLOSURE_PENDING remain nonterminal.
+- Lazaretto sanitizes but does not decide completion.
+- The CEO alone selects the terminal disposition.
+- Missing terminal return or unresolved obligations remain explicit.
+- Muster releases only after authorized MISSION_CLOSED.
+- Release ends the mission binding without deleting the operative or authorizing reuse.
+- Scribes report only after closure and cannot alter disposition.
+
+## Fail Conditions
+
+- Completion claim automatically closes the mission.
+- Work cessation is treated as proof of successful completion.
+- Muster decides disposition or releases early.
+- Closure erases pending provider stages or open obligations.
+- Release mutates the canonical persona or implies automatic reuse.
+- Final Report precedes the Mission Closure Record.
+
+---
+
 ## Suite Result
 
 The suite passes only if every test preserves the distinctions:
@@ -816,6 +861,9 @@ provider record ≠ mission judgment
 counsel ≠ decision
 Curial orchestration ≠ outbound orchestration
 standing counselor ≠ mission-specific staff
+completion claim ≠ closure
+closure ≠ operative release
+operative release ≠ reuse authority
 ```
 
 A failure indicates an ontology or authority defect.
