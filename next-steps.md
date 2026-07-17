@@ -14,32 +14,7 @@ When a step becomes active, remove it from this file and place it in `current-st
 
 ## Queue
 
-### 1. Define concurrent mission isolation and standing-role capacity
-
-Reason:
-
-Concurrent missions create concurrent Muster instances and Curia sessions. The cognitive model must prevent packets, Minutes, provider records, counsel, authority references, and release actions from crossing mission boundaries. It must also state what happens when the standing CEO or CoS cannot responsibly serve all active sessions.
-
-Relevant files:
-
-- `layers/cognitive/drafts/curia.md`
-- `layers/cognitive/drafts/chief-of-staff.md`
-- `layers/cognitive/drafts/muster.md`
-- `layers/cognitive/drafts/provider-intervention-ledgers.md`
-- `layers/cognitive/drafts/mission-closure-and-release-contract.md`
-- `tests/cognitive/constitutional-tests.md`
-
-Promotion condition:
-
-This becomes current after CEO authority provenance is bounded and tested.
-
-Removal or demotion condition:
-
-Remove or demote it if scenarios show that existing mission correlation and standing-role contracts already preserve isolation without an additional cognitive contract.
-
----
-
-### 2. Run a concurrent-mission collision scenario
+### 1. Run a concurrent-mission collision scenario
 
 Reason:
 
@@ -55,7 +30,7 @@ Remove or merge it if the concurrency contract itself includes a sufficiently co
 
 ---
 
-### 3. Review draft-to-production admission evidence
+### 2. Review draft-to-production admission evidence
 
 Reason:
 
@@ -78,7 +53,7 @@ Keep all artifacts in drafts if unresolved structural gaps still alter responsib
 
 ---
 
-### 4. Reconsider Vellum only if closure records expose a record gap
+### 3. Reconsider Vellum only if closure records expose a record gap
 
 Reason:
 
@@ -94,7 +69,7 @@ Remove it if the existing artifact set remains sufficient.
 
 ---
 
-### 5. Begin procedural modeling only after structural stabilization
+### 4. Begin procedural modeling only after structural stabilization
 
 Reason:
 
