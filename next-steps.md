@@ -18,7 +18,7 @@ When a step becomes current, remove it from this file and place it in `current-s
 
 Reason:
 
-The active analysis may show that authority, artifact meaning, provenance, or proof has no single legitimate origin, or that the concern is already adequately bounded inside the cognitive layer.
+The completed trace shows that authority and provenance lack single legitimate origins, while artifact meaning remains canonically ambiguous and proof remains contextual.
 
 Candidate decisions:
 
@@ -32,7 +32,8 @@ Constraints:
 
 - do not create a layer merely because a concern can be named
 - do not demote or repartition CB-001 without separate evidence and approval
-- prefer cross-cutting invariants over institutions when no independent lifecycle exists
+- do not mistake a widely repeated invariant for a canonical origin
+- prefer cross-cutting contracts over institutions when no independent actor or lifecycle exists
 - preserve existing admitted distinctions during evaluation
 
 Activation condition:
