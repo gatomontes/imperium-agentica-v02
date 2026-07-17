@@ -226,11 +226,12 @@ active Curia session
 → Advisory Role Requirement
 → Preceptory search
     ├── suitable standing Officer found → Curia session assignment
-    └── durable role absent
-         → Collegium → Studium → Officer Governance Doctrine → Smith
-         → The Gesta → Officer-Trait Canon → Smith
-         → Smith → Spur → Preceptory → Curia session assignment
-→ Officer advises
+    └── no suitable standing Officer
+         → COUNSEL_UNAVAILABLE
+         → DECISION_WITHHELD for affected path
+         → Capability Gap Record
+         → if durable: Collegium → Studium + The Gesta → Smith → Spur → Preceptory
+→ assigned Officer advises when available
 → Chief of Staff organizes counsel and record
 → CEO decides
 → Curia Minute
@@ -391,6 +392,8 @@ Curia begins with the standing CEO President, the standing Chief of Staff, and a
 Muster owns outbound mission orchestration. It operationalizes the authorized Curia decision without changing its substance or authority.
 
 Iron Gate carries the outward crossing. Curia does not address Iron Gate or Theatre directly.
+
+When required counsel is unavailable, the affected decision path enters `DECISION_WITHHELD`. The CEO may hold, constrain, defer, or use an already admitted escalation route without deciding the missing substance. Unrelated work requires an explicit separability finding.
 
 Barbican provider traffic remains separate and bypasses Muster:
 
