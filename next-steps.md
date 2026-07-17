@@ -14,23 +14,7 @@ When a step becomes active, remove it from this file and place it in `current-st
 
 ## Queue
 
-### 1. Run a concurrent-mission collision scenario
-
-Reason:
-
-A structural contract is insufficient until a trace pressures it. The scenario should interleave at least two missions, similar provider requests, conflicting Curia timing, and one closure event to test cross-mission contamination.
-
-Promotion condition:
-
-This becomes current after the concurrency contract identifies the entities, artifacts, and invariants under test.
-
-Removal or demotion condition:
-
-Remove or merge it if the concurrency contract itself includes a sufficiently concrete trace.
-
----
-
-### 2. Review draft-to-production admission evidence
+### 1. Review draft-to-production admission evidence
 
 Reason:
 
@@ -53,7 +37,7 @@ Keep all artifacts in drafts if unresolved structural gaps still alter responsib
 
 ---
 
-### 3. Reconsider Vellum only if closure records expose a record gap
+### 2. Reconsider Vellum only if closure records expose a record gap
 
 Reason:
 
@@ -69,7 +53,7 @@ Remove it if the existing artifact set remains sufficient.
 
 ---
 
-### 4. Begin procedural modeling only after structural stabilization
+### 3. Begin procedural modeling only after structural stabilization
 
 Reason:
 
