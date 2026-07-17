@@ -7,7 +7,7 @@ Pressure lineage, correlation, transformation, custody, version, supersession, s
 Current suite:
 
 - `provenance-tests.md` — PT-001 through PT-010
-- latest result: `provenance-test-run-001.md`
+- latest result: `provenance-test-run-002.md` — 10 PASS / 0 FAIL
 
 Draft under test:
 
