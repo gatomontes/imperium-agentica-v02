@@ -8,9 +8,14 @@ Curia is the Citadel's live operational convening surface.
 
 It contains no offices.
 
-It convenes Officers.
+Its initial standing composition is deliberately minimal:
 
-It does not admit a permanent department hierarchy, autonomous decision engine, runtime command center, or universal sovereign council.
+- one CEO persona serving as President and sole decision-maker
+- applicable standing institutional Liaisons
+
+Curia may later convene advisory Officers when the CEO activates Collegium during a mission.
+
+It does not admit a permanent department hierarchy, collective decision authority, autonomous decision engine, runtime command center, or universal sovereign council.
 
 ---
 
@@ -28,17 +33,26 @@ What is happening in the mission, does it conform to its governing requirements,
 Office:
 standing institutional responsibility
 
+President:
+the standing CEO persona who presides over Curia and makes its sole decision
+
 Officer:
-an authorized participant exercising a role in a particular Curia session
+a standing, admitted advisory persona convened for competence relevant to a particular Curia session
+
+Liaison:
+a standing, institution-recognized interface that reports provider facts
 
 Curia:
-the shared surface on which Officers receive, deliberate, decide, and direct
+the shared surface on which the President receives reports and counsel, then decides and directs
 
+President ≠ Officer
 Officer ≠ Operative
-Liaison ≠ Commissioned Officer
+Liaison ≠ Officer
 
-Officer deliberates and directs within Citadel.
-Operative executes within Theatre.
+The President decides.
+Officers analyze, advise, verify, challenge, and preserve dissent.
+Liaisons report institutional facts.
+The Operative executes within Theatre.
 ```
 
 Curia does not analyze or decide independently.
@@ -75,29 +89,30 @@ Curia may place these beside:
 
 ---
 
-## Officer Supply
+## Initial Composition And On-Demand Counsel
+
+Curia does not require Collegium to pre-compose every mission.
+
+A mission begins with the standing CEO President and whichever standing Liaisons are applicable. No counselor, quorum, or mission-dedicated Officer corps is presumed.
+
+During the mission, the CEO may determine that competent judgment requires distinct counsel. The CEO then activates Collegium with a specific counsel need.
 
 ```text
-Collegium receives the Castellan mission, consults The Gesta for applicable Officer traits, and determines the required Officer composition.
-Preceptory searches the Citadel Officer corps.
-Smith forges a missing Officer.
-Spur tests the Officer.
-Preceptory holds what passed.
-Commission binds the Officer to mission and authority.
-Curia convenes Commissioned Officers.
+active Curia session
+→ CEO identifies a counsel need
+→ Collegium resolves the required advisory role
+→ Preceptory searches the standing Officer corps
+    ├── suitable Officer found → session assignment
+    └── durable role absent → Smith → Spur → Preceptory → session assignment
+→ Officer advises within Curia
+→ CEO decides
 ```
 
-Preceptory resolves Collegium's Curia Composition Requirement against admitted Officers.
+The counselor is standing; the counsel is mission-specific.
 
-A Curia session convenes only the Commissioned Officers required by the mission and decision.
+Smith is invoked only when the missing capability represents a justified, durable Officer role—not merely because one mission needs advice.
 
-Possible represented functions may include mission authority, professional or domain competence, governance, intelligence, evidence assurance, technical capability, or other mission-specific authority.
-
-These are Officers in the session, not offices inside Curia.
-
-Composition is recorded and may change by session.
-
-Praetorium is reserved for Imperium Officers at the outer echelon. It is not part of Curia's Citadel Officer line.
+Preceptory holds reusable Citadel Officers. Praetorium remains reserved for future Imperium Officers at the outer echelon.
 
 ---
 
@@ -123,9 +138,17 @@ They never receive credentials.
 
 ---
 
-## Responsibilities Of Convened Officers
+## Responsibilities Of The President And Convened Officers
 
-Officers may:
+The CEO President:
+
+- receives sanitized mission material, Liaison reports, and any Officer counsel
+- activates Collegium when distinct advisory competence is necessary
+- remains the sole Curia decision-maker
+- issues the authorized decision that Muster operationalizes
+- records the authority basis and rationale in the Curia Minute
+
+Convened Officers may:
 
 - correlate sanitized packets
 - maintain the current Situation Picture
@@ -157,14 +180,19 @@ A Curia session may produce:
 - terminal mission findings
 - escalation or authority-deficiency record
 
-A record may include:
+Every Curia decision produces a `Curia Minute`.
+
+The Minute may include:
 
 ```text
 Mission:
 Deployment:
 Packet set:
 Situation picture:
+President:
+Liaisons present:
 Officers convened:
+Counsel need and Collegium activation:
 Authority represented:
 Observations:
 Operative claims:
@@ -172,7 +200,9 @@ Evidence status:
 Doctrine implicated:
 Deliberation:
 Dissent:
-Decision:
+Officer advice and dissent:
+President decision:
+Decision rationale and authority basis:
 Operational directive:
 Mission-parameter amendment:
 Required follow-up:
@@ -208,7 +238,7 @@ Curia does not sanitize raw Theatre material or bypass Lazaretto.
 
 ## Relationship To Muster
 
-Authorized decisions produced by convened Officers pass to Muster for outbound mission orchestration.
+Authorized decisions made by the CEO President pass to Muster for outbound mission orchestration.
 
 This may include:
 
@@ -232,7 +262,8 @@ Curia does not address Iron Gate or Theatre directly.
 Curia must not:
 
 - become a hierarchy of internal offices
-- act without convened Officers
+- require convened Officers before a demonstrated counsel need exists
+- allow an Officer, Liaison, quorum, or majority to displace the President's sole decision authority
 - conceal which authority made a decision
 - treat operative claims as verified merely because they arrived
 - bypass Lazaretto sanitation
@@ -250,7 +281,9 @@ Curia must not:
 ```text
 Lazaretto sanitizes.
 Curia convenes.
-Officers deliberate and direct.
+Liaisons report.
+Officers counsel when called.
+The President decides.
 Muster orchestrates direction outward.
 Iron Gate carries the crossing.
 Theatre executes.
