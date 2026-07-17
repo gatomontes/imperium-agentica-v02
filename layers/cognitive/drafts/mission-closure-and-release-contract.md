@@ -128,6 +128,9 @@ Every closure decision produces a final Curia Minute and Mission Closure Record.
 ```text
 Mission identity:
 Deployment identity:
+Operative Binding identity:
+Muster Instance identity:
+Curia Session identity:
 Work Specification version:
 Completion criteria assessment:
 Terminal Field Packet reference or recorded absence:
@@ -153,10 +156,13 @@ Corrections use supersession. Closure history is not overwritten.
 
 ## Operative Release
 
-After receiving an authorized MISSION_CLOSED, Muster terminates the mission binding it created around the operative and produces an Operative Release Record.
+After receiving an authorized MISSION_CLOSED, Muster terminates the mission binding it created around the operative only when the Mission Identity, Deployment identity, Operative Binding, Curia Session, Muster Instance, Closure Record, and release authorization exactly match. It then produces an Operative Release Record.
 
 ```text
 Mission and deployment:
+Operative Binding identity:
+Muster Instance identity:
+Curia Session identity:
 Operative identity and version:
 Deployment Package version:
 Closure Record reference:
@@ -213,6 +219,7 @@ This contract does not allow:
 - closure merely because work stopped
 - release before authorized closure
 - silent deletion of open obligations
+- one mission closure to close, revoke, end, or release another mission
 - reuse merely because an operative was released
 
 ## Boundary Maxim
