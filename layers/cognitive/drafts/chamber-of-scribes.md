@@ -12,9 +12,9 @@ It does not admit v01 Vellum, canonical mission record machinery, publication ru
 
 ## Purpose
 
-The Chamber of Scribes writes final operator-facing reports from Curia findings.
+The Chamber of Scribes writes final operator-facing reports from the Mission Closure Record, final Curia Minute, and their cited evidence.
 
-It converts findings into a clear report without changing their meaning.
+It converts terminal findings and disposition into a clear report without changing their meaning.
 
 ---
 
@@ -28,11 +28,11 @@ How should the findings be written so the operator can understand what happened,
 
 ## Relationship To Curia
 
-Curia produces Findings.
+Curia produces the Mission Closure Record and final Curia Minute.
 
-The Chamber of Scribes writes the Final Report from those Findings.
+The Chamber of Scribes writes the Final Report only after MISSION_CLOSED.
 
-Scribes do not judge.
+Scribes do not judge, close, release, or revise disposition.
 
 ---
 
@@ -55,10 +55,14 @@ Mission reference:
 Operator request summary:
 Operative used:
 Work performed:
+Terminal disposition:
+Completion-criteria assessment:
 Findings summary:
 Evidence or returned materials considered:
 Uncertainty:
 Known limitations:
+Accepted unresolved matters:
+Outstanding effects and obligations:
 Questions remaining:
 Recommended next administrative step, if any:
 Appendices or attachments:
@@ -87,7 +91,9 @@ The Chamber of Scribes must not:
 
 - alter findings
 - invent evidence
-- decide disposition
+- decide or alter disposition
+- declare closure
+- release an operative
 - deliver reports directly unless Secretariat is bypassed by explicit instruction
 - package credentials or deployment materials
 - act as Curia
@@ -98,7 +104,8 @@ The Chamber of Scribes must not:
 ## Boundary Maxims
 
 ```text
-Curia judges.
+The CEO closes.
+Muster releases.
 Scribes write.
 Secretariat delivers.
 ```
