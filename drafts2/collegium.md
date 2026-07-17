@@ -4,7 +4,7 @@
 
 Draft on-demand Curia capability.
 
-Collegium is activated by the CEO President during an active mission when the need for distinct counsel arises.
+Collegium is engaged by the Chief of Staff during an active mission when the need for distinct counsel arises.
 
 It does not automatically receive every Castellan mission, pre-compose Curia, or impose a standing quorum.
 
@@ -16,7 +16,7 @@ What advisory role is required for this specific counsel need, and which standin
 
 ## Activation
 
-The CEO activates Collegium from Curia and states a concrete counsel need.
+The Chief of Staff engages Collegium from Curia with a concrete counsel need. The Chief of Staff may frame a need surfaced by the President, the Situation Picture, a Liaison report, or an evident competence gap.
 
 Examples include:
 
@@ -30,7 +30,7 @@ Activation, rationale, and resulting counsel are recorded in the Curia Minute.
 ## Inputs
 
 - active mission and deployment references
-- the CEO's stated counsel need
+- the Curia counsel need framed by the Chief of Staff
 - sanitized Situation Picture
 - governing mission requirements and doctrine
 - required competence and domain knowledge
@@ -75,7 +75,8 @@ Collegium does not forge, test, admit, commission, convene, or grant decision au
 
 ```text
 Castellan forms the mission.
-The CEO identifies the need for counsel.
+A counsel need arises within Curia.
+The Chief of Staff engages Collegium.
 Collegium resolves the advisory role.
 Preceptory supplies a suitable standing Officer.
 The Officer advises.
