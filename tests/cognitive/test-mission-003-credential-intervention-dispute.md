@@ -31,9 +31,9 @@ Timestamp and correlation: present
 
 1. Theatre sends the operative packet through Lazaretto.
 2. Lazaretto sanitizes and releases it to Curia without deciding which account is correct.
-3. The Chief of Staff requests the applicable standing Locksmith Liaison report.
-4. The Liaison queries only the mission-scoped ledger and reports its recorded facts.
-5. The Liaison does not expose credentials, interpret mission meaning, or declare the operative dishonest.
+3. The Chief of Staff queries the mission-scoped, read-only Locksmith Intervention Ledger audit view.
+4. Locksmith remains the author and owner of the returned record.
+5. The Chief of Staff cannot alter the record, receive credentials, or declare the operative dishonest.
 6. The Chief of Staff places both accounts in the Situation Picture as a conflict.
 7. The CEO distinguishes:
    - successful credential use
@@ -59,7 +59,7 @@ No credential disclosure
 CONDITIONAL PASS
 ```
 
-The institutional boundaries survive: provider records remain provider facts, the Liaison only reports, CoS correlates, and CEO decides.
+The institutional boundaries survive: provider records remain provider facts, CoS reads and correlates without rewriting, and CEO decides.
 
 ## Gap Exposed — Success Semantics
 
