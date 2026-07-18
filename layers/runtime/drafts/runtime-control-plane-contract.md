@@ -8,6 +8,15 @@ Not admitted or implemented. RTB-001 production remains canonical.
 
 Investigation: `Runtime Maintenance Artifact Closure 001`.
 
+## Candidate Dependencies
+
+- Runtime Maintenance Disposition: `layers/cognitive/drafts/runtime-maintenance-disposition.md`
+- Runtime Maintenance Procedure: `layers/procedure/drafts/runtime-maintenance-procedure.md`
+- CONTROL_PLANE Authority: `layers/authority/production/runtime-control-plane-authority-profile.md`
+- PB-001 provenance: `layers/provenance/production/provenance-contract.md`
+- Runtime Realization and Dispatch: `layers/runtime/production/runtime-realization-and-dispatch-contract.md`
+- Runtime Observation Envelope: `layers/runtime/production/runtime-observation-envelope.md`
+
 ## Purpose
 
 Define mechanics and safeguards for consequential changes to Runtime without allowing Runtime to diagnose, choose maintenance direction, or authorize its own use.
