@@ -8,10 +8,13 @@ Not admitted. CB-004 production remains canonical.
 
 ## Dependencies
 
-- Authority: AB-003 production plus candidate CONTROL_PLANE citation revision
-- Provenance: PB-001 production unchanged
-- Procedure: PRB-002 production plus candidate Runtime Maintenance Procedure revision
-- Runtime: RTB-001 production plus candidate realization and control-plane revisions
+- Authority baseline: `layers/authority/production/README.md` — AB-003 unchanged
+- CONTROL_PLANE Authority: `layers/authority/production/runtime-control-plane-authority-profile.md`
+- Provenance baseline: `layers/provenance/production/README.md` — PB-001 unchanged
+- Procedure baseline: `layers/procedure/production/README.md`
+- candidate Runtime Maintenance Procedure: `layers/procedure/drafts/runtime-maintenance-procedure.md`
+- Runtime baseline: `layers/runtime/production/README.md`
+- candidate Runtime Control-Plane revision: `layers/runtime/drafts/runtime-control-plane-contract.md`
 - artifact index: `layers/cognitive/drafts/production-artifact-catalog.md`
 
 ## Core Thesis
