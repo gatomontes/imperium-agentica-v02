@@ -2,21 +2,13 @@
 
 ## Status
 
-Candidate Authority refinement.
+Candidate revision to the admitted CONTROL_PLANE Authority profile.
 
-Not admitted.
+Not admitted. AB-003 production remains canonical.
 
-Revision: Master Mason Operator Clarification 001.
+Investigation: `Runtime Maintenance Artifact Closure 001`.
 
-## Problem
-
-AB-002 defines six grant profiles but none explicitly covers consequential operation of Imperium's own Runtime or a Runtime acting on an externally controlled environment.
-
-Mission Envelope, Capability Tool, and Capability Access grants are mission-scoped and do not safely generalize to deployment, activation, migration, rollback, or recovery.
-
-Technical control and credential possession are not Authority Bases.
-
-## Candidate Profile
+## Profile
 
 ```text
 CONTROL_PLANE
@@ -41,14 +33,15 @@ Required plan or compatibility conditions
 Delegation rule
 Suspension, withdrawal, expiry, and supersession
 Discretion mode
-Permitted diagnosis and Procedure references when discretion is bounded
+Permitted Runtime Operational Diagnosis findings and response indications when discretion is bounded
+Permitted Runtime Maintenance Disposition forms and constraints
 Maximum repeat, resource, time, and consequence limits
 Required escalation conditions
 Required safe state
 Prohibited actions
 ```
 
-## Candidate Action Classes
+## Action Classes
 
 ```text
 DEPLOY_IMPLEMENTATION
@@ -72,11 +65,9 @@ Consequential control-plane action changes an operating environment or controlle
 
 The represented Principal therefore requires `CONTROLLED_RESOURCE`, `DELEGATED_AUTHORITY`, or `LEGAL_OR_CONTRACTUAL_AUTHORITY` as applicable.
 
-This is true even when the environment is used only for internal Imperium development.
+This remains true for an internal Imperium development environment.
 
 `IMPERIUM_STEWARDSHIP` governs internal definitions, admissions, and placements. It does not by itself establish control of a machine, account, deployment environment, credential store, or external resource.
-
-One Principal may hold both bases, but they remain distinct and independently traceable.
 
 ## Intersections
 
@@ -84,7 +75,7 @@ A control-plane action may also require:
 
 - CAPABILITY_ACCESS for authenticated access
 - CAPABILITY_TOOL for a specific administrative tool
-- MISSION_ENVELOPE when the action is itself part of one mission
+- MISSION_ENVELOPE when the action belongs to one mission
 - IMPERIUM_STEWARDSHIP when the action also changes an admitted internal definition or placement
 
 These intersections do not merge grants or Authority Bases.
@@ -106,37 +97,57 @@ BOUNDED_MAINTENANCE_DISCRETION
 
 ### EXECUTE_EXACT_INSTRUCTION
 
-The grantee may perform only the exact externally selected action.
+The grantee may perform only the exact externally selected instruction named by the grant or a separately effective instruction source.
 
-This mode is required when the action changes semantic mappings, migrates incompatible state, accepts irreversible consequence, resolves cross-mission priority, or otherwise requires a substantive decision outside routine maintenance.
+This mode is required when the action changes semantic mappings, migrates incompatible state, accepts irreversible consequence, resolves cross-mission priority, or otherwise requires substantive choice outside routine maintenance.
+
+A Master Mason escalation cannot become an exact instruction merely because it describes available mechanical options.
 
 ### BOUNDED_MAINTENANCE_DISCRETION
 
-The grantee may select among enumerated maintenance actions only when:
+This mode permits Master Mason to select a bounded Runtime Maintenance Disposition only when:
 
-- a cited Master Mason diagnosis matches an enumerated finding
-- a cited Runtime Maintenance Procedure permits the response
-- environment, component, action class, and limits match exactly
-- no semantic mapping or historical meaning changes
-- no indeterminate effect is assumed resolved
-- escalation conditions are absent
-- each attempt receives a fresh Authority finding
+- a cited Runtime Operational Diagnosis matches an enumerated condition finding and response indication
+- a cited Runtime Maintenance Procedure permits the post-diagnosis path
+- the grant explicitly permits the relevant disposition form
+- environment, component, action class, implementation and mapping bounds, and limits match exactly
+- PB-001 correlation is current and exact
+- no indeterminate effect is assumed resolved or repeated
+- no semantic mapping, incompatible state, historical meaning, or cross-mission priority is changed
+- competence, reversibility, consequence, safe-state, and escalation conditions remain satisfied
 
-This mode may support Master Mason's operator/mechanic function.
+`NO_INTERVENTION`, `WITHHOLD_MAINTENANCE`, and `ESCALATE_STRUCTURAL_CONDITION` create no permission for a consequential Runtime effect.
 
-It is not general executive decision authority.
+`INSTRUCT_MAINTENANCE` may proceed only within the exact action class and limits already authorized by the grant.
+
+This mode is not general executive decision authority.
+
+## Diagnosis And Disposition Boundary
+
+```text
+diagnosis ≠ Authority
+Authority ≠ maintenance direction
+maintenance direction ≠ renewed Authority
+grant permits a bounded choice ≠ grant chooses the choice
+```
+
+Master Mason owns diagnosis and disposition. Authority determines whether the exact action is permitted.
 
 ## Dispatch Freshness
 
 The Authority finding must be re-evaluated immediately before every consequential control-plane effect, including retry, rollback, and recovered continuation.
 
-Plan approval, prior success, maintenance-window entry, or queued status does not preserve Authority.
+Runtime must cite the exact current `INSTRUCT_MAINTENANCE` disposition when the effect arises from Master Mason maintenance.
+
+Plan approval, diagnosis, disposition creation, prior success, maintenance-window entry, or queued status does not preserve Authority.
 
 ## Prohibited Inference
 
 ```text
 administrator access ≠ CONTROL_PLANE authority
 Imperium stewardship ≠ control of an operating environment
+diagnosed need ≠ permitted action
+maintenance disposition ≠ Authority
 deployed ≠ authorized to activate
 ability to roll back ≠ authorized rollback
 incident urgency ≠ recovery authority
@@ -146,6 +157,10 @@ successful migration ≠ authorized migration
 
 ## Minimality Finding
 
-CONTROL_PLANE is distinct from the six admitted profiles because its object is the operating substrate and its actions alter implementation availability, mapping, state, or custody.
+This candidate adds no new Authority profile.
 
-This draft does not revise AB-002 or admit a seventh production profile.
+It revises the admitted CONTROL_PLANE profile only enough to cite the separated Runtime Operational Diagnosis and Runtime Maintenance Disposition semantics.
+
+## Non-Admissions
+
+This candidate grants no actual authority and authorizes no environment, credential, implementation, provider, service, or control-plane action.
