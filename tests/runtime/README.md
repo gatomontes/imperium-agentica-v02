@@ -2,18 +2,19 @@
 
 ## Status
 
-Runtime Baseline `RTB-002` is represented by the production staging tree.
+Runtime Baseline `RTB-002` is admitted and post-merge verified on main.
 
-The exact seven-target Runtime Maintenance Artifact Closure package is staged and awaits a separate merge decision.
+Runtime Maintenance Artifact Closure 001 is complete.
 
 ## Admission Evidence
 
 - Runtime Maintenance Artifact Pressure Run 004: 15 PASS / 0 FAIL
 - Runtime Maintenance Repository Regression 001: PASS
 - Runtime Maintenance Admission Convergence Run 001: 35 PASS / 0 FAIL
-- empirical harness rerun: 11 PASS / 0 FAIL
 - production admission review: `runtime-maintenance-production-admission-review-001.md`
 - production staging verification: `runtime-maintenance-production-staging-verification-001.md` — PASS
+- post-merge empirical rerun: 11 PASS / 0 FAIL
+- execution record: `drafts/runtime-maintenance-production-admission-execution-001.md`
 
 ## Canonical Chain
 
