@@ -28,6 +28,10 @@ Repository regression: PASS
 
 No consensus library, transport, database, distributed lock service, provider adapter, credential store, network service, framework, or deployment artifact is introduced.
 
+## Recovery Audit Correction
+
+The initial completion-race path quarantined state but reported operational completion. Before review, it was corrected so both state and observation preserve indeterminacy, with an executable assertion.
+
 ## Evidence Limits
 
 The candidate does not prove a consensus protocol, real network partition behavior, durable quorum state, clock safety, membership change, Byzantine tolerance, provider idempotency, production durability, credential safety, performance, deployment safety, or live recovery.
