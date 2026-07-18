@@ -34,7 +34,7 @@ Delegation rule
 Suspension, withdrawal, expiry, and supersession
 Discretion mode
 Permitted Runtime Operational Diagnosis findings and response indications when discretion is bounded
-Permitted Runtime Maintenance Disposition forms and constraints
+Permitted `INSTRUCT_MAINTENANCE` constraints when discretion is bounded
 Maximum repeat, resource, time, and consequence limits
 Required escalation conditions
 Required safe state
@@ -105,18 +105,21 @@ A Master Mason escalation cannot become an exact instruction merely because it d
 
 ### BOUNDED_MAINTENANCE_DISCRETION
 
-This mode permits Master Mason to select a bounded Runtime Maintenance Disposition only when:
+This mode permits Master Mason to select `INSTRUCT_MAINTENANCE` only when:
 
 - a cited Runtime Operational Diagnosis matches an enumerated condition finding and response indication
 - a cited Runtime Maintenance Procedure permits the post-diagnosis path
-- the grant explicitly permits the relevant disposition form
 - environment, component, action class, implementation and mapping bounds, and limits match exactly
 - PB-001 correlation is current and exact
 - no indeterminate effect is assumed resolved or repeated
 - no semantic mapping, incompatible state, historical meaning, or cross-mission priority is changed
 - competence, reversibility, consequence, safe-state, and escalation conditions remain satisfied
 
-`NO_INTERVENTION`, `WITHHOLD_MAINTENANCE`, and `ESCALATE_STRUCTURAL_CONDITION` create no permission for a consequential Runtime effect.
+`NO_INTERVENTION`, `WITHHOLD_MAINTENANCE`, and `ESCALATE_STRUCTURAL_CONDITION` require no CONTROL_PLANE permission because they authorize no consequential Runtime effect.
+
+Master Mason must remain able to withhold or escalate when CONTROL_PLANE Authority is absent, expired, mismatched, or insufficient.
+
+Those forms do not create permission, alter the environment, or cure the missing Authority.
 
 `INSTRUCT_MAINTENANCE` may proceed only within the exact action class and limits already authorized by the grant.
 
@@ -128,7 +131,8 @@ This mode is not general executive decision authority.
 diagnosis ≠ Authority
 Authority ≠ maintenance direction
 maintenance direction ≠ renewed Authority
-grant permits a bounded choice ≠ grant chooses the choice
+grant permits a bounded instruction choice ≠ grant chooses the instruction
+absence of CONTROL_PLANE Authority ≠ inability to withhold or escalate
 ```
 
 Master Mason owns diagnosis and disposition. Authority determines whether the exact action is permitted.
