@@ -13,7 +13,7 @@ The active merge decision is recorded only in `current-step.md`.
 Require:
 
 - exact candidate head
-- combined successor 23 / 23
+- combined successor 24 / 24
 - historical harness 11 / 11
 - repository regression PASS
 - zero production semantic changes
