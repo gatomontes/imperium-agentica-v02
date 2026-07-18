@@ -8,6 +8,15 @@ Not admitted. CB-004 remains canonical.
 
 Investigation: `Runtime Maintenance Artifact Closure 001`.
 
+## Candidate Dependencies
+
+- Master Mason: `layers/cognitive/drafts/master-mason.md`
+- Runtime Observation Envelope: `layers/runtime/production/runtime-observation-envelope.md`
+- Runtime Maintenance Procedure: `layers/procedure/drafts/runtime-maintenance-procedure.md`
+- CONTROL_PLANE Authority: `layers/authority/production/runtime-control-plane-authority-profile.md`
+- PB-001 provenance: `layers/provenance/production/provenance-contract.md`
+- mission correlation when applicable: `layers/provenance/production/mission-correlation-and-isolation-contract.md`
+
 ## Native Responsibility
 
 Master Mason produces the Runtime Operational Diagnosis.
