@@ -2,9 +2,11 @@
 
 ## Status
 
-Active investigation.
+Candidate construction complete.
 
-Baseline pressure completed: `9 PASS / 5 FAIL`.
+Baseline pressure: `9 PASS / 5 FAIL`.
+
+Minimal corrected candidate: `14 PASS / 0 FAIL`.
 
 No production admission has occurred.
 
@@ -25,6 +27,9 @@ The Procedure boundary prohibits Procedure from originating artifact meaning. Ru
 - necessity analysis: `drafts/runtime-maintenance-artifact-necessity-analysis-001.md`
 - pressure specification: `tests/runtime/runtime-maintenance-artifact-pressure-tests-001.md`
 - baseline run: `tests/runtime/runtime-maintenance-artifact-pressure-run-001.md`
+- full candidate run: `tests/runtime/runtime-maintenance-artifact-pressure-run-002.md`
+- minimal candidate run: `tests/runtime/runtime-maintenance-artifact-pressure-run-003.md`
+- minimality audit: `drafts/runtime-maintenance-candidate-minimality-audit-001.md`
 
 ## Confirmed Failures
 
@@ -95,6 +100,43 @@ Runtime observations
 
 `RUNTIME_MAINTENANCE_ELIGIBLE` cannot remain a pre-gate diagnosis.
 
+## Constructed Minimal Candidate
+
+```text
+Cognitive:
+- Runtime Operational Diagnosis
+- Runtime Maintenance Disposition
+- revised Master Mason
+- revised Cognitive Map
+- revised Production Artifact Catalog
+
+Authority:
+- AB-003 unchanged
+
+Provenance:
+- PB-001 unchanged
+
+Procedure:
+- revised Runtime Maintenance Procedure
+
+Runtime:
+- revised Runtime Control-Plane Contract
+- Realization and Dispatch unchanged
+- Observation Envelope unchanged
+```
+
+Focused pressure: `14 PASS / 0 FAIL`.
+
+Hypothetical transition:
+
+```text
+CB-004 → CB-005: 34 → 36
+AB-003 unchanged: 6
+PB-001 unchanged: 3
+PRB-002 → PRB-003: 5
+RTB-001 → RTB-002: 3
+Canonical semantic targets: 7
+```
 ## Preserved Boundaries
 
 This investigation does not authorize or admit:
@@ -110,12 +152,10 @@ This investigation does not authorize or admit:
 
 ## Next Gate
 
-Operator review of:
+Operator decision on repository-wide regression and admission preparation for the minimal seven-target package.
 
-1. the two-artifact model
-2. the consolidated instruction, withholding, and escalation forms
-3. the diagnosis-before-eligibility correction
+That work would test existing Cognitive, Authority, Provenance, Procedure, and Runtime invariants and shape an exact transition package.
 
-If approved, construct draft contracts and rerun all fourteen pressure tests.
+It would not authorize production movement.
 
 No production movement occurs without separate operator approval.
