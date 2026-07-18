@@ -26,6 +26,10 @@ The Runtime boundary is approved for draft development. No Runtime production ba
 - `state-machine-conformance-tests-001.md` — 15 scenarios
 - `state-machine-conformance-method-run-001.md` — 15 PASS / 0 FAIL
 
-The conformance result validates the method only. No concrete state machine was evaluated.
+## Master Mason Convergence
 
-Tests are theoretical and execute no services, credentials, integrations, or external effects.
+- `master-mason-runtime-convergence-run-001.md` — 16 PASS / 0 FAIL
+
+The convergence exposes one Authority gap: Master Mason decision authority remains distinct from the CONTROL_PLANE action grant.
+
+All results are theoretical. No concrete state machine, service, credential, integration, or external effect was evaluated.
