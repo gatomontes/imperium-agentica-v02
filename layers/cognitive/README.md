@@ -16,7 +16,7 @@ layers/cognitive/
 
 ### Drafts
 
-`drafts/` contains shaped cognitive artifacts still under evaluation. It is currently empty except for its index.
+`drafts/` contains shaped cognitive artifacts and retained source drafts. Admission does not erase their traceable history.
 
 Approval of a diagram or terminology does not by itself promote an artifact. Drafts remain contestable and may be revised, split, merged, demoted, or removed as scenarios expose defects.
 
@@ -24,9 +24,9 @@ Approval of a diagram or terminology does not by itself promote an artifact. Dra
 
 `production/` contains cognitive artifacts admitted for current active use after sufficient scenario evidence.
 
-Current baseline: `CB-002` — 33 files, admitted 2026-07-17 under Cognitive Production Admission Review 004 and Constitutional Test Run 016.
+Current baseline: `CB-003` — 33 files, admitted 2026-07-18 under Cognitive Production Admission Review 005 and Cognitive Constitutional Run 018.
 
-CB-002 cites Authority Baseline `AB-001` and Provenance Baseline `PB-001` for contracts whose origins were relocated to their native concerns.
+CB-003 cites Authority Baseline `AB-002`, Provenance Baseline `PB-001`, and Procedure Baseline `PRB-001` for contracts native to those parallel concerns.
 
 Production means admitted, not permanent. An artifact may return to drafts when later evidence contests it.
 
@@ -56,12 +56,12 @@ Tests challenge cognitive structure, responsibility, competence, and its boundar
 ## Current Baseline
 
 ```text
-Cognitive Baseline: CB-002
+Cognitive Baseline: CB-003
 Manifest: layers/cognitive/production/README.md
-Evidence: tests/cognitive/constitutional-test-run-016.md
+Evidence: tests/cognitive/constitutional-test-run-018.md
 Admission: tests/cognitive/production-admission-review-004-cb-002.md
-Result: 31 PASS / 0 FAIL
-Dependencies: AB-001 and PB-001
+Result: 33 PASS / 0 FAIL
+Dependencies: AB-002, PB-001, and PRB-001
 ```
 
-The cognitive, authority, and provenance layers have admitted baselines. Procedural and runtime layers remain unadmitted.
+The Cognitive, Authority, Provenance, and Procedure layers have admitted baselines. Runtime remains unadmitted.
