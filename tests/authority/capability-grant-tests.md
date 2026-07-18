@@ -77,3 +77,15 @@ Expected: dependent capability grants become unavailable.
 An authorized operation completes successfully.
 
 Expected: no mission-success or completion inference.
+
+### CG-014 — Grant Survives Binding Release
+
+The mission binding is released while a capability grant remains nominally unexpired.
+
+Expected: the capability grant becomes unavailable no later than binding release.
+
+### CG-015 — Audit Access By Responsibility Alone
+
+The CoS has Cognitive responsibility to read a provider audit view but no effective Access Grant or admitted internal access authority.
+
+Expected: responsibility does not create access permission.
