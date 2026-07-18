@@ -4,11 +4,11 @@
 
 Boundary approved by the operator on 2026-07-17.
 
-Authority Baseline `AB-001` is admitted for current authority use.
+Authority Baseline `AB-002` is admitted for current authority use.
 
-Manifest: `layers/authority/production/README.md` — 3 files.
+Manifest: `layers/authority/production/README.md` — 5 files.
 
-Admission: `tests/authority/production-admission-review-001.md`.
+Admission: `tests/authority/production-admission-review-002-ab-002.md`.
 
 ## Core Question
 
