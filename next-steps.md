@@ -4,21 +4,22 @@
 
 No active step.
 
-Mason Operator Model 001 awaits operator review.
+Mason Operator Model and Cognitive Placement await operator review.
 
 This file is an ordered operational queue, not doctrine, architecture, or a roadmap.
 
 ## Queue
 
-### 1. Decide the corrected Mason model
+### 1. Decide the corrected Mason package
 
 Recommended:
 
 - accept Mason as Runtime operator/mechanic candidate
+- accept placement inside Imperium but outside Citadel
 - preserve routine maintenance versus structural-decision boundary
 - merge draft PR #6
 
-No production admission is implied.
+No production admission, Officer placement, or institution is implied.
 
 ### 2. If approved, prepare a minimal empirical Runtime harness
 
@@ -33,7 +34,7 @@ Minimum behaviors:
 - duplicate delivery and concurrent attempts
 - stale or withdrawn CONTROL_PLANE Authority
 - exact-instruction versus bounded-discretion modes
-- indeterminate effect quarantine
+- indeterminate-effect quarantine
 - incompatible state migration and rollback refusal
 - Runtime Observation Envelope production
 - conformance against at least one admitted PRB-001 Procedure
@@ -51,4 +52,4 @@ Reactivate only if a distinct reusable orientation mechanism emerges beyond curr
 
 ### 5. Keep Praetorium parked
 
-Mason as an operator/mechanic does not demonstrate an Imperium Officer corps or holding institution.
+Mason's Imperium scope does not demonstrate an Imperium Officer corps or holding institution.
