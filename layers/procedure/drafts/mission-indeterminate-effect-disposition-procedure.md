@@ -6,6 +6,8 @@ Candidate Procedure refinement.
 
 Not admitted.
 
+Revision: Runtime Draft Correction 001 after Pressure Run 001.
+
 Scope is limited to an externally consequential mission effect whose provider outcome is operationally indeterminate.
 
 It does not resolve control-plane effects.
@@ -17,7 +19,7 @@ It does not resolve control-plane effects.
 - Chief of Staff: `layers/cognitive/production/chief-of-staff.md`
 - Curia and CEO judgment: `layers/cognitive/production/curia.md`
 - Muster outbound operationalization: `layers/cognitive/production/muster.md`
-- Lazaretto return sanitation: `layers/cognitive/production/lazaretto.md`
+- Lazaretto external-return sanitation: `layers/cognitive/production/lazaretto.md`
 
 ### Authority
 
@@ -62,10 +64,13 @@ Timeout alone is insufficient unless it produces the cited indeterminate observa
 
 ### 2. Admit The Observation
 
-1. Route the operational observation through the admitted return and sanitation boundaries.
-2. Lazaretto preserves or quarantines unsafe material without deciding outcome.
-3. The Chief of Staff admits the sanitized observation to the matching Curia Session and Situation Picture.
-4. Exact-correlation mismatch blocks use.
+1. Treat the Runtime envelope as an internal operational observation eligible for Curia's admitted observation input.
+2. Route any provider-returned content carried with or cited by the envelope through Lazaretto before Curia use.
+3. Lazaretto preserves or quarantines external material without deciding outcome.
+4. The Chief of Staff admits the safe envelope and any sanitized provider material to the matching Curia Session and Situation Picture.
+5. Exact-correlation mismatch blocks use.
+
+Runtime telemetry does not become external field material merely because it describes an external-effect boundary.
 
 ### 3. Reconcile Knowable Facts
 
@@ -85,19 +90,21 @@ Absence of a provider stage is recorded as absence, not converted into failure.
 
 The CEO may decide only with an effective Executive Mandate and applicable Mission Envelope authority.
 
-Candidate dispositions:
+Candidate disposition classes:
 
 ```text
 WAIT_FOR_OBSERVATION
 REQUEST_NON_EFFECTING_STATUS_CHECK
-ACCEPT_EFFECT_AS_STILL_INDETERMINATE
+PRESERVE_EFFECT_AS_INDETERMINATE
 AUTHORIZE_SAFE_REPEAT
 AUTHORIZE_COMPENSATING_EFFECT
 ALTER_OR_TERMINATE_DEPENDENT_MISSION_PATH
 ESCALATE_THROUGH_AN_ADMITTED_ROUTE
 ```
 
-A disposition is available only when its native Authority and capability requirements exist. This procedure does not manufacture them.
+These labels classify possible next procedural paths; they do not create Authority action classes.
+
+A disposition is available only when its native Authority, capability, competence, and artifact requirements exist. This procedure does not manufacture them.
 
 ### 5. Operationalize
 
