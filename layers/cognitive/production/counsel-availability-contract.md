@@ -2,126 +2,130 @@
 
 ## Status
 
-Admitted cognitive contract.
+Admitted Cognitive production contract.
 
-Baseline: `CB-001`.
+Baseline: `CB-003`.
 
-Admission: `Production Admission Review 003`.
+Admission: `Cognitive Production Admission Review 005`.
 
-Evidence: `Constitutional Test Run 015 — 30 PASS / 0 FAIL`.
+Evidence:
 
-This contract governs the case in which Curia requires specialized counsel that no suitable standing Officer can presently provide.
+- `Cognitive Constitutional Run 018 — 33 PASS / 0 FAIL`
+- `Procedure Convergence Run 002 — 21 PASS / 0 FAIL`
 
-It prevents absence of competence from becoming permission to guess, automatic Officer construction, or an undefined mission wait.
+Origin draft: `layers/cognitive/drafts/counsel-availability-contract.md`.
 
-## Trigger
+Supersedes the prior CB-002 production revision at `layers/cognitive/production/counsel-availability-contract.md`.
 
-The contract applies when:
+## Canonical Dependencies
 
-- a material decision exceeds the CEO President's competent judgment
-- the counsel need is explicit and recorded
-- Collegium has produced an Advisory Role Requirement
-- Preceptory has returned no suitable standing Officer
+- Authority profiles: `layers/authority/production/authority-grant-profiles.md`
+- Executive Mandate: `layers/authority/production/executive-mandate.md`
+- Mission correlation: `layers/provenance/production/mission-correlation-and-isolation-contract.md`
 
-## Findings And State
+## Purpose
+
+Define the cognitive meaning of required but unavailable counsel without converting competence absence into permission, guessing, automatic construction, or silent waiting.
+
+## Core Distinctions
+
+```text
+counsel need ≠ counsel availability
+counsel unavailable ≠ CEO competence
+counsel unavailable ≠ authority transfer
+decision withheld ≠ mission terminated
+capability gap ≠ construction order
+external material ≠ admitted Officer counsel
+```
+
+## Findings
 
 ```text
 COUNSEL_REQUIRED:
-the material decision cannot responsibly be made from the current Curia composition
+a material decision exceeds the competent judgment presently available to Curia
 
 COUNSEL_UNAVAILABLE:
-Preceptory contains no suitable standing Officer for the Advisory Role Requirement
+no suitable admitted Advisory Officer is presently available for the explicit Advisory Role Requirement
 
 DECISION_WITHHELD:
-the affected substantive decision and every action dependent upon it may not proceed
+the affected substantive decision lacks a required competence input and may not be made as though that competence existed
+
+SEPARABLE_WORK:
+a CEO finding that identified work does not depend on, prejudice, or silently decide the withheld substance
 ```
 
-`DECISION_WITHHELD` applies to the affected decision path, not automatically to the entire mission.
+These are Cognitive findings. They grant no authority and define no runtime state.
 
-Unrelated work may continue only when the CEO explicitly finds it separable and records why continuation cannot prejudice the withheld decision.
+## Responsibilities
 
-## Default Disposition
+### CEO President
 
-When required counsel is unavailable:
+- recognizes when required competence is absent
+- refuses to decide the specialized substance without required counsel
+- determines whether unrelated work is substantively separable
+- remains responsible for any later decision within competence and effective authority
 
-1. The CEO does not decide the specialized substance.
-2. The CEO declares the affected decision withheld.
-3. The Chief of Staff records the findings, affected scope, dependencies, and disposition in the Curia Minute.
-4. The Chief of Staff hands any authorized hold or scope constraint to Muster.
-5. Muster operationalizes it without inventing the missing counsel.
+### Chief of Staff
 
-Withholding a decision is procedural protection, not a substantive answer.
+- preserves the counsel need, availability finding, affected scope, dependencies, and dissent
+- presents the findings without converting them into a decision
+- preserves the exact Curia Session and mission references required by PB-001
 
-## Bounded CEO Dispositions
+### Collegium
 
-Within already represented mission authority, the CEO may:
+- resolves the Advisory Role Requirement
+- distinguishes a one-off need from evidence of a durable Officer-class gap
+- does not admit, assign, construct, or authorize an Officer
 
-- `HOLD_AFFECTED_ACTION` — prevent action dependent on the missing decision
-- `CONSTRAIN_SCOPE` — continue only work explicitly separable from the missing decision
-- `DEFER_DECISION` — preserve the question pending suitable counsel
-- `ESCALATE_AUTHORITY` — only when an admitted escalation destination and route exist
-- `RECALL_OR_TERMINATE` — only when existing mission authority already permits it
+### Preceptory
 
-The CEO may not waive required competence merely because the mission is urgent.
+- determines whether a suitable admitted Officer is available
+- does not manufacture suitability or authority
 
-## Collegium And Durable Gaps
+### Muster
 
-The absence produces a `Capability Gap Record`.
+- receives only an already authorized mission instruction
+- does not infer the withheld substance or create counsel
 
-A gap may include:
+### Smith
 
-```text
-Advisory Role Requirement:
-Mission and decision affected:
-Materiality:
-Urgency:
-Preceptory search evidence:
-Known recurrence:
-Expected future recurrence:
-Cost of absence:
-One-off or durable assessment:
-Open evidence:
-```
+- may receive separately justified Officer-construction work
+- is never the immediate answer to an active counsel vacancy
 
-Collegium may refer a gap to the Officer production line only when evidence supports a durable standing role.
+## Capability Gap Record
 
-Smith construction is never treated as immediate resolution of the active mission.
+A Cognitive artifact preserving:
 
-## External Advice
+- Advisory Role Requirement
+- mission and decision affected
+- materiality and competence boundary
+- Preceptory availability finding
+- recurrence evidence
+- durable or one-off assessment
+- unresolved evidence
 
-No external-advisor pathway is currently admitted.
+The record is evidence for later role analysis. It is not a construction order, authority grant, or procedural trigger by itself.
 
-Ad hoc external material may not be labeled Curial Officer counsel or used to create represented authority. A future pathway must define acquisition, sanitation, provenance, competence, conflict, and accountability before such material can resolve `COUNSEL_UNAVAILABLE`.
+## External Advice Boundary
 
-## Resolution
+No external-advisor pathway is admitted.
 
-`DECISION_WITHHELD` ends only when the Curia Minute records one of:
-
-- a suitable Preceptory Officer is session-assigned and supplies the required counsel
-- the decision is no longer required
-- an admitted authority accepts escalation
-- the mission is recalled or terminated under existing authority
-
-Ending the hold does not predetermine the CEO's substantive decision.
+External material does not become Curial Officer counsel merely because it is useful. Any future pathway must establish native competence, conflict, accountability, sanitation, provenance, and authority definitions before Procedure can cite it.
 
 ## Non-Authority
 
-This contract does not authorize:
+This contract does not permit:
 
-- CoS or Collegium to decide
-- the CEO to decide beyond competence
-- automatic Smith construction
-- instant admission of a newly forged Officer
+- CoS or Collegium decision authority
+- CEO action beyond competence
+- automatic construction or admission
 - mission-specific staff creation
-- ad hoc external advisors as Officers
-- indefinite silent waiting
-- automatic suspension of unrelated mission work
+- ad hoc advisors as Officers
+- mission continuation without a separability finding
+- mission termination or recall without an effective Authority finding
 
-## Boundary Maxim
+## Procedure Boundary
 
-```text
-Missing counsel withholds the decision.
-It does not manufacture competence.
-It does not automatically stop the whole mission.
-It does not transfer authority.
-```
+The expected response sequence, continuation branches, and resolution conditions belong to:
+
+`layers/procedure/production/counsel-unavailability-procedure.md`.
