@@ -1,248 +1,173 @@
-# Mission Closure And Operative Release Contract
-
-## Canonical Dependencies
-
-This cognitive artifact cites the following admitted contracts as external canonical definitions; it does not originate or redefine them:
-
-- `layers/authority/production/executive-mandate.md`
-- `layers/provenance/production/mission-correlation-and-isolation-contract.md`
+# Mission Closure And Operative Release
 
 ## Status
 
-Admitted cognitive contract.
+Admitted Cognitive production contract.
 
-Baseline: `CB-002`.
+Baseline: `CB-003`.
 
-Admission: `Cognitive Production Admission Review 004`.
+Admission: `Cognitive Production Admission Review 005`.
 
-Evidence: `Constitutional Test Run 016 — 31 PASS / 0 FAIL`.
+Evidence:
 
-This contract distinguishes an operative's completion claim, mission wind-down, terminal mission closure, and release of the mission-bound operative.
+- `Cognitive Constitutional Run 018 — 33 PASS / 0 FAIL`
+- `Procedure Convergence Run 002 — 21 PASS / 0 FAIL`
+
+Origin draft: `layers/cognitive/drafts/mission-closure-and-release-contract.md`.
+
+Supersedes the prior CB-002 production revision at `layers/cognitive/production/mission-closure-and-release-contract.md`.
+
+## Canonical Dependencies
+
+- Authority origin and profiles: `layers/authority/production/`
+- Executive Mandate: `layers/authority/production/executive-mandate.md`
+- Mission correlation: `layers/provenance/production/mission-correlation-and-isolation-contract.md`
+- Provider lineage: `layers/provenance/production/provider-intervention-ledgers.md`
 
 ## Core Distinctions
 
 ```text
-operative says done ≠ mission complete
-mission objective satisfied ≠ execution stopped
-execution stopped ≠ terminal return received
-terminal return received ≠ mission closed
-mission closed ≠ operative deleted
-operative released ≠ automatically reusable
+completion claim ≠ completion finding
+completion finding ≠ closure decision
+execution cessation ≠ terminal return
+terminal return ≠ mission closure
+mission closure ≠ operative release
+operative release ≠ operative deletion
+operative release ≠ reuse authority
+one mission closure ≠ another mission release
 ```
 
-## Terminal Dispositions
-
-A closed mission has exactly one recorded disposition:
+## Terminal Disposition Vocabulary
 
 ```text
 COMPLETED:
-the authorized completion criteria were satisfied
+the authorized completion criteria were accepted as satisfied
 
 PARTIALLY_COMPLETED:
-an explicitly accepted subset was satisfied and the remainder is recorded
+an explicit subset was accepted and the remainder remains recorded
 
 FAILED:
-the mission ended without satisfying its required completion criteria
+the mission ended without satisfying required completion criteria
 
 TERMINATED:
-the mission was intentionally ended before completion under represented authority
+the mission was intentionally ended before completion under effective represented authority
 ```
 
-Blocked, paused, remediating, and decision-withheld are not terminal dispositions.
+These are cognitive decision meanings. This contract does not determine authority validity or proof sufficiency.
 
-## Phase One — Closure Assessment And Wind-Down
+Blocked, paused, remediating, and decision-withheld are non-terminal.
 
-A closure assessment may begin when:
+## Responsibilities
 
-- an operative claims completion
-- the Work Specification completion criteria appear satisfied
-- continued work is impossible or no longer justified
-- the CEO considers recall or termination
-- represented authority withdraws or ends the mission
+### Operative
 
-The Chief of Staff assembles a Closure Situation Picture containing:
+Reports completion claims, cessation state, products, unfinished work, failures, and known obligations. It does not close or release itself.
 
-```text
-Mission and deployment:
-Work Specification and completion criteria:
-Operative completion claim:
-Latest sanitized packet set:
-Satisfied and unsatisfied criteria:
-Evidence and uncertainty:
-Open counsel needs or withheld decisions:
-In-flight Theatre actions:
-Provider intervention stages:
-Outstanding tools, access, tickets, and obligations:
-Expected terminal return:
-Proposed disposition:
-```
+### Lazaretto
 
-The CEO chooses either:
+Preserves and sanitizes terminal return material. It does not judge completion or closure.
 
-- continue or remediate the mission
-- BEGIN_WIND_DOWN
+### Chief of Staff
 
-BEGIN_WIND_DOWN places the mission in CLOSURE_PENDING. It is not terminal closure.
+Assembles closure and terminal Situation Pictures, preserves evidence and uncertainty, and records the authorized decision without choosing the disposition.
 
-The Chief of Staff records the decision in a Curia Minute and hands it to Muster.
+### CEO President
 
-Muster operationalizes any required stop, recall, finalization, or terminal-return instruction through Iron Gate.
+Makes the substantive closure decision within competence and an effective matching Executive Mandate. Authority is externally defined by AB-002.
 
-## Terminal Return
+### Muster
 
-The Theatre sends a Terminal Field Packet through Lazaretto.
+Maintains and later ends the mission binding under an authorized release instruction. It does not judge completion or closure.
 
-It may include:
+### Chamber of Scribes
 
-```text
-Mission and deployment identity:
-Operative identity and version:
-Execution cessation status:
-Completion claim:
-Delivered products and evidence:
-Unfinished work:
-Known failures:
-Outstanding effects or obligations:
-Open provider operations:
-Final Theatre timestamp:
-Correlation to wind-down instruction:
-```
+Reports from the closure record and cited evidence without revising the disposition.
 
-Lazaretto preserves, sanitizes, and correlates the packet. It does not declare the mission closed.
+### Secretariat
 
-If no terminal packet can be obtained, the absence and reason must be recorded. The CEO may still close as FAILED or TERMINATED when existing authority permits and the missing return remains explicit.
+Delivers the terminal report or artifact without changing substantive findings.
 
-## Phase Two — Closure Decision
+## Terminal Field Packet
 
-The Chief of Staff assembles a Terminal Situation Picture from:
+The native Theatre-return artifact representing:
 
-- Work Specification completion criteria
-- sanitized Terminal Field Packet or recorded absence
-- Curia Minutes
-- staged provider-ledger audit views
-- delivered artifacts and evidence
-- unresolved obligations, uncertainty, and dissent
-- confirmation of execution cessation or its unresolved status
+- an operative completion or cessation claim
+- delivered products and cited evidence
+- unfinished work and known failures
+- outstanding effects, operations, and obligations
+- exact mission and deployment references required by PB-001
 
-The CEO alone, under an effective Executive Mandate covering the terminal decision, decides whether to return for more work or issue:
-
-```text
-MISSION_CLOSED
-+ terminal disposition
-+ rationale
-+ authority basis
-+ accepted unresolved matters
-```
-
-Every closure decision produces a final Curia Minute and Mission Closure Record. Authority loss alone is not a terminal disposition. Without an effective mandate, closure is withheld unless a previously authorized terminal safe-state instruction explicitly supplies the permitted disposition and conditions.
+It is not a closure decision or proof of completion.
 
 ## Mission Closure Record
 
-```text
-Mission identity:
-Deployment identity:
-Operative Binding identity:
-Muster Instance identity:
-Curia Session identity:
-Work Specification version:
-Completion criteria assessment:
-Terminal Field Packet reference or recorded absence:
-Execution cessation status:
-Provider operations and unresolved stages:
-Delivered products:
-Unfinished work:
-Outstanding effects and obligations:
-Final disposition:
-CEO specification and Standing Assignment:
-Executive Mandate identity, version, status, Principal, and scope match:
-CoS specification and Standing Assignment:
-Counsel and dissent:
-Decision rationale:
-Authority basis:
-Closure timestamp:
-Curia Minute reference:
-Required report:
-Release authorization:
-```
+The native record of one CEO closure decision, including:
 
-Corrections use supersession. Closure history is not overwritten.
+- exact mission, deployment, binding, Muster, and Curia identities
+- Work Specification and completion-criteria assessment reference
+- Terminal Field Packet or explicit recorded absence
+- accepted evidence, uncertainty, dissent, and unresolved matters
+- terminal disposition and rationale
+- effective Authority finding and cited grants
+- final Curia Minute
+- release instruction or explicit withholding
 
-## Operative Release
+It does not define the Authority or Provenance contracts it cites.
 
-After receiving an authorized MISSION_CLOSED, Muster terminates the mission binding it created around the operative only when the Mission Identity, Deployment identity, Operative Binding, Curia Session, Muster Instance, Closure Record, and release authorization exactly match. It then produces an Operative Release Record.
+## Operative Release Record
 
-```text
-Mission and deployment:
-Operative Binding identity:
-Muster Instance identity:
-Curia Session identity:
-Operative identity and version:
-Deployment Package version:
-Closure Record reference:
-Theatre cessation state:
-Tool-return or deactivation status:
-Access revocation status:
-Open provider obligations:
-Release timestamp:
-Residual restrictions:
-Released by Muster instance:
-```
+The native record of Muster ending one exact mission binding, including:
 
-Muster coordinates the removal or expiry of mission-scoped tools and access with Armory and Locksmith. It never receives credential custody.
+- exact mission, deployment, operative, binding, Muster, and Curia identities
+- Closure Record and authorized release references
+- tool, access, provider-operation, and residual-restriction status
+- released binding and remaining unresolved obligations
 
-Release:
+Release affects only the named mission binding. It does not alter the operative, canonical persona, standing Curia assignments, or reuse authority.
 
-- ends the operative's assignment to this mission
-- does not delete or rewrite the operative
-- does not alter the canonical persona
-- does not erase the Deployment Package or field history
-- does not authorize reuse in another mission
-- does not release standing CEO or CoS assignments
+## Session And Instance Meanings
 
-A future mission requires its own authorized recruitment or mission binding under the applicable doctrine.
+- Advisory Session Assignments are mission-specific participation bindings.
+- a Curia Session is mission-specific cognitive state
+- a Muster Instance is mission-specific assembly and outbound-orchestration responsibility
+- standing CEO and CoS assignments survive mission closure unless separately changed
 
-## Session And Instance End
+## Post-Closure Independence
 
-After closure:
+Mission closure creates distinct remaining responsibilities:
 
-- Advisory Officer Curia Session Assignments end and are recorded
-- the mission-specific Curia session closes
-- the mission-specific Muster instance ends after the Release Record is complete
-- standing CEO and CoS assignments remain
-- historical records remain mission-correlated
-
-## Reporting
-
-Chamber of Scribes may prepare the Final Report only from the Mission Closure Record, final Curia Minute, and their cited evidence.
-
-The report cannot change the disposition or conceal accepted unresolved matters.
-
-Secretariat delivers the Final Report or terminal artifact to the operator.
-
-## Non-Authority
-
-This contract does not allow:
-
-- an operative to close its own mission
-- Lazaretto to decide completion
-- CoS to choose disposition
-- any participant to inherit closure authority from a mandate vacancy
-- Muster to judge results
-- Scribes to revise the closure decision
-- closure merely because work stopped
-- release before authorized closure
-- silent deletion of open obligations
-- one mission closure to close, revoke, end, or release another mission
-- reuse merely because an operative was released
-
-## Boundary Maxim
+- Curia may close the mission-specific session
+- Muster may still retain unresolved release responsibility
+- Scribes may report the closed mission while release remains pending
+- the report must preserve release status and outstanding obligations
 
 ```text
-The operative reports.
-Lazaretto sanitizes.
-The Chief of Staff assembles.
-The CEO closes.
-Muster releases.
-Scribes report.
-Secretariat delivers.
+Curia Session closed ≠ mission binding released
+Final Report issued ≠ release complete
 ```
+
+## Correction And Supersession
+
+A material correction creates a superseding record with preserved lineage.
+
+Correction does not silently:
+
+- reopen the mission
+- restore a released binding
+- reverse an authorized release
+- erase a report
+- create new field authority
+
+Any new consequence requires its own Cognitive decision and effective Authority finding.
+
+## Proof Boundary
+
+This contract cites `layers/cognitive/production/work-specification-completion-assessment.md` for criterion-relative sufficiency.
+
+It does not redefine that assessment or create a universal Proof contract.
+
+## Procedure Boundary
+
+The expected wind-down, terminal-return, closure, release, reporting, and delivery sequence belongs to:
+
+`layers/procedure/production/mission-closure-and-release-procedure.md`.

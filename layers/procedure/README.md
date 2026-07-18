@@ -2,11 +2,15 @@
 
 ## Status
 
-Candidate boundary approved for investigation on 2026-07-18.
+Reduced boundary approved on 2026-07-18.
 
-No Procedure production baseline is admitted.
+Procedure Baseline `PRB-001` is admitted for current procedural use.
 
-The layer is being tested under the reduced definition:
+Manifest: `layers/procedure/production/README.md` — 3 files.
+
+Admission: `tests/procedure/production-admission-review-001.md`.
+
+The admitted layer uses the reduced definition:
 
 ```text
 what is supposed to happen,

@@ -2,7 +2,7 @@
 
 ## Status
 
-Procedure production remains empty.
+Procedure Baseline `PRB-001` is admitted with 3 production contracts.
 
 Current results:
 
@@ -13,6 +13,4 @@ Current results:
 - corrected convergence: `procedure-convergence-run-002.md` — 21 PASS / 0 FAIL
 - admission review: `production-admission-review-001.md`
 
-Decision: **RECOMMEND PRB-001 ADMISSION WITH RECORDED LIMITS**
-
-No Procedure production admission has occurred.
+Decision: **PRB-001 ADMITTED WITH RECORDED LIMITS**

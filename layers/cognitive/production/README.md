@@ -2,112 +2,112 @@
 
 ## Status
 
-Cognitive Baseline `CB-002` is admitted for current cognitive use.
+Cognitive Baseline `CB-003` is admitted for current cognitive use.
 
 ```text
-Admission: Cognitive Production Admission Review 004
-Prior baseline: CB-001
-Evidence: Constitutional Test Run 016
-Suite: 31 PASS / 0 FAIL
-Convergence: Authority–Provenance Convergence Run 004 — PASS
-Promotion date: 2026-07-17
+Admission: Cognitive Production Admission Review 005
+Prior baseline: CB-002
+Evidence:
+- Cognitive Constitutional Run 018 — 33 PASS / 0 FAIL
+- Procedure Convergence Run 002 — 21 PASS / 0 FAIL
+Promotion date: 2026-07-18
 Manifest size: 33 files
 ```
 
-CB-002 incorporates the unchanged CB-001 versions of the 33 artifacts listed below by exact repository history. The transition relocates three contract origins without transferring cognitive responsibilities.
+CB-003 keeps 28 CB-002 artifacts unchanged by exact repository history, revises three contracts in place, replaces two cross-cutting sources with two native Cognitive contracts, and transfers procedural ordering into PRB-001 without transferring Cognitive responsibility.
 
-Production means admitted, versioned, revisable, demotable, and contestable.
-
-It does not mean implemented, executable, operationally validated, autonomous, externally authorized, procedurally complete, or permanent.
+Production means admitted, versioned, revisable, demotable, and contestable. It does not mean implemented, executable, operationally validated, autonomous, externally authorized, or permanent.
 
 ## Canonical Cross-Layer Dependencies
 
-Authority Baseline `AB-001` owns:
+Authority Baseline `AB-002` owns permission semantics, including:
 
 - `layers/authority/production/executive-mandate.md`
+- `layers/authority/production/mission-envelope.md`
+- `layers/authority/production/capability-tool-and-access-grants.md`
 
-Provenance Baseline `PB-001` owns:
+Provenance Baseline `PB-001` owns identity, correlation, and lineage semantics.
 
-- `layers/provenance/production/mission-correlation-and-isolation-contract.md`
-- `layers/provenance/production/provider-intervention-ledgers.md`
+Procedure Baseline `PRB-001` owns expected sequencing and conditional transition semantics.
 
 Cognitive artifacts may cite these contracts but do not originate or redefine them.
 
-## CB-002 Manifest
+## CB-003 Manifest
 
 ### Intake And Mission Formation
 
 1. `secretariat.md`
 2. `castellan.md`
+3. `work-specification-completion-assessment.md`
 
 ### Profession And Persona Production
 
-3. `guildhall.md`
-4. `studium.md`
-5. `hagiography.md`
-6. `foundry.md`
-7. `pit.md`
-8. `garrison.md`
+4. `guildhall.md`
+5. `studium.md`
+6. `hagiography.md`
+7. `foundry.md`
+8. `pit.md`
+9. `garrison.md`
 
 ### Recruitment
 
-9. `conscription.md`
+10. `conscription.md`
 
 ### Citadel Officers And Curia
 
-10. `gesta.md`
-11. `collegium.md`
-12. `preceptory.md`
-13. `smith.md`
-14. `spur.md`
-15. `session-assignment.md`
-16. `ceo-president.md`
-17. `chief-of-staff.md`
-18. `standing-curia-role-requirements.md`
-19. `counsel-availability-contract.md`
-20. `mission-closure-and-release-contract.md`
-21. `curia.md`
+11. `gesta.md`
+12. `collegium.md`
+13. `preceptory.md`
+14. `smith.md`
+15. `spur.md`
+16. `session-assignment.md`
+17. `ceo-president.md`
+18. `chief-of-staff.md`
+19. `standing-curia-role-requirements.md`
+20. `counsel-availability-contract.md`
+21. `mission-closure-and-release-contract.md`
+22. `curia.md`
 
 ### Mission Assembly And Boundary
 
-22. `muster.md`
-23. `la-cortine.md`
-24. `iron-gate.md`
-25. `barbican.md`
-26. `inquisition.md`
-27. `armory-locksmith.md`
-28. `theatre.md`
+23. `muster.md`
+24. `la-cortine.md`
+25. `iron-gate.md`
+26. `barbican.md`
+27. `inquisition.md`
+28. `armory-locksmith.md`
+29. `theatre.md`
 
 ### Return And Reporting
 
-29. `lazaretto.md`
-30. `chamber-of-scribes.md`
+30. `lazaretto.md`
+31. `chamber-of-scribes.md`
 
 ### Cross-Cutting Baseline
 
-31. `cognitive-map.md`
-32. `lifecycle.md`
-33. `production-artifacts.md`
+32. `cognitive-map.md`
+33. `production-artifact-catalog.md`
 
 ## Explicit Exclusions
 
-CB-002 does not admit:
+CB-003 does not admit:
 
 - Commission — eliminated
 - Praetorium — reserved and undefined
 - Vellum — parked without demonstrated necessity
+- a universal Proof layer
+- an Ownership layer
+- a central Artifact layer
 - runtime architecture
-- procedural workflows
 - database or storage schemas
 - services, scheduling, automation, or deployment infrastructure
 - UI contracts
-- external-action authority
 - product-specific operative implementations
 
 ## Change Rule
 
 A production artifact changes through a traceable revision and evidence record.
 
-A contested core boundary requires reviewing dependent CB-002, AB-001, and PB-001 artifacts as applicable.
+A contested core boundary requires reviewing dependent CB-003, AB-002, PB-001, and PRB-001 artifacts as applicable.
 
 Demotion returns an artifact to drafts; history is never overwritten.

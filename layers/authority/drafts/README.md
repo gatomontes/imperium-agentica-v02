@@ -2,19 +2,16 @@
 
 ## Status
 
-Authority Baseline `AB-001` remains admitted and unchanged.
+Authority Baseline `AB-002` is admitted.
 
 Historical source drafts retained for traceability:
 
 - `authority-origin-contract.md`
 - `authority-grant-profiles.md`
 - `executive-mandate.md`
-
-Active refinement candidates exposed by Procedural Split Investigation 001:
-
 - `mission-envelope.md`
 - `capability-tool-and-access-grants.md`
 
-These drafts specialize existing AB-001 grant profiles. They grant no real or simulated authority merely by existing.
+Their admitted canonical versions live in `layers/authority/production/`.
 
-Drafts are contestable, unimplemented, and excluded from AB-001 until independently tested and admitted.
+Draft presence grants no real or simulated authority and does not create a second canonical origin.

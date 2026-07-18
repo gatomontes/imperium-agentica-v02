@@ -2,13 +2,13 @@
 
 ## Status
 
-No active step.
+Atomic Procedure admission migration approved and staged on 2026-07-18.
 
-Procedure pressure, correction, convergence, and admission package completed on 2026-07-18.
+Current operation: merge the verified staging branch as one squash commit, then record and verify the merge SHA and rollback parent.
 
 This file is operational continuity, not doctrine, architecture, or authority.
 
-## Candidate Transition
+## Admitted Transition
 
 ```text
 CB-002 → CB-003
@@ -32,58 +32,44 @@ Provenance Regression Run 003: 34 PASS / 0 FAIL
 Procedure Convergence Run 002: 21 PASS / 0 FAIL
 ```
 
-## Corrected Defects
+## Production Result
 
-Initial pressure exposed:
+```text
+CB-003: 33 / 33
+AB-002: 5 / 5
+PB-001: 3 / 3 unchanged
+PRB-001: 3 / 3
+Runtime: unadmitted
+```
 
-- reporting incorrectly sequenced behind release
-- Curia Session end collapsed with Muster release completion
-- no closure-correction branch
-- mission-formation authority gates omitted
-- Mission Envelope pre-formation scoping unresolved
-- post-closure administrative authority unresolved
-- capability grants not explicitly ended by binding release
+Superseded Cognitive production sources:
 
-All were revised and passed rerun.
+- `layers/cognitive/production/lifecycle.md`
+- `layers/cognitive/production/production-artifacts.md`
 
-The first convergence run was superseded after audit found `cognitive-map.md` retained a competing lifecycle. A Procedure-reduced Cognitive Map passed corrected regression and convergence.
+Their native replacements are `layers/procedure/production/imperium-lifecycle-procedure.md` and `layers/cognitive/production/production-artifact-catalog.md`.
 
-## Origin Findings
+## Preserved Findings
 
-- completion sufficiency belongs to an artifact-relative Work Specification assessment
-- no universal Proof layer is justified
+- completion sufficiency is an artifact-relative Cognitive assessment, not a universal Proof layer
 - no universal Ownership layer is justified
 - no central Artifact layer is justified
 - Authority originates no identity
 - Procedure originates no responsibility, permission, provenance, artifact meaning, or Runtime
+- Runtime remains unadmitted
 
-## Admission Reviews
+## Remaining Verification
 
-- Procedure Review 001: **RECOMMEND PRB-001**
-- Authority Review 002: **RECOMMEND AB-002**
-- Cognitive Review 005: **RECOMMEND CB-003**
-- Cross-Layer Procedure Migration Review 001: **READY FOR OPERATOR APPROVAL**
-
-## Current Production State
-
-```text
-CB-002: current
-AB-001: current
-PB-001: current
-Procedure production: empty
-Production changes from this phase: none
-```
-
-## Next Eligible Step
-
-Execute `drafts/procedure-admission-migration-manifest-001.md` as one atomic production transition.
-
-Activation requires explicit operator approval.
+- confirm the atomic merge SHA
+- confirm rollback parent `8b2a2893d3d1e9686648fc61e24e12bcbb00b11d`
+- confirm both superseded paths are absent on `main`
+- confirm all four admitted manifests resolve exactly
+- scan production contracts for stale draft citations
 
 ## Invariants
 
-- the transition is atomic or does not occur
-- verified targets precede two Cognitive source deletions
-- old and new canonical origins never coexist on main
+- the transition is atomic
+- verified targets precede the two Cognitive source deletions
+- old and new canonical origins never coexist on `main`
 - Procedure remains semantic and non-acting
 - Runtime remains unadmitted

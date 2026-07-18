@@ -119,17 +119,18 @@ A future LLM session should read the repository in this order:
 4. `layers/cognitive/README.md` — cognitive-layer boundary and admission rules.
 5. `layers/cognitive/production/` — admitted cognitive baseline, when cognitive structure is relevant.
 6. `layers/authority/README.md` — approved authority boundary.
-7. `layers/authority/production/` — admitted Authority Baseline `AB-001`, when authority is relevant.
+7. `layers/authority/production/` — admitted Authority Baseline `AB-002`, when authority is relevant.
 8. `layers/authority/drafts/` — shaped but unproven authority contracts, only if relevant.
 9. `layers/provenance/README.md` — approved provenance boundary.
 10. `layers/provenance/production/` — admitted Provenance Baseline `PB-001`, when provenance is relevant.
 11. `layers/provenance/drafts/` — shaped but unproven provenance contracts, only if relevant.
-12. `layers/procedure/README.md` — candidate reduced Procedure boundary, when procedural work is relevant.
-13. `layers/procedure/drafts/` — shaped but unadmitted procedures, only if relevant.
-14. `layers/cognitive/drafts/` — shaped but unproven Cognitive revisions, only if relevant.
-15. `tests/` — theoretical suites and immutable run records, only when testing or tracing.
-16. `ideas.md` — raw pre-draft candidates, only if needed.
-17. `drafts/` — cross-layer working analyses, only if relevant to the current step.
+12. `layers/procedure/README.md` — admitted reduced Procedure boundary, when procedural work is relevant.
+13. `layers/procedure/production/` — admitted Procedure Baseline `PRB-001`.
+14. `layers/procedure/drafts/` — retained Procedure source drafts, only for traceability.
+15. `layers/cognitive/drafts/` — retained or unproven Cognitive revisions, only if relevant.
+16. `tests/` — theoretical suites and immutable run records, only when testing or tracing.
+17. `ideas.md` — raw pre-draft candidates, only if needed.
+18. `drafts/` — cross-layer working analyses, only if relevant to the current step.
 
 Do not reconstruct intent from chat history before reading these files.
 
@@ -165,7 +166,7 @@ The default home for shaped but unproven artifacts is:
 /drafts
 ```
 
-Layer-specific artifacts live within their layer. The admitted cognitive baseline is `CB-002`. Cognitive artifacts use:
+Layer-specific artifacts live within their layer. The admitted cognitive baseline is `CB-003`. Cognitive artifacts use:
 
 ```text
 /layers/cognitive/drafts
@@ -194,7 +195,7 @@ Their theoretical tests use:
 /tests/provenance
 ```
 
-The candidate Procedure boundary and its unadmitted drafts use:
+The admitted reduced Procedure boundary, production baseline, and retained drafts use:
 
 ```text
 /layers/procedure/drafts
@@ -204,7 +205,7 @@ The candidate Procedure boundary and its unadmitted drafts use:
 
 Procedure means only what is supposed to happen, in what order, under which conditions. It may cite but may not originate responsibility, authority, provenance, artifact meaning, proof, ownership, or runtime.
 
-Authority Baseline `AB-001` and Provenance Baseline `PB-001` are admitted for current use. Procedure has no admitted production baseline.
+Authority Baseline `AB-002`, Provenance Baseline `PB-001`, and Procedure Baseline `PRB-001` are admitted for current use. Runtime remains unadmitted.
 
 `production` means admitted for current use, not permanent or implemented in software.
 

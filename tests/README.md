@@ -6,13 +6,13 @@ Theoretical tests and immutable run records by admitted or candidate concern.
 
 ## Current Admitted Baselines
 
-- Cognitive: `CB-002` — 33 artifacts
-- Authority: `AB-001` — 3 artifacts
-- Provenance: `PB-001` — 3 artifacts
-- Procedure: none
+- Cognitive: `CB-003` — 33 artifacts
+- Authority: `AB-002` — 5 artifacts
+- Provenance: `PB-001` — 3 artifacts, unchanged
+- Procedure: `PRB-001` — 3 artifacts
 - Runtime: none
 
-## Candidate Transition Evidence
+## Atomic Admission Evidence
 
 ```text
 Procedure structural: 16 PASS / 0 FAIL
@@ -26,8 +26,6 @@ Provenance regression: 34 PASS / 0 FAIL
 Corrected convergence: 21 PASS / 0 FAIL
 ```
 
-Candidate reviews recommend CB-003, AB-002, and PRB-001 as one atomic transition.
-
-No production admission has occurred.
+The corrected evidence supports the admitted atomic CB-003, AB-002, and PRB-001 transition.
 
 Tests do not execute software or imply Runtime implementation.
