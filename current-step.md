@@ -2,32 +2,30 @@
 
 ## Status
 
-Guildhall Profession Resolution 001 merged and post-merge verified on 2026-07-18.
+Garrison Persona Suitability 001 is the active A2.2 draft candidate.
 
-Track A1 is complete and recorded. A2.1 is complete as the first Track A2 evidence increment.
+Track A1 and A2.1 are complete and recorded. Remaining Track A2 investigation is approved under the operator instruction `proceed with what remains for this leg`.
 
-No active step.
+No production semantics are admitted by this candidate.
 
 This file is operational continuity, not doctrine, architecture, or authority.
 
-## Merge Record
+## Candidate Scope
 
 ```text
-Pull request: #38
-Squash commit: 20b17b16807d743c63eabcd074a2f77404aa61cf
-Rollback parent: 55624d615f479dee6b217d34be87ce4fe75dd628
-Candidate head: 2f69bc6b2f505d543ab1c175e3dab6de6be482c0
+Input: exact conformant Profession Specification and exact Garrison Inventory View
+Product: versioned Persona Suitability Search Assessment
+Cognitive finding: SUITABLE_PERSONA_CANDIDATES_FOUND / NO_SUITABLE_PERSONA_FOUND / PERSONA_SEARCH_UNRESOLVED
+Output: candidate-selection eligibility or persona-production-branch eligibility
+Persona selection, construction, admission, or recruitment: none
+Production admission: none
 ```
 
-Execution record:
-
-`drafts/guildhall-profession-resolution-execution-001.md`
-
-## Verified Evidence
+## Candidate Evidence
 
 ```text
-Pre-candidate pressure: 7 PASS / 8 FAIL
-Corrected profession-resolution pressure: 15 PASS / 0 FAIL
+Pre-candidate pressure: 6 PASS / 9 FAIL
+Corrected persona-suitability pressure: 15 PASS / 0 FAIL
 Cross-layer convergence: 12 PASS / 0 FAIL
 Preserved Runtime successor suite: 91 PASS / 0 FAIL
 Repository regression: PASS
@@ -36,16 +34,16 @@ Production semantic files changed: 0
 
 ## Preserved Boundaries
 
-- Castellan retains Work Specification meaning
-- Authority retains `APPROVE_WORK_SPECIFICATION` effectiveness
-- PB-001 retains identity, derivation, and supersession
-- conformance remains distinct from approval
-- Guildhall retains profession resolution
-- Procedure retains handoff ordering
-- no live profession, Garrison search, persona action, production semantic change, Runtime implementation, deployment, or external effect
+- Guildhall retains suitability-criteria application
+- Garrison retains inventory truth
+- Conscription retains persona selection and recruitment
+- Studium, Hagiography, Foundry, Pit, and Garrison retain persona production and admission
+- PB-001 retains identity, derivation, correlation, and supersession
+- Procedure retains found/no-match branch ordering
+- no live query, persona action, production semantic change, Runtime implementation, deployment, or external effect
 
 ## Next Gate
 
-Choose and explicitly approve the next Track A2 increment from `next-steps.md`.
+Approve or reject candidate merge.
 
-No direction is active by default.
+No merge is authorized by creation of this candidate.

@@ -25,7 +25,8 @@ Unadmitted draft evidence:
 - `operative-creation-handoff-contract.md` — merged creation-side assessment evidence; not admitted into CB-005
 - `castellan-mission-formation-contract.md` — merged A1.1 evidence for exact Petition to bounded Mission Need formation; not admitted into CB-005
 - `castellan-work-specification-contract.md` — merged A1.2 evidence for bounded Mission Need to approved Work Specification handoff; not admitted into CB-005
-- `guildhall-profession-resolution-contract.md` — active A2.1 candidate for exact approved Work Specification to Profession Specification and Garrison search eligibility; not admitted into CB-005
+- `guildhall-profession-resolution-contract.md` — merged A2.1 evidence for exact approved Work Specification to Profession Specification and Garrison search eligibility; not admitted into CB-005
+- `garrison-persona-suitability-contract.md` — active A2.2 candidate for exact inventory-backed persona suitability and production-branch eligibility; not admitted into CB-005
 
 ## Rule
 
