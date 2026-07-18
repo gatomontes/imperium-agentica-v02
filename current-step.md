@@ -2,11 +2,13 @@
 
 ## Status
 
-Atomic cross-layer migration staged and pre-merge verification passed; squash merge and post-merge verification remain.
+No active step.
+
+Atomic cross-layer migration completed and verified on 2026-07-17.
 
 This file is operational continuity, not doctrine, architecture, or authority.
 
-## Transition
+## Last Completed Step
 
 ```text
 CB-001 → CB-002
@@ -14,18 +16,32 @@ Authority production empty → AB-001
 Provenance production empty → PB-001
 ```
 
-## Staged Production State
+Atomic migration squash commit:
+
+```text
+8d2e51460ce75bc25da239657b96124c70f1166c
+```
+
+Rollback parent:
+
+```text
+fdd801dc10f586678673a85a3633ae04e27165bd
+```
+
+Post-merge verification: `tests/cross-layer-migration-verification-001.md` — PASS.
+
+## Current Production State
 
 ```text
 Authority: AB-001 — 3 / 3 artifacts
 Provenance: PB-001 — 3 / 3 artifacts
 Cognitive: CB-002 — 33 / 33 artifacts
-Relocated cognitive source deletions: 3 / 3 staged
+Relocated cognitive source deletions: 3 / 3 verified
 Procedure: unadmitted
 Runtime: unadmitted
 ```
 
-## Evidence
+## Preserved Evidence
 
 ```text
 Authority core: 10 PASS / 0 FAIL
@@ -36,31 +52,23 @@ Mission correlation: 12 PASS / 0 FAIL
 Provider ledgers: 12 PASS / 0 FAIL
 Cognitive regression: 31 PASS / 0 FAIL
 Cross-layer convergence: PASS
-Migration review: READY; operator execution approved
 ```
 
-## Pre-Merge Verification
+## Next Eligible Step
 
-- six target production contracts present
-- three superseded Cognitive origins absent
-- AB-001 manifest 3 / 3
-- PB-001 manifest 3 / 3
-- CB-002 manifest 33 / 33
-- cognitive consumers cite external canonical origins
-- staging branch is ahead of and not behind `main`
+Split and investigate the contested procedural candidates:
 
-## Remaining Work
+- `counsel-availability-contract.md`
+- `mission-closure-and-release-contract.md`
+- `lifecycle.md`
+- `production-artifacts.md`
 
-1. Squash-merge the staging branch into `main` as one atomic production transition.
-2. Verify the resulting `main` tree.
-3. Record the merge SHA and close post-migration verification.
+Activation requires explicit operator approval.
 
 ## Invariants
 
-- Migration is atomic on `main` or does not occur.
-- No duplicate canonical production origins survive.
-- No source disappears without a verified target.
+- Procedure means only what is supposed to happen, in what order, under which conditions.
+- Procedure may cite but may not originate responsibility, authority, provenance, artifact meaning, proof, ownership, or runtime.
 - Cognitive responsibility does not transfer with contract ownership.
-- Authority and Provenance remain non-acting and parallel.
-- Procedure and Runtime remain unadmitted.
-- The exact pre-migration parent remains the rollback point.
+- Authority and Provenance remain parallel and non-acting.
+- Runtime remains unadmitted.
