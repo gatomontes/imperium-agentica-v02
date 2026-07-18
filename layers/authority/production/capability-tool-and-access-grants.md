@@ -122,7 +122,7 @@ Authority may consume provenance about provider observations without treating pr
 
 Armory, Locksmith, Barbican, Muster, and operative responsibilities remain defined by Cognitive contracts.
 
-This Authority draft does not assign custody, fulfillment, routing, request timing, or decision responsibility.
+This Authority contract does not assign custody, fulfillment, routing, request timing, or decision responsibility.
 
 ## Procedure Boundary
 
