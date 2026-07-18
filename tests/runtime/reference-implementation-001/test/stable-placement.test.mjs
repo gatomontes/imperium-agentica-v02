@@ -20,6 +20,7 @@ test("stable reference package is private and exposes only the approved surface"
     "./providers/node-process-supervisor": "./src/node-process-supervisor-adapter.mjs",
     "./security/synthetic-credentials": "./src/synthetic-credential-broker.mjs",
     "./providers/node-process-supervisor/synthetic-credentials": "./src/synthetic-credential-node-process-supervisor-adapter.mjs",
+    "./security/synthetic-secret-store": "./src/synthetic-secret-store-port.mjs",
   });
 });
 
@@ -32,6 +33,7 @@ test("every approved export resolves to the expected reference API", async () =>
   const provider = await import(new URL("../../../../layers/runtime/reference/src/node-process-supervisor-adapter.mjs", import.meta.url));
   const credentials = await import(new URL("../../../../layers/runtime/reference/src/synthetic-credential-broker.mjs", import.meta.url));
   const projection = await import(new URL("../../../../layers/runtime/reference/src/synthetic-credential-node-process-supervisor-adapter.mjs", import.meta.url));
+  const secretStore = await import(new URL("../../../../layers/runtime/reference/src/synthetic-secret-store-port.mjs", import.meta.url));
   assert.equal(typeof runtime.ReferenceRuntime, "function");
   assert.equal(typeof contracts.validatePlan, "function");
   assert.equal(typeof memory.InMemoryStore, "function");
@@ -40,6 +42,7 @@ test("every approved export resolves to the expected reference API", async () =>
   assert.equal(typeof provider.NodeProcessSupervisorAdapter, "function");
   assert.equal(typeof credentials.SyntheticCredentialBroker, "function");
   assert.equal(typeof projection.SyntheticCredentialNodeProcessSupervisorAdapter, "function");
+  assert.equal(typeof secretStore.SyntheticSecretStorePort, "function");
 });
 
 test("the evidence package contains no duplicate implementation source tree", () => {

@@ -30,6 +30,7 @@ The private package manifest exposes only these paths:
 | `@imperium-agentica/runtime-reference/providers/node-process-supervisor` | injected, credentialless Node process-supervisor reference adapter |
 | `@imperium-agentica/runtime-reference/security/synthetic-credentials` | in-memory, one-use synthetic credential boundary for tests |
 | `@imperium-agentica/runtime-reference/providers/node-process-supervisor/synthetic-credentials` | synthetic-only projection from the one-use broker to the injected supervisor driver |
+| `@imperium-agentica/runtime-reference/security/synthetic-secret-store` | expiring synthetic lease port with an in-memory test backend |
 
 The placement and export names are stable enough for repository tests and future bounded investigations. Behavior remains revisable and contestable by evidence.
 
@@ -68,6 +69,16 @@ The opaque handle is constructor-held and never enters a Runtime plan, observati
 Binding refusal or an absent/replayed handle maps to operational failure without invoking the driver. A driver exception, Promise result, or unknown provider response remains indeterminate. The broker zeroes the temporary view after the synchronous call.
 
 This projection does not define a real credential format, header, environment variable, file, provider SDK, transport, authentication scheme, or live effect.
+
+## Synthetic Secret-Store Port
+
+`SyntheticSecretStorePort` separates acquisition from one-use consumption. Its external opaque lease maps privately to the broker capability, carries bounded acquisition and expiry metadata, and implements the broker-compatible `consume` surface used by the synthetic provider projection.
+
+`InMemorySyntheticSecretStoreBackend` is a deterministic test backend. It accepts only synthetic byte material, zeroes the seed caller's view, and supports availability, replacement, revocation, and close pressure without persistence.
+
+Lease binding covers environment, component, scope, and purpose. Expiry, explicit lease revocation, secret-reference revocation, store unavailability, absent references, and close fail without material disclosure. Audit events use a separate non-capability lease identity and omit both lease and broker handles.
+
+This port does not select or emulate a real secret-store vendor, authentication method, SDK, network protocol, encryption scheme, file format, deployment, or availability guarantee.
 
 ## Ownership Boundary
 

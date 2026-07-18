@@ -2,32 +2,34 @@
 
 ## Status
 
-Runtime Synthetic Credential-to-Provider Projection 001 is merged and post-merge verified.
+Runtime Synthetic Secret-Store Port 001 candidate and evidence are complete.
 
-No next direction is approved or active.
-
-This file is an ordered operational queue, not doctrine, architecture, or a roadmap.
+The active merge decision is recorded only in `current-step.md`.
 
 ## Queue
 
-### 1. Choose one independently scoped direction
+### 1. If approved, merge the synthetic secret-store port package
 
-Eligible but unapproved options:
+Require:
 
-- secret-store port investigation with a synthetic backend
+- exact candidate head
+- combined successor 91 / 91
+- historical harness 11 / 11
+- repository regression PASS
+- zero production semantic changes
+- no real credential, vendor, SDK, file, network, process execution, deployment, or external effect
+- explicit in-memory-backend and JavaScript-erasure limits
+
+### 2. After merge, choose one independent direction
+
+- secret-store authorization policy investigation
 - real secret-store provider investigation
 - live Node process-supervisor driver investigation
 - provider authentication-format investigation
 - production deployment design
 
-Recommended next step:
+Each requires separate necessity analysis, tests, and approval.
 
-`secret-store port investigation with a synthetic backend`
+### 3. Preserve adjacent gates
 
-It can establish acquisition metadata, lease expiry, revocation, unavailable-store behavior, and broker handoff without selecting a vendor, handling a real secret, or using a network.
-
-Each option requires its own necessity analysis, scope, tests, and explicit approval.
-
-### 2. Preserve adjacent gates
-
-No option automatically proves secure erasure, real credential safety, provider authentication or idempotency, component recovery, production readiness, or consensus; deploys Runtime; or authorizes external effects.
+Candidate merge does not prove secure erasure, real credential safety, store durability or availability, provider authentication or idempotency, component recovery, production readiness, or consensus; deploy Runtime; or authorize external effects.

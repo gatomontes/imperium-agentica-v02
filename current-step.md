@@ -2,54 +2,58 @@
 
 ## Status
 
-Runtime Synthetic Credential-to-Provider Projection 001 merged and post-merge verified on 2026-07-18.
-
-No active step.
-
-This file is operational continuity, not doctrine, architecture, or authority.
-
-## Merge Record
+Runtime Synthetic Secret-Store Port 001 candidate completed on 2026-07-18.
 
 ```text
-Pull request: #27
-Squash commit: f50ea9bd994d415e3993751abaf11eed95fd3cbd
-Rollback parent: 2cc923baa0df9bee91dbd478f6ba6c350407f607
-Candidate head: 925d46b2698633f15858ad91071517b722431a95
-```
-
-Execution record:
-
-`drafts/runtime-synthetic-provider-projection-execution-001.md`
-
-## Verified Evidence
-
-```text
-Pre-projection pressure: 3 PASS / 11 FAIL
-Corrected projection pressure: 14 PASS / 0 FAIL
-Focused projection tests: 13 PASS / 0 FAIL
-Preserved successor tests: 64 PASS / 0 FAIL
-Combined successor suite: 77 PASS / 0 FAIL
+Pre-port pressure: 4 PASS / 11 FAIL
+Corrected port pressure: 15 PASS / 0 FAIL
+Focused port tests: 14 PASS / 0 FAIL
+Preserved successor tests: 77 PASS / 0 FAIL
+Combined successor suite: 91 PASS / 0 FAIL
 Historical harness: 11 PASS / 0 FAIL
 Repository regression: PASS
 Production semantic files changed: 0
 ```
 
-## Projection Status
+No real secret, vendor, SDK, file, environment variable, network, process execution, deployment, production admission, or external effect.
 
-`@imperium-agentica/runtime-reference/providers/node-process-supervisor/synthetic-credentials` is a stable nonproduction reference export.
+## Active Branch
 
-It composes synthetic test bytes with an injected driver only. It is not a real secret-store client, provider authentication mechanism, process controller, deployment component, or production implementation.
+`agent/runtime-synthetic-secret-store-port-001`
 
-## Preserved Limits
+Rollback parent:
 
-- JavaScript view zeroing is not proof of complete memory erasure
-- a trusted synchronous driver can copy bytes while invoked
-- no real secret, persistent store, SDK, network, process execution, provider account, deployment, or external effect
-- no Master Mason implementation, qualification, assignment, or decision mandate
-- no Authority registry, grant issuance, PB-001 ownership, or Procedure revision
+`a0f673bf32943289100b4944d14775e63f562eca`
 
-## Next Gate
+## Candidate
 
-Choose one independently scoped store-port, live-driver, authentication-format, or deployment direction from `next-steps.md`.
+The stable private reference package gains:
 
-No direction is active by default.
+- `layers/runtime/reference/src/synthetic-secret-store-port.mjs`
+- export `./security/synthetic-secret-store`
+- an in-memory synthetic backend
+- an expiring, revocable, broker-compatible lease port
+- fourteen focused tests
+
+The port separates store acquisition from one-use broker custody, exposes only bounded metadata and an opaque lease, and fails closed on expiry, revocation, absence, or unavailability.
+
+## Records
+
+- investigation: `drafts/runtime-synthetic-secret-store-port-001.md`
+- necessity: `drafts/runtime-synthetic-secret-store-port-necessity-analysis-001.md`
+- conformance plan: `drafts/runtime-synthetic-secret-store-port-conformance-plan-001.md`
+- pressure tests: `tests/runtime/runtime-synthetic-secret-store-port-pressure-tests-001.md`
+- baseline run: `tests/runtime/runtime-synthetic-secret-store-port-pressure-run-001.md`
+- corrected run: `tests/runtime/runtime-synthetic-secret-store-port-pressure-run-002.md`
+- repository regression: `tests/runtime/runtime-synthetic-secret-store-port-repository-regression-001.md`
+- candidate review: `tests/runtime/runtime-synthetic-secret-store-port-candidate-review-001.md`
+
+## Next Decision
+
+Decide whether to merge the nonproduction synthetic secret-store port evidence package.
+
+Merge would not select a vendor, handle a real credential, prove store durability or availability, authenticate to a provider, deploy Runtime, or authorize external effects.
+
+## Stop Condition
+
+No candidate merge without explicit operator approval.
