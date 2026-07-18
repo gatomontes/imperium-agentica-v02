@@ -2,13 +2,15 @@
 
 ## Status
 
-Candidate Runtime draft.
+Candidate revision to the admitted Runtime contract.
 
-Not admitted or implemented.
+Not admitted or implemented. RTB-001 production remains canonical.
+
+Investigation: `Runtime Maintenance Artifact Closure 001`.
 
 ## Purpose
 
-Define the smallest operating contract by which Runtime realizes an admitted Procedure transition as actual state or effect without originating semantic meaning or permission.
+Define the smallest operating contract by which Runtime realizes an admitted Procedure transition as actual state or effect without originating semantic meaning, diagnosis, direction, or permission.
 
 ## Realization Unit
 
@@ -16,8 +18,7 @@ One realization unit binds:
 
 ```text
 realization identity
-exact Procedure contract and version
-exact Procedure branch and transition
+exact Procedure contract, branch, transition, and version
 required Cognitive actors and artifact definitions
 required Authority action and finding
 required Provenance subjects and correlation findings
@@ -27,11 +28,32 @@ current operational state
 permitted operational next states
 ```
 
-A realization unit does not become a new mission, decision, grant, lineage assertion, or procedure.
+A realization unit does not become a new diagnosis, maintenance disposition, mission, decision, grant, lineage assertion, or procedure.
+
+## Maintenance Input Gate
+
+A Runtime maintenance realization requires:
+
+- exact Runtime Operational Diagnosis identity and version
+- exact Runtime Maintenance Disposition identity and version
+- disposition form `INSTRUCT_MAINTENANCE`
+- exact Runtime Maintenance Procedure branch and version
+- effective CONTROL_PLANE Authority for the exact action
+- exact PB-001 correlation
+
+Runtime must refuse consequential realization for:
+
+```text
+NO_INTERVENTION
+WITHHOLD_MAINTENANCE
+ESCALATE_STRUCTURAL_CONDITION
+```
+
+Runtime does not convert any of those forms into an instruction.
 
 ## Operational States
 
-Candidate Runtime-native states include:
+Runtime-native states include:
 
 ```text
 ACCEPTED
@@ -53,7 +75,7 @@ RECOVERED
 
 These states describe implementation behavior only.
 
-No operational state implies a Cognitive finding, Authority finding, Procedure outcome, artifact acceptance, mission disposition, closure, or release.
+No operational state implies diagnosis, maintenance direction, Authority, Procedure outcome, artifact acceptance, mission disposition, closure, or release.
 
 ## Acceptance Gate
 
@@ -62,32 +84,30 @@ Runtime may accept a realization unit only when:
 - all controlling contracts and versions are explicit
 - the Procedure transition exists
 - required inputs are present and exactly correlated
+- the input artifact form permits realization
 - the applicable Authority finding is effective for the exact action
 - required semantic mappings are compatible
 - no unresolved contradiction requires Runtime to invent meaning
 
-Failure produces an explicit refusal or block. Runtime does not repair the missing semantic input.
+Failure produces explicit refusal or block. Runtime does not repair missing semantic input.
 
 ## Dispatch Gate
 
 Immediately before every externally consequential effect, including retry or recovered dispatch, Runtime must:
 
 1. resolve the exact mission or bounded non-mission scope
-2. resolve the exact subject, action, effect identity, and intended provider or resource
-3. pin the controlling contract and mapping versions
-4. re-evaluate the applicable Authority finding
-5. re-evaluate exact PB-001 correlation
-6. confirm that the cited Procedure branch still permits the effect
-7. bind an idempotency and concurrency policy
-8. refuse closed on absence, mismatch, contest, expiry, supersession, or indeterminacy
+2. resolve the exact subject, action, effect identity, and intended resource
+3. pin the diagnosis, disposition, Procedure, Authority, Provenance, implementation, and mapping versions
+4. confirm the disposition remains current and is `INSTRUCT_MAINTENANCE` when applicable
+5. re-evaluate the applicable Authority finding
+6. re-evaluate exact PB-001 correlation
+7. confirm the cited Procedure branch still permits the effect
+8. bind idempotency and concurrency policy
+9. refuse closed on absence, mismatch, contest, expiry, supersession, or indeterminacy
 
 An enqueue-time check is insufficient.
 
 ## Attempt And Effect Identity
-
-An attempt is one Runtime execution effort.
-
-An effect is the externally consequential result the attempt seeks.
 
 ```text
 attempt identity ≠ effect identity
@@ -96,7 +116,7 @@ duplicate delivery ≠ duplicate intent
 provider acknowledgement ≠ mission success
 ```
 
-Multiple attempts may address one effect only when the admitted disposition and effective Authority permit it.
+Multiple attempts may address one effect only when the current disposition, Procedure, and fresh Authority permit it.
 
 ## Retry And Replay
 
@@ -105,6 +125,7 @@ Runtime may calculate retry eligibility, delay, backoff, and exhaustion as opera
 Runtime may dispatch a retry only when:
 
 - the prior effect is known not to have occurred or repetition is explicitly safe
+- the current `INSTRUCT_MAINTENANCE` disposition permits the repeat
 - Procedure permits another attempt
 - fresh Authority permits the exact repeat
 - PB-001 correlation remains exact
@@ -117,31 +138,31 @@ An indeterminate effect is never automatically retryable.
 When provider outcome cannot be established after dispatch:
 
 1. mark the effect `QUARANTINED_INDETERMINATE`
-2. preserve the exact attempt, effect, request, provider, contract, and mapping references
+2. preserve exact attempt, effect, request, resource, contract, disposition, and mapping references
 3. prohibit automatic repeat, compensation, reinterpretation, or success/failure mapping
 4. emit a durable Runtime Observation Envelope
-5. wait for a cited Procedure disposition and fresh Authority before any consequential next effect
+5. wait for a new or superseding diagnosis, cited Procedure path, new disposition, and fresh Authority before any consequential next effect
 
-Runtime may investigate operational transport facts. It may not decide the mission meaning of the unknown effect.
+Runtime may investigate transport facts. It may not decide the maintenance or mission meaning of the unknown effect.
 
 ## Concurrency And Idempotency
 
-Runtime must prevent two concurrent attempts from causing an unauthorized duplicate effect.
+Runtime must prevent concurrent attempts from causing unauthorized duplicate effects.
 
-The implementation may serialize, lock, deduplicate, or refuse attempts. Those mechanisms do not decide semantic ownership or grant permission.
+Serialization, locking, deduplication, or refusal do not decide semantic ownership or permission.
 
-Content similarity cannot substitute for exact effect and mission identity.
+Content similarity cannot substitute for exact disposition, effect, and scope identity.
 
 ## Crash And Recovery
 
-A crash does not select another Procedure branch, renew Authority, reverse an external effect, or establish mission failure.
+A crash does not select another Procedure branch, produce a disposition, renew Authority, reverse an external effect, or establish mission failure.
 
 Recovery must:
 
 - restore or reconstruct the last durable operational state
 - preserve incomplete and indeterminate attempts
 - revalidate controlling versions and mappings
-- recheck Authority and correlation before any new effect
+- recheck disposition, Authority, and correlation before any new effect
 - refuse continuation when the prior effect cannot be safely classified
 
 ## Persistence And Mapping
@@ -160,10 +181,10 @@ Lossy semantic mapping blocks execution or migration.
 
 ## Required Observations
 
-Each acceptance, refusal, dispatch, effect result, quarantine, crash, recovery, retry decision, and terminal operational state that affects recovery or another layer must produce the cited Runtime Observation Envelope.
+Each acceptance, refusal, dispatch, effect result, quarantine, crash, recovery, retry decision, and terminal operational state affecting recovery or another layer must produce the cited Runtime Observation Envelope.
 
 ## Non-Admissions
 
-This draft does not select a language, framework, queue, database, event bus, deployment topology, provider, or credential system.
+This candidate selects no language, framework, queue, database, event bus, deployment topology, provider, credential system, or live environment.
 
 It authorizes no execution or external effect.
