@@ -2,9 +2,9 @@
 
 ## Status
 
-Candidate Runtime tests only.
+Runtime candidate evidence only.
 
-No Runtime production baseline or implementation is admitted.
+No Runtime production baseline or live implementation is admitted.
 
 ## Boundary And Draft Evidence
 
@@ -14,24 +14,31 @@ No Runtime production baseline or implementation is admitted.
 - draft convergence: 24 PASS / 0 FAIL
 - state-machine conformance method: 15 PASS / 0 FAIL
 
-## Superseded Master Mason Hypothesis
+## Master Mason Evidence
 
-- `master-mason-runtime-convergence-run-001.md` — 16 PASS / 0 FAIL against the superseded executive role hypothesis
+- operator pressure: 40 PASS / 0 FAIL
+- operator–Runtime convergence: 20 PASS / 0 FAIL
+- Cognitive placement: 12 PASS / 0 FAIL
 
-## Master Mason Operator Evidence
+## Empirical Evidence
 
-- `mason-runtime-convergence-run-001.md` — 20 PASS / 0 FAIL
+- initial empirical harness run: 10 PASS / 1 FAIL
+- corrected empirical harness run: 11 PASS / 0 FAIL
+- admission pressure: 55 PASS / 0 FAIL
+- admission convergence: 30 PASS / 0 FAIL
 
-The current candidate chain is:
+The empirical harness is a simulated, single-process Node model. It is executable evidence, but not proof of distributed mutual exclusion, production durability, credential safety, provider idempotency, or live recovery.
+
+## Candidate Chain
 
 ```text
 Runtime observes.
 Master Mason diagnoses.
-Procedure selects eligible paths.
+Procedure supplies eligible paths.
 Authority permits.
 Master Mason invokes.
 Runtime performs.
 Master Mason assesses or escalates.
 ```
 
-All results are theoretical. No concrete state machine, service, credential, integration, or external effect was evaluated.
+No concrete service, credential, provider integration, deployment environment, or external effect was evaluated.
