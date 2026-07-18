@@ -54,14 +54,14 @@ export class ReferenceRuntime {
     for (const [key, value] of Object.entries(expected)) {
       if (realization[key] !== value) return this.refuse(realization, `REALIZATION_${key.toUpperCase()}_MISMATCH`);
     }
-    if (!this.store.components.has(realization.component)) return this.refuse(realization, "COMPONENT_UNKNOWN");
-    this.store.realizations.set(realization.id, structuredClone(realization));
+    if (!this.store.hasComponent(realization.component)) return this.refuse(realization, "COMPONENT_UNKNOWN");
+    this.store.saveRealization(realization.id, realization);
     this.observe("ADMISSION", "ACCEPTED", realization.id, realization, {});
     return { status: "ACCEPTED", realizationId: realization.id };
   }
 
   dispatch({ realizationId, attemptId, effectId, disposition, plan, crashAt }) {
-    const realization = this.store.realizations.get(realizationId);
+    const realization = this.store.getRealization(realizationId);
     if (!realization) return this.refuse({ realizationId, attemptId, effectId }, "REALIZATION_ABSENT");
     try {
       validateDisposition(disposition);
@@ -88,13 +88,13 @@ export class ReferenceRuntime {
     const mismatch = conformance.find(([, actual, expected]) => actual !== expected);
     if (mismatch) return this.refuse({ realizationId, attemptId, effectId, ...realization }, `PLAN_WIDENS_OR_MISMATCHES:${mismatch[0]}`);
 
-    const component = this.store.components.get(realization.component);
+    const component = this.store.getComponent(realization.component);
     if (component.implementationVersion !== plan.implementationVersion ||
         component.semanticMappingVersion !== plan.semanticMappingVersion) {
       return this.refuse({ realizationId, attemptId, effectId, ...realization }, "CURRENT_STATE_MISMATCH");
     }
 
-    const prior = this.store.effects.get(effectId);
+    const prior = this.store.getEffect(effectId);
     if (prior?.status === "QUARANTINED_INDETERMINATE") return this.refuse({ realizationId, attemptId, effectId, ...realization }, "INDETERMINATE_EFFECT_QUARANTINED");
     if (prior) return this.refuse({ realizationId, attemptId, effectId, ...realization }, "DUPLICATE_EFFECT");
 
@@ -113,18 +113,21 @@ export class ReferenceRuntime {
     }
 
     const effect = { effectId, attemptId, status: "DISPATCH_PENDING" };
-    this.store.effects.set(effectId, effect);
+    this.store.saveEffect(effectId, effect);
     if (crashAt === "before-dispatch") {
       effect.status = "CRASHED_BEFORE_DISPATCH";
+      this.store.saveEffect(effectId, effect);
       this.observe("PROCESS", "CRASHED", attemptId, realization, { attemptId, effectId, authority, correlation, procedure });
       return structuredClone(effect);
     }
 
     effect.status = "DISPATCHED";
+    this.store.saveEffect(effectId, effect);
     this.observe("DISPATCH", "STARTED", effectId, realization, { attemptId, effectId, authority, correlation, procedure });
     const result = this.effectPort.dispatch({ realization, disposition, plan, attemptId, effectId });
     if (crashAt === "after-dispatch" || result === EffectResults.INDETERMINATE) {
       effect.status = "QUARANTINED_INDETERMINATE";
+      this.store.saveEffect(effectId, effect);
       this.observe("EXTERNAL_EFFECT", "QUARANTINED", effectId, realization, {
         attemptId,
         effectId,
@@ -136,6 +139,7 @@ export class ReferenceRuntime {
       return structuredClone(effect);
     }
     effect.status = result === EffectResults.SUCCEEDED ? "SUCCEEDED_OPERATIONALLY" : "FAILED_OPERATIONALLY";
+    this.store.saveEffect(effectId, effect);
     this.observe("EXTERNAL_EFFECT", result === EffectResults.SUCCEEDED ? "COMPLETED_OPERATIONALLY" : "FAILED_OPERATIONALLY", effectId, realization, {
       attemptId,
       effectId,
