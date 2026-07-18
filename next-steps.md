@@ -2,34 +2,43 @@
 
 ## Status
 
-Runtime Boundary Investigation 001 is active in `current-step.md`.
+No active step.
+
+Runtime Boundary Investigation 001 awaits operator review.
 
 This file is an ordered operational queue, not doctrine, architecture, or a roadmap.
 
 ## Queue
 
-### 1. Pressure-test the candidate Runtime boundary
+### 1. Decide the candidate Runtime boundary
 
-Test:
+Decision artifact:
 
-- semantic state versus operational state
-- Procedure versus state-machine realization
-- Authority findings versus runtime enforcement
-- Provenance versus logging and telemetry
-- artifact meaning versus schemas and serialization
-- retries, replay, crash recovery, concurrency, and external side effects
-- credentials and provider adapters
-- execution observations and return handling
+`drafts/runtime-boundary-investigation-001.md`
 
-### 2. Submit the Runtime boundary finding for operator review
+Options:
 
-Possible outcomes:
-
+- approve candidate Runtime layer and draft-contract development
+- revise the boundary and rerun affected tests
 - reject Runtime as an independent concern
-- continue investigation with explicit gaps
-- approve a candidate Runtime layer for draft-contract development
 
-No outcome admits Runtime production.
+No option admits Runtime production.
+
+### 2. If approved, create the candidate Runtime layer
+
+Candidate drafts only:
+
+- Runtime realization and dispatch
+- Runtime observation envelope
+- Runtime control plane
+
+Also investigate:
+
+- Authority control-plane profile refinement
+- Procedure indeterminate-effect disposition refinement
+- state-machine conformance method
+
+Activation condition: explicit operator approval.
 
 ### 3. Reconsider Vellum only if a record gap appears
 
