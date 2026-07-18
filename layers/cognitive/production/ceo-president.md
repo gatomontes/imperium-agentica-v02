@@ -1,14 +1,20 @@
 # CEO President
 
+## Canonical Dependencies
+
+This cognitive artifact cites the following admitted contracts as external canonical definitions; it does not originate or redefine them:
+
+- `layers/authority/production/executive-mandate.md`
+
 ## Status
 
 Admitted standing Executive Officer role.
 
-Baseline: `CB-001`.
+Baseline: `CB-002`.
 
-Admission: `Production Admission Review 003`.
+Admission: `Cognitive Production Admission Review 004`.
 
-Evidence: `Constitutional Test Run 015 — 30 PASS / 0 FAIL`.
+Evidence: `Constitutional Test Run 016 — 31 PASS / 0 FAIL`.
 
 The CEO President is Curia's sole substantive decision-maker while bound by an effective Executive Mandate.
 
