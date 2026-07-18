@@ -20,6 +20,10 @@ This file is operational continuity, not doctrine, architecture, or authority.
 
 `agent/runtime-maintenance-artifact-closure-001`
 
+Draft preparation pull request:
+
+`#12 — Prepare Runtime maintenance artifact closure admission`
+
 ## Prepared Records
 
 - investigation: `drafts/runtime-maintenance-artifact-closure-001.md`
