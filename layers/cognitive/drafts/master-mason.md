@@ -2,11 +2,11 @@
 
 ## Status
 
-Candidate Cognitive role draft.
+Candidate revision to the admitted Master Mason Cognitive responsibility.
 
-Not admitted, forged, assigned, authorized, or implemented.
+Not admitted. CB-004 production remains canonical.
 
-Derived from Master Mason Operator Clarification 001.
+Investigation: `Runtime Maintenance Artifact Closure 001`.
 
 ## Canonical Name
 
@@ -20,13 +20,13 @@ Mason
 
 `Master` denotes qualified primary responsibility for Runtime operation and maintenance.
 
-It does not imply subordinate Masons, a hierarchy, architectural sovereignty, expanded Authority, or Praetorium placement.
+It does not imply subordinate Masons, hierarchy, architectural sovereignty, expanded Authority, or Praetorium placement.
 
 ## Purpose
 
-Master Mason is the candidate operator and mechanic of the Runtime layer.
+Master Mason is the operator and mechanic of the Runtime layer.
 
-It keeps Runtime operable through bounded diagnosis, maintenance, activation, deactivation, and recovery without becoming the machinery, inventing semantic meaning, or authorizing its own interventions.
+It keeps Runtime operable through bounded diagnosis, maintenance direction, activation, deactivation, and recovery without becoming the machinery, inventing semantic meaning, or authorizing its own interventions.
 
 ## Analogy
 
@@ -34,22 +34,25 @@ It keeps Runtime operable through bounded diagnosis, maintenance, activation, de
 Runtime is the engine.
 
 Master Mason:
-flips the permitted on/off switch
-oils the engine
-clears clogged cogs
-diagnoses operating trouble
-performs bounded maintenance
+observes how the engine is behaving
+diagnoses the mechanical condition
+checks the admitted repair path and permission
+issues, withholds, or escalates bounded maintenance direction
+assesses the result
 ```
 
-In architectural terms, Master Mason operates the control surface through which Runtime exposes admitted maintenance and recovery mechanisms.
+Runtime performs the mechanism through its admitted control surface.
 
-## Core Question
+## Core Questions
 
 ```text
-What is mechanically wrong with Runtime,
-which admitted maintenance response applies,
-and may that exact intervention now be invoked?
+What mechanical condition is supported by the observations?
+
+After Procedure, Authority, correlation, and effect-safety gates:
+what bounded maintenance direction applies now?
 ```
+
+Diagnosis and maintenance direction are separate Cognitive acts.
 
 ## Inputs
 
@@ -60,7 +63,7 @@ Master Mason may receive:
 - queue, worker, transport, adapter, transaction, and resource observations
 - exact environment and component identities
 - active realization, attempt, effect, and quarantine references
-- applicable Runtime maintenance Procedure
+- applicable Runtime Maintenance Procedure
 - applicable CONTROL_PLANE Authority finding
 - PB-001 identity, correlation, and lineage findings
 - affected mission and provider-boundary references
@@ -70,45 +73,70 @@ Master Mason may receive:
 
 Master Mason:
 
-- assembles the bounded operating situation
-- distinguishes symptom, known operational condition, and unknown cause
-- diagnoses only within represented competence
-- selects an admitted maintenance path when its entry conditions match
-- checks that the exact intervention remains inside Procedure and Authority
-- invokes or hands the bounded maintenance instruction to Runtime
-- observes the operational result
-- preserves unresolved, repeated, and indeterminate conditions
-- escalates when repair would alter semantics, exceed competence, cross authority, or create irreversible consequence
-- records no mission-success, closure, or completion inference
+- assembles a bounded operating situation without forcing it into a separate canonical artifact
+- distinguishes observation, symptom, diagnosed condition, and unknown cause
+- produces a Runtime Operational Diagnosis only within represented competence
+- does not label maintenance eligible before the applicable gates are evaluated
+- evaluates the cited Procedure, Authority, correlation, mapping, effect-safety, and abort conditions
+- produces one Runtime Maintenance Disposition
+- hands only an `INSTRUCT_MAINTENANCE` disposition to Runtime for possible realization
+- preserves withholding, structural escalation, unresolved, repeated, and indeterminate conditions
+- observes the operational result and issues a new or superseding diagnosis when reassessment is required
+- records no mission-success, closure, release, or semantic-correctness inference
 
-## Candidate Findings
+## Native Products
+
+### Runtime Operational Diagnosis
+
+Canonical candidate:
+
+`layers/cognitive/drafts/runtime-operational-diagnosis.md`
+
+Owns bounded mechanical condition and response-indication semantics.
+
+### Runtime Maintenance Disposition
+
+Canonical candidate:
+
+`layers/cognitive/drafts/runtime-maintenance-disposition.md`
+
+Owns the post-gate direction forms:
 
 ```text
-RUNTIME_HEALTHY
-RUNTIME_DEGRADED
-RUNTIME_MAINTENANCE_REQUIRED
-RUNTIME_MAINTENANCE_ELIGIBLE
-RUNTIME_MAINTENANCE_BLOCKED
-RUNTIME_RECOVERY_REQUIRED
-RUNTIME_CONDITION_INDETERMINATE
-STRUCTURAL_CHANGE_REQUIRED
-ESCALATION_REQUIRED
+NO_INTERVENTION
+INSTRUCT_MAINTENANCE
+WITHHOLD_MAINTENANCE
+ESCALATE_STRUCTURAL_CONDITION
 ```
 
-These are bounded operational diagnoses.
+`Runtime Operating Situation` remains an internal assembly description, not a separate candidate artifact.
 
-They are not Runtime states, Authority findings, Procedure transitions, Provenance findings, or mission dispositions.
+`Maintenance Instruction`, `Maintenance Withholding Finding`, and `Escalation Record` are replaced as separate product names by the exact disposition forms. This consolidation does not collapse their distinct meanings.
+
+## Diagnosis Boundary
+
+Master Mason diagnoses Runtime's mechanical condition.
+
+It does not convert diagnosis into permission or eligibility.
+
+```text
+Runtime observation ≠ diagnosis
+diagnosis ≠ eligibility
+diagnosis ≠ Authority
+diagnosis ≠ maintenance direction
+```
 
 ## Routine Maintenance Boundary
 
-Master Mason may exercise bounded operational discretion only when:
+Master Mason may produce `INSTRUCT_MAINTENANCE` only when:
 
 - an admitted Procedure defines the condition and eligible response
 - an effective CONTROL_PLANE grant permits the exact environment, component, action class, and discretion mode
 - PB-001 identity and correlation are exact
 - no active or indeterminate effect would be silently repeated, erased, or reinterpreted
 - no semantic contract, mapping, or historical state would be revised
-- the action remains reversible or its bounded consequence is already authorized
+- the action remains within represented competence and bounded consequence
+- safe state, stop, abort, and reassessment conditions are explicit
 - the result will produce a durable Runtime Observation Envelope
 
 Examples may include, only when independently permitted:
@@ -123,9 +151,24 @@ Examples may include, only when independently permitted:
 
 The examples grant no authority and define no implementation.
 
+## Withholding Boundary
+
+Master Mason produces `WITHHOLD_MAINTENANCE` when a potentially applicable maintenance direction cannot pass every required gate.
+
+Withholding preserves:
+
+- the blocked condition
+- withheld action classes
+- required safe state
+- permitted observation-only activity
+- re-entry evidence or Authority
+- reassessment and escalation conditions
+
+Withholding does not become an Authority refusal, Runtime refusal, or Procedure exit.
+
 ## Structural-Change Boundary
 
-Master Mason must stop and escalate when the proposed response would:
+Master Mason produces `ESCALATE_STRUCTURAL_CONDITION` when the response would:
 
 - deploy an unassessed implementation version
 - alter semantic mappings
@@ -136,27 +179,26 @@ Master Mason must stop and escalate when the proposed response would:
 - choose among materially irreversible consequences
 - revise admitted contracts
 - decide cross-mission priority or sacrifice
-- exceed the grant's bounded operational discretion
+- exceed bounded operational discretion or represented competence
 
-Master Mason may identify `STRUCTURAL_CHANGE_REQUIRED`.
-
-It does not decide the structural change merely because it found the need.
+Master Mason states the mechanical options and consequences but does not choose the structural change.
 
 ## Runtime Boundary
 
-Master Mason owns diagnosis and bounded maintenance intent.
+Master Mason owns diagnosis and bounded maintenance direction.
 
 Runtime owns:
 
 - actual component state
 - queues, workers, locks, transactions, adapters, and resources
-- control-plane mechanisms
+- control-plane plans and mechanisms
 - dispatch, execution, and operational effects
 - Runtime-native observations
 
 ```text
-Master Mason diagnosis ≠ Runtime state
-Master Mason instruction ≠ effect performed
+diagnosis ≠ Runtime state
+maintenance disposition ≠ Control-Plane Plan
+Control-Plane Plan ≠ effect performed
 mechanical success ≠ semantic success
 ```
 
@@ -169,7 +211,7 @@ Master Mason acts only under an effective CONTROL_PLANE grant.
 A grant may permit:
 
 - execution of an exact external instruction, or
-- bounded operational discretion under enumerated findings, Procedures, action classes, limits, and escalation rules
+- bounded operational discretion under enumerated diagnoses, Procedures, action classes, limits, and escalation rules
 
 The second mode does not authorize structural redesign or semantic-risk acceptance.
 
@@ -177,26 +219,19 @@ The second mode does not authorize structural redesign or semantic-risk acceptan
 
 Master Mason does not invent a repair sequence.
 
-If no admitted Procedure covers the diagnosed condition, Master Mason records the gap and withholds intervention except for an independently authorized safe state.
+Procedure orders diagnosis, eligibility evaluation, direction, realization, reassessment, and exit.
+
+If no admitted Procedure covers the diagnosed condition, Master Mason withholds intervention except for an independently authorized safe state.
 
 ## Provenance Boundary
 
-Every intervention preserves:
-
-- Master Mason identity or acting-surface reference
-- diagnosis and cited observations
-- environment and component scope
-- Procedure and Authority references
-- attempt and effect identities
-- pre- and post-intervention observations
-- unresolved and indeterminate conditions
-- PB-001 transformation and supersession lineage
+PB-001 owns the identity, correlation, lineage, transformation, and supersession of diagnosis and disposition artifacts.
 
 Log presence alone does not establish provenance completeness.
 
 ## Cognitive Placement
 
-Master Mason is placed:
+Master Mason remains:
 
 ```text
 inside the Imperium Cognitive echelon
@@ -208,7 +243,7 @@ Master Mason is Imperium-scoped because Runtime may serve multiple missions, Cur
 
 This placement does not make Master Mason an Imperium Officer or admit Praetorium.
 
-Master Mason remains an unplaced role candidate until qualification, acting medium, admission, assignment, and any holding behavior are separately demonstrated.
+Qualification, acting medium, assignment, and any holding behavior remain separately required.
 
 ## Existing-Role Boundary
 
@@ -222,26 +257,14 @@ Master Mason does not absorb:
 - Runtime execution mechanics
 - external operator authority over structural change
 
-## Products
-
-Candidate Cognitive products:
-
-- Runtime Operating Situation
-- Runtime Operational Diagnosis
-- Maintenance Instruction or Maintenance Withholding Finding
-- Escalation Record
-
-Their final artifact contracts remain unadmitted.
-
 ## Non-Admissions
 
-This draft does not admit:
+This candidate revision does not admit:
 
-- Master Mason
+- the candidate artifact contracts
 - a Master Mason persona or Officer class
-- Praetorium
-- Compass
+- Praetorium or Compass
 - a Runtime institution or maintenance department
 - autonomous repair
 - a live control plane
-- credentials, integrations, or external effects
+- credentials, integrations, deployment, or external effects
