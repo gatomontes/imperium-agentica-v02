@@ -13,6 +13,39 @@ export class InMemoryStore {
       ...structuredClone(state),
     });
   }
+
+  hasComponent(id) {
+    return this.components.has(id);
+  }
+
+  getComponent(id) {
+    const value = this.components.get(id);
+    return value && structuredClone(value);
+  }
+
+  saveComponent(id, value) {
+    this.components.set(id, structuredClone(value));
+  }
+
+  getRealization(id) {
+    const value = this.realizations.get(id);
+    return value && structuredClone(value);
+  }
+
+  saveRealization(id, value) {
+    this.realizations.set(id, structuredClone(value));
+  }
+
+  getEffect(id) {
+    const value = this.effects.get(id);
+    return value && structuredClone(value);
+  }
+
+  saveEffect(id, value) {
+    this.effects.set(id, structuredClone(value));
+  }
+
+  close() {}
 }
 
 export class MutableFindingPort {

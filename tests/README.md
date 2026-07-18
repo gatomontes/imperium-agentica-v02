@@ -38,7 +38,18 @@ Repository regression: PASS
 Production semantic files changed: 0
 ```
 
-The successor remains test-scoped, deterministic, and simulated.
+## Current Durability Candidate
+
+```text
+Pre-extension durability pressure: 3 PASS / 10 FAIL
+Corrected durability pressure: 13 PASS / 0 FAIL
+Combined successor suite: 24 PASS / 0 FAIL
+Historical harness: 11 PASS / 0 FAIL
+Repository regression: PASS
+Production semantic files changed: 0
+```
+
+The durability extension remains noncanonical, test-scoped, single-node, and filesystem-backed.
 
 ## Evidence Discipline
 
