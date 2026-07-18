@@ -4,17 +4,17 @@
 
 No active step.
 
-Mason Operator Model and Cognitive Placement await operator review.
+Master Mason Operator Model and Cognitive Placement await operator review.
 
 This file is an ordered operational queue, not doctrine, architecture, or a roadmap.
 
 ## Queue
 
-### 1. Decide the corrected Mason package
+### 1. Decide the corrected Master Mason package
 
 Recommended:
 
-- accept Mason as Runtime operator/mechanic candidate
+- accept Master Mason as Runtime operator/mechanic candidate
 - accept placement inside Imperium but outside Citadel
 - preserve routine maintenance versus structural-decision boundary
 - merge draft PR #6
@@ -38,18 +38,18 @@ Minimum behaviors:
 - incompatible state migration and rollback refusal
 - Runtime Observation Envelope production
 - conformance against at least one admitted PRB-001 Procedure
-- Mason diagnosis, intervention, restoration, and escalation paths
+- Master Mason diagnosis, intervention, restoration, and escalation paths
 
 Activation condition: separate implementation approval after PR #6 merge.
 
 ### 3. Reassess candidate admission only after empirical evidence
 
-Runtime, Mason, CONTROL_PLANE Authority, and Runtime Maintenance Procedure remain candidates until real failure and recovery evidence exists.
+Runtime, Master Mason, CONTROL_PLANE Authority, and Runtime Maintenance Procedure remain candidates until real failure and recovery evidence exists.
 
 ### 4. Keep Compass parked
 
-Reactivate only if a distinct reusable orientation mechanism emerges beyond current Plan, observations, conformance method, and Mason diagnosis.
+Reactivate only if a distinct reusable orientation mechanism emerges beyond current Plan, observations, conformance method, and Master Mason diagnosis.
 
 ### 5. Keep Praetorium parked
 
-Mason's Imperium scope does not demonstrate an Imperium Officer corps or holding institution.
+Master Mason's Imperium scope does not demonstrate an Imperium Officer corps or holding institution.
