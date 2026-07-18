@@ -2,7 +2,26 @@
 
 ## Status
 
-Runtime Synthetic Credential Boundary 001 candidate completed on 2026-07-18.
+Runtime Synthetic Credential Boundary 001 merged and post-merge verified on 2026-07-18.
+
+No active step.
+
+This file is operational continuity, not doctrine, architecture, or authority.
+
+## Merge Record
+
+```text
+Pull request: #25
+Squash commit: 57647ceb506ea8ea6a26dfe40754223365d1c8bc
+Rollback parent: a3ef39ac54036cad8b46cf334ba5fa5f24653192
+Candidate head: 7e223c2331c02534ec88d53fcc66576e2e4ac072
+```
+
+Execution record:
+
+`drafts/runtime-synthetic-credential-boundary-execution-001.md`
+
+## Verified Evidence
 
 ```text
 Pre-boundary pressure: 2 PASS / 11 FAIL
@@ -15,44 +34,22 @@ Repository regression: PASS
 Production semantic files changed: 0
 ```
 
-No real secret, environment variable, file, keychain, network, provider credential, deployment, production admission, or external effect.
+## Boundary Status
 
-## Active Branch
+`@imperium-agentica/runtime-reference/security/synthetic-credentials` is a stable nonproduction reference export.
 
-`agent/runtime-synthetic-credential-boundary-001`
+It accepts synthetic test bytes only. It is not a real secret store, provider authentication mechanism, deployment component, or production implementation.
 
-Rollback parent:
+## Preserved Limits
 
-`a3ef39ac54036cad8b46cf334ba5fa5f24653192`
+- JavaScript view zeroing is not proof of complete memory erasure
+- a trusted synchronous consumer can copy bytes while invoked
+- no real secret, persistent store, encryption, keychain, network, provider credential, deployment, or external effect
+- no Master Mason implementation, qualification, assignment, or decision mandate
+- no Authority registry, grant issuance, PB-001 ownership, or Procedure revision
 
-## Candidate
+## Next Gate
 
-The stable private reference package gains:
+Choose one independently scoped synthetic integration, real-store, live-driver, or deployment direction from `next-steps.md`.
 
-- `layers/runtime/reference/src/synthetic-credential-broker.mjs`
-- export `./security/synthetic-credentials`
-- one in-memory, synthetic-only, one-use broker boundary
-- twelve focused tests
-
-The broker accepts only synthetic bytes, transfers and shortens custody, binds one synchronous use to exact operational context, refuses replay, and records redacted lifecycle metadata without logging its capability handle.
-
-## Records
-
-- investigation: `drafts/runtime-synthetic-credential-boundary-001.md`
-- necessity: `drafts/runtime-synthetic-credential-boundary-necessity-analysis-001.md`
-- conformance plan: `drafts/runtime-synthetic-credential-boundary-conformance-plan-001.md`
-- pressure tests: `tests/runtime/runtime-synthetic-credential-boundary-pressure-tests-001.md`
-- baseline run: `tests/runtime/runtime-synthetic-credential-boundary-pressure-run-001.md`
-- corrected run: `tests/runtime/runtime-synthetic-credential-boundary-pressure-run-002.md`
-- repository regression: `tests/runtime/runtime-synthetic-credential-boundary-repository-regression-001.md`
-- candidate review: `tests/runtime/runtime-synthetic-credential-boundary-candidate-review-001.md`
-
-## Next Decision
-
-Decide whether to merge the nonproduction synthetic credential boundary evidence package.
-
-Merge would not handle a real credential, prove secure erasure, select a secret store, authenticate to a provider, deploy Runtime, or authorize external effects.
-
-## Stop Condition
-
-No candidate merge without explicit operator approval.
+No direction is active by default.
