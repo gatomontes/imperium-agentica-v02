@@ -31,7 +31,7 @@ Origin draft: `layers/procedure/drafts/mission-closure-and-release-procedure.md`
 
 - AB-002: `layers/authority/production/`
 - Executive Mandate: `layers/authority/production/executive-mandate.md`
-- Mission Envelope candidate: `layers/authority/production/mission-envelope.md`
+- Mission Envelope: `layers/authority/production/mission-envelope.md`
 
 ### Provenance
 
@@ -40,7 +40,7 @@ Origin draft: `layers/procedure/drafts/mission-closure-and-release-procedure.md`
 
 ### Completion Assessment
 
-- artifact-relative sufficiency candidate: `layers/cognitive/production/work-specification-completion-assessment.md`
+- artifact-relative sufficiency contract: `layers/cognitive/production/work-specification-completion-assessment.md`
 
 The cited admitted Cognitive contract supplies this finding.
 
@@ -49,7 +49,7 @@ The cited admitted Cognitive contract supplies this finding.
 A closure assessment may be requested after any externally recorded condition such as:
 
 - operative completion claim
-- candidate completion-criteria finding
+- completion-criteria finding
 - inability or lack of justification to continue
 - authorized recall or termination proposal
 - mission-authority loss
@@ -66,7 +66,7 @@ Before substantive closure assessment, require:
 - open counsel needs, withheld decisions, obligations, and uncertainty
 - applicable Executive Mandate finding
 - applicable Mission Envelope finding
-- adopted Completion Criteria Assessment from the cited Cognitive candidate
+- adopted Completion Criteria Assessment from the cited Cognitive contract
 
 ## Expected Sequence
 
