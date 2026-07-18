@@ -72,11 +72,11 @@ The catalog does not define fields, scope, status, or validity for these grants.
 
 ## Unresolved Native Origins
 
-### Completion Proof
+### Completion Assessment
 
-A closure path requires a finding about completion criteria. No universal Proof contract is admitted.
+A closure path cites `work-specification-completion-assessment.md` for artifact-relative criterion findings.
 
-The catalog must not invent one.
+No universal Proof layer is admitted or required by the current evidence.
 
 ### Ownership
 
