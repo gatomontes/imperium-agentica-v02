@@ -2,15 +2,17 @@
 
 ## Status
 
-Procedure Baseline `PRB-001` is admitted with 3 production contracts.
+Procedure Baseline `PRB-003` is represented by the production staging tree with 5 contracts.
 
-Current results:
+Current preserved results:
 
 - structural boundary: `procedural-split-run-001.md` — 16 PASS / 0 FAIL
-- first pressure: `procedure-pressure-run-001.md` — 30 PASS / 5 FAIL
 - corrected pressure: `procedure-pressure-run-002.md` — 35 PASS / 0 FAIL
-- first convergence: superseded by Reassessment 001
 - corrected convergence: `procedure-convergence-run-002.md` — 21 PASS / 0 FAIL
-- admission review: `production-admission-review-001.md`
+- Runtime Maintenance Artifact Pressure Run 004 — 15 PASS / 0 FAIL
+- Runtime Maintenance Repository Regression 001 — PASS
+- Runtime Maintenance Admission Convergence Run 001 — 35 PASS / 0 FAIL
 
-Decision: **PRB-001 ADMITTED WITH RECORDED LIMITS**
+Admission review: `tests/runtime/runtime-maintenance-production-admission-review-001.md`.
+
+Merge remains separately gated.
