@@ -64,7 +64,7 @@ Production semantic files changed: 0
 
 The distributed-concurrency extension is merged as noncanonical deterministic evidence.
 
-## Current Stable-Placement Candidate
+## Stable-Placement Evidence
 
 ```text
 Pre-placement pressure: 5 PASS / 6 FAIL
@@ -75,7 +75,20 @@ Repository regression: PASS
 Production manifest files changed: 0
 ```
 
-The placement candidate moves reference source ownership to `layers/runtime/reference/` while tests remain independent consumers.
+Stable nonproduction placement is merged; tests remain independent consumers of `layers/runtime/reference/`.
+
+## Current Provider-Adapter Candidate
+
+```text
+Pre-adapter pressure: 4 PASS / 9 FAIL
+Corrected adapter pressure: 13 PASS / 0 FAIL
+Combined successor suite: 52 PASS / 0 FAIL
+Historical harness: 11 PASS / 0 FAIL
+Repository regression: PASS
+Production semantic files changed: 0
+```
+
+The Node process-supervisor adapter remains injected, credentialless, nonproduction, and free of live effects.
 
 ## Evidence Discipline
 

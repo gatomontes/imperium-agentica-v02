@@ -8,7 +8,9 @@ Runtime Single-Node Durability 001 is merged as noncanonical evidence.
 
 Runtime Distributed Concurrency and Recovery 001 is merged as noncanonical evidence.
 
-Runtime Stable Nonproduction Reference Placement 001 is the current candidate.
+Runtime Stable Nonproduction Reference Placement 001 is merged and verified.
+
+Runtime Node Process-Supervisor Provider Adapter 001 is the current candidate.
 
 ## Reference Implementation Evidence
 
@@ -42,6 +44,15 @@ Runtime Stable Nonproduction Reference Placement 001 is the current candidate.
 - repository regression: `runtime-reference-placement-repository-regression-001.md` — PASS
 - candidate review: `runtime-reference-placement-candidate-review-001.md`
 
+## Node Process-Supervisor Adapter Candidate
+
+- baseline pressure: `runtime-node-process-provider-adapter-pressure-run-001.md` — 4 PASS / 9 FAIL
+- corrected pressure: `runtime-node-process-provider-adapter-pressure-run-002.md` — 13 PASS / 0 FAIL
+- focused adapter executable: 12 PASS / 0 FAIL
+- combined successor executable: 52 PASS / 0 FAIL
+- repository regression: `runtime-node-process-provider-adapter-repository-regression-001.md` — PASS
+- candidate review: `runtime-node-process-provider-adapter-candidate-review-001.md`
+
 ## Evidence Limits
 
 The file-backed adapter demonstrates deterministic single-process behavior on a test filesystem.
@@ -49,5 +60,7 @@ The file-backed adapter demonstrates deterministic single-process behavior on a 
 The distributed coordinator demonstrates effect-boundary behavior against a deterministic linearizable in-memory oracle.
 
 Stable placement under `layers/runtime/reference/` establishes repository-local ownership and exports only.
+
+The Node process-supervisor adapter demonstrates environment binding and result mapping through an injected driver only.
 
 Neither is proof of production durability, a consensus protocol, real network partitions, durable quorum state, distributed correctness, credential safety, provider idempotency, performance, deployment safety, or live recovery.

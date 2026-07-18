@@ -2,31 +2,33 @@
 
 ## Status
 
-Runtime Stable Nonproduction Reference Placement 001 is merged and post-merge verified.
+Runtime Node Process-Supervisor Provider Adapter 001 candidate and evidence are complete.
 
-No next direction is approved or active.
-
-This file is an ordered operational queue, not doctrine, architecture, or a roadmap.
+The active merge decision is recorded only in `current-step.md`.
 
 ## Queue
 
-### 1. Choose one independently scoped direction
+### 1. If approved, merge the candidate adapter package
 
-Eligible but unapproved options:
+Require:
 
-- environment-specific provider adapter
+- exact candidate head
+- combined successor 52 / 52
+- historical harness 11 / 11
+- repository regression PASS
+- zero production semantic changes
+- no live subprocess, network, credential, deployment, or external effect
+- explicit operational-only and provider-idempotency limits
+
+### 2. After merge, choose one independent direction
+
 - credential-handling implementation
+- live Node process-supervisor driver investigation
 - production deployment design
 - real consensus or distributed-store investigation
 
-Recommended next step:
+Each requires separate necessity analysis, tests, and approval.
 
-`environment-specific provider adapter investigation`
+### 3. Preserve adjacent gates
 
-It pressures the new stable import boundary against one concrete environment while keeping credentials, live effects, deployment, and production admission separately gated.
-
-Each option requires its own necessity analysis, scope, tests, and explicit approval.
-
-### 2. Preserve adjacent gates
-
-No option automatically creates a public package, proves production readiness or consensus, instantiates Master Mason, issues Authority, defines PB-001 semantics, alters Procedure, deploys Runtime, handles live credentials, or authorizes external effects.
+Candidate merge does not prove component recovery, provider idempotency, credential safety, production readiness, or consensus; deploy Runtime; or authorize external effects.
