@@ -2,25 +2,13 @@
 
 ## Status
 
-Runtime Synthetic Secret-Store Port 001 candidate and evidence are complete.
+The synthetic credential/store evidence leg is merged, complete, and post-merge verified.
 
-The active merge decision is recorded only in `current-step.md`.
+No next direction is approved or active.
 
-## Queue
+This file is an ordered operational queue, not doctrine, architecture, or a roadmap.
 
-### 1. If approved, merge the synthetic secret-store port package
-
-Require:
-
-- exact candidate head
-- combined successor 91 / 91
-- historical harness 11 / 11
-- repository regression PASS
-- zero production semantic changes
-- no real credential, vendor, SDK, file, network, process execution, deployment, or external effect
-- explicit in-memory-backend and JavaScript-erasure limits
-
-### 2. After merge, choose one independent direction
+## New-Leg Options
 
 - secret-store authorization policy investigation
 - real secret-store provider investigation
@@ -28,8 +16,14 @@ Require:
 - provider authentication-format investigation
 - production deployment design
 
-Each requires separate necessity analysis, tests, and approval.
+Recommended next leg:
 
-### 3. Preserve adjacent gates
+`secret-store authorization policy investigation`
 
-Candidate merge does not prove secure erasure, real credential safety, store durability or availability, provider authentication or idempotency, component recovery, production readiness, or consensus; deploy Runtime; or authorize external effects.
+It can establish which exact operational identity may acquire which secret reference, for which purpose and lease duration, using the synthetic backend before any vendor or real credential is selected.
+
+Every option requires a new necessity analysis, scope, tests, and explicit approval.
+
+## Preserved Gates
+
+Completion of the synthetic leg does not prove secure erasure, real credential safety, store durability or availability, provider authentication or idempotency, component recovery, production readiness, or consensus; deploy Runtime; or authorize external effects.
