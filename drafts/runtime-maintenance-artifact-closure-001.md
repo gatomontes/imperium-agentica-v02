@@ -4,77 +4,102 @@
 
 Active investigation.
 
+Baseline pressure completed: `9 PASS / 5 FAIL`.
+
 No production admission has occurred.
 
 ## Trigger
 
-Runtime Production Admission 001 admitted:
-
-- Master Mason
-- Runtime Maintenance Procedure
-- Runtime Realization and Dispatch Contract
-- Runtime Observation Envelope
-- Runtime Control-Plane Contract
-- CONTROL_PLANE Authority Profile
+Runtime Production Admission 001 admitted Master Mason, Runtime Maintenance Procedure, the RTB-001 contracts, and CONTROL_PLANE Authority.
 
 A post-merge review of pull request #10 identified a dependency defect:
 
 `layers/procedure/production/runtime-maintenance-procedure.md` requires Master Mason to issue or invoke an exact bounded `Maintenance Instruction`.
 
-`layers/cognitive/production/master-mason.md` lists that instruction as a Cognitive product while explicitly stating that its final artifact contract remains unadmitted.
+`layers/cognitive/production/master-mason.md` names that instruction while explicitly leaving its final artifact contract unadmitted.
 
 The Procedure boundary prohibits Procedure from originating artifact meaning. Runtime requires explicit artifact definitions before accepting a realization unit.
 
-Therefore the admitted maintenance path is not yet semantically closed.
+## Evidence
 
-## Core Question
+- necessity analysis: `drafts/runtime-maintenance-artifact-necessity-analysis-001.md`
+- pressure specification: `tests/runtime/runtime-maintenance-artifact-pressure-tests-001.md`
+- baseline run: `tests/runtime/runtime-maintenance-artifact-pressure-run-001.md`
+
+## Confirmed Failures
 
 ```text
-Which Master Mason artifacts require canonical Cognitive contracts
-so Runtime maintenance can be diagnosed, instructed, withheld,
-assessed, and escalated without Procedure or Runtime inventing meaning?
+RMA-001 — Maintenance Instruction lacks a canonical Cognitive contract
+RMA-002 — Runtime Operational Diagnosis lacks independent identity, version, content, and citation semantics
+RMA-003 — RUNTIME_MAINTENANCE_ELIGIBLE is issued before the Procedure's Eligibility Gate
+RMA-005 — maintenance withholding lacks canonical Cognitive meaning
+RMA-006 — structural escalation lacks canonical transfer meaning
 ```
 
-## Candidate Artifact Family
+## Artifact Necessity Finding
 
-Master Mason currently names:
+| Candidate | Finding |
+|---|---|
+| Runtime Operating Situation | No separate artifact demonstrated; keep as internal Master Mason assembly |
+| Runtime Operational Diagnosis | Separate canonical Cognitive artifact required |
+| Maintenance Instruction | Canonical meaning required as an executable post-gate form |
+| Maintenance Withholding Finding | Canonical meaning required, but no separate artifact is yet justified |
+| Escalation Record | Canonical transfer meaning required, but no separate artifact is yet justified |
 
-- Runtime Operating Situation
-- Runtime Operational Diagnosis
-- Maintenance Instruction
-- Maintenance Withholding Finding
-- Escalation Record
+## Smallest Supported Model
 
-Naming a product does not establish that each item requires a separate contract or file.
+Two canonical Cognitive artifacts:
 
-## Investigation Questions
+### Runtime Operational Diagnosis
 
-1. Which products cross a responsibility or layer boundary?
-2. Which products are consumed by an admitted Procedure or Runtime realization unit?
-3. Which products require stable semantic content, identity, version, and supersession rules?
-4. Can any product remain a finding within the Master Mason responsibility contract?
-5. Can any products share one canonical contract without collapsing materially distinct meanings?
-6. Which artifact owns the exact bounded maintenance intent Runtime is permitted to realize?
-7. What distinguishes a Maintenance Instruction from a Runtime Control-Plane Plan?
-8. What distinguishes maintenance withholding from diagnosis, Authority refusal, Runtime refusal, and procedural exit?
-9. What escalation content must survive transfer to the external operator or a later admitted responsibility?
-10. Which existing CB-004, AB-003, PB-001, PRB-002, and RTB-001 contracts would require revision?
+Records the bounded mechanical judgment about observed Runtime condition.
 
-## Initial Finding
+It is citable by Procedure, Authority, later reassessment, and PB-001 lineage.
 
-At minimum, `Maintenance Instruction` requires a canonical Cognitive origin because it crosses from Master Mason through Procedure into Runtime realization.
+It does not establish permission, eligibility, intervention, Runtime state, mission meaning, or mission disposition.
 
-The remaining products require pressure before deciding whether they need:
+### Post-Gate Maintenance Direction
 
-- distinct canonical contracts
-- one consolidated Master Mason artifact contract
-- definition inside a revised Master Mason contract
-- no further admission
+Working label: `Runtime Maintenance Disposition`.
+
+Mutually exclusive forms:
+
+```text
+NO_INTERVENTION
+INSTRUCT_MAINTENANCE
+WITHHOLD_MAINTENANCE
+ESCALATE_STRUCTURAL_CONDITION
+```
+
+The instruction form carries exact Cognitive maintenance intent to Runtime.
+
+The withholding form preserves the reason for safe non-action and re-entry conditions.
+
+The escalation form preserves the condition, exceeded boundary, requested external decision, and prohibited assumptions.
+
+These forms do not become Procedure exits, Authority findings, Runtime states, or mission dispositions.
+
+## Required Sequence Correction
+
+```text
+Runtime observations
+→ internal operating-situation assembly
+→ Runtime Operational Diagnosis
+→ Procedure and Authority eligibility gate
+→ post-gate maintenance direction
+→ Runtime Control-Plane Plan
+→ Runtime effect
+→ Runtime Observation Envelope
+→ reassessment
+```
+
+`RUNTIME_MAINTENANCE_ELIGIBLE` cannot remain a pre-gate diagnosis.
 
 ## Preserved Boundaries
 
 This investigation does not authorize or admit:
 
+- candidate contract construction without operator approval
 - Master Mason qualification, persona, Officer class, assignment, or institution
 - a live Runtime implementation
 - a real CONTROL_PLANE grant
@@ -83,14 +108,14 @@ This investigation does not authorize or admit:
 - Compass or Praetorium
 - a universal Artifact, Proof, or Ownership layer
 
-## Required Outcome
+## Next Gate
 
-The investigation must produce:
+Operator review of:
 
-- an artifact-by-artifact necessity finding
-- exact native ownership for every required artifact
-- the smallest dependency-closed correction
-- identified baseline revisions and tests
-- a recommendation to admit, revise, consolidate, defer, or reject each candidate
+1. the two-artifact model
+2. the consolidated instruction, withholding, and escalation forms
+3. the diagnosis-before-eligibility correction
+
+If approved, construct draft contracts and rerun all fourteen pressure tests.
 
 No production movement occurs without separate operator approval.
