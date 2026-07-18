@@ -6,6 +6,8 @@ Candidate Authority refinement.
 
 Not admitted.
 
+Revision: Runtime Draft Correction 001 after Pressure Run 001.
+
 ## Problem
 
 AB-002 defines six grant profiles but none explicitly covers consequential operation of Imperium's own Runtime or a Runtime acting on an externally controlled environment.
@@ -62,11 +64,15 @@ Silence does not authorize an action class.
 
 ## Authority Basis
 
-For an internal development Runtime, `IMPERIUM_STEWARDSHIP` may support bounded control-plane authority when the operator controls the environment.
+Consequential control-plane action changes an operating environment or controlled resource.
 
-For external or client-controlled environments, the grant requires `CONTROLLED_RESOURCE`, `DELEGATED_AUTHORITY`, or `LEGAL_OR_CONTRACTUAL_AUTHORITY` as applicable.
+The represented Principal therefore requires `CONTROLLED_RESOURCE`, `DELEGATED_AUTHORITY`, or `LEGAL_OR_CONTRACTUAL_AUTHORITY` as applicable.
 
-Imperium stewardship alone does not authorize action against external resources.
+This is true even when the environment is used only for internal Imperium development.
+
+`IMPERIUM_STEWARDSHIP` governs internal definitions, admissions, and placements. It does not by itself establish control of a machine, account, deployment environment, credential store, or external resource.
+
+One Principal may hold both bases, but they remain distinct and independently traceable.
 
 ## Intersections
 
@@ -75,8 +81,9 @@ A control-plane action may also require:
 - CAPABILITY_ACCESS for authenticated access
 - CAPABILITY_TOOL for a specific administrative tool
 - MISSION_ENVELOPE when the action is itself part of one mission
+- IMPERIUM_STEWARDSHIP when the action also changes an admitted internal definition or placement
 
-These intersections do not merge grants.
+These intersections do not merge grants or Authority Bases.
 
 ## Delegation
 
@@ -94,6 +101,7 @@ Plan approval, prior success, maintenance-window entry, or queued status does no
 
 ```text
 administrator access ≠ CONTROL_PLANE authority
+Imperium stewardship ≠ control of an operating environment
 deployed ≠ authorized to activate
 ability to roll back ≠ authorized rollback
 incident urgency ≠ recovery authority
