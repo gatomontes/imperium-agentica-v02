@@ -52,16 +52,16 @@ A catalog entry may orient the reader. The cited native contract remains control
 | Final Report | Chamber of Scribes | `chamber-of-scribes.md` |
 | Delivery Package | Secretariat | `secretariat.md` |
 
-Paths in this table are relative to `layers/cognitive/production/` unless marked as draft split contracts.
+Paths in this table are relative to `layers/cognitive/production/`.
 
 ## Authority-Native Artifacts
 
 | Artifact | Canonical origin |
 |---|---|
 | Executive Mandate | `layers/authority/production/executive-mandate.md` |
-| Mission Envelope | `layers/authority/production/mission-envelope.md` — not admitted |
-| Tool Grant | `layers/authority/production/capability-tool-and-access-grants.md` — not admitted |
-| Access Grant | `layers/authority/production/capability-tool-and-access-grants.md` — not admitted |
+| Mission Envelope | `layers/authority/production/mission-envelope.md` |
+| Tool Grant | `layers/authority/production/capability-tool-and-access-grants.md` |
+| Access Grant | `layers/authority/production/capability-tool-and-access-grants.md` |
 
 The catalog does not define fields, scope, status, or validity for these grants.
 
