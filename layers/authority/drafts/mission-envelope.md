@@ -66,6 +66,20 @@ Status
 
 This is a semantic Authority contract, not a runtime permission object.
 
+## Pre-Formation Identity
+
+An exact proposed Mission Identity may be allocated before substantive mission formation.
+
+```text
+identity allocation ≠ mission approval
+identity allocation ≠ Authority Grant
+identity allocation ≠ Work Specification approval
+```
+
+The proposed identity permits exact scoping of `FORM_MISSION` and `APPROVE_WORK_SPECIFICATION`.
+
+If formation is refused, the identity and refusal remain historically addressable and are never recycled.
+
 ## Scope Rules
 
 - one envelope applies to one exact Mission Identity unless an independently competent parent basis explicitly supports a bounded mission class
@@ -99,6 +113,25 @@ A safe-state instruction:
 - cannot be invented by Procedure
 - cannot become a terminal disposition unless the grant expressly says so
 - remains subject to PB-001 correlation
+
+## Terminal Administrative Tail
+
+`TERMINAL_DISPOSITION` does not automatically expire the entire envelope.
+
+When explicitly listed, `REPORT_AND_DELIVER` may remain effective after closure or release only for:
+
+- preparing and delivering the terminal report or artifact
+- communicating recorded unresolved conditions
+- completing cited administrative obligations
+
+The tail:
+
+- permits no new field instruction
+- cannot reactivate Tool or Access Grants
+- cannot restore an Operative Binding
+- ends on its recorded completion, withdrawal, expiry, or supersession condition
+
+Operational capability grants end no later than release of their mission binding even when the administrative tail remains effective.
 
 ## Non-Procedure
 
