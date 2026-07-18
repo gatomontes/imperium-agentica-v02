@@ -2,24 +2,28 @@
 
 ## Status
 
-Castellan Mission Formation 001 is the active A1.1 draft candidate.
+Castellan Mission Formation 001 merged and post-merge verified on 2026-07-18.
 
-Track A1 began after explicit operator approval on 2026-07-18.
+A1.1 is complete. Track A1 remains open.
+
+No active candidate step.
 
 This file is operational continuity, not doctrine, architecture, or authority.
 
-## Candidate Scope
+## Merge Record
 
 ```text
-Input: exact versioned Petition
-Authority: exact effective FORM_MISSION
-Product: bounded versioned Mission Need
-Assessment: FORMATION_CONFORMANT / FORMATION_REFUSED / FORMATION_UNRESOLVED
-Work Specification approval: out of scope
-Production admission: none
+Pull request: #34
+Squash commit: 12f7988e4df9957f836a1403e00d1dcc3745f02f
+Rollback parent: 1c0f2f6f4f998be1c2a872ae6889dd0114c52c43
+Candidate head: ac805b5fff9c573359f9fc032770260e8f5c0c1c
 ```
 
-## Candidate Evidence
+Execution record:
+
+`drafts/castellan-mission-formation-execution-001.md`
+
+## Verified Evidence
 
 ```text
 Pre-candidate pressure: 8 PASS / 7 FAIL
@@ -41,6 +45,6 @@ Production semantic files changed: 0
 
 ## Next Gate
 
-Approve or reject candidate merge.
+Complete this execution-record merge, then begin A1.2: Mission Need to approved Work Specification and Guildhall handoff.
 
-No merge is authorized by creation of this candidate.
+No execution-record merge or A1.2 candidate merge is authorized by this record.
