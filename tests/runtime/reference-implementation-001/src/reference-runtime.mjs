@@ -159,14 +159,27 @@ export class ReferenceRuntime {
       return structuredClone(effect);
     }
     effect.status = result === EffectResults.SUCCEEDED ? "SUCCEEDED_OPERATIONALLY" : "FAILED_OPERATIONALLY";
+    let completionIndeterminate = false;
     if (this.executionGate) {
       const completion = this.executionGate.complete({ effectId, attemptId, result: effect.status });
       if (!completion.accepted) {
         effect.status = "QUARANTINED_INDETERMINATE";
         effect.recoveryReason = completion.reason;
+        completionIndeterminate = true;
       }
     }
     this.store.saveEffect(effectId, effect);
+    if (completionIndeterminate) {
+      this.observe("EXTERNAL_EFFECT", "QUARANTINED", effectId, realization, {
+        attemptId,
+        effectId,
+        authority,
+        correlation,
+        procedure,
+        indeterminate: true,
+      });
+      return structuredClone(effect);
+    }
     this.observe("EXTERNAL_EFFECT", result === EffectResults.SUCCEEDED ? "COMPLETED_OPERATIONALLY" : "FAILED_OPERATIONALLY", effectId, realization, {
       attemptId,
       effectId,
