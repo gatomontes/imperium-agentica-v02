@@ -5,11 +5,11 @@
 Runtime Single-Node Durability 001 candidate completed on 2026-07-18.
 
 ```text
-Pre-extension durability pressure: 3 PASS / 9 FAIL
-Corrected durability pressure: 12 PASS / 0 FAIL
-Focused durability tests: 8 PASS / 0 FAIL
+Pre-extension durability pressure: 3 PASS / 10 FAIL
+Corrected durability pressure: 13 PASS / 0 FAIL
+Focused durability tests: 9 PASS / 0 FAIL
 Preserved successor semantics: 15 PASS / 0 FAIL
-Combined successor suite: 23 PASS / 0 FAIL
+Combined successor suite: 24 PASS / 0 FAIL
 Historical harness: 11 PASS / 0 FAIL
 Repository regression: PASS
 Production semantic files changed: 0
@@ -33,7 +33,7 @@ The noncanonical reference implementation gains:
 - a minimal shared store interface
 - `tests/runtime/reference-implementation-001/test/file-store.test.mjs`
 
-It demonstrates append-and-fsync journaling, one local writer, exact reconstruction, corrupt-history refusal, and indeterminate-effect quarantine after restart.
+It demonstrates append-and-fsync journaling, one in-process writer per directory, exact reconstruction, corrupt-history refusal, and indeterminate-effect quarantine after restart.
 
 ## Records
 
