@@ -101,7 +101,7 @@ La Cortine remains a non-acting namespace containing dedicated ports.
 ## Artifact And Contract Origins
 
 - Cognitive artifact meanings: `layers/cognitive/production/production-artifact-catalog.md`
-- Executive Mandate: Authority AB-001
+- Executive Mandate: Authority AB-002
 - Mission Envelope, Tool Grant, Access Grant: Authority production contracts
 - mission identity and correlation: Provenance PB-001
 - provider observation lineage: Provenance PB-001
