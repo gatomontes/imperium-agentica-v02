@@ -22,7 +22,8 @@ No production admission.
 | RSD-010 | Journal is inspected | No secret material is present |
 | RSD-011 | Durable adapter is added | Existing 15 semantic tests remain green |
 | RSD-012 | Evidence is reported | No database, distributed, deployment, or live-recovery claim is inferred |
+| RSD-013 | Required Runtime observations are emitted | Durable observations reconstruct after restart |
 
 ## Pass Condition
 
-All twelve pressures pass together.
+All thirteen pressures pass together.
