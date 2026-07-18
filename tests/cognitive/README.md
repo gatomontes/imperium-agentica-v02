@@ -50,7 +50,7 @@ Operative handoff ≠ READY_FOR_LAUNCH
 requirements ≠ grants or credential values
 ```
 
-## Active Castellan Mission Formation Candidate
+## Merged Castellan Mission Formation Evidence
 
 - baseline pressure: 8 PASS / 7 FAIL
 - corrected pressure: 15 PASS / 0 FAIL
@@ -66,4 +66,22 @@ Petition identity ≠ mission approval
 FORM_MISSION ≠ APPROVE_WORK_SPECIFICATION
 Mission Need outcome ≠ completion criterion
 FORMATION_CONFORMANT ≠ Runtime state
+```
+
+## Active Castellan Work Specification Candidate
+
+- baseline pressure: 9 PASS / 6 FAIL
+- corrected pressure: 15 PASS / 0 FAIL
+- cross-layer convergence: 12 PASS / 0 FAIL
+- preserved Runtime successor suite: 91 PASS / 0 FAIL
+- repository regression: PASS
+
+Candidate distinctions:
+
+```text
+functional capability ≠ profession selection
+SPECIFICATION_CONFORMANT ≠ APPROVE_WORK_SPECIFICATION
+authoring ≠ approval
+approval of version N ≠ approval of version N+1
+handoff eligibility ≠ automatic Procedure transition
 ```
