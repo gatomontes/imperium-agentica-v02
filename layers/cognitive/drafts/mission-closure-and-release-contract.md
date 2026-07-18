@@ -4,6 +4,8 @@
 
 Draft Cognitive revision extracted from CB-002.
 
+Not admitted. CB-002 production remains canonical.
+
 Origin: `layers/cognitive/production/mission-closure-and-release-contract.md`.
 
 Native concern: responsibility, decision vocabulary, artifact meaning, and boundary distinctions.
