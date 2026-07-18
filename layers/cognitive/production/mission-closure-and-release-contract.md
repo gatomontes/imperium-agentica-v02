@@ -73,7 +73,7 @@ Assembles closure and terminal Situation Pictures, preserves evidence and uncert
 
 ### CEO President
 
-Makes the substantive closure decision within competence and an effective matching Executive Mandate. Authority is externally defined by AB-001.
+Makes the substantive closure decision within competence and an effective matching Executive Mandate. Authority is externally defined by AB-002.
 
 ### Muster
 
