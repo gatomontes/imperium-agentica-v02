@@ -2,7 +2,7 @@
 
 ## Purpose
 
-The cognitive layer contains Imperium's conceptual entities, boundaries, artifact contracts, authority distinctions, and cognitive maps.
+The cognitive layer contains Imperium's conceptual entities, responsibilities, competence boundaries, cognitive artifact meanings, and cognitive maps.
 
 It does not define runtime architecture, service topology, database schema, deployment infrastructure, or UI implementation.
 
@@ -24,7 +24,9 @@ Approval of a diagram or terminology does not by itself promote an artifact. Dra
 
 `production/` contains cognitive artifacts admitted for current active use after sufficient scenario evidence.
 
-Current baseline: `CB-001` — 36 files, admitted 2026-07-17 under Production Admission Review 003 and Constitutional Test Run 015.
+Current baseline: `CB-002` — 33 files, admitted 2026-07-17 under Cognitive Production Admission Review 004 and Constitutional Test Run 016.
+
+CB-002 cites Authority Baseline `AB-001` and Provenance Baseline `PB-001` for contracts whose origins were relocated to their native concerns.
 
 Production means admitted, not permanent. An artifact may return to drafts when later evidence contests it.
 
@@ -48,17 +50,18 @@ Cognitive tests and theoretical run results live in:
 tests/cognitive/
 ```
 
-Tests challenge cognitive structure and authority. They do not imply runtime implementation.
+Tests challenge cognitive structure, responsibility, competence, and its boundaries with authority and provenance. They do not imply runtime implementation.
 
 
 ## Current Baseline
 
 ```text
-Cognitive Baseline: CB-001
+Cognitive Baseline: CB-002
 Manifest: layers/cognitive/production/README.md
-Evidence: tests/cognitive/constitutional-test-run-015.md
-Admission: tests/cognitive/production-admission-review-003.md
-Result: 30 PASS / 0 FAIL
+Evidence: tests/cognitive/constitutional-test-run-016.md
+Admission: tests/cognitive/production-admission-review-004-cb-002.md
+Result: 31 PASS / 0 FAIL
+Dependencies: AB-001 and PB-001
 ```
 
-The cognitive layer is admitted structurally. Procedural and runtime layers remain unadmitted.
+The cognitive, authority, and provenance layers have admitted baselines. Procedural and runtime layers remain unadmitted.
