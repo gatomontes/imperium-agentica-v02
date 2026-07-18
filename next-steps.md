@@ -14,34 +14,73 @@ When a step becomes current, remove it from this file and place it in `current-s
 
 ## Queue
 
-### 1. Prepare the first dependency-closed migration manifest
+### 1. Materialize target relocation drafts
 
-Candidate relocations:
+Create without changing production:
 
 ```text
-layers/cognitive/production/executive-mandate.md
-→ layers/authority/
-
-layers/cognitive/production/mission-concurrency-and-isolation-contract.md
-→ layers/provenance/
-
-layers/cognitive/production/provider-intervention-ledgers.md
-→ layers/provenance/
+layers/authority/drafts/executive-mandate.md
+layers/provenance/drafts/mission-correlation-and-isolation-contract.md
+layers/provenance/drafts/provider-intervention-ledgers.md
 ```
 
-Required before movement:
+Constraints:
 
-- target draft contracts
-- normalized references
-- target-layer tests
-- cognitive regression tests
-- convergence tests
-- atomic creation and verification
-- explicit operator production-admission approval
+- preserve CB-001 origin
+- declare the new native concern
+- cite the approved layer contracts
+- split cognitive responsibility, authority, provenance, capacity policy, and runtime exclusions
+- do not create competing production origins
+
+Activation condition:
+
+Explicit operator approval.
 
 ---
 
-### 2. Split contested CB-001 contracts
+### 2. Run migration admission tests
+
+Required:
+
+- Executive Mandate specialization
+- mission-correlation and isolation
+- provider-stage non-inference
+- cognitive relocation regression
+- cross-layer convergence
+- exact manifest and atomic-tree preflight
+
+Activation condition:
+
+All three target drafts exist.
+
+---
+
+### 3. Prepare production admission reviews
+
+Required:
+
+- Authority Production Admission Review 001
+- Provenance Production Admission Review 001
+- Cognitive Baseline CB-002 Review 001
+- Cross-Layer Migration Review 001
+
+Activation condition:
+
+All migration tests pass or recorded limits are bounded.
+
+---
+
+### 4. Execute atomic cross-layer migration
+
+Activation condition:
+
+Explicit operator approval of the complete admission package.
+
+No partial or sequential production migration is permitted.
+
+---
+
+### 5. Split contested procedural candidates
 
 Candidates:
 
@@ -49,52 +88,28 @@ Candidates:
 - `mission-closure-and-release-contract.md`
 - `lifecycle.md`
 - `production-artifacts.md`
-- prescriptive or foreign-contract sections inside entity files
 
 Activation condition:
 
-Authority and provenance contracts are stable and the procedural boundary is approved.
+Cross-layer migration is complete and the procedural boundary is approved.
 
 ---
 
-### 3. Redefine the procedural-layer boundary
+### 6. Redefine and test the procedural layer
 
-Procedure is only what is supposed to happen, in what order, and under which conditions.
-
-It must cite admitted responsibility, authority, provenance, artifact, and evidence definitions.
-
----
-
-### 4. Trace the first narrow procedure
-
-Candidate:
+Procedure remains:
 
 ```text
-Theatre return
-→ Lazaretto sanitation
-→ Curia session admission
-→ Situation Picture
-→ Executive Mandate verification
-→ CEO decision
-→ Curia Minute
-→ Muster outbound instruction
+what is supposed to happen,
+in what order,
+under which conditions
 ```
 
-Activation condition:
-
-All required dependency origins are admitted or explicitly unresolved with an authorized stop rule.
+It must cite admitted external definitions and may originate none of them.
 
 ---
 
-### 5. Establish procedural testing and admission
-
-Activation condition:
-
-At least one draft procedure exists.
-
----
-
-### 6. Reconsider Vellum only if a record gap appears
+### 7. Reconsider Vellum only if a record gap appears
 
 Activation condition:
 
