@@ -2,7 +2,7 @@
 
 ## Status
 
-Atomic cross-layer migration staged; post-merge verification required.
+Atomic cross-layer migration staged and pre-merge verification passed; squash merge and post-merge verification remain.
 
 This file is operational continuity, not doctrine, architecture, or authority.
 
@@ -39,12 +39,21 @@ Cross-layer convergence: PASS
 Migration review: READY; operator execution approved
 ```
 
+## Pre-Merge Verification
+
+- six target production contracts present
+- three superseded Cognitive origins absent
+- AB-001 manifest 3 / 3
+- PB-001 manifest 3 / 3
+- CB-002 manifest 33 / 33
+- cognitive consumers cite external canonical origins
+- staging branch is ahead of and not behind `main`
+
 ## Remaining Work
 
-1. Delete exactly the three superseded cognitive source paths.
-2. Verify target presence, source absence, manifests, and canonical citations.
-3. Squash-merge the staging branch into `main` as one atomic production transition.
-4. Record the merge SHA and close post-migration verification.
+1. Squash-merge the staging branch into `main` as one atomic production transition.
+2. Verify the resulting `main` tree.
+3. Record the merge SHA and close post-migration verification.
 
 ## Invariants
 
