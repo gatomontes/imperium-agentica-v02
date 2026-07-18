@@ -2,56 +2,15 @@
 
 ## Status
 
-No active step.
+Atomic migration is the active step in `current-step.md`.
 
-This file is not doctrine, a roadmap, or architecture.
-
-It is an ordered list of candidate next actions.
-
-When a step becomes current, remove it from this file and place it in `current-step.md`. Do not duplicate active work across both files.
-
----
+This file is an ordered operational queue, not doctrine, architecture, or a roadmap.
 
 ## Queue
 
-### 1. Execute atomic cross-layer migration
+### 1. Verify post-migration production
 
-Transition:
-
-```text
-CB-001 → CB-002
-empty Authority production → AB-001
-empty Provenance production → PB-001
-```
-
-Manifest:
-
-`drafts/cross-layer-migration-manifest-001.md`
-
-Admission decision package:
-
-`tests/cross-layer-migration-review-001.md`
-
-Constraints:
-
-- one preverified tree
-- one commit
-- no partial production state
-- exact parent preserved for rollback
-- three target production artifacts plus Authority and Provenance native contracts
-- three cognitive source deletions
-- complete consumer and index normalization
-- no Procedure or Runtime admission
-
-Activation condition:
-
-Explicit operator execution approval.
-
----
-
-### 2. Verify post-migration production
-
-Required:
+Required after the atomic squash merge:
 
 - AB-001 manifest 3 / 3
 - PB-001 manifest 3 / 3
@@ -59,15 +18,10 @@ Required:
 - source deletions 3 / 3
 - canonical path scan
 - regression and convergence status
+- merge SHA and rollback parent recorded
 - operational tracker closure
 
-Activation condition:
-
-Atomic migration commit exists.
-
----
-
-### 3. Split contested procedural candidates
+### 2. Split contested procedural candidates
 
 Candidates:
 
@@ -76,13 +30,9 @@ Candidates:
 - `lifecycle.md`
 - `production-artifacts.md`
 
-Activation condition:
+Activation condition: cross-layer migration verified and the procedural boundary approved.
 
-Cross-layer migration is verified and the procedural boundary is approved.
-
----
-
-### 4. Redefine and test the procedural layer
+### 3. Redefine and test the procedural layer
 
 Procedure remains:
 
@@ -94,10 +44,6 @@ under which conditions
 
 It must cite admitted external definitions and may originate none of them.
 
----
+### 4. Reconsider Vellum only if a record gap appears
 
-### 5. Reconsider Vellum only if a record gap appears
-
-Activation condition:
-
-A scenario demonstrates a canonical record behavior existing artifacts cannot preserve.
+Activation condition: a scenario demonstrates a canonical record behavior existing artifacts cannot preserve.
