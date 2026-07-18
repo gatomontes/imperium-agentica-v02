@@ -2,38 +2,32 @@
 
 ## Purpose
 
-Theoretical Cognitive scenarios, constitutional tests, and immutable run records.
+Theoretical Cognitive scenarios, constitutional tests, immutable run records, and cross-layer admission evidence.
 
-## Current Admitted Baseline
+## Production-Staging Baseline
 
-- `CB-003` — 33 artifacts
-- admitted evidence: Cognitive Constitutional Run 018 — 33 PASS / 0 FAIL
+- `CB-005` — 36 artifacts
+- admission review: `tests/runtime/runtime-maintenance-production-admission-review-001.md`
+- focused maintenance pressure: 15 PASS / 0 FAIL
+- repository-wide regression: PASS
+- admission convergence: 35 PASS / 0 FAIL
 
-## Superseded Executive Hypothesis
+## Preserved Master Mason Evidence
 
-- `master-mason-compass-praetorium-run-001.md` — 28 PASS / 0 FAIL against a superseded executive Master Mason interpretation
-
-The operator clarified that Master Mason is intended as Runtime operator/mechanic.
-
-## Current Master Mason Evidence
-
-- `runtime-control-plane-responsibility-origin-run-001.md` — 10 PASS / 0 FAIL
-- `mason-operator-tests-001.md` — 40 scenarios
-- `mason-operator-run-001.md` — 40 PASS / 0 FAIL
-- `mason-placement-tests-001.md` — 12 scenarios
-- `mason-placement-run-001.md` — 12 PASS / 0 FAIL
+- Cognitive Constitutional CT-001–CT-033 — 33 PASS / 0 FAIL
+- Master Mason Operator MS-001–MS-040 — 40 PASS / 0 FAIL
+- Master Mason Placement MP-001–MP-012 — 12 PASS / 0 FAIL
+- Master Mason / Compass / Praetorium regression — 28 PASS / 0 FAIL
 
 ## Proven Distinctions
 
 ```text
-Master Mason operates Runtime ≠ Master Mason is Runtime
-diagnosis ≠ Runtime state
-diagnosis ≠ Authority
-bounded maintenance ≠ structural decision
+Master Mason responsibility ≠ qualification
+qualification ≠ assignment
+assignment ≠ decision mandate
+decision mandate ≠ CONTROL_PLANE action grant
+Runtime observation ≠ diagnosis
+diagnosis ≠ maintenance disposition
+maintenance disposition ≠ Runtime plan
 mechanical restoration ≠ mission success
-Imperium scope ≠ Citadel placement
-Master Mason candidate ≠ persona or Officer
-Master Mason scope ≠ Praetorium admitted
 ```
-
-CB-003 remains unchanged.
