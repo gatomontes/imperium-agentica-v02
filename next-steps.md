@@ -8,41 +8,67 @@ This file is an ordered operational queue, not doctrine, architecture, or a road
 
 ## Queue
 
-### 1. Split contested procedural candidates
+### 1. Pressure the reduced Procedure boundary
 
-Candidates:
+Run scenario pressure against:
 
-- `counsel-availability-contract.md`
-- `mission-closure-and-release-contract.md`
-- `lifecycle.md`
-- `production-artifacts.md`
+- `counsel-unavailability-procedure.md`
+- `mission-closure-and-release-procedure.md`
+- `imperium-lifecycle-procedure.md`
 
-Purpose:
+Required challenges:
 
-Separate native cognitive, authority, provenance, artifact, proof, and ownership definitions from the procedural remainder.
+- missing or contested Cognitive findings
+- authority unavailable, expired, withdrawn, or scope-mismatched
+- provenance partial, broken, or cross-mission mismatched
+- missing terminal return
+- completion claim without sufficient proof
+- partially completed work
+- provider operations still pending
+- release requested before closure
+- optional artifact omission
+- procedural loop, return, and terminal branches
+- Runtime leakage
 
 Activation condition: explicit operator approval.
 
-### 2. Define and pressure the reduced procedural boundary
+### 2. Pressure Authority refinements
 
-Procedure remains:
+Candidates:
 
-```text
-what is supposed to happen,
-in what order,
-under which conditions
-```
+- `mission-envelope.md`
+- `capability-tool-and-access-grants.md`
 
-It must cite admitted external definitions and may originate none of them.
+Required:
 
-Candidate work:
+- specialization tests against AB-001
+- scope and delegation tests
+- authority-loss safe-state tests
+- Tool Grant / Access Grant non-collapse
+- convergence with PB-001 and Procedure
 
-- define the Procedure may / may-not boundary
-- identify true procedural residues in the four contested artifacts
-- draft the smallest necessary procedural contracts
-- run independent and cross-layer pressure tests
-- withhold layer admission until the boundary survives
+### 3. Resolve completion-proof origin
 
-### 3. Reconsider Vellum only if a record gap appears
+Determine whether completion sufficiency belongs to:
+
+- the Work Specification's native Cognitive contract
+- an artifact-relative assurance contract
+- a distinct Proof concern demonstrated by repeated behavior
+
+Do not create a Proof layer from terminology alone.
+
+### 4. Prepare convergence and admission review
+
+Only after independent pressure passes:
+
+- Cognitive regression
+- Authority regression
+- Provenance regression
+- cross-layer convergence
+- candidate baseline manifests
+- atomic migration preflight
+- operator admission decision
+
+### 5. Reconsider Vellum only if a record gap appears
 
 Activation condition: a scenario demonstrates a canonical record behavior existing artifacts cannot preserve.

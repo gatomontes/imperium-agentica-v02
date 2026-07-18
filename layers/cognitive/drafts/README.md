@@ -2,21 +2,29 @@
 
 ## Status
 
-No cognitive draft artifacts are currently active.
+CB-002 remains the admitted Cognitive production baseline.
 
-The 36-file Cognitive Baseline `CB-001` was promoted atomically to `../production/` on 2026-07-17 after Production Admission Review 003 and Constitutional Test Run 015.
+Active split candidates:
 
-`commission.md` was deleted before promotion. It was replaced conceptually by the admitted `session-assignment.md` contract; no commissioning office or protocol exists.
+- `counsel-availability-contract.md`
+- `mission-closure-and-release-contract.md`
+- `production-artifact-catalog.md`
+
+These drafts remove procedural ordering and foreign-native definitions from three placement-contested CB-002 artifacts.
+
+No Cognitive successor draft is created for `lifecycle.md`. Investigation finds its unique residue Procedure-native; its Cognitive statements repeat definitions already admitted elsewhere.
 
 ## Purpose
 
-New or contested cognitive concepts begin here unless existing evidence justifies another status.
+New or contested Cognitive concepts begin here unless existing evidence justifies another status.
 
 Draft artifacts remain:
 
 - shaped but unadmitted
 - independently reviewable
 - easy to revise, demote, or delete
-- prohibited from silently changing CB-001
+- prohibited from silently changing CB-002
 
-Do not duplicate production files here merely to edit them. A contested production artifact must undergo an explicit revision or demotion decision.
+A draft alongside a production artifact is an explicit revision candidate, not a duplicate canonical origin.
+
+Any future replacement, relocation, or removal requires regression evidence, admission review, and an atomic baseline transition.

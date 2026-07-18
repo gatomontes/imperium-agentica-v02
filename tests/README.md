@@ -11,11 +11,18 @@ Current admitted baselines:
 - Provenance: `PB-001` — 3 artifacts
 - Cross-layer convergence: Run 004 — PASS
 
+Candidate structural results:
+
+- Procedure split: 16 PASS / 0 FAIL
+- Procedure production: unadmitted
+- Runtime: unadmitted
+
 Current areas:
 
 - `cognitive/`
 - `authority/`
 - `provenance/`
+- `procedure/`
 - cross-layer convergence and migration records at the test root
 
 Tests do not execute software or imply runtime implementation.

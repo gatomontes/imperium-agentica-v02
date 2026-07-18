@@ -2,14 +2,19 @@
 
 ## Status
 
-Authority boundary approved.
+Authority Baseline `AB-001` remains admitted and unchanged.
 
-Current draft:
+Historical source drafts retained for traceability:
 
 - `authority-origin-contract.md`
 - `authority-grant-profiles.md`
 - `executive-mandate.md`
 
-Drafts are contestable and unimplemented.
+Active refinement candidates exposed by Procedural Split Investigation 001:
 
-No draft grants real or simulated authority merely by existing.
+- `mission-envelope.md`
+- `capability-tool-and-access-grants.md`
+
+These drafts specialize existing AB-001 grant profiles. They grant no real or simulated authority merely by existing.
+
+Drafts are contestable, unimplemented, and excluded from AB-001 until independently tested and admitted.

@@ -4,71 +4,87 @@
 
 No active step.
 
-Atomic cross-layer migration completed and verified on 2026-07-17.
+Procedural Split Investigation 001 completed on 2026-07-18.
 
 This file is operational continuity, not doctrine, architecture, or authority.
 
 ## Last Completed Step
 
-```text
-CB-001 → CB-002
-Authority production empty → AB-001
-Provenance production empty → PB-001
-```
-
-Atomic migration squash commit:
+Investigate and split four placement-contested CB-002 artifacts under the reduced Procedure definition:
 
 ```text
-8d2e51460ce75bc25da239657b96124c70f1166c
+what is supposed to happen,
+in what order,
+under which conditions
 ```
 
-Rollback parent:
+## Result
 
 ```text
-fdd801dc10f586678673a85a3633ae04e27165bd
+Contested Cognitive artifacts: 4
+Procedure drafts: 3
+Cognitive revision drafts: 3
+Authority refinement drafts: 2
+Provenance additions: 0
+Production changes: 0
+Structural tests: 16 PASS / 0 FAIL
 ```
 
-Post-merge verification: `tests/cross-layer-migration-verification-001.md` — PASS.
+### Procedure Drafts
+
+- `counsel-unavailability-procedure.md`
+- `mission-closure-and-release-procedure.md`
+- `imperium-lifecycle-procedure.md`
+
+### Cognitive Revisions
+
+- `counsel-availability-contract.md`
+- `mission-closure-and-release-contract.md`
+- `production-artifact-catalog.md`
+
+No Cognitive successor is required for `lifecycle.md`; its unique residue is Procedure-native.
+
+The Artifact Chain in `production-artifacts.md` is absorbed into the lifecycle Procedure. No fourth procedure and no central Artifact layer are justified.
+
+### Authority Refinements
+
+- `mission-envelope.md`
+- `capability-tool-and-access-grants.md`
+
+These refine AB-001 profiles but remain unadmitted.
 
 ## Current Production State
 
 ```text
-Authority: AB-001 — 3 / 3 artifacts
-Provenance: PB-001 — 3 / 3 artifacts
-Cognitive: CB-002 — 33 / 33 artifacts
-Relocated cognitive source deletions: 3 / 3 verified
-Procedure: unadmitted
+Cognitive: CB-002 — unchanged
+Authority: AB-001 — unchanged
+Provenance: PB-001 — unchanged
+Procedure production: empty
 Runtime: unadmitted
 ```
 
-## Preserved Evidence
+## Exposed Gaps
 
-```text
-Authority core: 10 PASS / 0 FAIL
-Authority profiles: 15 PASS / 0 FAIL
-Executive Mandate: 12 PASS / 0 FAIL
-Provenance core: 10 PASS / 0 FAIL
-Mission correlation: 12 PASS / 0 FAIL
-Provider ledgers: 12 PASS / 0 FAIL
-Cognitive regression: 31 PASS / 0 FAIL
-Cross-layer convergence: PASS
-```
+1. No admitted native origin defines completion-proof sufficiency.
+2. Mission Envelope requires independent Authority testing.
+3. Tool and Access Grants require independent Authority testing.
+4. Ownership has not demonstrated one universal layer-worthy concern.
+
+## Evidence
+
+- `drafts/procedural-split-investigation-001.md`
+- `tests/procedure/procedural-split-run-001.md` — 16 PASS / 0 FAIL
 
 ## Next Eligible Step
 
-Split and investigate the contested procedural candidates:
-
-- `counsel-availability-contract.md`
-- `mission-closure-and-release-contract.md`
-- `lifecycle.md`
-- `production-artifacts.md`
+Pressure the three Procedure drafts and two Authority refinements through alternate, withheld, failed, mismatched, and terminal scenarios.
 
 Activation requires explicit operator approval.
 
 ## Invariants
 
-- Procedure means only what is supposed to happen, in what order, under which conditions.
-- Procedure may cite but may not originate responsibility, authority, provenance, artifact meaning, proof, ownership, or runtime.
-- Cognitive responsibility does not transfer with contract ownership.
+- Procedure cites but does not originate responsibility, authority, provenance, artifact meaning, proof, ownership, or runtime.
+- Missing native definitions block Procedure admission.
+- CB-002, AB-001, and PB-001 remain canonical until an atomic admitted transition.
 - Authority and Provenance remain parallel and non-acting.
 - Runtime remains unadmitted.
