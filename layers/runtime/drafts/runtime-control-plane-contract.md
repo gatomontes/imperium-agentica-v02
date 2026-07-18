@@ -2,19 +2,26 @@
 
 ## Status
 
-Candidate Runtime draft.
+Candidate revision to the admitted Runtime control-plane contract.
 
-Not admitted or implemented.
+Not admitted or implemented. RTB-001 production remains canonical.
 
-Revision: Runtime Admission Preparation 001 after Empirical Run 001.
+Investigation: `Runtime Maintenance Artifact Closure 001`.
+
+## Candidate Dependencies
+
+- Runtime Maintenance Disposition: `layers/cognitive/drafts/runtime-maintenance-disposition.md`
+- Runtime Maintenance Procedure: `layers/procedure/drafts/runtime-maintenance-procedure.md`
+- CONTROL_PLANE Authority: `layers/authority/production/runtime-control-plane-authority-profile.md`
+- PB-001 provenance: `layers/provenance/production/provenance-contract.md`
+- Runtime Realization and Dispatch: `layers/runtime/production/runtime-realization-and-dispatch-contract.md`
+- Runtime Observation Envelope: `layers/runtime/production/runtime-observation-envelope.md`
 
 ## Purpose
 
-Define the mechanics and operating safeguards for consequential changes to Runtime itself without allowing those mechanics to authorize their own use.
+Define mechanics and safeguards for consequential changes to Runtime without allowing Runtime to diagnose, choose maintenance direction, or authorize its own use.
 
 ## Control-Plane Action Classes
-
-Candidate actions:
 
 ```text
 DEPLOY_IMPLEMENTATION
@@ -30,12 +37,14 @@ INITIATE_RECOVERY
 ALTER_RESOURCE_LIMIT
 ```
 
-An implementation may provide these capabilities. Capability does not authorize action.
+Capability does not authorize action.
 
 ## Control-Plane Plan
 
 Every consequential action requires a versioned plan containing:
 
+- cited instruction source
+- cited Runtime Operational Diagnosis and `INSTRUCT_MAINTENANCE` disposition when Master Mason maintenance applies
 - action class
 - exact target environment and components
 - current and target implementation versions
@@ -50,46 +59,68 @@ Every consequential action requires a versioned plan containing:
 - responsible acting surface
 - start, stop, abort, and success conditions
 
-The plan describes mechanics. It does not create permission.
+The plan describes mechanics. It does not create permission or maintenance intent.
+
+## Instruction Conformance
+
+For Master Mason maintenance, the Control-Plane Plan must conform to the exact `INSTRUCT_MAINTENANCE` disposition.
+
+The plan may:
+
+- select mechanics that satisfy the instruction
+- narrow execution to current safe conditions
+- refuse when no conforming mechanism exists
+
+The plan may not:
+
+- widen environment, component, action class, time, resource, consequence, or credential scope
+- relax safe state, stop, abort, or reassessment conditions
+- reinterpret the intended operational outcome
+- transform withholding or escalation into an instruction
+- resolve a diagnostic gap or indeterminate effect
+
+Mechanical infeasibility produces Runtime refusal and a new observation. It does not revise the disposition.
 
 ## Execution Gate
 
 Immediately before the action, Runtime must require:
 
-- an effective Authority finding for the exact action, environment, versions, time, and acting surface
+- a current instruction source and exact conformance
+- effective Authority for the exact action, environment, versions, time, and acting surface
 - exact target identity
 - current-state match
 - compatibility evidence
 - required backups or recovery points
-- absence of unresolved conflicts that would require semantic invention
+- absence of unresolved conflict requiring semantic invention
 - durable observation readiness
 
-A stale plan or changed target blocks execution until revalidated.
+A stale diagnosis, disposition, plan, Authority finding, or changed target blocks execution until the native responsibility supplies a valid successor.
 
 ## Managed Component And Control Surface
 
 The managed component and the control surface acting upon it are distinct Runtime subjects.
 
-A target component's blocked, crashed, exhausted, inactive, or unavailable state does not by itself establish that the independent control surface is unavailable. Otherwise the condition requiring repair could mechanically prohibit its own permitted recovery.
+A blocked, crashed, exhausted, inactive, or unavailable target does not by itself establish that the independent control surface is unavailable.
 
 `INITIATE_RECOVERY` or `DEACTIVATE_IMPLEMENTATION` may address a blocked target only when:
 
 - the exact control surface is independently available and identified
+- the current disposition is `INSTRUCT_MAINTENANCE` when Master Mason maintenance applies
 - the action is permitted by fresh CONTROL_PLANE Authority
 - the cited Procedure admits the intervention
 - PB-001 identity and correlation remain exact
 - the action does not repeat or reinterpret an indeterminate effect
 - abort, observation, and escalation conditions remain effective
 
-This distinction bypasses only the target-component availability condition. It bypasses no Authority, Procedure, Provenance, compatibility, version, quarantine, or observation gate.
+This distinction bypasses only target-component availability. It bypasses no Cognitive, Authority, Procedure, Provenance, compatibility, version, quarantine, or observation gate.
 
-If the control surface is itself unavailable or shares the same unclassified failure, Runtime withholds the action and emits the applicable observation for reassessment or escalation.
+If the control surface is unavailable or shares the same unclassified failure, Runtime withholds execution mechanically, emits an observation, and awaits native Cognitive reassessment.
 
 ## Semantic Compatibility
 
-A change is compatible only when every persisted or in-flight semantic subject can remain mapped to its canonical contract and version without silent loss, merge, invention, or reinterpretation.
+A change is compatible only when every persisted or in-flight semantic subject remains mapped to its canonical contract and version without silent loss, merge, invention, or reinterpretation.
 
-Runtime must block when:
+Runtime blocks when:
 
 - a required semantic field has no target mapping
 - distinct admitted states would collapse
@@ -102,13 +133,13 @@ Runtime must block when:
 
 Loading or rotating a credential binding requires exact Authority and Access Grant compatibility.
 
-Runtime may handle credential material through an approved secret mechanism. It must not:
+Runtime must not:
 
 - infer Authority from possession
 - place secret values in semantic artifacts or observation envelopes
-- widen the grant scope
-- retain the secret beyond authorized conditions
-- treat successful authentication as mission success
+- widen grant or disposition scope
+- retain secret material beyond authorized conditions
+- treat authentication as operational or mission success
 
 ## Activation
 
@@ -128,7 +159,7 @@ State migration must preserve:
 - PB-001 lineage and supersession
 - indeterminate and quarantined states
 - independent Procedure branches
-- prior observations and recovery evidence
+- diagnoses, dispositions, observations, and recovery evidence
 
 Migration success is operational, not semantic acceptance.
 
@@ -139,7 +170,7 @@ Rollback may restore implementation code or mappings only when compatibility is 
 Rollback does not:
 
 - reverse an external effect
-- erase observations
+- erase observations, diagnoses, or dispositions
 - reopen or close a mission
 - restore expired Authority
 - convert indeterminate state into failure
@@ -153,6 +184,6 @@ Every plan acceptance, refusal, dispatch, step result, migration, activation, cr
 
 ## Non-Admissions
 
-This draft selects no deployment platform, orchestration technology, database, secret manager, environment hierarchy, operator role, or live system.
+This candidate selects no deployment platform, orchestration technology, database, secret manager, environment hierarchy, operator role, or live system.
 
 It authorizes no control-plane action.

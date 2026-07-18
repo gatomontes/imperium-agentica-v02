@@ -2,53 +2,109 @@
 
 ## Status
 
-Runtime Production Admission 001 completed and post-merge verified on 2026-07-18.
+Runtime Maintenance Artifact Closure 001 regression and admission preparation completed on 2026-07-18.
 
-No active step.
+```text
+Focused pressure: 15 PASS / 0 FAIL
+Repository-wide regression: PASS
+Admission convergence: 35 PASS / 0 FAIL
+Empirical harness rerun: 11 PASS / 0 FAIL
+Branch behind main: 0
+```
+
+No production construction or admission has occurred.
 
 This file is operational continuity, not doctrine, architecture, or authority.
 
-## Admitted Production State
+## Active Branch
+
+`agent/runtime-maintenance-artifact-closure-001`
+
+Draft preparation pull request:
+
+`#12 — Prepare Runtime maintenance artifact closure admission`
+
+## Prepared Records
+
+- investigation: `drafts/runtime-maintenance-artifact-closure-001.md`
+- necessity analysis: `drafts/runtime-maintenance-artifact-necessity-analysis-001.md`
+- minimality audit: `drafts/runtime-maintenance-candidate-minimality-audit-001.md`
+- manifest analysis: `drafts/runtime-maintenance-admission-manifest-analysis-001.md`
+- atomic transition: `drafts/runtime-maintenance-admission-atomic-transition-001.md`
+- focused tests: `tests/runtime/runtime-maintenance-artifact-pressure-tests-001.md`
+- corrected focused run: `tests/runtime/runtime-maintenance-artifact-pressure-run-004.md`
+- repository regression: `tests/runtime/runtime-maintenance-repository-regression-001.md`
+- convergence specification: `tests/runtime/runtime-maintenance-admission-convergence-tests-001.md`
+- convergence run: `tests/runtime/runtime-maintenance-admission-convergence-run-001.md`
+- admission review: `tests/runtime/runtime-maintenance-production-admission-review-001.md`
+
+## Minimal Candidate
+
+### Cognitive
+
+- add Runtime Operational Diagnosis
+- add Runtime Maintenance Disposition
+- revise Master Mason
+- revise Cognitive Map
+- revise Production Artifact Catalog
+
+### Authority
+
+- AB-003 unchanged
+
+### Provenance
+
+- PB-001 unchanged
+
+### Procedure
+
+- revise Runtime Maintenance Procedure
+
+### Runtime
+
+- revise Runtime Control-Plane Contract
+- Realization and Dispatch unchanged
+- Observation Envelope unchanged
+
+## Candidate Transition
 
 ```text
-Cognitive: CB-004 — 34 / 34
-Authority: AB-003 — 6 / 6
-Provenance: PB-001 — 3 / 3 unchanged
-Procedure: PRB-002 — 5 / 5
-Runtime: RTB-001 — 3 / 3
+CB-004 → CB-005: 34 → 36
+AB-003 unchanged: 6
+PB-001 unchanged: 3
+PRB-002 → PRB-003: 5
+RTB-001 → RTB-002: 3
+
+Total manifest entries: 53
+Canonical semantic targets: 7
 ```
 
-## Merge Record
+## Preserved Master Mason Boundary
 
 ```text
-Pull request: #10
-Squash commit: 1e39c967e8d3e9522c8538ca95d73c7420526b2f
-Rollback parent: 6e32f0c1f43a7ef83e55de276664daedc7051ab8
-Post-merge manifests: 51 / 51
-Canonical targets: 7 / 7
+role responsibility ≠ qualification
+qualification ≠ acting assignment
+assignment ≠ maintenance-decision mandate
+decision mandate ≠ CONTROL_PLANE action grant
 ```
 
-Record:
+The candidate admits none of those missing instantiation contracts.
 
-`drafts/runtime-production-admission-execution-001.md`
+## Next Decision
 
-## Evidence
+Decide whether to authorize construction and pre-merge verification of the exact seven-target production staging tree.
 
-```text
-Empirical corrected run: 11 PASS / 0 FAIL
-Admission pressure: 55 PASS / 0 FAIL
-Admission convergence: 30 PASS / 0 FAIL
-Post-merge verification: PASS
-```
+Staging authorization would not authorize squash merge or deployment.
 
 ## Preserved Limits
 
-- semantic admission is not Runtime deployment or instantiation
-- no credentials, providers, services, infrastructure, autonomous repair, or live effects
-- simulated evidence is not distributed-systems proof
-- Master Mason is not yet instantiated, assigned, or placed in an institution
+- no Master Mason instantiation, qualification, assignment, decision mandate, persona, Officer class, hierarchy, or institution
+- no Runtime implementation, deployment, credentials, providers, services, or external effects
+- no real CONTROL_PLANE grant
+- no autonomous diagnosis or repair
+- no universal Artifact, Proof, or Ownership layer
 - Compass and Praetorium remain parked
 
-## Next Gate
+## Stop Condition
 
-Any concrete Runtime implementation, Master Mason instantiation, or real CONTROL_PLANE grant requires a separately approved investigation.
+No production-path construction, manifest transition, or merge without separate explicit operator approval.
