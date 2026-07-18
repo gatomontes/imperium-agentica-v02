@@ -2,33 +2,31 @@
 
 ## Status
 
-Runtime Synthetic Credential Boundary 001 candidate and evidence are complete.
+Runtime Synthetic Credential Boundary 001 is merged and post-merge verified.
 
-The active merge decision is recorded only in `current-step.md`.
+No next direction is approved or active.
+
+This file is an ordered operational queue, not doctrine, architecture, or a roadmap.
 
 ## Queue
 
-### 1. If approved, merge the synthetic credential boundary package
+### 1. Choose one independently scoped direction
 
-Require:
-
-- exact candidate head
-- combined successor 64 / 64
-- historical harness 11 / 11
-- repository regression PASS
-- zero production semantic changes
-- no real credential, persistent secret store, network, provider use, deployment, or external effect
-- explicit JavaScript erasure and trusted-consumer limits
-
-### 2. After merge, choose one independent direction
+Eligible but unapproved options:
 
 - synthetic credential-to-provider projection investigation
 - real secret-store boundary investigation
 - live Node process-supervisor driver investigation
 - production deployment design
 
-Each requires separate necessity analysis, tests, and approval.
+Recommended next step:
 
-### 3. Preserve adjacent gates
+`synthetic credential-to-provider projection investigation`
 
-Candidate merge does not prove secure erasure, real credential safety, provider authentication, component recovery, production readiness, or consensus; deploy Runtime; or authorize external effects.
+It can test least-data credential projection through the existing injected provider boundary while retaining synthetic bytes, no network, no process execution, and no live provider.
+
+Each option requires its own necessity analysis, scope, tests, and explicit approval.
+
+### 2. Preserve adjacent gates
+
+No option automatically proves secure erasure, real credential safety, provider authentication or idempotency, component recovery, production readiness, or consensus; deploys Runtime; or authorizes external effects.
