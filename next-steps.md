@@ -2,53 +2,50 @@
 
 ## Status
 
-No active step.
+Runtime Empirical Harness 001 is complete on a review branch.
 
-The Runtime and Master Mason draft package is merged and verified.
+No production admission has occurred.
 
 This file is an ordered operational queue, not doctrine, architecture, or a roadmap.
 
 ## Queue
 
-### 1. Decide whether to authorize the empirical Runtime harness
+### 1. Review Runtime Empirical Run 001
 
-Approval would authorize a minimal local test implementation only.
+Review:
 
-It would not admit Runtime production, live credentials, provider integrations, autonomous repair, deployment infrastructure, or external effects.
+- the initial 10/11 run
+- the managed-component/control-surface defect
+- the correction
+- the corrected 11/11 run
+- the explicit evidence limits
 
-### 2. If approved, build the smallest evidence harness
+### 2. Decide whether to authorize admission preparation
 
-Minimum behaviors:
+Approval would authorize preparation and pressure testing of a dependency-closed admission candidate for:
 
-- bounded component activation and deactivation
-- worker or queue blockage without semantic-intent deletion
-- resource exhaustion and bounded tuning
-- crash before and after consequential dispatch
-- duplicate delivery and concurrent attempts
-- stale or withdrawn CONTROL_PLANE Authority
-- exact-instruction versus bounded-discretion modes
-- indeterminate-effect quarantine
-- incompatible state migration and rollback refusal
-- Runtime Observation Envelope production
-- conformance against at least one admitted PRB-001 Procedure
-- Master Mason diagnosis, intervention, restoration, and escalation paths
+- Runtime contracts
+- Master Mason Cognitive role
+- CONTROL_PLANE Authority
+- Runtime Maintenance Procedure
+- any required indexes, manifests, and consumer citations
 
-The harness must use simulated effects only.
+It would not authorize production admission or live implementation.
 
-### 3. Run empirical failure and recovery evidence
+### 3. If approved, run admission and convergence testing
 
-The run must preserve:
+The package must preserve singular origins and prove that:
 
-- exact attempt and effect identities
-- contract and mapping versions
-- Authority freshness
-- PB-001 correlation
-- operational versus semantic-state distinctions
-- every refusal, quarantine, recovery, and escalation observation
+- Master Mason diagnoses but does not execute or self-authorize
+- Runtime executes but does not diagnose, authorize, or infer semantic success
+- Authority permits but does not select maintenance
+- Procedure orders but does not implement
+- Provenance remains independently controlling
+- simulated evidence is not overstated as distributed or production proof
 
-### 4. Reassess candidate admission
+### 4. Return to an explicit production-admission gate
 
-Only after empirical results may Runtime, Master Mason, CONTROL_PLANE Authority, and Runtime Maintenance Procedure enter admission preparation.
+No candidate moves to production without a separate operator approval after the complete admission package is reviewed.
 
 ### 5. Keep Compass and Praetorium parked
 
