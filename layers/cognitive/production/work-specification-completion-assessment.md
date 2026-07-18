@@ -24,7 +24,7 @@ Origin draft: `layers/cognitive/drafts/work-specification-completion-assessment.
 - mission correlation: `layers/provenance/production/mission-correlation-and-isolation-contract.md`
 - general lineage: `layers/provenance/production/provenance-contract.md`
 - Executive authority: `layers/authority/production/executive-mandate.md`
-- Mission Envelope candidate: `layers/authority/production/mission-envelope.md`
+- Mission Envelope: `layers/authority/production/mission-envelope.md`
 
 ## Core Rule
 
