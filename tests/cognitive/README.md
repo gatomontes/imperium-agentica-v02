@@ -41,10 +41,10 @@ Run records preserve the theoretical result at the time each design change was e
 
 - `production-admission-review-004-cb-002.md` — candidate CB-002 review
 - decision: **ADMIT WITH RECORDED LIMITS**
-- manifest: Cognitive Baseline CB-001 — 36 files
-- evidence: Run 015 and integrated Mission 009
+- manifest: Cognitive Baseline CB-002 — 33 files
+- evidence: Run 016, convergence Run 004, and integrated Mission 009
 - promotion: **COMPLETE**
 
 ## Current Structural Status
 
-CB-001 remains the current admitted production baseline. Candidate CB-002 passes relocation regression but is not admitted until the atomic cross-layer migration receives operator approval. Procedure and runtime remain outside the tested scope.
+CB-002 is the current admitted cognitive production baseline. Its 33 cognitive artifacts cite AB-001 and PB-001 for the three relocated contract origins. Procedure and runtime remain outside the tested scope.
