@@ -1020,6 +1020,40 @@ An approved dependency-closed promotion manifest names artifacts whose responsib
 
 ---
 
+# Test CT-031 — Canonical Contract Relocation Does Not Transfer Cognitive Responsibility
+
+## Pressure
+
+Authority-native and provenance-native contracts are relocated from the cognitive production directory into their approved native layers.
+
+The move risks transferring cognitive responsibility, duplicating canonical origins, or treating the new layer as an acting institution.
+
+## Pass Conditions
+
+- Executive Mandate relocation changes contract ownership but not CEO, CoS, Curia, or Standing Assignment cognitive responsibility.
+- Mission Correlation and Provider Intervention Ledger relocation changes provenance ownership but not Muster, Curia, Armory, Locksmith, or Lazaretto responsibility.
+- Cognitive consumers cite the canonical target contracts without restating themselves into co-ownership.
+- Authority and Provenance remain non-acting layers.
+- Target artifacts preserve CB-001 origin and supersession lineage.
+- CB-002 is a dependency-closed manifest of 33 cognitive artifacts.
+- AB-001 and PB-001 are independently dependency-closed.
+- all target artifacts and revised consumers are verified before source-path removal.
+- final movement is one atomic tree transition.
+- no procedural or runtime authority is admitted.
+
+## Fail Conditions
+
+- relocation grants a layer cognitive agency
+- provider ownership moves from Armory or Locksmith
+- CEO decision responsibility moves into the Authority layer
+- correlation semantics become runtime concurrency
+- source paths disappear before verified targets exist
+- old and new paths both claim current canonical ownership
+- baseline membership is confused with rewriting every unchanged artifact
+- migration occurs as sequential partial production commits
+
+---
+
 ## Suite Result
 
 The suite passes only if every test preserves the distinctions:
@@ -1047,6 +1081,7 @@ Curia Session Assignment ≠ Executive Mandate
 cognitive admission ≠ implementation authority
 manifest reference ≠ materialized artifact
 admission approval ≠ partial promotion
+canonical contract ownership ≠ cognitive responsibility
 ```
 
 A failure indicates an ontology or authority defect.
