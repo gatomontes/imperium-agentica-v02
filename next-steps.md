@@ -2,33 +2,32 @@
 
 ## Status
 
-Runtime Synthetic Credential-to-Provider Projection 001 candidate and evidence are complete.
+Runtime Synthetic Credential-to-Provider Projection 001 is merged and post-merge verified.
 
-The active merge decision is recorded only in `current-step.md`.
+No next direction is approved or active.
+
+This file is an ordered operational queue, not doctrine, architecture, or a roadmap.
 
 ## Queue
 
-### 1. If approved, merge the synthetic provider projection package
+### 1. Choose one independently scoped direction
 
-Require:
+Eligible but unapproved options:
 
-- exact candidate head
-- combined successor 77 / 77
-- historical harness 11 / 11
-- repository regression PASS
-- zero production semantic changes
-- no real credential, SDK, network, process execution, deployment, or external effect
-- explicit trusted-driver and JavaScript-erasure limits
-
-### 2. After merge, choose one independent direction
-
-- real secret-store interface investigation
+- secret-store port investigation with a synthetic backend
+- real secret-store provider investigation
 - live Node process-supervisor driver investigation
 - provider authentication-format investigation
 - production deployment design
 
-Each requires separate necessity analysis, tests, and approval.
+Recommended next step:
 
-### 3. Preserve adjacent gates
+`secret-store port investigation with a synthetic backend`
 
-Candidate merge does not prove secure erasure, real credential safety, provider authentication or idempotency, component recovery, production readiness, or consensus; deploy Runtime; or authorize external effects.
+It can establish acquisition metadata, lease expiry, revocation, unavailable-store behavior, and broker handoff without selecting a vendor, handling a real secret, or using a network.
+
+Each option requires its own necessity analysis, scope, tests, and explicit approval.
+
+### 2. Preserve adjacent gates
+
+No option automatically proves secure erasure, real credential safety, provider authentication or idempotency, component recovery, production readiness, or consensus; deploys Runtime; or authorizes external effects.
