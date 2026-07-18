@@ -4,26 +4,19 @@
 
 No active step.
 
-Master Mason Operator Model and Cognitive Placement await operator review.
+The Runtime and Master Mason draft package is merged and verified.
 
 This file is an ordered operational queue, not doctrine, architecture, or a roadmap.
 
 ## Queue
 
-### 1. Decide the corrected Master Mason package
+### 1. Decide whether to authorize the empirical Runtime harness
 
-Recommended:
+Approval would authorize a minimal local test implementation only.
 
-- accept Master Mason as Runtime operator/mechanic candidate
-- accept placement inside Imperium but outside Citadel
-- preserve routine maintenance versus structural-decision boundary
-- merge draft PR #6
+It would not admit Runtime production, live credentials, provider integrations, autonomous repair, deployment infrastructure, or external effects.
 
-No production admission, Officer placement, or institution is implied.
-
-### 2. If approved, prepare a minimal empirical Runtime harness
-
-The harness must test the candidate contracts without becoming a production Runtime.
+### 2. If approved, build the smallest evidence harness
 
 Minimum behaviors:
 
@@ -40,16 +33,23 @@ Minimum behaviors:
 - conformance against at least one admitted PRB-001 Procedure
 - Master Mason diagnosis, intervention, restoration, and escalation paths
 
-Activation condition: separate implementation approval after PR #6 merge.
+The harness must use simulated effects only.
 
-### 3. Reassess candidate admission only after empirical evidence
+### 3. Run empirical failure and recovery evidence
 
-Runtime, Master Mason, CONTROL_PLANE Authority, and Runtime Maintenance Procedure remain candidates until real failure and recovery evidence exists.
+The run must preserve:
 
-### 4. Keep Compass parked
+- exact attempt and effect identities
+- contract and mapping versions
+- Authority freshness
+- PB-001 correlation
+- operational versus semantic-state distinctions
+- every refusal, quarantine, recovery, and escalation observation
 
-Reactivate only if a distinct reusable orientation mechanism emerges beyond current Plan, observations, conformance method, and Master Mason diagnosis.
+### 4. Reassess candidate admission
 
-### 5. Keep Praetorium parked
+Only after empirical results may Runtime, Master Mason, CONTROL_PLANE Authority, and Runtime Maintenance Procedure enter admission preparation.
 
-Master Mason's Imperium scope does not demonstrate an Imperium Officer corps or holding institution.
+### 5. Keep Compass and Praetorium parked
+
+Reactivate only when their own distinct behaviors are demonstrated.
