@@ -2,27 +2,19 @@
 
 ## Status
 
-Runtime Baseline `RTB-001` is admitted for current Runtime semantics.
+Runtime Baseline `RTB-002` is represented by the production staging tree.
 
-Runtime Maintenance Artifact Closure 001 is a draft-only candidate revision. No production movement or live implementation is authorized.
+The exact seven-target Runtime Maintenance Artifact Closure package is staged and awaits a separate merge decision.
 
-## Admitted Runtime Evidence
+## Admission Evidence
 
-- Runtime Admission Pressure Run 001: 55 PASS / 0 FAIL
-- Runtime Admission Convergence 001: 30 PASS / 0 FAIL
-- Runtime Empirical Run 001: 11 PASS / 0 FAIL
-- Runtime Production Admission Review 001
-
-## Runtime Maintenance Artifact Candidate
-
-- admitted-baseline defect run: 9 PASS / 5 FAIL
-- corrected focused pressure: 15 PASS / 0 FAIL
-- repository-wide regression: PASS
-- admission convergence: 35 PASS / 0 FAIL
+- Runtime Maintenance Artifact Pressure Run 004: 15 PASS / 0 FAIL
+- Runtime Maintenance Repository Regression 001: PASS
+- Runtime Maintenance Admission Convergence Run 001: 35 PASS / 0 FAIL
 - empirical harness rerun: 11 PASS / 0 FAIL
-- production admission review: ready for explicit staging decision
+- production admission review: `runtime-maintenance-production-admission-review-001.md`
 
-## Candidate Chain
+## Canonical Chain
 
 ```text
 Runtime Observation Envelope
