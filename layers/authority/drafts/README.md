@@ -2,7 +2,13 @@
 
 ## Status
 
-Authority Baseline `AB-003` is admitted.
+Authority Baseline `AB-003` is admitted and remains canonical.
+
+Active candidate revision under `Runtime Maintenance Artifact Closure 001`:
+
+- `runtime-control-plane-authority-profile.md`
+
+The candidate adds no Authority profile. It revises bounded CONTROL_PLANE discretion to cite the separated Runtime Operational Diagnosis and Runtime Maintenance Disposition semantics.
 
 Historical source drafts retained for traceability:
 
@@ -12,10 +18,4 @@ Historical source drafts retained for traceability:
 - `mission-envelope.md`
 - `capability-tool-and-access-grants.md`
 
-Their admitted canonical versions live in `layers/authority/production/`.
-
-Admitted source draft retained for traceability:
-
-- `runtime-control-plane-authority-profile.md` → `layers/authority/production/runtime-control-plane-authority-profile.md`
-
-The admitted CONTROL_PLANE profile grants no actual authority by itself.
+The candidate grants no actual authority and changes no controlled environment.
