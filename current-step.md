@@ -2,54 +2,57 @@
 
 ## Status
 
-Runtime Synthetic Credential Boundary 001 merged and post-merge verified on 2026-07-18.
-
-No active step.
-
-This file is operational continuity, not doctrine, architecture, or authority.
-
-## Merge Record
+Runtime Synthetic Credential-to-Provider Projection 001 candidate completed on 2026-07-18.
 
 ```text
-Pull request: #25
-Squash commit: 57647ceb506ea8ea6a26dfe40754223365d1c8bc
-Rollback parent: a3ef39ac54036cad8b46cf334ba5fa5f24653192
-Candidate head: 7e223c2331c02534ec88d53fcc66576e2e4ac072
-```
-
-Execution record:
-
-`drafts/runtime-synthetic-credential-boundary-execution-001.md`
-
-## Verified Evidence
-
-```text
-Pre-boundary pressure: 2 PASS / 11 FAIL
-Corrected boundary pressure: 13 PASS / 0 FAIL
-Focused boundary tests: 12 PASS / 0 FAIL
-Preserved successor tests: 52 PASS / 0 FAIL
-Combined successor suite: 64 PASS / 0 FAIL
+Pre-projection pressure: 3 PASS / 11 FAIL
+Corrected projection pressure: 14 PASS / 0 FAIL
+Focused projection tests: 13 PASS / 0 FAIL
+Preserved successor tests: 64 PASS / 0 FAIL
+Combined successor suite: 77 PASS / 0 FAIL
 Historical harness: 11 PASS / 0 FAIL
 Repository regression: PASS
 Production semantic files changed: 0
 ```
 
-## Boundary Status
+No real secret, provider account, SDK, network, process execution, deployment, production admission, or external effect.
 
-`@imperium-agentica/runtime-reference/security/synthetic-credentials` is a stable nonproduction reference export.
+## Active Branch
 
-It accepts synthetic test bytes only. It is not a real secret store, provider authentication mechanism, deployment component, or production implementation.
+`agent/runtime-synthetic-provider-projection-001`
 
-## Preserved Limits
+Rollback parent:
 
-- JavaScript view zeroing is not proof of complete memory erasure
-- a trusted synchronous consumer can copy bytes while invoked
-- no real secret, persistent store, encryption, keychain, network, provider credential, deployment, or external effect
-- no Master Mason implementation, qualification, assignment, or decision mandate
-- no Authority registry, grant issuance, PB-001 ownership, or Procedure revision
+`2cc923baa0df9bee91dbd478f6ba6c350407f607`
 
-## Next Gate
+## Candidate
 
-Choose one independently scoped synthetic integration, real-store, live-driver, or deployment direction from `next-steps.md`.
+The stable private reference package gains:
 
-No direction is active by default.
+- `layers/runtime/reference/src/synthetic-credential-node-process-supervisor-adapter.mjs`
+- export `./providers/node-process-supervisor/synthetic-credentials`
+- one composition of the existing broker and injected provider adapter
+- thirteen focused tests
+
+The projection keeps the opaque handle outside Runtime data, preserves the six-field provider request, and provides synthetic bytes separately during one exact-bound synchronous driver call.
+
+## Records
+
+- investigation: `drafts/runtime-synthetic-provider-projection-001.md`
+- necessity: `drafts/runtime-synthetic-provider-projection-necessity-analysis-001.md`
+- conformance plan: `drafts/runtime-synthetic-provider-projection-conformance-plan-001.md`
+- pressure tests: `tests/runtime/runtime-synthetic-provider-projection-pressure-tests-001.md`
+- baseline run: `tests/runtime/runtime-synthetic-provider-projection-pressure-run-001.md`
+- corrected run: `tests/runtime/runtime-synthetic-provider-projection-pressure-run-002.md`
+- repository regression: `tests/runtime/runtime-synthetic-provider-projection-repository-regression-001.md`
+- candidate review: `tests/runtime/runtime-synthetic-provider-projection-candidate-review-001.md`
+
+## Next Decision
+
+Decide whether to merge the nonproduction synthetic provider projection evidence package.
+
+Merge would not authenticate to a provider, handle a real credential, execute a process, prove secure erasure or recovery, deploy Runtime, or authorize external effects.
+
+## Stop Condition
+
+No candidate merge without explicit operator approval.
