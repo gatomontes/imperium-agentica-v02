@@ -20,7 +20,7 @@ Define the expected path from Runtime observation through diagnosis, eligibility
 
 ### Authority
 
-- CONTROL_PLANE profile: `layers/authority/drafts/runtime-control-plane-authority-profile.md`
+- CONTROL_PLANE profile: `layers/authority/production/runtime-control-plane-authority-profile.md`
 
 ### Provenance
 
@@ -31,7 +31,7 @@ Define the expected path from Runtime observation through diagnosis, eligibility
 
 - Observation Envelope: `layers/runtime/production/runtime-observation-envelope.md`
 - candidate Control Plane revision: `layers/runtime/drafts/runtime-control-plane-contract.md`
-- candidate Realization and Dispatch revision: `layers/runtime/drafts/runtime-realization-and-dispatch-contract.md`
+- Realization and Dispatch: `layers/runtime/production/runtime-realization-and-dispatch-contract.md`
 
 ## Entry Conditions
 
