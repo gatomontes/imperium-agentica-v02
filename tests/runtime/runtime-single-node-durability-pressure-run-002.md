@@ -9,10 +9,10 @@ No production admission.
 ## Result
 
 ```text
-Durability pressures: 12 PASS / 0 FAIL
-Focused durability executable tests: 8 PASS / 0 FAIL
+Durability pressures: 13 PASS / 0 FAIL
+Focused durability executable tests: 9 PASS / 0 FAIL
 Preserved successor semantic tests: 15 PASS / 0 FAIL
-Combined successor suite: 23 PASS / 0 FAIL
+Combined successor suite: 24 PASS / 0 FAIL
 Historical harness: 11 PASS / 0 FAIL
 ```
 
@@ -20,7 +20,7 @@ Historical harness: 11 PASS / 0 FAIL
 |---|---:|---|
 | RSD-001 | PASS | Components, realizations, and effects reconstruct. |
 | RSD-002 | PASS | Each entry is appended and fsynced before application. |
-| RSD-003 | PASS | Exclusive lock file permits one writer. |
+| RSD-003 | PASS | In-process directory ownership permits one writer. |
 | RSD-004 | PASS | Truncated or corrupt tail refuses closed. |
 | RSD-005 | PASS | Unknown schema or sequence mismatch refuses closed. |
 | RSD-006 | PASS | Completed effect remains completed. |
@@ -30,6 +30,7 @@ Historical harness: 11 PASS / 0 FAIL
 | RSD-010 | PASS | Journal test evidence contains no secret material. |
 | RSD-011 | PASS | All 15 original successor tests remain green. |
 | RSD-012 | PASS | Evidence limits remain explicit. |
+| RSD-013 | PASS | Required Runtime observations persist and reconstruct after restart. |
 
 ## Evidence Limit
 
