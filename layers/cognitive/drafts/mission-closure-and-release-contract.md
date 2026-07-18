@@ -127,6 +127,34 @@ Release affects only the named mission binding. It does not alter the operative,
 - a Muster Instance is mission-specific assembly and outbound-orchestration responsibility
 - standing CEO and CoS assignments survive mission closure unless separately changed
 
+## Post-Closure Independence
+
+Mission closure creates distinct remaining responsibilities:
+
+- Curia may close the mission-specific session
+- Muster may still retain unresolved release responsibility
+- Scribes may report the closed mission while release remains pending
+- the report must preserve release status and outstanding obligations
+
+```text
+Curia Session closed ≠ mission binding released
+Final Report issued ≠ release complete
+```
+
+## Correction And Supersession
+
+A material correction creates a superseding record with preserved lineage.
+
+Correction does not silently:
+
+- reopen the mission
+- restore a released binding
+- reverse an authorized release
+- erase a report
+- create new field authority
+
+Any new consequence requires its own Cognitive decision and effective Authority finding.
+
 ## Proof Boundary
 
 This contract can cite a completion-criteria finding but cannot define what evidence is sufficient to prove the Work Specification satisfied.
