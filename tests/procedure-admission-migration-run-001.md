@@ -2,7 +2,7 @@
 
 ## Status
 
-Staging verification passed. Atomic merge and post-merge verification pending.
+Atomic migration and post-merge verification passed.
 
 ## Authorization
 
@@ -24,7 +24,7 @@ Runtime → unchanged and unadmitted
 - review: `tests/cross-layer-procedure-migration-review-001.md`
 - staging branch: `agent/procedure-admission-001`
 - rollback parent: `8b2a2893d3d1e9686648fc61e24e12bcbb00b11d`
-- merge SHA: pending
+- squash merge SHA: `f9f953cdd2384963fdad3e6eda9b56f749817f1d`
 
 ## Pre-Deletion Verification
 
@@ -70,10 +70,17 @@ This migration does not admit:
 - an Ownership layer
 - a central Artifact layer
 
-## Post-Merge Requirements
+## Post-Merge Verification
 
-- record the squash merge SHA
-- confirm the rollback parent
-- resolve all four manifests on `main`
-- confirm both deleted paths remain absent
-- repeat the production draft-citation and status scans
+Verified on `main` after squash merge:
+
+- PRB-001: 3 / 3
+- AB-002: 5 / 5
+- CB-003: 33 / 33
+- PB-001: 3 / 3 unchanged
+- superseded paths absent: 2 / 2
+- migrated production draft-citation/status scan: 0 failures
+- exact rollback parent confirmed: `8b2a2893d3d1e9686648fc61e24e12bcbb00b11d`
+- atomic squash merge confirmed: `f9f953cdd2384963fdad3e6eda9b56f749817f1d`
+
+Result: **PASS**
