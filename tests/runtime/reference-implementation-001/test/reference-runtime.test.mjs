@@ -5,14 +5,14 @@ import {
   DispositionForms,
   EffectResults,
   validateObservation,
-} from "../src/contracts.mjs";
+} from "../../../../layers/runtime/reference/src/contracts.mjs";
 import {
   InMemoryObservationSink,
   InMemoryStore,
   MutableFindingPort,
   SimulatedEffectPort,
-} from "../src/in-memory-ports.mjs";
-import { ReferenceRuntime } from "../src/reference-runtime.mjs";
+} from "../../../../layers/runtime/reference/src/in-memory-ports.mjs";
+import { ReferenceRuntime } from "../../../../layers/runtime/reference/src/reference-runtime.mjs";
 
 function setup() {
   const store = new InMemoryStore();
@@ -220,8 +220,8 @@ test("observations contain no credential material", () => {
 });
 
 test("the implementation exports no Master Mason or Authority registry", async () => {
-  const runtimeModule = await import("../src/reference-runtime.mjs");
-  const portModule = await import("../src/in-memory-ports.mjs");
+  const runtimeModule = await import("../../../../layers/runtime/reference/src/reference-runtime.mjs");
+  const portModule = await import("../../../../layers/runtime/reference/src/in-memory-ports.mjs");
   assert.equal("MasterMason" in runtimeModule, false);
   assert.equal("AuthorityRegistry" in portModule, false);
 });
