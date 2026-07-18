@@ -4,75 +4,61 @@
 
 No active step.
 
-Runtime Draft Development 001 is complete.
+Master Mason, Compass, and Praetorium Investigation 001 is complete.
 
 This file is an ordered operational queue, not doctrine, architecture, or a roadmap.
 
 ## Queue
 
-### 1. Decide the control-plane Cognitive responsibility
+### 1. Decide the Master Mason candidate
 
-Decision artifacts:
+Recommended approval scope:
 
-- `drafts/runtime-control-plane-cognitive-origin-analysis-001.md`
-- `tests/cognitive/runtime-control-plane-responsibility-origin-run-001.md`
+- minimal Imperium-scope Cognitive role draft
+- decision-authority origin and specialization investigation
+- theoretical pressure and affected convergence
 
-Options:
+No persona, Officer admission, placement, institution, or production baseline is implied.
 
-- approve a minimal Runtime Control-Plane Responsibility draft
-- keep control-plane judgment permanently external to Imperium
-- revise the origin analysis
+### 2. If approved, define and pressure Master Mason responsibility
 
-No option admits a named institution or Runtime production.
+The draft must define:
 
-### 2. If the Cognitive draft is approved, test dependency closure
-
-Create and pressure only the smallest responsibility contract necessary to:
-
-- assess Control-Plane Plans
-- judge semantic-mapping compatibility
-- expose uncertainty and irreversible consequences
-- decide or recommend exact bounded disposition
-- hand an independently authorized instruction to Runtime
-- reconcile indeterminate control-plane effects
-
-Then rerun Cognitive, Authority, Procedure, Runtime, and cross-layer convergence.
+- structural and semantic-compatibility judgment
+- Control-Plane Situation assembly
+- affected-mission and unresolved-effect assessment
+- compatibility findings
+- competence and counsel limits
+- advisory versus executive behavior
+- exact handoff to Runtime
+- prohibited mission and Runtime overreach
 
 Activation condition: explicit operator approval.
 
-### 3. Decide whether candidate contracts are ready for admission preparation
+### 3. Investigate Master Mason decision authority in parallel
 
-Eligible only after the Cognitive responsibility and all affected convergence tests pass.
+Test whether a deciding Master Mason requires:
 
-Candidate set:
+- a specialized executive mandate
+- a new authority-grant profile
+- or a bounded specialization of an existing decision profile
 
-- Runtime Realization and Dispatch
-- Runtime Observation Envelope
-- Runtime Control Plane
-- CONTROL_PLANE Authority profile
-- Mission Indeterminate-Effect Disposition Procedure
-- any approved Cognitive control-plane responsibility
+Preserve:
 
-Admission preparation does not waive empirical Runtime evidence.
+```text
+decision authority ≠ CONTROL_PLANE action authority
+qualification ≠ authority
+decision ≠ execution
+```
 
-### 4. Authorize a minimal reference implementation or test harness
+### 4. Keep Compass parked
 
-Build only after candidate dependency closure.
+Reactivate only if repeated assessments or empirical implementation demonstrate a stable cross-layer orientation operation that the Plan, Observation Envelope, conformance method, PB-001, and Master Mason assessment cannot supply separately.
 
-The harness must produce evidence for:
+### 5. Keep Praetorium reserved
 
-- crash before and after external dispatch
-- duplicate delivery and concurrent attempts
-- stale and withdrawn Authority
-- partial local rollback after external effect
-- queued contract-version change
-- incompatible state migration and rollback
-- credential failure
-- indeterminate mission and control-plane effects
-- conformance against at least one admitted PRB-001 Procedure
+Reactivate only when persistent admission, holding, placement, reuse, or multiple Imperium Officer roles demonstrate an outer-echelon institution.
 
-Activation condition: separate implementation approval.
+### 6. Authorize a minimal reference implementation only after dependency closure
 
-### 5. Reconsider Vellum only if a record gap appears
-
-Activation condition: a scenario demonstrates a canonical record behavior existing artifacts cannot preserve.
+The empirical harness remains separately gated and must not begin merely because the Master Mason role is approved.
