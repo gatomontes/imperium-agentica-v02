@@ -4,60 +4,75 @@
 
 No active step.
 
-Runtime Boundary Investigation 001 awaits operator decision.
-
-The Runtime/code distinction has been clarified in `current-step.md`; no boundary approval is inferred from that clarification.
+Runtime Draft Development 001 is complete.
 
 This file is an ordered operational queue, not doctrine, architecture, or a roadmap.
 
 ## Queue
 
-### 1. Decide the candidate Runtime boundary
+### 1. Decide the control-plane Cognitive responsibility
 
-Decision artifact:
+Decision artifacts:
 
-`drafts/runtime-boundary-investigation-001.md`
-
-Decision basis:
-
-```text
-Code describes or configures machinery.
-Runtime is that machinery operating with actual state and effects.
-Runtime does not own every semantic contract expressed in code.
-```
+- `drafts/runtime-control-plane-cognitive-origin-analysis-001.md`
+- `tests/cognitive/runtime-control-plane-responsibility-origin-run-001.md`
 
 Options:
 
-- approve candidate Runtime layer and draft-contract development
-- revise the boundary and rerun affected tests
-- reject Runtime as an independent concern
+- approve a minimal Runtime Control-Plane Responsibility draft
+- keep control-plane judgment permanently external to Imperium
+- revise the origin analysis
 
-No option admits Runtime production.
+No option admits a named institution or Runtime production.
 
-### 2. If approved, create the candidate Runtime layer
+### 2. If the Cognitive draft is approved, test dependency closure
 
-Candidate drafts only:
+Create and pressure only the smallest responsibility contract necessary to:
 
-- Runtime realization and dispatch
-- Runtime observation envelope
-- Runtime control plane
+- assess Control-Plane Plans
+- judge semantic-mapping compatibility
+- expose uncertainty and irreversible consequences
+- decide or recommend exact bounded disposition
+- hand an independently authorized instruction to Runtime
+- reconcile indeterminate control-plane effects
 
-Also investigate:
-
-- Authority control-plane profile refinement
-- Procedure indeterminate-effect disposition refinement
-- state-machine conformance method
+Then rerun Cognitive, Authority, Procedure, Runtime, and cross-layer convergence.
 
 Activation condition: explicit operator approval.
 
-### 3. Resolve the empirical blocker only after draft convergence
+### 3. Decide whether candidate contracts are ready for admission preparation
 
-Build a minimal reference implementation or test harness only after the Runtime-native contracts, Authority refinement, Procedure refinement, and conformance method have passed independently and together.
+Eligible only after the Cognitive responsibility and all affected convergence tests pass.
 
-The implementation must produce evidence for failure, recovery, concurrency, stale authority, duplicate delivery, partial rollback, and indeterminate external effects.
+Candidate set:
 
-Activation condition: successful draft and convergence testing plus separate implementation approval.
+- Runtime Realization and Dispatch
+- Runtime Observation Envelope
+- Runtime Control Plane
+- CONTROL_PLANE Authority profile
+- Mission Indeterminate-Effect Disposition Procedure
+- any approved Cognitive control-plane responsibility
 
-### 4. Reconsider Vellum only if a record gap appears
+Admission preparation does not waive empirical Runtime evidence.
+
+### 4. Authorize a minimal reference implementation or test harness
+
+Build only after candidate dependency closure.
+
+The harness must produce evidence for:
+
+- crash before and after external dispatch
+- duplicate delivery and concurrent attempts
+- stale and withdrawn Authority
+- partial local rollback after external effect
+- queued contract-version change
+- incompatible state migration and rollback
+- credential failure
+- indeterminate mission and control-plane effects
+- conformance against at least one admitted PRB-001 Procedure
+
+Activation condition: separate implementation approval.
+
+### 5. Reconsider Vellum only if a record gap appears
 
 Activation condition: a scenario demonstrates a canonical record behavior existing artifacts cannot preserve.
