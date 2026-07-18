@@ -2,11 +2,11 @@
 
 ## Status
 
-Candidate Cognitive artifact contract.
+Historical source draft retained after admission of `layers/cognitive/production/runtime-operational-diagnosis.md` under CB-005.
 
-Not admitted. CB-004 remains canonical.
+Admission: `Runtime Maintenance Artifact Production Admission Review 001`.
 
-Investigation: `Runtime Maintenance Artifact Closure 001`.
+This file is noncanonical evidence of `Runtime Maintenance Artifact Closure 001`.
 
 ## Candidate Dependencies
 
