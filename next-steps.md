@@ -2,32 +2,33 @@
 
 ## Status
 
-Runtime Single-Node Durability 001 candidate evidence is merged and post-merge verified.
+Runtime Distributed Concurrency and Recovery 001 candidate and evidence are complete.
 
-No next direction is approved or active.
-
-This file is an ordered operational queue, not doctrine, architecture, or a roadmap.
+The active merge decision is recorded only in `current-step.md`.
 
 ## Queue
 
-### 1. Choose one independently scoped direction
+### 1. If approved, merge the candidate evidence package
 
-Eligible but unapproved options:
+Require:
 
-- distributed concurrency and recovery evidence
+- exact candidate head
+- combined successor 35 / 35
+- historical harness 11 / 11
+- repository regression PASS
+- zero production semantic changes
+- explicit deterministic-oracle and non-consensus limits
+
+### 2. After merge, choose one independent direction
+
 - stable nonproduction reference placement
 - environment-specific provider adapter
 - credential-handling implementation
 - production deployment design
+- real consensus or distributed-store investigation
 
-Recommended next evidence step:
+Each requires separate necessity analysis, tests, and approval.
 
-`distributed concurrency and recovery evidence`
+### 3. Preserve adjacent gates
 
-It tests the largest remaining recorded recovery limitation while preserving the provider, credential, placement, and deployment gates.
-
-Each option requires its own necessity analysis, scope, tests, and explicit approval.
-
-### 2. Preserve adjacent gates
-
-No option automatically instantiates Master Mason, issues Authority, defines PB-001 semantics, alters Procedure, deploys Runtime, or authorizes external effects.
+Candidate merge does not prove consensus or production distributed operation, instantiate Master Mason, issue Authority, define PB-001 semantics, alter Procedure, deploy Runtime, or authorize external effects.
