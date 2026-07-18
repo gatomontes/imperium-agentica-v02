@@ -71,3 +71,21 @@ Expected: no effective exact-action finding.
 A derived envelope permits delegation prohibited by its parent.
 
 Expected: delegation exceeded.
+
+### ME-013 — Pre-Formation Identity
+
+Mission formation requires exact scope, but substantive mission formation has not occurred yet.
+
+Expected: a proposed Mission Identity may be allocated for correlation before approval; identity allocation creates no authority or mission approval.
+
+### ME-014 — Post-Closure Administrative Tail
+
+The mission is closed, but authorized reporting and delivery remain.
+
+Expected: the envelope may remain effective only for explicitly listed terminal administrative actions and then expires or completes.
+
+### ME-015 — Missing Safe State
+
+The envelope permits external effects that could remain active after authority loss but cites no safe-state instruction.
+
+Expected: the envelope is incomplete for those actions and cannot become effective as written.
