@@ -4,38 +4,34 @@ import {
   fsyncSync,
   openSync,
   readFileSync,
-  unlinkSync,
   writeFileSync,
   writeSync,
 } from "node:fs";
-import { dirname, join } from "node:path";
+import { dirname, join, resolve } from "node:path";
 import { mkdirSync } from "node:fs";
 
 const schema = "imperium-runtime-reference-store-001";
+const openDirectories = new Set();
 
 export class FileBackedStore {
   constructor(directory) {
-    this.directory = directory;
+    this.directory = resolve(directory);
     this.journalPath = join(directory, "runtime-reference.journal");
-    this.lockPath = join(directory, "runtime-reference.lock");
     this.components = new Map();
     this.realizations = new Map();
     this.effects = new Map();
+    this.observations = new Map();
     this.sequence = 0;
     this.closed = false;
 
     mkdirSync(dirname(this.journalPath), { recursive: true });
-    try {
-      this.lockFd = openSync(this.lockPath, "wx");
-    } catch (error) {
-      if (error.code === "EEXIST") throw new Error("STORE_ALREADY_OPEN");
-      throw error;
-    }
+    if (openDirectories.has(this.directory)) throw new Error("STORE_ALREADY_OPEN");
+    openDirectories.add(this.directory);
     try {
       this.replay();
       this.recoverDispatchedEffects();
     } catch (error) {
-      this.releaseLock();
+      openDirectories.delete(this.directory);
       throw error;
     }
   }
@@ -93,7 +89,9 @@ export class FileBackedStore {
         ? this.realizations
         : entry.type === "EFFECT"
           ? this.effects
-          : null;
+          : entry.type === "OBSERVATION"
+            ? this.observations
+            : null;
     if (!table) throw new Error("JOURNAL_ENTRY_TYPE_UNKNOWN");
     table.set(entry.id, structuredClone(entry.value));
   }
@@ -138,18 +136,28 @@ export class FileBackedStore {
     this.append("EFFECT", id, value);
   }
 
+  appendObservation(observation) {
+    this.append("OBSERVATION", observation.observationId, observation);
+  }
+
+  getObservations() {
+    return [...this.observations.values()].map((value) => structuredClone(value));
+  }
+
   close() {
     if (this.closed) return;
     this.closed = true;
-    this.releaseLock();
+    openDirectories.delete(this.directory);
+  }
+}
+
+export class FileObservationSink {
+  constructor(store) {
+    this.store = store;
   }
 
-  releaseLock() {
-    if (this.lockFd !== undefined) {
-      closeSync(this.lockFd);
-      this.lockFd = undefined;
-    }
-    if (existsSync(this.lockPath)) unlinkSync(this.lockPath);
+  append(observation) {
+    this.store.appendObservation(observation);
   }
 }
 
