@@ -18,7 +18,7 @@ No Runtime production baseline or implementation is admitted.
 
 - `master-mason-runtime-convergence-run-001.md` — 16 PASS / 0 FAIL against the superseded executive role hypothesis
 
-## Mason Operator Evidence
+## Master Mason Operator Evidence
 
 - `mason-runtime-convergence-run-001.md` — 20 PASS / 0 FAIL
 
@@ -26,12 +26,12 @@ The current candidate chain is:
 
 ```text
 Runtime observes.
-Mason diagnoses.
+Master Mason diagnoses.
 Procedure selects eligible paths.
 Authority permits.
-Mason invokes.
+Master Mason invokes.
 Runtime performs.
-Mason assesses or escalates.
+Master Mason assesses or escalates.
 ```
 
 All results are theoretical. No concrete state machine, service, credential, integration, or external effect was evaluated.
