@@ -7,7 +7,7 @@ Completed against the pre-extension Runtime Reference Implementation 001.
 ## Result
 
 ```text
-3 PASS / 9 FAIL
+3 PASS / 10 FAIL
 ```
 
 | ID | Result | Pre-extension finding |
@@ -24,3 +24,4 @@ Completed against the pre-extension Runtime Reference Implementation 001.
 | RSD-010 | PASS | Existing simulated observations contain no secret material. |
 | RSD-011 | PASS | Existing successor semantics pass 15 / 15. |
 | RSD-012 | FAIL | No durability evidence exists to bound a durability claim. |
+| RSD-013 | FAIL | Required observations are held only in memory and disappear on restart. |
