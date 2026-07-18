@@ -2,11 +2,11 @@
 
 ## Status
 
-Master Mason, Compass, and Praetorium Investigation 001 completed on 2026-07-18.
+Mason Operator Model 001 completed on 2026-07-18.
 
 No active step.
 
-Awaiting operator decision on a minimal Master Mason Cognitive role draft and a separate decision-authority investigation.
+Awaiting operator review of the corrected candidate package in PR #6.
 
 This file is operational continuity, not doctrine, architecture, or authority.
 
@@ -20,75 +20,90 @@ Procedure: PRB-001 — 3 / 3
 Runtime: unadmitted
 ```
 
-## Investigation Results
+## Operator Clarification
 
 ```text
-Master Mason / Compass / Praetorium: 28 PASS / 0 FAIL
-Master Mason–Runtime convergence: 16 PASS / 0 FAIL
+Runtime
+= engine and operating mechanisms
+
+Mason
+= operator / mechanic
+
+Mason flips the permitted on/off switch,
+oils the engine,
+clears clogged cogs,
+diagnoses operating trouble,
+and performs bounded maintenance.
 ```
 
-### Master Mason
+The clarification supersedes the prior executive Master Mason interpretation.
 
-**SUPPORTED AS A FUNCTIONAL ROLE CANDIDATE**
-
-Master Mason fits the demonstrated responsibility for Imperium-wide structural and semantic-compatibility judgment over deployment, migration, rollback, recovery, and indeterminate control-plane effects.
-
-The role does not write code merely by existing, perform Runtime mechanics, decide mission outcomes, or manufacture Authority.
-
-### Compass
-
-**PARKED**
-
-The orientation behavior is plausible, but it is presently supplied by:
-
-- Control-Plane Plan
-- Runtime Observation Envelope
-- State-Machine Conformance Method
-- PB-001
-- Master Mason assessment
-
-No distinct Compass-native product or independently necessary mechanism has yet been demonstrated.
-
-### Praetorium
-
-**OUTER-ECHELON SCOPE CONFIRMED; INSTITUTION UNADMITTED**
-
-Master Mason is Imperium-scoped rather than naturally mission-scoped.
-
-One role does not demonstrate the admission, holding, placement, roster, or reuse behavior needed to admit Praetorium.
-
-## Authority Finding
-
-The candidate `CONTROL_PLANE` profile permits exact operating actions.
-
-It does not authorize Master Mason to choose the substantive disposition.
+## Candidate Model
 
 ```text
-Master Mason decision authority
-≠ CONTROL_PLANE action authority
+Runtime emits operating observations.
+Mason diagnoses the mechanical condition.
+Procedure identifies eligible maintenance paths.
+CONTROL_PLANE Authority permits exact intervention or bounded discretion.
+Mason invokes the permitted control.
+Runtime performs the effect and emits the result.
+Mason assesses operational restoration or escalates.
 ```
 
-A deciding Master Mason therefore requires an independently investigated decision mandate or authority specialization.
+Mason operates Runtime but is not Runtime.
+
+## Routine And Structural Boundary
+
+### Routine mechanical discretion
+
+Mason may select an eligible response only when:
+
+- an exact maintenance Procedure applies
+- CONTROL_PLANE Authority explicitly permits bounded discretion
+- environment, component, action, limits, and correlation match
+- no semantic meaning, mapping, history, or indeterminate effect is altered by assumption
+
+Routine bounded maintenance does not require a separate executive mandate.
+
+### Structural or semantic-risk change
+
+Mason stops and escalates when intervention would:
+
+- change semantic mappings
+- migrate incompatible state
+- erase lineage or intent
+- resolve indeterminate effects by assumption
+- choose irreversible or cross-mission consequences
+- revise admitted architecture
+
+Those decisions remain with the external operator until another responsibility is demonstrated.
+
+## Evidence
+
+```text
+Mason operator pressure: 40 PASS / 0 FAIL
+Mason–Runtime convergence: 20 PASS / 0 FAIL
+```
+
+## Candidate Artifacts
+
+- `layers/cognitive/drafts/mason.md`
+- `layers/procedure/drafts/runtime-maintenance-procedure.md`
+- revised `layers/authority/drafts/runtime-control-plane-authority-profile.md`
+- `drafts/mason-operator-clarification-001.md`
+
+## Preserved Non-Admissions
+
+- no Master Mason hierarchy
+- no Mason persona or Officer class
+- no Compass
+- no Praetorium
+- no Runtime production baseline
+- no live control plane
+- no implementation, credentials, integrations, or external effects
 
 ## Recommendation
 
-Approve:
+Approve the corrected Mason operator/mechanic model and merge the draft package.
 
-1. one minimal Master Mason Cognitive role draft
-2. one parallel investigation of Master Mason decision authority
-3. affected theoretical and convergence testing
-
-Do not approve:
-
-- a Master Mason persona or Officer admission
-- Compass
-- Praetorium
-- Runtime production or implementation
-
-## Decision Artifacts
-
-- `drafts/master-mason-role-investigation-001.md`
-- `drafts/compass-instrument-investigation-001.md`
-- `drafts/praetorium-placement-investigation-001.md`
-- `tests/cognitive/master-mason-compass-praetorium-run-001.md`
-- `tests/runtime/master-mason-runtime-convergence-run-001.md`
+After merge, the next independently gated step is a minimal empirical Runtime test harness.
