@@ -4,35 +4,36 @@
 
 Theoretical Cognitive scenarios, constitutional tests, and immutable run records.
 
-They evaluate ontology, responsibility, artifact boundaries, and traceability without executing software.
-
 ## Current Admitted Baseline
 
 - `CB-003` — 33 artifacts
 - admitted evidence: Cognitive Constitutional Run 018 — 33 PASS / 0 FAIL
 
-## CB-003 Admission Evidence
+## Superseded Executive Hypothesis
 
-- suite: `constitutional-tests.md` — CT-001 through CT-033
-- Completion Assessment Run 001: 10 PASS / 0 FAIL
-- Run 017: superseded after convergence audit found Cognitive Map overlap
-- corrected Constitutional Run 018: 33 PASS / 0 FAIL
-- corrected convergence: 21 PASS / 0 FAIL
-- admission review: `production-admission-review-005-cb-003.md`
+- `master-mason-compass-praetorium-run-001.md` — 28 PASS / 0 FAIL against a superseded executive Master Mason interpretation
 
-Decision: **CB-003 ADMITTED WITH RECORDED LIMITS**
+The operator clarified that Master Mason is intended as Runtime operator/mechanic.
 
-## Current Proven Distinctions
+## Current Master Mason Evidence
+
+- `runtime-control-plane-responsibility-origin-run-001.md` — 10 PASS / 0 FAIL
+- `mason-operator-tests-001.md` — 40 scenarios
+- `mason-operator-run-001.md` — 40 PASS / 0 FAIL
+- `mason-placement-tests-001.md` — 12 scenarios
+- `mason-placement-run-001.md` — 12 PASS / 0 FAIL
+
+## Proven Distinctions
 
 ```text
-responsibility ≠ authority
-identity ≠ authority
-completion claim ≠ criterion support
-criterion support ≠ closure
-closure ≠ release
-release ≠ reuse
-Curia Session end ≠ Muster release complete
-Final Report ≠ release complete
-Cognitive map ≠ Procedure
-Procedure admission ≠ Runtime implementation
+Master Mason operates Runtime ≠ Master Mason is Runtime
+diagnosis ≠ Runtime state
+diagnosis ≠ Authority
+bounded maintenance ≠ structural decision
+mechanical restoration ≠ mission success
+Imperium scope ≠ Citadel placement
+Master Mason candidate ≠ persona or Officer
+Master Mason scope ≠ Praetorium admitted
 ```
+
+CB-003 remains unchanged.

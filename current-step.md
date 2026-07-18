@@ -2,9 +2,11 @@
 
 ## Status
 
-Runtime Boundary Investigation 001 completed on 2026-07-18.
+Master Mason Cognitive Placement 001 completed on 2026-07-18.
 
-Awaiting operator decision on the candidate boundary.
+No active step.
+
+Awaiting operator review of the corrected candidate package in PR #6.
 
 This file is operational continuity, not doctrine, architecture, or authority.
 
@@ -18,57 +20,81 @@ Procedure: PRB-001 — 3 / 3
 Runtime: unadmitted
 ```
 
-## Finding
-
-A distinct Runtime concern is justified for draft investigation.
-
-Runtime is not synonymous with code.
+## Master Mason Model
 
 ```text
-Code
-= static instructions, declarations, and configuration
-
 Runtime
-= operating machinery produced when implementation is instantiated
-  with actual state, resources, concurrency, failures, and effects
+= engine and operating mechanisms
+
+Master Mason
+= operator / mechanic
 ```
 
-Runtime realizes admitted meanings and procedures through executable state and effects. It may originate facts about its own implementation behavior, but it may not convert those facts into semantic findings owned by another layer.
+Master Mason diagnoses operating trouble, selects an eligible maintenance path, invokes permitted controls, assesses operational restoration, and escalates structural or semantic-risk changes.
 
-Code that expresses a Cognitive, Authority, Provenance, or Procedure contract remains semantically owned by that layer. Runtime consumes and enforces the contract; the fact that the contract is encoded in software does not transfer its meaning to Runtime.
+## Cognitive Placement
+
+```text
+Imperium — Cognitive Layer
+├── Master Mason
+└── Citadel
+    ├── Curia
+    ├── Muster
+    ├── Armory
+    ├── Locksmith
+    └── other Citadel responsibilities
+```
+
+Master Mason is:
+
+- inside the Imperium Cognitive echelon
+- outside Citadel
+- adjacent to the Runtime boundary
+- unplaced in Preceptory or Praetorium
+- not inside Runtime
+
+## Cross-Layer Relationship
+
+```text
+Runtime Observation and Quarantine
+→ operating evidence
+→ Master Mason
+
+Master Mason
+→ diagnosis and permitted maintenance instruction
+→ Runtime Control Plane
+```
+
+Locksmith may supply credential-handling constraints without absorbing Master Mason.
+
+Structural decisions remain with the external operator.
 
 ## Evidence
 
-- admitted contracts inventoried: 44
-- explicit Runtime/implementation exclusions found: 62
-- initial pressure: 34 PASS / 6 FAIL
-- corrected pressure: 40 PASS / 0 FAIL
-- cross-layer convergence: 24 PASS / 0 FAIL
+```text
+Master Mason operator pressure: 40 PASS / 0 FAIL
+Master Mason–Runtime convergence: 20 PASS / 0 FAIL
+Master Mason placement: 12 PASS / 0 FAIL
+```
+
+## Candidate Map
+
+- `drafts/runtime-layer-structural-map-001.md`
+- `drafts/master-mason-cognitive-placement-001.md`
+
+The map is structural. Its arrows represent control, dependency, observation, and effect relationships—not the mission lifecycle.
+
+## Preserved Non-Admissions
+
+- no Master Mason hierarchy
+- no Master Mason persona or Officer class
+- no Compass
+- no Praetorium
+- no Runtime production baseline
+- no live control plane or implementation
 
 ## Recommendation
 
-**APPROVE THE CANDIDATE RUNTIME BOUNDARY FOR DRAFT-CONTRACT DEVELOPMENT ONLY**
+Approve the Master Mason operator/mechanic model, its Imperium-level placement, and the draft package in PR #6.
 
-Proposed drafts:
-
-1. Runtime realization and dispatch
-2. Runtime observation envelope
-3. Runtime control plane
-
-## Production Blockers
-
-- no Authority control-plane profile
-- no Procedure disposition for indeterminate external effects
-- no independently tested Runtime Observation contract
-- no state-machine conformance method
-- no empirical implementation evidence
-
-## Decision Artifact
-
-`drafts/runtime-boundary-investigation-001.md`
-
-## Approval Boundary
-
-Approval authorizes candidate Runtime layer and draft/test development only.
-
-It does not admit Runtime production, select an implementation architecture, create credentials or integrations, or authorize external effects.
+After merge, the next independently gated step is a minimal empirical Runtime test harness.

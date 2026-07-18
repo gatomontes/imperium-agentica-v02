@@ -4,60 +4,52 @@
 
 No active step.
 
-Runtime Boundary Investigation 001 awaits operator decision.
-
-The Runtime/code distinction has been clarified in `current-step.md`; no boundary approval is inferred from that clarification.
+Master Mason Operator Model and Cognitive Placement await operator review.
 
 This file is an ordered operational queue, not doctrine, architecture, or a roadmap.
 
 ## Queue
 
-### 1. Decide the candidate Runtime boundary
+### 1. Decide the corrected Master Mason package
 
-Decision artifact:
+Recommended:
 
-`drafts/runtime-boundary-investigation-001.md`
+- accept Master Mason as Runtime operator/mechanic candidate
+- accept placement inside Imperium but outside Citadel
+- preserve routine maintenance versus structural-decision boundary
+- merge draft PR #6
 
-Decision basis:
+No production admission, Officer placement, or institution is implied.
 
-```text
-Code describes or configures machinery.
-Runtime is that machinery operating with actual state and effects.
-Runtime does not own every semantic contract expressed in code.
-```
+### 2. If approved, prepare a minimal empirical Runtime harness
 
-Options:
+The harness must test the candidate contracts without becoming a production Runtime.
 
-- approve candidate Runtime layer and draft-contract development
-- revise the boundary and rerun affected tests
-- reject Runtime as an independent concern
+Minimum behaviors:
 
-No option admits Runtime production.
+- bounded component activation and deactivation
+- worker or queue blockage without semantic-intent deletion
+- resource exhaustion and bounded tuning
+- crash before and after consequential dispatch
+- duplicate delivery and concurrent attempts
+- stale or withdrawn CONTROL_PLANE Authority
+- exact-instruction versus bounded-discretion modes
+- indeterminate-effect quarantine
+- incompatible state migration and rollback refusal
+- Runtime Observation Envelope production
+- conformance against at least one admitted PRB-001 Procedure
+- Master Mason diagnosis, intervention, restoration, and escalation paths
 
-### 2. If approved, create the candidate Runtime layer
+Activation condition: separate implementation approval after PR #6 merge.
 
-Candidate drafts only:
+### 3. Reassess candidate admission only after empirical evidence
 
-- Runtime realization and dispatch
-- Runtime observation envelope
-- Runtime control plane
+Runtime, Master Mason, CONTROL_PLANE Authority, and Runtime Maintenance Procedure remain candidates until real failure and recovery evidence exists.
 
-Also investigate:
+### 4. Keep Compass parked
 
-- Authority control-plane profile refinement
-- Procedure indeterminate-effect disposition refinement
-- state-machine conformance method
+Reactivate only if a distinct reusable orientation mechanism emerges beyond current Plan, observations, conformance method, and Master Mason diagnosis.
 
-Activation condition: explicit operator approval.
+### 5. Keep Praetorium parked
 
-### 3. Resolve the empirical blocker only after draft convergence
-
-Build a minimal reference implementation or test harness only after the Runtime-native contracts, Authority refinement, Procedure refinement, and conformance method have passed independently and together.
-
-The implementation must produce evidence for failure, recovery, concurrency, stale authority, duplicate delivery, partial rollback, and indeterminate external effects.
-
-Activation condition: successful draft and convergence testing plus separate implementation approval.
-
-### 4. Reconsider Vellum only if a record gap appears
-
-Activation condition: a scenario demonstrates a canonical record behavior existing artifacts cannot preserve.
+Master Mason's Imperium scope does not demonstrate an Imperium Officer corps or holding institution.

@@ -8,36 +8,26 @@ Theoretical tests and immutable run records by admitted or candidate concern.
 
 - Cognitive: `CB-003` — 33 artifacts
 - Authority: `AB-002` — 5 artifacts
-- Provenance: `PB-001` — 3 artifacts, unchanged
+- Provenance: `PB-001` — 3 artifacts
 - Procedure: `PRB-001` — 3 artifacts
 - Runtime: none
 
-## Atomic Admission Evidence
+## Runtime Candidate Evidence
 
 ```text
-Procedure structural: 16 PASS / 0 FAIL
-Procedure behavioral: 35 PASS / 0 FAIL
-Mission Envelope: 15 PASS / 0 FAIL
-Capability Grants: 15 PASS / 0 FAIL
-Completion Assessment: 10 PASS / 0 FAIL
-Cognitive regression: 33 PASS / 0 FAIL
-Authority regression: 67 PASS / 0 FAIL
-Provenance regression: 34 PASS / 0 FAIL
-Corrected convergence: 21 PASS / 0 FAIL
+Boundary corrected pressure: 40 PASS / 0 FAIL
+Boundary convergence: 24 PASS / 0 FAIL
+Draft corrected pressure: 60 PASS / 0 FAIL
+State-machine conformance method: 15 PASS / 0 FAIL
+Draft convergence: 24 PASS / 0 FAIL
+Control-plane cognitive origin: 10 PASS / 0 FAIL
+Master Mason operator pressure: 40 PASS / 0 FAIL
+Master Mason–Runtime convergence: 20 PASS / 0 FAIL
+Master Mason placement: 12 PASS / 0 FAIL
 ```
 
-The corrected evidence supports the admitted atomic CB-003, AB-002, and PRB-001 transition.
+The earlier executive Master Mason tests are retained as a superseded hypothesis.
 
-Tests do not execute software or imply Runtime implementation.
+Current finding: Master Mason is a coherent Imperium-level Runtime operator/mechanic candidate placed outside Citadel. Compass, Praetorium, Runtime production, and implementation remain unadmitted.
 
-## Runtime Boundary Investigation
-
-Runtime remains unadmitted.
-
-Candidate evidence:
-
-- initial Runtime pressure: 34 PASS / 6 FAIL
-- corrected Runtime pressure: 40 PASS / 0 FAIL
-- cross-layer Runtime convergence: 24 PASS / 0 FAIL
-
-Recommendation: approve the candidate Runtime boundary for draft-contract development only.
+All Runtime evidence is theoretical.

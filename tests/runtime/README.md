@@ -1,20 +1,37 @@
-# Runtime Boundary Tests
+# Runtime Tests
 
 ## Status
 
-Candidate-boundary tests only.
+Candidate Runtime tests only.
 
-No Runtime layer or production baseline is admitted.
+No Runtime production baseline or implementation is admitted.
 
-## Purpose
+## Boundary And Draft Evidence
 
-Pressure whether implementation can realize CB-003, AB-002, PB-001, and PRB-001 without originating or collapsing their semantics.
+- corrected boundary pressure: 40 PASS / 0 FAIL
+- boundary convergence: 24 PASS / 0 FAIL
+- corrected draft pressure: 60 PASS / 0 FAIL
+- draft convergence: 24 PASS / 0 FAIL
+- state-machine conformance method: 15 PASS / 0 FAIL
 
-## Current Artifacts
+## Superseded Master Mason Hypothesis
 
-- `runtime-boundary-pressure-tests-001.md` — 40 scenarios
-- `runtime-boundary-pressure-run-001.md` — initial run
-- `runtime-boundary-pressure-run-002.md` — 40 PASS / 0 FAIL
-- `runtime-cross-layer-convergence-run-001.md` — 24 PASS / 0 FAIL
+- `master-mason-runtime-convergence-run-001.md` — 16 PASS / 0 FAIL against the superseded executive role hypothesis
 
-Tests are theoretical and execute no services, credentials, integrations, or external effects.
+## Master Mason Operator Evidence
+
+- `mason-runtime-convergence-run-001.md` — 20 PASS / 0 FAIL
+
+The current candidate chain is:
+
+```text
+Runtime observes.
+Master Mason diagnoses.
+Procedure selects eligible paths.
+Authority permits.
+Master Mason invokes.
+Runtime performs.
+Master Mason assesses or escalates.
+```
+
+All results are theoretical. No concrete state machine, service, credential, integration, or external effect was evaluated.

@@ -127,10 +127,13 @@ A future LLM session should read the repository in this order:
 12. `layers/procedure/README.md` — admitted reduced Procedure boundary, when procedural work is relevant.
 13. `layers/procedure/production/` — admitted Procedure Baseline `PRB-001`.
 14. `layers/procedure/drafts/` — retained Procedure source drafts, only for traceability.
-15. `layers/cognitive/drafts/` — retained or unproven Cognitive revisions, only if relevant.
-16. `tests/` — theoretical suites and immutable run records, only when testing or tracing.
-17. `ideas.md` — raw pre-draft candidates, only if needed.
-18. `drafts/` — cross-layer working analyses, only if relevant to the current step.
+15. `layers/runtime/README.md` — approved candidate Runtime boundary; production remains unadmitted.
+16. `layers/runtime/drafts/` — candidate Runtime contracts, only when Runtime work is relevant.
+17. `layers/runtime/production/` — explicit empty production boundary.
+18. `layers/cognitive/drafts/` — retained or unproven Cognitive revisions, only if relevant.
+19. `tests/` — theoretical suites and immutable run records, only when testing or tracing.
+20. `ideas.md` — raw pre-draft candidates, only if needed.
+21. `drafts/` — cross-layer working analyses, only if relevant to the current step.
 
 Do not reconstruct intent from chat history before reading these files.
 
@@ -203,9 +206,19 @@ The admitted reduced Procedure boundary, production baseline, and retained draft
 /tests/procedure
 ```
 
-Procedure means only what is supposed to happen, in what order, under which conditions. It may cite but may not originate responsibility, authority, provenance, artifact meaning, proof, ownership, or runtime.
+Procedure means only what is supposed to happen, in what order, under which conditions. It may cite but may not originate responsibility, authority, provenance, artifact meaning, proof, ownership, or Runtime.
 
-Authority Baseline `AB-002`, Provenance Baseline `PB-001`, and Procedure Baseline `PRB-001` are admitted for current use. Runtime remains unadmitted.
+The approved candidate Runtime boundary uses:
+
+```text
+/layers/runtime/drafts
+/layers/runtime/production
+/tests/runtime
+```
+
+Runtime is the operating machinery that realizes cited contracts through actual state and effects. It is not synonymous with code and does not own semantic contracts merely because they are encoded in software.
+
+Authority Baseline `AB-002`, Provenance Baseline `PB-001`, and Procedure Baseline `PRB-001` are admitted for current use. Runtime production remains unadmitted.
 
 `production` means admitted for current use, not permanent or implemented in software.
 
