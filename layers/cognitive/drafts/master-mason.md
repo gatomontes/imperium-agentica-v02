@@ -8,6 +8,20 @@ Not admitted, forged, assigned, authorized, or implemented.
 
 Derived from Master Mason Operator Clarification 001.
 
+## Canonical Name
+
+```text
+Master Mason
+= canonical role name
+
+Mason
+= conversational shorthand only
+```
+
+`Master` denotes qualified primary responsibility for Runtime operation and maintenance.
+
+It does not imply subordinate Masons, a hierarchy, architectural sovereignty, expanded Authority, or Praetorium placement.
+
 ## Purpose
 
 Master Mason is the candidate operator and mechanic of the Runtime layer.
