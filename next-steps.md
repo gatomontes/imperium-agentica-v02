@@ -14,73 +14,60 @@ When a step becomes current, remove it from this file and place it in `current-s
 
 ## Queue
 
-### 1. Materialize target relocation drafts
+### 1. Execute atomic cross-layer migration
 
-Create without changing production:
+Transition:
 
 ```text
-layers/authority/drafts/executive-mandate.md
-layers/provenance/drafts/mission-correlation-and-isolation-contract.md
-layers/provenance/drafts/provider-intervention-ledgers.md
+CB-001 → CB-002
+empty Authority production → AB-001
+empty Provenance production → PB-001
 ```
+
+Manifest:
+
+`drafts/cross-layer-migration-manifest-001.md`
+
+Admission decision package:
+
+`tests/cross-layer-migration-review-001.md`
 
 Constraints:
 
-- preserve CB-001 origin
-- declare the new native concern
-- cite the approved layer contracts
-- split cognitive responsibility, authority, provenance, capacity policy, and runtime exclusions
-- do not create competing production origins
+- one preverified tree
+- one commit
+- no partial production state
+- exact parent preserved for rollback
+- three target production artifacts plus Authority and Provenance native contracts
+- three cognitive source deletions
+- complete consumer and index normalization
+- no Procedure or Runtime admission
 
 Activation condition:
 
-Explicit operator approval.
+Explicit operator execution approval.
 
 ---
 
-### 2. Run migration admission tests
+### 2. Verify post-migration production
 
 Required:
 
-- Executive Mandate specialization
-- mission-correlation and isolation
-- provider-stage non-inference
-- cognitive relocation regression
-- cross-layer convergence
-- exact manifest and atomic-tree preflight
+- AB-001 manifest 3 / 3
+- PB-001 manifest 3 / 3
+- CB-002 manifest 33 / 33
+- source deletions 3 / 3
+- canonical path scan
+- regression and convergence status
+- operational tracker closure
 
 Activation condition:
 
-All three target drafts exist.
+Atomic migration commit exists.
 
 ---
 
-### 3. Prepare production admission reviews
-
-Required:
-
-- Authority Production Admission Review 001
-- Provenance Production Admission Review 001
-- Cognitive Baseline CB-002 Review 001
-- Cross-Layer Migration Review 001
-
-Activation condition:
-
-All migration tests pass or recorded limits are bounded.
-
----
-
-### 4. Execute atomic cross-layer migration
-
-Activation condition:
-
-Explicit operator approval of the complete admission package.
-
-No partial or sequential production migration is permitted.
-
----
-
-### 5. Split contested procedural candidates
+### 3. Split contested procedural candidates
 
 Candidates:
 
@@ -91,11 +78,11 @@ Candidates:
 
 Activation condition:
 
-Cross-layer migration is complete and the procedural boundary is approved.
+Cross-layer migration is verified and the procedural boundary is approved.
 
 ---
 
-### 6. Redefine and test the procedural layer
+### 4. Redefine and test the procedural layer
 
 Procedure remains:
 
@@ -109,7 +96,7 @@ It must cite admitted external definitions and may originate none of them.
 
 ---
 
-### 7. Reconsider Vellum only if a record gap appears
+### 5. Reconsider Vellum only if a record gap appears
 
 Activation condition:
 
