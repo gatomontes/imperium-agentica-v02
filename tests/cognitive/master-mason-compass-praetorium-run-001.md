@@ -2,7 +2,9 @@
 
 ## Status
 
-Theoretical investigation run.
+Immutable theoretical run against the now-superseded executive Master Mason hypothesis.
+
+The 28 results remain valid for that hypothesis; the operator clarified that Mason is intended as Runtime operator/mechanic, not the platform executive described here.
 
 ## Result
 
