@@ -2,38 +2,33 @@
 
 ## Status
 
-Runtime Reference Implementation 001 candidate and evidence are complete.
+Runtime Reference Implementation 001 candidate evidence is merged and post-merge verified.
 
-The active merge decision is recorded only in `current-step.md`.
+No next direction is approved or active.
 
 This file is an ordered operational queue, not doctrine, architecture, or a roadmap.
 
 ## Queue
 
-### 1. If approved, merge the candidate evidence package
+### 1. Choose one independently scoped direction
 
-Require:
+Eligible but unapproved options:
 
-- exact candidate head
-- focused 15 / 15
-- historical harness 11 / 11
-- repository regression PASS
-- zero production semantic changes
-- explicit nonproduction and simulated-effect limits
-
-### 2. After merge, choose whether further evidence is necessary
-
-Independent future options:
-
+- durable single-node store adapter and crash-recovery evidence
+- distributed concurrency and recovery evidence
 - stable nonproduction reference placement
-- durable single-node store adapter
-- distributed concurrency and crash-recovery evidence
 - environment-specific provider adapter
 - credential-handling implementation
 - production deployment design
 
-Each requires its own necessity analysis and approval.
+Recommended next evidence step:
 
-### 3. Preserve adjacent gates
+`durable single-node store adapter and crash-recovery evidence`
 
-Candidate merge does not instantiate Master Mason, issue Authority, define PB-001 semantics, alter Procedure, deploy Runtime, or authorize external effects.
+It tests the largest recorded limitation without introducing a provider or distributed topology.
+
+Each option requires its own necessity analysis, scope, tests, and explicit approval.
+
+### 2. Preserve adjacent gates
+
+No option automatically instantiates Master Mason, issues Authority, defines PB-001 semantics, alters Procedure, deploys Runtime, or authorizes external effects.

@@ -4,7 +4,7 @@
 
 Runtime Baseline `RTB-002` is admitted and post-merge verified on main.
 
-Runtime Reference Implementation 001 is a noncanonical successor candidate.
+Runtime Reference Implementation 001 is merged as noncanonical executable evidence.
 
 ## Admitted Runtime Evidence
 
@@ -13,13 +13,14 @@ Runtime Reference Implementation 001 is a noncanonical successor candidate.
 - Runtime Maintenance Admission Convergence Run 001: 35 PASS / 0 FAIL
 - Runtime maintenance post-merge empirical rerun: 11 PASS / 0 FAIL
 
-## Reference Implementation Candidate
+## Reference Implementation Evidence
 
 - historical current-semantic pressure: `runtime-reference-implementation-pressure-run-001.md` — 5 PASS / 10 FAIL
 - successor focused pressure: `runtime-reference-implementation-pressure-run-002.md` — 15 PASS / 0 FAIL
 - repository regression: `runtime-reference-implementation-repository-regression-001.md` — PASS
 - candidate review: `runtime-reference-implementation-candidate-review-001.md`
-- executable candidate: `reference-implementation-001/`
+- executable successor: `reference-implementation-001/`
+- execution record: `drafts/runtime-reference-implementation-execution-001.md`
 
 ## Evidence Limits
 

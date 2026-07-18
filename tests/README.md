@@ -26,9 +26,9 @@ Canonical targets: 7 / 7
 
 Runtime Maintenance Artifact Closure 001 is admitted and post-merge verified.
 
-## Current Candidate Evidence
+## Reference Implementation Evidence
 
-Runtime Reference Implementation 001:
+Runtime Reference Implementation 001 is merged as noncanonical executable evidence.
 
 ```text
 Historical current-semantic pressure: 5 PASS / 10 FAIL
@@ -38,7 +38,7 @@ Repository regression: PASS
 Production semantic files changed: 0
 ```
 
-The successor remains noncanonical, test-scoped, deterministic, and simulated.
+The successor remains test-scoped, deterministic, and simulated.
 
 ## Evidence Discipline
 
