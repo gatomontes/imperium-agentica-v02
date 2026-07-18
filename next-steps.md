@@ -2,26 +2,13 @@
 
 ## Status
 
-Atomic migration is the active step in `current-step.md`.
+No active step.
 
 This file is an ordered operational queue, not doctrine, architecture, or a roadmap.
 
 ## Queue
 
-### 1. Verify post-migration production
-
-Required after the atomic squash merge:
-
-- AB-001 manifest 3 / 3
-- PB-001 manifest 3 / 3
-- CB-002 manifest 33 / 33
-- source deletions 3 / 3
-- canonical path scan
-- regression and convergence status
-- merge SHA and rollback parent recorded
-- operational tracker closure
-
-### 2. Split contested procedural candidates
+### 1. Split contested procedural candidates
 
 Candidates:
 
@@ -30,9 +17,13 @@ Candidates:
 - `lifecycle.md`
 - `production-artifacts.md`
 
-Activation condition: cross-layer migration verified and the procedural boundary approved.
+Purpose:
 
-### 3. Redefine and test the procedural layer
+Separate native cognitive, authority, provenance, artifact, proof, and ownership definitions from the procedural remainder.
+
+Activation condition: explicit operator approval.
+
+### 2. Define and pressure the reduced procedural boundary
 
 Procedure remains:
 
@@ -44,6 +35,14 @@ under which conditions
 
 It must cite admitted external definitions and may originate none of them.
 
-### 4. Reconsider Vellum only if a record gap appears
+Candidate work:
+
+- define the Procedure may / may-not boundary
+- identify true procedural residues in the four contested artifacts
+- draft the smallest necessary procedural contracts
+- run independent and cross-layer pressure tests
+- withhold layer admission until the boundary survives
+
+### 3. Reconsider Vellum only if a record gap appears
 
 Activation condition: a scenario demonstrates a canonical record behavior existing artifacts cannot preserve.
