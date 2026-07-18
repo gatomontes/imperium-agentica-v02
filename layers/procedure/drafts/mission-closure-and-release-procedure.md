@@ -6,7 +6,7 @@ Draft Procedure extracted from CB-002 Mission Closure And Operative Release Cont
 
 Not admitted.
 
-Admission is blocked by unadmitted Authority refinements and the unresolved completion-proof origin.
+Admission is blocked by unadmitted Authority and completion-assessment dependencies.
 
 ## Native Dependencies
 
@@ -31,9 +31,11 @@ Admission is blocked by unadmitted Authority refinements and the unresolved comp
 - mission exact-match rules: `layers/provenance/production/mission-correlation-and-isolation-contract.md`
 - provider observations: `layers/provenance/production/provider-intervention-ledgers.md`
 
-### Proof
+### Completion Assessment
 
-No admitted native contract currently supplies completion-criteria sufficiency.
+- artifact-relative sufficiency candidate: `layers/cognitive/drafts/work-specification-completion-assessment.md`
+
+No admitted production contract currently supplies this finding.
 
 ## Entry Conditions
 
@@ -57,7 +59,7 @@ Before substantive closure assessment, require:
 - open counsel needs, withheld decisions, obligations, and uncertainty
 - applicable Executive Mandate finding
 - applicable Mission Envelope finding
-- completion-support finding from a future native Proof or artifact-relative assurance contract
+- adopted Completion Criteria Assessment from the cited Cognitive candidate
 
 ## Expected Sequence
 
@@ -85,7 +87,7 @@ Before substantive closure assessment, require:
    - a matching effective Executive Mandate for the CEO decision
    - Mission Envelope authority for `TERMINAL_DISPOSITION`
    - PB-001 exact-match findings
-   - an externally supplied completion-support finding
+   - an adopted Completion Criteria Assessment
 3. Branch:
    - return for more work → resume only through an authorized instruction
    - closure withheld → preserve the reason and applicable safe state
@@ -174,7 +176,7 @@ A missing Terminal Field Packet does not block every possible terminal dispositi
 It remains explicit, and closure may continue only when:
 
 - Authority permits the exact disposition without the packet
-- the proof or assurance contract permits a finding with recorded absence
+- the Completion Assessment contract permits a finding with recorded absence
 - uncertainty and unresolved consequences remain preserved
 
 This procedure does not supply either permission.
