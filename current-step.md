@@ -4,7 +4,7 @@
 
 Runtime Boundary Investigation 001 completed on 2026-07-18.
 
-Awaiting operator review of the candidate boundary.
+Awaiting operator decision on the candidate boundary.
 
 This file is operational continuity, not doctrine, architecture, or authority.
 
@@ -22,7 +22,20 @@ Runtime: unadmitted
 
 A distinct Runtime concern is justified for draft investigation.
 
-Runtime realizes admitted meanings and procedures through executable state and effects. It may originate facts about its own implementation behavior, but it may not convert them into semantic findings owned by another layer.
+Runtime is not synonymous with code.
+
+```text
+Code
+= static instructions, declarations, and configuration
+
+Runtime
+= operating machinery produced when implementation is instantiated
+  with actual state, resources, concurrency, failures, and effects
+```
+
+Runtime realizes admitted meanings and procedures through executable state and effects. It may originate facts about its own implementation behavior, but it may not convert those facts into semantic findings owned by another layer.
+
+Code that expresses a Cognitive, Authority, Provenance, or Procedure contract remains semantically owned by that layer. Runtime consumes and enforces the contract; the fact that the contract is encoded in software does not transfer its meaning to Runtime.
 
 ## Evidence
 
