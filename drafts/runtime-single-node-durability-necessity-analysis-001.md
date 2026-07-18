@@ -15,9 +15,10 @@ A single-node append-only filesystem adapter is necessary and sufficient for the
 The in-memory adapter cannot demonstrate:
 
 - state reconstruction after process loss
+- required observation reconstruction after process loss
 - durable preservation of indeterminate effects
 - refusal of corrupt persisted state
-- writer exclusion for one local store
+- in-process writer exclusion for one local store
 
 ## Alternatives
 
@@ -50,8 +51,9 @@ It is dependency-free, inspectable, easy to delete, and sufficient to test resta
 - versioned journal schema
 - monotonic sequence
 - flush before state is considered applied
-- one writer per directory
+- one in-process writer per directory
 - deterministic replay
+- durable Runtime observation replay
 - corrupt-tail refusal
 - unknown-schema refusal
 - persisted dispatched-effect quarantine on restart
