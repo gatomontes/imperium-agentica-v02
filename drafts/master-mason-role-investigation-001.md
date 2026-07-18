@@ -2,7 +2,9 @@
 
 ## Status
 
-Investigation complete.
+Superseded by Mason Operator Clarification 001.
+
+The historical analysis is preserved, but its executive Master Mason interpretation is not current.
 
 Recommendation: **APPROVE MASTER MASON AS THE FUNCTIONAL NAME OF A CANDIDATE IMPERIUM-SCOPE COGNITIVE ROLE**.
 
