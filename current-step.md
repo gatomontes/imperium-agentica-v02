@@ -2,9 +2,11 @@
 
 ## Status
 
-Runtime Boundary Investigation 001 completed on 2026-07-18.
+Runtime Draft Development 001 completed on 2026-07-18.
 
-Awaiting operator decision on the candidate boundary.
+No active step.
+
+Awaiting operator decision on a minimal Cognitive responsibility draft for control-plane judgment.
 
 This file is operational continuity, not doctrine, architecture, or authority.
 
@@ -18,57 +20,78 @@ Procedure: PRB-001 — 3 / 3
 Runtime: unadmitted
 ```
 
-## Finding
+## Candidate Runtime State
 
-A distinct Runtime concern is justified for draft investigation.
+The Runtime boundary is approved for draft development only.
 
-Runtime is not synonymous with code.
+Runtime is not synonymous with code:
 
 ```text
-Code
-= static instructions, declarations, and configuration
-
-Runtime
-= operating machinery produced when implementation is instantiated
-  with actual state, resources, concurrency, failures, and effects
+Code describes or configures machinery.
+Runtime is that machinery operating with actual state and effects.
+Semantic contracts expressed in code remain owned by their native layers.
 ```
 
-Runtime realizes admitted meanings and procedures through executable state and effects. It may originate facts about its own implementation behavior, but it may not convert those facts into semantic findings owned by another layer.
+Created candidate Runtime contracts:
 
-Code that expresses a Cognitive, Authority, Provenance, or Procedure contract remains semantically owned by that layer. Runtime consumes and enforces the contract; the fact that the contract is encoded in software does not transfer its meaning to Runtime.
+1. Runtime Realization and Dispatch
+2. Runtime Observation Envelope
+3. Runtime Control Plane
+
+Created candidate dependency refinements:
+
+- CONTROL_PLANE Authority profile
+- Mission Indeterminate-Effect Disposition Procedure
+- State-Machine Conformance Method
 
 ## Evidence
 
-- admitted contracts inventoried: 44
-- explicit Runtime/implementation exclusions found: 62
-- initial pressure: 34 PASS / 6 FAIL
-- corrected pressure: 40 PASS / 0 FAIL
-- cross-layer convergence: 24 PASS / 0 FAIL
+```text
+Runtime boundary corrected pressure: 40 PASS / 0 FAIL
+Runtime draft initial pressure: 57 PASS / 3 FAIL
+Runtime draft corrected pressure: 60 PASS / 0 FAIL
+State-machine conformance method: 15 PASS / 0 FAIL
+Runtime draft convergence: 24 PASS / 0 FAIL
+Control-plane cognitive-origin test: 10 PASS / 0 FAIL
+```
+
+## Findings
+
+The original non-empirical blockers were materially reduced:
+
+- control-plane Authority has a tested candidate profile; AB-002 remains unchanged
+- mission indeterminate effects have a tested candidate Procedure; PRB-001 remains unchanged
+- Runtime Observation Envelope is independently tested as a candidate
+- a state-machine conformance method is defined and internally pressured
+- no concrete state machine or implementation has been tested
+
+One deeper dependency remains:
+
+```text
+indeterminate control-plane effect
+→ requires substantive compatibility and recovery judgment
+→ Runtime cannot supply it
+→ Authority cannot supply responsibility
+→ no admitted Cognitive role currently owns it
+```
+
+The external operator may supply this judgment during development when independently authorized. Internal Imperium judgment would require a minimal Cognitive responsibility contract.
 
 ## Recommendation
 
-**APPROVE THE CANDIDATE RUNTIME BOUNDARY FOR DRAFT-CONTRACT DEVELOPMENT ONLY**
+**APPROVE A MINIMAL COGNITIVE DRAFT FOR RUNTIME CONTROL-PLANE RESPONSIBILITY**
 
-Proposed drafts:
+This means responsibility only.
 
-1. Runtime realization and dispatch
-2. Runtime observation envelope
-3. Runtime control plane
+It does not admit an office, Officer class, institution, persona, controller, implementation, or production baseline.
 
-## Production Blockers
+## Decision Artifacts
 
-- no Authority control-plane profile
-- no Procedure disposition for indeterminate external effects
-- no independently tested Runtime Observation contract
-- no state-machine conformance method
-- no empirical implementation evidence
-
-## Decision Artifact
-
-`drafts/runtime-boundary-investigation-001.md`
+- `drafts/runtime-control-plane-cognitive-origin-analysis-001.md`
+- `tests/cognitive/runtime-control-plane-responsibility-origin-run-001.md`
 
 ## Approval Boundary
 
-Approval authorizes candidate Runtime layer and draft/test development only.
+Approval authorizes one Cognitive responsibility draft and affected theoretical/convergence testing only.
 
-It does not admit Runtime production, select an implementation architecture, create credentials or integrations, or authorize external effects.
+Empirical implementation remains separately gated.
