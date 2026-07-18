@@ -2,21 +2,28 @@
 
 ## Status
 
-Historical source draft retained after admission of `layers/cognitive/production/runtime-maintenance-disposition.md` under CB-005.
+Admitted Cognitive production contract under Cognitive Baseline `CB-005`.
 
 Admission: `Runtime Maintenance Artifact Production Admission Review 001`.
 
-This file is noncanonical evidence of `Runtime Maintenance Artifact Closure 001`.
+Evidence:
 
-## Candidate Dependencies
+- Runtime Maintenance Artifact Pressure Run 004 — 15 PASS / 0 FAIL
+- Runtime Maintenance Repository Regression 001 — PASS
+- Runtime Maintenance Admission Convergence Run 001 — 35 PASS / 0 FAIL
+- empirical harness rerun — 11 PASS / 0 FAIL
 
-- Master Mason: `layers/cognitive/drafts/master-mason.md`
-- Runtime Operational Diagnosis: `layers/cognitive/drafts/runtime-operational-diagnosis.md`
-- Runtime Maintenance Procedure: `layers/procedure/drafts/runtime-maintenance-procedure.md`
+Origin draft: `layers/cognitive/drafts/runtime-maintenance-disposition.md`.
+
+## Dependencies
+
+- Master Mason: `layers/cognitive/production/master-mason.md`
+- Runtime Operational Diagnosis: `layers/cognitive/production/runtime-operational-diagnosis.md`
+- Runtime Maintenance Procedure: `layers/procedure/production/runtime-maintenance-procedure.md`
 - CONTROL_PLANE Authority: `layers/authority/production/runtime-control-plane-authority-profile.md`
 - PB-001 provenance: `layers/provenance/production/provenance-contract.md`
 - Runtime Realization and Dispatch: `layers/runtime/production/runtime-realization-and-dispatch-contract.md`
-- candidate Runtime Control-Plane revision: `layers/runtime/drafts/runtime-control-plane-contract.md`
+- Runtime Control Plane: `layers/runtime/production/runtime-control-plane-contract.md`
 
 ## Native Responsibility
 
@@ -215,7 +222,7 @@ A new diagnosis, changed Authority finding, changed target, or changed effect-sa
 
 ## Non-Admissions
 
-This candidate does not admit:
+This contract does not admit:
 
 - a live Maintenance Instruction
 - a Runtime Control-Plane Plan or implementation
@@ -224,3 +231,4 @@ This candidate does not admit:
 - an escalation institution
 - mission disposition, success, closure, or release
 - a universal Artifact layer
+

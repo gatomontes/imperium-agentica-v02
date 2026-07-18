@@ -2,17 +2,24 @@
 
 ## Status
 
-Historical source draft retained after admission of `layers/cognitive/production/runtime-operational-diagnosis.md` under CB-005.
+Admitted Cognitive production contract under Cognitive Baseline `CB-005`.
 
 Admission: `Runtime Maintenance Artifact Production Admission Review 001`.
 
-This file is noncanonical evidence of `Runtime Maintenance Artifact Closure 001`.
+Evidence:
 
-## Candidate Dependencies
+- Runtime Maintenance Artifact Pressure Run 004 — 15 PASS / 0 FAIL
+- Runtime Maintenance Repository Regression 001 — PASS
+- Runtime Maintenance Admission Convergence Run 001 — 35 PASS / 0 FAIL
+- empirical harness rerun — 11 PASS / 0 FAIL
 
-- Master Mason: `layers/cognitive/drafts/master-mason.md`
+Origin draft: `layers/cognitive/drafts/runtime-operational-diagnosis.md`.
+
+## Dependencies
+
+- Master Mason: `layers/cognitive/production/master-mason.md`
 - Runtime Observation Envelope: `layers/runtime/production/runtime-observation-envelope.md`
-- Runtime Maintenance Procedure: `layers/procedure/drafts/runtime-maintenance-procedure.md`
+- Runtime Maintenance Procedure: `layers/procedure/production/runtime-maintenance-procedure.md`
 - CONTROL_PLANE Authority: `layers/authority/production/runtime-control-plane-authority-profile.md`
 - PB-001 provenance: `layers/provenance/production/provenance-contract.md`
 - mission correlation when applicable: `layers/provenance/production/mission-correlation-and-isolation-contract.md`
@@ -69,8 +76,6 @@ RUNTIME_INOPERABLE
 RUNTIME_CONDITION_INDETERMINATE
 STRUCTURAL_CHANGE_REQUIRED
 ```
-
-Definitions:
 
 - `RUNTIME_HEALTHY` — cited observations support normal operation within the represented diagnostic scope.
 - `RUNTIME_DEGRADED` — operation continues, but a bounded mechanical impairment or exhaustion condition is supported.
@@ -159,13 +164,14 @@ A revised diagnosis supersedes; it does not silently rewrite the prior diagnosis
 
 ## Non-Admissions
 
-This candidate does not admit:
+This contract does not admit:
 
 - Master Mason qualification, persona, assignment, Officer class, or institution
 - maintenance eligibility
-- a Maintenance Instruction
+- a live Runtime Maintenance Disposition
 - a Runtime Control-Plane Plan
 - Authority
 - autonomous diagnosis
 - a diagnostic model, threshold, telemetry service, or implementation
 - mission success, closure, release, or semantic correctness
+

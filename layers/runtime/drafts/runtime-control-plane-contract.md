@@ -2,11 +2,13 @@
 
 ## Status
 
-Candidate revision to the admitted Runtime control-plane contract.
+Historical source revision retained after admission of `layers/runtime/production/runtime-control-plane-contract.md` under RTB-002.
 
-Not admitted or implemented. RTB-001 production remains canonical.
+The production contract remains unimplemented.
 
-Investigation: `Runtime Maintenance Artifact Closure 001`.
+Admission: `Runtime Maintenance Artifact Production Admission Review 001`.
+
+This file is noncanonical evidence of `Runtime Maintenance Artifact Closure 001`.
 
 ## Candidate Dependencies
 

@@ -2,28 +2,24 @@
 
 ## Status
 
-Admitted Cognitive production contract.
+Admitted cross-cutting Cognitive production map under Cognitive Baseline `CB-005`.
 
-Baseline: `CB-003`.
+Admission: `Runtime Maintenance Artifact Production Admission Review 001`.
 
-Admission: `Cognitive Production Admission Review 005`.
-
-Evidence:
-
-- `Cognitive Constitutional Run 018 — 33 PASS / 0 FAIL`
-- `Procedure Convergence Run 002 — 21 PASS / 0 FAIL`
+Evidence: focused pressure 15 / 15, repository regression PASS, admission convergence 35 / 35, empirical harness 11 / 11.
 
 Origin draft: `layers/cognitive/drafts/cognitive-map.md`.
 
-Supersedes the prior CB-002 production revision at `layers/cognitive/production/cognitive-map.md`.
+## Dependencies
 
-## Canonical Dependencies
-
-- Authority baseline: `layers/authority/production/README.md`
-- Authority production contracts: `layers/authority/production/mission-envelope.md`, `layers/authority/production/capability-tool-and-access-grants.md`
-- Provenance baseline: `layers/provenance/production/README.md`
-- Procedure production contracts: `layers/procedure/production/`
-- native artifact index: `layers/cognitive/production/production-artifact-catalog.md`
+- Authority baseline: `layers/authority/production/README.md` — AB-003 unchanged
+- CONTROL_PLANE Authority: `layers/authority/production/runtime-control-plane-authority-profile.md`
+- Provenance baseline: `layers/provenance/production/README.md` — PB-001 unchanged
+- Procedure baseline: `layers/procedure/production/README.md` — PRB-003
+- Runtime Maintenance Procedure: `layers/procedure/production/runtime-maintenance-procedure.md`
+- Runtime baseline: `layers/runtime/production/README.md` — RTB-002
+- Runtime Control Plane: `layers/runtime/production/runtime-control-plane-contract.md`
+- artifact index: `layers/cognitive/production/production-artifact-catalog.md`
 
 ## Core Thesis
 
@@ -88,6 +84,16 @@ Qualification, admission, placement, participation, and authority remain distinc
 
 La Cortine remains a non-acting namespace containing dedicated ports.
 
+### Runtime Operation
+
+| Entity | Cognitive responsibility | Native products |
+|---|---|---|
+| Master Mason | diagnose bounded Runtime mechanical condition and select post-gate maintenance direction | Runtime Operational Diagnosis, Runtime Maintenance Disposition |
+
+Master Mason is Imperium-scoped, outside Citadel, and adjacent to Runtime.
+
+Master Mason is not Runtime, an Officer, an institution, a source of Authority, or a mission-level deciding entity.
+
 ### Terminal Judgment And Communication
 
 | Entity | Cognitive responsibility | Native products |
@@ -98,19 +104,19 @@ La Cortine remains a non-acting namespace containing dedicated ports.
 | Chamber of Scribes | communicate the recorded terminal judgment | Final Report |
 | Secretariat | package and deliver without changing substance | Delivery Package |
 
-## Artifact And Contract Origins
+## Runtime Maintenance Distinctions
 
-- Cognitive artifact meanings: `layers/cognitive/production/production-artifact-catalog.md`
-- Executive Mandate: Authority AB-002
-- Mission Envelope, Tool Grant, Access Grant: Authority production contracts
-- mission identity and correlation: Provenance PB-001
-- provider observation lineage: Provenance PB-001
-- completion criterion sufficiency: `layers/cognitive/production/work-specification-completion-assessment.md`
-- expected sequencing: Procedure production contracts
+```text
+Runtime Observation Envelope ≠ Runtime Operational Diagnosis
+Runtime Operational Diagnosis ≠ maintenance eligibility
+maintenance eligibility ≠ Authority
+Runtime Maintenance Disposition ≠ Control-Plane Plan
+Control-Plane Plan ≠ Runtime effect
+operational restoration ≠ mission success
+Master Mason escalation ≠ structural decision
+```
 
-The map cites these origins and does not redefine their contracts.
-
-## State Distinctions
+## General State Distinctions
 
 ```text
 Saint ≠ Human-Trait Canon
@@ -132,24 +138,17 @@ placement ≠ authority
 responsibility ≠ authority
 ```
 
-## Shared And Mission-Specific References
-
-Shared governed personas, Officers, doctrine, grants, and assignments are referenced by exact version.
-
-Mission-specific state remains separately correlated under PB-001.
-
-The map defines neither the correlation grammar nor procedural handling of mismatch.
-
 ## Procedure Boundary
 
-Expected ordering, branches, continuation, withholding, closure, release, reporting, and delivery belong to:
+Expected ordering, branching, withholding, repetition, and exit remain Procedure-native.
 
-- `layers/procedure/production/imperium-lifecycle-procedure.md`
-- `layers/procedure/production/counsel-unavailability-procedure.md`
-- `layers/procedure/production/mission-closure-and-release-procedure.md`
-
-This Cognitive Map contains no canonical artifact chain, live-control loop, terminal sequence, or procedural compression rule.
+This map does not define the Runtime maintenance sequence.
 
 ## Runtime Boundary
 
-The map admits no service topology, queue, scheduler, event bus, database, credential behavior, routing implementation, automation, or autonomous execution.
+The map admits no service topology, queue, scheduler, event bus, database, credential behavior, control-plane implementation, automation, or autonomous execution.
+
+## Non-Admissions
+
+This map does not instantiate an admitted responsibility or authorize any action.
+

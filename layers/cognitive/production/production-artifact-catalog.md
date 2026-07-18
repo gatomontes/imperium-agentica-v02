@@ -2,16 +2,11 @@
 
 ## Status
 
-Admitted Cognitive production contract.
+Admitted cross-cutting Cognitive production catalog under Cognitive Baseline `CB-005`.
 
-Baseline: `CB-003`.
+Admission: `Runtime Maintenance Artifact Production Admission Review 001`.
 
-Admission: `Cognitive Production Admission Review 005`.
-
-Evidence:
-
-- `Cognitive Constitutional Run 018 — 33 PASS / 0 FAIL`
-- `Procedure Convergence Run 002 — 21 PASS / 0 FAIL`
+Evidence: focused pressure 15 / 15, repository regression PASS, admission convergence 35 / 35, empirical harness 11 / 11.
 
 Origin draft: `layers/cognitive/drafts/production-artifact-catalog.md`.
 
@@ -24,7 +19,7 @@ one artifact
 → zero competing catalog definitions
 ```
 
-A catalog entry may orient the reader. The cited native contract remains controlling.
+A catalog entry orients the reader. The cited native contract remains controlling.
 
 ## Cognitive-Native Artifacts
 
@@ -51,8 +46,25 @@ A catalog entry may orient the reader. The cited native contract remains control
 | Operative Release Record | Muster | split closure contract |
 | Final Report | Chamber of Scribes | `chamber-of-scribes.md` |
 | Delivery Package | Secretariat | `secretariat.md` |
+| Runtime Operational Diagnosis | Master Mason | `runtime-operational-diagnosis.md` |
+| Runtime Maintenance Disposition | Master Mason | `runtime-maintenance-disposition.md` |
 
-Paths in this table are relative to `layers/cognitive/production/`.
+Relative paths in this table refer to `layers/cognitive/production/`.
+
+## Runtime Maintenance Product Consolidation
+
+The production catalog does not define separate artifacts named:
+
+- Runtime Operating Situation
+- Maintenance Instruction
+- Maintenance Withholding Finding
+- Escalation Record
+
+Runtime Operating Situation remains an internal Master Mason assembly.
+
+Instruction, withholding, and structural escalation are distinct forms of Runtime Maintenance Disposition.
+
+Consolidation removes competing artifact origins without collapsing form-specific semantics.
 
 ## Authority-Native Artifacts
 
@@ -63,7 +75,7 @@ Paths in this table are relative to `layers/cognitive/production/`.
 | Tool Grant | `layers/authority/production/capability-tool-and-access-grants.md` |
 | Access Grant | `layers/authority/production/capability-tool-and-access-grants.md` |
 
-The catalog does not define fields, scope, status, or validity for these grants.
+The catalog does not define fields, scope, status, or validity for grants.
 
 ## Provenance-Native Structures
 
@@ -79,18 +91,29 @@ The catalog does not define fields, scope, status, or validity for these grants.
 
 A closure path cites `layers/cognitive/production/work-specification-completion-assessment.md` for artifact-relative criterion findings.
 
-No universal Proof layer is admitted or required by the current evidence.
+No universal Proof layer is admitted or required.
 
 ### Ownership
 
-Custody, assignment, mission binding, and reuse restrictions appear in several contracts. They have not yet demonstrated one universal Ownership layer.
-
-The catalog records no ownership semantics until a native contract exists.
+Custody, assignment, mission binding, and reuse restrictions have not demonstrated a universal Ownership layer.
 
 ## Procedure Boundary
 
-Artifact ordering and handoff conditions belong to:
+Artifact ordering and handoff conditions belong to Procedure.
 
-`layers/procedure/production/imperium-lifecycle-procedure.md`.
+For Runtime maintenance, the ordering lives in:
 
-The catalog does not state that every mission traverses every artifact or that one artifact automatically triggers the next.
+`layers/procedure/production/runtime-maintenance-procedure.md`
+
+The catalog does not state that an artifact automatically triggers the next.
+
+## Artifact-Layer Boundary
+
+Two local artifact contracts do not justify or admit a universal Artifact layer.
+
+The artifacts remain native to Master Mason's Cognitive responsibility and cite PB-001 for identity and lineage.
+
+## Non-Admissions
+
+This catalog indexes admitted Cognitive origins. It does not instantiate an artifact, producer, or action.
+

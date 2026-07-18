@@ -2,9 +2,11 @@
 
 ## Status
 
-Candidate Procedure revision under `Runtime Maintenance Artifact Closure 001`.
+Historical source revision retained after admission of `layers/procedure/production/runtime-maintenance-procedure.md` under PRB-003.
 
-Not admitted. PRB-002 production remains canonical.
+Admission: `Runtime Maintenance Artifact Production Admission Review 001`.
+
+This file is noncanonical evidence of `Runtime Maintenance Artifact Closure 001`.
 
 ## Purpose
 

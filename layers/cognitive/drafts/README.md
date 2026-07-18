@@ -2,9 +2,9 @@
 
 ## Status
 
-Cognitive Baseline `CB-004` is admitted and remains canonical.
+Cognitive Baseline `CB-005` is represented by the production staging tree.
 
-Active candidate revision under `Runtime Maintenance Artifact Closure 001`:
+Historical source drafts admitted through `Runtime Maintenance Artifact Production Admission Review 001`:
 
 - `master-mason.md`
 - `runtime-operational-diagnosis.md`
@@ -12,18 +12,16 @@ Active candidate revision under `Runtime Maintenance Artifact Closure 001`:
 - `production-artifact-catalog.md`
 - `cognitive-map.md`
 
-The candidate separates diagnosis from post-gate maintenance direction and records both proposed artifact origins in the Cognitive map and catalog.
+Their canonical production targets live in `layers/cognitive/production/`.
 
-Historical split source drafts retained without active revision:
+Other historical split source drafts retained without active revision:
 
 - `counsel-availability-contract.md`
 - `mission-closure-and-release-contract.md`
 - `work-specification-completion-assessment.md`
 
-The active candidate does not admit a Master Mason persona, Officer class, institution, hierarchy, assignment, Runtime component, or universal Artifact layer.
-
 ## Rule
 
-Draft presence does not create a duplicate canonical origin or silently change CB-004.
+Historical draft presence does not create a duplicate canonical origin or silently revise CB-005.
 
-Candidate promotion requires pressure evidence, admission review, an exact dependency-closed transition, and separate operator approval.
+The admitted contracts do not instantiate Master Mason, create an assignment or decision mandate, authorize Runtime action, or admit a universal Artifact layer.

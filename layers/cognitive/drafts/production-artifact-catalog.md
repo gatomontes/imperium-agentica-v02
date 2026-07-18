@@ -2,9 +2,11 @@
 
 ## Status
 
-Candidate revision under `Runtime Maintenance Artifact Closure 001`.
+Historical source revision retained after admission of `layers/cognitive/production/production-artifact-catalog.md` under CB-005.
 
-Not admitted. CB-004 production remains canonical.
+Admission: `Runtime Maintenance Artifact Production Admission Review 001`.
+
+This file is noncanonical evidence of `Runtime Maintenance Artifact Closure 001`.
 
 ## Catalog Rule
 

@@ -24,9 +24,9 @@ Approval of a diagram or terminology does not by itself promote an artifact. Dra
 
 `production/` contains cognitive artifacts admitted for current active use after sufficient scenario evidence.
 
-Current baseline: `CB-004` — 34 files, admitted 2026-07-18 under Runtime Production Admission Review 001.
+Current baseline: `CB-005` — 36 files, admitted 2026-07-18 under Runtime Maintenance Artifact Production Admission Review 001.
 
-CB-004 cites Authority Baseline `AB-003`, Provenance Baseline `PB-001`, Procedure Baseline `PRB-002`, and Runtime Baseline `RTB-001` for contracts native to those parallel concerns.
+CB-005 cites Authority Baseline `AB-003`, Provenance Baseline `PB-001`, Procedure Baseline `PRB-003`, and Runtime Baseline `RTB-002` for contracts native to those parallel concerns.
 
 Production means admitted, not permanent. An artifact may return to drafts when later evidence contests it.
 
@@ -56,12 +56,12 @@ Tests challenge cognitive structure, responsibility, competence, and its boundar
 ## Current Baseline
 
 ```text
-Cognitive Baseline: CB-004
+Cognitive Baseline: CB-005
 Manifest: layers/cognitive/production/README.md
-Evidence: tests/runtime/runtime-production-admission-review-001.md
-Admission: tests/runtime/runtime-production-admission-review-001.md
-Result: admission pressure 55 PASS / 0 FAIL; convergence 30 PASS / 0 FAIL
-Dependencies: AB-003, PB-001, PRB-002, and RTB-001
+Evidence: tests/runtime/runtime-maintenance-production-admission-review-001.md
+Admission: tests/runtime/runtime-maintenance-production-admission-review-001.md
+Result: focused pressure 15 PASS / 0 FAIL; convergence 35 PASS / 0 FAIL; repository regression PASS; empirical harness 11 PASS / 0 FAIL
+Dependencies: AB-003, PB-001, PRB-003, and RTB-002
 ```
 
 The Cognitive, Authority, Provenance, Procedure, and Runtime layers have admitted semantic baselines.

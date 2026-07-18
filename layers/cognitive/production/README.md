@@ -2,20 +2,21 @@
 
 ## Status
 
-Cognitive Baseline `CB-004` is admitted for current cognitive use.
+Cognitive Baseline `CB-005` is admitted for current cognitive use.
 
 ```text
-Admission: Runtime Production Admission Review 001
-Prior baseline: CB-003
+Admission: Runtime Maintenance Artifact Production Admission Review 001
+Prior baseline: CB-004
 Evidence:
-- Runtime Admission Pressure Run 001 — 55 PASS / 0 FAIL
-- Runtime Admission Convergence 001 — 30 PASS / 0 FAIL
-- Runtime Empirical Run 001 — 11 PASS / 0 FAIL
+- Runtime Maintenance Artifact Pressure Run 004 — 15 PASS / 0 FAIL
+- Runtime Maintenance Repository Regression 001 — PASS
+- Runtime Maintenance Admission Convergence Run 001 — 35 PASS / 0 FAIL
+- empirical harness rerun — 11 PASS / 0 FAIL
 Promotion date: 2026-07-18
-Manifest size: 34 files
+Manifest size: 36 files
 ```
 
-CB-004 retains all 33 CB-003 artifacts unchanged and adds Master Mason as the Imperium-scoped Cognitive responsibility for bounded Runtime diagnosis, maintenance intent, restoration assessment, and escalation.
+CB-005 retains the first 33 CB-004 artifacts, revises Master Mason, and adds Runtime Operational Diagnosis and Runtime Maintenance Disposition as the canonical Cognitive meanings required by Runtime maintenance.
 
 Production means admitted, versioned, revisable, demotable, and contestable. It does not mean instantiated, assigned, implemented, autonomous, externally authorized, or permanent.
 
@@ -25,13 +26,13 @@ Authority Baseline `AB-003` owns permission semantics, including CONTROL_PLANE a
 
 Provenance Baseline `PB-001` owns identity, correlation, and lineage semantics.
 
-Procedure Baseline `PRB-002` owns expected sequencing and conditional transition semantics, including Runtime maintenance and mission indeterminate-effect disposition.
+Procedure Baseline `PRB-003` owns expected sequencing and conditional transition semantics, including Runtime maintenance and mission indeterminate-effect disposition.
 
-Runtime Baseline `RTB-001` owns realization, dispatch, control-plane mechanics, and Runtime-native observation semantics.
+Runtime Baseline `RTB-002` owns realization, dispatch, control-plane mechanics, and Runtime-native observation semantics.
 
 Cognitive artifacts may cite these contracts but do not originate or redefine them.
 
-## CB-004 Manifest
+## CB-005 Manifest
 
 ### Intake And Mission Formation
 
@@ -90,16 +91,21 @@ Cognitive artifacts may cite these contracts but do not originate or redefine th
 ### Runtime Operation
 
 34. `master-mason.md`
+35. `runtime-operational-diagnosis.md`
+36. `runtime-maintenance-disposition.md`
 
 ## Explicit Exclusions
 
-CB-004 does not admit:
+CB-005 does not admit:
 
 - Commission — eliminated
 - Praetorium — reserved and undefined
 - Compass — parked without demonstrated necessity
 - Vellum — parked without demonstrated necessity
-- a Master Mason persona, Officer class, hierarchy, or institution
+- Master Mason qualification, acting medium, assignment, decision mandate, persona, Officer class, hierarchy, or institution
+- a live Runtime implementation or control plane
+- a real CONTROL_PLANE grant
+- autonomous diagnosis or repair
 - a universal Proof layer
 - an Ownership layer
 - a central Artifact layer
@@ -113,6 +119,7 @@ CB-004 does not admit:
 
 A production artifact changes through a traceable revision and evidence record.
 
-A contested core boundary requires reviewing dependent CB-004, AB-003, PB-001, PRB-002, and RTB-001 artifacts as applicable.
+A contested core boundary requires reviewing dependent CB-005, AB-003, PB-001, PRB-003, and RTB-002 artifacts as applicable.
 
 Demotion returns an artifact to drafts; history is never overwritten.
+

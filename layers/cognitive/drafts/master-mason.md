@@ -2,11 +2,11 @@
 
 ## Status
 
-Candidate revision to the admitted Master Mason Cognitive responsibility.
+Historical source revision retained after admission of `layers/cognitive/production/master-mason.md` under CB-005.
 
-Not admitted. CB-004 production remains canonical.
+Admission: `Runtime Maintenance Artifact Production Admission Review 001`.
 
-Investigation: `Runtime Maintenance Artifact Closure 001`.
+This file is noncanonical evidence of `Runtime Maintenance Artifact Closure 001`.
 
 ## Canonical Name
 
