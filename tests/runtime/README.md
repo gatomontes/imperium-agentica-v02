@@ -14,6 +14,6 @@ Pressure whether implementation can realize CB-003, AB-002, PB-001, and PRB-001 
 
 - `runtime-boundary-pressure-tests-001.md` — 40 scenarios
 - `runtime-boundary-pressure-run-001.md` — initial run
-- corrected rerun: pending
+- `runtime-boundary-pressure-run-002.md` — 40 PASS / 0 FAIL
 
 Tests are theoretical and execute no services, credentials, integrations, or external effects.
