@@ -1,24 +1,18 @@
-# Cognitive Map — Procedure-Reduced Candidate
+# Cognitive Map — Runtime Maintenance Candidate
 
 ## Status
 
-Draft Cognitive revision discovered by Procedure Convergence Audit 001.
+Candidate revision under `Runtime Maintenance Artifact Closure 001`.
 
-Not admitted. CB-002 production remains canonical.
+Not admitted. CB-004 production remains canonical.
 
-Origin: `layers/cognitive/production/cognitive-map.md`.
+## Dependencies
 
-Native concern: ontology, responsibility, product ownership, boundaries, and non-collapse distinctions.
-
-This map defines no lifecycle order.
-
-## Canonical Dependencies
-
-- Authority baseline: `layers/authority/production/README.md`
-- Authority candidates: `layers/authority/drafts/mission-envelope.md`, `capability-tool-and-access-grants.md`
-- Provenance baseline: `layers/provenance/production/README.md`
-- Procedure candidates: `layers/procedure/drafts/`
-- native artifact index: `production-artifact-catalog.md`
+- Authority: AB-003 production plus candidate CONTROL_PLANE citation revision
+- Provenance: PB-001 production unchanged
+- Procedure: PRB-002 production plus candidate Runtime Maintenance Procedure revision
+- Runtime: RTB-001 production plus candidate realization and control-plane revisions
+- artifact index: `layers/cognitive/drafts/production-artifact-catalog.md`
 
 ## Core Thesis
 
@@ -83,6 +77,16 @@ Qualification, admission, placement, participation, and authority remain distinc
 
 La Cortine remains a non-acting namespace containing dedicated ports.
 
+### Runtime Operation
+
+| Entity | Cognitive responsibility | Native products |
+|---|---|---|
+| Master Mason | diagnose bounded Runtime mechanical condition and select post-gate maintenance direction | Runtime Operational Diagnosis, Runtime Maintenance Disposition |
+
+Master Mason is Imperium-scoped, outside Citadel, and adjacent to Runtime.
+
+Master Mason is not Runtime, an Officer, an institution, a source of Authority, or a mission-level deciding entity.
+
 ### Terminal Judgment And Communication
 
 | Entity | Cognitive responsibility | Native products |
@@ -93,19 +97,19 @@ La Cortine remains a non-acting namespace containing dedicated ports.
 | Chamber of Scribes | communicate the recorded terminal judgment | Final Report |
 | Secretariat | package and deliver without changing substance | Delivery Package |
 
-## Artifact And Contract Origins
+## Runtime Maintenance Distinctions
 
-- Cognitive artifact meanings: `production-artifact-catalog.md`
-- Executive Mandate: Authority AB-001
-- Mission Envelope, Tool Grant, Access Grant: Authority candidates
-- mission identity and correlation: Provenance PB-001
-- provider observation lineage: Provenance PB-001
-- completion criterion sufficiency: `work-specification-completion-assessment.md`
-- expected sequencing: Procedure candidates
+```text
+Runtime Observation Envelope ≠ Runtime Operational Diagnosis
+Runtime Operational Diagnosis ≠ maintenance eligibility
+maintenance eligibility ≠ Authority
+Runtime Maintenance Disposition ≠ Control-Plane Plan
+Control-Plane Plan ≠ Runtime effect
+operational restoration ≠ mission success
+Master Mason escalation ≠ structural decision
+```
 
-The map cites these origins and does not redefine their contracts.
-
-## State Distinctions
+## General State Distinctions
 
 ```text
 Saint ≠ Human-Trait Canon
@@ -127,24 +131,16 @@ placement ≠ authority
 responsibility ≠ authority
 ```
 
-## Shared And Mission-Specific References
-
-Shared governed personas, Officers, doctrine, grants, and assignments are referenced by exact version.
-
-Mission-specific state remains separately correlated under PB-001.
-
-The map defines neither the correlation grammar nor procedural handling of mismatch.
-
 ## Procedure Boundary
 
-Expected ordering, branches, continuation, withholding, closure, release, reporting, and delivery belong to:
+Expected ordering, branching, withholding, repetition, and exit remain Procedure-native.
 
-- `layers/procedure/drafts/imperium-lifecycle-procedure.md`
-- `layers/procedure/drafts/counsel-unavailability-procedure.md`
-- `layers/procedure/drafts/mission-closure-and-release-procedure.md`
-
-This Cognitive Map contains no canonical artifact chain, live-control loop, terminal sequence, or procedural compression rule.
+This map does not define the Runtime maintenance sequence.
 
 ## Runtime Boundary
 
-The map admits no service topology, queue, scheduler, event bus, database, credential behavior, routing implementation, automation, or autonomous execution.
+The map admits no service topology, queue, scheduler, event bus, database, credential behavior, control-plane implementation, automation, or autonomous execution.
+
+## Non-Admission
+
+This candidate revises no production map or baseline.
