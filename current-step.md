@@ -2,7 +2,26 @@
 
 ## Status
 
-Runtime Node Process-Supervisor Provider Adapter 001 candidate completed on 2026-07-18.
+Runtime Node Process-Supervisor Provider Adapter 001 merged and post-merge verified on 2026-07-18.
+
+No active step.
+
+This file is operational continuity, not doctrine, architecture, or authority.
+
+## Merge Record
+
+```text
+Pull request: #23
+Squash commit: 5220147d179a8cae40b9a417bf0d50e4fb4282fc
+Rollback parent: 3bc2b7a8bb6a633bf23ededd2f01a38887ed4585
+Candidate head: 28fa5fc8095ed4e9cc4d71685afb1fc939b2ba99
+```
+
+Execution record:
+
+`drafts/runtime-node-process-provider-adapter-execution-001.md`
+
+## Verified Evidence
 
 ```text
 Pre-adapter pressure: 4 PASS / 9 FAIL
@@ -15,44 +34,22 @@ Repository regression: PASS
 Production semantic files changed: 0
 ```
 
-No live provider, credential, subprocess, network, deployment, production admission, or external effect.
+## Adapter Status
 
-## Active Branch
+`@imperium-agentica/runtime-reference/providers/node-process-supervisor` is a stable nonproduction reference export.
 
-`agent/runtime-node-process-provider-adapter-001`
+It binds `node-process-supervisor-reference` to an injected driver only. It is not a live provider, process controller, deployment mechanism, or production implementation.
 
-Rollback parent:
+## Preserved Limits
 
-`3bc2b7a8bb6a633bf23ededd2f01a38887ed4585`
+- accepted driver request means operational dispatch only, not component recovery
+- effect identity is forwarded, but provider-side idempotency is not proven
+- no live subprocess, network, credential, database, deployment, or external effect
+- no Master Mason implementation, qualification, assignment, or decision mandate
+- no Authority registry, grant issuance, PB-001 ownership, or Procedure revision
 
-## Candidate
+## Next Gate
 
-The stable private reference package gains:
+Choose one independently scoped security, live-driver, deployment, or distributed-store direction from `next-steps.md`.
 
-- `layers/runtime/reference/src/node-process-supervisor-adapter.mjs`
-- export `./providers/node-process-supervisor`
-- one injected credentialless driver boundary
-- twelve focused tests
-
-The adapter binds the exact `node-process-supervisor-reference` environment, projects six operational fields, maps explicit driver outcomes, and preserves unknown outcomes as indeterminate.
-
-## Records
-
-- investigation: `drafts/runtime-node-process-provider-adapter-001.md`
-- necessity: `drafts/runtime-node-process-provider-adapter-necessity-analysis-001.md`
-- conformance plan: `drafts/runtime-node-process-provider-adapter-conformance-plan-001.md`
-- pressure tests: `tests/runtime/runtime-node-process-provider-adapter-pressure-tests-001.md`
-- baseline run: `tests/runtime/runtime-node-process-provider-adapter-pressure-run-001.md`
-- corrected run: `tests/runtime/runtime-node-process-provider-adapter-pressure-run-002.md`
-- repository regression: `tests/runtime/runtime-node-process-provider-adapter-repository-regression-001.md`
-- candidate review: `tests/runtime/runtime-node-process-provider-adapter-candidate-review-001.md`
-
-## Next Decision
-
-Decide whether to merge the nonproduction provider adapter evidence package.
-
-Merge would not select a real supervisor product, handle credentials, execute a process, prove provider idempotency or recovery, deploy Runtime, or authorize external effects.
-
-## Stop Condition
-
-No candidate merge without explicit operator approval.
+No direction is active by default.
