@@ -4,7 +4,7 @@
 
 No active step.
 
-Cross-layer migration preflight completed on 2026-07-17.
+Cross-layer admission package completed on 2026-07-17.
 
 This file is not doctrine, a roadmap, or architecture.
 
@@ -14,69 +14,49 @@ It is the operational continuity surface for the currently active step.
 
 ## Last Completed Step
 
-Prepare the first dependency-closed cross-layer migration manifest.
+Materialize and pressure the three relocation targets, run cognitive regression and cross-layer convergence, and prepare all production admission reviews.
 
-## Manifest
-
-```text
-drafts/cross-layer-migration-manifest-001.md
-```
-
-## Result
+## Candidate Transition
 
 ```text
-Transition:
 CB-001 → CB-002
-empty Authority production → AB-001
-empty Provenance production → PB-001
-
-Dependency graph: COMPLETE FOR FIRST MANIFEST
-Target drafts: 3 MISSING
-Target specialization tests: MISSING
-Cognitive regression run: MISSING
-Production admission reviews: MISSING
-Atomic migration: NOT READY
+Authority production empty → AB-001
+Provenance production empty → PB-001
 ```
 
-## Candidate Relocations
+## Verified Evidence
 
 ```text
-layers/cognitive/production/executive-mandate.md
-→ layers/authority/production/executive-mandate.md
+Authority core: 10 PASS / 0 FAIL
+Authority profiles: 15 PASS / 0 FAIL
+Executive Mandate specialization: 12 PASS / 0 FAIL
 
-layers/cognitive/production/mission-concurrency-and-isolation-contract.md
-→ layers/provenance/production/mission-correlation-and-isolation-contract.md
+Provenance core: 10 PASS / 0 FAIL
+Mission correlation specialization: 12 PASS / 0 FAIL
+Provider ledger specialization: 12 PASS / 0 FAIL
 
-layers/cognitive/production/provider-intervention-ledgers.md
-→ layers/provenance/production/provider-intervention-ledgers.md
+Cognitive regression: 31 PASS / 0 FAIL
+Cross-layer convergence: PASS
+Migration preflight: READY FOR ADMISSION REVIEW
 ```
 
-## Candidate Baselines
+## Admission Reviews
 
 ```text
-AB-001: 3 artifacts
-PB-001: 3 artifacts
-CB-002: 33 cognitive artifacts
+Authority Production Admission Review 001:
+RECOMMEND AB-001 ADMISSION
+
+Provenance Production Admission Review 001:
+RECOMMEND PB-001 ADMISSION
+
+Cognitive Production Admission Review 004:
+RECOMMEND CB-002 ADMISSION
+
+Cross-Layer Migration Review 001:
+READY FOR OPERATOR APPROVAL
 ```
 
-CB-002 may incorporate unchanged CB-001 artifact versions by exact manifest reference.
-
-No unchanged file must be rewritten merely to change baseline membership.
-
-## Production Status
-
-```text
-Authority production: EMPTY
-Provenance production: EMPTY
-CB-001 production: UNCHANGED
-Migration: NOT AUTHORIZED
-```
-
----
-
-## Next Eligible Step
-
-Materialize three target drafts without changing production:
+## Target Drafts
 
 ```text
 layers/authority/drafts/executive-mandate.md
@@ -84,11 +64,45 @@ layers/provenance/drafts/mission-correlation-and-isolation-contract.md
 layers/provenance/drafts/provider-intervention-ledgers.md
 ```
 
-Then run specialization, cognitive regression, and convergence tests and prepare four admission reviews.
+All three preserve CB-001 origin and declare their new native concern.
 
-No migration may occur until the completed package receives explicit operator approval.
+## Production Status
 
-See `next-steps.md`.
+```text
+Authority production: EMPTY
+Provenance production: EMPTY
+CB-001 production: UNCHANGED
+Migration commit: NOT CREATED
+Execution: NOT AUTHORIZED
+```
+
+---
+
+## Next Eligible Step
+
+Execute Cross-Layer Migration Manifest 001 as one atomic repository tree transition.
+
+The execution must:
+
+- create six target production artifacts
+- establish AB-001 and PB-001
+- establish CB-002 with 33 cognitive artifacts
+- normalize cognitive consumers and indexes
+- delete the three superseded cognitive source paths
+- include all admission and test records
+- occur in one commit
+- preserve the exact parent as rollback
+
+Activation condition:
+
+```text
+Explicit operator approval to execute the atomic migration.
+```
+
+See:
+
+- `drafts/cross-layer-migration-manifest-001.md`
+- `tests/cross-layer-migration-review-001.md`
 
 ---
 
@@ -98,20 +112,22 @@ See `next-steps.md`.
 2. `current-step.md`
 3. `next-steps.md`
 4. `drafts/cross-layer-migration-manifest-001.md`
-5. `drafts/cb-001-layer-placement-review.md`
-6. `layers/authority/drafts/authority-origin-contract.md`
-7. `layers/authority/drafts/authority-grant-profiles.md`
-8. `layers/provenance/drafts/provenance-contract.md`
-9. `tests/authority-provenance-convergence-run-003.md`
+5. `tests/cross-layer-migration-preflight-002.md`
+6. `tests/cross-layer-migration-review-001.md`
+7. `tests/authority/production-admission-review-001.md`
+8. `tests/provenance/production-admission-review-001.md`
+9. `tests/cognitive/production-admission-review-004-cb-002.md`
+10. `tests/authority-provenance-convergence-run-004.md`
+11. `tests/cognitive/constitutional-test-run-016.md`
 
 ---
 
 ## Invariants To Preserve
 
-- No source production file is removed before verified target production exists.
-- Target drafts do not create competing production origins.
-- The final migration must be one atomic tree commit.
-- Authority and provenance remain parallel.
-- Artifact meaning follows native-concern ownership.
-- Procedure remains parked.
-- CB-001 remains current until approved migration.
+- Migration is atomic or does not occur.
+- No duplicate canonical production origins survive.
+- No source disappears without verified target.
+- Cognitive responsibility does not transfer with contract ownership.
+- Authority and Provenance remain non-acting and parallel.
+- Procedure and Runtime remain unadmitted.
+- Rollback is the exact pre-migration parent.
