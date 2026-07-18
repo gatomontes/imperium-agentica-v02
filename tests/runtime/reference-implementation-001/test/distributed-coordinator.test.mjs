@@ -66,6 +66,7 @@ function plan() {
 
 function runtime(gate, effectPort = new SimulatedEffectPort()) {
   const store = new InMemoryStore();
+  const observationSink = new InMemoryObservationSink();
   store.addComponent("worker");
   const instance = new ReferenceRuntime({
     store,
@@ -73,12 +74,12 @@ function runtime(gate, effectPort = new SimulatedEffectPort()) {
     correlationPort: new MutableFindingPort({ exact: true, reference: "correlation-finding-1" }),
     procedurePort: new MutableFindingPort({ permits: true, reference: Contracts.maintenanceProcedure }),
     effectPort,
-    observationSink: new InMemoryObservationSink(),
+    observationSink,
     executionGate: gate,
     clock: () => "2026-07-18T22:00:00.000Z",
   });
   assert.equal(instance.accept(realization()).status, "ACCEPTED");
-  return { instance, store, effectPort };
+  return { instance, store, effectPort, observationSink };
 }
 
 function dispatch(instance, attemptId = "attempt-1") {
@@ -212,6 +213,8 @@ test("leadership loss after external dispatch remains indeterminate", () => {
   const oldRuntime = runtime(oldGate, effectPort);
   assert.equal(dispatch(oldRuntime.instance).status, "QUARANTINED_INDETERMINATE");
   assert.equal(effectPort.calls.length, 1);
+  assert.equal(oldRuntime.observationSink.items.at(-1).result, "QUARANTINED");
+  assert.equal(oldRuntime.observationSink.items.at(-1).indeterminateEffect, true);
   assert.equal(newGate.recover().accepted, true);
   assert.equal(coordinator.getEffect("effect-1").status, "QUARANTINED_INDETERMINATE");
 });
