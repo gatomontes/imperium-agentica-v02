@@ -4,11 +4,11 @@
 
 Boundary approved by the operator on 2026-07-17.
 
-Authority Baseline `AB-002` is admitted for current authority use.
+Authority Baseline `AB-003` is admitted for current authority use.
 
-Manifest: `layers/authority/production/README.md` — 5 files.
+Manifest: `layers/authority/production/README.md` — 6 files.
 
-Admission: `tests/authority/production-admission-review-002-ab-002.md`.
+Admission: `tests/runtime/runtime-production-admission-review-001.md`.
 
 ## Core Question
 
@@ -65,7 +65,7 @@ The layer does not define:
 - artifact meaning
 - evidence truth or sufficiency
 - expected procedural ordering
-- runtime permissions, ACLs, services, storage, or execution
+- Runtime mechanics, ACLs, services, storage, or execution
 - an upper-echelon institution
 
 ## Parallel Boundary
