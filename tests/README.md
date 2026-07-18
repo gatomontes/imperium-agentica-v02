@@ -29,3 +29,15 @@ Corrected convergence: 21 PASS / 0 FAIL
 The corrected evidence supports the admitted atomic CB-003, AB-002, and PRB-001 transition.
 
 Tests do not execute software or imply Runtime implementation.
+
+## Runtime Boundary Investigation
+
+Runtime remains unadmitted.
+
+Candidate evidence:
+
+- initial Runtime pressure: 34 PASS / 6 FAIL
+- corrected Runtime pressure: 40 PASS / 0 FAIL
+- cross-layer Runtime convergence: 24 PASS / 0 FAIL
+
+Recommendation: approve the candidate Runtime boundary for draft-contract development only.
