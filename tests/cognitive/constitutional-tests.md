@@ -1090,6 +1090,32 @@ The split risks moving responsibility into Procedure, making lifecycle order aut
 - reporting is suppressed until release appears clean.
 - a draft silently changes production.
 
+---
+
+
+# Test CT-033 — Cognitive Map Does Not Compete With Procedure
+
+## Pressure
+
+The Cognitive Map attempts to remain a complete visual explanation by preserving canonical artifact chains, live-control loops, terminal sequences, and procedural-compression rules after the Procedure split.
+
+## Pass Conditions
+
+- the map defines entities, responsibilities, products, dependencies, and non-collapse distinctions
+- expected ordering and branch conditions cite Procedure
+- no canonical artifact chain remains in Cognitive
+- no live-control or closure sequence remains in Cognitive
+- relationship orientation does not become end-to-end procedure
+- Authority and Provenance contracts remain cited external origins
+- Runtime remains excluded
+
+## Fail Conditions
+
+- Cognitive Map is a second lifecycle contract
+- an arrow sequence defines when action must occur
+- procedural compression is authorized by Cognitive
+- the map defines grant, correlation, proof, or runtime semantics
+
 ## Suite Result
 
 The suite passes only if every test preserves the distinctions:
