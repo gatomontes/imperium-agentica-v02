@@ -4,7 +4,7 @@ import { mkdtempSync, readFileSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { Contracts, DispositionForms } from "../src/contracts.mjs";
-import { FileBackedStore, appendCorruptTail, writeUnknownSchemaJournal } from "../src/file-store.mjs";
+import { FileBackedStore, FileObservationSink, appendCorruptTail, writeUnknownSchemaJournal } from "../src/file-store.mjs";
 import { InMemoryObservationSink, MutableFindingPort, SimulatedEffectPort } from "../src/in-memory-ports.mjs";
 import { ReferenceRuntime } from "../src/reference-runtime.mjs";
 
@@ -75,7 +75,7 @@ function plan() {
   };
 }
 
-function runtime(store, effectPort = new SimulatedEffectPort()) {
+function runtime(store, effectPort = new SimulatedEffectPort(), observationSink = new InMemoryObservationSink()) {
   return {
     effectPort,
     runtime: new ReferenceRuntime({
@@ -84,7 +84,7 @@ function runtime(store, effectPort = new SimulatedEffectPort()) {
       correlationPort: new MutableFindingPort({ exact: true, reference: "correlation-finding-1" }),
       procedurePort: new MutableFindingPort({ permits: true, reference: Contracts.maintenanceProcedure }),
       effectPort,
-      observationSink: new InMemoryObservationSink(),
+      observationSink,
       clock: () => "2026-07-18T21:00:00.000Z",
     }),
   };
@@ -110,7 +110,27 @@ test("reconstructs components, realizations, and completed effects after restart
   }
 });
 
-test("permits only one writer for a store directory", () => {
+test("persists required Runtime observations across restart", () => {
+  const path = directory();
+  try {
+    let store = new FileBackedStore(path);
+    store.addComponent("worker");
+    const first = runtime(store, new SimulatedEffectPort(), new FileObservationSink(store)).runtime;
+    first.accept(realization());
+    first.dispatch({ realizationId: "realization-1", attemptId: "attempt-1", effectId: "effect-1", disposition: disposition(), plan: plan() });
+    assert.equal(store.getObservations().length, 3);
+    store.close();
+
+    store = new FileBackedStore(path);
+    assert.equal(store.getObservations().length, 3);
+    assert.deepEqual(store.getObservations().map((item) => item.result), ["ACCEPTED", "STARTED", "COMPLETED_OPERATIONALLY"]);
+    store.close();
+  } finally {
+    cleanup(path);
+  }
+});
+
+test("permits only one in-process writer for a store directory", () => {
   const path = directory();
   try {
     const first = new FileBackedStore(path);
