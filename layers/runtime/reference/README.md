@@ -27,8 +27,27 @@ The private package manifest exposes only these paths:
 | `@imperium-agentica/runtime-reference/adapters/in-memory` | deterministic in-memory stores and simulated ports |
 | `@imperium-agentica/runtime-reference/adapters/file` | single-process append-and-fsync filesystem evidence |
 | `@imperium-agentica/runtime-reference/coordination/deterministic` | linearizable in-memory quorum and fencing oracle |
+| `@imperium-agentica/runtime-reference/providers/node-process-supervisor` | injected, credentialless Node process-supervisor reference adapter |
 
 The placement and export names are stable enough for repository tests and future bounded investigations. Behavior remains revisable and contestable by evidence.
+
+## Node Process-Supervisor Adapter
+
+The first environment-specific adapter targets the repository identity:
+
+`node-process-supervisor-reference`
+
+It accepts an injected driver and never imports a subprocess, network, credential, or deployment mechanism.
+
+The driver receives only the effect identity, attempt identity, environment, component, scope, and action. The effect identity is an idempotency reference; the adapter does not prove provider-side idempotency.
+
+| Driver result | Runtime effect result |
+|---|---|
+| `RECOVERY_INITIATED` | `SUCCEEDED` |
+| `RECOVERY_REFUSED` | `FAILED` |
+| unknown response or exception | `INDETERMINATE` |
+
+`RECOVERY_INITIATED` means only that the injected driver accepted the operational request. It does not mean the component recovered, the Procedure completed, or a mission outcome was achieved.
 
 ## Ownership Boundary
 
