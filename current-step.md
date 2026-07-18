@@ -2,74 +2,40 @@
 
 ## Status
 
-Atomic Procedure admission migration approved and staged on 2026-07-18.
+No active step.
 
-Current operation: merge the verified staging branch as one squash commit, then record and verify the merge SHA and rollback parent.
+Atomic Procedure admission migration completed and verified on 2026-07-18.
 
 This file is operational continuity, not doctrine, architecture, or authority.
 
-## Admitted Transition
+## Admitted Production State
 
 ```text
-CB-002 → CB-003
-AB-001 → AB-002
-PB-001 → unchanged
-Procedure production empty → PRB-001
-Runtime → unchanged and unadmitted
-```
-
-## Evidence
-
-```text
-Procedure structural: 16 PASS / 0 FAIL
-Procedure behavioral Run 002: 35 PASS / 0 FAIL
-Mission Envelope Run 002: 15 PASS / 0 FAIL
-Capability Grant Run 002: 15 PASS / 0 FAIL
-Completion Assessment Run 001: 10 PASS / 0 FAIL
-Cognitive Constitutional Run 018: 33 PASS / 0 FAIL
-Authority Regression Run 002: 67 PASS / 0 FAIL
-Provenance Regression Run 003: 34 PASS / 0 FAIL
-Procedure Convergence Run 002: 21 PASS / 0 FAIL
-```
-
-## Production Result
-
-```text
-CB-003: 33 / 33
-AB-002: 5 / 5
-PB-001: 3 / 3 unchanged
-PRB-001: 3 / 3
+Cognitive: CB-003 — 33 / 33
+Authority: AB-002 — 5 / 5
+Provenance: PB-001 — 3 / 3 unchanged
+Procedure: PRB-001 — 3 / 3
 Runtime: unadmitted
 ```
 
-Superseded Cognitive production sources:
+## Migration Record
 
-- `layers/cognitive/production/lifecycle.md`
-- `layers/cognitive/production/production-artifacts.md`
+- manifest: `drafts/procedure-admission-migration-manifest-001.md`
+- review: `tests/cross-layer-procedure-migration-review-001.md`
+- run record: `tests/procedure-admission-migration-run-001.md`
+- PR: `#4`
+- atomic squash merge: `f9f953cdd2384963fdad3e6eda9b56f749817f1d`
+- rollback parent: `8b2a2893d3d1e9686648fc61e24e12bcbb00b11d`
 
-Their native replacements are `layers/procedure/production/imperium-lifecycle-procedure.md` and `layers/cognitive/production/production-artifact-catalog.md`.
+Post-merge verification passed:
 
-## Preserved Findings
+- all four manifests resolve exactly
+- both approved superseded Cognitive paths are absent
+- migrated production contracts contain no live draft citations or unadmitted status
+- Runtime, universal Proof, Ownership, and central Artifact layers remain unadmitted
 
-- completion sufficiency is an artifact-relative Cognitive assessment, not a universal Proof layer
-- no universal Ownership layer is justified
-- no central Artifact layer is justified
-- Authority originates no identity
-- Procedure originates no responsibility, permission, provenance, artifact meaning, or Runtime
-- Runtime remains unadmitted
+## Next Eligible Step
 
-## Remaining Verification
+Begin Runtime boundary investigation only with explicit operator approval.
 
-- confirm the atomic merge SHA
-- confirm rollback parent `8b2a2893d3d1e9686648fc61e24e12bcbb00b11d`
-- confirm both superseded paths are absent on `main`
-- confirm all four admitted manifests resolve exactly
-- scan production contracts for stale draft citations
-
-## Invariants
-
-- the transition is atomic
-- verified targets precede the two Cognitive source deletions
-- old and new canonical origins never coexist on `main`
-- Procedure remains semantic and non-acting
-- Runtime remains unadmitted
+Runtime must implement admitted semantics without originating Cognitive, Authority, Provenance, Procedure, artifact, proof, or ownership meanings.
