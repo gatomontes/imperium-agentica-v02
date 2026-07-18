@@ -146,7 +146,7 @@ It does not define provenance.
 
 ## Non-Admissions
 
-This draft does not admit:
+This contract does not admit:
 
 - Praetorium or another sovereign institution
 - universal delegation
