@@ -49,3 +49,21 @@ Operative handoff ≠ mission binding
 Operative handoff ≠ READY_FOR_LAUNCH
 requirements ≠ grants or credential values
 ```
+
+## Active Castellan Mission Formation Candidate
+
+- baseline pressure: 8 PASS / 7 FAIL
+- corrected pressure: 15 PASS / 0 FAIL
+- cross-layer convergence: 12 PASS / 0 FAIL
+- preserved Runtime successor suite: 91 PASS / 0 FAIL
+- repository regression: PASS
+
+Candidate distinctions:
+
+```text
+raw operator need ≠ Petition
+Petition identity ≠ mission approval
+FORM_MISSION ≠ APPROVE_WORK_SPECIFICATION
+Mission Need outcome ≠ completion criterion
+FORMATION_CONFORMANT ≠ Runtime state
+```

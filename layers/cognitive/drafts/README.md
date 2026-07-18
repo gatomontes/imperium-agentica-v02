@@ -20,9 +20,10 @@ Other historical split source drafts retained without active revision:
 - `mission-closure-and-release-contract.md`
 - `work-specification-completion-assessment.md`
 
-Active draft candidate:
+Unadmitted draft evidence:
 
-- `operative-creation-handoff-contract.md` — creation-side assessment for one exact deployment-medium-specific Operative; not admitted into CB-005
+- `operative-creation-handoff-contract.md` — merged creation-side assessment evidence; not admitted into CB-005
+- `castellan-mission-formation-contract.md` — active A1.1 candidate for exact Petition to bounded Mission Need formation; not admitted into CB-005
 
 ## Rule
 
@@ -30,4 +31,4 @@ Historical draft presence does not create a duplicate canonical origin or silent
 
 The admitted contracts do not instantiate Master Mason, create an assignment or decision mandate, authorize Runtime action, or admit a universal Artifact layer.
 
-The active candidate does not revise CB-005, instantiate an Operative, create a readiness state, or authorize mission assembly or deployment.
+These drafts do not revise CB-005, instantiate a mission or Operative, create authority or readiness, or authorize mission assembly or deployment.
