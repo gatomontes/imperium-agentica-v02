@@ -435,18 +435,19 @@ If post-migration review finds a structural defect:
 ## Preflight Result
 
 ```text
-DEPENDENCY GRAPH: COMPLETE FOR FIRST MANIFEST
-TARGET DRAFTS: 3 MISSING
-TARGET SPECIALIZATION TESTS: MISSING
-COGNITIVE REGRESSION RUN: MISSING
-PRODUCTION ADMISSION REVIEWS: MISSING
-ATOMIC MIGRATION: NOT READY
+DEPENDENCY GRAPH: COMPLETE
+TARGET DRAFTS: 3 / 3
+TARGET SPECIALIZATION TESTS: PASS
+COGNITIVE REGRESSION RUN: 31 PASS / 0 FAIL
+CROSS-LAYER CONVERGENCE: PASS
+PRODUCTION ADMISSION REVIEWS: 4 / 4
+ATOMIC MIGRATION: READY FOR OPERATOR DECISION
 ```
 
 ## Next Required Step
 
-Materialize the three target drafts without changing production.
+Operator reviews the complete admission package.
 
-Then run target specialization, cognitive regression, and convergence tests.
+Migration remains withheld until explicit execution approval.
 
-Migration remains withheld until the operator reviews and approves the completed admission package.
+No additional draft or test prerequisite is currently missing.
