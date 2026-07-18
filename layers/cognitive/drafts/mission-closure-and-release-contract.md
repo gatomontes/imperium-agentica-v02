@@ -157,9 +157,9 @@ Any new consequence requires its own Cognitive decision and effective Authority 
 
 ## Proof Boundary
 
-This contract can cite a completion-criteria finding but cannot define what evidence is sufficient to prove the Work Specification satisfied.
+This contract cites `work-specification-completion-assessment.md` for criterion-relative sufficiency.
 
-No universal Proof contract is currently admitted.
+It does not redefine that assessment or create a universal Proof contract.
 
 ## Procedure Boundary
 
