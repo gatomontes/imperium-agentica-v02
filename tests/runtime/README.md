@@ -1,0 +1,19 @@
+# Runtime Boundary Tests
+
+## Status
+
+Candidate-boundary tests only.
+
+No Runtime layer or production baseline is admitted.
+
+## Purpose
+
+Pressure whether implementation can realize CB-003, AB-002, PB-001, and PRB-001 without originating or collapsing their semantics.
+
+## Current Artifacts
+
+- `runtime-boundary-pressure-tests-001.md` — 40 scenarios
+- `runtime-boundary-pressure-run-001.md` — initial run
+- corrected rerun: pending
+
+Tests are theoretical and execute no services, credentials, integrations, or external effects.
