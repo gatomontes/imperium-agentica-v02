@@ -2,7 +2,7 @@
 
 ## Status
 
-Cognitive Baseline `CB-003` is admitted.
+Cognitive Baseline `CB-003` is admitted and unchanged.
 
 Historical split source drafts retained for traceability:
 
@@ -14,7 +14,13 @@ Historical split source drafts retained for traceability:
 
 Their admitted canonical versions live in `layers/cognitive/production/`.
 
-No Cognitive successor exists for the superseded `lifecycle.md`; its unique residue is Procedure-native. The admitted artifact catalog replaces `production-artifacts.md` without creating a central Artifact layer.
+Current unadmitted candidate:
+
+- `mason.md` — Runtime operator/mechanic responsibility
+
+Mason is not a persona, Officer, institution, Runtime component, or admitted production role.
+
+No Cognitive successor exists for the superseded `lifecycle.md`; its unique residue is Procedure-native.
 
 ## Rule
 
