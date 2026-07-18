@@ -18,7 +18,7 @@ Current unadmitted candidate:
 
 - `mason.md` — Runtime operator/mechanic responsibility
 
-Mason is not a persona, Officer, institution, Runtime component, or admitted production role.
+Master Mason is not yet a persona, Officer, institution, Runtime component, or admitted production role.
 
 No Cognitive successor exists for the superseded `lifecycle.md`; its unique residue is Procedure-native.
 
