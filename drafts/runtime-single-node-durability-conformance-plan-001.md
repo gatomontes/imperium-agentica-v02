@@ -2,7 +2,7 @@
 
 ## Status
 
-Candidate plan exercised by eight focused durability tests and fifteen preserved semantic tests.
+Candidate plan exercised by nine focused durability tests and fifteen preserved semantic tests.
 
 ## Conformance Axes
 
@@ -10,8 +10,9 @@ Candidate plan exercised by eight focused durability tests and fifteen preserved
 |---|---|
 | Journal identity | exact schema identifier and monotonic sequence |
 | Write ordering | append and flush before in-memory application |
-| Writer scope | only one writer owns one directory |
+| Writer scope | only one in-process writer owns one directory; no multi-process exclusion claim |
 | Reconstruction | components, realizations, and effects replay exactly |
+| Observation durability | required Runtime observations replay exactly |
 | Completed effect | remains completed after restart |
 | Dispatched uncertainty | becomes quarantined indeterminate after restart |
 | Repeat safety | recovered indeterminate effect cannot dispatch again |
@@ -37,7 +38,7 @@ tests/runtime/reference-implementation-001/
 
 Before candidate merge:
 
-1. require combined successor 23 / 23
+1. require combined successor 24 / 24
 2. require historical harness 11 / 11
 3. require repository regression PASS
 4. verify zero production semantic changes
