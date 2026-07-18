@@ -1,14 +1,20 @@
 # Armory and Locksmith
 
+## Canonical Dependencies
+
+This cognitive artifact cites the following admitted contracts as external canonical definitions; it does not originate or redefine them:
+
+- `layers/provenance/production/provider-intervention-ledgers.md`
+
 ## Status
 
 Admitted.
 
-Baseline: `CB-001`.
+Baseline: `CB-002`.
 
-Admission: `Production Admission Review 003`.
+Admission: `Cognitive Production Admission Review 004`.
 
-Evidence: `Constitutional Test Run 015 — 30 PASS / 0 FAIL`.
+Evidence: `Constitutional Test Run 016 — 31 PASS / 0 FAIL`.
 
 This file defines provisional deployment-support artifacts for Imperium v02.
 
@@ -140,12 +146,6 @@ Review or revise this draft if:
 
 ## Intervention Ledgers
 
-Armory and Locksmith preserve append-only, mission-correlated records of every operative intervention request and each separately observed intervention stage: entitlement, credential resolution, authentication, submission, completion, and result delivery.
+Canonical definition: `layers/provenance/production/provider-intervention-ledgers.md`.
 
-Locksmith records credential-backed operations without storing credential values in the intervention record.
-
-Unqualified `success` or `failure` is prohibited. Provider ledgers never claim mission success.
-
-The Chief of Staff may issue mission-scoped, read-only queries against each provider ledger for Curia's Situation Picture.
-
-The Chief of Staff does not perform, authorize, alter, or rewrite interventions and never receives credential values.
+Armory and Locksmith produce provider intervention events and expose only the mission-scoped, read-only views permitted by that PB-001 contract. This cognitive artifact does not define ledger stages, lineage completeness, query semantics, or provenance findings.

@@ -2,23 +2,38 @@
 
 ## Status
 
-Cognitive Baseline `CB-001` is admitted for current cognitive use.
+Cognitive Baseline `CB-002` is admitted for current cognitive use.
 
 ```text
-Admission: Production Admission Review 003
-Substantive review: Production Admission Review 002
-Evidence: Constitutional Test Run 015
-Suite: 30 PASS / 0 FAIL
-Integrated scenario: Test Mission 009 — PASS
+Admission: Cognitive Production Admission Review 004
+Prior baseline: CB-001
+Evidence: Constitutional Test Run 016
+Suite: 31 PASS / 0 FAIL
+Convergence: Authority–Provenance Convergence Run 004 — PASS
 Promotion date: 2026-07-17
-Manifest size: 36 files
+Manifest size: 33 files
 ```
+
+CB-002 incorporates the unchanged CB-001 versions of the 33 artifacts listed below by exact repository history. The transition relocates three contract origins without transferring cognitive responsibilities.
 
 Production means admitted, versioned, revisable, demotable, and contestable.
 
 It does not mean implemented, executable, operationally validated, autonomous, externally authorized, procedurally complete, or permanent.
 
-## CB-001 Manifest
+## Canonical Cross-Layer Dependencies
+
+Authority Baseline `AB-001` owns:
+
+- `layers/authority/production/executive-mandate.md`
+
+Provenance Baseline `PB-001` owns:
+
+- `layers/provenance/production/mission-correlation-and-isolation-contract.md`
+- `layers/provenance/production/provider-intervention-ledgers.md`
+
+Cognitive artifacts may cite these contracts but do not originate or redefine them.
+
+## CB-002 Manifest
 
 ### Intake And Mission Formation
 
@@ -49,37 +64,34 @@ It does not mean implemented, executable, operationally validated, autonomous, e
 16. `ceo-president.md`
 17. `chief-of-staff.md`
 18. `standing-curia-role-requirements.md`
-19. `executive-mandate.md`
-20. `counsel-availability-contract.md`
-21. `mission-closure-and-release-contract.md`
-22. `mission-concurrency-and-isolation-contract.md`
-23. `curia.md`
-24. `provider-intervention-ledgers.md`
+19. `counsel-availability-contract.md`
+20. `mission-closure-and-release-contract.md`
+21. `curia.md`
 
 ### Mission Assembly And Boundary
 
-25. `muster.md`
-26. `la-cortine.md`
-27. `iron-gate.md`
-28. `barbican.md`
-29. `inquisition.md`
-30. `armory-locksmith.md`
-31. `theatre.md`
+22. `muster.md`
+23. `la-cortine.md`
+24. `iron-gate.md`
+25. `barbican.md`
+26. `inquisition.md`
+27. `armory-locksmith.md`
+28. `theatre.md`
 
 ### Return And Reporting
 
-32. `lazaretto.md`
-33. `chamber-of-scribes.md`
+29. `lazaretto.md`
+30. `chamber-of-scribes.md`
 
 ### Cross-Cutting Baseline
 
-34. `cognitive-map.md`
-35. `lifecycle.md`
-36. `production-artifacts.md`
+31. `cognitive-map.md`
+32. `lifecycle.md`
+33. `production-artifacts.md`
 
 ## Explicit Exclusions
 
-CB-001 does not admit:
+CB-002 does not admit:
 
 - Commission — eliminated
 - Praetorium — reserved and undefined
@@ -96,6 +108,6 @@ CB-001 does not admit:
 
 A production artifact changes through a traceable revision and evidence record.
 
-A contested core boundary requires reviewing dependent CB-001 artifacts.
+A contested core boundary requires reviewing dependent CB-002, AB-001, and PB-001 artifacts as applicable.
 
 Demotion returns an artifact to drafts; history is never overwritten.

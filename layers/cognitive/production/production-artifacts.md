@@ -1,16 +1,26 @@
 # Production Artifacts
 
+## Canonical Dependencies
+
+This cognitive artifact cites the following admitted contracts as external canonical definitions; it does not originate or redefine them:
+
+- `layers/authority/production/executive-mandate.md`
+- `layers/provenance/production/mission-correlation-and-isolation-contract.md`
+- `layers/provenance/production/provider-intervention-ledgers.md`
+
 ## Status
 
 Admitted.
 
-Baseline: `CB-001`.
+Baseline: `CB-002`.
 
-Admission: `Production Admission Review 003`.
+Admission: `Cognitive Production Admission Review 004`.
 
-Evidence: `Constitutional Test Run 015 — 30 PASS / 0 FAIL`.
+Evidence: `Constitutional Test Run 016 — 31 PASS / 0 FAIL`.
 
-This file names provisional artifacts that move between Imperium v02 cognitive entities.
+This file is a cognitive placement index for artifacts used by Imperium v02 entities.
+
+It names cognitive products and cites cross-layer contracts. It does not originate authority, provenance, proof, ownership, or procedure.
 
 It does not admit schemas, implementation objects, database records, UI forms, runtime behavior, or final terminology.
 
@@ -63,9 +73,9 @@ Executive Mandate
 
 ## Mission Correlation Spine
 
-The immutable Mission Identity and subordinate identities binding every mission-scoped artifact, event, session, instance, ticket, closure, and release.
+Canonical definition: `layers/provenance/production/mission-correlation-and-isolation-contract.md`.
 
-It preserves separation when missions overlap.
+This index records only that cognitive mission products must carry the correlation required by PB-001. It does not define identity, lineage, isolation, or mismatch findings.
 
 ## Session Admission Finding
 
@@ -81,25 +91,9 @@ It scopes counsel, evidence, dissent, conflicts, and end conditions. It grants n
 
 ## Executive Mandate
 
-The versioned authority artifact binding a qualified, assigned CEO President to bounded Curia decision authority.
+Canonical definition: `layers/authority/production/executive-mandate.md`.
 
-Possible fields:
-
-```text
-Mandate identity and version:
-Mandating Principal and authority basis:
-Grantee Officer identity and specification:
-Standing Curia Assignment:
-Decision domain and mission scope:
-Permitted and prohibited decisions:
-Competence and counsel constraints:
-Effective interval:
-Suspension, withdrawal, expiry, and supersession rules:
-Authority-loss safe-state instruction:
-Status:
-```
-
-It does not qualify, admit, assign, or construct the CEO. Only an EFFECTIVE mandate supports a new substantive decision.
+This index records only that cognitive decision activity depends on a matching effective mandate under AB-001. It does not define mandate fields, status, scope, loss, or authority findings.
 
 ## Petition
 

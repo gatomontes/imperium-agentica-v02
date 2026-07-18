@@ -4,7 +4,11 @@
 
 Boundary approved by the operator on 2026-07-17.
 
-No provenance production baseline is admitted.
+Provenance Baseline `PB-001` is admitted for current provenance use.
+
+Manifest: `layers/provenance/production/README.md` — 3 files.
+
+Admission: `tests/provenance/production-admission-review-001.md`.
 
 ## Core Question
 
