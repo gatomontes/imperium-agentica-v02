@@ -2,11 +2,13 @@
 
 ## Status
 
-Prepared for operator review. No production movement.
+Production admission explicitly approved by the operator on 2026-07-18.
 
-## Candidate Package
+Staging tree constructed and pre-merge verified. Atomic squash merge pending.
 
-| Layer | Current | Candidate | Manifest |
+## Package
+
+| Layer | Prior | Admitted target | Manifest |
 |---|---|---|---:|
 | Cognitive | CB-003 | CB-004 | 34 |
 | Authority | AB-002 | AB-003 | 6 |
@@ -29,25 +31,21 @@ Admission pressure: 55 PASS / 0 FAIL
 Admission convergence: 30 PASS / 0 FAIL
 ```
 
-## Baseline Preservation
+## Pre-Merge Verification
 
-- CB-003's 33 artifacts are retained unchanged beneath CB-004.
-- AB-002's 5 artifacts are retained unchanged beneath AB-003.
-- PB-001 remains unchanged and independently controlling.
-- PRB-001's 3 artifacts are retained unchanged beneath PRB-002.
-- no existing production semantic contract changes during preparation.
+PASS:
 
-## Corrected Findings
+- all 51 manifest entries resolve
+- target manifests are 34/34, 6/6, 3/3, 5/5, and 3/3
+- all seven new canonical production contracts exist
+- seven targets contain no live draft citations or candidate-status residue
+- PB-001 production README is unchanged at blob `1ec437bb50345892c4063d00674fc6968dd6984b`
+- draft sources remain explicitly historical and noncanonical
+- Compass and Praetorium remain parked
+- no implementation, credentials, provider integration, deployment, or live effects are admitted
 
-- managed component and control surface are distinct Runtime subjects
-- bounded recovery may cross target unavailability but no other gate
-- Master Mason closes bounded control-plane diagnosis and maintenance responsibility
-- mission-effect disposition remains separately with Curia and CEO
-- structural and semantic-risk decisions remain with the external operator
-- empirical evidence is explicitly limited to a simulated local model
+## Atomicity
 
-## Recommendation
+Rollback parent: `6e32f0c1f43a7ef83e55de276664daedc7051ab8`.
 
-Recommend the dependency-closed package for explicit production-admission approval, followed by construction and verification on a staging branch and one atomic squash merge.
-
-This review does not itself approve or execute admission.
+The staging branch must be squash-merged once with head-SHA protection. Post-merge verification against `main` remains mandatory.
