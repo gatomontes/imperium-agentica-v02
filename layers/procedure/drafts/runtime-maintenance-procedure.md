@@ -91,7 +91,10 @@ Procedure selects the expected next step from the cited diagnosis. It does not c
 For a potentially consequential maintenance direction, evaluate:
 
 - exact admitted Procedure match
-- effective CONTROL_PLANE action and discretion mode
+- qualified and assigned Master Mason acting surface
+- effective assessment assignment for diagnosis
+- effective maintenance-decision mandate for disposition
+- effective CONTROL_PLANE action and discretion mode for consequential intervention
 - exact environment, component, action class, and acting surface
 - current PB-001 correlation
 - no unresolved external-effect repetition or reinterpretation
@@ -100,6 +103,8 @@ For a potentially consequential maintenance direction, evaluate:
 - defined safe state, abort, observation, and reassessment conditions
 
 Every applicable condition must pass before `INSTRUCT_MAINTENANCE` may be produced.
+
+CONTROL_PLANE Authority does not repair missing Master Mason qualification, assignment, or decision mandate.
 
 ### 5. Produce Maintenance Disposition
 
