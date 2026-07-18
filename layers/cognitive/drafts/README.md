@@ -9,6 +9,7 @@ Active split candidates:
 - `counsel-availability-contract.md`
 - `mission-closure-and-release-contract.md`
 - `production-artifact-catalog.md`
+- `work-specification-completion-assessment.md`
 
 These drafts remove procedural ordering and foreign-native definitions from three placement-contested CB-002 artifacts.
 
