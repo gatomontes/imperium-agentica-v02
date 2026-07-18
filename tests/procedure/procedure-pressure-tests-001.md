@@ -216,6 +216,6 @@ Expected: lifecycle permits reporting as a branch after closure rather than requ
 
 ### PRP-035 — Formation Without Authority
 
-A Petition and proposed Mission Identity exist, but no effective authority permits mission formation or Work Specification approval.
+A Petition identity exists, but no effective authority permits mission formation or Work Specification approval.
 
-Expected: identity allocation does not approve formation; the lifecycle blocks the authority-bearing transition.
+Expected: Petition identity does not approve formation; after formation, Mission Identity likewise does not approve the Work Specification. The lifecycle blocks each authority-bearing transition.
