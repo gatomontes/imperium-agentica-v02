@@ -8,11 +8,11 @@ Theoretical tests and immutable run records by admitted or candidate concern.
 
 - Cognitive: `CB-003` — 33 artifacts
 - Authority: `AB-002` — 5 artifacts
-- Provenance: `PB-001` — 3 artifacts, unchanged
+- Provenance: `PB-001` — 3 artifacts
 - Procedure: `PRB-001` — 3 artifacts
 - Runtime: none
 
-## Atomic Admission Evidence
+## Admitted-Baseline Evidence
 
 ```text
 Procedure structural: 16 PASS / 0 FAIL
@@ -26,18 +26,19 @@ Provenance regression: 34 PASS / 0 FAIL
 Corrected convergence: 21 PASS / 0 FAIL
 ```
 
-The corrected evidence supports the admitted atomic CB-003, AB-002, and PRB-001 transition.
+## Runtime Candidate Evidence
 
-Tests do not execute software or imply Runtime implementation.
-
-## Runtime Boundary Investigation
+```text
+Boundary initial pressure: 34 PASS / 6 FAIL
+Boundary corrected pressure: 40 PASS / 0 FAIL
+Boundary convergence: 24 PASS / 0 FAIL
+Draft initial pressure: 57 PASS / 3 FAIL
+Draft corrected pressure: 60 PASS / 0 FAIL
+State-machine conformance method: 15 PASS / 0 FAIL
+Draft convergence: 24 PASS / 0 FAIL
+Control-plane cognitive origin: 10 PASS / 0 FAIL
+```
 
 Runtime remains unadmitted.
 
-Candidate evidence:
-
-- initial Runtime pressure: 34 PASS / 6 FAIL
-- corrected Runtime pressure: 40 PASS / 0 FAIL
-- cross-layer Runtime convergence: 24 PASS / 0 FAIL
-
-Recommendation: approve the candidate Runtime boundary for draft-contract development only.
+All Runtime evidence is theoretical. No service, state machine, credential, integration, or external effect was executed.
