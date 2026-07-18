@@ -10,10 +10,11 @@ Historical PRB-001 source drafts retained for traceability:
 2. `mission-closure-and-release-procedure.md`
 3. `imperium-lifecycle-procedure.md`
 
-Current unadmitted refinement:
+Current unadmitted refinements:
 
 - `mission-indeterminate-effect-disposition-procedure.md`
+- `runtime-maintenance-procedure.md`
 
-The candidate covers mission effects only. Indeterminate control-plane effects still lack a Cognitive responsibility origin.
+Mission indeterminacy and Runtime maintenance remain candidate procedures because their Runtime and Cognitive dependencies are unadmitted.
 
 Draft presence does not create a second canonical origin, change PRB-001, or imply Runtime implementation.
