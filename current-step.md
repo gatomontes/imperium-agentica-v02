@@ -2,11 +2,11 @@
 
 ## Status
 
-Runtime Empirical Harness 001 completed on a review branch on 2026-07-18.
+Runtime Admission Preparation 001 activated by operator approval on 2026-07-18.
+
+Empirical Harness PR #8 is merged and verified.
 
 No production admission has occurred.
-
-Awaiting operator review of the empirical evidence and decision whether to begin admission preparation.
 
 This file is operational continuity, not doctrine, architecture, or authority.
 
@@ -20,48 +20,40 @@ Procedure: PRB-001 — 3 / 3
 Runtime: unadmitted and empty
 ```
 
-## Empirical Scope
-
-The dependency-free Node harness uses simulated effects only. It exercises:
-
-- bounded activation and deactivation
-- blockage without semantic-intent deletion
-- bounded resource tuning
-- crash and indeterminate-effect handling
-- duplicate-effect refusal
-- dispatch-time Authority freshness
-- exact-instruction and bounded-discretion modes
-- migration and rollback refusal
-- Runtime Observation Envelopes
-- PRB-001 state-machine conformance
-- Master Mason diagnosis, restoration, withholding, and escalation
-
-## Evidence
+## Empirical Merge
 
 ```text
-Initial empirical run: 10 PASS / 1 FAIL
-Corrected empirical run: 11 PASS / 0 FAIL
+Pull request: #8
+Squash commit: 2a817edb589f8934681b483fb07c3dd66b4daa70
+Rollback parent: e5f1e87e485a816efbc9dc23e790f65eab4241a0
+Initial run: 10 PASS / 1 FAIL
+Corrected run: 11 PASS / 0 FAIL
 ```
 
-The initial failure exposed a real boundary defect: component blockage also blocked the recovery control intended to clear it.
+The managed-component/control-surface correction is part of the evidence baseline.
 
-The correction separates the managed component from its control surface. Recovery and deactivation may cross the blockage gate only when every remaining Authority, Procedure, correlation, identity, and indeterminate-effect condition passes.
+## Active Work
 
-Record:
+Prepare and pressure-test the smallest dependency-closed admission candidate.
 
-`tests/runtime/runtime-empirical-run-001.md`
+The investigation must determine, rather than presume:
+
+- which Runtime drafts are native and mature enough for admission
+- whether Master Mason is dependency-closed as a Cognitive role
+- whether CONTROL_PLANE is ready as an Authority profile
+- which Procedure refinements are required
+- whether existing indexes and consumer citations need revision
+- what baseline transitions would result
 
 ## Preserved Limits
 
-- simulated effects only
-- no credentials or provider integrations
-- no deployment infrastructure
-- no autonomous repair
-- no production Runtime
-- no proof of distributed mutual exclusion, durability, performance, or live recovery
+- preparation and testing only
+- no production movement
+- no live implementation, credentials, providers, or external effects
+- simulated interleaving is not distributed-systems proof
+- empirical success is evidence, not automatic admission
+- Compass and Praetorium remain parked
 
-## Next Eligible Step
+## Stop Condition
 
-Review the empirical evidence.
-
-If approved, prepare an admission candidate for Runtime, Master Mason, CONTROL_PLANE Authority, and Runtime Maintenance Procedure. Empirical success does not itself admit any of them.
+Return with a complete admission package and explicit blockers, then stop at a separate production-admission approval gate.
