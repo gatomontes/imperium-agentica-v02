@@ -41,6 +41,12 @@ It models:
 - terminal preservation of completed effects
 - at-most-once dispatch pressure across two Runtime instances
 
+## Recovery Audit Correction
+
+The first candidate revision quarantined local state when leadership changed after external dispatch, but still emitted an operational-completion observation.
+
+Before review, the completion-race path was corrected to emit `QUARANTINED` with `indeterminateEffect: true`, and the focused test now asserts both state and observation.
+
 ## Recovery Rule
 
 ```text
