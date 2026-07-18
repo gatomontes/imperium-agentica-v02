@@ -4,7 +4,7 @@
 
 Theoretical pressure run against:
 
-- `layers/cognitive/drafts/mason.md`
+- `layers/cognitive/drafts/master-mason.md`
 - `layers/procedure/drafts/runtime-maintenance-procedure.md`
 - revised `layers/authority/drafts/runtime-control-plane-authority-profile.md`
 - current Runtime candidate contracts
