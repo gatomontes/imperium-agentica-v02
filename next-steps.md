@@ -2,49 +2,68 @@
 
 ## Status
 
-Runtime Maintenance Artifact Closure 001 is active.
+Runtime Maintenance Artifact Closure 001 candidate construction is complete.
 
-The active investigation is recorded only in `current-step.md`.
+The current decision is recorded only in `current-step.md`.
 
 This file is an ordered operational queue, not doctrine, architecture, or a roadmap.
 
 ## Queue
 
-### 1. After the active investigation, decide the correction disposition
+### 1. If approved, run repository-wide regression
 
-Possible outcomes must be earned by the investigation:
+Pressure the minimal candidate against:
 
-- admit one or more canonical Cognitive artifact contracts
-- revise an existing Cognitive contract to close the dependency
-- consolidate multiple Master Mason products into one contract
-- defer products not required for semantic closure
-- reject unnecessary product names
+- existing Cognitive constitutional tests
+- Authority origin and grant boundaries
+- PB-001 identity, correlation, lineage, and supersession invariants
+- Procedure reduced-boundary and lifecycle regressions
+- RTB-001 realization, observation, retry, recovery, and control-plane invariants
+- manifest and citation closure
+- parked Compass and Praetorium exclusions
 
-No outcome is preapproved.
+Regression authorizes no production movement.
 
-### 2. If a correction is approved, pressure the dependency-closed package
+### 2. If regression converges, prepare an exact admission candidate
 
-Any proposed correction must test affected CB-004, AB-003, PB-001, PRB-002, and RTB-001 contracts and identify the smallest required baseline transition.
+Candidate transition under review:
 
-### 3. Choose the next independently scoped Runtime direction
+```text
+CB-004 → CB-005: 34 → 36
+AB-003 unchanged: 6
+PB-001 unchanged: 3
+PRB-002 → PRB-003: 5
+RTB-001 → RTB-002: 3
+Canonical semantic targets: 7
+```
+
+Admission preparation must include exact canonical paths, manifest revisions, citation normalization, rollback parent, and independent verification method.
+
+Preparation is not admission.
+
+### 3. Require separate approval for production movement
+
+No canonical copy, manifest transition, merge, or baseline admission without explicit operator approval.
+
+### 4. Choose the next independently scoped Runtime direction after closure
 
 Remaining eligible but unapproved directions:
 
-- a minimal RTB-001 reference implementation and conformance plan
+- a minimal RTB-001 or successor reference implementation and conformance plan
 - Master Mason qualification, acting medium, assignment, and native holding behavior
 - a real environment-specific CONTROL_PLANE Authority Basis and grant
 - distributed concurrency, durability, and recovery evidence
 
 These are distinct. Approval of one does not activate the others.
 
-### 4. Keep semantic admission distinct from implementation
+### 5. Keep semantic admission distinct from implementation
 
-RTB-001 selects no language, framework, queue, database, service topology, deployment platform, provider, credential system, or live environment.
+The Runtime baseline selects no language, framework, queue, database, service topology, deployment platform, provider, credential system, or live environment.
 
-### 5. Preserve explicit authorization gates
+### 6. Preserve explicit authorization gates
 
 No deployment, credentials, provider integration, external effects, autonomous repair, or real CONTROL_PLANE action without separately scoped approval.
 
-### 6. Keep Compass and Praetorium parked
+### 7. Keep Compass and Praetorium parked
 
 Reactivate only when their own distinct behaviors are demonstrated.
