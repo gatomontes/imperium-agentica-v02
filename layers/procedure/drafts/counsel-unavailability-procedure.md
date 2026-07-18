@@ -92,3 +92,7 @@ Exit when the affected decision has either:
 - been superseded by an authorized terminal path
 
 The exit does not determine the later substantive decision.
+
+## Runtime Boundary
+
+This procedure defines expected ordering and conditions only. It does not define queues, schedulers, timers, services, storage, state-machine implementation, retries, or execution.
