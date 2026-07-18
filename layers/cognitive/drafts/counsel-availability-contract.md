@@ -4,6 +4,8 @@
 
 Draft Cognitive revision extracted from CB-002.
 
+Not admitted. CB-002 production remains canonical.
+
 Origin: `layers/cognitive/production/counsel-availability-contract.md`.
 
 Native concern: responsibility, competence, findings, and artifact meaning.
