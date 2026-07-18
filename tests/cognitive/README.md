@@ -8,9 +8,9 @@ These tests evaluate ontology, authority, artifact boundaries, and traceability.
 
 ## Current Suite
 
-- `constitutional-tests.md` — CT-001 through CT-030
-- latest result: `constitutional-test-run-015.md`
-- current result: **30 PASS / 0 FAIL**
+- `constitutional-tests.md` — CT-001 through CT-031
+- latest result: `constitutional-test-run-016.md`
+- current result: **31 PASS / 0 FAIL**
 - latest scenario: `test-mission-009-integrated-petition-to-delivery.md`
 
 ## Current Proven Distinctions
@@ -39,7 +39,7 @@ Run records preserve the theoretical result at the time each design change was e
 
 ## Latest Admission Review
 
-- `production-admission-review-003.md`
+- `production-admission-review-004-cb-002.md` — candidate CB-002 review
 - decision: **ADMIT WITH RECORDED LIMITS**
 - manifest: Cognitive Baseline CB-001 — 36 files
 - evidence: Run 015 and integrated Mission 009
@@ -47,4 +47,4 @@ Run records preserve the theoretical result at the time each design change was e
 
 ## Current Structural Status
 
-No presently identified cognitive structural gap remains unbounded. CB-001 is admitted in `layers/cognitive/production/`. Operational procedure and implementation remain outside the tested scope.
+CB-001 remains the current admitted production baseline. Candidate CB-002 passes relocation regression but is not admitted until the atomic cross-layer migration receives operator approval. Procedure and runtime remain outside the tested scope.
