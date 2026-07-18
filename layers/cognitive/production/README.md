@@ -2,37 +2,36 @@
 
 ## Status
 
-Cognitive Baseline `CB-003` is admitted for current cognitive use.
+Cognitive Baseline `CB-004` is admitted for current cognitive use.
 
 ```text
-Admission: Cognitive Production Admission Review 005
-Prior baseline: CB-002
+Admission: Runtime Production Admission Review 001
+Prior baseline: CB-003
 Evidence:
-- Cognitive Constitutional Run 018 — 33 PASS / 0 FAIL
-- Procedure Convergence Run 002 — 21 PASS / 0 FAIL
+- Runtime Admission Pressure Run 001 — 55 PASS / 0 FAIL
+- Runtime Admission Convergence 001 — 30 PASS / 0 FAIL
+- Runtime Empirical Run 001 — 11 PASS / 0 FAIL
 Promotion date: 2026-07-18
-Manifest size: 33 files
+Manifest size: 34 files
 ```
 
-CB-003 keeps 28 CB-002 artifacts unchanged by exact repository history, revises three contracts in place, replaces two cross-cutting sources with two native Cognitive contracts, and transfers procedural ordering into PRB-001 without transferring Cognitive responsibility.
+CB-004 retains all 33 CB-003 artifacts unchanged and adds Master Mason as the Imperium-scoped Cognitive responsibility for bounded Runtime diagnosis, maintenance intent, restoration assessment, and escalation.
 
-Production means admitted, versioned, revisable, demotable, and contestable. It does not mean implemented, executable, operationally validated, autonomous, externally authorized, or permanent.
+Production means admitted, versioned, revisable, demotable, and contestable. It does not mean instantiated, assigned, implemented, autonomous, externally authorized, or permanent.
 
 ## Canonical Cross-Layer Dependencies
 
-Authority Baseline `AB-002` owns permission semantics, including:
-
-- `layers/authority/production/executive-mandate.md`
-- `layers/authority/production/mission-envelope.md`
-- `layers/authority/production/capability-tool-and-access-grants.md`
+Authority Baseline `AB-003` owns permission semantics, including CONTROL_PLANE authority.
 
 Provenance Baseline `PB-001` owns identity, correlation, and lineage semantics.
 
-Procedure Baseline `PRB-001` owns expected sequencing and conditional transition semantics.
+Procedure Baseline `PRB-002` owns expected sequencing and conditional transition semantics, including Runtime maintenance and mission indeterminate-effect disposition.
+
+Runtime Baseline `RTB-001` owns realization, dispatch, control-plane mechanics, and Runtime-native observation semantics.
 
 Cognitive artifacts may cite these contracts but do not originate or redefine them.
 
-## CB-003 Manifest
+## CB-004 Manifest
 
 ### Intake And Mission Formation
 
@@ -88,19 +87,25 @@ Cognitive artifacts may cite these contracts but do not originate or redefine th
 32. `cognitive-map.md`
 33. `production-artifact-catalog.md`
 
+### Runtime Operation
+
+34. `master-mason.md`
+
 ## Explicit Exclusions
 
-CB-003 does not admit:
+CB-004 does not admit:
 
 - Commission — eliminated
 - Praetorium — reserved and undefined
+- Compass — parked without demonstrated necessity
 - Vellum — parked without demonstrated necessity
+- a Master Mason persona, Officer class, hierarchy, or institution
 - a universal Proof layer
 - an Ownership layer
 - a central Artifact layer
-- runtime architecture
 - database or storage schemas
 - services, scheduling, automation, or deployment infrastructure
+- live credentials, providers, or external effects
 - UI contracts
 - product-specific operative implementations
 
@@ -108,6 +113,6 @@ CB-003 does not admit:
 
 A production artifact changes through a traceable revision and evidence record.
 
-A contested core boundary requires reviewing dependent CB-003, AB-002, PB-001, and PRB-001 artifacts as applicable.
+A contested core boundary requires reviewing dependent CB-004, AB-003, PB-001, PRB-002, and RTB-001 artifacts as applicable.
 
 Demotion returns an artifact to drafts; history is never overwritten.

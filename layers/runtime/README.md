@@ -2,9 +2,11 @@
 
 ## Status
 
-Candidate boundary approved by the operator on 2026-07-18 for draft-contract development only.
+Runtime Baseline `RTB-001` is admitted for current Runtime semantics.
 
-Runtime production is unadmitted and empty.
+Manifest: `layers/runtime/production/README.md` — 3 files.
+
+Admission: `tests/runtime/runtime-production-admission-review-001.md`.
 
 ## Core Question
 
@@ -85,5 +87,5 @@ A Runtime artifact may enter production only when:
 - durable observations have independently tested Runtime meaning and PB-001 lineage
 - state-machine conformance to admitted Procedure is demonstrated
 - control-plane actions cannot authorize themselves
-- empirical implementation evidence covers failure, concurrency, recovery, and migration
+- empirical evidence covers simulated failure, concurrency interleaving, recovery, and migration, with its limits explicit
 - cross-layer convergence passes without semantic ownership transfer

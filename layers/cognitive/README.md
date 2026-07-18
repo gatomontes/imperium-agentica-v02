@@ -24,9 +24,9 @@ Approval of a diagram or terminology does not by itself promote an artifact. Dra
 
 `production/` contains cognitive artifacts admitted for current active use after sufficient scenario evidence.
 
-Current baseline: `CB-003` — 33 files, admitted 2026-07-18 under Cognitive Production Admission Review 005 and Cognitive Constitutional Run 018.
+Current baseline: `CB-004` — 34 files, admitted 2026-07-18 under Runtime Production Admission Review 001.
 
-CB-003 cites Authority Baseline `AB-002`, Provenance Baseline `PB-001`, and Procedure Baseline `PRB-001` for contracts native to those parallel concerns.
+CB-004 cites Authority Baseline `AB-003`, Provenance Baseline `PB-001`, Procedure Baseline `PRB-002`, and Runtime Baseline `RTB-001` for contracts native to those parallel concerns.
 
 Production means admitted, not permanent. An artifact may return to drafts when later evidence contests it.
 
@@ -56,12 +56,12 @@ Tests challenge cognitive structure, responsibility, competence, and its boundar
 ## Current Baseline
 
 ```text
-Cognitive Baseline: CB-003
+Cognitive Baseline: CB-004
 Manifest: layers/cognitive/production/README.md
-Evidence: tests/cognitive/constitutional-test-run-018.md
-Admission: tests/cognitive/production-admission-review-004-cb-002.md
-Result: 33 PASS / 0 FAIL
-Dependencies: AB-002, PB-001, and PRB-001
+Evidence: tests/runtime/runtime-production-admission-review-001.md
+Admission: tests/runtime/runtime-production-admission-review-001.md
+Result: admission pressure 55 PASS / 0 FAIL; convergence 30 PASS / 0 FAIL
+Dependencies: AB-003, PB-001, PRB-002, and RTB-001
 ```
 
-The Cognitive, Authority, Provenance, and Procedure layers have admitted baselines. Runtime remains unadmitted.
+The Cognitive, Authority, Provenance, Procedure, and Runtime layers have admitted semantic baselines.

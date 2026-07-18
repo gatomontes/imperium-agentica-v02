@@ -119,19 +119,19 @@ A future LLM session should read the repository in this order:
 4. `layers/cognitive/README.md` — cognitive-layer boundary and admission rules.
 5. `layers/cognitive/production/` — admitted cognitive baseline, when cognitive structure is relevant.
 6. `layers/authority/README.md` — approved authority boundary.
-7. `layers/authority/production/` — admitted Authority Baseline `AB-002`, when authority is relevant.
+7. `layers/authority/production/` — admitted Authority Baseline `AB-003`, when authority is relevant.
 8. `layers/authority/drafts/` — shaped but unproven authority contracts, only if relevant.
 9. `layers/provenance/README.md` — approved provenance boundary.
 10. `layers/provenance/production/` — admitted Provenance Baseline `PB-001`, when provenance is relevant.
 11. `layers/provenance/drafts/` — shaped but unproven provenance contracts, only if relevant.
 12. `layers/procedure/README.md` — admitted reduced Procedure boundary, when procedural work is relevant.
-13. `layers/procedure/production/` — admitted Procedure Baseline `PRB-001`.
+13. `layers/procedure/production/` — admitted Procedure Baseline `PRB-002`.
 14. `layers/procedure/drafts/` — retained Procedure source drafts, only for traceability.
-15. `layers/runtime/README.md` — approved candidate Runtime boundary; production remains unadmitted.
-16. `layers/runtime/drafts/` — candidate Runtime contracts, only when Runtime work is relevant.
-17. `layers/runtime/production/` — explicit empty production boundary.
+15. `layers/runtime/README.md` — admitted Runtime boundary and RTB-001 navigation.
+16. `layers/runtime/production/` — admitted Runtime Baseline `RTB-001`, when Runtime semantics are relevant.
+17. `layers/runtime/drafts/` — retained Runtime source drafts, only for traceability.
 18. `layers/cognitive/drafts/` — retained or unproven Cognitive revisions, only if relevant.
-19. `tests/` — theoretical suites and immutable run records, only when testing or tracing.
+19. `tests/` — theoretical and empirical suites with immutable run records, only when testing or tracing.
 20. `ideas.md` — raw pre-draft candidates, only if needed.
 21. `drafts/` — cross-layer working analyses, only if relevant to the current step.
 
@@ -169,7 +169,7 @@ The default home for shaped but unproven artifacts is:
 /drafts
 ```
 
-Layer-specific artifacts live within their layer. The admitted cognitive baseline is `CB-003`. Cognitive artifacts use:
+Layer-specific artifacts live within their layer. The admitted cognitive baseline is `CB-004`. Cognitive artifacts use:
 
 ```text
 /layers/cognitive/drafts
@@ -208,7 +208,7 @@ The admitted reduced Procedure boundary, production baseline, and retained draft
 
 Procedure means only what is supposed to happen, in what order, under which conditions. It may cite but may not originate responsibility, authority, provenance, artifact meaning, proof, ownership, or Runtime.
 
-The approved candidate Runtime boundary uses:
+The admitted Runtime boundary and baseline use:
 
 ```text
 /layers/runtime/drafts
@@ -218,7 +218,7 @@ The approved candidate Runtime boundary uses:
 
 Runtime is the operating machinery that realizes cited contracts through actual state and effects. It is not synonymous with code and does not own semantic contracts merely because they are encoded in software.
 
-Authority Baseline `AB-002`, Provenance Baseline `PB-001`, and Procedure Baseline `PRB-001` are admitted for current use. Runtime production remains unadmitted.
+Cognitive Baseline `CB-004`, Authority Baseline `AB-003`, Provenance Baseline `PB-001`, Procedure Baseline `PRB-002`, and Runtime Baseline `RTB-001` are admitted for current semantic use.
 
 `production` means admitted for current use, not permanent or implemented in software.
 
