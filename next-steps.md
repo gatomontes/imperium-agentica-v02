@@ -2,33 +2,31 @@
 
 ## Status
 
-Runtime Stable Nonproduction Reference Placement 001 candidate and evidence are complete.
+Runtime Stable Nonproduction Reference Placement 001 is merged and post-merge verified.
 
-The active merge decision is recorded only in `current-step.md`.
+No next direction is approved or active.
+
+This file is an ordered operational queue, not doctrine, architecture, or a roadmap.
 
 ## Queue
 
-### 1. If approved, merge the candidate placement package
+### 1. Choose one independently scoped direction
 
-Require:
-
-- exact candidate head
-- combined successor 40 / 40
-- historical harness 11 / 11
-- repository regression PASS
-- zero production manifest changes
-- no duplicate source modules
-- explicit private nonproduction boundary
-
-### 2. After merge, choose one independent direction
+Eligible but unapproved options:
 
 - environment-specific provider adapter
 - credential-handling implementation
 - production deployment design
 - real consensus or distributed-store investigation
 
-Each requires separate necessity analysis, tests, and approval.
+Recommended next step:
 
-### 3. Preserve adjacent gates
+`environment-specific provider adapter investigation`
 
-Candidate merge does not create a public package, prove production readiness or consensus, instantiate Master Mason, issue Authority, define PB-001 semantics, alter Procedure, deploy Runtime, or authorize external effects.
+It pressures the new stable import boundary against one concrete environment while keeping credentials, live effects, deployment, and production admission separately gated.
+
+Each option requires its own necessity analysis, scope, tests, and explicit approval.
+
+### 2. Preserve adjacent gates
+
+No option automatically creates a public package, proves production readiness or consensus, instantiates Master Mason, issues Authority, defines PB-001 semantics, alters Procedure, deploys Runtime, handles live credentials, or authorizes external effects.
