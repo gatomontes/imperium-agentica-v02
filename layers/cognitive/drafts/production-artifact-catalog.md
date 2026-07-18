@@ -1,16 +1,10 @@
-# Production Artifact Catalog — Cognitive Split Candidate
+# Production Artifact Catalog — Runtime Maintenance Candidate
 
 ## Status
 
-Draft native-artifact index extracted from CB-002.
+Candidate revision under `Runtime Maintenance Artifact Closure 001`.
 
-Not admitted. CB-002 production remains canonical.
-
-Origin: `layers/cognitive/production/production-artifacts.md`.
-
-This is a catalog, not a procedure and not a central Artifact layer.
-
-It indexes canonical origins and brief placement meanings. It does not define handoff order.
+Not admitted. CB-004 production remains canonical.
 
 ## Catalog Rule
 
@@ -21,7 +15,7 @@ one artifact
 → zero competing catalog definitions
 ```
 
-A catalog entry may orient the reader. The cited native contract remains controlling.
+A catalog entry orients the reader. The cited native contract remains controlling.
 
 ## Cognitive-Native Artifacts
 
@@ -48,19 +42,38 @@ A catalog entry may orient the reader. The cited native contract remains control
 | Operative Release Record | Muster | split closure contract |
 | Final Report | Chamber of Scribes | `chamber-of-scribes.md` |
 | Delivery Package | Secretariat | `secretariat.md` |
+| Runtime Operational Diagnosis | Master Mason | candidate `runtime-operational-diagnosis.md` |
+| Runtime Maintenance Disposition | Master Mason | candidate `runtime-maintenance-disposition.md` |
 
-Paths in this table are relative to `layers/cognitive/production/` unless marked as draft split contracts.
+Paths without a candidate marker refer to `layers/cognitive/production/`.
+
+Candidate paths refer to `layers/cognitive/drafts/` and are noncanonical.
+
+## Runtime Maintenance Product Consolidation
+
+The candidate does not catalog separate artifacts named:
+
+- Runtime Operating Situation
+- Maintenance Instruction
+- Maintenance Withholding Finding
+- Escalation Record
+
+Runtime Operating Situation remains an internal Master Mason assembly.
+
+Instruction, withholding, and structural escalation are distinct forms of Runtime Maintenance Disposition.
+
+Consolidation removes competing artifact origins without collapsing form-specific semantics.
 
 ## Authority-Native Artifacts
 
 | Artifact | Canonical origin |
 |---|---|
 | Executive Mandate | `layers/authority/production/executive-mandate.md` |
-| Mission Envelope | `layers/authority/drafts/mission-envelope.md` — not admitted |
-| Tool Grant | `layers/authority/drafts/capability-tool-and-access-grants.md` — not admitted |
-| Access Grant | `layers/authority/drafts/capability-tool-and-access-grants.md` — not admitted |
+| Mission Envelope | `layers/authority/production/mission-envelope.md` |
+| Tool Grant | `layers/authority/production/capability-tool-and-access-grants.md` |
+| Access Grant | `layers/authority/production/capability-tool-and-access-grants.md` |
 
-The catalog does not define fields, scope, status, or validity for these grants.
+The catalog does not define fields, scope, status, or validity for grants.
 
 ## Provenance-Native Structures
 
@@ -74,20 +87,24 @@ The catalog does not define fields, scope, status, or validity for these grants.
 
 ### Completion Assessment
 
-A closure path cites `work-specification-completion-assessment.md` for artifact-relative criterion findings.
+A closure path cites `layers/cognitive/production/work-specification-completion-assessment.md` for artifact-relative criterion findings.
 
-No universal Proof layer is admitted or required by the current evidence.
+No universal Proof layer is admitted or required.
 
 ### Ownership
 
-Custody, assignment, mission binding, and reuse restrictions appear in several contracts. They have not yet demonstrated one universal Ownership layer.
-
-The catalog records no ownership semantics until a native contract exists.
+Custody, assignment, mission binding, and reuse restrictions have not demonstrated a universal Ownership layer.
 
 ## Procedure Boundary
 
-Artifact ordering and handoff conditions belong to:
+Artifact ordering and handoff conditions belong to Procedure.
 
-`layers/procedure/drafts/imperium-lifecycle-procedure.md`.
+For Runtime maintenance, the candidate ordering lives in:
 
-The catalog does not state that every mission traverses every artifact or that one artifact automatically triggers the next.
+`layers/procedure/drafts/runtime-maintenance-procedure.md`
+
+The catalog does not state that an artifact automatically triggers the next.
+
+## Non-Admission
+
+This candidate indexes two proposed Cognitive origins. It does not make either artifact canonical or revise CB-004.
