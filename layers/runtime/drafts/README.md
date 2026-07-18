@@ -2,14 +2,17 @@
 
 ## Status
 
-Runtime Baseline `RTB-001` is admitted.
+Runtime Baseline `RTB-001` is admitted and remains canonical.
 
-Admitted source drafts retained for traceability:
+Active candidate revisions under `Runtime Maintenance Artifact Closure 001`:
 
-1. `runtime-realization-and-dispatch-contract.md` → `layers/runtime/production/runtime-realization-and-dispatch-contract.md`
-2. `runtime-observation-envelope.md` → `layers/runtime/production/runtime-observation-envelope.md`
-3. `runtime-control-plane-contract.md` → `layers/runtime/production/runtime-control-plane-contract.md`
+1. `runtime-realization-and-dispatch-contract.md`
+2. `runtime-control-plane-contract.md`
 
-The source drafts remain noncanonical historical evidence. RTB-001 admission does not make them executable, implemented, deployed, or authorized for external effects.
+`runtime-observation-envelope.md` remains an admitted source draft without active semantic revision.
 
-Runtime production may cite admitted Cognitive, Authority, Provenance, and Procedure contracts. It may not redefine them.
+The candidates require an exact current `INSTRUCT_MAINTENANCE` disposition for maintenance realization and constrain the Control-Plane Plan to the cited Cognitive direction.
+
+Runtime production may cite admitted Cognitive, Authority, Provenance, and Procedure contracts. It may not redefine diagnosis, maintenance direction, permission, identity, lineage, or procedure.
+
+Draft presence does not revise RTB-001 or imply execution, implementation, deployment, credentials, provider integration, or external effects.
