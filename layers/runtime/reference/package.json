@@ -10,6 +10,7 @@
     "./coordination/deterministic": "./src/distributed-coordinator.mjs",
     "./providers/node-process-supervisor": "./src/node-process-supervisor-adapter.mjs",
     "./security/synthetic-credentials": "./src/synthetic-credential-broker.mjs",
-    "./providers/node-process-supervisor/synthetic-credentials": "./src/synthetic-credential-node-process-supervisor-adapter.mjs"
+    "./providers/node-process-supervisor/synthetic-credentials": "./src/synthetic-credential-node-process-supervisor-adapter.mjs",
+    "./security/synthetic-secret-store": "./src/synthetic-secret-store-port.mjs"
   }
 }

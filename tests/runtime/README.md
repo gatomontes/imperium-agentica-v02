@@ -14,7 +14,9 @@ Runtime Node Process-Supervisor Provider Adapter 001 is merged and verified.
 
 Runtime Synthetic Credential Boundary 001 is merged and verified.
 
-Runtime Synthetic Credential-to-Provider Projection 001 is the current candidate.
+Runtime Synthetic Credential-to-Provider Projection 001 is merged and verified.
+
+Runtime Synthetic Secret-Store Port 001 is the current candidate.
 
 ## Reference Implementation Evidence
 
@@ -75,6 +77,15 @@ Runtime Synthetic Credential-to-Provider Projection 001 is the current candidate
 - repository regression: `runtime-synthetic-provider-projection-repository-regression-001.md` — PASS
 - candidate review: `runtime-synthetic-provider-projection-candidate-review-001.md`
 
+## Synthetic Secret-Store Port Candidate
+
+- baseline pressure: `runtime-synthetic-secret-store-port-pressure-run-001.md` — 4 PASS / 11 FAIL
+- corrected pressure: `runtime-synthetic-secret-store-port-pressure-run-002.md` — 15 PASS / 0 FAIL
+- focused port executable: 14 PASS / 0 FAIL
+- combined successor executable: 91 PASS / 0 FAIL
+- repository regression: `runtime-synthetic-secret-store-port-repository-regression-001.md` — PASS
+- candidate review: `runtime-synthetic-secret-store-port-candidate-review-001.md`
+
 ## Evidence Limits
 
 The file-backed adapter demonstrates deterministic single-process behavior on a test filesystem.
@@ -89,4 +100,6 @@ The synthetic credential broker demonstrates one-use, exact-bound lifecycle beha
 
 The synthetic provider projection demonstrates least-data composition with the injected driver only.
 
-None is proof of production durability, a consensus protocol, real network partitions, durable quorum state, distributed correctness, secure erasure, real credential safety, provider authentication or idempotency, performance, deployment safety, or live recovery.
+The synthetic secret-store port demonstrates expiring acquisition and revocation behavior against an in-memory test backend only.
+
+None is proof of production durability, a consensus protocol, real network partitions, durable quorum state, distributed correctness, secure erasure, real credential safety, real store durability or availability, provider authentication or idempotency, performance, deployment safety, or live recovery.
