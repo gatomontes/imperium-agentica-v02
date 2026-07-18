@@ -20,7 +20,7 @@ Provenance production empty → PB-001
 Authority: AB-001 — 3 / 3 artifacts
 Provenance: PB-001 — 3 / 3 artifacts
 Cognitive: CB-002 — 33 / 33 artifacts
-Relocated cognitive source deletions: pending final staging operation
+Relocated cognitive source deletions: 3 / 3 staged
 Procedure: unadmitted
 Runtime: unadmitted
 ```
