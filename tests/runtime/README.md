@@ -10,7 +10,9 @@ Runtime Distributed Concurrency and Recovery 001 is merged as noncanonical evide
 
 Runtime Stable Nonproduction Reference Placement 001 is merged and verified.
 
-Runtime Node Process-Supervisor Provider Adapter 001 is the current candidate.
+Runtime Node Process-Supervisor Provider Adapter 001 is merged and verified.
+
+Runtime Synthetic Credential Boundary 001 is the current candidate.
 
 ## Reference Implementation Evidence
 
@@ -53,6 +55,15 @@ Runtime Node Process-Supervisor Provider Adapter 001 is the current candidate.
 - repository regression: `runtime-node-process-provider-adapter-repository-regression-001.md` — PASS
 - candidate review: `runtime-node-process-provider-adapter-candidate-review-001.md`
 
+## Synthetic Credential Boundary Candidate
+
+- baseline pressure: `runtime-synthetic-credential-boundary-pressure-run-001.md` — 2 PASS / 11 FAIL
+- corrected pressure: `runtime-synthetic-credential-boundary-pressure-run-002.md` — 13 PASS / 0 FAIL
+- focused boundary executable: 12 PASS / 0 FAIL
+- combined successor executable: 64 PASS / 0 FAIL
+- repository regression: `runtime-synthetic-credential-boundary-repository-regression-001.md` — PASS
+- candidate review: `runtime-synthetic-credential-boundary-candidate-review-001.md`
+
 ## Evidence Limits
 
 The file-backed adapter demonstrates deterministic single-process behavior on a test filesystem.
@@ -63,4 +74,6 @@ Stable placement under `layers/runtime/reference/` establishes repository-local 
 
 The Node process-supervisor adapter demonstrates environment binding and result mapping through an injected driver only.
 
-Neither is proof of production durability, a consensus protocol, real network partitions, durable quorum state, distributed correctness, credential safety, provider idempotency, performance, deployment safety, or live recovery.
+The synthetic credential broker demonstrates one-use, exact-bound lifecycle behavior for test bytes only.
+
+None is proof of production durability, a consensus protocol, real network partitions, durable quorum state, distributed correctness, secure erasure, real credential safety, provider idempotency, performance, deployment safety, or live recovery.

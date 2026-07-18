@@ -2,31 +2,33 @@
 
 ## Status
 
-Runtime Node Process-Supervisor Provider Adapter 001 is merged and post-merge verified.
+Runtime Synthetic Credential Boundary 001 candidate and evidence are complete.
 
-No next direction is approved or active.
-
-This file is an ordered operational queue, not doctrine, architecture, or a roadmap.
+The active merge decision is recorded only in `current-step.md`.
 
 ## Queue
 
-### 1. Choose one independently scoped direction
+### 1. If approved, merge the synthetic credential boundary package
 
-Eligible but unapproved options:
+Require:
 
-- credential-handling implementation
+- exact candidate head
+- combined successor 64 / 64
+- historical harness 11 / 11
+- repository regression PASS
+- zero production semantic changes
+- no real credential, persistent secret store, network, provider use, deployment, or external effect
+- explicit JavaScript erasure and trusted-consumer limits
+
+### 2. After merge, choose one independent direction
+
+- synthetic credential-to-provider projection investigation
+- real secret-store boundary investigation
 - live Node process-supervisor driver investigation
 - production deployment design
-- real consensus or distributed-store investigation
 
-Recommended next step:
+Each requires separate necessity analysis, tests, and approval.
 
-`credential-handling boundary investigation`
+### 3. Preserve adjacent gates
 
-It can establish custody, redaction, non-persistence, and least-disclosure behavior with synthetic secrets before any real provider, live driver, account, or deployment is selected.
-
-Each option requires its own necessity analysis, scope, tests, and explicit approval.
-
-### 2. Preserve adjacent gates
-
-No option automatically handles a real secret, proves provider idempotency or component recovery, establishes production readiness or consensus, deploys Runtime, or authorizes external effects.
+Candidate merge does not prove secure erasure, real credential safety, provider authentication, component recovery, production readiness, or consensus; deploy Runtime; or authorize external effects.

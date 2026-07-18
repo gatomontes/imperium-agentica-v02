@@ -8,6 +8,7 @@
     "./adapters/in-memory": "./src/in-memory-ports.mjs",
     "./adapters/file": "./src/file-store.mjs",
     "./coordination/deterministic": "./src/distributed-coordinator.mjs",
-    "./providers/node-process-supervisor": "./src/node-process-supervisor-adapter.mjs"
+    "./providers/node-process-supervisor": "./src/node-process-supervisor-adapter.mjs",
+    "./security/synthetic-credentials": "./src/synthetic-credential-broker.mjs"
   }
 }

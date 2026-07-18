@@ -2,54 +2,57 @@
 
 ## Status
 
-Runtime Node Process-Supervisor Provider Adapter 001 merged and post-merge verified on 2026-07-18.
-
-No active step.
-
-This file is operational continuity, not doctrine, architecture, or authority.
-
-## Merge Record
+Runtime Synthetic Credential Boundary 001 candidate completed on 2026-07-18.
 
 ```text
-Pull request: #23
-Squash commit: 5220147d179a8cae40b9a417bf0d50e4fb4282fc
-Rollback parent: 3bc2b7a8bb6a633bf23ededd2f01a38887ed4585
-Candidate head: 28fa5fc8095ed4e9cc4d71685afb1fc939b2ba99
-```
-
-Execution record:
-
-`drafts/runtime-node-process-provider-adapter-execution-001.md`
-
-## Verified Evidence
-
-```text
-Pre-adapter pressure: 4 PASS / 9 FAIL
-Corrected adapter pressure: 13 PASS / 0 FAIL
-Focused adapter tests: 12 PASS / 0 FAIL
-Preserved successor tests: 40 PASS / 0 FAIL
-Combined successor suite: 52 PASS / 0 FAIL
+Pre-boundary pressure: 2 PASS / 11 FAIL
+Corrected boundary pressure: 13 PASS / 0 FAIL
+Focused boundary tests: 12 PASS / 0 FAIL
+Preserved successor tests: 52 PASS / 0 FAIL
+Combined successor suite: 64 PASS / 0 FAIL
 Historical harness: 11 PASS / 0 FAIL
 Repository regression: PASS
 Production semantic files changed: 0
 ```
 
-## Adapter Status
+No real secret, environment variable, file, keychain, network, provider credential, deployment, production admission, or external effect.
 
-`@imperium-agentica/runtime-reference/providers/node-process-supervisor` is a stable nonproduction reference export.
+## Active Branch
 
-It binds `node-process-supervisor-reference` to an injected driver only. It is not a live provider, process controller, deployment mechanism, or production implementation.
+`agent/runtime-synthetic-credential-boundary-001`
 
-## Preserved Limits
+Rollback parent:
 
-- accepted driver request means operational dispatch only, not component recovery
-- effect identity is forwarded, but provider-side idempotency is not proven
-- no live subprocess, network, credential, database, deployment, or external effect
-- no Master Mason implementation, qualification, assignment, or decision mandate
-- no Authority registry, grant issuance, PB-001 ownership, or Procedure revision
+`a3ef39ac54036cad8b46cf334ba5fa5f24653192`
 
-## Next Gate
+## Candidate
 
-Choose one independently scoped security, live-driver, deployment, or distributed-store direction from `next-steps.md`.
+The stable private reference package gains:
 
-No direction is active by default.
+- `layers/runtime/reference/src/synthetic-credential-broker.mjs`
+- export `./security/synthetic-credentials`
+- one in-memory, synthetic-only, one-use broker boundary
+- twelve focused tests
+
+The broker accepts only synthetic bytes, transfers and shortens custody, binds one synchronous use to exact operational context, refuses replay, and records redacted lifecycle metadata without logging its capability handle.
+
+## Records
+
+- investigation: `drafts/runtime-synthetic-credential-boundary-001.md`
+- necessity: `drafts/runtime-synthetic-credential-boundary-necessity-analysis-001.md`
+- conformance plan: `drafts/runtime-synthetic-credential-boundary-conformance-plan-001.md`
+- pressure tests: `tests/runtime/runtime-synthetic-credential-boundary-pressure-tests-001.md`
+- baseline run: `tests/runtime/runtime-synthetic-credential-boundary-pressure-run-001.md`
+- corrected run: `tests/runtime/runtime-synthetic-credential-boundary-pressure-run-002.md`
+- repository regression: `tests/runtime/runtime-synthetic-credential-boundary-repository-regression-001.md`
+- candidate review: `tests/runtime/runtime-synthetic-credential-boundary-candidate-review-001.md`
+
+## Next Decision
+
+Decide whether to merge the nonproduction synthetic credential boundary evidence package.
+
+Merge would not handle a real credential, prove secure erasure, select a secret store, authenticate to a provider, deploy Runtime, or authorize external effects.
+
+## Stop Condition
+
+No candidate merge without explicit operator approval.
