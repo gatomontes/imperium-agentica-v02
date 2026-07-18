@@ -2,23 +2,23 @@
 
 ## Status
 
-Runtime Maintenance Artifact Closure 001 production staging is under verification.
+Runtime Maintenance Artifact Closure 001 production staging is verified.
 
 This file is an ordered operational queue, not doctrine, architecture, or a roadmap.
 
 ## Queue
 
-### 1. Complete and record staging verification
+### 1. Review the draft production-admission pull request
 
-Require 53 / 53 manifest resolution, seven / seven canonical targets, clean production citations/status, unchanged AB-003 and PB-001, unchanged unaffected Runtime contracts, focused 15 / 15, convergence 35 / 35, empirical 11 / 11, repository regression PASS, and branch behind main by zero.
+Confirm the exact seven semantic targets, 53 / 53 manifests, unchanged AB-003 and PB-001 trees, unchanged unaffected Runtime contracts, verification evidence, rollback parent, and preserved non-admissions.
 
-### 2. Open a draft production-admission pull request
+### 2. Require explicit approval for atomic production admission
 
-The pull request must identify rollback parent `491b9512fb562570c227157dc6568d8cb5b10200`, exact scope, verification evidence, preserved non-admissions, and the separate merge gate.
+Only a separately approved, head-protected squash merge may admit CB-005, PRB-003, and RTB-002 to main.
 
-### 3. Require explicit approval for atomic production admission
+### 3. After an approved merge, verify main independently
 
-No squash merge or post-merge admission record without explicit operator approval after review of the verified staging tree.
+Record rollback parent, squash SHA, 53 / 53 manifests, seven / seven canonical targets, historical source status, clean production dependencies, unchanged trees, all evidence results, and preserved non-admissions.
 
 ### 4. After closure, choose one independently scoped Runtime direction
 
