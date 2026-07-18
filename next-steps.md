@@ -4,61 +4,51 @@
 
 No active step.
 
-Master Mason, Compass, and Praetorium Investigation 001 is complete.
+Mason Operator Model 001 awaits operator review.
 
 This file is an ordered operational queue, not doctrine, architecture, or a roadmap.
 
 ## Queue
 
-### 1. Decide the Master Mason candidate
+### 1. Decide the corrected Mason model
 
-Recommended approval scope:
+Recommended:
 
-- minimal Imperium-scope Cognitive role draft
-- decision-authority origin and specialization investigation
-- theoretical pressure and affected convergence
+- accept Mason as Runtime operator/mechanic candidate
+- preserve routine maintenance versus structural-decision boundary
+- merge draft PR #6
 
-No persona, Officer admission, placement, institution, or production baseline is implied.
+No production admission is implied.
 
-### 2. If approved, define and pressure Master Mason responsibility
+### 2. If approved, prepare a minimal empirical Runtime harness
 
-The draft must define:
+The harness must test the candidate contracts without becoming a production Runtime.
 
-- structural and semantic-compatibility judgment
-- Control-Plane Situation assembly
-- affected-mission and unresolved-effect assessment
-- compatibility findings
-- competence and counsel limits
-- advisory versus executive behavior
-- exact handoff to Runtime
-- prohibited mission and Runtime overreach
+Minimum behaviors:
 
-Activation condition: explicit operator approval.
+- bounded component activation and deactivation
+- worker or queue blockage without semantic-intent deletion
+- resource exhaustion and bounded tuning
+- crash before and after consequential dispatch
+- duplicate delivery and concurrent attempts
+- stale or withdrawn CONTROL_PLANE Authority
+- exact-instruction versus bounded-discretion modes
+- indeterminate effect quarantine
+- incompatible state migration and rollback refusal
+- Runtime Observation Envelope production
+- conformance against at least one admitted PRB-001 Procedure
+- Mason diagnosis, intervention, restoration, and escalation paths
 
-### 3. Investigate Master Mason decision authority in parallel
+Activation condition: separate implementation approval after PR #6 merge.
 
-Test whether a deciding Master Mason requires:
+### 3. Reassess candidate admission only after empirical evidence
 
-- a specialized executive mandate
-- a new authority-grant profile
-- or a bounded specialization of an existing decision profile
-
-Preserve:
-
-```text
-decision authority ≠ CONTROL_PLANE action authority
-qualification ≠ authority
-decision ≠ execution
-```
+Runtime, Mason, CONTROL_PLANE Authority, and Runtime Maintenance Procedure remain candidates until real failure and recovery evidence exists.
 
 ### 4. Keep Compass parked
 
-Reactivate only if repeated assessments or empirical implementation demonstrate a stable cross-layer orientation operation that the Plan, Observation Envelope, conformance method, PB-001, and Master Mason assessment cannot supply separately.
+Reactivate only if a distinct reusable orientation mechanism emerges beyond current Plan, observations, conformance method, and Mason diagnosis.
 
-### 5. Keep Praetorium reserved
+### 5. Keep Praetorium parked
 
-Reactivate only when persistent admission, holding, placement, reuse, or multiple Imperium Officer roles demonstrate an outer-echelon institution.
-
-### 6. Authorize a minimal reference implementation only after dependency closure
-
-The empirical harness remains separately gated and must not begin merely because the Master Mason role is approved.
+Mason as an operator/mechanic does not demonstrate an Imperium Officer corps or holding institution.
