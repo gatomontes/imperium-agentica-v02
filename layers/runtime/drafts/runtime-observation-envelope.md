@@ -6,6 +6,8 @@ Candidate Runtime draft.
 
 Not admitted or implemented.
 
+Revision: Runtime Draft Correction 001 after Pressure Run 001.
+
 ## Purpose
 
 Define the meaning and minimum content of a durable statement about Runtime's own operating behavior.
@@ -49,35 +51,44 @@ Durability does not make the observation canonical mission truth.
 
 ## Minimum Envelope
 
-A durable Runtime observation must contain:
+Every durable Runtime observation requires:
 
 ```text
 Observation identity
 Observation contract version
 Operational observation class and result
 Observed Runtime component or boundary
-Mission identity when applicable
-Non-mission scope identity when applicable
 Subject identity
-Realization identity
-Attempt identity when applicable
-Effect identity when applicable
-Parent observation or attempt reference
-Implementation, adapter, and semantic-mapping versions
-Controlling semantic-contract identities and versions
-Recorded Authority finding reference
-Recorded Provenance correlation finding reference
-Procedure branch and transition reference when applicable
-Start, dispatch, and observation times when applicable
-Clock source and known clock limitation
+Implementation and semantic-mapping versions
+Observation time and clock source
 Operational details necessary to interpret the result
-Indeterminate-effect flag and quarantine reference when applicable
 Secret-redaction status
 Producer responsibility and Runtime component
-PB-001 lineage and transfer references
+PB-001 lineage references
 Known gaps, contest, or loss
 Explicit semantic disclaimer
 ```
+
+Conditional fields are required when applicable:
+
+```text
+Mission identity or bounded non-mission scope identity
+Realization identity
+Attempt identity
+Effect identity
+Parent observation or attempt reference
+Adapter version
+Controlling semantic-contract identities and versions
+Recorded Authority finding reference when the observed action required authority
+Recorded Provenance correlation finding reference when exact correlation applied
+Procedure branch and transition reference when a Procedure was being realized
+Start and dispatch times
+Known clock limitation
+Indeterminate-effect flag and quarantine reference
+Transfer, transformation, and supersession references
+```
+
+Inapplicability must be explicit when omission could be confused with missing data.
 
 The semantic disclaimer states that the envelope records operational behavior and is not itself a Cognitive, Authority, Provenance, Procedure, proof, completion, or mission finding.
 
@@ -140,13 +151,15 @@ When an envelope is transformed, transferred, aggregated, corrected, or supersed
 
 ## Authority Boundary
 
-The envelope may record the Authority finding cited at dispatch.
+The envelope may record the Authority finding cited at dispatch when the observed action required authority.
 
 It does not establish that the finding was valid, effective, or sufficient. Successful execution does not cure an unauthorized action.
 
+A purely local diagnostic observation does not manufacture an Authority reference merely to satisfy the envelope.
+
 ## Procedure Boundary
 
-The envelope may record which Procedure transition Runtime attempted to realize.
+The envelope may record which Procedure transition Runtime attempted to realize when applicable.
 
 Operational completion does not establish that the semantic transition completed. Procedure and its native actors determine the required next semantic step.
 
