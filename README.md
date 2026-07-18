@@ -129,11 +129,12 @@ A future LLM session should read the repository in this order:
 14. `layers/procedure/drafts/` — retained Procedure source drafts, only for traceability.
 15. `layers/runtime/README.md` — admitted Runtime boundary and RTB-002 navigation.
 16. `layers/runtime/production/` — admitted Runtime Baseline `RTB-002`, when Runtime semantics are relevant.
-17. `layers/runtime/drafts/` — retained Runtime source drafts, only for traceability.
-18. `layers/cognitive/drafts/` — retained or unproven Cognitive revisions, only if relevant.
-19. `tests/` — theoretical and empirical suites with immutable run records, only when testing or tracing.
-20. `ideas.md` — raw pre-draft candidates, only if needed.
-21. `drafts/` — cross-layer working analyses, only if relevant to the current step.
+17. `layers/runtime/reference/` — stable nonproduction executable Runtime reference, when implementation evidence is relevant.
+18. `layers/runtime/drafts/` — retained Runtime source drafts, only for traceability.
+19. `layers/cognitive/drafts/` — retained or unproven Cognitive revisions, only if relevant.
+20. `tests/` — theoretical and empirical suites with immutable run records, only when testing or tracing.
+21. `ideas.md` — raw pre-draft candidates, only if needed.
+22. `drafts/` — cross-layer working analyses, only if relevant to the current step.
 
 Do not reconstruct intent from chat history before reading these files.
 
@@ -213,6 +214,7 @@ The admitted Runtime boundary and baseline use:
 ```text
 /layers/runtime/drafts
 /layers/runtime/production
+/layers/runtime/reference
 /tests/runtime
 ```
 
