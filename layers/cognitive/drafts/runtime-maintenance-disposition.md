@@ -8,6 +8,16 @@ Working name under `Runtime Maintenance Artifact Closure 001`.
 
 Not admitted. CB-004 remains canonical.
 
+## Candidate Dependencies
+
+- Master Mason: `layers/cognitive/drafts/master-mason.md`
+- Runtime Operational Diagnosis: `layers/cognitive/drafts/runtime-operational-diagnosis.md`
+- Runtime Maintenance Procedure: `layers/procedure/drafts/runtime-maintenance-procedure.md`
+- CONTROL_PLANE Authority: `layers/authority/production/runtime-control-plane-authority-profile.md`
+- PB-001 provenance: `layers/provenance/production/provenance-contract.md`
+- Runtime Realization and Dispatch: `layers/runtime/production/runtime-realization-and-dispatch-contract.md`
+- candidate Runtime Control-Plane revision: `layers/runtime/drafts/runtime-control-plane-contract.md`
+
 ## Native Responsibility
 
 Master Mason produces the Runtime Maintenance Disposition after the applicable Procedure and Authority eligibility gates have been evaluated.
