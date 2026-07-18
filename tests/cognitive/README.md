@@ -31,3 +31,21 @@ diagnosis ≠ maintenance disposition
 maintenance disposition ≠ Runtime plan
 mechanical restoration ≠ mission success
 ```
+
+## Active Operative Creation Handoff Candidate
+
+- baseline pressure: 5 PASS / 10 FAIL
+- corrected pressure: 15 PASS / 0 FAIL
+- cross-layer convergence: 12 PASS / 0 FAIL
+- preserved Runtime successor suite: 91 PASS / 0 FAIL
+- repository regression: PASS
+
+Candidate distinctions:
+
+```text
+provider-neutral handoff contract ≠ target-neutral Operative
+HANDOFF_CONFORMANT ≠ Operative lifecycle state
+Operative handoff ≠ mission binding
+Operative handoff ≠ READY_FOR_LAUNCH
+requirements ≠ grants or credential values
+```

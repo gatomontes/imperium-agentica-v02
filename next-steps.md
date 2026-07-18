@@ -4,7 +4,7 @@
 
 The synthetic credential/store evidence leg is merged, complete, and post-merge verified.
 
-No next leg is approved or active.
+Track A0 is approved and has an active draft candidate. Candidate merge remains gated.
 
 The operator approved a sequencing refinement:
 
@@ -14,11 +14,11 @@ The operator approved a sequencing refinement:
 
 This file remains a non-binding ordered operational forecast. It is not doctrine, admitted architecture, authority, a calendar commitment, or a production-readiness claim.
 
-## Working-Label Boundary
+## Admitted-Meaning Boundary
 
-`Castellan` and `Guildhall` are directional working labels for candidate behaviors.
+`Castellan` and `Guildhall` are already admitted Cognitive artifacts with bounded responsibilities under CB-005.
 
-They are not admitted institutions, roles, services, owners, or authorities. Their names survive only if repeated evidence demonstrates stable, independently necessary behavior.
+Their admitted meanings do not by themselves instantiate deployed services, autonomous authorities, or Runtime components.
 
 ## Estimation Rule
 
@@ -41,10 +41,10 @@ Deployment implementation pauses after the handoff seam is proven.
 
 | Order | Approximate leg | What it must establish | Evidence increments | Approximate merges |
 |---:|---|---|---:|---:|
-| A0 | Creation-to-deployment handoff seam | immutable operative identity/version, provenance and authority references, capability/constraint manifest, dependency/resource/secret requirements, validation evidence, and a target-neutral `READY_FOR_DEPLOYMENT` state | 1–2 | 2–4 |
-| A1 | Castellan-side operative specification | bounded intent, required capabilities, constraints, acceptance conditions, authority citation, and refusal/escalation behavior without constructing or deploying an operative | 2–3 | 4–6 |
-| A2 | Guildhall-side construction and validation | transform an approved specification into a versioned operative artifact; deterministic assembly, validation, rejection, repair, and evidence without deployment | 3–5 | 6–10 |
-| A3 | Creation closure and handoff conformance | cross-flow provenance, artifact immutability, reproducibility, readiness classification, and proof that deployment can consume the artifact without rewriting creation semantics | 1–2 | 2–4 |
+| A0 | Creation-to-deployment handoff seam | exact medium-specific Operative identity/version, provenance and applicable authority references, preservation/deviation findings, dependency/resource/secret-class requirements, validation evidence, and a provider-neutral handoff assessment that creates no Operative readiness state | 1–2 | 2–4 |
+| A1 | Castellan-side mission and work specification | bounded Mission Need, approved Work Specification, required capability, constraints, acceptance conditions, authority citation, and refusal/escalation without defining a profession or constructing an Operative | 2–3 | 4–6 |
+| A2 | Guildhall-to-Conscription resolution and recruitment | resolve Profession Specification and admitted Persona, then transform that Persona into a versioned deployment-medium-specific Operative; test selection, referral, preservation, deviation, rejection, repair, and evidence without mission assembly or deployment | 3–5 | 6–10 |
+| A3 | Creation closure and handoff conformance | cross-flow provenance, artifact versioning, reproducibility, handoff classification, and proof that downstream consumers can inspect the Operative without rewriting creation semantics | 1–2 | 2–4 |
 
 Approximate remaining size to finish the operative-creation track:
 
@@ -53,7 +53,7 @@ Approximate remaining size to finish the operative-creation track:
 14–24 merges
 ```
 
-Track A is complete only when the creation flow produces a validated, immutable, target-neutral operative artifact and the handoff contract passes pressure. It does not deploy or activate the operative.
+Track A is complete only when the creation flow produces a validated, versioned, deployment-medium-specific Operative and the provider-neutral handoff contract passes pressure. It does not bind a mission, declare `READY_FOR_LAUNCH`, deploy, or activate the Operative.
 
 ## Track B — Operative Deployment, Parked
 
@@ -92,9 +92,9 @@ These are planning ranges, not targets. A leg may contract when existing evidenc
 
 ## Recommended Next Leg
 
-`operative creation-to-deployment handoff contract investigation`
+`operative creation-to-deployment handoff contract investigation` — active candidate
 
-This should define the smallest target-neutral artifact boundary needed to let operative creation finish without depending on a provider, store, live Runtime, or deployment mechanism.
+This defines the smallest provider-neutral assessment boundary for one exact deployment-medium-specific Operative without depending on a provider, store, live Runtime, or deployment mechanism.
 
 Expected size:
 
@@ -103,7 +103,7 @@ Expected size:
 2–4 merges
 ```
 
-Starting this leg requires a new necessity analysis, bounded scope, pressure plan, and explicit operator approval.
+Candidate merge requires explicit operator approval. If merged, a separate execution-record merge remains required before A0 closure is evaluated.
 
 ## Preserved Gates
 
