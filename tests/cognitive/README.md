@@ -13,9 +13,9 @@ Theoretical Cognitive scenarios, constitutional tests, and immutable run records
 
 - `master-mason-compass-praetorium-run-001.md` — 28 PASS / 0 FAIL against a superseded executive Master Mason interpretation
 
-The operator clarified that Mason is intended as Runtime operator/mechanic.
+The operator clarified that Master Mason is intended as Runtime operator/mechanic.
 
-## Current Mason Evidence
+## Current Master Mason Evidence
 
 - `runtime-control-plane-responsibility-origin-run-001.md` — 10 PASS / 0 FAIL
 - `mason-operator-tests-001.md` — 40 scenarios
@@ -26,14 +26,14 @@ The operator clarified that Mason is intended as Runtime operator/mechanic.
 ## Proven Distinctions
 
 ```text
-Mason operates Runtime ≠ Mason is Runtime
+Master Mason operates Runtime ≠ Master Mason is Runtime
 diagnosis ≠ Runtime state
 diagnosis ≠ Authority
 bounded maintenance ≠ structural decision
 mechanical restoration ≠ mission success
 Imperium scope ≠ Citadel placement
-Mason candidate ≠ persona or Officer
-Mason scope ≠ Praetorium admitted
+Master Mason candidate ≠ persona or Officer
+Master Mason scope ≠ Praetorium admitted
 ```
 
 CB-003 remains unchanged.
