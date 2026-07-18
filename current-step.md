@@ -2,13 +2,56 @@
 
 ## Status
 
-Runtime Production Admission 001 completed and post-merge verified on 2026-07-18.
+Runtime Maintenance Artifact Closure 001 is active as of 2026-07-18.
 
-No active step.
+No production admission has occurred.
 
 This file is operational continuity, not doctrine, architecture, or authority.
 
-## Admitted Production State
+## Active Investigation
+
+Record:
+
+`drafts/runtime-maintenance-artifact-closure-001.md`
+
+Branch:
+
+`agent/runtime-maintenance-artifact-closure-001`
+
+## Trigger
+
+Post-merge review of Runtime Production Admission 001 found that the admitted Runtime Maintenance Procedure requires an exact `Maintenance Instruction`, while Master Mason explicitly leaves the final contract for that Cognitive product unadmitted.
+
+Procedure may not originate artifact meaning. Runtime may not realize a transition with an undefined required artifact.
+
+## Core Question
+
+```text
+Which Master Mason artifacts require canonical Cognitive contracts
+to make the admitted Runtime maintenance path semantically closed?
+```
+
+## Candidate Artifact Family
+
+- Runtime Operating Situation
+- Runtime Operational Diagnosis
+- Maintenance Instruction
+- Maintenance Withholding Finding
+- Escalation Record
+
+The investigation must not assume that every named product requires a separate artifact or file.
+
+## Required Outcome
+
+- test necessity for each candidate
+- distinguish Maintenance Instruction from Runtime Control-Plane Plan
+- distinguish withholding from diagnosis, Authority refusal, Runtime refusal, and procedural exit
+- identify exact native ownership and cross-layer dependencies
+- define the smallest dependency-closed correction
+- identify required baseline revisions and pressure tests
+- recommend admission, consolidation, deferral, or rejection for each candidate
+
+## Preserved Production State
 
 ```text
 Cognitive: CB-004 — 34 / 34
@@ -18,37 +61,15 @@ Procedure: PRB-002 — 5 / 5
 Runtime: RTB-001 — 3 / 3
 ```
 
-## Merge Record
-
-```text
-Pull request: #10
-Squash commit: 1e39c967e8d3e9522c8538ca95d73c7420526b2f
-Rollback parent: 6e32f0c1f43a7ef83e55de276664daedc7051ab8
-Post-merge manifests: 51 / 51
-Canonical targets: 7 / 7
-```
-
-Record:
-
-`drafts/runtime-production-admission-execution-001.md`
-
-## Evidence
-
-```text
-Empirical corrected run: 11 PASS / 0 FAIL
-Admission pressure: 55 PASS / 0 FAIL
-Admission convergence: 30 PASS / 0 FAIL
-Post-merge verification: PASS
-```
-
 ## Preserved Limits
 
-- semantic admission is not Runtime deployment or instantiation
-- no credentials, providers, services, infrastructure, autonomous repair, or live effects
-- simulated evidence is not distributed-systems proof
-- Master Mason is not yet instantiated, assigned, or placed in an institution
+- no Master Mason instantiation, qualification, assignment, persona, Officer class, or institution
+- no Runtime implementation, deployment, credentials, providers, services, or external effects
+- no real CONTROL_PLANE grant
+- no autonomous diagnosis or repair
+- no universal Artifact, Proof, or Ownership layer
 - Compass and Praetorium remain parked
 
-## Next Gate
+## Stop Condition
 
-Any concrete Runtime implementation, Master Mason instantiation, or real CONTROL_PLANE grant requires a separately approved investigation.
+No production revision or admission without separate operator approval.
