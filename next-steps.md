@@ -2,25 +2,35 @@
 
 ## Status
 
-No active step.
+Runtime Boundary Investigation 001 is active in `current-step.md`.
 
 This file is an ordered operational queue, not doctrine, architecture, or a roadmap.
 
 ## Queue
 
-### 1. Begin Runtime boundary investigation
+### 1. Pressure-test the candidate Runtime boundary
 
-Activation condition: explicit operator approval.
+Test:
 
-The investigation must begin from the admitted parallel baselines:
+- semantic state versus operational state
+- Procedure versus state-machine realization
+- Authority findings versus runtime enforcement
+- Provenance versus logging and telemetry
+- artifact meaning versus schemas and serialization
+- retries, replay, crash recovery, concurrency, and external side effects
+- credentials and provider adapters
+- execution observations and return handling
 
-- Cognitive `CB-003`
-- Authority `AB-002`
-- Provenance `PB-001`
-- Procedure `PRB-001`
+### 2. Submit the Runtime boundary finding for operator review
 
-Runtime must implement admitted meanings without originating Cognitive, Authority, Provenance, Procedure, artifact, proof, or ownership semantics.
+Possible outcomes:
 
-### 2. Reconsider Vellum only if a record gap appears
+- reject Runtime as an independent concern
+- continue investigation with explicit gaps
+- approve a candidate Runtime layer for draft-contract development
+
+No outcome admits Runtime production.
+
+### 3. Reconsider Vellum only if a record gap appears
 
 Activation condition: a scenario demonstrates a canonical record behavior existing artifacts cannot preserve.
