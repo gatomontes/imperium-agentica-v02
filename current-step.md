@@ -2,11 +2,11 @@
 
 ## Status
 
-Runtime and Master Mason draft package merged and post-merge verified on 2026-07-18.
+Runtime Empirical Harness 001 completed on a review branch on 2026-07-18.
 
-No active step.
+No production admission has occurred.
 
-Awaiting separate operator approval for a minimal empirical Runtime test harness.
+Awaiting operator review of the empirical evidence and decision whether to begin admission preparation.
 
 This file is operational continuity, not doctrine, architecture, or authority.
 
@@ -20,42 +20,48 @@ Procedure: PRB-001 — 3 / 3
 Runtime: unadmitted and empty
 ```
 
-## Merge Record
+## Empirical Scope
 
-```text
-Pull request: #6
-Squash commit: fc6699efb8b1a3bf62d69d1b707b40890518e634
-Rollback parent: 73b2b9cf14ab5c57d2091a245a7926e039a18e4a
-```
+The dependency-free Node harness uses simulated effects only. It exercises:
 
-Record:
-
-`drafts/runtime-master-mason-draft-merge-record-001.md`
-
-## Verified Candidate State
-
-- Master Mason is the canonical Runtime operator/mechanic role name
-- `Mason` is conversational shorthand only
-- Master Mason is inside Imperium, outside Citadel, adjacent to Runtime
-- routine mechanical discretion remains bounded by Procedure and CONTROL_PLANE Authority
-- structural and semantic-risk decisions remain with the external operator
-- Compass and Praetorium remain parked
-- Runtime production remains empty
+- bounded activation and deactivation
+- blockage without semantic-intent deletion
+- bounded resource tuning
+- crash and indeterminate-effect handling
+- duplicate-effect refusal
+- dispatch-time Authority freshness
+- exact-instruction and bounded-discretion modes
+- migration and rollback refusal
+- Runtime Observation Envelopes
+- PRB-001 state-machine conformance
+- Master Mason diagnosis, restoration, withholding, and escalation
 
 ## Evidence
 
 ```text
-Runtime boundary corrected pressure: 40 PASS / 0 FAIL
-Runtime draft corrected pressure: 60 PASS / 0 FAIL
-State-machine conformance method: 15 PASS / 0 FAIL
-Runtime draft convergence: 24 PASS / 0 FAIL
-Master Mason operator pressure: 40 PASS / 0 FAIL
-Master Mason–Runtime convergence: 20 PASS / 0 FAIL
-Master Mason placement: 12 PASS / 0 FAIL
+Initial empirical run: 10 PASS / 1 FAIL
+Corrected empirical run: 11 PASS / 0 FAIL
 ```
+
+The initial failure exposed a real boundary defect: component blockage also blocked the recovery control intended to clear it.
+
+The correction separates the managed component from its control surface. Recovery and deactivation may cross the blockage gate only when every remaining Authority, Procedure, correlation, identity, and indeterminate-effect condition passes.
+
+Record:
+
+`tests/runtime/runtime-empirical-run-001.md`
+
+## Preserved Limits
+
+- simulated effects only
+- no credentials or provider integrations
+- no deployment infrastructure
+- no autonomous repair
+- no production Runtime
+- no proof of distributed mutual exclusion, durability, performance, or live recovery
 
 ## Next Eligible Step
 
-Prepare a minimal empirical Runtime harness only with explicit operator approval.
+Review the empirical evidence.
 
-The harness must test real operating failure and recovery behavior without becoming a production Runtime or executing real external integrations.
+If approved, prepare an admission candidate for Runtime, Master Mason, CONTROL_PLANE Authority, and Runtime Maintenance Procedure. Empirical success does not itself admit any of them.
