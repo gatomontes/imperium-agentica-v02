@@ -4,6 +4,8 @@
 
 Draft native-artifact index extracted from CB-002.
 
+Not admitted. CB-002 production remains canonical.
+
 Origin: `layers/cognitive/production/production-artifacts.md`.
 
 This is a catalog, not a procedure and not a central Artifact layer.
