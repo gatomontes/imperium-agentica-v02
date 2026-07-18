@@ -2,7 +2,26 @@
 
 ## Status
 
-Runtime Single-Node Durability 001 candidate completed on 2026-07-18.
+Runtime Single-Node Durability 001 candidate evidence merged and post-merge verified on 2026-07-18.
+
+No active step.
+
+This file is operational continuity, not doctrine, architecture, or authority.
+
+## Merge Record
+
+```text
+Pull request: #17
+Squash commit: 9bf7cbdf7307d37d5fc0c9adc5a0596fedc6b151
+Rollback parent: b4c22cd45496e347ba2ccda48e8c6b76eae93a76
+Candidate head: 83a1f42a784ecabbb5f83f9a43925c3fbcf24637
+```
+
+Execution record:
+
+`drafts/runtime-single-node-durability-execution-001.md`
+
+## Verified Evidence
 
 ```text
 Pre-extension durability pressure: 3 PASS / 10 FAIL
@@ -15,43 +34,23 @@ Repository regression: PASS
 Production semantic files changed: 0
 ```
 
-No production admission, deployment, database, network, credentials, providers, services, distributed mechanism, or external effects.
+## Candidate Status
 
-## Active Branch
+`tests/runtime/reference-implementation-001/src/file-store.mjs` is merged as noncanonical, test-scoped single-node filesystem evidence.
 
-`agent/runtime-single-node-durability-001`
+It is not a production durability implementation or stable package placement.
 
-Rollback parent:
+## Preserved Limits
 
-`b4c22cd45496e347ba2ccda48e8c6b76eae93a76`
+- no production durability, cross-platform power-loss, multi-process failover, or distributed-correctness proof
+- no provider idempotency, credential safety, performance, deployment safety, or live-recovery proof
+- no Master Mason implementation, qualification, assignment, or decision mandate
+- no Authority registry, grant issuance, or PB-001 semantic ownership
+- no Procedure revision
+- no network, provider, credential, database, service, framework, deployment, or external effect
 
-## Candidate
+## Next Gate
 
-The noncanonical reference implementation gains:
+Choose one independently scoped evidence or placement direction from `next-steps.md`.
 
-- `tests/runtime/reference-implementation-001/src/file-store.mjs`
-- a minimal shared store interface
-- `tests/runtime/reference-implementation-001/test/file-store.test.mjs`
-
-It demonstrates append-and-fsync journaling, one in-process writer per directory, exact reconstruction, corrupt-history refusal, and indeterminate-effect quarantine after restart.
-
-## Records
-
-- investigation: `drafts/runtime-single-node-durability-001.md`
-- necessity: `drafts/runtime-single-node-durability-necessity-analysis-001.md`
-- conformance plan: `drafts/runtime-single-node-durability-conformance-plan-001.md`
-- pressure tests: `tests/runtime/runtime-single-node-durability-pressure-tests-001.md`
-- baseline run: `tests/runtime/runtime-single-node-durability-pressure-run-001.md`
-- corrected run: `tests/runtime/runtime-single-node-durability-pressure-run-002.md`
-- repository regression: `tests/runtime/runtime-single-node-durability-repository-regression-001.md`
-- candidate review: `tests/runtime/runtime-single-node-durability-candidate-review-001.md`
-
-## Next Decision
-
-Decide whether to merge the noncanonical durability evidence package.
-
-Merge would not establish production durability or authorize stable placement, deployment, providers, credentials, distributed operation, or external effects.
-
-## Stop Condition
-
-No candidate merge without explicit operator approval.
+No direction is active by default.
