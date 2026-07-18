@@ -2,49 +2,49 @@
 
 ## Status
 
-Runtime Maintenance Artifact Closure 001 production staging verified on 2026-07-18.
+Runtime Maintenance Artifact Closure 001 completed and post-merge verified on 2026-07-18.
+
+No active step.
+
+This file is operational continuity, not doctrine, architecture, or authority.
+
+## Merge Record
 
 ```text
-Manifest resolution: 53 / 53
+Pull request: #13
+Squash commit: df69551606a0552edccf81736dab4bcfed020a29
+Rollback parent: 491b9512fb562570c227157dc6568d8cb5b10200
+Staging head: cdb0e5f5748d98ab8ae86910d04bf9a985a8049e
+```
+
+Execution record:
+
+`drafts/runtime-maintenance-production-admission-execution-001.md`
+
+## Admitted Production State
+
+```text
+Cognitive: CB-005 — 36 / 36
+Authority: AB-003 — 6 / 6 unchanged
+Provenance: PB-001 — 3 / 3 unchanged
+Procedure: PRB-003 — 5 / 5
+Runtime: RTB-002 — 3 / 3
+Total: 53 / 53
 Canonical semantic targets: 7 / 7
+```
+
+## Verification
+
+```text
 Focused pressure: 15 / 15
 Repository regression: PASS
 Admission convergence: 35 / 35
-Empirical harness: 11 / 11
+Post-merge empirical harness: 11 / 11
+Production dependencies: clean
+Historical source drafts: 7 / 7
 AB-003 and PB-001: byte-unchanged
 Unaffected Runtime contracts: byte-unchanged
-Branch behind main: 0
 ```
-
-Rollback parent:
-
-`491b9512fb562570c227157dc6568d8cb5b10200`
-
-Active branch:
-
-`agent/runtime-maintenance-production-admission-001`
-
-Verification record:
-
-`tests/runtime/runtime-maintenance-production-staging-verification-001.md`
-
-No production merge, deployment, implementation, assignment, grant, credential, provider action, or external effect has occurred.
-
-## Staged Transition
-
-```text
-CB-004 → CB-005: 34 → 36
-AB-003 unchanged: 6
-PB-001 unchanged: 3
-PRB-002 → PRB-003: 5
-RTB-001 → RTB-002: 3
-```
-
-## Next Decision
-
-Review the draft production-admission pull request and decide whether to authorize one head-protected squash merge.
-
-Staging approval and verification do not authorize that merge.
 
 ## Preserved Limits
 
@@ -56,6 +56,8 @@ Staging approval and verification do not authorize that merge.
 - no universal Artifact, Proof, or Ownership layer
 - Compass and Praetorium remain parked
 
-## Stop Condition
+## Next Gate
 
-Stop before production squash merge until explicit operator approval.
+Choose one independently scoped Runtime direction from `next-steps.md`.
+
+No candidate direction is active by default.
