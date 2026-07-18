@@ -125,10 +125,10 @@ A future LLM session should read the repository in this order:
 10. `layers/provenance/production/` — admitted Provenance Baseline `PB-001`, when provenance is relevant.
 11. `layers/provenance/drafts/` — shaped but unproven provenance contracts, only if relevant.
 12. `layers/procedure/README.md` — admitted reduced Procedure boundary, when procedural work is relevant.
-13. `layers/procedure/production/` — admitted Procedure Baseline `PRB-002`.
+13. `layers/procedure/production/` — admitted Procedure Baseline `PRB-003`.
 14. `layers/procedure/drafts/` — retained Procedure source drafts, only for traceability.
-15. `layers/runtime/README.md` — admitted Runtime boundary and RTB-001 navigation.
-16. `layers/runtime/production/` — admitted Runtime Baseline `RTB-001`, when Runtime semantics are relevant.
+15. `layers/runtime/README.md` — admitted Runtime boundary and RTB-002 navigation.
+16. `layers/runtime/production/` — admitted Runtime Baseline `RTB-002`, when Runtime semantics are relevant.
 17. `layers/runtime/drafts/` — retained Runtime source drafts, only for traceability.
 18. `layers/cognitive/drafts/` — retained or unproven Cognitive revisions, only if relevant.
 19. `tests/` — theoretical and empirical suites with immutable run records, only when testing or tracing.
@@ -169,7 +169,7 @@ The default home for shaped but unproven artifacts is:
 /drafts
 ```
 
-Layer-specific artifacts live within their layer. The admitted cognitive baseline is `CB-004`. Cognitive artifacts use:
+Layer-specific artifacts live within their layer. The admitted cognitive baseline is `CB-005`. Cognitive artifacts use:
 
 ```text
 /layers/cognitive/drafts
@@ -218,7 +218,7 @@ The admitted Runtime boundary and baseline use:
 
 Runtime is the operating machinery that realizes cited contracts through actual state and effects. It is not synonymous with code and does not own semantic contracts merely because they are encoded in software.
 
-Cognitive Baseline `CB-004`, Authority Baseline `AB-003`, Provenance Baseline `PB-001`, Procedure Baseline `PRB-002`, and Runtime Baseline `RTB-001` are admitted for current semantic use.
+Cognitive Baseline `CB-004`, Authority Baseline `AB-003`, Provenance Baseline `PB-001`, Procedure Baseline `PRB-003`, and Runtime Baseline `RTB-002` are admitted for current semantic use.
 
 `production` means admitted for current use, not permanent or implemented in software.
 
