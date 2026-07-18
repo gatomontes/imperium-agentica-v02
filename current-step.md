@@ -2,32 +2,30 @@
 
 ## Status
 
-Castellan Work Specification 001 merged and post-merge verified on 2026-07-18.
+Guildhall Profession Resolution 001 is the active A2.1 draft candidate.
 
-Track A1 is complete in two evidence increments.
+Track A1 is complete and recorded. Track A2 began under explicit operator instruction on 2026-07-18.
 
-No active step.
+No production semantics are admitted by this candidate.
 
 This file is operational continuity, not doctrine, architecture, or authority.
 
-## Merge Record
+## Candidate Scope
 
 ```text
-Pull request: #36
-Squash commit: 213dbd0e385a802bc332842941a9788067b0a9c4
-Rollback parent: bad1dcf90eb5144661734c93cadb0a7ab5161a0c
-Candidate head: 484b59721587665db34780a6b5dd3f5d7ba994ad
+Input: exact Mission Need and approved Work Specification versions
+Product: versioned Profession Specification
+Cognitive finding: PROFESSION_CONFORMANT / REFUSED / UNRESOLVED
+Handoff: exact conformant version becomes eligible for Garrison search
+Persona selection or construction: none
+Production admission: none
 ```
 
-Execution record:
-
-`drafts/castellan-work-specification-execution-001.md`
-
-## Verified Evidence
+## Candidate Evidence
 
 ```text
-Pre-candidate pressure: 9 PASS / 6 FAIL
-Corrected specification pressure: 15 PASS / 0 FAIL
+Pre-candidate pressure: 7 PASS / 8 FAIL
+Corrected profession-resolution pressure: 15 PASS / 0 FAIL
 Cross-layer convergence: 12 PASS / 0 FAIL
 Preserved Runtime successor suite: 91 PASS / 0 FAIL
 Repository regression: PASS
@@ -42,10 +40,10 @@ Production semantic files changed: 0
 - conformance remains distinct from approval
 - Guildhall retains profession resolution
 - Procedure retains handoff ordering
-- no live approval, production semantic change, Runtime implementation, deployment, or external effect
+- no live resolution, Garrison search, persona action, production semantic change, Runtime implementation, deployment, or external effect
 
 ## Next Gate
 
-Choose and explicitly approve Track A2 from `next-steps.md`.
+Approve or reject candidate merge.
 
-No direction is active by default.
+No merge is authorized by creation of this candidate.

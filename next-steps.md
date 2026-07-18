@@ -8,7 +8,7 @@ Track A0 is merged, complete, and post-merge verified.
 
 Track A1 is merged, complete, and post-merge verified in two evidence increments.
 
-No next leg is approved or active.
+Track A2 is approved. A2.1 Guildhall Profession Resolution has an active candidate.
 
 The operator approved a sequencing refinement:
 
@@ -47,7 +47,7 @@ Deployment implementation pauses after the handoff seam is proven.
 |---:|---|---|---:|---:|
 | A0 — complete | Creation-to-deployment handoff seam | exact medium-specific Operative identity/version, provenance and applicable authority references, preservation/deviation findings, dependency/resource/secret-class requirements, validation evidence, and a provider-neutral handoff assessment that creates no Operative readiness state | 1 completed | 2 completed |
 | A1 — complete | Castellan-side mission and work specification | bounded Mission Need, approved Work Specification, required capability, constraints, acceptance conditions, authority citation, and refusal/escalation without defining a profession or constructing an Operative | 2 completed | 4 completed |
-| A2 | Guildhall-to-Conscription resolution and recruitment | resolve Profession Specification and admitted Persona, then transform that Persona into a versioned deployment-medium-specific Operative; test selection, referral, preservation, deviation, rejection, repair, and evidence without mission assembly or deployment | 3–5 | 6–10 |
+| A2 — active | Guildhall-to-Conscription resolution and recruitment | resolve Profession Specification and admitted Persona, then transform that Persona into a versioned deployment-medium-specific Operative; test selection, referral, preservation, deviation, rejection, repair, and evidence without mission assembly or deployment | A2.1 candidate active; 3–5 total | 2 projected for A2.1; 6–10 total |
 | A3 | Creation closure and handoff conformance | cross-flow provenance, artifact versioning, reproducibility, handoff classification, and proof that downstream consumers can inspect the Operative without rewriting creation semantics | 1–2 | 2–4 |
 
 Approximate remaining size to finish the operative-creation track after A1:
@@ -96,18 +96,18 @@ These are planning ranges, not targets. A leg may contract when existing evidenc
 
 ## Recommended Next Leg
 
-`Guildhall profession resolution contract investigation`
+`Guildhall profession resolution contract` — active A2.1 candidate
 
-This should pressure how Guildhall derives one versioned Profession Specification from the exact Mission Need and approved Work Specification, including competence, legitimate practice boundaries, adjacent and excluded professions, evidence, escalation, risk, refusal/unresolved behavior, and suitability criteria without rewriting mission meaning or selecting a persona.
+This candidate pressures how Guildhall derives one versioned Profession Specification from the exact Mission Need and approved Work Specification, including competence, legitimate practice boundaries, adjacent and excluded professions, evidence, escalation, risk, refusal/unresolved behavior, PB-001 lineage, and suitability criteria without rewriting mission meaning or selecting a persona.
 
 Expected size:
 
 ```text
-1 evidence increment initially
-2 merges initially
+1 evidence increment
+2 merges
 ```
 
-Starting Track A2 requires a new necessity analysis, bounded scope, pressure plan, and explicit operator approval after this A1 execution record merges.
+Candidate merge requires explicit operator approval. Garrison suitability and persona-production branching remain inactive until A2.1 is merged and recorded.
 
 ## Preserved Gates
 

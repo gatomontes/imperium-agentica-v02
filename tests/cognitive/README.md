@@ -68,7 +68,7 @@ Mission Need outcome ≠ completion criterion
 FORMATION_CONFORMANT ≠ Runtime state
 ```
 
-## Active Castellan Work Specification Candidate
+## Merged Castellan Work Specification Evidence
 
 - baseline pressure: 9 PASS / 6 FAIL
 - corrected pressure: 15 PASS / 0 FAIL
@@ -84,4 +84,22 @@ SPECIFICATION_CONFORMANT ≠ APPROVE_WORK_SPECIFICATION
 authoring ≠ approval
 approval of version N ≠ approval of version N+1
 handoff eligibility ≠ automatic Procedure transition
+```
+
+## Active Guildhall Profession Resolution Candidate
+
+- baseline pressure: 7 PASS / 8 FAIL
+- corrected pressure: 15 PASS / 0 FAIL
+- cross-layer convergence: 12 PASS / 0 FAIL
+- preserved Runtime successor suite: 91 PASS / 0 FAIL
+- repository regression: PASS
+
+Candidate distinctions:
+
+```text
+operator-suggested profession ≠ resolved professional truth
+Profession Specification ≠ Canonical Persona
+PROFESSION_CONFORMANT ≠ persona availability or suitability
+Garrison search eligibility ≠ Garrison search
+profession resolution ≠ Procedure transition
 ```
