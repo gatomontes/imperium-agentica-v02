@@ -118,16 +118,54 @@ Then:
 4. create the Operative Release Record
 5. do not infer reuse authority
 
-### 6. Session End And Reporting
+### 6. Independent Post-Closure Branches
 
-After the required closure and release conditions:
+After `MISSION_CLOSED`, three branches may proceed independently under their own cited conditions.
+
+#### A. Release Branch
+
+Follow Section 5.
+
+The Muster Instance remains responsible until:
+
+- the Operative Release Record is complete, or
+- an authorized terminal instruction explicitly preserves the binding or unresolved release state
+
+Curia Session closure does not complete Muster's release responsibility.
+
+#### B. Session-End Branch
+
+After closure:
 
 1. end mission-specific Advisory Session Assignments
 2. close the mission-specific Curia Session
-3. end the Muster Instance after its release responsibility is complete
-4. preserve standing assignments
-5. prepare the Final Report from the Closure Record, final Curia Minute, and cited evidence
-6. deliver without altering substantive findings
+3. preserve standing assignments
+4. preserve the still-active Muster Instance reference when release remains pending
+
+Session end neither releases the binding nor erases unresolved work.
+
+#### C. Reporting And Delivery Branch
+
+After closure and with effective `REPORT_AND_DELIVER` authority:
+
+1. prepare the Final Report from the Closure Record, final Curia Minute, and cited evidence
+2. state whether release is complete, withheld, pending, or unresolved
+3. preserve outstanding provider operations, effects, obligations, and restrictions
+4. deliver without altering substantive findings
+
+Reporting does not wait for clean release merely to avoid reporting an unresolved condition.
+
+### 7. Correction And Supersession
+
+When a material error is found after closure:
+
+1. preserve the original Closure Record and any Release Record
+2. require competent, authorized review of the exact correction
+3. issue a superseding record under PB-001
+4. state whether prior release or reporting remains valid, contested, or requires a separately authorized consequence
+5. do not silently reopen the mission, restore a binding, reverse a release, or rewrite history
+
+A corrected record is not itself authority for new field action.
 
 ## Missing-Return Branch
 
