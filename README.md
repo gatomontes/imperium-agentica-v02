@@ -124,10 +124,12 @@ A future LLM session should read the repository in this order:
 9. `layers/provenance/README.md` — approved provenance boundary.
 10. `layers/provenance/production/` — admitted Provenance Baseline `PB-001`, when provenance is relevant.
 11. `layers/provenance/drafts/` — shaped but unproven provenance contracts, only if relevant.
-12. `layers/cognitive/drafts/` — shaped but unproven cognitive artifacts, only if relevant.
-13. `tests/` — theoretical suites and immutable run records, only when testing or tracing.
-14. `ideas.md` — raw pre-draft candidates, only if needed.
-15. `drafts/` — cross-layer working analyses, only if relevant to the current step.
+12. `layers/procedure/README.md` — candidate reduced Procedure boundary, when procedural work is relevant.
+13. `layers/procedure/drafts/` — shaped but unadmitted procedures, only if relevant.
+14. `layers/cognitive/drafts/` — shaped but unproven Cognitive revisions, only if relevant.
+15. `tests/` — theoretical suites and immutable run records, only when testing or tracing.
+16. `ideas.md` — raw pre-draft candidates, only if needed.
+17. `drafts/` — cross-layer working analyses, only if relevant to the current step.
 
 Do not reconstruct intent from chat history before reading these files.
 
@@ -192,7 +194,17 @@ Their theoretical tests use:
 /tests/provenance
 ```
 
-Authority Baseline `AB-001` and Provenance Baseline `PB-001` are admitted for current use.
+The candidate Procedure boundary and its unadmitted drafts use:
+
+```text
+/layers/procedure/drafts
+/layers/procedure/production
+/tests/procedure
+```
+
+Procedure means only what is supposed to happen, in what order, under which conditions. It may cite but may not originate responsibility, authority, provenance, artifact meaning, proof, ownership, or runtime.
+
+Authority Baseline `AB-001` and Provenance Baseline `PB-001` are admitted for current use. Procedure has no admitted production baseline.
 
 `production` means admitted for current use, not permanent or implemented in software.
 
