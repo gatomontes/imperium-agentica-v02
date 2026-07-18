@@ -213,3 +213,9 @@ Expected: Procedure defines no retry timer or service behavior; Runtime must pre
 Closure is complete, but release is still pending.
 
 Expected: lifecycle permits reporting as a branch after closure rather than requiring release first.
+
+### PRP-035 — Formation Without Authority
+
+A Petition and proposed Mission Identity exist, but no effective authority permits mission formation or Work Specification approval.
+
+Expected: identity allocation does not approve formation; the lifecycle blocks the authority-bearing transition.
