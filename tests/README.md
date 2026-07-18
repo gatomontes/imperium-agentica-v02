@@ -4,7 +4,7 @@
 
 Theoretical and empirical specifications, immutable run records, regression evidence, and admission reviews by concern.
 
-## Production-Staging Baselines
+## Current Admitted Baselines
 
 - Cognitive: `CB-005` — 36 artifacts
 - Authority: `AB-003` — 6 artifacts, unchanged
@@ -19,10 +19,12 @@ Admitted-baseline defect: 9 PASS / 5 FAIL
 Corrected focused pressure: 15 PASS / 0 FAIL
 Repository-wide regression: PASS
 Admission convergence: 35 PASS / 0 FAIL
-Empirical harness rerun: 11 PASS / 0 FAIL
+Post-merge empirical harness: 11 PASS / 0 FAIL
+Post-merge manifests: 53 / 53
+Canonical targets: 7 / 7
 ```
 
-The seven-target production tree is staged for verification. Merge remains separately gated.
+Runtime Maintenance Artifact Closure 001 is admitted and post-merge verified.
 
 ## Evidence Discipline
 
