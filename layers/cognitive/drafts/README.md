@@ -2,7 +2,7 @@
 
 ## Status
 
-Cognitive Baseline `CB-003` is admitted and unchanged.
+Cognitive Baseline `CB-004` is admitted.
 
 Historical split source drafts retained for traceability:
 
@@ -14,14 +14,14 @@ Historical split source drafts retained for traceability:
 
 Their admitted canonical versions live in `layers/cognitive/production/`.
 
-Current unadmitted candidate:
+Admitted source draft retained for traceability:
 
-- `master-mason.md` — Runtime operator/mechanic responsibility
+- `master-mason.md` → `layers/cognitive/production/master-mason.md`
 
-Master Mason is not yet a persona, Officer, institution, Runtime component, or admitted production role.
+Admission establishes the responsibility contract only; no persona, Officer class, institution, hierarchy, assignment, or Runtime component is implied.
 
 No Cognitive successor exists for the superseded `lifecycle.md`; its unique residue is Procedure-native.
 
 ## Rule
 
-Draft presence does not create a duplicate canonical origin or silently change CB-003. Future revisions require evidence, admission review, and a traceable baseline transition.
+Draft presence does not create a duplicate canonical origin or silently change CB-004. Future revisions require evidence, admission review, and a traceable baseline transition.
