@@ -12,6 +12,8 @@ Current suite:
 - provider ledgers: `provider-intervention-ledger-run-001.md` — 12 PASS / 0 FAIL
 - admission review: `production-admission-review-001.md`
 
-Draft under test:
+Current admitted baseline:
 
-`layers/provenance/drafts/provenance-contract.md`
+- `PB-001` — 3 production artifacts
+- manifest: `layers/provenance/production/README.md`
+- decision: **ADMITTED**
