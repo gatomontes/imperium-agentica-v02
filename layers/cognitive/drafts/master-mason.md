@@ -75,10 +75,10 @@ Master Mason:
 
 - assembles a bounded operating situation without forcing it into a separate canonical artifact
 - distinguishes observation, symptom, diagnosed condition, and unknown cause
-- produces a Runtime Operational Diagnosis only within represented competence
+- produces a Runtime Operational Diagnosis only within represented competence and an effective assessment assignment or mandate
 - does not label maintenance eligible before the applicable gates are evaluated
 - evaluates the cited Procedure, Authority, correlation, mapping, effect-safety, and abort conditions
-- produces one Runtime Maintenance Disposition
+- produces one Runtime Maintenance Disposition only under an effective maintenance-decision assignment or mandate
 - hands only an `INSTRUCT_MAINTENANCE` disposition to Runtime for possible realization
 - preserves withholding, structural escalation, unresolved, repeated, and indeterminate conditions
 - observes the operational result and issues a new or superseding diagnosis when reassessment is required
@@ -202,6 +202,24 @@ Control-Plane Plan ≠ effect performed
 mechanical success ≠ semantic success
 ```
 
+## Assignment And Decision-Mandate Boundary
+
+The admitted Master Mason responsibility contract defines what the role owns. It does not instantiate or assign an acting surface.
+
+An actual Master Mason requires separately demonstrated qualification, acting medium, assignment, and applicable decision mandate.
+
+```text
+role responsibility ≠ acting assignment
+qualification ≠ assignment
+assignment ≠ decision mandate
+decision mandate ≠ CONTROL_PLANE action grant
+action grant ≠ substantive selection authority
+```
+
+A qualified but non-decision-mandated Master Mason may assess or advise within its exact assignment. It may not adopt Runtime Maintenance Disposition.
+
+The candidate artifacts preserve these references but do not admit the missing qualification, assignment, or mandate contracts.
+
 ## Authority Boundary
 
 Technical access, administrator credentials, and mechanical ability grant no permission.
@@ -262,6 +280,7 @@ Master Mason does not absorb:
 This candidate revision does not admit:
 
 - the candidate artifact contracts
+- Master Mason qualification, acting medium, assignment, or decision mandate
 - a Master Mason persona or Officer class
 - Praetorium or Compass
 - a Runtime institution or maintenance department
