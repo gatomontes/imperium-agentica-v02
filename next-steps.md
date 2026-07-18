@@ -4,7 +4,9 @@
 
 No active step.
 
-Runtime Boundary Investigation 001 awaits operator review.
+Runtime Boundary Investigation 001 awaits operator decision.
+
+The Runtime/code distinction has been clarified in `current-step.md`; no boundary approval is inferred from that clarification.
 
 This file is an ordered operational queue, not doctrine, architecture, or a roadmap.
 
@@ -15,6 +17,14 @@ This file is an ordered operational queue, not doctrine, architecture, or a road
 Decision artifact:
 
 `drafts/runtime-boundary-investigation-001.md`
+
+Decision basis:
+
+```text
+Code describes or configures machinery.
+Runtime is that machinery operating with actual state and effects.
+Runtime does not own every semantic contract expressed in code.
+```
 
 Options:
 
@@ -40,6 +50,14 @@ Also investigate:
 
 Activation condition: explicit operator approval.
 
-### 3. Reconsider Vellum only if a record gap appears
+### 3. Resolve the empirical blocker only after draft convergence
+
+Build a minimal reference implementation or test harness only after the Runtime-native contracts, Authority refinement, Procedure refinement, and conformance method have passed independently and together.
+
+The implementation must produce evidence for failure, recovery, concurrency, stale authority, duplicate delivery, partial rollback, and indeterminate external effects.
+
+Activation condition: successful draft and convergence testing plus separate implementation approval.
+
+### 4. Reconsider Vellum only if a record gap appears
 
 Activation condition: a scenario demonstrates a canonical record behavior existing artifacts cannot preserve.
