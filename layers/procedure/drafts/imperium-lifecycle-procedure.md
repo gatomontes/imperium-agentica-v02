@@ -36,10 +36,11 @@ Petition
 Conditions:
 
 - operator intent has been shaped as a Petition
-- PB-001 supplies a proposed Mission Identity for exact correlation
-- identity allocation is non-authorizing and does not approve mission formation
-- effective Authority findings permit `FORM_MISSION` and `APPROVE_WORK_SPECIFICATION`
+- the exact Petition identity scopes the `FORM_MISSION` Authority finding
+- Petition identity is non-authorizing and does not approve mission formation
 - Castellan responsibility accepts formation
+- PB-001 supplies the Mission Identity after formation
+- a separate effective Authority finding permits `APPROVE_WORK_SPECIFICATION` for that Mission Identity
 - the Work Specification preserves the admitted mission meaning
 
 Exit: an authorized approved Work Specification or an explicit refusal/blocker.
