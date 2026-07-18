@@ -6,7 +6,7 @@ The synthetic credential/store evidence leg is merged, complete, and post-merge 
 
 Track A0 is merged, complete, and post-merge verified.
 
-Track A1 is approved. A1.1 Mission Need formation is merged and post-merge verified; its execution record is pending.
+Track A1 is approved. A1.1 is complete and recorded. A1.2 Work Specification formation and approval has an active candidate.
 
 The operator approved a sequencing refinement:
 
@@ -44,7 +44,7 @@ Deployment implementation pauses after the handoff seam is proven.
 | Order | Approximate leg | What it must establish | Evidence increments | Approximate merges |
 |---:|---|---|---:|---:|
 | A0 — complete | Creation-to-deployment handoff seam | exact medium-specific Operative identity/version, provenance and applicable authority references, preservation/deviation findings, dependency/resource/secret-class requirements, validation evidence, and a provider-neutral handoff assessment that creates no Operative readiness state | 1 completed | 2 completed |
-| A1 — active | Castellan-side mission and work specification | bounded Mission Need, approved Work Specification, required capability, constraints, acceptance conditions, authority citation, and refusal/escalation without defining a profession or constructing an Operative | 1 completed; 1–2 remaining | 2 completed; 2–4 remaining |
+| A1 — active | Castellan-side mission and work specification | bounded Mission Need, approved Work Specification, required capability, constraints, acceptance conditions, authority citation, and refusal/escalation without defining a profession or constructing an Operative | 1 completed; A1.2 candidate active | 2 completed; 2 projected for A1.2 |
 | A2 | Guildhall-to-Conscription resolution and recruitment | resolve Profession Specification and admitted Persona, then transform that Persona into a versioned deployment-medium-specific Operative; test selection, referral, preservation, deviation, rejection, repair, and evidence without mission assembly or deployment | 3–5 | 6–10 |
 | A3 | Creation closure and handoff conformance | cross-flow provenance, artifact versioning, reproducibility, handoff classification, and proof that downstream consumers can inspect the Operative without rewriting creation semantics | 1–2 | 2–4 |
 
@@ -94,18 +94,18 @@ These are planning ranges, not targets. A leg may contract when existing evidenc
 
 ## Recommended Next Leg
 
-`Castellan Work Specification formation and approval contract`
+`Castellan Work Specification formation and approval contract` — active A1.2 candidate
 
-This next A1 increment should pressure exact Mission Need derivation, Work Specification minimum content, criterion and acceptance-condition completeness, separate `APPROVE_WORK_SPECIFICATION` authority, refusal/unresolved behavior, versioning, and clean handoff to Guildhall without resolving profession or constructing an Operative.
+This candidate pressures exact Mission Need derivation, Work Specification minimum content, criterion and acceptance-condition completeness, separate `APPROVE_WORK_SPECIFICATION` authority, refusal/unresolved behavior, versioning, and clean handoff to Guildhall without resolving profession or constructing an Operative.
 
 Expected size:
 
 ```text
-1 evidence increment initially
-2 merges initially
+1 evidence increment
+2 merges
 ```
 
-Beginning A1.2 requires the A1.1 execution record to merge. A third A1 increment remains possible only if Work Specification pressure exposes an independent closure gap.
+Candidate merge requires explicit operator approval. Current convergence finds no independent third A1 increment; A1 may close after the A1.2 candidate and execution record merge.
 
 ## Preserved Gates
 

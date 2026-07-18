@@ -23,7 +23,8 @@ Other historical split source drafts retained without active revision:
 Unadmitted draft evidence:
 
 - `operative-creation-handoff-contract.md` — merged creation-side assessment evidence; not admitted into CB-005
-- `castellan-mission-formation-contract.md` — active A1.1 candidate for exact Petition to bounded Mission Need formation; not admitted into CB-005
+- `castellan-mission-formation-contract.md` — merged A1.1 evidence for exact Petition to bounded Mission Need formation; not admitted into CB-005
+- `castellan-work-specification-contract.md` — active A1.2 candidate for bounded Mission Need to approved Work Specification handoff; not admitted into CB-005
 
 ## Rule
 

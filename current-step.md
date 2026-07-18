@@ -2,32 +2,28 @@
 
 ## Status
 
-Castellan Mission Formation 001 merged and post-merge verified on 2026-07-18.
+Castellan Work Specification 001 is the active A1.2 draft candidate.
 
-A1.1 is complete. Track A1 remains open.
-
-No active candidate step.
+A1.1 is complete. A1.2 began under the approved Track A1 on 2026-07-18.
 
 This file is operational continuity, not doctrine, architecture, or authority.
 
-## Merge Record
+## Candidate Scope
 
 ```text
-Pull request: #34
-Squash commit: 12f7988e4df9957f836a1403e00d1dcc3745f02f
-Rollback parent: 1c0f2f6f4f998be1c2a872ae6889dd0114c52c43
-Candidate head: ac805b5fff9c573359f9fc032770260e8f5c0c1c
+Input: exact bounded Mission Need version
+Product: versioned Work Specification
+Cognitive finding: SPECIFICATION_CONFORMANT / REFUSED / UNRESOLVED
+Approval: separate exact APPROVE_WORK_SPECIFICATION authority
+Handoff: exact approved version to Guildhall and Collegium
+Production admission: none
 ```
 
-Execution record:
-
-`drafts/castellan-mission-formation-execution-001.md`
-
-## Verified Evidence
+## Candidate Evidence
 
 ```text
-Pre-candidate pressure: 8 PASS / 7 FAIL
-Corrected formation pressure: 15 PASS / 0 FAIL
+Pre-candidate pressure: 9 PASS / 6 FAIL
+Corrected specification pressure: 15 PASS / 0 FAIL
 Cross-layer convergence: 12 PASS / 0 FAIL
 Preserved Runtime successor suite: 91 PASS / 0 FAIL
 Repository regression: PASS
@@ -36,15 +32,16 @@ Production semantic files changed: 0
 
 ## Preserved Boundaries
 
-- Secretariat retains Petition production
-- Authority retains `FORM_MISSION` effectiveness
-- PB-001 supplies Mission Identity only after formation
-- `FORM_MISSION` remains distinct from `APPROVE_WORK_SPECIFICATION`
+- Castellan retains Work Specification meaning
+- Authority retains `APPROVE_WORK_SPECIFICATION` effectiveness
+- PB-001 retains identity, derivation, and supersession
+- conformance remains distinct from approval
 - Guildhall retains profession resolution
-- no live mission, production semantic change, Runtime implementation, deployment, or external effect
+- Procedure retains handoff ordering
+- no live approval, production semantic change, Runtime implementation, deployment, or external effect
 
 ## Next Gate
 
-Complete this execution-record merge, then begin A1.2: Mission Need to approved Work Specification and Guildhall handoff.
+Approve or reject candidate merge.
 
-No execution-record merge or A1.2 candidate merge is authorized by this record.
+No merge is authorized by creation of this candidate.
