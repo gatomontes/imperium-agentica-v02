@@ -105,6 +105,12 @@ For Runtime maintenance, the candidate ordering lives in:
 
 The catalog does not state that an artifact automatically triggers the next.
 
+## Artifact-Layer Boundary
+
+Two local artifact contracts do not justify or admit a universal Artifact layer.
+
+The artifacts remain native to Master Mason's Cognitive responsibility and cite PB-001 for identity and lineage.
+
 ## Non-Admission
 
 This candidate indexes two proposed Cognitive origins. It does not make either artifact canonical or revise CB-004.
