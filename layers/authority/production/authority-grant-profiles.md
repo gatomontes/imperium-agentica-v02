@@ -271,7 +271,7 @@ It does not decide authority effectiveness.
 
 ## Non-Admissions
 
-This draft does not admit:
+This contract does not admit:
 
 - universal operator authority
 - automatic external authority from IMPERIUM_STEWARDSHIP
