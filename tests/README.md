@@ -38,7 +38,7 @@ Repository regression: PASS
 Production semantic files changed: 0
 ```
 
-## Current Durability Candidate
+## Single-Node Durability Evidence
 
 ```text
 Pre-extension durability pressure: 3 PASS / 10 FAIL
@@ -49,7 +49,20 @@ Repository regression: PASS
 Production semantic files changed: 0
 ```
 
-The durability extension remains noncanonical, test-scoped, single-node, and filesystem-backed.
+The durability extension is merged as noncanonical, test-scoped, single-node filesystem evidence.
+
+## Current Distributed-Concurrency Candidate
+
+```text
+Pre-extension distributed pressure: 2 PASS / 10 FAIL
+Corrected distributed pressure: 12 PASS / 0 FAIL
+Combined successor suite: 35 PASS / 0 FAIL
+Historical harness: 11 PASS / 0 FAIL
+Repository regression: PASS
+Production semantic files changed: 0
+```
+
+The distributed-concurrency extension remains noncanonical, deterministic, in-memory, and test-scoped.
 
 ## Evidence Discipline
 
@@ -57,4 +70,4 @@ Historical runs remain evidence of the state tested at their recorded time.
 
 A superseded expectation is classified explicitly rather than silently rewritten.
 
-Simulated or theoretical evidence is not overstated as live implementation, distributed-systems, provider, credential, deployment, or performance proof.
+Simulated or theoretical evidence is not overstated as a consensus implementation, live distributed system, provider, credential, deployment, or performance proof.
