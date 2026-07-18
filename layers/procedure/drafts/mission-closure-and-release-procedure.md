@@ -152,3 +152,7 @@ This procedure does not supply either permission.
 - provider completion → mission success
 - elapsed time → closure
 - missing return → clean cessation
+
+## Runtime Boundary
+
+This procedure defines expected ordering and conditions only. It does not define queues, schedulers, timers, services, storage, state-machine implementation, retries, or execution.
