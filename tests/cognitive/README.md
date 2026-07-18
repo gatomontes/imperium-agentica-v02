@@ -36,3 +36,9 @@ Final Report ≠ release complete
 Cognitive map ≠ Procedure
 Procedure admission ≠ Runtime implementation
 ```
+
+## Runtime Control-Plane Origin Evidence
+
+- `runtime-control-plane-responsibility-origin-run-001.md` — 10 PASS / 0 FAIL
+
+Finding: no admitted Cognitive role owns control-plane compatibility and recovery judgment. External operator responsibility is viable during development; internal Imperium judgment would require a minimal responsibility contract, not yet admitted.
