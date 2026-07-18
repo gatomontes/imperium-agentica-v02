@@ -6,6 +6,8 @@ Candidate Runtime draft.
 
 Not admitted or implemented.
 
+Revision: Runtime Admission Preparation 001 after Empirical Run 001.
+
 ## Purpose
 
 Define the mechanics and operating safeguards for consequential changes to Runtime itself without allowing those mechanics to authorize their own use.
@@ -63,6 +65,25 @@ Immediately before the action, Runtime must require:
 - durable observation readiness
 
 A stale plan or changed target blocks execution until revalidated.
+
+## Managed Component And Control Surface
+
+The managed component and the control surface acting upon it are distinct Runtime subjects.
+
+A target component's blocked, crashed, exhausted, inactive, or unavailable state does not by itself establish that the independent control surface is unavailable. Otherwise the condition requiring repair could mechanically prohibit its own permitted recovery.
+
+`INITIATE_RECOVERY` or `DEACTIVATE_IMPLEMENTATION` may address a blocked target only when:
+
+- the exact control surface is independently available and identified
+- the action is permitted by fresh CONTROL_PLANE Authority
+- the cited Procedure admits the intervention
+- PB-001 identity and correlation remain exact
+- the action does not repeat or reinterpret an indeterminate effect
+- abort, observation, and escalation conditions remain effective
+
+This distinction bypasses only the target-component availability condition. It bypasses no Authority, Procedure, Provenance, compatibility, version, quarantine, or observation gate.
+
+If the control surface is itself unavailable or shares the same unclassified failure, Runtime withholds the action and emits the applicable observation for reassessment or escalation.
 
 ## Semantic Compatibility
 
