@@ -51,7 +51,7 @@ Production semantic files changed: 0
 
 The durability extension is merged as noncanonical, test-scoped, single-node filesystem evidence.
 
-## Current Distributed-Concurrency Candidate
+## Distributed-Concurrency Evidence
 
 ```text
 Pre-extension distributed pressure: 2 PASS / 10 FAIL
@@ -62,7 +62,20 @@ Repository regression: PASS
 Production semantic files changed: 0
 ```
 
-The distributed-concurrency extension remains noncanonical, deterministic, in-memory, and test-scoped.
+The distributed-concurrency extension is merged as noncanonical deterministic evidence.
+
+## Current Stable-Placement Candidate
+
+```text
+Pre-placement pressure: 5 PASS / 6 FAIL
+Corrected placement pressure: 11 PASS / 0 FAIL
+Combined successor suite: 40 PASS / 0 FAIL
+Historical harness: 11 PASS / 0 FAIL
+Repository regression: PASS
+Production manifest files changed: 0
+```
+
+The placement candidate moves reference source ownership to `layers/runtime/reference/` while tests remain independent consumers.
 
 ## Evidence Discipline
 

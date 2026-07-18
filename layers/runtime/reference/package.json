@@ -1,0 +1,12 @@
+{
+  "name": "@imperium-agentica/runtime-reference",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/reference-runtime.mjs",
+    "./contracts": "./src/contracts.mjs",
+    "./adapters/in-memory": "./src/in-memory-ports.mjs",
+    "./adapters/file": "./src/file-store.mjs",
+    "./coordination/deterministic": "./src/distributed-coordinator.mjs"
+  }
+}

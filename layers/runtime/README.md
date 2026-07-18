@@ -8,6 +8,8 @@ Manifest: `layers/runtime/production/README.md` — 3 files.
 
 Admission: `tests/runtime/runtime-maintenance-production-admission-review-001.md`.
 
+The executable reference implementation has a stable nonproduction home at `layers/runtime/reference/`.
+
 ## Core Question
 
 ```text
@@ -39,8 +41,11 @@ Code expressing a Cognitive, Authority, Provenance, or Procedure contract remain
 ```text
 layers/runtime/
 ├── drafts/
-└── production/
+├── production/
+└── reference/
 ```
+
+`reference/` contains nonproduction executable evidence. Its stable placement does not add it to the admitted production manifest.
 
 ## May Define
 

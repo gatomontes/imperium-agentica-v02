@@ -3,10 +3,10 @@ import assert from "node:assert/strict";
 import { mkdtempSync, readFileSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { Contracts, DispositionForms } from "../src/contracts.mjs";
-import { FileBackedStore, FileObservationSink, appendCorruptTail, writeUnknownSchemaJournal } from "../src/file-store.mjs";
-import { InMemoryObservationSink, MutableFindingPort, SimulatedEffectPort } from "../src/in-memory-ports.mjs";
-import { ReferenceRuntime } from "../src/reference-runtime.mjs";
+import { Contracts, DispositionForms } from "../../../../layers/runtime/reference/src/contracts.mjs";
+import { FileBackedStore, FileObservationSink, appendCorruptTail, writeUnknownSchemaJournal } from "../../../../layers/runtime/reference/src/file-store.mjs";
+import { InMemoryObservationSink, MutableFindingPort, SimulatedEffectPort } from "../../../../layers/runtime/reference/src/in-memory-ports.mjs";
+import { ReferenceRuntime } from "../../../../layers/runtime/reference/src/reference-runtime.mjs";
 
 function directory() {
   return mkdtempSync(join(tmpdir(), "imperium-runtime-store-"));

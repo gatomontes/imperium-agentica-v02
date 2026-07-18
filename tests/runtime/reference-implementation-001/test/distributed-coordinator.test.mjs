@@ -1,9 +1,9 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { Contracts, DispositionForms } from "../src/contracts.mjs";
-import { DeterministicQuorumCoordinator, FencedExecutionGate } from "../src/distributed-coordinator.mjs";
-import { InMemoryObservationSink, InMemoryStore, MutableFindingPort, SimulatedEffectPort } from "../src/in-memory-ports.mjs";
-import { ReferenceRuntime } from "../src/reference-runtime.mjs";
+import { Contracts, DispositionForms } from "../../../../layers/runtime/reference/src/contracts.mjs";
+import { DeterministicQuorumCoordinator, FencedExecutionGate } from "../../../../layers/runtime/reference/src/distributed-coordinator.mjs";
+import { InMemoryObservationSink, InMemoryStore, MutableFindingPort, SimulatedEffectPort } from "../../../../layers/runtime/reference/src/in-memory-ports.mjs";
+import { ReferenceRuntime } from "../../../../layers/runtime/reference/src/reference-runtime.mjs";
 
 function realization() {
   return {
