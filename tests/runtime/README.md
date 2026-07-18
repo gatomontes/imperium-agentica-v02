@@ -14,9 +14,9 @@ Runtime Single-Node Durability 001 is a noncanonical candidate extension to the 
 
 ## Single-Node Durability Candidate
 
-- baseline pressure: `runtime-single-node-durability-pressure-run-001.md` — 3 PASS / 9 FAIL
-- corrected pressure: `runtime-single-node-durability-pressure-run-002.md` — 12 PASS / 0 FAIL
-- combined successor executable: 23 PASS / 0 FAIL
+- baseline pressure: `runtime-single-node-durability-pressure-run-001.md` — 3 PASS / 10 FAIL
+- corrected pressure: `runtime-single-node-durability-pressure-run-002.md` — 13 PASS / 0 FAIL
+- combined successor executable: 24 PASS / 0 FAIL
 - repository regression: `runtime-single-node-durability-repository-regression-001.md` — PASS
 - candidate review: `runtime-single-node-durability-candidate-review-001.md`
 
