@@ -4,15 +4,20 @@
 
 Runtime Maintenance Artifact Closure 001 is active as of 2026-07-18.
 
+Baseline pressure completed: `9 PASS / 5 FAIL`.
+
 No production admission has occurred.
 
 This file is operational continuity, not doctrine, architecture, or authority.
 
 ## Active Investigation
 
-Record:
+Records:
 
-`drafts/runtime-maintenance-artifact-closure-001.md`
+- `drafts/runtime-maintenance-artifact-closure-001.md`
+- `drafts/runtime-maintenance-artifact-necessity-analysis-001.md`
+- `tests/runtime/runtime-maintenance-artifact-pressure-tests-001.md`
+- `tests/runtime/runtime-maintenance-artifact-pressure-run-001.md`
 
 Branch:
 
@@ -24,32 +29,32 @@ Post-merge review of Runtime Production Admission 001 found that the admitted Ru
 
 Procedure may not originate artifact meaning. Runtime may not realize a transition with an undefined required artifact.
 
-## Core Question
+## Confirmed Failures
 
 ```text
-Which Master Mason artifacts require canonical Cognitive contracts
-to make the admitted Runtime maintenance path semantically closed?
+RMA-001 — undefined Maintenance Instruction
+RMA-002 — undefined independently citable Runtime Operational Diagnosis
+RMA-003 — maintenance eligibility asserted before the Eligibility Gate
+RMA-005 — undefined Cognitive withholding semantics
+RMA-006 — undefined escalation transfer semantics
 ```
 
-## Candidate Artifact Family
+## Current Minimal Hypothesis
 
-- Runtime Operating Situation
-- Runtime Operational Diagnosis
-- Maintenance Instruction
-- Maintenance Withholding Finding
-- Escalation Record
+Two canonical Cognitive artifacts appear sufficient:
 
-The investigation must not assume that every named product requires a separate artifact or file.
+1. Runtime Operational Diagnosis
+2. a post-gate maintenance-direction artifact with instruction, withholding, and escalation forms
 
-## Required Outcome
+`Runtime Maintenance Disposition` is a working label only.
 
-- test necessity for each candidate
-- distinguish Maintenance Instruction from Runtime Control-Plane Plan
-- distinguish withholding from diagnosis, Authority refusal, Runtime refusal, and procedural exit
-- identify exact native ownership and cross-layer dependencies
-- define the smallest dependency-closed correction
-- identify required baseline revisions and pressure tests
-- recommend admission, consolidation, deferral, or rejection for each candidate
+Runtime Operating Situation has not demonstrated a separate cross-boundary artifact requirement.
+
+## Next Decision
+
+Review the two-artifact hypothesis and the diagnosis-versus-eligibility correction.
+
+If approved for candidate construction, shape exact draft contracts and rerun the fourteen-test pressure suite before proposing any production transition.
 
 ## Preserved Production State
 
@@ -72,4 +77,4 @@ Runtime: RTB-001 — 3 / 3
 
 ## Stop Condition
 
-No production revision or admission without separate operator approval.
+No candidate construction or production revision without separate operator approval.
