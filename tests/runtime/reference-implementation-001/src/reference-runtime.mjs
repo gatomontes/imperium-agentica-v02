@@ -16,6 +16,7 @@ export class ReferenceRuntime {
     procedurePort,
     effectPort,
     observationSink,
+    executionGate = null,
     clock = () => new Date().toISOString(),
   }) {
     this.store = store;
@@ -24,6 +25,7 @@ export class ReferenceRuntime {
     this.procedurePort = procedurePort;
     this.effectPort = effectPort;
     this.observationSink = observationSink;
+    this.executionGate = executionGate;
     this.clock = clock;
     this.sequence = 0;
   }
@@ -112,6 +114,13 @@ export class ReferenceRuntime {
       return this.refuse({ realizationId, attemptId, effectId, ...realization }, procedure?.reason ?? "PROCEDURE_REFUSED");
     }
 
+    if (this.executionGate) {
+      const claim = this.executionGate.claim({ effectId, attemptId });
+      if (!claim.accepted) {
+        return this.refuse({ realizationId, attemptId, effectId, ...realization }, claim.reason);
+      }
+    }
+
     const effect = { effectId, attemptId, status: "DISPATCH_PENDING" };
     this.store.saveEffect(effectId, effect);
     if (crashAt === "before-dispatch") {
@@ -121,11 +130,22 @@ export class ReferenceRuntime {
       return structuredClone(effect);
     }
 
+    if (this.executionGate) {
+      const permit = this.executionGate.markDispatched({ effectId, attemptId });
+      if (!permit.accepted) {
+        effect.status = "ABORTED_BEFORE_DISPATCH";
+        effect.reason = permit.reason;
+        this.store.saveEffect(effectId, effect);
+        return this.refuse({ realizationId, attemptId, effectId, ...realization }, permit.reason);
+      }
+    }
+
     effect.status = "DISPATCHED";
     this.store.saveEffect(effectId, effect);
     this.observe("DISPATCH", "STARTED", effectId, realization, { attemptId, effectId, authority, correlation, procedure });
     const result = this.effectPort.dispatch({ realization, disposition, plan, attemptId, effectId });
     if (crashAt === "after-dispatch" || result === EffectResults.INDETERMINATE) {
+      this.executionGate?.quarantine({ effectId, attemptId });
       effect.status = "QUARANTINED_INDETERMINATE";
       this.store.saveEffect(effectId, effect);
       this.observe("EXTERNAL_EFFECT", "QUARANTINED", effectId, realization, {
@@ -139,7 +159,27 @@ export class ReferenceRuntime {
       return structuredClone(effect);
     }
     effect.status = result === EffectResults.SUCCEEDED ? "SUCCEEDED_OPERATIONALLY" : "FAILED_OPERATIONALLY";
+    let completionIndeterminate = false;
+    if (this.executionGate) {
+      const completion = this.executionGate.complete({ effectId, attemptId, result: effect.status });
+      if (!completion.accepted) {
+        effect.status = "QUARANTINED_INDETERMINATE";
+        effect.recoveryReason = completion.reason;
+        completionIndeterminate = true;
+      }
+    }
     this.store.saveEffect(effectId, effect);
+    if (completionIndeterminate) {
+      this.observe("EXTERNAL_EFFECT", "QUARANTINED", effectId, realization, {
+        attemptId,
+        effectId,
+        authority,
+        correlation,
+        procedure,
+        indeterminate: true,
+      });
+      return structuredClone(effect);
+    }
     this.observe("EXTERNAL_EFFECT", result === EffectResults.SUCCEEDED ? "COMPLETED_OPERATIONALLY" : "FAILED_OPERATIONALLY", effectId, realization, {
       attemptId,
       effectId,

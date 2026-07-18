@@ -4,7 +4,9 @@
 
 Runtime Baseline `RTB-002` remains admitted and unchanged.
 
-Runtime Single-Node Durability 001 is a noncanonical candidate extension to the merged reference implementation evidence.
+Runtime Single-Node Durability 001 is merged as noncanonical evidence.
+
+Runtime Distributed Concurrency and Recovery 001 is a noncanonical candidate extension.
 
 ## Reference Implementation Evidence
 
@@ -20,8 +22,19 @@ Runtime Single-Node Durability 001 is a noncanonical candidate extension to the 
 - repository regression: `runtime-single-node-durability-repository-regression-001.md` — PASS
 - candidate review: `runtime-single-node-durability-candidate-review-001.md`
 
+## Distributed-Concurrency Candidate
+
+- baseline pressure: `runtime-distributed-concurrency-pressure-run-001.md` — 2 PASS / 10 FAIL
+- corrected pressure: `runtime-distributed-concurrency-pressure-run-002.md` — 12 PASS / 0 FAIL
+- focused distributed executable: 11 PASS / 0 FAIL
+- combined successor executable: 35 PASS / 0 FAIL
+- repository regression: `runtime-distributed-concurrency-repository-regression-001.md` — PASS
+- candidate review: `runtime-distributed-concurrency-candidate-review-001.md`
+
 ## Evidence Limits
 
 The file-backed adapter demonstrates deterministic single-process behavior on a test filesystem.
 
-It is not proof of production durability, power-loss safety across platforms, multi-process failover, distributed correctness, credential safety, provider idempotency, performance, deployment safety, or live recovery.
+The distributed coordinator demonstrates effect-boundary behavior against a deterministic linearizable in-memory oracle.
+
+Neither is proof of production durability, a consensus protocol, real network partitions, durable quorum state, distributed correctness, credential safety, provider idempotency, performance, deployment safety, or live recovery.
