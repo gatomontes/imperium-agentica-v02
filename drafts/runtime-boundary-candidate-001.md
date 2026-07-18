@@ -2,7 +2,9 @@
 
 ## Status
 
-Draft cross-layer boundary derived from admitted CB-003, AB-002, PB-001, and PRB-001.
+Revised draft cross-layer boundary derived from admitted CB-003, AB-002, PB-001, and PRB-001.
+
+Revision: Runtime Boundary Correction 001 after Pressure Run 001.
 
 Not admitted.
 
@@ -162,6 +164,57 @@ It must not silently map:
 - rollback of local state to rollback of an external effect
 - recovery to permission to continue
 - exhausted retries to mission closure
+
+## Dispatch Integrity Rule
+
+Before every externally consequential effect, including every retry or recovered attempt, Runtime must:
+
+1. pin the exact action, mission, subject, artifact, grant, Procedure branch, and controlling contract versions
+2. re-evaluate Authority immediately before dispatch
+3. re-evaluate exact PB-001 correlation immediately before dispatch
+4. confirm the cited Procedure still permits the effect
+5. bind one effect identity and idempotency policy to the attempt
+6. refuse dispatch when any value is stale, missing, mismatched, contested, or indeterminate
+
+A check performed only at enqueue time is insufficient.
+
+An indeterminate external effect enters an operational quarantine keyed by exact effect identity. Runtime must not repeat, compensate, or reinterpret it until a cited native contract supplies the required disposition and fresh Authority permits the next effect.
+
+## Durable Runtime Observation Envelope
+
+Ephemeral telemetry may remain implementation-specific.
+
+A Runtime observation that is preserved, transferred, used for recovery, or offered to another layer must include at minimum:
+
+- observation identity
+- exact mission and subject correlation
+- effect or attempt identity
+- implementation and adapter version
+- controlling contract versions
+- start and observation times, with clock source
+- operational result vocabulary
+- indeterminate-state flag when applicable
+- parent observation or attempt reference
+- transformation and transfer lineage under PB-001
+- explicit statement that the observation is not a semantic finding
+
+Runtime defines the operational observation vocabulary. PB-001 remains controlling for identity and lineage.
+
+## Deployment And Rollback Control
+
+Runtime may define deployment, migration, credential-loading, activation, rollback, and recovery mechanics.
+
+The mechanics do not authorize their use.
+
+Any consequential control-plane action requires:
+
+- an independently effective Authority finding for the exact environment and action
+- exact implementation and semantic-mapping versions
+- a compatibility check against the admitted contract versions
+- a blocked path when stored state cannot be mapped without semantic loss
+- preservation of pre-change observations and lineage
+
+Rollback of implementation code does not authorize rollback of semantic history or external effects.
 
 ## Non-Admissions
 
