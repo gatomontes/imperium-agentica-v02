@@ -2,62 +2,60 @@
 
 ## Status
 
-Runtime Maintenance Artifact Closure 001 completed and post-merge verified on 2026-07-18.
+Runtime Reference Implementation 001 successor candidate completed on 2026-07-18.
 
-No active step.
+```text
+Historical current-semantic pressure: 5 PASS / 10 FAIL
+Historical executable regression: 11 PASS / 0 FAIL
+Successor focused pressure: 15 PASS / 0 FAIL
+Repository regression: PASS
+Production semantic files changed: 0
+```
+
+No production admission, deployment, credentials, providers, services, or external effects.
 
 This file is operational continuity, not doctrine, architecture, or authority.
 
-## Merge Record
+## Active Branch
 
-```text
-Pull request: #13
-Squash commit: df69551606a0552edccf81736dab4bcfed020a29
-Rollback parent: 491b9512fb562570c227157dc6568d8cb5b10200
-Staging head: cdb0e5f5748d98ab8ae86910d04bf9a985a8049e
-```
+`agent/runtime-reference-implementation-001`
 
-Execution record:
+Rollback parent:
 
-`drafts/runtime-maintenance-production-admission-execution-001.md`
+`1786638a35bc3b061222a440d4ba24e3b8e36a37`
 
-## Admitted Production State
+## Candidate
 
-```text
-Cognitive: CB-005 — 36 / 36
-Authority: AB-003 — 6 / 6 unchanged
-Provenance: PB-001 — 3 / 3 unchanged
-Procedure: PRB-003 — 5 / 5
-Runtime: RTB-002 — 3 / 3
-Total: 53 / 53
-Canonical semantic targets: 7 / 7
-```
+`tests/runtime/reference-implementation-001/`
 
-## Verification
+The dependency-free Node candidate:
 
-```text
-Focused pressure: 15 / 15
-Repository regression: PASS
-Admission convergence: 35 / 35
-Post-merge empirical harness: 11 / 11
-Production dependencies: clean
-Historical source drafts: 7 / 7
-AB-003 and PB-001: byte-unchanged
-Unaffected Runtime contracts: byte-unchanged
-```
+- pins CB-005, AB-003, PB-001, PRB-003, and RTB-002 contracts
+- consumes canonical diagnosis and disposition identities
+- permits effects only for `INSTRUCT_MAINTENANCE`
+- enforces Control-Plane Plan conformance
+- consumes fresh Authority, exact correlation, and Procedure findings through injected ports
+- preserves attempt/effect identity and indeterminate quarantine
+- emits operational-only Runtime Observation Envelopes
+- exports no Master Mason or Authority registry
 
-## Preserved Limits
+## Records
 
-- no Master Mason qualification, acting medium, assignment, decision mandate, persona, Officer class, hierarchy, or institution
-- no live Runtime implementation or control plane
-- no real CONTROL_PLANE grant
-- no credentials, providers, services, deployment, autonomous repair, or external effects
-- no distributed-systems, durability, credential-safety, provider-idempotency, performance, or live recovery proof
-- no universal Artifact, Proof, or Ownership layer
-- Compass and Praetorium remain parked
+- investigation: `drafts/runtime-reference-implementation-001.md`
+- necessity: `drafts/runtime-reference-implementation-necessity-analysis-001.md`
+- conformance plan: `drafts/runtime-reference-implementation-conformance-plan-001.md`
+- pressure specification: `tests/runtime/runtime-reference-implementation-pressure-tests-001.md`
+- historical pressure run: `tests/runtime/runtime-reference-implementation-pressure-run-001.md`
+- successor pressure run: `tests/runtime/runtime-reference-implementation-pressure-run-002.md`
+- repository regression: `tests/runtime/runtime-reference-implementation-repository-regression-001.md`
+- candidate review: `tests/runtime/runtime-reference-implementation-candidate-review-001.md`
 
-## Next Gate
+## Next Decision
 
-Choose one independently scoped Runtime direction from `next-steps.md`.
+Decide whether to merge the noncanonical candidate evidence package.
 
-No candidate direction is active by default.
+Candidate merge does not authorize stable placement, production admission, deployment, real adapters, credentials, providers, or external effects.
+
+## Stop Condition
+
+No candidate merge without explicit operator approval.
