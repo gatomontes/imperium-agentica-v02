@@ -2,19 +2,21 @@
 
 ## Status
 
-Candidate Procedure draft.
+Candidate Procedure revision under `Runtime Maintenance Artifact Closure 001`.
 
-Not admitted or implemented.
+Not admitted. PRB-002 production remains canonical.
 
 ## Purpose
 
-Define the expected path from a Runtime operating observation to bounded maintenance, withholding, or escalation without allowing Master Mason or Runtime to invent permission or semantic disposition.
+Define the expected path from Runtime observation through diagnosis, eligibility, maintenance direction, realization, reassessment, and exit without allowing Master Mason, Procedure, Authority, or Runtime to absorb another concern.
 
-## Candidate Dependencies
+## Native Dependencies
 
 ### Cognitive
 
 - Master Mason: `layers/cognitive/drafts/master-mason.md`
+- Runtime Operational Diagnosis: `layers/cognitive/drafts/runtime-operational-diagnosis.md`
+- Runtime Maintenance Disposition: `layers/cognitive/drafts/runtime-maintenance-disposition.md`
 
 ### Authority
 
@@ -27,11 +29,9 @@ Define the expected path from a Runtime operating observation to bounded mainten
 
 ### Runtime
 
-- Observation Envelope: `layers/runtime/drafts/runtime-observation-envelope.md`
-- Control Plane: `layers/runtime/drafts/runtime-control-plane-contract.md`
-- Realization and Dispatch: `layers/runtime/drafts/runtime-realization-and-dispatch-contract.md`
-
-All non-production dependencies block production admission.
+- Observation Envelope: `layers/runtime/production/runtime-observation-envelope.md`
+- candidate Control Plane revision: `layers/runtime/drafts/runtime-control-plane-contract.md`
+- candidate Realization and Dispatch revision: `layers/runtime/drafts/runtime-realization-and-dispatch-contract.md`
 
 ## Entry Conditions
 
@@ -41,7 +41,7 @@ Enter on either:
 - an authorized scheduled-maintenance condition
 - a post-intervention observation requiring reassessment
 
-An elapsed timer or alert alone does not authorize intervention.
+An elapsed timer or alert alone does not establish a diagnosis, eligibility, or intervention.
 
 ## Expected Sequence
 
@@ -53,74 +53,94 @@ Master Mason assembles:
 - current Runtime observations
 - active attempts, effects, quarantines, and recovery state
 - affected mission and provider-boundary references
-- applicable maintenance Procedure
+- applicable maintenance Procedure candidates
 - applicable CONTROL_PLANE finding
 - PB-001 identity and lineage
 - credential constraints when applicable
 
-Missing or mismatched identity blocks action.
+The assembly is internal unless later transfer or citation proves a separate artifact necessary.
+
+Missing or mismatched identity blocks consequential direction.
 
 ### 2. Diagnose
 
-Master Mason issues one bounded finding:
+Master Mason produces one exact Runtime Operational Diagnosis.
 
-```text
-RUNTIME_HEALTHY
-RUNTIME_MAINTENANCE_ELIGIBLE
-RUNTIME_MAINTENANCE_BLOCKED
-RUNTIME_CONDITION_INDETERMINATE
-STRUCTURAL_CHANGE_REQUIRED
-ESCALATION_REQUIRED
-```
+The diagnosis records:
 
-Diagnosis does not itself perform or authorize maintenance.
+- one primary condition finding
+- one response indication
+- cited observations and scope
+- known gaps and indeterminacy
+- rationale and competence limits
 
-### 3. Classify Path
+Diagnosis does not establish eligibility, Authority, direction, or Runtime state.
 
-- `RUNTIME_HEALTHY` → exit without intervention
-- `RUNTIME_MAINTENANCE_ELIGIBLE` → continue to eligibility gate
-- `RUNTIME_MAINTENANCE_BLOCKED` → preserve blocker and safe state
-- `RUNTIME_CONDITION_INDETERMINATE` → withhold consequential intervention and gather only independently permitted observations
-- `STRUCTURAL_CHANGE_REQUIRED` → escalate to the external operator or later admitted responsibility
-- `ESCALATION_REQUIRED` → follow only an admitted escalation route
+### 3. Classify Diagnostic Path
 
-### 4. Eligibility Gate
+- `NO_MAINTENANCE_INDICATED` → continue to the no-intervention direction
+- `ROUTINE_MAINTENANCE_INDICATED` → continue to the eligibility gate
+- `RECOVERY_INDICATED` → continue to the eligibility gate
+- `OBSERVATION_ONLY_INDICATED` → continue to the withholding direction
+- `STRUCTURAL_ESCALATION_INDICATED` → continue to the structural-escalation direction
 
-Before maintenance, require:
+Procedure selects the expected next step from the cited diagnosis. It does not choose or revise the diagnosis.
 
-- exact Procedure match
+### 4. Evaluate Eligibility
+
+For a potentially consequential maintenance direction, evaluate:
+
+- exact admitted Procedure match
 - effective CONTROL_PLANE action and discretion mode
-- exact environment, component, and action class
+- exact environment, component, action class, and acting surface
 - current PB-001 correlation
-- no unresolved external-effect repetition
+- no unresolved external-effect repetition or reinterpretation
 - preservation of semantic mappings and history
-- defined abort and observation conditions
+- represented competence and bounded consequence
+- defined safe state, abort, observation, and reassessment conditions
 
-Failure withholds maintenance.
+Every applicable condition must pass before `INSTRUCT_MAINTENANCE` may be produced.
 
-### 5. Invoke Maintenance
+### 5. Produce Maintenance Disposition
 
-Master Mason issues or invokes the exact bounded Maintenance Instruction.
+Master Mason produces one exact Runtime Maintenance Disposition:
 
-Runtime rechecks Authority, correlation, current state, and version immediately before the effect.
+- no maintenance indicated → `NO_INTERVENTION`
+- all eligibility conditions pass → `INSTRUCT_MAINTENANCE`
+- any condition blocks safe bounded maintenance → `WITHHOLD_MAINTENANCE`
+- structural, semantic, incompatible-state, competence, authority-origin, or irreversible-consequence decision is required → `ESCALATE_STRUCTURAL_CONDITION`
 
-Runtime performs the mechanism and emits durable observations.
+Procedure defines the branch conditions. Master Mason owns the disposition finding and rationale.
 
-### 6. Assess Result
+### 6. Realize Instruction When Applicable
 
-Master Mason compares the result with the Procedure's operational exit condition.
+Only `INSTRUCT_MAINTENANCE` proceeds to Runtime realization.
 
-- restored within bounds → record operational restoration
-- unchanged or degraded → repeat only if Procedure and fresh Authority permit
-- new indeterminacy → quarantine affected effect and withhold unsafe repeat
-- structural consequence exposed → stop and escalate
-- Authority unavailable → preserve state and withhold
+Runtime:
+
+1. validates the exact diagnosis, disposition, Procedure, Authority, and PB-001 references
+2. constructs or resolves a Control-Plane Plan whose mechanics remain within the disposition
+3. rechecks Authority, correlation, current state, versions, effect safety, and observation readiness immediately before the effect
+4. refuses closed on absence, mismatch, expiry, supersession, contradiction, or indeterminacy
+5. performs the permitted mechanism and emits durable Runtime Observation Envelopes
+
+`NO_INTERVENTION`, `WITHHOLD_MAINTENANCE`, and `ESCALATE_STRUCTURAL_CONDITION` prohibit consequential maintenance realization under that disposition.
+
+### 7. Reassess
+
+Master Mason compares new Runtime observations with the disposition's operational outcome and reassessment conditions.
+
+- restored within bounds → issue a new diagnosis when required and record operational restoration
+- unchanged or degraded → repeat only through a new or superseding diagnosis, fresh eligibility evaluation, new disposition, and fresh Authority
+- new indeterminacy → quarantine the affected effect and produce withholding or escalation as applicable
+- structural consequence exposed → stop and produce structural escalation
+- Authority unavailable or expired → produce withholding
 
 Operational restoration does not establish mission success or semantic correctness.
 
-### 7. Exit
+### 8. Exit
 
-Exit with one of:
+Exit with one procedural result:
 
 ```text
 NO_INTERVENTION_REQUIRED
@@ -131,13 +151,29 @@ CONDITION_REMAINS_INDETERMINATE
 STRUCTURAL_ESCALATION_REQUIRED
 ```
 
-These are procedural exits relative to maintenance only.
+These exits describe the Procedure path only.
+
+They do not replace the Cognitive diagnosis or disposition, Authority finding, PB-001 lineage, or Runtime observations.
+
+## Repeat Rule
+
+```text
+prior diagnosis ≠ current diagnosis
+prior disposition ≠ renewed direction
+prior Authority ≠ fresh Authority
+prior plan ≠ current-state match
+prior operational success ≠ permission to repeat
+```
+
+Every consequential repeat traverses diagnosis, eligibility, disposition, and dispatch gates again.
 
 ## Prohibited Inference
 
 ```text
 alert ≠ diagnosis
-diagnosis ≠ Authority
+diagnosis ≠ eligibility
+eligibility ≠ Authority
+maintenance disposition ≠ Runtime plan
 administrator access ≠ permission
 restart available ≠ restart safe
 queue cleared ≠ semantic intent may be deleted
@@ -146,8 +182,17 @@ maintenance exhausted ≠ mission closed
 Runtime recovered ≠ external effect reversed
 ```
 
-## Runtime Boundary
+## Layer Boundary
 
-This procedure defines expected ordering and conditions.
+This Procedure defines expected ordering and branch conditions.
 
-It does not define services, commands, queues, locks, schedulers, health thresholds, retry intervals, or repair implementation.
+It does not originate:
+
+- diagnosis or disposition meaning
+- Authority
+- identity, correlation, or lineage
+- Runtime states, plans, services, commands, queues, locks, schedulers, storage, or execution
+
+## Non-Admissions
+
+This candidate revises no production baseline and authorizes no live maintenance, control-plane action, credentials, provider use, deployment, or external effect.
