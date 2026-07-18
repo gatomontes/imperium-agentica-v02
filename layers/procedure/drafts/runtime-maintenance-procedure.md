@@ -8,13 +8,13 @@ Not admitted or implemented.
 
 ## Purpose
 
-Define the expected path from a Runtime operating observation to bounded maintenance, withholding, or escalation without allowing Mason or Runtime to invent permission or semantic disposition.
+Define the expected path from a Runtime operating observation to bounded maintenance, withholding, or escalation without allowing Master Mason or Runtime to invent permission or semantic disposition.
 
 ## Candidate Dependencies
 
 ### Cognitive
 
-- Mason: `layers/cognitive/drafts/mason.md`
+- Master Mason: `layers/cognitive/drafts/master-mason.md`
 
 ### Authority
 
@@ -47,7 +47,7 @@ An elapsed timer or alert alone does not authorize intervention.
 
 ### 1. Assemble Operating Situation
 
-Mason assembles:
+Master Mason assembles:
 
 - exact environment and component
 - current Runtime observations
@@ -62,7 +62,7 @@ Missing or mismatched identity blocks action.
 
 ### 2. Diagnose
 
-Mason issues one bounded finding:
+Master Mason issues one bounded finding:
 
 ```text
 RUNTIME_HEALTHY
@@ -100,7 +100,7 @@ Failure withholds maintenance.
 
 ### 5. Invoke Maintenance
 
-Mason issues or invokes the exact bounded Maintenance Instruction.
+Master Mason issues or invokes the exact bounded Maintenance Instruction.
 
 Runtime rechecks Authority, correlation, current state, and version immediately before the effect.
 
@@ -108,7 +108,7 @@ Runtime performs the mechanism and emits durable observations.
 
 ### 6. Assess Result
 
-Mason compares the result with the Procedure's operational exit condition.
+Master Mason compares the result with the Procedure's operational exit condition.
 
 - restored within bounds → record operational restoration
 - unchanged or degraded → repeat only if Procedure and fresh Authority permit
