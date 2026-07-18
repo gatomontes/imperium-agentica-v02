@@ -26,6 +26,20 @@ Canonical targets: 7 / 7
 
 Runtime Maintenance Artifact Closure 001 is admitted and post-merge verified.
 
+## Current Candidate Evidence
+
+Runtime Reference Implementation 001:
+
+```text
+Historical current-semantic pressure: 5 PASS / 10 FAIL
+Historical executable regression: 11 PASS / 0 FAIL
+Successor focused pressure: 15 PASS / 0 FAIL
+Repository regression: PASS
+Production semantic files changed: 0
+```
+
+The successor remains noncanonical, test-scoped, deterministic, and simulated.
+
 ## Evidence Discipline
 
 Historical runs remain evidence of the state tested at their recorded time.

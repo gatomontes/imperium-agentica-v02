@@ -2,27 +2,38 @@
 
 ## Status
 
-Runtime Maintenance Artifact Closure 001 is admitted and post-merge verified.
+Runtime Reference Implementation 001 candidate and evidence are complete.
 
-No next direction is approved or active.
+The active merge decision is recorded only in `current-step.md`.
 
 This file is an ordered operational queue, not doctrine, architecture, or a roadmap.
 
 ## Queue
 
-### 1. Choose one independently scoped Runtime direction
+### 1. If approved, merge the candidate evidence package
 
-Eligible but unapproved directions:
+Require:
 
-- a minimal successor Runtime reference implementation and conformance plan
-- Master Mason qualification, acting medium, assignment, decision mandate, and holding behavior
-- a real environment-specific CONTROL_PLANE Authority Basis and grant
-- distributed concurrency, durability, and recovery evidence
+- exact candidate head
+- focused 15 / 15
+- historical harness 11 / 11
+- repository regression PASS
+- zero production semantic changes
+- explicit nonproduction and simulated-effect limits
 
-Each direction requires its own necessity analysis, scope, tests, and explicit approval.
+### 2. After merge, choose whether further evidence is necessary
 
-Approval of one does not activate the others.
+Independent future options:
 
-### 2. Preserve implementation and institutional gates
+- stable nonproduction reference placement
+- durable single-node store adapter
+- distributed concurrency and crash-recovery evidence
+- environment-specific provider adapter
+- credential-handling implementation
+- production deployment design
 
-No deployment, credentials, provider integration, external effects, autonomous repair, Compass, or Praetorium without separately demonstrated behavior and approval.
+Each requires its own necessity analysis and approval.
+
+### 3. Preserve adjacent gates
+
+Candidate merge does not instantiate Master Mason, issue Authority, define PB-001 semantics, alter Procedure, deploy Runtime, or authorize external effects.
