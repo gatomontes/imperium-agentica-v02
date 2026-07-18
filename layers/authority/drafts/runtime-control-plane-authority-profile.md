@@ -6,7 +6,7 @@ Candidate Authority refinement.
 
 Not admitted.
 
-Revision: Mason Operator Clarification 001.
+Revision: Master Mason Operator Clarification 001.
 
 ## Problem
 
@@ -114,7 +114,7 @@ This mode is required when the action changes semantic mappings, migrates incomp
 
 The grantee may select among enumerated maintenance actions only when:
 
-- a cited Mason diagnosis matches an enumerated finding
+- a cited Master Mason diagnosis matches an enumerated finding
 - a cited Runtime Maintenance Procedure permits the response
 - environment, component, action class, and limits match exactly
 - no semantic mapping or historical meaning changes
@@ -122,7 +122,7 @@ The grantee may select among enumerated maintenance actions only when:
 - escalation conditions are absent
 - each attempt receives a fresh Authority finding
 
-This mode may support Mason's operator/mechanic function.
+This mode may support Master Mason's operator/mechanic function.
 
 It is not general executive decision authority.
 
