@@ -2,7 +2,7 @@
 
 ## Status
 
-Mason Operator Model 001 completed on 2026-07-18.
+Mason Cognitive Placement 001 completed on 2026-07-18.
 
 No active step.
 
@@ -20,7 +20,7 @@ Procedure: PRB-001 — 3 / 3
 Runtime: unadmitted
 ```
 
-## Operator Clarification
+## Mason Model
 
 ```text
 Runtime
@@ -28,69 +28,61 @@ Runtime
 
 Mason
 = operator / mechanic
-
-Mason flips the permitted on/off switch,
-oils the engine,
-clears clogged cogs,
-diagnoses operating trouble,
-and performs bounded maintenance.
 ```
 
-The clarification supersedes the prior executive Master Mason interpretation.
+Mason diagnoses operating trouble, selects an eligible maintenance path, invokes permitted controls, assesses operational restoration, and escalates structural or semantic-risk changes.
 
-## Candidate Model
+## Cognitive Placement
 
 ```text
-Runtime emits operating observations.
-Mason diagnoses the mechanical condition.
-Procedure identifies eligible maintenance paths.
-CONTROL_PLANE Authority permits exact intervention or bounded discretion.
-Mason invokes the permitted control.
-Runtime performs the effect and emits the result.
-Mason assesses operational restoration or escalates.
+Imperium — Cognitive Layer
+├── Mason
+└── Citadel
+    ├── Curia
+    ├── Muster
+    ├── Armory
+    ├── Locksmith
+    └── other Citadel responsibilities
 ```
 
-Mason operates Runtime but is not Runtime.
+Mason is:
 
-## Routine And Structural Boundary
+- inside the Imperium Cognitive echelon
+- outside Citadel
+- adjacent to the Runtime boundary
+- unplaced in Preceptory or Praetorium
+- not inside Runtime
 
-### Routine mechanical discretion
+## Cross-Layer Relationship
 
-Mason may select an eligible response only when:
+```text
+Runtime Observation and Quarantine
+→ operating evidence
+→ Mason
 
-- an exact maintenance Procedure applies
-- CONTROL_PLANE Authority explicitly permits bounded discretion
-- environment, component, action, limits, and correlation match
-- no semantic meaning, mapping, history, or indeterminate effect is altered by assumption
+Mason
+→ diagnosis and permitted maintenance instruction
+→ Runtime Control Plane
+```
 
-Routine bounded maintenance does not require a separate executive mandate.
+Locksmith may supply credential-handling constraints without absorbing Mason.
 
-### Structural or semantic-risk change
-
-Mason stops and escalates when intervention would:
-
-- change semantic mappings
-- migrate incompatible state
-- erase lineage or intent
-- resolve indeterminate effects by assumption
-- choose irreversible or cross-mission consequences
-- revise admitted architecture
-
-Those decisions remain with the external operator until another responsibility is demonstrated.
+Structural decisions remain with the external operator.
 
 ## Evidence
 
 ```text
 Mason operator pressure: 40 PASS / 0 FAIL
 Mason–Runtime convergence: 20 PASS / 0 FAIL
+Mason placement: 12 PASS / 0 FAIL
 ```
 
-## Candidate Artifacts
+## Candidate Map
 
-- `layers/cognitive/drafts/mason.md`
-- `layers/procedure/drafts/runtime-maintenance-procedure.md`
-- revised `layers/authority/drafts/runtime-control-plane-authority-profile.md`
-- `drafts/mason-operator-clarification-001.md`
+- `drafts/runtime-layer-structural-map-001.md`
+- `drafts/mason-cognitive-placement-001.md`
+
+The map is structural. Its arrows represent control, dependency, observation, and effect relationships—not the mission lifecycle.
 
 ## Preserved Non-Admissions
 
@@ -99,11 +91,10 @@ Mason–Runtime convergence: 20 PASS / 0 FAIL
 - no Compass
 - no Praetorium
 - no Runtime production baseline
-- no live control plane
-- no implementation, credentials, integrations, or external effects
+- no live control plane or implementation
 
 ## Recommendation
 
-Approve the corrected Mason operator/mechanic model and merge the draft package.
+Approve the Mason operator/mechanic model, its Imperium-level placement, and the draft package in PR #6.
 
 After merge, the next independently gated step is a minimal empirical Runtime test harness.
