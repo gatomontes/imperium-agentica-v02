@@ -2,7 +2,7 @@
 
 ## Status
 
-Authority Baseline `AB-002` is admitted and unchanged.
+Authority Baseline `AB-003` is admitted.
 
 Historical source drafts retained for traceability:
 
@@ -14,8 +14,8 @@ Historical source drafts retained for traceability:
 
 Their admitted canonical versions live in `layers/authority/production/`.
 
-Current unadmitted refinement:
+Admitted source draft retained for traceability:
 
-- `runtime-control-plane-authority-profile.md`
+- `runtime-control-plane-authority-profile.md` → `layers/authority/production/runtime-control-plane-authority-profile.md`
 
-The candidate CONTROL_PLANE profile grants no real or simulated authority and does not revise AB-002.
+The admitted CONTROL_PLANE profile grants no actual authority by itself.
