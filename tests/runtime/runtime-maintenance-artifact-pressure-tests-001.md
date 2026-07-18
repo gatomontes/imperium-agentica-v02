@@ -34,9 +34,10 @@ No production admission.
 | RMA-012 | Maintenance succeeds operationally | No mission success, semantic correctness, closure, or release is inferred |
 | RMA-013 | Bounded discretion is present | No autonomous repair or self-authorization is inferred |
 | RMA-014 | Multiple Master Mason products require semantics | No universal Artifact layer is inferred merely from local artifact pressure |
+| RMA-015 | CONTROL_PLANE grant exists but Master Mason qualification, assignment, or decision mandate is absent | Action permission does not authorize diagnosis or substantive disposition selection |
 
 ## Pass Condition
 
-All fourteen pressures must pass together.
+All fifteen pressures must pass together.
 
-A candidate that defines only `Maintenance Instruction` fails if diagnosis timing, withholding, escalation, or intent-versus-plan separation remains unresolved.
+A candidate that defines only `Maintenance Instruction` fails if diagnosis timing, withholding, escalation, intent-versus-plan separation, or Master Mason mandate boundaries remain unresolved.
