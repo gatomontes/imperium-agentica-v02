@@ -2,11 +2,11 @@
 
 ## Status
 
-Runtime Baseline `RTB-001` is admitted for current Runtime semantics.
+Runtime Baseline `RTB-002` is admitted for current Runtime semantics.
 
 Manifest: `layers/runtime/production/README.md` — 3 files.
 
-Admission: `tests/runtime/runtime-production-admission-review-001.md`.
+Admission: `tests/runtime/runtime-maintenance-production-admission-review-001.md`.
 
 ## Core Question
 
