@@ -2,18 +2,12 @@
 
 ## Status
 
-Candidate procedures under investigation. None are admitted.
-
-Current split set:
+Historical PRB-001 source drafts retained for traceability:
 
 1. `counsel-unavailability-procedure.md`
 2. `mission-closure-and-release-procedure.md`
 3. `imperium-lifecycle-procedure.md`
 
-These drafts extract procedural residue from four CB-002 placement-contested artifacts.
+Their admitted canonical versions live in `layers/procedure/production/`.
 
-`production-artifacts.md` does not yield a fourth independent procedure. Its handoff chain is absorbed into `imperium-lifecycle-procedure.md`; its artifact meanings remain with native concerns.
-
-## Rule
-
-Draft presence does not establish procedural necessity, completeness, or production admission.
+Draft presence does not create a second canonical origin, change PRB-001, or imply Runtime implementation.
