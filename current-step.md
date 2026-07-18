@@ -2,24 +2,28 @@
 
 ## Status
 
-Castellan Work Specification 001 is the active A1.2 draft candidate.
+Castellan Work Specification 001 merged and post-merge verified on 2026-07-18.
 
-A1.1 is complete. A1.2 began under the approved Track A1 on 2026-07-18.
+Track A1 is complete in two evidence increments.
+
+No active step.
 
 This file is operational continuity, not doctrine, architecture, or authority.
 
-## Candidate Scope
+## Merge Record
 
 ```text
-Input: exact bounded Mission Need version
-Product: versioned Work Specification
-Cognitive finding: SPECIFICATION_CONFORMANT / REFUSED / UNRESOLVED
-Approval: separate exact APPROVE_WORK_SPECIFICATION authority
-Handoff: exact approved version to Guildhall and Collegium
-Production admission: none
+Pull request: #36
+Squash commit: 213dbd0e385a802bc332842941a9788067b0a9c4
+Rollback parent: bad1dcf90eb5144661734c93cadb0a7ab5161a0c
+Candidate head: 484b59721587665db34780a6b5dd3f5d7ba994ad
 ```
 
-## Candidate Evidence
+Execution record:
+
+`drafts/castellan-work-specification-execution-001.md`
+
+## Verified Evidence
 
 ```text
 Pre-candidate pressure: 9 PASS / 6 FAIL
@@ -42,6 +46,6 @@ Production semantic files changed: 0
 
 ## Next Gate
 
-Approve or reject candidate merge.
+Choose and explicitly approve Track A2 from `next-steps.md`.
 
-No merge is authorized by creation of this candidate.
+No direction is active by default.
