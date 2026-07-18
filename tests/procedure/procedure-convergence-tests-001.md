@@ -119,3 +119,10 @@ Expected: implementation preserves Procedure but does not become its semantic or
 All candidate drafts pass.
 
 Expected: CB-002, AB-001, and PB-001 remain current until an explicitly admitted atomic transition.
+
+
+### CLP-021 — Cognitive Map Competition
+
+The Cognitive Map preserves canonical artifact chains, live-control loops, or terminal sequences after Procedure drafts exist.
+
+Expected: fail until the map is reduced to ontology, responsibility, products, dependencies, and distinctions with Procedure citations.
