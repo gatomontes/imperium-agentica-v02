@@ -4,11 +4,11 @@
 
 Reduced boundary approved on 2026-07-18.
 
-Procedure Baseline `PRB-002` is admitted for current procedural use.
+Procedure Baseline `PRB-003` is admitted for current procedural use.
 
 Manifest: `layers/procedure/production/README.md` — 5 files.
 
-Admission: `tests/runtime/runtime-production-admission-review-001.md`.
+Admission: `tests/runtime/runtime-maintenance-production-admission-review-001.md`.
 
 The admitted layer uses the reduced definition:
 
@@ -74,7 +74,7 @@ Procedure may not originate or repair:
 ```text
 native contract defines the noun
 Procedure connects the defined nouns with expected verbs
-Runtime may implement the transitions under RTB-001
+Runtime may implement the transitions under RTB-002
 ```
 
 If a required noun or condition has no canonical origin, the procedure is blocked. It must expose the gap rather than assume a definition.
