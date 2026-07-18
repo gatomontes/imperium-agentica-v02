@@ -34,8 +34,9 @@ It maintains:
 
 - an append-only versioned JSON-lines journal
 - synchronous journal flush before in-memory application
-- one writer lock per store directory
+- one in-process writer per store directory
 - reconstruction of components, realizations, and effects
+- durable reconstruction of required Runtime observations
 - recovery quarantine for effects persisted as `DISPATCHED`
 - strict refusal of corrupt tails, unknown schemas, and sequence mismatch
 
@@ -53,10 +54,10 @@ The adapter never converts an uncertain dispatched effect to success or failure.
 ## Results
 
 ```text
-Pre-extension durability pressure: 3 PASS / 9 FAIL
+Pre-extension durability pressure: 3 PASS / 10 FAIL
 Successor semantic regression: 15 PASS / 0 FAIL
-Durability extension: 8 PASS / 0 FAIL
-Combined successor suite: 23 PASS / 0 FAIL
+Durability extension: 9 PASS / 0 FAIL
+Combined successor suite: 24 PASS / 0 FAIL
 Historical harness: 11 PASS / 0 FAIL
 ```
 
