@@ -6,7 +6,7 @@ Candidate Authority refinement.
 
 Not admitted.
 
-Revision: Runtime Draft Correction 001 after Pressure Run 001.
+Revision: Mason Operator Clarification 001.
 
 ## Problem
 
@@ -40,6 +40,10 @@ Effective interval
 Required plan or compatibility conditions
 Delegation rule
 Suspension, withdrawal, expiry, and supersession
+Discretion mode
+Permitted diagnosis and Procedure references when discretion is bounded
+Maximum repeat, resource, time, and consequence limits
+Required escalation conditions
 Required safe state
 Prohibited actions
 ```
@@ -90,6 +94,37 @@ These intersections do not merge grants or Authority Bases.
 Default delegation: prohibited.
 
 Automation may be the bounded grantee or acting surface. Automation does not become the Principal and cannot widen, renew, or reinterpret the grant.
+
+## Operational Discretion Modes
+
+A CONTROL_PLANE grant must select one mode:
+
+```text
+EXECUTE_EXACT_INSTRUCTION
+BOUNDED_MAINTENANCE_DISCRETION
+```
+
+### EXECUTE_EXACT_INSTRUCTION
+
+The grantee may perform only the exact externally selected action.
+
+This mode is required when the action changes semantic mappings, migrates incompatible state, accepts irreversible consequence, resolves cross-mission priority, or otherwise requires a substantive decision outside routine maintenance.
+
+### BOUNDED_MAINTENANCE_DISCRETION
+
+The grantee may select among enumerated maintenance actions only when:
+
+- a cited Mason diagnosis matches an enumerated finding
+- a cited Runtime Maintenance Procedure permits the response
+- environment, component, action class, and limits match exactly
+- no semantic mapping or historical meaning changes
+- no indeterminate effect is assumed resolved
+- escalation conditions are absent
+- each attempt receives a fresh Authority finding
+
+This mode may support Mason's operator/mechanic function.
+
+It is not general executive decision authority.
 
 ## Dispatch Freshness
 
