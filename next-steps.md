@@ -2,56 +2,37 @@
 
 ## Status
 
-Runtime Admission Preparation 001 is complete.
-
-Production remains unchanged.
+Runtime Production Admission 001 is executing.
 
 This file is an ordered operational queue, not doctrine, architecture, or a roadmap.
 
 ## Queue
 
-### 1. Review the prepared admission package
+### 1. Squash-merge the verified admission tree
 
-Review:
+Require head-SHA protection and rollback parent `6e32f0c1f43a7ef83e55de276664daedc7051ab8`.
 
-- `drafts/runtime-admission-manifest-analysis-001.md`
-- `tests/runtime/runtime-admission-pressure-run-001.md`
-- `tests/runtime/runtime-admission-convergence-001.md`
-- `drafts/runtime-admission-atomic-transition-001.md`
-- `tests/runtime/runtime-production-admission-review-001.md`
+### 2. Verify `main` independently
 
-### 2. Decide whether to authorize production admission
+Require:
 
-The prepared atomic transition is:
+- CB-004: 34/34
+- AB-003: 6/6
+- PB-001: 3/3 unchanged
+- PRB-002: 5/5
+- RTB-001: 3/3
+- seven canonical targets
+- no live draft citations or admission-status residue
+- preserved draft history and exclusions
 
-```text
-CB-003 → CB-004
-AB-002 → AB-003
-PB-001 unchanged
-PRB-001 → PRB-002
-Runtime empty → RTB-001
-```
+### 3. Record the completed transition
 
-Approval authorizes construction, verification, and one atomic squash merge of the seven semantic targets and their manifests.
+Record PR, squash SHA, rollback parent, manifest counts, target identities, and post-merge verification.
 
-It does not authorize deployment, credentials, providers, or live effects.
+### 4. Select the next investigation
 
-### 3. If approved, build a preverified staging tree
+Semantic Runtime admission does not authorize live implementation. Any deployment or reference implementation requires an independently scoped step.
 
-Require exact production paths, normalized citations, admission metadata, manifests resolving 34/34, 6/6, 3/3, 5/5, and 3/3, and no candidate-status residue.
-
-### 4. Verify and squash-merge atomically
-
-Record the exact rollback parent immediately before construction. Merge only when the branch is not behind `main` and every admission check passes.
-
-### 5. Perform independent post-merge verification
-
-Verify production manifests, canonical origins, draft historical status, citations, evidence references, and preserved exclusions.
-
-### 6. Record the transition and choose the next investigation
-
-No live Runtime implementation follows automatically from semantic admission.
-
-### 7. Keep Compass and Praetorium parked
+### 5. Keep Compass and Praetorium parked
 
 Reactivate only when their own distinct behaviors are demonstrated.
