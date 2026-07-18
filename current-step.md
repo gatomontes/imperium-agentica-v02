@@ -2,13 +2,13 @@
 
 ## Status
 
-Runtime Production Admission 001 is explicitly approved and pre-merge verified as of 2026-07-18.
+Runtime Production Admission 001 completed and post-merge verified on 2026-07-18.
 
-Atomic squash merge and post-merge verification are in progress.
+No active step.
 
 This file is operational continuity, not doctrine, architecture, or authority.
 
-## Target Production State
+## Admitted Production State
 
 ```text
 Cognitive: CB-004 — 34 / 34
@@ -18,26 +18,37 @@ Procedure: PRB-002 — 5 / 5
 Runtime: RTB-001 — 3 / 3
 ```
 
-## Admission
+## Merge Record
 
 ```text
-Operator approval: received
+Pull request: #10
+Squash commit: 1e39c967e8d3e9522c8538ca95d73c7420526b2f
 Rollback parent: 6e32f0c1f43a7ef83e55de276664daedc7051ab8
-Production targets: 7
-Resolved manifest entries: 51 / 51
+Post-merge manifests: 51 / 51
+Canonical targets: 7 / 7
+```
+
+Record:
+
+`drafts/runtime-production-admission-execution-001.md`
+
+## Evidence
+
+```text
 Empirical corrected run: 11 PASS / 0 FAIL
 Admission pressure: 55 PASS / 0 FAIL
 Admission convergence: 30 PASS / 0 FAIL
+Post-merge verification: PASS
 ```
 
 ## Preserved Limits
 
-- semantic admission is not live deployment
-- no credentials, providers, services, or external effects
-- empirical evidence remains a simulated single-process model
-- Master Mason is a responsibility contract, not a persona, Officer class, hierarchy, or institution
+- semantic admission is not Runtime deployment or instantiation
+- no credentials, providers, services, infrastructure, autonomous repair, or live effects
+- simulated evidence is not distributed-systems proof
+- Master Mason is not yet instantiated, assigned, or placed in an institution
 - Compass and Praetorium remain parked
 
-## Required Completion
+## Next Gate
 
-Squash-merge the preverified staging branch, verify `main` independently, record the merge SHA and rollback parent, then choose the next investigation.
+Any concrete Runtime implementation, Master Mason instantiation, or real CONTROL_PLANE grant requires a separately approved investigation.
