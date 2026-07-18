@@ -212,7 +212,7 @@ Provider-stage provenance does not prove:
 
 ## Non-Admissions
 
-This draft does not admit:
+This contract does not admit:
 
 - provider execution runtime
 - ledger storage
