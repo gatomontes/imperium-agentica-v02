@@ -119,13 +119,15 @@ A future LLM session should read the repository in this order:
 4. `layers/cognitive/README.md` — cognitive-layer boundary and admission rules.
 5. `layers/cognitive/production/` — admitted cognitive baseline, when cognitive structure is relevant.
 6. `layers/authority/README.md` — approved authority boundary.
-7. `layers/authority/drafts/` — shaped but unproven authority contracts, only if relevant.
-8. `layers/provenance/README.md` — approved provenance boundary.
-9. `layers/provenance/drafts/` — shaped but unproven provenance contracts, only if relevant.
-10. `layers/cognitive/drafts/` — shaped but unproven cognitive artifacts, only if relevant.
-11. `tests/` — theoretical suites and immutable run records, only when testing or tracing.
-12. `ideas.md` — raw pre-draft candidates, only if needed.
-13. `drafts/` — cross-layer working analyses, only if relevant to the current step.
+7. `layers/authority/production/` — admitted Authority Baseline `AB-001`, when authority is relevant.
+8. `layers/authority/drafts/` — shaped but unproven authority contracts, only if relevant.
+9. `layers/provenance/README.md` — approved provenance boundary.
+10. `layers/provenance/production/` — admitted Provenance Baseline `PB-001`, when provenance is relevant.
+11. `layers/provenance/drafts/` — shaped but unproven provenance contracts, only if relevant.
+12. `layers/cognitive/drafts/` — shaped but unproven cognitive artifacts, only if relevant.
+13. `tests/` — theoretical suites and immutable run records, only when testing or tracing.
+14. `ideas.md` — raw pre-draft candidates, only if needed.
+15. `drafts/` — cross-layer working analyses, only if relevant to the current step.
 
 Do not reconstruct intent from chat history before reading these files.
 
@@ -161,7 +163,7 @@ The default home for shaped but unproven artifacts is:
 /drafts
 ```
 
-Layer-specific artifacts live within their layer. The admitted cognitive baseline is `CB-001`. Cognitive artifacts use:
+Layer-specific artifacts live within their layer. The admitted cognitive baseline is `CB-002`. Cognitive artifacts use:
 
 ```text
 /layers/cognitive/drafts
@@ -190,7 +192,7 @@ Their theoretical tests use:
 /tests/provenance
 ```
 
-Neither layer currently has an admitted production baseline.
+Authority Baseline `AB-001` and Provenance Baseline `PB-001` are admitted for current use.
 
 `production` means admitted for current use, not permanent or implemented in software.
 
