@@ -36,10 +36,14 @@ Petition
 Conditions:
 
 - operator intent has been shaped as a Petition
+- the exact Petition identity scopes the `FORM_MISSION` Authority finding
+- Petition identity is non-authorizing and does not approve mission formation
 - Castellan responsibility accepts formation
+- PB-001 supplies the Mission Identity after formation
+- a separate effective Authority finding permits `APPROVE_WORK_SPECIFICATION` for that Mission Identity
 - the Work Specification preserves the admitted mission meaning
 
-Exit: an admitted Work Specification or an explicit refusal/blocker.
+Exit: an authorized approved Work Specification or an explicit refusal/blocker.
 
 ## Stage 2 — Profession And Persona Resolution
 
@@ -143,26 +147,26 @@ Branches:
 - provenance mismatch → reject or quarantine under PB-001
 - decision authorized → continue exact handoff
 
-## Stage 8 — Closure And Release
+## Stage 8 — Closure And Post-Closure Branches
 
 Delegate the complete terminal sequence to:
 
 `mission-closure-and-release-procedure.md`.
 
-No other lifecycle statement may compress completion claim, closure, release, reporting, or delivery into one transition.
-
-## Stage 9 — Report And Delivery
+After `MISSION_CLOSED`, preserve three independent branches:
 
 ```text
-Mission Closure Record
-+ final Curia Minute
-+ cited evidence
-→ Final Report
-→ Delivery Package
-→ operator
+MISSION_CLOSED
+├── release branch → Operative Release Record or explicit unresolved release
+├── session-end branch → Curia Session ends; standing assignments remain
+└── report branch → Final Report → Delivery Package → operator
 ```
 
-This stage applies only under the closure procedure and applicable Authority finding.
+The report branch requires applicable `REPORT_AND_DELIVER` authority but does not require successful release. It must expose release status and outstanding obligations.
+
+The Muster Instance remains until its release responsibility completes or an authorized terminal instruction preserves the unresolved state.
+
+No lifecycle statement may compress completion claim, closure, release, reporting, or delivery into one transition.
 
 ## Optionality Rule
 

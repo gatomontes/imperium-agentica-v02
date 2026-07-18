@@ -2,27 +2,32 @@
 
 ## Purpose
 
-This directory contains theoretical tests and immutable run records by admitted or candidate concern.
+Theoretical tests and immutable run records by admitted or candidate concern.
 
-Current admitted baselines:
+## Current Admitted Baselines
 
-- Cognitive: `CB-002` — 33 artifacts, 31 PASS / 0 FAIL
+- Cognitive: `CB-002` — 33 artifacts
 - Authority: `AB-001` — 3 artifacts
 - Provenance: `PB-001` — 3 artifacts
-- Cross-layer convergence: Run 004 — PASS
+- Procedure: none
+- Runtime: none
 
-Candidate structural results:
+## Candidate Transition Evidence
 
-- Procedure split: 16 PASS / 0 FAIL
-- Procedure production: unadmitted
-- Runtime: unadmitted
+```text
+Procedure structural: 16 PASS / 0 FAIL
+Procedure behavioral: 35 PASS / 0 FAIL
+Mission Envelope: 15 PASS / 0 FAIL
+Capability Grants: 15 PASS / 0 FAIL
+Completion Assessment: 10 PASS / 0 FAIL
+Cognitive regression: 33 PASS / 0 FAIL
+Authority regression: 67 PASS / 0 FAIL
+Provenance regression: 34 PASS / 0 FAIL
+Corrected convergence: 21 PASS / 0 FAIL
+```
 
-Current areas:
+Candidate reviews recommend CB-003, AB-002, and PRB-001 as one atomic transition.
 
-- `cognitive/`
-- `authority/`
-- `provenance/`
-- `procedure/`
-- cross-layer convergence and migration records at the test root
+No production admission has occurred.
 
-Tests do not execute software or imply runtime implementation.
+Tests do not execute software or imply Runtime implementation.

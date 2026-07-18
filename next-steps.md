@@ -8,67 +8,60 @@ This file is an ordered operational queue, not doctrine, architecture, or a road
 
 ## Queue
 
-### 1. Pressure the reduced Procedure boundary
+### 1. Execute atomic Procedure admission migration
 
-Run scenario pressure against:
+Candidate transition:
 
-- `counsel-unavailability-procedure.md`
-- `mission-closure-and-release-procedure.md`
-- `imperium-lifecycle-procedure.md`
+```text
+CB-002 → CB-003
+AB-001 → AB-002
+PB-001 → unchanged
+Procedure production empty → PRB-001
+```
 
-Required challenges:
+Manifest:
 
-- missing or contested Cognitive findings
-- authority unavailable, expired, withdrawn, or scope-mismatched
-- provenance partial, broken, or cross-mission mismatched
-- missing terminal return
-- completion claim without sufficient proof
-- partially completed work
-- provider operations still pending
-- release requested before closure
-- optional artifact omission
-- procedural loop, return, and terminal branches
-- Runtime leakage
+`drafts/procedure-admission-migration-manifest-001.md`
 
-Activation condition: explicit operator approval.
+Review:
 
-### 2. Pressure Authority refinements
+`tests/cross-layer-procedure-migration-review-001.md`
 
-Candidates:
+Constraints:
 
-- `mission-envelope.md`
-- `capability-tool-and-access-grants.md`
+- one atomic `main` transition
+- normalize all draft citations to production paths
+- verify all targets before deletion
+- delete exactly:
+  - `layers/cognitive/production/lifecycle.md`
+  - `layers/cognitive/production/production-artifacts.md`
+- preserve exact rollback parent
+- do not admit Runtime, universal Proof, Ownership, or central Artifact layers
+
+Activation condition: explicit operator execution approval.
+
+### 2. Verify post-migration production
 
 Required:
 
-- specialization tests against AB-001
-- scope and delegation tests
-- authority-loss safe-state tests
-- Tool Grant / Access Grant non-collapse
-- convergence with PB-001 and Procedure
+- PRB-001 manifest 3 / 3
+- AB-002 manifest 5 / 5
+- CB-003 manifest 33 / 33
+- PB-001 unchanged 3 / 3
+- source deletions 2 / 2
+- canonical path scan
+- corrected regression and convergence evidence
+- merge SHA and rollback parent recorded
 
-### 3. Resolve completion-proof origin
+### 3. Begin Runtime boundary investigation
 
-Determine whether completion sufficiency belongs to:
+Activation condition:
 
-- the Work Specification's native Cognitive contract
-- an artifact-relative assurance contract
-- a distinct Proof concern demonstrated by repeated behavior
+- atomic Procedure migration completed and verified
+- explicit operator approval
 
-Do not create a Proof layer from terminology alone.
+Runtime must implement admitted meanings without originating Cognitive, Authority, Provenance, Procedure, artifact, proof, or ownership semantics.
 
-### 4. Prepare convergence and admission review
-
-Only after independent pressure passes:
-
-- Cognitive regression
-- Authority regression
-- Provenance regression
-- cross-layer convergence
-- candidate baseline manifests
-- atomic migration preflight
-- operator admission decision
-
-### 5. Reconsider Vellum only if a record gap appears
+### 4. Reconsider Vellum only if a record gap appears
 
 Activation condition: a scenario demonstrates a canonical record behavior existing artifacts cannot preserve.

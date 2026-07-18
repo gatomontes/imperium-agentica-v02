@@ -50,7 +50,8 @@ Authority profile: MISSION_ENVELOPE
 Represented Principal
 Authority Basis
 Parent grant when applicable
-Mission identity
+Formation-scope reference when pre-formation
+Mission identity once formed
 Permitted action classes
 Prohibited actions
 Affected systems, resources, and external parties
@@ -65,6 +66,20 @@ Status
 ```
 
 This is a semantic Authority contract, not a runtime permission object.
+
+## Pre-Formation Scope
+
+Before a Mission Identity exists, `FORM_MISSION` is scoped to the exact Petition identity supplied by the cited Cognitive and Provenance contracts.
+
+```text
+Petition identity ≠ mission approval
+Petition identity ≠ Authority Grant
+FORM_MISSION authority ≠ Work Specification approval
+```
+
+After mission formation, PB-001 Mission Identity governs `APPROVE_WORK_SPECIFICATION` and every later mission action.
+
+If formation is refused, the Petition, refusal, and their provenance remain historically addressable. Authority defines none of those identities.
 
 ## Scope Rules
 
@@ -99,6 +114,25 @@ A safe-state instruction:
 - cannot be invented by Procedure
 - cannot become a terminal disposition unless the grant expressly says so
 - remains subject to PB-001 correlation
+
+## Terminal Administrative Tail
+
+`TERMINAL_DISPOSITION` does not automatically expire the entire envelope.
+
+When explicitly listed, `REPORT_AND_DELIVER` may remain effective after closure or release only for:
+
+- preparing and delivering the terminal report or artifact
+- communicating recorded unresolved conditions
+- completing cited administrative obligations
+
+The tail:
+
+- permits no new field instruction
+- cannot reactivate Tool or Access Grants
+- cannot restore an Operative Binding
+- ends on its recorded completion, withdrawal, expiry, or supersession condition
+
+Operational capability grants end no later than release of their mission binding even when the administrative tail remains effective.
 
 ## Non-Procedure
 

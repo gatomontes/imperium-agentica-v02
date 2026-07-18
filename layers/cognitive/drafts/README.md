@@ -6,9 +6,11 @@ CB-002 remains the admitted Cognitive production baseline.
 
 Active split candidates:
 
+- `cognitive-map.md`
 - `counsel-availability-contract.md`
 - `mission-closure-and-release-contract.md`
 - `production-artifact-catalog.md`
+- `work-specification-completion-assessment.md`
 
 These drafts remove procedural ordering and foreign-native definitions from three placement-contested CB-002 artifacts.
 
