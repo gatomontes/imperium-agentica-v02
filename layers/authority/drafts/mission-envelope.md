@@ -50,7 +50,8 @@ Authority profile: MISSION_ENVELOPE
 Represented Principal
 Authority Basis
 Parent grant when applicable
-Mission identity
+Formation-scope reference when pre-formation
+Mission identity once formed
 Permitted action classes
 Prohibited actions
 Affected systems, resources, and external parties
@@ -66,19 +67,19 @@ Status
 
 This is a semantic Authority contract, not a runtime permission object.
 
-## Pre-Formation Identity
+## Pre-Formation Scope
 
-An exact proposed Mission Identity may be allocated before substantive mission formation.
+Before a Mission Identity exists, `FORM_MISSION` is scoped to the exact Petition identity supplied by the cited Cognitive and Provenance contracts.
 
 ```text
-identity allocation ≠ mission approval
-identity allocation ≠ Authority Grant
-identity allocation ≠ Work Specification approval
+Petition identity ≠ mission approval
+Petition identity ≠ Authority Grant
+FORM_MISSION authority ≠ Work Specification approval
 ```
 
-The proposed identity permits exact scoping of `FORM_MISSION` and `APPROVE_WORK_SPECIFICATION`.
+After mission formation, PB-001 Mission Identity governs `APPROVE_WORK_SPECIFICATION` and every later mission action.
 
-If formation is refused, the identity and refusal remain historically addressable and are never recycled.
+If formation is refused, the Petition, refusal, and their provenance remain historically addressable. Authority defines none of those identities.
 
 ## Scope Rules
 
