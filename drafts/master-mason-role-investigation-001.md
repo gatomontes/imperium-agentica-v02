@@ -2,7 +2,7 @@
 
 ## Status
 
-Superseded by Mason Operator Clarification 001.
+Superseded by Master Mason Operator Clarification 001.
 
 The historical analysis is preserved, but its executive Master Mason interpretation is not current.
 
