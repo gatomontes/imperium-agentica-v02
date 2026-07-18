@@ -6,7 +6,7 @@ The synthetic credential/store evidence leg is merged, complete, and post-merge 
 
 Track A0 is merged, complete, and post-merge verified.
 
-No next leg is approved or active.
+Track A1 is approved. Its first Mission Need formation candidate is active; candidate merge remains gated.
 
 The operator approved a sequencing refinement:
 
@@ -44,7 +44,7 @@ Deployment implementation pauses after the handoff seam is proven.
 | Order | Approximate leg | What it must establish | Evidence increments | Approximate merges |
 |---:|---|---|---:|---:|
 | A0 — complete | Creation-to-deployment handoff seam | exact medium-specific Operative identity/version, provenance and applicable authority references, preservation/deviation findings, dependency/resource/secret-class requirements, validation evidence, and a provider-neutral handoff assessment that creates no Operative readiness state | 1 completed | 2 completed |
-| A1 | Castellan-side mission and work specification | bounded Mission Need, approved Work Specification, required capability, constraints, acceptance conditions, authority citation, and refusal/escalation without defining a profession or constructing an Operative | 2–3 | 4–6 |
+| A1 — active | Castellan-side mission and work specification | bounded Mission Need, approved Work Specification, required capability, constraints, acceptance conditions, authority citation, and refusal/escalation without defining a profession or constructing an Operative | 2–3 | 4–6 |
 | A2 | Guildhall-to-Conscription resolution and recruitment | resolve Profession Specification and admitted Persona, then transform that Persona into a versioned deployment-medium-specific Operative; test selection, referral, preservation, deviation, rejection, repair, and evidence without mission assembly or deployment | 3–5 | 6–10 |
 | A3 | Creation closure and handoff conformance | cross-flow provenance, artifact versioning, reproducibility, handoff classification, and proof that downstream consumers can inspect the Operative without rewriting creation semantics | 1–2 | 2–4 |
 
@@ -94,18 +94,18 @@ These are planning ranges, not targets. A leg may contract when existing evidenc
 
 ## Recommended Next Leg
 
-`Castellan mission and Work Specification conformance investigation`
+`Castellan Mission Need formation contract` — active A1.1 candidate
 
-This should pressure the admitted Castellan responsibility from Petition through bounded Mission Need and approved Work Specification, including exact authority citations, acceptance conditions, ambiguity/refusal behavior, and a clean handoff to Guildhall without defining profession, persona, or Operative construction.
+This first A1 increment pressures exact Petition identity, `FORM_MISSION` authority, bounded Mission Need content, semantic fidelity, and refusal/unresolved behavior. Work Specification formation and approval remain a separate next increment.
 
 Expected size:
 
 ```text
-2–3 evidence increments
-4–6 merges
+1 evidence increment
+2 merges
 ```
 
-Starting Track A1 requires a new necessity analysis, bounded scope, pressure plan, and explicit operator approval after the A0 execution record merges.
+Candidate merge requires explicit operator approval. If merged, a separate execution-record merge remains required before A1.2 begins.
 
 ## Preserved Gates
 
