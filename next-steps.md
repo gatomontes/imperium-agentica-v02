@@ -2,31 +2,33 @@
 
 ## Status
 
-Runtime Synthetic Credential Boundary 001 is merged and post-merge verified.
+Runtime Synthetic Credential-to-Provider Projection 001 candidate and evidence are complete.
 
-No next direction is approved or active.
-
-This file is an ordered operational queue, not doctrine, architecture, or a roadmap.
+The active merge decision is recorded only in `current-step.md`.
 
 ## Queue
 
-### 1. Choose one independently scoped direction
+### 1. If approved, merge the synthetic provider projection package
 
-Eligible but unapproved options:
+Require:
 
-- synthetic credential-to-provider projection investigation
-- real secret-store boundary investigation
+- exact candidate head
+- combined successor 77 / 77
+- historical harness 11 / 11
+- repository regression PASS
+- zero production semantic changes
+- no real credential, SDK, network, process execution, deployment, or external effect
+- explicit trusted-driver and JavaScript-erasure limits
+
+### 2. After merge, choose one independent direction
+
+- real secret-store interface investigation
 - live Node process-supervisor driver investigation
+- provider authentication-format investigation
 - production deployment design
 
-Recommended next step:
+Each requires separate necessity analysis, tests, and approval.
 
-`synthetic credential-to-provider projection investigation`
+### 3. Preserve adjacent gates
 
-It can test least-data credential projection through the existing injected provider boundary while retaining synthetic bytes, no network, no process execution, and no live provider.
-
-Each option requires its own necessity analysis, scope, tests, and explicit approval.
-
-### 2. Preserve adjacent gates
-
-No option automatically proves secure erasure, real credential safety, provider authentication or idempotency, component recovery, production readiness, or consensus; deploys Runtime; or authorizes external effects.
+Candidate merge does not prove secure erasure, real credential safety, provider authentication or idempotency, component recovery, production readiness, or consensus; deploy Runtime; or authorize external effects.

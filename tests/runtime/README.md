@@ -12,7 +12,9 @@ Runtime Stable Nonproduction Reference Placement 001 is merged and verified.
 
 Runtime Node Process-Supervisor Provider Adapter 001 is merged and verified.
 
-Runtime Synthetic Credential Boundary 001 is the current candidate.
+Runtime Synthetic Credential Boundary 001 is merged and verified.
+
+Runtime Synthetic Credential-to-Provider Projection 001 is the current candidate.
 
 ## Reference Implementation Evidence
 
@@ -64,6 +66,15 @@ Runtime Synthetic Credential Boundary 001 is the current candidate.
 - repository regression: `runtime-synthetic-credential-boundary-repository-regression-001.md` — PASS
 - candidate review: `runtime-synthetic-credential-boundary-candidate-review-001.md`
 
+## Synthetic Provider Projection Candidate
+
+- baseline pressure: `runtime-synthetic-provider-projection-pressure-run-001.md` — 3 PASS / 11 FAIL
+- corrected pressure: `runtime-synthetic-provider-projection-pressure-run-002.md` — 14 PASS / 0 FAIL
+- focused projection executable: 13 PASS / 0 FAIL
+- combined successor executable: 77 PASS / 0 FAIL
+- repository regression: `runtime-synthetic-provider-projection-repository-regression-001.md` — PASS
+- candidate review: `runtime-synthetic-provider-projection-candidate-review-001.md`
+
 ## Evidence Limits
 
 The file-backed adapter demonstrates deterministic single-process behavior on a test filesystem.
@@ -76,4 +87,6 @@ The Node process-supervisor adapter demonstrates environment binding and result 
 
 The synthetic credential broker demonstrates one-use, exact-bound lifecycle behavior for test bytes only.
 
-None is proof of production durability, a consensus protocol, real network partitions, durable quorum state, distributed correctness, secure erasure, real credential safety, provider idempotency, performance, deployment safety, or live recovery.
+The synthetic provider projection demonstrates least-data composition with the injected driver only.
+
+None is proof of production durability, a consensus protocol, real network partitions, durable quorum state, distributed correctness, secure erasure, real credential safety, provider authentication or idempotency, performance, deployment safety, or live recovery.
