@@ -21,13 +21,13 @@ Draft corrected pressure: 60 PASS / 0 FAIL
 State-machine conformance method: 15 PASS / 0 FAIL
 Draft convergence: 24 PASS / 0 FAIL
 Control-plane cognitive origin: 10 PASS / 0 FAIL
-Mason operator pressure: 40 PASS / 0 FAIL
-Mason–Runtime convergence: 20 PASS / 0 FAIL
-Mason placement: 12 PASS / 0 FAIL
+Master Mason operator pressure: 40 PASS / 0 FAIL
+Master Mason–Runtime convergence: 20 PASS / 0 FAIL
+Master Mason placement: 12 PASS / 0 FAIL
 ```
 
 The earlier executive Master Mason tests are retained as a superseded hypothesis.
 
-Current finding: Mason is a coherent Imperium-level Runtime operator/mechanic candidate placed outside Citadel. Compass, Praetorium, Runtime production, and implementation remain unadmitted.
+Current finding: Master Mason is a coherent Imperium-level Runtime operator/mechanic candidate placed outside Citadel. Compass, Praetorium, Runtime production, and implementation remain unadmitted.
 
 All Runtime evidence is theoretical.
