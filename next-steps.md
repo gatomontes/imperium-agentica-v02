@@ -2,68 +2,63 @@
 
 ## Status
 
-Runtime Maintenance Artifact Closure 001 candidate construction is complete.
+Runtime Maintenance Artifact Closure 001 regression and admission preparation are complete.
 
-The current decision is recorded only in `current-step.md`.
+The current staging decision is recorded only in `current-step.md`.
 
 This file is an ordered operational queue, not doctrine, architecture, or a roadmap.
 
 ## Queue
 
-### 1. If approved, run repository-wide regression
+### 1. If approved, construct the exact production staging tree
 
-Pressure the minimal candidate against:
+Require:
 
-- existing Cognitive constitutional tests
-- Authority origin and grant boundaries
-- PB-001 identity, correlation, lineage, and supersession invariants
-- Procedure reduced-boundary and lifecycle regressions
-- RTB-001 realization, observation, retry, recovery, and control-plane invariants
-- manifest and citation closure
-- parked Compass and Praetorium exclusions
+- fresh rollback parent from current `main`
+- preparation branch behind main by zero
+- seven canonical semantic targets only
+- CB-005, PRB-003, and RTB-002 manifest revisions
+- AB-003 and PB-001 byte-unchanged
+- Runtime Realization and Observation contracts byte-unchanged
+- normalized production citations and admission metadata
 
-Regression authorizes no production movement.
+Staging construction is not production admission.
 
-### 2. If regression converges, prepare an exact admission candidate
+### 2. Verify the staging tree before any merge decision
 
-Candidate transition under review:
+Require:
 
 ```text
-CB-004 → CB-005: 34 → 36
-AB-003 unchanged: 6
-PB-001 unchanged: 3
-PRB-002 → PRB-003: 5
-RTB-001 → RTB-002: 3
-Canonical semantic targets: 7
+CB-005: 36 / 36
+AB-003: 6 / 6 unchanged
+PB-001: 3 / 3 unchanged
+PRB-003: 5 / 5
+RTB-002: 3 / 3
+Total: 53 / 53
+Canonical targets: 7 / 7
+Focused pressure: 15 / 15
+Convergence: 35 / 35
+Empirical harness: 11 / 11
+Repository regression: PASS
 ```
 
-Admission preparation must include exact canonical paths, manifest revisions, citation normalization, rollback parent, and independent verification method.
+Also require zero live draft citations, zero candidate residue, exact unchanged-tree verification, and branch behind main by zero.
 
-Preparation is not admission.
+### 3. Require separate approval for atomic production admission
 
-### 3. Require separate approval for production movement
+No squash merge, production baseline admission, or post-merge record without explicit operator approval after reviewing the verified staging tree.
 
-No canonical copy, manifest transition, merge, or baseline admission without explicit operator approval.
-
-### 4. Choose the next independently scoped Runtime direction after closure
+### 4. After closure, choose the next independently scoped Runtime direction
 
 Remaining eligible but unapproved directions:
 
-- a minimal RTB-001 or successor reference implementation and conformance plan
-- Master Mason qualification, acting medium, assignment, and native holding behavior
+- a minimal successor Runtime reference implementation and conformance plan
+- Master Mason qualification, acting medium, assignment, decision mandate, and holding behavior
 - a real environment-specific CONTROL_PLANE Authority Basis and grant
 - distributed concurrency, durability, and recovery evidence
 
 These are distinct. Approval of one does not activate the others.
 
-### 5. Keep semantic admission distinct from implementation
+### 5. Preserve implementation and institutional gates
 
-The Runtime baseline selects no language, framework, queue, database, service topology, deployment platform, provider, credential system, or live environment.
-
-### 6. Preserve explicit authorization gates
-
-No deployment, credentials, provider integration, external effects, autonomous repair, or real CONTROL_PLANE action without separately scoped approval.
-
-### 7. Keep Compass and Praetorium parked
-
-Reactivate only when their own distinct behaviors are demonstrated.
+No deployment, credentials, provider integration, external effects, autonomous repair, Compass, or Praetorium without separately demonstrated behavior and approval.
