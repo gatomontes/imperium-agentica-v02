@@ -4,7 +4,7 @@
 
 No active step.
 
-Authority-grant profile design completed on 2026-07-17.
+Cross-layer migration preflight completed on 2026-07-17.
 
 This file is not doctrine, a roadmap, or architecture.
 
@@ -14,70 +14,54 @@ It is the operational continuity surface for the currently active step.
 
 ## Last Completed Step
 
-Define and pressure the smallest authority-grant profile model.
+Prepare the first dependency-closed cross-layer migration manifest.
 
-## Verified Result
-
-```text
-Authority Origin Test Run 001:
-10 PASS / 0 FAIL
-
-Authority Grant Profile Run 001:
-15 PASS / 0 FAIL
-
-Provenance Test Run 002:
-10 PASS / 0 FAIL
-
-Artifact-Definition Origin Run 001:
-8 PASS / 0 FAIL
-
-Authority–Provenance Convergence Run 003:
-PASS
-```
-
-## Admitted Draft Finding
-
-Six authority profiles are sufficient:
+## Manifest
 
 ```text
-INTERNAL_ADMISSION
-INTERNAL_PLACEMENT
-MISSION_ENVELOPE
-EXECUTIVE_DECISION
-CAPABILITY_TOOL
-CAPABILITY_ACCESS
+drafts/cross-layer-migration-manifest-001.md
 ```
 
-Separate grant profiles are not justified for:
+## Result
 
 ```text
-launch
-closure
-release
-individual instructions
+Transition:
+CB-001 → CB-002
+empty Authority production → AB-001
+empty Provenance production → PB-001
+
+Dependency graph: COMPLETE FOR FIRST MANIFEST
+Target drafts: 3 MISSING
+Target specialization tests: MISSING
+Cognitive regression run: MISSING
+Production admission reviews: MISSING
+Atomic migration: NOT READY
 ```
 
-Launch and terminal actions must be explicit Mission Envelope action classes.
-
-Substantive decisions also require an effective Executive Decision grant.
-
-Release is an authorized consequence of exactly matched closure.
-
-## Root Boundary
+## Candidate Relocations
 
 ```text
-IMPERIUM_STEWARDSHIP
-→ internal admission and placement only
+layers/cognitive/production/executive-mandate.md
+→ layers/authority/production/executive-mandate.md
 
-CONTROLLED_RESOURCE
-DELEGATED_AUTHORITY
-LEGAL_OR_CONTRACTUAL_AUTHORITY
-→ may support external mission action within represented scope
+layers/cognitive/production/mission-concurrency-and-isolation-contract.md
+→ layers/provenance/production/mission-correlation-and-isolation-contract.md
+
+layers/cognitive/production/provider-intervention-ledgers.md
+→ layers/provenance/production/provider-intervention-ledgers.md
 ```
 
-The operator may be the first internal Principal.
+## Candidate Baselines
 
-Operator stewardship of Imperium does not imply universal external authority.
+```text
+AB-001: 3 artifacts
+PB-001: 3 artifacts
+CB-002: 33 cognitive artifacts
+```
+
+CB-002 may incorporate unchanged CB-001 artifact versions by exact manifest reference.
+
+No unchanged file must be rewritten merely to change baseline membership.
 
 ## Production Status
 
@@ -92,22 +76,17 @@ Migration: NOT AUTHORIZED
 
 ## Next Eligible Step
 
-Prepare the first dependency-closed migration and production-admission manifest for:
+Materialize three target drafts without changing production:
 
 ```text
-executive-mandate.md
-→ authority
-
-mission-concurrency-and-isolation-contract.md
-→ provenance
-
-provider-intervention-ledgers.md
-→ provenance
+layers/authority/drafts/executive-mandate.md
+layers/provenance/drafts/mission-correlation-and-isolation-contract.md
+layers/provenance/drafts/provider-intervention-ledgers.md
 ```
 
-The preflight must identify all references, required splits, target metadata, regression tests, atomic movement rules, and rollback conditions.
+Then run specialization, cognitive regression, and convergence tests and prepare four admission reviews.
 
-No production movement may occur without explicit operator approval after reviewing the manifest.
+No migration may occur until the completed package receives explicit operator approval.
 
 See `next-steps.md`.
 
@@ -118,26 +97,21 @@ See `next-steps.md`.
 1. `README.md`
 2. `current-step.md`
 3. `next-steps.md`
-4. `layers/authority/README.md`
-5. `layers/authority/drafts/authority-origin-contract.md`
-6. `layers/authority/drafts/authority-grant-profiles.md`
-7. `layers/provenance/README.md`
+4. `drafts/cross-layer-migration-manifest-001.md`
+5. `drafts/cb-001-layer-placement-review.md`
+6. `layers/authority/drafts/authority-origin-contract.md`
+7. `layers/authority/drafts/authority-grant-profiles.md`
 8. `layers/provenance/drafts/provenance-contract.md`
-9. `tests/authority/authority-test-run-001.md`
-10. `tests/authority/authority-grant-profile-run-001.md`
-11. `tests/provenance/provenance-test-run-002.md`
-12. `tests/authority-provenance-convergence-run-003.md`
-13. `drafts/cb-001-layer-placement-review.md`
+9. `tests/authority-provenance-convergence-run-003.md`
 
 ---
 
 ## Invariants To Preserve
 
+- No source production file is removed before verified target production exists.
+- Target drafts do not create competing production origins.
+- The final migration must be one atomic tree commit.
 - Authority and provenance remain parallel.
-- One artifact contract has one native concern.
-- No grant profile implies an authority institution.
-- Operator internal stewardship is not external authority.
-- Instructions are not automatically grants.
+- Artifact meaning follows native-concern ownership.
 - Procedure remains parked.
-- Authority and provenance production remain empty.
-- CB-001 remains unchanged until an approved atomic migration.
+- CB-001 remains current until approved migration.
