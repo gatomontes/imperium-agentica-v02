@@ -31,14 +31,17 @@ completion claim ≠ criterion support
 criterion support ≠ closure
 closure ≠ release
 release ≠ reuse
-Curia Session end ≠ Muster release complete
-Final Report ≠ release complete
 Cognitive map ≠ Procedure
 Procedure admission ≠ Runtime implementation
+Master Mason judgment ≠ CONTROL_PLANE action authority
+Imperium-scope role ≠ Praetorium admitted
+assessment behavior ≠ Compass admitted
 ```
 
 ## Runtime Control-Plane Origin Evidence
 
 - `runtime-control-plane-responsibility-origin-run-001.md` — 10 PASS / 0 FAIL
+- `master-mason-compass-praetorium-tests-001.md` — 28 scenarios
+- `master-mason-compass-praetorium-run-001.md` — 28 PASS / 0 FAIL
 
-Finding: no admitted Cognitive role owns control-plane compatibility and recovery judgment. External operator responsibility is viable during development; internal Imperium judgment would require a minimal responsibility contract, not yet admitted.
+Finding: Master Mason is supported as the functional Imperium-scope role candidate. Compass and Praetorium remain parked.
