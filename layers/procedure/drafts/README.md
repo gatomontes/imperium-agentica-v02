@@ -2,13 +2,11 @@
 
 ## Status
 
-Procedure Baseline `PRB-002` is admitted and remains canonical.
+Procedure Baseline `PRB-003` is represented by the production staging tree.
 
-Active candidate revision under `Runtime Maintenance Artifact Closure 001`:
+Historical source draft admitted through `Runtime Maintenance Artifact Production Admission Review 001`:
 
-- `runtime-maintenance-procedure.md`
-
-The candidate separates diagnosis from eligibility, requires a post-gate Runtime Maintenance Disposition, and permits Runtime realization only for `INSTRUCT_MAINTENANCE`.
+- `runtime-maintenance-procedure.md` → `layers/procedure/production/runtime-maintenance-procedure.md`
 
 Historical PRB-001 source drafts retained for traceability:
 
@@ -20,4 +18,4 @@ Admitted source draft retained without active revision:
 
 - `mission-indeterminate-effect-disposition-procedure.md` → `layers/procedure/production/mission-indeterminate-effect-disposition-procedure.md`
 
-Draft presence does not create a second canonical origin, change PRB-002, or imply Runtime implementation.
+Historical draft presence does not create a second canonical origin, change PRB-003, or imply Runtime implementation.
