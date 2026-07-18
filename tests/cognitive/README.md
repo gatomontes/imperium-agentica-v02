@@ -8,10 +8,10 @@ They evaluate ontology, responsibility, artifact boundaries, and traceability wi
 
 ## Current Admitted Baseline
 
-- `CB-002` — 33 artifacts
-- admitted evidence: Constitutional Run 016 — 31 PASS / 0 FAIL
+- `CB-003` — 33 artifacts
+- admitted evidence: Cognitive Constitutional Run 018 — 33 PASS / 0 FAIL
 
-## Candidate CB-003 Evidence
+## CB-003 Admission Evidence
 
 - suite: `constitutional-tests.md` — CT-001 through CT-033
 - Completion Assessment Run 001: 10 PASS / 0 FAIL
@@ -20,7 +20,7 @@ They evaluate ontology, responsibility, artifact boundaries, and traceability wi
 - corrected convergence: 21 PASS / 0 FAIL
 - admission review: `production-admission-review-005-cb-003.md`
 
-Decision: **RECOMMEND CB-003 ADMISSION WITH RECORDED LIMITS**
+Decision: **CB-003 ADMITTED WITH RECORDED LIMITS**
 
 ## Current Proven Distinctions
 
@@ -36,5 +36,3 @@ Final Report ≠ release complete
 Cognitive map ≠ Procedure
 Procedure admission ≠ Runtime implementation
 ```
-
-CB-002 remains current until an atomic admitted transition.
