@@ -2,55 +2,56 @@
 
 ## Status
 
-Runtime Single-Node Durability 001 candidate evidence merged and post-merge verified on 2026-07-18.
-
-No active step.
-
-This file is operational continuity, not doctrine, architecture, or authority.
-
-## Merge Record
+Runtime Distributed Concurrency and Recovery 001 candidate completed on 2026-07-18.
 
 ```text
-Pull request: #17
-Squash commit: 9bf7cbdf7307d37d5fc0c9adc5a0596fedc6b151
-Rollback parent: b4c22cd45496e347ba2ccda48e8c6b76eae93a76
-Candidate head: 83a1f42a784ecabbb5f83f9a43925c3fbcf24637
-```
-
-Execution record:
-
-`drafts/runtime-single-node-durability-execution-001.md`
-
-## Verified Evidence
-
-```text
-Pre-extension durability pressure: 3 PASS / 10 FAIL
-Corrected durability pressure: 13 PASS / 0 FAIL
-Focused durability tests: 9 PASS / 0 FAIL
-Preserved successor semantics: 15 PASS / 0 FAIL
-Combined successor suite: 24 PASS / 0 FAIL
+Pre-extension distributed pressure: 2 PASS / 10 FAIL
+Corrected distributed pressure: 12 PASS / 0 FAIL
+Focused distributed tests: 11 PASS / 0 FAIL
+Preserved successor tests: 24 PASS / 0 FAIL
+Combined successor suite: 35 PASS / 0 FAIL
 Historical harness: 11 PASS / 0 FAIL
 Repository regression: PASS
 Production semantic files changed: 0
 ```
 
-## Candidate Status
+No production admission, deployment, consensus protocol, network, database, credentials, providers, services, or external effects.
 
-`tests/runtime/reference-implementation-001/src/file-store.mjs` is merged as noncanonical, test-scoped single-node filesystem evidence.
+## Active Branch
 
-It is not a production durability implementation or stable package placement.
+`agent/runtime-distributed-concurrency-001`
 
-## Preserved Limits
+Rollback parent:
 
-- no production durability, cross-platform power-loss, multi-process failover, or distributed-correctness proof
-- no provider idempotency, credential safety, performance, deployment safety, or live-recovery proof
-- no Master Mason implementation, qualification, assignment, or decision mandate
-- no Authority registry, grant issuance, or PB-001 semantic ownership
-- no Procedure revision
-- no network, provider, credential, database, service, framework, deployment, or external effect
+`79aaed047ccad10b37dcb5c8ac80c92a904afd9b`
 
-## Next Gate
+## Candidate
 
-Choose one independently scoped evidence or placement direction from `next-steps.md`.
+The noncanonical reference implementation gains:
 
-No direction is active by default.
+- `tests/runtime/reference-implementation-001/src/distributed-coordinator.mjs`
+- an optional fenced execution gate in `src/reference-runtime.mjs`
+- `tests/runtime/reference-implementation-001/test/distributed-coordinator.test.mjs`
+
+It demonstrates majority refusal, monotonic fencing, atomic effect claims, stale-leader refusal, and distinct pre- versus post-dispatch takeover behavior against a deterministic linearizable oracle.
+
+## Records
+
+- investigation: `drafts/runtime-distributed-concurrency-001.md`
+- necessity: `drafts/runtime-distributed-concurrency-necessity-analysis-001.md`
+- conformance plan: `drafts/runtime-distributed-concurrency-conformance-plan-001.md`
+- pressure tests: `tests/runtime/runtime-distributed-concurrency-pressure-tests-001.md`
+- baseline run: `tests/runtime/runtime-distributed-concurrency-pressure-run-001.md`
+- corrected run: `tests/runtime/runtime-distributed-concurrency-pressure-run-002.md`
+- repository regression: `tests/runtime/runtime-distributed-concurrency-repository-regression-001.md`
+- candidate review: `tests/runtime/runtime-distributed-concurrency-candidate-review-001.md`
+
+## Next Decision
+
+Decide whether to merge the noncanonical distributed-concurrency evidence package.
+
+Merge would not establish consensus correctness, real distributed operation, stable placement, deployment, providers, credentials, or external-effect authority.
+
+## Stop Condition
+
+No candidate merge without explicit operator approval.
