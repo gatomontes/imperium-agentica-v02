@@ -72,11 +72,11 @@ A derived envelope permits delegation prohibited by its parent.
 
 Expected: delegation exceeded.
 
-### ME-013 — Pre-Formation Identity
+### ME-013 — Pre-Formation Scope
 
-Mission formation requires exact scope, but substantive mission formation has not occurred yet.
+Mission formation requires exact scope, but a Mission Identity does not yet exist.
 
-Expected: a proposed Mission Identity may be allocated for correlation before approval; identity allocation creates no authority or mission approval.
+Expected: the exact Petition identity scopes `FORM_MISSION`; after formation, PB-001 supplies the Mission Identity for later action classes. Neither identity creates authority or approval.
 
 ### ME-014 — Post-Closure Administrative Tail
 
