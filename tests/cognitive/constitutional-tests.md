@@ -1054,6 +1054,42 @@ The move risks transferring cognitive responsibility, duplicating canonical orig
 
 ---
 
+---
+
+
+# Test CT-032 — Procedure Split Does Not Transfer Native Meaning
+
+## Pressure
+
+Placement-contested Cognitive contracts are split into Cognitive meaning, Authority grants, and Procedure ordering.
+
+The split risks moving responsibility into Procedure, making lifecycle order authoritative, turning completion assessment into a universal Proof layer, or changing post-closure responsibilities.
+
+## Pass Conditions
+
+- Counsel competence findings and Capability Gap meaning remain Cognitive.
+- CEO, CoS, Muster, Lazaretto, Scribes, and Secretariat responsibilities remain Cognitive.
+- Mission Envelope, Tool Grant, and Access Grant semantics remain Authority-native.
+- Procedure cites actors, grants, identities, artifacts, and findings without defining them.
+- Mission lifecycle ordering moves out of Cognitive without deleting any Cognitive responsibility.
+- Production Artifact Catalog remains an index and not a central Artifact owner.
+- Work Specification defines criterion-relative acceptance; Curia adopts the assessment.
+- Completion Assessment does not become Authority, Provenance, Procedure, or a universal Proof layer.
+- reporting may expose unresolved release without implying release completion.
+- Curia Session end does not end Muster's unresolved release responsibility.
+- CB-002, AB-001, and PB-001 remain current until an atomic admitted transition.
+
+## Fail Conditions
+
+- Procedure assigns an actor or defines artifact meaning.
+- ordering creates permission.
+- Authority originates identity or procedural sequence.
+- Provenance decides truth, completion, or authority.
+- completion claim is treated as criterion support.
+- a universal Proof or Ownership layer is admitted from terminology alone.
+- reporting is suppressed until release appears clean.
+- a draft silently changes production.
+
 ## Suite Result
 
 The suite passes only if every test preserves the distinctions:
