@@ -203,7 +203,7 @@ The native meanings come from cited contracts. This procedure preserves their re
 
 ## Runtime Boundary
 
-This draft defines no:
+This procedure defines no:
 
 - queue
 - scheduler
