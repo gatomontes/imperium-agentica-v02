@@ -29,6 +29,7 @@ Every disposition requires:
 ```text
 Disposition identity and version
 Producing Master Mason responsibility or acting-surface reference
+Effective maintenance-decision assignment or mandate reference
 Exact Runtime Operational Diagnosis identity and version
 Exact environment and component scope
 Mission identity or bounded non-mission scope when applicable
@@ -130,6 +131,25 @@ Return and supersession conditions
 ```
 
 Master Mason does not decide the structural change by escalating it.
+
+## Decision-Mandate Boundary
+
+An actual Runtime Maintenance Disposition requires a qualified Master Mason acting surface with an effective maintenance-decision assignment or mandate.
+
+```text
+Master Mason responsibility contract ≠ acting-surface assignment
+qualification ≠ decision mandate
+CONTROL_PLANE action grant ≠ maintenance-decision mandate
+maintenance-decision mandate ≠ permission to perform the effect
+```
+
+A qualified Master Mason lacking the decision mandate may assess and supply a diagnosis within its assessment assignment but may not adopt a disposition.
+
+A decision-mandated Master Mason lacking CONTROL_PLANE action Authority may adopt `NO_INTERVENTION`, `WITHHOLD_MAINTENANCE`, or `ESCALATE_STRUCTURAL_CONDITION`; it may not open a consequential Runtime path.
+
+A CONTROL_PLANE grant without the Master Mason decision mandate makes the action technically permissioned for its exact grantee but does not authorize Master Mason's substantive selection.
+
+This contract does not define qualification, assignment, or the decision mandate.
 
 ## Eligibility Rule
 
