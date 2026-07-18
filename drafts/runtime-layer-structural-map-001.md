@@ -2,7 +2,7 @@
 
 ## Status
 
-Candidate diagram derived from current Runtime and Mason drafts.
+Candidate diagram derived from current Runtime and Master Mason drafts.
 
 Not doctrine, production architecture, service topology, or implementation selection.
 
@@ -21,7 +21,7 @@ flowchart TB
     end
 
     subgraph COG["Cognitive Layer"]
-        M["Mason"]
+        M["Master Mason"]
     end
 
     subgraph RT["Runtime Layer"]
@@ -73,7 +73,7 @@ flowchart TB
     OP["External Operator"]
 
     subgraph IMP["Imperium — Cognitive Layer"]
-        M["Mason"]
+        M["Master Mason"]
 
         subgraph CIT["Citadel"]
             CU["Curia"]
