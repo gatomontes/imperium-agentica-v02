@@ -2,22 +2,28 @@
 
 ## Status
 
-Operative Creation Handoff 001 is the active draft candidate.
+Operative Creation Handoff 001 merged and post-merge verified on 2026-07-18.
 
-Track A0 began after explicit operator approval on 2026-07-18.
+Track A0 is complete.
+
+No active step.
 
 This file is operational continuity, not doctrine, architecture, or authority.
 
-## Candidate Scope
+## Merge Record
 
 ```text
-Neutral handoff contract: candidate
-Operative artifact: deployment-medium-specific
-Assessment findings: HANDOFF_CONFORMANT / HANDOFF_REFUSED / HANDOFF_UNRESOLVED
-Production admission: none
+Pull request: #32
+Squash commit: 3f8602dbc625f72ecf5e496f154fe4c690c66abd
+Rollback parent: 61014ff84856d14adc59054bc285ba1aa7887d1f
+Candidate head: 849a17338a6e6226dddfeaf6a75c4d96b1d8741b
 ```
 
-## Candidate Evidence
+Execution record:
+
+`drafts/operative-creation-handoff-execution-001.md`
+
+## Verified Evidence
 
 ```text
 Pre-candidate pressure: 5 PASS / 10 FAIL
@@ -27,6 +33,12 @@ Preserved Runtime successor suite: 91 PASS / 0 FAIL
 Repository regression: PASS
 Production semantic files changed: 0
 ```
+
+## Handoff Status
+
+The merged draft defines a provider-neutral assessment for one exact deployment-medium-specific Operative version.
+
+`HANDOFF_CONFORMANT` means eligible for direct operator delivery or separate Muster consideration only.
 
 ## Preserved Boundaries
 
@@ -39,6 +51,6 @@ Production semantic files changed: 0
 
 ## Next Gate
 
-Approve or reject candidate merge.
+Choose and explicitly approve Track A1 from `next-steps.md`.
 
-No merge is authorized by creation of this candidate.
+No direction is active by default.
