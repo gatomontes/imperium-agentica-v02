@@ -2,58 +2,55 @@
 
 ## Status
 
-Runtime Admission Preparation 001 is active.
+Runtime Admission Preparation 001 is complete.
 
-No production admission has occurred.
+Production remains unchanged.
 
 This file is an ordered operational queue, not doctrine, architecture, or a roadmap.
 
 ## Queue
 
-### 1. Trace the dependency-closed candidate manifest
+### 1. Review the prepared admission package
 
-Classify every candidate Runtime, Cognitive, Authority, and Procedure artifact as:
+Review:
 
-- required for this admission
-- supporting evidence or method only
-- blocked
-- parked
+- `drafts/runtime-admission-manifest-analysis-001.md`
+- `tests/runtime/runtime-admission-pressure-run-001.md`
+- `tests/runtime/runtime-admission-convergence-001.md`
+- `drafts/runtime-admission-atomic-transition-001.md`
+- `tests/runtime/runtime-production-admission-review-001.md`
 
-### 2. Materialize admission candidates
+### 2. Decide whether to authorize production admission
 
-Prepare production-shaped candidates and exact baseline manifests without moving production.
+The prepared atomic transition is:
 
-Expected transitions must be demonstrated, not assumed.
+```text
+CB-003 → CB-004
+AB-002 → AB-003
+PB-001 unchanged
+PRB-001 → PRB-002
+Runtime empty → RTB-001
+```
 
-### 3. Run independent pressure and regression suites
+Approval authorizes construction, verification, and one atomic squash merge of the seven semantic targets and their manifests.
 
-Require:
+It does not authorize deployment, credentials, providers, or live effects.
 
-- Runtime contract pressure
-- Master Mason Cognitive pressure
-- CONTROL_PLANE Authority pressure
-- Runtime Maintenance and indeterminate-effect Procedure pressure
-- Cognitive, Authority, Provenance, and Procedure regression
+### 3. If approved, build a preverified staging tree
 
-### 4. Run cross-layer convergence
+Require exact production paths, normalized citations, admission metadata, manifests resolving 34/34, 6/6, 3/3, 5/5, and 3/3, and no candidate-status residue.
 
-Prove that:
+### 4. Verify and squash-merge atomically
 
-- Master Mason diagnoses but does not execute or self-authorize
-- Runtime executes but does not diagnose, authorize, or infer semantic success
-- Authority permits but does not select maintenance
-- Procedure orders but does not implement
-- Provenance remains independently controlling
-- managed components remain distinct from control surfaces
-- simulated evidence is not overstated as distributed or production proof
+Record the exact rollback parent immediately before construction. Merge only when the branch is not behind `main` and every admission check passes.
 
-### 5. Assemble the atomic admission package
+### 5. Perform independent post-merge verification
 
-Specify exact target manifests, source handling, citation normalization, verification, rollback parent, and single-transition rule.
+Verify production manifests, canonical origins, draft historical status, citations, evidence references, and preserved exclusions.
 
-### 6. Return to explicit production-admission approval
+### 6. Record the transition and choose the next investigation
 
-No candidate moves to production without separate operator approval after the full package is reviewed.
+No live Runtime implementation follows automatically from semantic admission.
 
 ### 7. Keep Compass and Praetorium parked
 

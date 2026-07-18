@@ -6,7 +6,7 @@ Candidate Procedure refinement.
 
 Not admitted.
 
-Revision: Runtime Draft Correction 001 after Pressure Run 001.
+Revision: Runtime Admission Preparation 001.
 
 Scope is limited to an externally consequential mission effect whose provider outcome is operationally indeterminate.
 
@@ -38,7 +38,7 @@ It does not resolve control-plane effects.
 - indeterminate operational observation: `layers/runtime/drafts/runtime-observation-envelope.md`
 - effect quarantine: `layers/runtime/drafts/runtime-realization-and-dispatch-contract.md`
 
-Runtime dependencies remain candidate dependencies and therefore block production admission.
+The Runtime dependencies require atomic convergence with this Procedure candidate. They do not transfer mission disposition into Runtime.
 
 ## Entry Condition
 
@@ -137,12 +137,10 @@ effect outcome known ≠ mission outcome known
 quarantine ≠ mission closure
 ```
 
-## Unresolved Boundary
+## Control-Plane Boundary
 
 This procedure does not cover an indeterminate control-plane effect.
 
-No admitted Cognitive contract yet assigns responsibility for assembling and deciding a control-plane recovery situation outside a mission.
+The Master Mason candidate owns bounded control-plane diagnosis and the Runtime Maintenance Procedure orders withholding, safe-state preservation, reassessment, and escalation. A structural or semantic-risk disposition remains with the external operator under exact Authority.
 
-Runtime cannot inherit that judgment, and Authority cannot supply responsibility.
-
-Therefore the original general blocker is reduced but not fully closed.
+Therefore control-plane indeterminacy has a separate bounded path; it is not an unresolved responsibility that this mission procedure must absorb.

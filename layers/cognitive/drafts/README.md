@@ -16,7 +16,7 @@ Their admitted canonical versions live in `layers/cognitive/production/`.
 
 Current unadmitted candidate:
 
-- `mason.md` — Runtime operator/mechanic responsibility
+- `master-mason.md` — Runtime operator/mechanic responsibility
 
 Master Mason is not yet a persona, Officer, institution, Runtime component, or admitted production role.
 

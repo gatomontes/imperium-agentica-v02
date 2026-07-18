@@ -2,11 +2,11 @@
 
 ## Status
 
-Runtime Admission Preparation 001 activated by operator approval on 2026-07-18.
-
-Empirical Harness PR #8 is merged and verified.
+Runtime Admission Preparation 001 is complete on a review branch as of 2026-07-18.
 
 No production admission has occurred.
+
+Awaiting explicit operator approval for the atomic production transition.
 
 This file is operational continuity, not doctrine, architecture, or authority.
 
@@ -20,40 +20,48 @@ Procedure: PRB-001 — 3 / 3
 Runtime: unadmitted and empty
 ```
 
-## Empirical Merge
+## Prepared Candidate
 
 ```text
-Pull request: #8
-Squash commit: 2a817edb589f8934681b483fb07c3dd66b4daa70
-Rollback parent: e5f1e87e485a816efbc9dc23e790f65eab4241a0
-Initial run: 10 PASS / 1 FAIL
-Corrected run: 11 PASS / 0 FAIL
+CB-003 → CB-004: 34 / 34
+AB-002 → AB-003: 6 / 6
+PB-001 → unchanged: 3 / 3
+PRB-001 → PRB-002: 5 / 5
+Runtime empty → RTB-001: 3 / 3
 ```
 
-The managed-component/control-surface correction is part of the evidence baseline.
+Seven semantic artifacts are required:
 
-## Active Work
+- three Runtime contracts
+- Master Mason
+- CONTROL_PLANE Authority
+- Runtime Maintenance Procedure
+- Mission Indeterminate-Effect Disposition Procedure
 
-Prepare and pressure-test the smallest dependency-closed admission candidate.
+Evidence and verification methods remain outside production manifests.
 
-The investigation must determine, rather than presume:
+## Corrections
 
-- which Runtime drafts are native and mature enough for admission
-- whether Master Mason is dependency-closed as a Cognitive role
-- whether CONTROL_PLANE is ready as an Authority profile
-- which Procedure refinements are required
-- whether existing indexes and consumer citations need revision
-- what baseline transitions would result
+- corrected `mason.md` index residue to `master-mason.md`
+- separated mission-effect disposition from control-plane maintenance responsibility
+- encoded managed-component versus control-surface distinction in the Runtime Control Plane contract
+
+## Evidence
+
+```text
+Empirical corrected run: 11 PASS / 0 FAIL
+Admission pressure: 55 PASS / 0 FAIL
+Admission convergence: 30 PASS / 0 FAIL
+```
 
 ## Preserved Limits
 
-- preparation and testing only
-- no production movement
 - no live implementation, credentials, providers, or external effects
 - simulated interleaving is not distributed-systems proof
-- empirical success is evidence, not automatic admission
+- admission would establish semantic contracts, not operational deployment
+- Master Mason remains a responsibility contract, not a persona, Officer class, hierarchy, or institution
 - Compass and Praetorium remain parked
 
 ## Stop Condition
 
-Return with a complete admission package and explicit blockers, then stop at a separate production-admission approval gate.
+No production movement without explicit operator approval of the prepared atomic transition.
