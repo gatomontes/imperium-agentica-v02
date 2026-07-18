@@ -2,11 +2,11 @@
 
 ## Status
 
-Runtime Draft Development 001 completed on 2026-07-18.
+Master Mason, Compass, and Praetorium Investigation 001 completed on 2026-07-18.
 
 No active step.
 
-Awaiting operator decision on a minimal Cognitive responsibility draft for control-plane judgment.
+Awaiting operator decision on a minimal Master Mason Cognitive role draft and a separate decision-authority investigation.
 
 This file is operational continuity, not doctrine, architecture, or authority.
 
@@ -20,78 +20,75 @@ Procedure: PRB-001 — 3 / 3
 Runtime: unadmitted
 ```
 
-## Candidate Runtime State
-
-The Runtime boundary is approved for draft development only.
-
-Runtime is not synonymous with code:
+## Investigation Results
 
 ```text
-Code describes or configures machinery.
-Runtime is that machinery operating with actual state and effects.
-Semantic contracts expressed in code remain owned by their native layers.
+Master Mason / Compass / Praetorium: 28 PASS / 0 FAIL
+Master Mason–Runtime convergence: 16 PASS / 0 FAIL
 ```
 
-Created candidate Runtime contracts:
+### Master Mason
 
-1. Runtime Realization and Dispatch
-2. Runtime Observation Envelope
-3. Runtime Control Plane
+**SUPPORTED AS A FUNCTIONAL ROLE CANDIDATE**
 
-Created candidate dependency refinements:
+Master Mason fits the demonstrated responsibility for Imperium-wide structural and semantic-compatibility judgment over deployment, migration, rollback, recovery, and indeterminate control-plane effects.
 
-- CONTROL_PLANE Authority profile
-- Mission Indeterminate-Effect Disposition Procedure
+The role does not write code merely by existing, perform Runtime mechanics, decide mission outcomes, or manufacture Authority.
+
+### Compass
+
+**PARKED**
+
+The orientation behavior is plausible, but it is presently supplied by:
+
+- Control-Plane Plan
+- Runtime Observation Envelope
 - State-Machine Conformance Method
+- PB-001
+- Master Mason assessment
 
-## Evidence
+No distinct Compass-native product or independently necessary mechanism has yet been demonstrated.
 
-```text
-Runtime boundary corrected pressure: 40 PASS / 0 FAIL
-Runtime draft initial pressure: 57 PASS / 3 FAIL
-Runtime draft corrected pressure: 60 PASS / 0 FAIL
-State-machine conformance method: 15 PASS / 0 FAIL
-Runtime draft convergence: 24 PASS / 0 FAIL
-Control-plane cognitive-origin test: 10 PASS / 0 FAIL
-```
+### Praetorium
 
-## Findings
+**OUTER-ECHELON SCOPE CONFIRMED; INSTITUTION UNADMITTED**
 
-The original non-empirical blockers were materially reduced:
+Master Mason is Imperium-scoped rather than naturally mission-scoped.
 
-- control-plane Authority has a tested candidate profile; AB-002 remains unchanged
-- mission indeterminate effects have a tested candidate Procedure; PRB-001 remains unchanged
-- Runtime Observation Envelope is independently tested as a candidate
-- a state-machine conformance method is defined and internally pressured
-- no concrete state machine or implementation has been tested
+One role does not demonstrate the admission, holding, placement, roster, or reuse behavior needed to admit Praetorium.
 
-One deeper dependency remains:
+## Authority Finding
+
+The candidate `CONTROL_PLANE` profile permits exact operating actions.
+
+It does not authorize Master Mason to choose the substantive disposition.
 
 ```text
-indeterminate control-plane effect
-→ requires substantive compatibility and recovery judgment
-→ Runtime cannot supply it
-→ Authority cannot supply responsibility
-→ no admitted Cognitive role currently owns it
+Master Mason decision authority
+≠ CONTROL_PLANE action authority
 ```
 
-The external operator may supply this judgment during development when independently authorized. Internal Imperium judgment would require a minimal Cognitive responsibility contract.
+A deciding Master Mason therefore requires an independently investigated decision mandate or authority specialization.
 
 ## Recommendation
 
-**APPROVE A MINIMAL COGNITIVE DRAFT FOR RUNTIME CONTROL-PLANE RESPONSIBILITY**
+Approve:
 
-This means responsibility only.
+1. one minimal Master Mason Cognitive role draft
+2. one parallel investigation of Master Mason decision authority
+3. affected theoretical and convergence testing
 
-It does not admit an office, Officer class, institution, persona, controller, implementation, or production baseline.
+Do not approve:
+
+- a Master Mason persona or Officer admission
+- Compass
+- Praetorium
+- Runtime production or implementation
 
 ## Decision Artifacts
 
-- `drafts/runtime-control-plane-cognitive-origin-analysis-001.md`
-- `tests/cognitive/runtime-control-plane-responsibility-origin-run-001.md`
-
-## Approval Boundary
-
-Approval authorizes one Cognitive responsibility draft and affected theoretical/convergence testing only.
-
-Empirical implementation remains separately gated.
+- `drafts/master-mason-role-investigation-001.md`
+- `drafts/compass-instrument-investigation-001.md`
+- `drafts/praetorium-placement-investigation-001.md`
+- `tests/cognitive/master-mason-compass-praetorium-run-001.md`
+- `tests/runtime/master-mason-runtime-convergence-run-001.md`
