@@ -93,6 +93,19 @@ parent invalidation → dependent grant unavailable
 
 A capability grant may narrow but never enlarge its parent.
 
+## Mission-Binding End Rule
+
+Every Tool and Access Grant must carry an end condition no later than termination or release of its cited Operative Binding.
+
+```text
+Operative Binding released
+→ dependent Tool and Access Grants unavailable
+```
+
+A post-closure `REPORT_AND_DELIVER` tail cannot keep operational capability grants alive.
+
+Any capability needed for terminal administration requires a separate grant scoped to that administrative responsibility, not reuse of the operative's mission grant.
+
 ## Provider Boundary
 
 Provider Intervention Ledgers may record entitlement, authentication, submission, completion, and delivery observations.
