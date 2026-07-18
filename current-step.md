@@ -2,53 +2,29 @@
 
 ## Status
 
-Runtime Admission Preparation 001 is complete on a review branch as of 2026-07-18.
+Runtime Production Admission 001 is explicitly approved and pre-merge verified as of 2026-07-18.
 
-No production admission has occurred.
-
-Awaiting explicit operator approval for the atomic production transition.
+Atomic squash merge and post-merge verification are in progress.
 
 This file is operational continuity, not doctrine, architecture, or authority.
 
-## Admitted Production State
+## Target Production State
 
 ```text
-Cognitive: CB-003 — 33 / 33
-Authority: AB-002 — 5 / 5
-Provenance: PB-001 — 3 / 3
-Procedure: PRB-001 — 3 / 3
-Runtime: unadmitted and empty
+Cognitive: CB-004 — 34 / 34
+Authority: AB-003 — 6 / 6
+Provenance: PB-001 — 3 / 3 unchanged
+Procedure: PRB-002 — 5 / 5
+Runtime: RTB-001 — 3 / 3
 ```
 
-## Prepared Candidate
+## Admission
 
 ```text
-CB-003 → CB-004: 34 / 34
-AB-002 → AB-003: 6 / 6
-PB-001 → unchanged: 3 / 3
-PRB-001 → PRB-002: 5 / 5
-Runtime empty → RTB-001: 3 / 3
-```
-
-Seven semantic artifacts are required:
-
-- three Runtime contracts
-- Master Mason
-- CONTROL_PLANE Authority
-- Runtime Maintenance Procedure
-- Mission Indeterminate-Effect Disposition Procedure
-
-Evidence and verification methods remain outside production manifests.
-
-## Corrections
-
-- corrected `mason.md` index residue to `master-mason.md`
-- separated mission-effect disposition from control-plane maintenance responsibility
-- encoded managed-component versus control-surface distinction in the Runtime Control Plane contract
-
-## Evidence
-
-```text
+Operator approval: received
+Rollback parent: 6e32f0c1f43a7ef83e55de276664daedc7051ab8
+Production targets: 7
+Resolved manifest entries: 51 / 51
 Empirical corrected run: 11 PASS / 0 FAIL
 Admission pressure: 55 PASS / 0 FAIL
 Admission convergence: 30 PASS / 0 FAIL
@@ -56,12 +32,12 @@ Admission convergence: 30 PASS / 0 FAIL
 
 ## Preserved Limits
 
-- no live implementation, credentials, providers, or external effects
-- simulated interleaving is not distributed-systems proof
-- admission would establish semantic contracts, not operational deployment
-- Master Mason remains a responsibility contract, not a persona, Officer class, hierarchy, or institution
+- semantic admission is not live deployment
+- no credentials, providers, services, or external effects
+- empirical evidence remains a simulated single-process model
+- Master Mason is a responsibility contract, not a persona, Officer class, hierarchy, or institution
 - Compass and Praetorium remain parked
 
-## Stop Condition
+## Required Completion
 
-No production movement without explicit operator approval of the prepared atomic transition.
+Squash-merge the preverified staging branch, verify `main` independently, record the merge SHA and rollback parent, then choose the next investigation.
