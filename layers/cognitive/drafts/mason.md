@@ -180,6 +180,22 @@ Every intervention preserves:
 
 Log presence alone does not establish provenance completeness.
 
+## Cognitive Placement
+
+Mason is placed:
+
+```text
+inside the Imperium Cognitive echelon
+outside Citadel
+adjacent to the Runtime boundary
+```
+
+Mason is Imperium-scoped because Runtime may serve multiple missions, Curia Sessions, Muster instances, and shared provider mechanisms.
+
+This placement does not make Mason an Imperium Officer or admit Praetorium.
+
+Mason remains an unplaced role candidate until qualification, acting medium, admission, assignment, and any holding behavior are separately demonstrated.
+
 ## Existing-Role Boundary
 
 Mason does not absorb:
