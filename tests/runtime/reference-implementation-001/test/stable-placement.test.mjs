@@ -18,6 +18,7 @@ test("stable reference package is private and exposes only the approved surface"
     "./adapters/file": "./src/file-store.mjs",
     "./coordination/deterministic": "./src/distributed-coordinator.mjs",
     "./providers/node-process-supervisor": "./src/node-process-supervisor-adapter.mjs",
+    "./security/synthetic-credentials": "./src/synthetic-credential-broker.mjs",
   });
 });
 
@@ -28,12 +29,14 @@ test("every approved export resolves to the expected reference API", async () =>
   const file = await import(new URL("../../../../layers/runtime/reference/src/file-store.mjs", import.meta.url));
   const coordination = await import(new URL("../../../../layers/runtime/reference/src/distributed-coordinator.mjs", import.meta.url));
   const provider = await import(new URL("../../../../layers/runtime/reference/src/node-process-supervisor-adapter.mjs", import.meta.url));
+  const credentials = await import(new URL("../../../../layers/runtime/reference/src/synthetic-credential-broker.mjs", import.meta.url));
   assert.equal(typeof runtime.ReferenceRuntime, "function");
   assert.equal(typeof contracts.validatePlan, "function");
   assert.equal(typeof memory.InMemoryStore, "function");
   assert.equal(typeof file.FileBackedStore, "function");
   assert.equal(typeof coordination.FencedExecutionGate, "function");
   assert.equal(typeof provider.NodeProcessSupervisorAdapter, "function");
+  assert.equal(typeof credentials.SyntheticCredentialBroker, "function");
 });
 
 test("the evidence package contains no duplicate implementation source tree", () => {

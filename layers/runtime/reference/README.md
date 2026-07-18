@@ -28,6 +28,7 @@ The private package manifest exposes only these paths:
 | `@imperium-agentica/runtime-reference/adapters/file` | single-process append-and-fsync filesystem evidence |
 | `@imperium-agentica/runtime-reference/coordination/deterministic` | linearizable in-memory quorum and fencing oracle |
 | `@imperium-agentica/runtime-reference/providers/node-process-supervisor` | injected, credentialless Node process-supervisor reference adapter |
+| `@imperium-agentica/runtime-reference/security/synthetic-credentials` | in-memory, one-use synthetic credential boundary for tests |
 
 The placement and export names are stable enough for repository tests and future bounded investigations. Behavior remains revisable and contestable by evidence.
 
@@ -48,6 +49,14 @@ The driver receives only the effect identity, attempt identity, environment, com
 | unknown response or exception | `INDETERMINATE` |
 
 `RECOVERY_INITIATED` means only that the injected driver accepted the operational request. It does not mean the component recovered, the Procedure completed, or a mission outcome was achieved.
+
+## Synthetic Credential Boundary
+
+`SyntheticCredentialBroker` accepts only non-empty `Uint8Array` material explicitly classified as `SYNTHETIC_TEST_SECRET`.
+
+Registration transfers test custody by copying the bytes and zeroing the caller's view. Consumption requires the exact environment, component, scope, and purpose binding; removes and zeroes broker custody before invoking one synchronous consumer; and zeroes the consumer view on return or failure. Handles are opaque capabilities and never appear in audit events. A separate non-capability identity supports redacted lifecycle evidence.
+
+This is test evidence, not a real secret store. JavaScript cannot prevent a trusted consumer from copying bytes while its synchronous callback runs, and zeroing a view does not prove removal of every engine or operating-system copy. The broker has no environment-variable, file, keychain, transport, provider, encryption-at-rest, deployment, or real-credential mechanism.
 
 ## Ownership Boundary
 
@@ -72,7 +81,7 @@ This placement does not establish:
 - consensus correctness or a networked cluster
 - production durability or cross-platform power-loss safety
 - provider integration or idempotency
-- credential custody or safety
+- real credential custody or safety
 - performance, availability, or live-recovery guarantees
 - external-effect authority
 
