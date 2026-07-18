@@ -136,7 +136,7 @@ Provenance evaluates completeness relative to that cited contract. It does not d
 
 ## Non-Admissions
 
-This draft does not admit:
+This contract does not admit:
 
 - truth verification
 - evidence sufficiency
