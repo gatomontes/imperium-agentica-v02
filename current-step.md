@@ -2,26 +2,28 @@
 
 ## Status
 
-Guildhall Profession Resolution 001 is the active A2.1 draft candidate.
+Guildhall Profession Resolution 001 merged and post-merge verified on 2026-07-18.
 
-Track A1 is complete and recorded. Track A2 began under explicit operator instruction on 2026-07-18.
+Track A1 is complete and recorded. A2.1 is complete as the first Track A2 evidence increment.
 
-No production semantics are admitted by this candidate.
+No active step.
 
 This file is operational continuity, not doctrine, architecture, or authority.
 
-## Candidate Scope
+## Merge Record
 
 ```text
-Input: exact Mission Need and approved Work Specification versions
-Product: versioned Profession Specification
-Cognitive finding: PROFESSION_CONFORMANT / REFUSED / UNRESOLVED
-Handoff: exact conformant version becomes eligible for Garrison search
-Persona selection or construction: none
-Production admission: none
+Pull request: #38
+Squash commit: 20b17b16807d743c63eabcd074a2f77404aa61cf
+Rollback parent: 55624d615f479dee6b217d34be87ce4fe75dd628
+Candidate head: 2f69bc6b2f505d543ab1c175e3dab6de6be482c0
 ```
 
-## Candidate Evidence
+Execution record:
+
+`drafts/guildhall-profession-resolution-execution-001.md`
+
+## Verified Evidence
 
 ```text
 Pre-candidate pressure: 7 PASS / 8 FAIL
@@ -40,10 +42,10 @@ Production semantic files changed: 0
 - conformance remains distinct from approval
 - Guildhall retains profession resolution
 - Procedure retains handoff ordering
-- no live resolution, Garrison search, persona action, production semantic change, Runtime implementation, deployment, or external effect
+- no live profession, Garrison search, persona action, production semantic change, Runtime implementation, deployment, or external effect
 
 ## Next Gate
 
-Approve or reject candidate merge.
+Choose and explicitly approve the next Track A2 increment from `next-steps.md`.
 
-No merge is authorized by creation of this candidate.
+No direction is active by default.
