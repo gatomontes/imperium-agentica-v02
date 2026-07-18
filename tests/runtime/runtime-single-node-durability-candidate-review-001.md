@@ -10,18 +10,18 @@ No production admission.
 
 ## Candidate
 
-One dependency-free append-only filesystem store adapter plus eight focused tests.
+One dependency-free append-only filesystem store adapter plus nine focused tests.
 
 The existing reference Runtime and in-memory adapter receive only the smallest store-interface refactor necessary to exercise both adapters.
 
 ## Evidence
 
 ```text
-Pre-extension durability pressure: 3 PASS / 9 FAIL
-Durability pressure corrected: 12 PASS / 0 FAIL
-Focused durability tests: 8 PASS / 0 FAIL
+Pre-extension durability pressure: 3 PASS / 10 FAIL
+Durability pressure corrected: 13 PASS / 0 FAIL
+Focused durability tests: 9 PASS / 0 FAIL
 Preserved successor semantics: 15 PASS / 0 FAIL
-Combined successor suite: 23 PASS / 0 FAIL
+Combined successor suite: 24 PASS / 0 FAIL
 Historical harness: 11 PASS / 0 FAIL
 Repository regression: PASS
 ```
