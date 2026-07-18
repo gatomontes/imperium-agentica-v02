@@ -29,6 +29,7 @@ and what class of response is indicated without deciding eligibility?
 ```text
 Diagnosis identity and version
 Producing Master Mason responsibility or acting-surface reference
+Assessment assignment or mandate reference
 Represented competence and limits
 Diagnosis time and observation horizon
 Exact environment and component scope
@@ -57,7 +58,7 @@ RUNTIME_HEALTHY
 RUNTIME_DEGRADED
 RUNTIME_INOPERABLE
 RUNTIME_CONDITION_INDETERMINATE
-STRUCTURAL_CHANGE_INDICATED
+STRUCTURAL_CHANGE_REQUIRED
 ```
 
 Definitions:
@@ -66,7 +67,7 @@ Definitions:
 - `RUNTIME_DEGRADED` — operation continues, but a bounded mechanical impairment or exhaustion condition is supported.
 - `RUNTIME_INOPERABLE` — the scoped Runtime component cannot presently perform its admitted operating function.
 - `RUNTIME_CONDITION_INDETERMINATE` — available observations cannot support a responsible mechanical classification.
-- `STRUCTURAL_CHANGE_INDICATED` — restoration appears to require semantic, mapping, architectural, incompatible-state, or otherwise non-routine change outside Master Mason's maintenance boundary.
+- `STRUCTURAL_CHANGE_REQUIRED` — restoration appears to require semantic, mapping, architectural, incompatible-state, or otherwise non-routine change outside Master Mason's maintenance boundary.
 
 The diagnosis may include secondary observed symptoms, but they do not create additional primary findings.
 
@@ -99,6 +100,14 @@ diagnosed need ≠ intervention selected
 `RUNTIME_MAINTENANCE_ELIGIBLE` is not a diagnosis finding.
 
 Eligibility exists only after the cited Procedure and Authority gates evaluate the exact proposed direction.
+
+## Qualification And Assignment Boundary
+
+An actual diagnosis requires a qualified Master Mason acting surface with an effective assessment assignment or mandate.
+
+Authorship of Runtime code, administrator capability, CONTROL_PLANE access, or technical familiarity does not establish diagnostic competence or assignment.
+
+The artifact contract defines diagnosis meaning. It does not qualify, instantiate, assign, or authorize the acting surface.
 
 ## Evidence Boundary
 
