@@ -6,9 +6,9 @@ Pressure authority-origin, grant, scope, delegation, loss, and non-transfer sema
 
 Current admitted baseline:
 
-- `AB-001` — 3 production artifacts
+- `AB-002` — 5 production artifacts
 
-Candidate AB-002 evidence:
+AB-002 admission evidence:
 
 - authority core: 10 PASS / 0 FAIL
 - grant profiles: 15 PASS / 0 FAIL
@@ -19,6 +19,4 @@ Candidate AB-002 evidence:
 - corrected convergence: 21 PASS / 0 FAIL
 - admission review: `production-admission-review-002-ab-002.md`
 
-Decision: **RECOMMEND AB-002 ADMISSION WITH RECORDED LIMITS**
-
-AB-001 remains current until an atomic admitted transition.
+Decision: **AB-002 ADMITTED WITH RECORDED LIMITS**
