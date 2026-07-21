@@ -8,7 +8,9 @@ Track A0 is merged, complete, and post-merge verified.
 
 Track A1 is merged, complete, and post-merge verified in two evidence increments.
 
-Track A2 is active. A2.1 Guildhall Profession Resolution is complete and recorded. A2.2 Garrison Persona Suitability has an active candidate.
+Track A2 is active. A2.1 Guildhall Profession Resolution and A2.2 Garrison Persona Suitability are merged, complete, and post-merge verified.
+
+The operator instruction `proceed with what remains for this leg` authorizes preparation of later Track A2 investigations. Each candidate merge and execution-record merge remains explicit.
 
 The operator approved a sequencing refinement:
 
@@ -47,14 +49,14 @@ Deployment implementation pauses after the handoff seam is proven.
 |---:|---|---|---:|---:|
 | A0 — complete | Creation-to-deployment handoff seam | exact medium-specific Operative identity/version, provenance and applicable authority references, preservation/deviation findings, dependency/resource/secret-class requirements, validation evidence, and a provider-neutral handoff assessment that creates no Operative readiness state | 1 completed | 2 completed |
 | A1 — complete | Castellan-side mission and work specification | bounded Mission Need, approved Work Specification, required capability, constraints, acceptance conditions, authority citation, and refusal/escalation without defining a profession or constructing an Operative | 2 completed | 4 completed |
-| A2 — active | Guildhall-to-Conscription resolution and recruitment | resolve Profession Specification and admitted Persona, then transform that Persona into a versioned deployment-medium-specific Operative; test selection, referral, preservation, deviation, rejection, repair, and evidence without mission assembly or deployment | A2.1 complete; A2.2 candidate active; 2–4 remaining including A2.2 | 2 completed; 2 projected for A2.2; 4–8 remaining including A2.2 |
+| A2 — active | Guildhall-to-Conscription resolution and recruitment | resolve Profession Specification and admitted Persona, then transform that Persona into a versioned deployment-medium-specific Operative; test selection, referral, preservation, deviation, rejection, repair, and evidence without mission assembly or deployment | A2.1 and A2.2 complete; 1–3 remaining | 4 completed; 2–6 remaining |
 | A3 | Creation closure and handoff conformance | cross-flow provenance, artifact versioning, reproducibility, handoff classification, and proof that downstream consumers can inspect the Operative without rewriting creation semantics | 1–2 | 2–4 |
 
-Approximate remaining size to finish the operative-creation track after A2.1:
+Approximate remaining size to finish the operative-creation track after A2.2:
 
 ```text
-3–6 evidence increments
-6–12 merges
+2–5 evidence increments
+4–10 merges
 ```
 
 Track A is complete only when the creation flow produces a validated, versioned, deployment-medium-specific Operative and the provider-neutral handoff contract passes pressure. It does not bind a mission, declare `READY_FOR_LAUNCH`, deploy, or activate the Operative.
@@ -88,17 +90,17 @@ From the current point:
 |---|---:|
 | Handoff seam proven and recorded | complete |
 | Castellan-side specification behavior | complete |
-| Guildhall-to-Conscription resolution/recruitment complete | 4–8 |
-| Operative-creation track closed | 6–12 cumulative |
-| Later deployment track closed | 28–50 cumulative |
+| Guildhall-to-Conscription resolution/recruitment complete | 2–6 |
+| Operative-creation track closed | 4–10 cumulative |
+| Later deployment track closed | 26–48 cumulative |
 
 These are planning ranges, not targets. A leg may contract when existing evidence is sufficient or expand when pressure reveals an independent gate.
 
 ## Recommended Next Leg
 
-`Garrison persona suitability and production-branch contract` — active A2.2 candidate
+`A2.3 Persona Production Conformance investigation`
 
-This candidate pressures how an exact conformant Profession Specification and its suitability criteria are applied to one exact Garrison inventory view, producing an exact suitable-candidate set, a no-suitable-persona result eligible for the persona-production path, or an unresolved result. It tests identity, version, admission, qualification, availability, supersession, evidence, multiplicity, and ambiguity without selecting, reserving, forging, admitting, recruiting, or deploying a persona.
+This should pressure the no-match branch from exact production eligibility through the admitted Studium, Hagiography when applicable, Foundry, Pit, and Garrison responsibilities to one versioned admitted Canonical Persona. It must preserve exact source versions, doctrine, trait evidence, integration, testing, rejection, repair, admission, PB-001 lineage, and branch reconvergence without selecting or recruiting a persona or creating an Operative.
 
 Expected size:
 
@@ -107,7 +109,7 @@ Expected size:
 2 merges initially
 ```
 
-Candidate merge requires explicit operator approval. Later Track A2 investigations remain authorized to prepare after their preceding candidate and record gates merge, but no merge is implicit.
+Preparation is authorized by the standing Track A2 instruction. Candidate merge remains explicit. Conscription persona selection and recruitment remain a later independent pressure target.
 
 ## Preserved Gates
 
