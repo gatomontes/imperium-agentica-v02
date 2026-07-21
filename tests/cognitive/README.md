@@ -86,7 +86,7 @@ approval of version N ≠ approval of version N+1
 handoff eligibility ≠ automatic Procedure transition
 ```
 
-## Active Guildhall Profession Resolution Candidate
+## Merged Guildhall Profession Resolution Evidence
 
 - baseline pressure: 7 PASS / 8 FAIL
 - corrected pressure: 15 PASS / 0 FAIL
@@ -102,4 +102,22 @@ Profession Specification ≠ Canonical Persona
 PROFESSION_CONFORMANT ≠ persona availability or suitability
 Garrison search eligibility ≠ Garrison search
 profession resolution ≠ Procedure transition
+```
+
+## Active Garrison Persona Suitability Candidate
+
+- baseline pressure: 6 PASS / 9 FAIL
+- corrected pressure: 15 PASS / 0 FAIL
+- cross-layer convergence: 12 PASS / 0 FAIL
+- preserved Runtime successor suite: 91 PASS / 0 FAIL
+- repository regression: PASS
+
+Candidate distinctions:
+
+```text
+Garrison inventory truth ≠ Guildhall suitability judgment
+suitable candidate set ≠ selected persona
+NO_SUITABLE_PERSONA_FOUND ≠ missing or stale inventory
+no-match branch eligibility ≠ persona construction
+search result ≠ Procedure transition
 ```
