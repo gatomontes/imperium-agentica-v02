@@ -22,8 +22,9 @@ The admitted CONTROL_PLANE profile grants no actual authority by itself.
 
 Unadmitted draft evidence:
 
-- `provider-neutral-deployment-authorization-contract.md` — active B1.1 candidate for one exact bounded, revocable, provider-neutral deployment authorization envelope; selects no provider, store, driver, credential, mechanism, Runtime action, or deployment
+- `provider-neutral-deployment-authorization-contract.md` — merged B1.1 evidence for one exact bounded, revocable, provider-neutral deployment authorization envelope
+- `provider-neutral-authentication-proof-satisfaction-contract.md` — active B1.2 candidate for assessing one exact authentication-proof presentation against one exact Authority requirement without infrastructure selection or permission compression
 
 ## Rule
 
-Draft evidence does not revise `AB-003`, issue a live grant, or authorize an external effect.
+Draft evidence does not revise `AB-003`, issue a live grant, authenticate a subject, grant access, or authorize an external effect.

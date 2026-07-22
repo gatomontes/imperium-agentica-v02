@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Pressure authority-origin, grant, scope, delegation, loss, and non-transfer semantics.
+Pressure authority-origin, grant, scope, delegation, loss, non-transfer, deployment authorization, and authentication-requirement satisfaction semantics.
 
 ## Admitted Evidence
 
@@ -22,24 +22,30 @@ The original AB-002 admission evidence remains:
 
 Later Runtime-maintenance admission advanced the manifest to AB-003 without changing the five core Authority contracts.
 
-## Active Provider-Neutral Deployment Authorization Candidate
+## Merged B1.1 Draft Evidence
 
 - baseline pressure: 5 PASS / 10 FAIL
 - corrected pressure: 15 PASS / 0 FAIL
 - cross-layer convergence: 12 PASS / 0 FAIL
-- preserved Runtime successor suite: 91 PASS / 0 FAIL
-- repository regression: PASS
 - production semantic files changed: 0
+
+## Active B1.2 Authentication-Proof Candidate
+
+- baseline pressure: 7 PASS / 11 FAIL
+- corrected pressure: 18 PASS / 0 FAIL
+- cross-layer convergence: 14 PASS / 0 FAIL
+- production semantic files changed: 0
+- implementation files changed: 0
 
 Candidate distinctions:
 
 ```text
-handoff eligibility ≠ deployment authorization
-authentication ≠ authorization
-Access Grant ≠ credential value
-READY_FOR_LAUNCH ≠ deployment authorization
-provider acceptance ≠ Authority source
-authorization ≠ deployment execution
+authentication requirement ≠ proof presentation
+proof presentation ≠ provider observation
+provider observation ≠ Authority satisfaction
+satisfaction ≠ deployment authorization
+successful authentication ≠ Access Grant
+credential possession ≠ custody authority
 ```
 
-Decision: active B1.1 draft evidence; not admitted into AB-003.
+Decision: active B1.2 draft evidence; not admitted into AB-003.
