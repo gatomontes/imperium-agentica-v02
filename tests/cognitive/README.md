@@ -140,7 +140,7 @@ admission ≠ suitability, selection, or recruitment
 repair ≠ mutation in place
 ```
 
-## Active Conscription Selection And Recruitment Candidate
+## Merged Conscription Selection And Recruitment Evidence
 
 - baseline pressure: 6 PASS / 9 FAIL
 - corrected pressure: 15 PASS / 0 FAIL
@@ -157,3 +157,22 @@ Canonical Persona ≠ Operative
 recruitment conformance ≠ handoff conformance
 Operative ≠ mission binding, readiness, activation, or deployment
 ```
+
+
+## Active Creation Lineage And Handoff Conformance Candidate
+
+- baseline pressure: 5 PASS / 10 FAIL
+- corrected pressure: 15 PASS / 0 FAIL
+- cross-layer convergence: 12 PASS / 0 FAIL
+- preserved Runtime successor suite: 91 PASS / 0 FAIL
+- repository regression: PASS
+
+Candidate distinctions:
+
+~~~
+segment conformance ≠ end-to-end creation closure
+semantic reproducibility ≠ universal byte identity
+historical conformance ≠ eligibility after material change
+CREATION_CLOSURE_CONFORMANT ≠ HANDOFF_CONFORMANT
+handoff conformance ≠ mission binding, readiness, activation, or deployment
+~~~
