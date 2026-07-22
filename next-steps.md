@@ -6,9 +6,9 @@ Track A — Operative Creation is complete and fully recorded.
 
 B1.1 Provider-Neutral Deployment Authorization is complete and fully recorded through PR #50 and squash commit `44d815ab413a1ae51e375f1117efa492009c450f`.
 
-B1.2 Provider-Neutral Authentication-Proof Satisfaction has an active draft candidate.
+B1.2 Provider-Neutral Authentication-Proof Satisfaction is merged and post-merge verified. Its separate execution record is pending merge.
 
-The operator instruction `Proceed` authorizes B1.2 investigation and candidate preparation only. Candidate merge, execution-record preparation, execution-record merge, and every later Track B increment remain separate explicit gates.
+The operator instruction `Proceed` authorizes preparation of this execution record only. Its merge and every later B1 or B2 increment remain separate explicit gates.
 
 This file is a non-binding operational forecast. It is not doctrine, admitted architecture, authority, a calendar commitment, or a production-readiness claim.
 
@@ -98,37 +98,41 @@ Approximate Track B size remains 11–19 evidence increments / 22–38 merges.
 
 B1.1 establishes draft Authority evidence for one exact, bounded, revocable, provider-neutral Deployment Authorization Assessment while preserving authentication, access, readiness, credential acquisition, and execution as separate concerns.
 
-## B1.2 — Active Candidate
-
-The B1.2 candidate establishes:
-
-- one exact authentication requirement reference
-- one exact authentication-proof presentation identity and version
-- exact subject, audience, target, purpose, environment, and mission correlation
-- acceptable and prohibited evidence classes
-- verifier responsibility class
-- freshness, expiry, replay-resistance, revocation, compromise, and supersession behavior
-- provider-neutral satisfied, not-satisfied, and unresolved findings
-- a strict split between Authority satisfaction and Provenance evidence preservation
-
-Candidate evidence:
+## B1.2 — Candidate Merged, Record Pending
 
 ```text
-Baseline pressure: 7 PASS / 11 FAIL
-Corrected pressure: 18 PASS / 0 FAIL
-Cross-layer convergence: 14 PASS / 0 FAIL
+Candidate PR: #51
+Squash commit: aa58caaf6f8917f450ff3cb59eae6f1ef992636f
+Rollback parent: 44d815ab413a1ae51e375f1117efa492009c450f
+Candidate head: 6060bc9c8bd764b985ab1c35e1ee74cc78704553
+Merged delta: 12 files
 Production semantic files changed: 0
 Implementation files changed: 0
 ```
 
-It selects no identity provider, credential store, protocol, credential format, cryptographic mechanism, biometric method, verifier service, live credential, Runtime driver, provider, or deployment mechanism.
+B1.2 establishes draft Authority evidence for assessing one exact provider-neutral authentication-proof presentation against one exact authorization requirement, with exact Provenance-preserved observations and lineage.
 
-## Likely Later Work
+It preserves:
 
-After B1.2 is merged and separately recorded, investigate whether B1 requires any further policy increment before moving to B2 infrastructure selection. That determination remains separately gated.
+```text
+provider acceptance ≠ Authority satisfaction
+authentication satisfaction ≠ identity truth
+authentication satisfaction ≠ Access Grant
+credential possession ≠ custody authority
+authentication satisfaction ≠ deployment permission
+authentication satisfaction ≠ deployment execution
+```
+
+No identity provider, credential store, protocol, credential format, cryptographic mechanism, biometric method, verifier service, live credential, provider, Runtime driver, deployment mechanism, mission binding, Deployment Package, readiness, activation, deployment, rollback, or external effect was selected or performed.
+
+## Next Policy Gate
+
+After the B1.2 execution record merges, investigate whether B1 has any remaining provider-neutral policy gap before closing B1 and moving toward B2 infrastructure selection.
+
+That investigation is not yet authorized. It must not select a secret store, identity provider, credential format, provider, Runtime driver, or deployment mechanism unless separately authorized.
 
 ## Current Merge Gate
 
-Candidate merge requires explicit operator approval.
+Merge of the separate B1.2 execution record requires explicit operator approval.
 
-No candidate merge, execution-record preparation, later B1 work, production admission, provider/store/driver selection, credential operation, Runtime action, deployment, or external effect is implicit.
+No record merge, later B1 or B2 preparation, production admission, provider/store/driver selection, credential operation, Runtime action, deployment, or external effect is implicit.
