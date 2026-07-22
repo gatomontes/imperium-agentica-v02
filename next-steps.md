@@ -10,6 +10,74 @@ The operator instruction `Proceed` authorizes preparation of this execution reco
 
 This file is a non-binding operational forecast. It is not doctrine, admitted architecture, authority, a calendar commitment, or a production-readiness claim.
 
+## Current Theoretical Capability
+
+This section is a revisable characterization of Imperium's present capability ceiling. It should be updated whenever a later evidence increment materially changes what Imperium can theoretically specify, govern, authorize, assemble, or execute.
+
+Imperium is currently best characterized as:
+
+> A governed operative-production and deployment-admission system, but not yet an operative deployment engine.
+
+The current theoretical lifecycle reaches:
+
+```text
+Petition
+→ Mission Need
+→ approved Work Specification
+→ Profession Specification
+→ suitable Canonical Persona or governed Persona production
+→ exact Persona selection
+→ deployment-medium-specific Operative
+→ creation closure
+→ provider-neutral handoff assessment
+→ bounded Deployment Authorization assessment
+```
+
+The current theoretical ceiling is:
+
+> A governed deployment decision and fully specified deployment candidate, stopping before real authentication, credential retrieval, Runtime invocation, provider interaction, or live deployment.
+
+Current maturity characterization:
+
+```text
+Institutional semantics: advanced
+Separation of authority and responsibility: advanced
+Operative creation governance: theoretically complete
+Provider-neutral handoff assessment: theoretically complete
+Deployment authorization: theoretically defined
+Authentication-proof policy: incomplete
+Credential infrastructure: absent
+Deployment Runtime: absent
+Live deployment capability: absent
+Production capability: absent
+```
+
+Theoretical capability currently includes determining:
+
+- what the mission requires
+- what profession is appropriate
+- whether an existing persona is suitable or a new persona must be governed and forged
+- which exact persona and version should become the Operative
+- how that persona becomes deployment-medium-specific
+- whether creation lineage and handoff eligibility are conformant
+- whether one competent Authority basis permits one exact deployer to deploy one exact Operative version for one bounded action, purpose, target, environment, mission correlation, and effective interval
+
+The current model preserves:
+
+```text
+operative existence
+≠ mission binding
+≠ deployment authorization
+≠ authentication
+≠ Tool Grant
+≠ Access Grant
+≠ credential possession
+≠ READY_FOR_LAUNCH
+≠ deployment execution
+```
+
+Imperium cannot yet authenticate a real deployer, verify a live authentication proof, retrieve or custody credentials, select or integrate a secret store, operate a Runtime/provider driver, create a live Operative Binding, assemble a live Deployment Package, establish operational `READY_FOR_LAUNCH`, cross the Iron Gate, activate an Operative, deploy into Theatre, reconcile provider state, recover, restart, roll back, terminate, or prove production readiness.
+
 ## Track A — Operative Creation, Complete
 
 ```text
