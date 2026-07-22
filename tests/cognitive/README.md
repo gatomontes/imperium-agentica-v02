@@ -122,7 +122,7 @@ no-match branch eligibility ≠ persona construction
 search result ≠ Procedure transition
 ```
 
-## Active Persona Production Candidate
+## Merged Persona Production Evidence
 
 - baseline pressure: 7 PASS / 8 FAIL
 - corrected pressure: 15 PASS / 0 FAIL
@@ -138,4 +138,22 @@ Foundry integration ≠ upstream authorship
 Pit recommendation ≠ Garrison admission
 admission ≠ suitability, selection, or recruitment
 repair ≠ mutation in place
+```
+
+## Active Conscription Selection And Recruitment Candidate
+
+- baseline pressure: 6 PASS / 9 FAIL
+- corrected pressure: 15 PASS / 0 FAIL
+- cross-layer convergence: 12 PASS / 0 FAIL
+- preserved Runtime successor suite: 91 PASS / 0 FAIL
+- repository regression: PASS
+
+Candidate distinctions:
+
+```text
+suitable candidate set ≠ selected persona
+selection ≠ reservation or inventory mutation
+Canonical Persona ≠ Operative
+recruitment conformance ≠ handoff conformance
+Operative ≠ mission binding, readiness, activation, or deployment
 ```

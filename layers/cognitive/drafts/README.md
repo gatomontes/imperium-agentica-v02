@@ -27,7 +27,8 @@ Unadmitted draft evidence:
 - `castellan-work-specification-contract.md` — merged A1.2 evidence for bounded Mission Need to approved Work Specification handoff; not admitted into CB-005
 - `guildhall-profession-resolution-contract.md` — merged A2.1 evidence for exact approved Work Specification to Profession Specification and Garrison search eligibility; not admitted into CB-005
 - `garrison-persona-suitability-contract.md` — merged A2.2 evidence for exact inventory-backed persona suitability and production-branch eligibility; not admitted into CB-005
-- `persona-production-conformance-contract.md` — active A2.3 candidate for exact no-match persona production through explicit Garrison admission; not admitted into CB-005
+- `persona-production-conformance-contract.md` — merged A2.3 evidence for exact no-match persona production through explicit Garrison admission; not admitted into CB-005
+- `conscription-selection-recruitment-contract.md` — active A2.4 candidate for exact persona selection and recruitment into a deployment-medium-specific Operative; not admitted into CB-005
 
 ## Rule
 
