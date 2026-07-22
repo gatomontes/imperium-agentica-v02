@@ -2,71 +2,55 @@
 
 ## Status
 
-B1.1 Provider-Neutral Deployment Authorization 001 merged and post-merge verified on 2026-07-22.
+`B1.2 — Provider-Neutral Authentication-Proof Satisfaction` has an active draft candidate.
 
-Track A — Operative Creation remains fully closed and recorded.
+B1.1 Provider-Neutral Deployment Authorization is fully merged and recorded through PR #50 and squash commit `44d815ab413a1ae51e375f1117efa492009c450f`.
 
-This separate execution record is the final B1.1 continuity increment. No later B1 increment is active.
+B1.2 investigation and candidate preparation were authorized by the operator instruction `Proceed` on 2026-07-22.
+
+No production semantics, implementation, authentication infrastructure, credential operation, Runtime behavior, deployment, or external effect are admitted by this candidate.
 
 This file is operational continuity, not doctrine, architecture, or authority.
 
-## Merge Record
+## Candidate Scope
 
 ```text
-Pull request: #49
-Squash commit: 713eab551d7e04819c944f9232b11f9b29f39e26
-Rollback parent: eff3efbaee11a8584fb96837e1218033e8bcec7e
-Candidate head: 3999a53034355cc98ecc5efa28ca31a7f60b20ac
+Native decision concern: Authority
+Evidence-preservation concern: Provenance
+Subject: one exact authentication-proof presentation
+Requirement: one exact Deployment Authorization authentication requirement
+Decision: SATISFIED / NOT_SATISFIED / UNRESOLVED
+Provider, identity provider, store, protocol, format, credential, Runtime: none
+Production admission: none
 ```
 
-Execution record:
+## Baseline Finding
 
-`drafts/provider-neutral-deployment-authorization-execution-001.md`
+B1.1 states provider-neutral authentication requirements and Provider Intervention Ledgers preserve authentication observations. The baseline does not consolidate one exact institutional satisfaction assessment connecting one exact presentation to one exact requirement.
 
-## Verified Evidence
+## Candidate Evidence
 
 ```text
-Theoretical pre-candidate pressure: 5 PASS / 10 FAIL
-Corrected theoretical authorization pressure: 15 PASS / 0 FAIL
-Theoretical cross-layer convergence: 12 PASS / 0 FAIL
-Unchanged previously recorded Runtime successor evidence: 91 PASS / 0 FAIL
-Markdown-only repository boundary review: PASS
+Baseline pressure: 7 PASS / 11 FAIL
+Corrected pressure: 18 PASS / 0 FAIL
+Cross-layer convergence: 14 PASS / 0 FAIL
 Production semantic files changed: 0
 Implementation files changed: 0
 ```
 
-No executable suite was rerun for the candidate.
-
-## B1.1 Result
-
-B1.1 establishes unadmitted draft Authority evidence for one exact provider-neutral Deployment Authorization Assessment with:
-
-- competent authorizer and Authority Basis
-- exact deployer identity
-- exact Operative identity and version
-- explicit action and deployment purpose
-- bounded target and environment
-- exact mission correlation when applicable
-- effective interval and deny, suspend, withdraw, expire, revoke, contest, and supersede behavior
-- provider-neutral authentication requirements without infrastructure selection
-- authorized, refused, and unresolved findings
-
 ## Preserved Boundaries
 
-- Authority remains the sole origin of permission
-- no new Deployment layer is justified
-- `HANDOFF_CONFORMANT` remains non-authorizing
-- authentication remains separate from authorization
-- Tool and Access Grants remain separate
-- mission binding and `READY_FOR_LAUNCH` remain downstream Muster concerns
-- credential acquisition and deployment execution remain separate
-- provider acceptance cannot create Authority
-- no production semantic, implementation, provider, identity provider, secret store, credential, Runtime driver, deployment mechanism, mission binding, package assembly, readiness, activation, deployment, rollback, or external effect was added
+- Authority owns requirement satisfaction and remains the sole origin of permission
+- providers and future verifiers may observe but cannot enlarge Authority
+- Provenance preserves evidence and observations without deciding universal identity truth or requirement sufficiency
+- successful authentication does not create an Access Grant
+- credential possession does not create custody authority
+- satisfaction does not bind, assemble, ready, launch, execute, or deploy
+- no new layer is justified
+- no identity provider, credential store, protocol, format, cryptographic mechanism, live credential, verifier service, Runtime driver, or deployment mechanism is selected
 
 ## Next Gate
 
-Merge this separate B1.1 execution record.
+Approve or reject candidate merge.
 
-After that merge, B1.1 is fully recorded. Provider-neutral authentication-proof presentation remains a proposed later B1 increment and requires separate explicit authorization.
-
-No execution-record merge, later B1 preparation, production admission, infrastructure selection, credential operation, Runtime action, deployment, or external effect is authorized by this record.
+No merge, execution-record preparation, later B1 increment, infrastructure selection, credential operation, Runtime action, deployment, or external effect is authorized by creation of this candidate.
