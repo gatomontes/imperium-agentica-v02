@@ -4,11 +4,79 @@
 
 Track A — Operative Creation is complete and fully recorded.
 
-B1.1 Provider-Neutral Deployment Authorization has an active draft candidate.
+B1.1 Provider-Neutral Deployment Authorization is merged and post-merge verified. Its separate execution record is pending merge.
 
-The operator instruction `Let's continue` authorizes B1.1 investigation and candidate preparation only. Candidate merge, execution-record preparation, execution-record merge, and every later Track B increment remain separate explicit gates.
+The operator instruction `Proceed` authorizes preparation of this execution record only. Its merge and every later Track B increment remain separate explicit gates.
 
 This file is a non-binding operational forecast. It is not doctrine, admitted architecture, authority, a calendar commitment, or a production-readiness claim.
+
+## Current Theoretical Capability
+
+This section is a revisable characterization of Imperium's present capability ceiling. It should be updated whenever a later evidence increment materially changes what Imperium can theoretically specify, govern, authorize, assemble, or execute.
+
+Imperium is currently best characterized as:
+
+> A governed operative-production and deployment-admission system, but not yet an operative deployment engine.
+
+The current theoretical lifecycle reaches:
+
+```text
+Petition
+→ Mission Need
+→ approved Work Specification
+→ Profession Specification
+→ suitable Canonical Persona or governed Persona production
+→ exact Persona selection
+→ deployment-medium-specific Operative
+→ creation closure
+→ provider-neutral handoff assessment
+→ bounded Deployment Authorization assessment
+```
+
+The current theoretical ceiling is:
+
+> A governed deployment decision and fully specified deployment candidate, stopping before real authentication, credential retrieval, Runtime invocation, provider interaction, or live deployment.
+
+Current maturity characterization:
+
+```text
+Institutional semantics: advanced
+Separation of authority and responsibility: advanced
+Operative creation governance: theoretically complete
+Provider-neutral handoff assessment: theoretically complete
+Deployment authorization: theoretically defined
+Authentication-proof policy: incomplete
+Credential infrastructure: absent
+Deployment Runtime: absent
+Live deployment capability: absent
+Production capability: absent
+```
+
+Theoretical capability currently includes determining:
+
+- what the mission requires
+- what profession is appropriate
+- whether an existing persona is suitable or a new persona must be governed and forged
+- which exact persona and version should become the Operative
+- how that persona becomes deployment-medium-specific
+- whether creation lineage and handoff eligibility are conformant
+- whether one competent Authority basis permits one exact deployer to deploy one exact Operative version for one bounded action, purpose, target, environment, mission correlation, and effective interval
+
+The current model preserves:
+
+```text
+operative existence
+≠ mission binding
+≠ deployment authorization
+≠ authentication
+≠ Tool Grant
+≠ Access Grant
+≠ credential possession
+≠ READY_FOR_LAUNCH
+≠ deployment execution
+```
+
+Imperium cannot yet authenticate a real deployer, verify a live authentication proof, retrieve or custody credentials, select or integrate a secret store, operate a Runtime/provider driver, create a live Operative Binding, assemble a live Deployment Package, establish operational `READY_FOR_LAUNCH`, cross the Iron Gate, activate an Operative, deploy into Theatre, reconcile provider state, recover, restart, roll back, terminate, or prove production readiness.
 
 ## Track A — Operative Creation, Complete
 
@@ -22,11 +90,7 @@ Remaining Track A work: none
 
 Track A ends at a validated, versioned, deployment-medium-specific Operative with exact creation closure and a separate provider-neutral handoff finding.
 
-It does not bind a mission, assemble a Deployment Package, declare `READY_FOR_LAUNCH`, commission, activate, deploy, or prove live operational safety.
-
 ## Track B — Operative Deployment
-
-Track B is a separate endeavor. Deployment evidence may contest Track A handoff evidence only through explicit native-owner revision and reassessment.
 
 | Order | Approximate leg | What it must establish | Evidence increments | Approximate merges |
 |---:|---|---|---:|---:|
@@ -36,44 +100,23 @@ Track B is a separate endeavor. Deployment evidence may contest Track A handoff 
 | B4 | Integrated nonproduction staging | store-to-driver composition, deployment/restart/recovery, audit, rollback, fault injection, and handoff conformance | 2–4 | 4–8 |
 | B5 | Production admission and deployment | production-manifest decision, operational ownership, release/rollback, monitoring, incident response, and explicit admission | 3–5 | 6–10 |
 
-Approximate Track B size remains:
+Approximate Track B size remains 11–19 evidence increments / 22–38 merges.
+
+## B1.1 — Candidate Merged, Record Pending
 
 ```text
-11–19 evidence increments
-22–38 merges
-```
-
-## Active Candidate
-
-`B1.1 — Provider-Neutral Deployment Authorization Contract Investigation`
-
-The candidate establishes Authority-native draft semantics for one exact, bounded, revocable deployment authorization envelope containing:
-
-- competent authorizer, represented Principal, and Authority Basis
-- exact deployer identity and role basis
-- exact Operative identity and version
-- explicit deployment action and purpose
-- target class, bounded target scope, environment, and prohibitions
-- exact mission and subordinate correlation when applicable
-- effective interval, expiry, suspension, withdrawal, revocation, and supersession
-- provider-neutral authentication requirements and evidence expectations
-- conformant, refused, and unresolved Authority findings
-- native-owner invalidation, repair, reassessment, and PB-001 supersession
-
-Candidate evidence:
-
-```text
-Pre-candidate pressure: 5 PASS / 10 FAIL
-Corrected authorization pressure: 15 PASS / 0 FAIL
-Cross-layer convergence: 12 PASS / 0 FAIL
-Preserved Runtime successor suite: 91 PASS / 0 FAIL
-Repository regression: PASS
+Candidate PR: #49
+Squash commit: 713eab551d7e04819c944f9232b11f9b29f39e26
+Rollback parent: eff3efbaee11a8584fb96837e1218033e8bcec7e
+Candidate head: 3999a53034355cc98ecc5efa28ca31a7f60b20ac
+Merged delta: 14 files
 Production semantic files changed: 0
+Implementation files changed: 0
 ```
 
-## B1.1 Boundaries
+B1.1 establishes draft Authority evidence for one exact, bounded, revocable, provider-neutral Deployment Authorization Assessment.
 
-The candidate preserves:
+It preserves:
 
 ```text
 HANDOFF_CONFORMANT ≠ DEPLOYMENT_AUTHORIZED
@@ -86,27 +129,24 @@ DEPLOYMENT_AUTHORIZED ≠ deployment execution
 provider acceptance ≠ Authority source
 ```
 
-It selects or performs none of the following:
+No provider, identity provider, secret store, credential format, Runtime driver, deployment mechanism, credential operation, mission binding, Deployment Package, readiness, activation, deployment, rollback, or external effect was selected or performed.
 
-- credential store
-- identity provider
-- deployment provider
-- Runtime or provider driver
-- deployment mechanism
-- credential request, retrieval, custody, or transmission
-- Operative Binding or Deployment Package assembly
-- `READY_FOR_LAUNCH`
-- commissioning, activation, Runtime execution, deployment, rollback, or external effect
-- production semantic admission
+## Proposed Later B1 Increment
 
-## Likely Later B1 Increment
+After the B1.1 execution record merges, the next likely increment is provider-neutral authentication-proof presentation and verification.
 
-After B1.1 is merged and separately recorded, pressure provider-neutral authentication-proof presentation and verification as an independent concern.
+That investigation should determine what evidence demonstrates that the exact deployer satisfies the authentication requirements cited by an exact Deployment Authorization Assessment, while preserving:
 
-That later work must still avoid selecting an identity provider, credential store, provider, credential format, Runtime driver, or deployment mechanism unless separately authorized by a future gate.
+- authentication proof ≠ Authority
+- successful authentication ≠ Access Grant
+- credential possession ≠ custody authority
+- provider acceptance ≠ deployment permission
+- verification ≠ credential retrieval or transmission
+
+It must not select an identity provider, credential store, provider, credential format, Runtime driver, or deployment mechanism unless separately authorized.
 
 ## Current Merge Gate
 
-Candidate merge requires explicit operator approval.
+Merge of the separate B1.1 execution record requires explicit operator approval.
 
-No candidate merge, execution-record preparation, later B1 work, production admission, provider/store/driver selection, credential operation, Runtime action, deployment, or external effect is implicit.
+No record merge, later B1 preparation, production admission, provider/store/driver selection, credential operation, Runtime action, deployment, or external effect is implicit.
