@@ -2,81 +2,74 @@
 
 ## Status
 
-Track A — Operative Creation is fully closed and recorded.
+`B1.1 — Provider-Neutral Deployment Authorization Contract Investigation` has an active draft candidate.
 
-Track A0, A1, A2, and A3 are complete in eight evidence increments and sixteen merges. PR #47, the final Track A execution record, was squash-merged and verified on 2026-07-22.
+Track A — Operative Creation remains fully closed and recorded in eight evidence increments and sixteen merges.
 
-No Track B increment is active. Work is paused at the Track B authorization gate.
+B1.1 investigation and candidate preparation were authorized by the operator instruction `Let's continue` on 2026-07-22.
+
+No production semantics, implementation, provider, credential, Runtime behavior, deployment, or external effect are admitted by this candidate.
 
 This file is operational continuity, not doctrine, architecture, or authority.
 
-## Closure Record
+## Candidate Scope
 
 ```text
-Final execution-record pull request: #47
-Squash commit on main: 0607112296e398f60bf061baf20016735f214754
-Rollback parent: 8788f004e377bce3d4ddafb501722305f415c751
-Record head: eebb34a21ba6f811f74d546d7776b14bdaa12d35
+Native concern: Authority
+Subject: one exact deployment-medium-specific Operative identity and version
+Decision: one exact bounded provider-neutral Deployment Authorization Assessment
+Required separation: authorization ≠ authentication ≠ access ≠ readiness ≠ execution
+Provider, store, driver, mechanism, credential, deployment: none
+Production admission: none
 ```
 
-Execution record:
+## Baseline Finding
 
-`drafts/creation-lineage-handoff-conformance-execution-001.md`
+The admitted Authority baseline defines Mission Envelope and capability Tool/Access Grants, but no contract consolidates one exact deployment-specific grant for:
 
-## Track A Result
-
-```text
-A0: 1 evidence increment / 2 merges
-A1: 2 evidence increments / 4 merges
-A2: 4 evidence increments / 8 merges
-A3: 1 evidence increment / 2 merges
-Total: 8 evidence increments / 16 merges
-```
-
-The creation-side endpoint is a validated, versioned, deployment-medium-specific Operative with:
-
-- exact Petition-to-Operative lineage
-- semantic reproducibility from pinned inputs and transformations
-- invalidation and native-owner repair behavior
-- one current `CREATION_CLOSURE_CONFORMANT` finding
-- one separate current provider-neutral `HANDOFF_CONFORMANT` finding
-
-The endpoint is not mission-bound, assembled into a Deployment Package, `READY_FOR_LAUNCH`, commissioned, activated, or deployed.
-
-No production semantics or Runtime implementation were added by Track A.
-
-## Next Proposed Leg
-
-`B1.1 — Provider-Neutral Deployment Authorization Contract Investigation`
-
-If explicitly authorized, B1.1 should determine the minimum authority envelope required before any deployment attempt:
-
-- exact deployer identity and authority source
-- exact eligible Operative identity and version
-- permitted deployment action and target scope
-- environment and mission correlation
-- effective time, expiry, revocation, and deny behavior
-- authentication requirements without selecting a credential store or provider
+- competent authorizer and Authority Basis
+- exact deployer identity
+- exact Operative identity and version
+- action, purpose, target, environment, and mission correlation
+- effective time, expiry, suspension, withdrawal, revocation, and supersession
+- provider-neutral authentication requirements
 - refused and unresolved outcomes
-- separation from credential acquisition, deployment execution, readiness, activation, and external effect
 
-B1.1 must stop before:
+`INITIAL_EXTERNAL_CROSSING` applies to an assembled Deployment Package. Tool and Access Grants authorize capability or access operations. Neither independently supplies the missing exact deployment-authorization envelope.
 
-- selecting or integrating a real secret store
-- choosing a Runtime or provider driver
-- acquiring live credentials
-- assembling or dispatching a Deployment Package
-- declaring `READY_FOR_LAUNCH`
-- commissioning, activation, deployment, or external effect
+## Candidate Evidence
 
-## New-Chat Gate
+```text
+Pre-candidate pressure: 5 PASS / 10 FAIL
+Corrected authorization pressure: 15 PASS / 0 FAIL
+Cross-layer convergence: 12 PASS / 0 FAIL
+Preserved Runtime successor suite: 91 PASS / 0 FAIL
+Repository regression: PASS
+Production semantic files changed: 0
+```
 
-At the start of the next chat:
+## Preserved Boundaries
 
-1. load the repository and treat `main` as source of truth
-2. read `current-step.md`, `next-steps.md`, and the Track A closure record
-3. verify that `main` includes squash commit `0607112296e398f60bf061baf20016735f214754`
-4. confirm that no Track B increment is active
-5. explain or investigate B1.1 only after explicit operator approval
+- Authority remains the sole origin of permission and grant effectiveness
+- Track A closure and handoff are eligibility evidence, not Authority
+- Mission Envelope production action classes remain unchanged
+- Tool and Access Grants remain separate from deployment authorization
+- authentication evidence remains necessary when required but never sufficient for authorization
+- credential class references contain no values and assign no custody
+- PB-001 records identity, correlation, lineage, and `AUTHORIZED_UNDER` without validating grants
+- Procedure may require findings but cannot create or repair Authority
+- Muster retains binding, assembly, Deployment Package, and `READY_FOR_LAUNCH`
+- Runtime and providers may later enforce or observe but cannot originate permission
+- no provider, secret store, identity provider, Runtime driver, deployment mechanism, credential, or external effect is selected or used
 
-No B1.1 preparation, branch, candidate, merge, credential operation, Runtime action, or external effect is authorized by this breakpoint.
+## Track Finding
+
+Current pressure indicates one bounded B1.1 evidence increment is sufficient for the authorization envelope.
+
+Authentication-proof presentation remains an independent later B1 concern and must not assume infrastructure.
+
+## Next Gate
+
+Approve or reject candidate merge.
+
+No merge, execution-record preparation, later B1 increment, production admission, credential operation, Runtime action, deployment, or external effect is authorized by creation of this candidate.
