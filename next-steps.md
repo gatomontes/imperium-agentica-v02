@@ -10,9 +10,11 @@ Track A1 is merged, complete, and post-merge verified in two evidence increments
 
 Track A2 is merged, complete, and post-merge verified in four evidence increments: Guildhall Profession Resolution, Garrison Persona Suitability, Persona Production Conformance, and Conscription Persona Selection and Recruitment.
 
-A3.1 End-to-End Creation Lineage And Handoff Conformance has an active draft candidate.
+A3.1 End-to-End Creation Lineage And Handoff Conformance is merged, complete, and post-merge verified.
 
-The operator instruction `proceed with what remains for this leg` is fulfilled for Track A2. A3.1 preparation is authorized by the current operator instruction `@GitHub proceed`; every merge remains explicit.
+Track A is complete in eight evidence increments and sixteen merges. No Track B increment is active.
+
+The operator instruction `proceed with what remains for this leg` is fulfilled for Track A2. The A3.1 candidate preparation and merge instructions are fulfilled. The current `@GitHub proceed` authorizes only the separate A3.1 execution record; its merge and every Track B action remain explicit.
 
 The operator approved a sequencing refinement:
 
@@ -52,24 +54,24 @@ Deployment implementation remains paused until creation closure.
 | A0 — complete | Creation-to-deployment handoff seam | exact medium-specific Operative identity/version, provenance and applicable authority references, preservation/deviation findings, dependency/resource/secret-class requirements, validation evidence, and a provider-neutral handoff assessment that creates no Operative readiness state | 1 completed | 2 completed |
 | A1 — complete | Castellan-side mission and work specification | bounded Mission Need, approved Work Specification, required capability, constraints, acceptance conditions, authority citation, and refusal/escalation without defining a profession or constructing an Operative | 2 completed | 4 completed |
 | A2 — complete | Guildhall-to-Conscription resolution and recruitment | resolve Profession Specification and admitted Persona, then transform that Persona into a versioned deployment-medium-specific Operative; test selection, referral, preservation, deviation, rejection, repair, and evidence without mission assembly or deployment | 4 completed | 8 completed |
-| A3 — candidate active | Creation closure and handoff conformance | cross-flow provenance, artifact versioning, semantic reproducibility, invalidation and native-owner repair, separate handoff classification, and downstream inspectability without rewriting creation semantics | A3.1 candidate active | 2 including candidate |
+| A3 — complete | Creation closure and handoff conformance | cross-flow provenance, artifact versioning, semantic reproducibility, invalidation and native-owner repair, separate handoff classification, and downstream inspectability without rewriting creation semantics | 1 completed | 2 completed |
 
-Approximate remaining size to finish the operative-creation track with the A3.1 candidate open:
+Approximate remaining size to finish the operative-creation track after this record merges:
 
 ```text
-1 evidence increment
-2 merges including the candidate
+0 evidence increments
+0 merges
 ```
 
 Track A is complete only when the creation flow produces a validated, versioned, deployment-medium-specific Operative and the provider-neutral handoff contract passes end-to-end pressure. It does not bind a mission, declare `READY_FOR_LAUNCH`, deploy, or activate the Operative.
 
-## Active Candidate
+## Completed A3.1 Evidence
 
 `A3.1 End-to-End Creation Lineage And Handoff Conformance`
 
-This should compose the exact Petition → Mission Need → approved Work Specification → Profession Specification → exact persona branch → Persona Selection Assessment → immutable Operative lineage, then pressure the resulting Operative against the already-merged provider-neutral handoff contract.
+The merged evidence composes the exact Petition → Mission Need → approved Work Specification → Profession Specification → exact persona branch → Persona Selection Assessment → immutable Operative lineage, then pressures the resulting Operative against the already-merged provider-neutral handoff contract.
 
-It must establish:
+It establishes:
 
 - exact identity and version continuity across every creation artifact
 - reproducibility from the same pinned inputs and transformation versions
@@ -79,15 +81,15 @@ It must establish:
 - a separate `HANDOFF_CONFORMANT`, refused, or unresolved assessment
 - downstream inspectability without rewriting creation semantics
 
-It must stop before mission binding, Muster assembly, `READY_FOR_LAUNCH`, commissioning, activation, Runtime execution, deployment, or any external effect.
+It stops before mission binding, Muster assembly, `READY_FOR_LAUNCH`, commissioning, activation, Runtime execution, deployment, or any external effect.
 
-Current pressure indicates one combined A3 increment is sufficient: 15 / 15 corrected pressure and 12 / 12 convergence pass without exposing an independent A3.2 concern.
+A3.1 closed in one combined evidence increment: 15 / 15 corrected pressure and 12 / 12 convergence pass without exposing an independent A3.2 concern.
 
-Candidate merge and its later execution-record merge remain explicit gates. Track A closes only after both merges and post-merge verification.
+The candidate is merged and post-merge verified. This execution record closes Track A when merged. Track B remains parked and requires separate explicit approval.
 
 ## Track B — Operative Deployment, Parked
 
-Track B resumes only after Track A closes and is recorded.
+Track B is now eligible for separate consideration because Track A is closed and recorded. It remains parked until explicitly authorized.
 
 | Order | Approximate leg | What it must establish | Evidence increments | Approximate merges |
 |---:|---|---|---:|---:|
@@ -115,8 +117,8 @@ From the point after this execution record merges:
 | Handoff seam proven and recorded | complete |
 | Castellan-side specification behavior | complete |
 | Guildhall-to-Conscription resolution/recruitment | complete |
-| Operative-creation track closed | 2 including active candidate |
-| Later deployment track closed | 24–40 cumulative including active candidate |
+| Operative-creation track closed | complete |
+| Later deployment track closed | 22–38 |
 
 These are planning ranges, not targets. A leg may contract when existing evidence is sufficient or expand when pressure reveals an independent gate.
 
