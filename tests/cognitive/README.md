@@ -32,7 +32,7 @@ maintenance disposition ≠ Runtime plan
 mechanical restoration ≠ mission success
 ```
 
-## Active Operative Creation Handoff Candidate
+## Merged Operative Creation Handoff Evidence
 
 - baseline pressure: 5 PASS / 10 FAIL
 - corrected pressure: 15 PASS / 0 FAIL
@@ -104,7 +104,7 @@ Garrison search eligibility ≠ Garrison search
 profession resolution ≠ Procedure transition
 ```
 
-## Active Garrison Persona Suitability Candidate
+## Merged Garrison Persona Suitability Evidence
 
 - baseline pressure: 6 PASS / 9 FAIL
 - corrected pressure: 15 PASS / 0 FAIL
@@ -120,4 +120,22 @@ suitable candidate set ≠ selected persona
 NO_SUITABLE_PERSONA_FOUND ≠ missing or stale inventory
 no-match branch eligibility ≠ persona construction
 search result ≠ Procedure transition
+```
+
+## Active Persona Production Candidate
+
+- baseline pressure: 7 PASS / 8 FAIL
+- corrected pressure: 15 PASS / 0 FAIL
+- cross-layer convergence: 12 PASS / 0 FAIL
+- preserved Runtime successor suite: 91 PASS / 0 FAIL
+- repository regression: PASS
+
+Candidate distinctions:
+
+```text
+no-match eligibility ≠ construction authority
+Foundry integration ≠ upstream authorship
+Pit recommendation ≠ Garrison admission
+admission ≠ suitability, selection, or recruitment
+repair ≠ mutation in place
 ```
