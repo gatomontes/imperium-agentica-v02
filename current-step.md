@@ -2,58 +2,56 @@
 
 ## Status
 
-Conscription Persona Selection And Recruitment 001 merged and post-merge verified on 2026-07-21.
+Creation Lineage And Handoff Conformance 001 is the active A3.1 draft candidate.
 
-Track A0, Track A1, and Track A2 are complete and recorded. Track A remains open for A3 Creation Closure And Handoff Conformance.
+Track A0, Track A1, and Track A2 are complete and recorded. A3.1 preparation is authorized by the operator instruction @GitHub proceed.
 
-No active step.
+No production semantics are admitted by this candidate.
 
 This file is operational continuity, not doctrine, architecture, or authority.
 
-## Merge Record
+## Candidate Scope
 
-```text
-Pull request: #44
-Squash commit: 8d254715ca2902b269c17cb1f0863d92faceec90
-Rollback parent: b77662015f6b5fdad66936f9b94e03098b22d287
-Candidate head: 49aa5818eac1713f24a35e84f309646ad6b6a67a
-```
+~~~
+Input: exact version-pinned Petition-to-Operative creation chain
+Composition: one Creation Closure Assessment with conformant, refused, or unresolved finding
+Handoff: separate current A0 assessment for the same exact Operative version
+Mission binding, readiness, activation, deployment: none
+Production admission: none
+~~~
 
-Execution record:
+## Candidate Evidence
 
-`drafts/conscription-selection-recruitment-execution-001.md`
-
-## Verified Evidence
-
-```text
-Pre-candidate pressure: 6 PASS / 9 FAIL
-Corrected selection-and-recruitment pressure: 15 PASS / 0 FAIL
+~~~
+Pre-candidate pressure: 5 PASS / 10 FAIL
+Corrected closure-and-handoff pressure: 15 PASS / 0 FAIL
 Cross-layer convergence: 12 PASS / 0 FAIL
 Preserved Runtime successor suite: 91 PASS / 0 FAIL
 Repository regression: PASS
 Production semantic files changed: 0
-```
+~~~
 
 ## Preserved Boundaries
 
-- Guildhall retains professional suitability meaning
-- Garrison retains exact inventory, qualification, availability, and lifecycle truth
-- Conscription retains exact persona selection and deployment-medium-specific transformation
-- even one suitable candidate requires an explicit current selection finding
-- selection does not reserve or mutate Garrison inventory
-- one immutable Operative version derives from one exact selected Canonical Persona version
-- required competence, doctrine, applicable traits, refusal, evidence, and escalation behavior remain preserved or explicitly dispositioned
-- PB-001 retains identity, correlation, derivation, transformation, citation, production, and supersession
-- Authority retains grants; requirements and interfaces create no permission
-- Procedure retains Stage 3 ordering and no transition executes automatically
-- A0 retains the separate provider-neutral creation-handoff assessment
-- Muster retains mission binding, assembly, Deployment Package, and `READY_FOR_LAUNCH`
-- no live selection, Operative, production semantic change, Runtime implementation, deployment, or external effect was added
+- every creation artifact and assessment retains its native owner
+- A3 composes exact findings but originates no mission, profession, persona, recruitment, authority, or provenance meaning
+- both persona branches remain explicit and reconverge only through fresh suitability evidence
+- same pinned inputs require semantic equivalence; byte identity applies only when the technical contract requires it
+- material source or transformation change invalidates dependent future use
+- repair returns to the first native owner, creates new versions, and reruns affected downstream assessments
+- historical findings remain preserved under PB-001 supersession
+- CREATION_CLOSURE_CONFORMANT remains distinct from HANDOFF_CONFORMANT
+- handoff remains distinct from mission binding, Muster assembly, READY_FOR_LAUNCH, activation, and deployment
+- no live artifact, production semantic change, Runtime implementation, deployment, or external effect
+
+## Track Finding
+
+Current pressure demonstrates no independent A3.2 concern.
+
+If this candidate and its separate execution record merge cleanly, Track A can close. Track B remains parked and separately authorized.
 
 ## Next Gate
 
-Merge the separate A2.4 execution record.
+Approve or reject candidate merge.
 
-After that merge, explicitly approve A3 Creation Closure And Handoff Conformance.
-
-No A3 preparation or merge is authorized by this record.
+No merge is authorized by creation of this candidate.
