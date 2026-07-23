@@ -55,6 +55,8 @@ The rerun must fail if the drafts:
 - redefine Provider Intervention Ledger stages;
 - treat provider acceptance as permission;
 - let generic refusal erase permitted failure evidence;
+- classify every continuing provider result as non-secret instead of limiting only credential, device, backend, and authentication exposure;
+- redefine substantive provider-result data classification;
 - admit a Runtime custody mechanism by describing its required boundary;
 - select a persistence technology.
 
@@ -64,6 +66,7 @@ The rerun must fail if the drafts:
 Sole-accessor assertions: 22 PASS / 0 FAIL
 Authority ownership checks: PASS
 Provenance ownership checks: PASS
+Result-classification ownership check: PASS
 Production semantic files changed: 0
 Runtime implementation files changed: 0
 ```
