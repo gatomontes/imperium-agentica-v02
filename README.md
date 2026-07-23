@@ -116,25 +116,27 @@ A future LLM session should read the repository in this order:
 1. `README.md` — constitutional orientation.
 2. `current-step.md` — active operational context.
 3. `next-steps.md` — pending operational queue.
-4. `layers/cognitive/README.md` — cognitive-layer boundary and admission rules.
+4. `deliberations/README.md` — cross-layer risk, deliberation, control-tracking, and implementation-status instructions, when evaluating gaps, external findings, or continuous improvement.
+7. `deliberations/registry.md` — current risk, program, control, and decision index, when deliberation work is relevant.
+8. `layers/cognitive/README.md` — cognitive-layer boundary and admission rules.
 5. `layers/cognitive/production/` — admitted cognitive baseline, when cognitive structure is relevant.
 6. `layers/authority/README.md` — approved authority boundary.
-7. `layers/authority/production/` — admitted Authority Baseline `AB-003`, when authority is relevant.
-8. `layers/authority/drafts/` — shaped but unproven authority contracts, only if relevant.
-9. `layers/provenance/README.md` — approved provenance boundary.
-10. `layers/provenance/production/` — admitted Provenance Baseline `PB-001`, when provenance is relevant.
-11. `layers/provenance/drafts/` — shaped but unproven provenance contracts, only if relevant.
-12. `layers/procedure/README.md` — admitted reduced Procedure boundary, when procedural work is relevant.
-13. `layers/procedure/production/` — admitted Procedure Baseline `PRB-003`.
-14. `layers/procedure/drafts/` — retained Procedure source drafts, only for traceability.
-15. `layers/runtime/README.md` — admitted Runtime boundary and RTB-002 navigation.
-16. `layers/runtime/production/` — admitted Runtime Baseline `RTB-002`, when Runtime semantics are relevant.
-17. `layers/runtime/reference/` — stable nonproduction executable Runtime reference, when implementation evidence is relevant.
-18. `layers/runtime/drafts/` — retained Runtime source drafts, only for traceability.
-19. `layers/cognitive/drafts/` — retained or unproven Cognitive revisions, only if relevant.
-20. `tests/` — theoretical and empirical suites with immutable run records, only when testing or tracing.
-21. `ideas.md` — raw pre-draft candidates, only if needed.
-22. `drafts/` — cross-layer working analyses, only if relevant to the current step.
+9. `layers/authority/production/` — admitted Authority Baseline `AB-003`, when authority is relevant.
+10. `layers/authority/drafts/` — shaped but unproven authority contracts, only if relevant.
+11. `layers/provenance/README.md` — approved provenance boundary.
+12. `layers/provenance/production/` — admitted Provenance Baseline `PB-001`, when provenance is relevant.
+13. `layers/provenance/drafts/` — shaped but unproven provenance contracts, only if relevant.
+14. `layers/procedure/README.md` — admitted reduced Procedure boundary, when procedural work is relevant.
+15. `layers/procedure/production/` — admitted Procedure Baseline `PRB-003`.
+16. `layers/procedure/drafts/` — retained Procedure source drafts, only for traceability.
+17. `layers/runtime/README.md` — admitted Runtime boundary and RTB-002 navigation.
+18. `layers/runtime/production/` — admitted Runtime Baseline `RTB-002`, when Runtime semantics are relevant.
+19. `layers/runtime/reference/` — stable nonproduction executable Runtime reference, when implementation evidence is relevant.
+20. `layers/runtime/drafts/` — retained Runtime source drafts, only for traceability.
+21. `layers/cognitive/drafts/` — retained or unproven Cognitive revisions, only if relevant.
+22. `tests/` — theoretical and empirical suites with immutable run records, only when testing or tracing.
+23. `ideas.md` — raw pre-draft candidates, only if needed.
+24. `drafts/` — cross-layer working analyses, only if relevant to the current step.
 
 Do not reconstruct intent from chat history before reading these files.
 
