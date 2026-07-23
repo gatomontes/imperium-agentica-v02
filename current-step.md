@@ -2,52 +2,23 @@
 
 ## Status
 
-`B1 — Provider-Neutral Deployment Authorization and Authentication Policy` has an active completeness investigation.
+`B1.3 — Provider-Neutral Deployment Policy Convergence` has an active draft candidate.
 
-B1.1 Provider-Neutral Deployment Authorization and B1.2 Provider-Neutral Authentication-Proof Satisfaction are fully merged and separately recorded.
+B1.1 Deployment Authorization and B1.2 Authentication-Proof Satisfaction remain fully merged and recorded.
 
-The operator instruction `Proceed with investigation` authorizes B1 completeness investigation and preparation of its finding only.
+The B1 completeness investigation was merged through PR #53 and squash commit `fd398ce9add3c210a1fb28daef92309d4eaff9c6`.
 
-No final B1 policy increment, candidate merge, B1 closure, B2 preparation, infrastructure selection, credential operation, Runtime action, deployment, or external effect is authorized by this investigation.
+The operator instruction `Fix the gap` authorized merging that investigation record and preparing this final bounded B1 candidate.
+
+No candidate merge, execution record, B1 closure, B2 preparation, infrastructure selection, credential operation, Runtime action, deployment, or external effect is authorized.
 
 This file is operational continuity, not doctrine, architecture, or authority.
 
-## Investigation Question
+## Candidate Question
 
-Does B1 contain every provider-neutral policy decision required before later mission assembly and initial external crossing, or does one final bounded policy gap remain?
+Are the exact Deployment Authorization and every required Authentication-Proof Satisfaction finding simultaneously current, mutually correlated, scope-compatible, and available as one exact downstream prerequisite set?
 
-## Pressure Result
-
-```text
-B1 completeness pressure: 11 PASS / 4 FAIL
-Remaining provider-neutral policy gaps: 1
-Infrastructure-dependent gaps counted in B1: 0
-```
-
-## Finding
-
-One bounded Authority convergence gap remains.
-
-B1.1 determines whether one exact deployer may deploy one exact Operative version under exact scope and time bounds.
-
-B1.2 determines whether one exact authentication-proof presentation satisfies one exact requirement cited by that authorization.
-
-The repository does not yet define one canonical finding that proves those exact artifacts are simultaneously current, mutually correlated, scope-compatible, and available for downstream consumption.
-
-Without that finding, Procedure, Muster, Runtime, or Iron Gate would have to infer convergence from individually valid artifacts.
-
-## Native Ownership
-
-- Authority owns the convergence decision
-- Provenance supplies exact identity, correlation, ordering, supersession, and lineage
-- Procedure may require but cannot create the finding
-- Muster may consume but cannot infer it from assembly completeness
-- Runtime and Iron Gate may later enforce but cannot originate it
-- no new layer is justified
-
-## Required Final B1 Increment
-
-Define one provider-neutral Deployment Policy Convergence Assessment with bounded outcomes:
+## Candidate Findings
 
 ```text
 DEPLOYMENT_POLICY_CONFORMANT
@@ -55,10 +26,28 @@ DEPLOYMENT_POLICY_NOT_CONFORMANT
 DEPLOYMENT_POLICY_UNRESOLVED
 ```
 
-It must align exact authorization and authentication-satisfaction findings while remaining distinct from mission binding, Tool or Access Grants, credential retrieval, `READY_FOR_LAUNCH`, `INITIAL_EXTERNAL_CROSSING`, and deployment execution.
+## Evidence
+
+```text
+Baseline pressure: 12 PASS / 6 FAIL
+Corrected pressure: 18 PASS / 0 FAIL
+Cross-layer boundary review: 15 PASS / 0 FAIL
+Production semantic files changed: 0
+Implementation files changed: 0
+```
+
+## Preserved Boundaries
+
+- Authority owns convergence
+- Provenance supplies exact identity, correlation, ordering, lineage, contest, and supersession
+- Procedure may require but cannot create the finding
+- Muster may consume but cannot infer it from assembly completeness
+- Runtime and Iron Gate may enforce but cannot originate it
+- convergence creates no mission binding, Tool or Access Grant, credential custody, readiness, initial-crossing authority, or deployment
+- no new layer or infrastructure selection is justified
 
 ## Next Gate
 
-Approve or reject preparation of the final bounded B1 convergence candidate.
+Approve or reject candidate merge.
 
-No candidate preparation, merge, execution record, closure, B2 infrastructure work, provider/store/driver selection, credential operation, Runtime action, deployment, or external effect is implicit.
+A separate execution record and B1 closure review remain separately gated.
