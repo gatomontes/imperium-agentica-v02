@@ -2,7 +2,7 @@
 
 ## Status
 
-Completed and admitted as CB-006 through PR #64 and squash commit `830e5daaedb05c48b9f6a80473022f7e856688d1`. Closure record pending merge.
+Completed and admitted as CB-006 through PR #64 and squash commit `830e5daaedb05c48b9f6a80473022f7e856688d1`. Closure record merged through PR #65 and squash commit `779a026c467474627fc5a425f613f21bb124a533`.
 
 ## Authorization
 
