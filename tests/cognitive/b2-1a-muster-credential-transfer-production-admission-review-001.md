@@ -4,9 +4,9 @@
 
 Review merged through PR #63 and squash commit `fc74e25657111115598373c21ec00148559670c9`.
 
-Recommendation accepted for bounded production staging within B2.1a.
+Recommendation executed through PR #64 and squash commit `830e5daaedb05c48b9f6a80473022f7e856688d1`.
 
-The review itself moved no production artifact.
+CB-006 is admitted; B2.1a closure record pending merge.
 
 ## Authorization
 

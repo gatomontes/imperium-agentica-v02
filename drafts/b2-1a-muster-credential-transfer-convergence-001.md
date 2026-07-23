@@ -2,7 +2,7 @@
 
 ## Status
 
-Draft candidate merged through PR #62 and squash commit `2460a08cc35099956e7ca77894f5179139f00ea1`. Production admission review active.
+Completed and admitted as CB-006 through PR #64 and squash commit `830e5daaedb05c48b9f6a80473022f7e856688d1`. Closure record pending merge.
 
 ## Authorization
 
