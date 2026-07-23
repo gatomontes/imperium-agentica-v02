@@ -105,6 +105,8 @@ The credential-binding and access-reference field may contain only non-secret, n
 
 A non-secret reference must not itself function as a bearer capability.
 
+A permitted access result or refusal must be non-secret and non-replayable. It must not contain credential values, session material, or another value capable of independent authentication.
+
 The Deployment Package is mission-specific and bound to exactly one Mission Identity, Operative Binding, and Muster Instance.
 
 It is distinct from:
@@ -171,7 +173,7 @@ Armory supplies authorized tools and constraints.
 
 Locksmith retains responsibility for credential material and supplies only authorized non-secret credential-binding references, access tickets, Access Grant references, permission constraints, expiration and revocation conditions, and permitted access results or refusals.
 
-Runtime retains credential custody and performs authorized authenticated operations through the admitted custody mechanism.
+Runtime retains credential custody and performs authorized authenticated operations only through a custody mechanism separately admitted for that purpose.
 
 Muster assembles only those non-secret references, constraints, conditions, and permitted results into the Deployment Package. Muster does not receive, carry, resolve, or use credential material.
 
