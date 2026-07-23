@@ -31,8 +31,7 @@ The private package manifest exposes only these paths:
 | `@imperium-agentica/runtime-reference/security/synthetic-credentials` | in-memory, one-use synthetic credential boundary for tests |
 | `@imperium-agentica/runtime-reference/providers/node-process-supervisor/synthetic-credentials` | synthetic-only projection from the one-use broker to the injected supervisor driver |
 | `@imperium-agentica/runtime-reference/security/synthetic-secret-store` | expiring synthetic lease port with synchronous and asynchronous acquisition paths |
-| `@imperium-agentica/runtime-reference/security/openbao-kv-v2` | pinned OpenBao 2.6.1 KV v2 backend over an injected authenticated transport |
-| `@imperium-agentica/runtime-reference/security/openbao-imperium-service-port` | fixed-operation Runtime client for the OpenBao-hosted Imperium Service Port |
+| `@imperium-agentica/runtime-reference/security/local-env` | injected local-environment source for synthetic nonproduction material |
 
 The placement and export names are stable enough for repository tests and future bounded investigations. Behavior remains revisable and contestable by evidence.
 
@@ -84,7 +83,17 @@ Lease binding covers environment, component, scope, and purpose. Expiry, explici
 
 This port does not itself select or emulate a real authentication method, SDK, network protocol, encryption scheme, file format, deployment, or availability guarantee.
 
-## OpenBao KV v2 Backend
+## Local Environment Secret-Source Adapter
+
+`LocalEnvSyntheticSecretStoreBackend` maps an opaque Runtime reference to one fixed base64 material variable and one explicit version variable. It receives a whitelisted reader from the composition root and does not read files, `process.env`, a database, or a network itself.
+
+Only `IMPERIUM_SYNTHETIC_*_B64` and `IMPERIUM_SYNTHETIC_*_VERSION` bindings are accepted. Material is classified as `SYNTHETIC_TEST_SECRET`. Missing, malformed, noncanonical, implicitly versioned, or reader-failure responses refuse generically.
+
+Node may load a private `.env` before application startup. That file is ignored by Git; `.env.example` contains synthetic material only.
+
+Environment strings cannot be securely erased and may be inherited, inspected, debugged, or copied. This adapter is a temporary local bridge and is not eligible for real credentials, shared custody, non-local deployment, B4, or production.
+
+## Retained OpenBao KV v2 Evidence
 
 `OpenBaoKvV2SecretStoreBackend` pins OpenBao 2.6.1 and maps configured opaque references to an exact mount, path, field, and positive KV version. It sends only method, path, and accepted media type through an injected authenticated transport. Missing references, response failures, malformed content, missing fields, and version mismatches refuse generically.
 
@@ -92,13 +101,13 @@ The injected transport owns authentication and network behavior. This package su
 
 Mutable response bytes are zeroed after parsing. UTF-8 decoding and JSON parsing create immutable JavaScript strings, so this behavior does not prove complete memory erasure. Tests use only material classified as `SYNTHETIC_TEST_SECRET`.
 
-## OpenBao Imperium Service-Port Backend
+## Retained OpenBao Imperium Service-Port Evidence
 
 `OpenBaoImperiumServicePortBackend` maps an opaque Runtime secret reference to one fixed operation ID and one positive secret version. Its injected transport receives only that operation ID and a fresh correlation ID; the Runtime client has no caller-selected OpenBao path, mount, field, policy, workflow, RoleID, token, credential header, or generic request surface.
 
 The repository fixture pins an OpenBao 2.6.1 workflow that performs wrapping metadata lookup, conditional unwrap, AppRole login, one exact KV v2 read, token self-revocation, and minimum output. Its AppRole and policy contract bounds the SecretID to one use and the internal client token to two uses and a 30-second hard maximum. The exact KV version is supplied as internal logical request data, not as an HTTP query suffix.
 
-This is repository-local synthetic evidence. The injected transport still owns wrapping-token custody, workflow endpoint selection, authentication, and network behavior. OpenBao 2.6.1 has not yet parsed or executed the HCL; no process, plugin, core fork, instance, credential, or network contact is included.
+This is inactive historical evidence. Pinned-binary pressure later confirmed that OpenBao 2.6.1 parses the candidate HCL when workflow CAS is disabled but cannot create or update the required CAS-protected workflow due to a shadowed CAS pointer. DR-004 supersedes OpenBao as the active B2.3 path.
 
 ## Ownership Boundary
 
