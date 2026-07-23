@@ -6,54 +6,44 @@ B1 is closed.
 
 RA Integration Review 001 and its execution record are merged and closed.
 
-B2.1 Secret Custody and Adapter Boundary candidate merged through PR #60 and squash commit `36f5393c4a1745793a19bc1cb0246be9c2bcfa39`.
+B2.1 Secret Custody and Adapter Boundary candidate and execution record are merged and closed as a draft evidence increment.
 
-The B2.1 post-merge execution record is the active administrative gate.
+B2.1a Muster Credential-Transfer Convergence has an active unadmitted draft candidate.
 
-The CB-005 credential-transfer correction, B2.2 store selection, and all implementation remain inactive.
+B2.2 store selection and all implementation remain blocked.
 
 This file is operational continuity, not doctrine, architecture, Authority, or control implementation.
 
-## Merge Record
+## Prior Merge Record
 
 ```text
-Pull request: #60
-Squash commit: 36f5393c4a1745793a19bc1cb0246be9c2bcfa39
-Rollback parent: 4452717fbbefd92d5c9efe1e2777d95e43780d42
-Candidate head: 2f90996ae41a4a68fd2c7436f9b039c937ce08ee
-Merged files: 9
+Pull request: #61
+Squash commit: 973153fa875c967a245f8582d4aa39d1096b4fc0
+Prior candidate: B2.1 Secret Custody and Adapter Boundary
+Result: merged and post-merge recorded
 ```
 
-Execution record:
-
-`drafts/b2-1-secret-custody-and-adapter-boundary-execution-001.md`
-
-## Verified Evidence
+## B2.1a Finding
 
 ```text
-Baseline pressure: 10 PASS / 8 FAIL
-Corrected draft pressure: 18 PASS / 0 FAIL
-Cross-layer boundary review: 16 PASS / 1 BLOCKED
-Production semantic files changed: 0
-Implementation files changed: 0
-```
-
-## Preserved Finding
-
-```text
-B2.1 DRAFT CANDIDATE: MERGED
-PRODUCTION ADMISSION: NO
-CB-005 CONVERGENCE BLOCKER: 1
+COGNITIVE CORRECTION NEEDED: YES
+DRAFT CANDIDATE COHERENT: YES
+Baseline pressure: 12 PASS / 4 FAIL
+Corrected draft pressure: 16 PASS / 0 FAIL
+Cross-layer convergence: 18 PASS / 0 FAIL
+PRODUCTION ADMISSION: NOT REQUESTED
 B2.2 STORE SELECTION: BLOCKED
-B2.3 IMPLEMENTATION: BLOCKED
+IMPLEMENTATION: BLOCKED
 ```
 
-Credential material remains confined to Locksmith responsibility and Runtime custody. Muster and the Deployment Package may carry only non-secret references.
+## Candidate Boundary
+
+Credential material remains with Locksmith responsibility and Runtime custody.
+
+Muster and the Deployment Package may carry only non-secret, non-bearer binding references, access tickets, Access Grant references, permission constraints, expiration and revocation conditions, and permitted access results or refusals.
 
 ## Current Gate
 
-Merge or reject the B2.1 execution record.
+Review and merge or reject the B2.1a draft candidate.
 
-After that merge, the next possible work is a separately authorized and tested CB-005 convergence correction.
-
-No correction, store selection, credential operation, implementation, Runtime action, staging, deployment, or external effect is authorized by this record.
+A separate production-admission increment is required before CB-005 changes. No admission, store selection, credential operation, implementation, Runtime action, staging, deployment, or external effect is authorized by this candidate.
