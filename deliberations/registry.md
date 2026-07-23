@@ -10,6 +10,7 @@
 - Initial assessment: `assessments/2026-07-23-mit-ai-risks-imperium-assessment.md`
 - Integration review: `assessments/2026-07-23-ra-integration-review-001.md`
 - Integration execution: `assessments/2026-07-23-ra-integration-review-execution-001.md`
+- Value-realization assessment: `assessments/2026-07-23-distributed-efficiency-value-realization-001.md`
 
 ## Risks
 
