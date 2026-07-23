@@ -2,7 +2,9 @@
 
 ## Status
 
-Repository decision-and-pressure candidate. Not implemented, admitted, deployed, or connected to OpenBao.
+Decision and pressure merged through PR #71 and squash commit `06b57e2a3fbce5cce311bfd5a312ca601716f973`.
+
+No mechanism is deployed or connected to OpenBao.
 
 ## Authorization
 

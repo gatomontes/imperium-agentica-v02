@@ -32,6 +32,7 @@ The private package manifest exposes only these paths:
 | `@imperium-agentica/runtime-reference/providers/node-process-supervisor/synthetic-credentials` | synthetic-only projection from the one-use broker to the injected supervisor driver |
 | `@imperium-agentica/runtime-reference/security/synthetic-secret-store` | expiring synthetic lease port with synchronous and asynchronous acquisition paths |
 | `@imperium-agentica/runtime-reference/security/openbao-kv-v2` | pinned OpenBao 2.6.1 KV v2 backend over an injected authenticated transport |
+| `@imperium-agentica/runtime-reference/security/openbao-imperium-service-port` | fixed-operation Runtime client for the OpenBao-hosted Imperium Service Port |
 
 The placement and export names are stable enough for repository tests and future bounded investigations. Behavior remains revisable and contestable by evidence.
 
@@ -90,6 +91,14 @@ This port does not itself select or emulate a real authentication method, SDK, n
 The injected transport owns authentication and network behavior. This package supplies no HTTP client, SDK, token header, AppRole bootstrap, environment variable, filesystem, or live connection. Health classification fails closed for unknown responses.
 
 Mutable response bytes are zeroed after parsing. UTF-8 decoding and JSON parsing create immutable JavaScript strings, so this behavior does not prove complete memory erasure. Tests use only material classified as `SYNTHETIC_TEST_SECRET`.
+
+## OpenBao Imperium Service-Port Backend
+
+`OpenBaoImperiumServicePortBackend` maps an opaque Runtime secret reference to one fixed operation ID and one positive secret version. Its injected transport receives only that operation ID and a fresh correlation ID; the Runtime client has no caller-selected OpenBao path, mount, field, policy, workflow, RoleID, token, credential header, or generic request surface.
+
+The repository fixture pins an OpenBao 2.6.1 workflow that performs wrapping metadata lookup, conditional unwrap, AppRole login, one exact KV v2 read, token self-revocation, and minimum output. Its AppRole and policy contract bounds the SecretID to one use and the internal client token to two uses and a 30-second hard maximum. The exact KV version is supplied as internal logical request data, not as an HTTP query suffix.
+
+This is repository-local synthetic evidence. The injected transport still owns wrapping-token custody, workflow endpoint selection, authentication, and network behavior. OpenBao 2.6.1 has not yet parsed or executed the HCL; no process, plugin, core fork, instance, credential, or network contact is included.
 
 ## Ownership Boundary
 

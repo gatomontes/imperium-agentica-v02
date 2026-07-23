@@ -75,7 +75,7 @@ None recorded.
 | DR-001 | Separate risks, programs, and controls | Recorded conclusion |
 | DR-002 | Allocate RA controls without reopening B1 | Recorded decision |
 | DR-002 | Select OpenBao isolated single-node nonproduction target | Recorded decision; historical duplicate ID |
-| DR-003 | Select an OpenBao-hosted Imperium Service Port | Decision candidate; merge gated |
+| DR-003 | Select an OpenBao-hosted Imperium Service Port | Recorded decision; merged through PR #71 |
 
 The two `DR-002` records are distinct historical files. The later OpenBao topology decision reused an existing ID before this registry was updated. This candidate preserves both and records the collision; renumbering a prior decision requires a separate traceable normalization.
 

@@ -6,7 +6,9 @@
 
 ## Status
 
-Recorded decision candidate. Not merged, implemented, deployed, or operationally admitted.
+Recorded decision merged through PR #71 and squash commit `06b57e2a3fbce5cce311bfd5a312ca601716f973`.
+
+The decision is not a deployed or operationally admitted mechanism.
 
 ## Question
 
