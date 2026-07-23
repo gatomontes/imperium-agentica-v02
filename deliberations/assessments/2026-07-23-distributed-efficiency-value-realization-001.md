@@ -97,6 +97,91 @@ AI intervention
 
 When evidence stops after capacity recovery, Imperium must not silently report ROI. The strongest supported claim is nominal return or stranded efficiency.
 
+## Capacity Disposition
+
+Recovered capacity requires a disposition before its value state can be assessed reliably.
+
+```text
+Nominal return
+→ capacity disposition
+   ├─ dissipated
+   │  → stranded efficiency
+   ├─ reassigned but unmeasured
+   │  → unverified transferred value
+   └─ reassigned and measured
+      → captured return
+→ realized return
+→ bookable return
+```
+
+The disposition must identify:
+
+- who may decide how recovered capacity is used;
+- what work, process, or outcome receives it;
+- whether reassignment is deliberate or merely inferred;
+- who becomes accountable for the receiving outcome;
+- what evidence will distinguish capture from dissipation.
+
+This exposes a possible authority question. Capacity capture may require an authorized organizational decision rather than a measurement observation alone.
+
+## Transferred but Untraced Value
+
+Recovered time may be transferred to another task or process without being measured there.
+
+This is not proven stranded efficiency, because useful conversion may have occurred. It is not captured return either, because the transfer and resulting outcome remain unsupported.
+
+The provisional classification is:
+
+> **Unverified transferred value** — recovered capacity reportedly or plausibly reassigned to other work, without sufficient evidence of its destination, use, attribution, or outcome.
+
+Imperium must not count the originating task's saved time and the receiving process's outcome independently unless the transfer lineage prevents double counting.
+
+## Measurement-Level Alignment
+
+AI interventions may be approved and later judged at different measurement levels:
+
+```text
+task performance
+→ process performance
+→ business outcome
+→ financial outcome
+```
+
+Evidence at one level does not automatically prove the next.
+
+A pilot may establish faster task completion while leaving end-to-end process throughput, business results, and profit-and-loss movement unchanged. If acquisition or approval is justified by task-speed evidence but continued investment is later judged by financial evidence, the original buying decision contains an unresolved evidentiary gap.
+
+Before approval, the intended value claim should identify:
+
+- the executive outcome sought;
+- the end-to-end process expected to produce it;
+- the constrained task or bottleneck being changed;
+- why accelerating that task should affect the process;
+- who controls the recovered capacity;
+- how that capacity will be disposed;
+- the measurement at each required transition;
+- the final evidence class by which success will be judged.
+
+The candidate design rule is:
+
+> AI value should be designed from the intended organizational outcome backward, not inferred from task acceleration forward.
+
+Faster task completion may be real and still be irrelevant if the accelerated task is not a binding constraint or its recovered capacity is not governed.
+
+## Work-Design Dependency
+
+Agent capability alone does not create enterprise value.
+
+Captured return may depend on the surrounding work system, including:
+
+- end-to-end process design;
+- decision rights over recovered capacity;
+- accountable ownership of downstream outcomes;
+- coordination across affected roles;
+- measurement continuity from task to process to business and financial results.
+
+This assessment does not conclude that Imperium owns enterprise work redesign. It records that any value claim relying on such redesign must represent that dependency rather than attributing the outcome solely to the agent.
+
 ## Candidate Evidentiary Questions
 
 Before a value claim is accepted, a future control or assessment may need to establish:
@@ -111,6 +196,11 @@ Before a value claim is accepted, a future control or assessment may need to est
 8. What uncertainty, opportunity cost, or countervailing harm remains?
 9. Is the claim nominal, captured, realized, or bookable?
 10. What evidence would invalidate or downgrade the claim?
+11. At what measurement level was the intervention approved, and at what level will it be judged?
+12. Is the accelerated task an actual constraint on the end-to-end process?
+13. Who possesses the decision right to dispose of recovered capacity?
+14. Can reassigned capacity be traced into the receiving work and outcome?
+15. Does the evidence prevent double counting between the originating and receiving processes?
 
 ## Relationship to the Judicature of Scales
 
@@ -134,6 +224,9 @@ It suggests that value evidence may require:
 - a defined measurement boundary;
 - a value-state classification;
 - a conversion or reassignment record;
+- a capacity-disposition authority and accountability record;
+- measurement-level alignment from task through intended outcome;
+- transfer lineage across originating and receiving work;
 - an observable outcome;
 - attribution evidence;
 - residual uncertainty;
