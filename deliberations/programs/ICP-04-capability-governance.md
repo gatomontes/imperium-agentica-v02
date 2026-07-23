@@ -26,7 +26,9 @@ Cross-layer and unresolved. Relevant responsibilities may cite Cognitive, Author
 
 ## Proposed Controls
 
-No `CTRL-*` candidate is admitted by this initial program record. Controls must be split into independently verifiable behaviors before implementation claims are possible.
+- `CTRL-004 — Capability Suitability Finding`
+
+This is a pending investigation record. It is not admitted or implemented.
 
 ## Evidence Required
 
@@ -51,8 +53,9 @@ No model, provider, evaluator, threshold, or owner is selected.
 
 ## Current Status
 
-`RECORDED_FOR_DELIBERATION`
+`CONTROL_CANDIDATE_RECORDED`
 
 ## Revision History
 
 - 2026-07-23 — Initial program record.
+- 2026-07-23 — RA Integration Review 001 linked `CTRL-004` as the smallest current pending control.
