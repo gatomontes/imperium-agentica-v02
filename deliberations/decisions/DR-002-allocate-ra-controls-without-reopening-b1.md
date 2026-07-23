@@ -6,7 +6,7 @@
 
 ## Status
 
-Candidate decision; merge pending.
+Recorded decision.
 
 ## Question
 
@@ -62,3 +62,4 @@ None.
 ## Revision History
 
 - 2026-07-23 — Initial candidate decision.
+- 2026-07-23 — Recorded through PR #58 and squash commit `d7da390d274dfb5e1df6061ecf32e202f700cc77`.
