@@ -4,11 +4,11 @@
 
 Track A — Operative Creation is complete and fully recorded.
 
-B1.1 Provider-Neutral Deployment Authorization and B1.2 Provider-Neutral Authentication-Proof Satisfaction are complete and fully recorded.
+B1.1 Provider-Neutral Deployment Authorization, B1.2 Provider-Neutral Authentication-Proof Satisfaction, and B1.3 Provider-Neutral Deployment Policy Convergence are complete and fully recorded.
 
-B1.3 Provider-Neutral Deployment Policy Convergence is merged and post-merge verified. Its separate execution record is pending merge. B2 is not active.
+A B1 closure review is active under the operator instruction `Proceed`.
 
-The operator instruction `Forward` authorizes preparation of this execution record only. Its merge, the B1 closure review, B1 closure, and B2 remain separate explicit gates.
+The review found no remaining provider-neutral policy gap. B1 may close when this closure record is explicitly merged. B2 is not active.
 
 This file is a non-binding operational forecast.
 
@@ -56,54 +56,53 @@ operative existence
 
 | Order | Approximate leg | State |
 |---:|---|---|
-| B1 | Deployment authorization and authentication policy | B1.3 merged; execution record pending; closure review not active |
-| B2 | Real secret-store adapter | not active |
+| B1 | Deployment authorization and authentication policy | closure review supports closure; closure record pending merge |
+| B2 | Real secret-store adapter | next eligible after B1 closure; not active |
 | B3 | Live Runtime/provider driver | not active |
 | B4 | Integrated nonproduction staging | not active |
 | B5 | Production admission and deployment | not active |
 
-## B1.3 — Candidate Merged, Record Pending
+## B1 Closure Review
 
-```text
-Candidate PR: #54
-Squash commit: 9b1ace02cb1128dc3f780dff184ee5d0e6c3d9b8
-Rollback parent: fd398ce9add3c210a1fb28daef92309d4eaff9c6
-Candidate head: 536d61ba5134d13cf788b99f65513c1da296135a
-Merged delta: 8 files
-Production semantic files changed: 0
-Implementation files changed: 0
-```
+Reviewed set:
 
-B1.3 establishes exact current convergence across one Deployment Authorization and every required authentication-satisfaction finding.
-
-It preserves:
-
-```text
-valid Deployment Authorization ≠ converged deployment policy
-satisfied authentication requirement ≠ converged deployment policy
-DEPLOYMENT_POLICY_CONFORMANT ≠ mission binding
-DEPLOYMENT_POLICY_CONFORMANT ≠ Tool Grant
-DEPLOYMENT_POLICY_CONFORMANT ≠ Access Grant
-DEPLOYMENT_POLICY_CONFORMANT ≠ credential custody
-DEPLOYMENT_POLICY_CONFORMANT ≠ READY_FOR_LAUNCH
-DEPLOYMENT_POLICY_CONFORMANT ≠ INITIAL_EXTERNAL_CROSSING authority
-DEPLOYMENT_POLICY_CONFORMANT ≠ deployment execution
-```
+- B1.1 Deployment Authorization
+- B1.2 Authentication-Proof Satisfaction
+- B1.3 Deployment Policy Convergence
+- all three execution records
+- relevant Cognitive, Authority, Provenance, and Procedure boundaries
 
 Evidence:
 
 ```text
-Baseline pressure: 12 PASS / 6 FAIL
-Corrected pressure: 18 PASS / 0 FAIL
-Cross-layer boundary review: 15 PASS / 0 FAIL
+B1 closure pressure: 20 PASS / 0 FAIL
+Cross-layer closure convergence: 16 PASS / 0 FAIL
+Remaining provider-neutral policy gaps: 0
+Infrastructure-dependent concerns correctly deferred: 9
+Production semantic files changed: 0
+Implementation files changed: 0
 ```
 
-No identity provider, secret store, protocol, credential format, provider, Runtime driver, deployment mechanism, credential operation, mission binding, Deployment Package, readiness, crossing authority, activation, deployment, rollback, or external effect was selected or performed.
+Closure finding:
 
-## Next Gate
+```text
+B1 COMPLETE: YES
+B2 ELIGIBLE AS NEXT SEPARATELY AUTHORIZED LEG: YES
+B2 ACTIVE: NO
+```
 
-Merge the separate B1.3 execution record.
+The following remain correctly deferred to B2 or later:
 
-After that merge, perform one separately authorized B1 closure review. Only a clean closure finding may close B1 and expose B2 as the next possible leg.
+- secret-store and identity-provider selection
+- credential retrieval, lease, custody, rotation, redaction, revocation, and outage behavior
+- Runtime/provider-driver selection and implementation
+- live mission binding and Deployment Package assembly
+- operational `READY_FOR_LAUNCH`
+- separate `INITIAL_EXTERNAL_CROSSING` authority
+- activation, deployment, recovery, rollback, termination, and external effects
 
-No record merge, B1 closure review, B1 closure, B2 preparation, provider/store/driver selection, credential operation, Runtime action, deployment, or external effect is implicit.
+## Current Gate
+
+Merge the B1 closure record.
+
+No closure-record merge, B2 preparation, provider/store/driver selection, credential operation, Runtime action, deployment, or external effect is implicit.
