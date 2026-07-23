@@ -2,7 +2,7 @@
 
 ## Status
 
-Active draft candidate for the second authorized merge.
+Draft candidate merged through PR #60 and squash commit `36f5393c4a1745793a19bc1cb0246be9c2bcfa39`. Execution record pending merge.
 
 ## Question
 
@@ -112,4 +112,4 @@ No credential is created, retrieved, exposed, rotated, revoked, stored, or used.
 
 B2.1 defines a coherent provider-neutral candidate boundary and exposes one required Cognitive convergence correction.
 
-This merge does not complete B2.1 operationally, admit the Runtime contract, or authorize B2.2.
+This candidate merge does not admit the Runtime contract or authorize B2.2. B2.1 closes as a draft evidence increment only when its separate execution record merges.
