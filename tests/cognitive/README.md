@@ -6,11 +6,11 @@ Theoretical Cognitive scenarios, constitutional tests, immutable run records, an
 
 ## Production-Staging Baseline
 
-- `CB-005` — 36 artifacts
-- admission review: `tests/runtime/runtime-maintenance-production-admission-review-001.md`
-- focused maintenance pressure: 15 PASS / 0 FAIL
-- repository-wide regression: PASS
-- admission convergence: 35 PASS / 0 FAIL
+- `CB-006` — 36 artifacts
+- current admission review: `tests/cognitive/b2-1a-muster-credential-transfer-production-admission-review-001.md`
+- focused credential-transfer pressure: 16 PASS / 0 FAIL
+- cross-layer convergence: 18 PASS / 0 FAIL
+- production admission: 20 PASS / 0 FAIL
 
 ## Preserved Master Mason Evidence
 
@@ -178,12 +178,13 @@ handoff conformance ≠ mission binding, readiness, activation, or deployment
 ~~~
 
 
-## Active Muster Credential-Transfer Convergence Candidate
+## Admitted Muster Credential-Transfer Convergence
 
 - baseline pressure: 12 PASS / 4 FAIL
 - corrected pressure: 16 PASS / 0 FAIL
 - cross-layer convergence: 18 PASS / 0 FAIL
-- production semantic files changed: 0
+- production semantic files changed by draft candidate: 0
+- production semantic targets admitted: 1
 - implementation files changed: 0
 
 Candidate distinctions:
