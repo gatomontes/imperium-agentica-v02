@@ -29,10 +29,12 @@ Add that:
 
 - Locksmith is the sole Imperium accessor to the security-persistence device;
 - the device adapter exists only behind Locksmith;
-- callers submit an admitted operation identity plus non-secret grant and correlation references;
+- callers submit an admitted operation identity plus non-secret Authority-finding and correlation references;
 - callers cannot select backend-native addressing, fields, queries, policies, credentials, or administration;
-- Locksmith validates the exact effective Access Grant, mission binding, expiry, revocation, and correlation before device access;
-- device outage, unknown state, or adapter failure produces a generic refusal without credential or backend-detail leakage;
+- before device access, Locksmith requires an Authority-produced exact-match Access finding and matching mission correlation;
+- Locksmith enforces the cited finding as a precondition but does not originate, repair, or independently decide Authority validity;
+- device outage, unknown state, or adapter failure produces a generic external refusal without credential or backend-detail leakage;
+- permitted non-secret failure stage, class, and correlation evidence remains append-preserved under the Provenance contract;
 - device access, credential possession, and technical capability do not create authority.
 
 ### Muster
@@ -50,13 +52,14 @@ Clarify that:
 
 - Barbican routes an access request only to Locksmith, never to a persistence backend or backend adapter;
 - it carries no device-native address, device credential, query, policy, or administrative instruction;
-- a device or adapter failure returns only the permitted generic refusal and correlation metadata.
+- a device or adapter failure returns externally only the permitted generic refusal and correlation metadata;
+- generic external refusal does not erase the separate, permitted Provenance observation.
 
 ## Non-Changes
 
 The candidate must not:
 
-- make Locksmith an authority source;
+- make Locksmith an authority source or Authority adjudicator;
 - transfer Authority Grant semantics into Cognitive;
 - transfer ledger or correlation ownership from Provenance;
 - make Muster or Barbican credential custodians;
