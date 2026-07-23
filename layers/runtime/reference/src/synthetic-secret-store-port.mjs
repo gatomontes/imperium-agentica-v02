@@ -115,9 +115,15 @@ export class SyntheticSecretStorePort {
     });
     let acquired;
     try {
+      if (this.#backend.acquisitionMode === "ASYNC") {
+        throw new Error("SYNTHETIC_SECRET_ASYNC_ACQUISITION_REQUIRED");
+      }
       acquired = this.#backend.acquire({ secretReference });
       if (acquired && typeof acquired.then === "function") {
-        acquired.catch?.(() => {});
+        acquired.then(
+          (value) => value?.material?.fill?.(0),
+          () => {},
+        );
         throw new Error("SYNTHETIC_SECRET_ASYNC_ACQUISITION_REQUIRED");
       }
       this.#validateAcquired(acquired);
