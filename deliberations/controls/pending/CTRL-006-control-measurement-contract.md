@@ -42,7 +42,9 @@ Evidence that is absent, stale, non-correlated, non-reproducible, or below an ad
 
 ## Verification Evidence
 
-None. The RA Integration Review supports investigation only.
+B2.1 Secret Custody and Adapter Boundary applies this pending direction by identifying measurable refusal, non-exposure, lifetime, rotation, revocation, outage, recovery, redaction, and correlation behaviors.
+
+This is traceability, not verification or implementation evidence.
 
 ## Tests
 
@@ -77,3 +79,4 @@ This record does not admit or implement a control, activate a Track B leg, or au
 ## Revision History
 
 - 2026-07-23 — Identified by RA Integration Review 001.
+- 2026-07-23 — B2.1 candidate applied the measurement direction without admitting or implementing this control.
