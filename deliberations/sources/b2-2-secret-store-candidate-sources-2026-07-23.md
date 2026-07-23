@@ -17,6 +17,8 @@ External documentation informs candidate capabilities and operational constraint
 - Authentication methods: https://openbao.org/docs/concepts/auth/
 - Policies: https://openbao.org/docs/concepts/policies/
 - Dynamic-secret use cases: https://openbao.org/docs/use-cases/
+- Official releases: https://github.com/openbao/openbao/releases
+- Installation: https://openbao.org/docs/install/
 - Configuration: https://openbao.org/docs/configuration/
 
 Observed capabilities and constraints:
@@ -107,3 +109,9 @@ They remain excluded from selection unless later evidence demonstrates the requi
 Documentation claims are not empirical proof in Imperium's target environment.
 
 Every selected candidate still requires a pinned version, threat review, isolated nonproduction deployment, adapter conformance, outage/recovery tests, and evidence review.
+
+## Selection-Time Release Observation
+
+On 2026-07-23, the official release page identified OpenBao v2.6.1 as the latest release, published on 2026-07-22.
+
+Because it was newly released, B2.2 selects the 2.6.x family but defers the exact patch and digest pin until B2.3 begins. The implementation record must not use an unpinned `latest` reference.
