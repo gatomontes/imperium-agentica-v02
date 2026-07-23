@@ -12,7 +12,6 @@
     "./security/synthetic-credentials": "./src/synthetic-credential-broker.mjs",
     "./providers/node-process-supervisor/synthetic-credentials": "./src/synthetic-credential-node-process-supervisor-adapter.mjs",
     "./security/synthetic-secret-store": "./src/synthetic-secret-store-port.mjs",
-    "./security/openbao-kv-v2": "./src/openbao-kv-v2-secret-store-backend.mjs",
-    "./security/openbao-imperium-service-port": "./src/openbao-imperium-service-port-backend.mjs"
+    "./security/local-env": "./src/local-env-synthetic-secret-store-backend.mjs"
   }
 }
