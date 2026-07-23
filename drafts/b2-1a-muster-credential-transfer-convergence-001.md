@@ -2,7 +2,7 @@
 
 ## Status
 
-Active unadmitted Cognitive draft candidate.
+Draft candidate merged through PR #62 and squash commit `2460a08cc35099956e7ca77894f5179139f00ea1`. Production admission review active.
 
 ## Authorization
 
