@@ -115,3 +115,15 @@ None is proof of production durability, a consensus protocol, real network parti
 - operator decisions required: 8
 
 The evaluation distinguishes product capability from deployment topology. No real store, SDK, account, secret, credential, network, or external effect is introduced.
+
+
+## B2.2 OpenBao Selection Candidate
+
+- selected store: OpenBao
+- selected topology: separate single-node Ubuntu VPS
+- version family: 2.6.x; exact patch deferred to B2.3
+- selection pressure: 18 PASS / 0 FAIL
+- instance running: no
+- implementation files changed: 0
+
+Selection is a design decision, not operational evidence.
