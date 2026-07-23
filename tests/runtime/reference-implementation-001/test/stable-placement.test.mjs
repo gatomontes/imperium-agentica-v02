@@ -22,6 +22,7 @@ test("stable reference package is private and exposes only the approved surface"
     "./providers/node-process-supervisor/synthetic-credentials": "./src/synthetic-credential-node-process-supervisor-adapter.mjs",
     "./security/synthetic-secret-store": "./src/synthetic-secret-store-port.mjs",
     "./security/openbao-kv-v2": "./src/openbao-kv-v2-secret-store-backend.mjs",
+    "./security/openbao-imperium-service-port": "./src/openbao-imperium-service-port-backend.mjs",
   });
 });
 
@@ -36,6 +37,7 @@ test("every approved export resolves to the expected reference API", async () =>
   const projection = await import(new URL("../../../../layers/runtime/reference/src/synthetic-credential-node-process-supervisor-adapter.mjs", import.meta.url));
   const secretStore = await import(new URL("../../../../layers/runtime/reference/src/synthetic-secret-store-port.mjs", import.meta.url));
   const openBao = await import(new URL("../../../../layers/runtime/reference/src/openbao-kv-v2-secret-store-backend.mjs", import.meta.url));
+  const servicePort = await import(new URL("../../../../layers/runtime/reference/src/openbao-imperium-service-port-backend.mjs", import.meta.url));
   assert.equal(typeof runtime.ReferenceRuntime, "function");
   assert.equal(typeof contracts.validatePlan, "function");
   assert.equal(typeof memory.InMemoryStore, "function");
@@ -46,6 +48,7 @@ test("every approved export resolves to the expected reference API", async () =>
   assert.equal(typeof projection.SyntheticCredentialNodeProcessSupervisorAdapter, "function");
   assert.equal(typeof secretStore.SyntheticSecretStorePort, "function");
   assert.equal(typeof openBao.OpenBaoKvV2SecretStoreBackend, "function");
+  assert.equal(typeof servicePort.OpenBaoImperiumServicePortBackend, "function");
 });
 
 test("the evidence package contains no duplicate implementation source tree", () => {
