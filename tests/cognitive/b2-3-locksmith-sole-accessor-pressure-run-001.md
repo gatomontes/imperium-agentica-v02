@@ -50,8 +50,8 @@ Each assertion asks whether the admitted contracts state the required behavior s
 | 17 | the persistence-device adapter is explicitly owned behind Locksmith | FAIL | adapter ownership is absent from Cognitive production |
 | 18 | Runtime custody is explicitly forbidden from directly accessing the device | FAIL | Muster assigns Runtime custody but does not state this prohibition |
 | 19 | callers are explicitly forbidden from supplying backend-native paths, queries, fields, policies, or authentication methods | FAIL | confused-deputy boundary is absent |
-| 20 | Locksmith must validate the exact effective Access Grant and mission correlation before device access | FAIL | Authority defines the grant, but Locksmith's admitted responsibility does not cite the pre-access check |
-| 21 | device outage, unknown state, or adapter failure must refuse without credential or backend-detail leakage | FAIL | admitted Cognitive failure behavior is unspecified |
+| 20 | Locksmith requires an Authority-produced exact-match Access finding and matching mission correlation before device access | FAIL | Authority defines the grant, but Locksmith's admitted responsibility does not cite the pre-access requirement |
+| 21 | outage, unknown state, or adapter failure returns a generic non-leaking external refusal while permitted failure-stage evidence remains append-preserved | FAIL | Cognitive external behavior is unspecified; Provenance can preserve the internal observation |
 | 22 | an exceptional Runtime handoff is explicitly unusable to authenticate to or resolve against the persistence device | FAIL | separate admission is required, but this invariant is absent |
 
 ```text
@@ -71,11 +71,15 @@ Muster correctly separates credential material from mission assembly and require
 
 ### F-03 — The Public Request Surface Is Underspecified
 
-The admitted contracts do not yet forbid backend-native caller inputs or require exact grant and mission-correlation validation before Locksmith touches the device.
+The admitted contracts do not yet forbid backend-native caller inputs or require an Authority-produced exact-match Access finding and matching mission correlation before Locksmith touches the device.
+
+Locksmith may enforce that precondition. It must not originate, repair, or independently decide Authority validity.
 
 ### F-04 — Device Failure Semantics Are Underspecified
 
-Provider ledgers can preserve staged failure observations, but Cognitive production does not require generic refusal or prohibit credential and backend-detail leakage when the device is unavailable or indeterminate.
+Provider ledgers can preserve staged failure observations, but Cognitive production does not require a generic external refusal or prohibit credential and backend-detail leakage when the device is unavailable or indeterminate.
+
+Generic external refusal must not erase the permitted non-secret internal failure stage, class, and correlation evidence required by Provenance.
 
 ## Required Correction
 
@@ -84,9 +88,9 @@ A minimum Cognitive revision must:
 1. state Locksmith's sole-accessor and adapter-ownership boundary;
 2. forbid direct device access by Runtime and every other Imperium consumer;
 3. distinguish exceptional Runtime custody from device access;
-4. constrain the Locksmith request surface to admitted operation identities and non-secret authority/correlation references;
-5. require validation before device access;
-6. require generic, non-leaking refusal for outage, unknown, or adapter failure;
+4. constrain the Locksmith request surface to admitted operation identities and non-secret Authority-finding and correlation references;
+5. require an Authority-produced exact-match Access finding and matching Provenance correlation before device access without transferring Authority or Provenance ownership;
+6. require generic, non-leaking external refusal for outage, unknown, or adapter failure while preserving permitted append-only failure evidence;
 7. preserve current Authority and Provenance ownership without redefining either.
 
 ## Explicit Non-Claims
