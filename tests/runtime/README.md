@@ -103,3 +103,15 @@ The synthetic provider projection demonstrates least-data composition with the i
 The synthetic secret-store port demonstrates expiring acquisition and revocation behavior against an in-memory test backend only.
 
 None is proof of production durability, a consensus protocol, real network partitions, durable quorum state, distributed correctness, secure erasure, real credential safety, real store durability or availability, provider authentication or idempotency, performance, deployment safety, or live recovery.
+
+
+## B2.2 Secret-Store Evaluation Candidate
+
+- evaluation gates: `b2-2-secret-store-evaluation-gates-001.md` — 22
+- product families reviewed: 6
+- provisional leader: OpenBao self-hosted
+- store selected: no
+- topology selected: no
+- operator decisions required: 8
+
+The evaluation distinguishes product capability from deployment topology. No real store, SDK, account, secret, credential, network, or external effect is introduced.
