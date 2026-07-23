@@ -2,40 +2,30 @@
 
 ## Status
 
-Track A, B1, B2.1, and B2.1a are complete and closed.
+Track A, B1, B2.1, and B2.1a are closed.
 
-B2.2 Store Evaluation and Selection is active as an investigation.
+B2.2 selected OpenBao on a separate single-node Ubuntu VPS as the bounded nonproduction target.
 
-No store or topology is selected. B2 remains unimplemented.
+The selection candidate is active. No OpenBao instance is provisioned or running.
 
-This file is operational continuity, not doctrine, architecture, Authority, or control implementation.
+B2 remains unimplemented.
 
-## B2.2 Finding
-
-```text
-Evaluation gates: 22
-Candidate families reviewed: 6
-Provisional leader: OpenBao self-hosted
-Store selected: NO
-Topology selected: NO
-B2.3 implementation: BLOCKED
-Operator decisions required: 8
-```
-
-## Critical Distinction
+## Selection
 
 ```text
-store product × deployment topology = selectable realization
+Store: OpenBao
+Version family: 2.6.x
+Topology: isolated single-node Ubuntu VPS
+Storage: integrated Raft, one voter
+Availability: fail closed; no HA claim
+Seal: manual operator-controlled Shamir
+Tenant scope: one
+Instance running: NO
+Selection pressure: 18 PASS / 0 FAIL
 ```
-
-OpenBao on a shared single VPS, an isolated node, or a three-node Raft cluster are not the same selection.
-
-A cloud-managed store is not comparable until the workload cloud and identity boundary are known.
 
 ## Current Gate
 
-Review and merge or reject the B2.2 evaluation foundation.
+Review and merge or reject the selection candidate, then close B2.2.
 
-After merge, obtain operator decisions for target environment, failure-domain separation, availability, root of trust, budget/license, managed-service tolerance, tenant scale, and recovery objectives.
-
-No provider account, purchase, SDK, credential, store deployment, implementation, Runtime action, environment staging, or external effect is authorized.
+No VPS purchase, provisioning, installation, initialization, unseal, account, SDK, secret, credential, network contact, Runtime action, deployment, or external effect is authorized.
