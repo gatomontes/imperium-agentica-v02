@@ -18,7 +18,7 @@ Which Imperium institution may access the device that stores, derives, retrieves
 
 Locksmith shall be the sole Imperium accessor to whatever security-persistence device is eventually selected.
 
-The device is an replaceable implementation detail behind a Locksmith-owned adapter. No Runtime component, provider adapter, operative, Muster, Barbican, Theatre component, or other institution may possess a device client, device credential, connection string, path authority, query authority, or direct read/write/configuration capability.
+The device is a replaceable implementation detail behind a Locksmith-owned adapter. No Runtime component, provider adapter, operative, Muster, Barbican, Theatre component, or other institution may possess a device client, device credential, connection string, path authority, query authority, or direct read/write/configuration capability.
 
 All consumers cross a Locksmith-facing port using an authorized, mission-bound, non-secret request and correlation references. The caller cannot select an arbitrary backend, path, key, field, query, policy, authentication method, or administrative operation.
 
