@@ -33,7 +33,9 @@ Define the evidence required before Imperium may select a real store and deploym
 
 ## Decision Classes
 
-- `PASS` — evidenced for one pinned realization.
+- `DESIGN_PASS` — product capability, selected configuration, ownership, and bounded verification plan are explicit.
+- `EMPIRICAL_PENDING` — the selected realization requires B2.3/B2.4 operating evidence.
+- `PASS` — evidenced against one pinned running realization.
 - `CONDITIONAL` — capability exists but target configuration or operator fact is unresolved.
 - `FAIL` — cannot satisfy the gate without violating an admitted boundary.
 - `UNKNOWN` — documentation is insufficient; empirical evidence required.
@@ -42,10 +44,12 @@ A product-family claim cannot receive final PASS for topology-dependent gates.
 
 ## Selection Rule
 
-One realization may be selected only when:
+A realization may be selected for nonproduction implementation when:
 
-- SSE-001 through SSE-012 and SSE-016 are PASS;
+- SSE-001 through SSE-012 and SSE-016 are DESIGN_PASS or stronger;
 - no gate is FAIL;
 - every CONDITIONAL has an explicit accepted condition;
-- every UNKNOWN has a bounded B2.3/B2.4 verification plan;
-- cost, topology, and root-of-trust decisions are operator-approved.
+- every EMPIRICAL_PENDING or UNKNOWN has a bounded B2.3/B2.4 plan;
+- cost class, topology, and root-of-trust direction are operator-approved.
+
+Operational or production admission still requires empirical PASS against one pinned running realization.
