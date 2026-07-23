@@ -55,9 +55,11 @@ Barbican may carry only:
 - non-secret Tool or Access Grant finding references
 - exact mission, deployment, operative-binding, ticket, provider, and correlation references
 - non-secret operation parameters already bounded by the cited finding
-- permitted non-secret, non-replayable results
+- permitted operation results containing no credential or independently authenticating material
 - generic external refusals
 - minimum permitted response correlation metadata
+
+The substantive data classification of a permitted provider result remains governed by other admitted contracts. This draft constrains only credential, device, and authentication exposure.
 
 Barbican must not carry:
 
@@ -66,7 +68,7 @@ Barbican must not carry:
 - a backend-native address, path, key, field, query, template, or policy
 - a caller-selected device authentication method
 - a device administrative or diagnostic instruction
-- a value capable of independently authenticating to or resolving against the persistence device
+- a value capable of independently authenticating to the persistence device or external provider
 
 Locksmith alone retains credential responsibility, accesses the security-persistence device, and performs authenticated unlocks or operations.
 
@@ -113,6 +115,7 @@ Review or revise this draft if:
 - Barbican can address a persistence device or adapter
 - access traffic bypasses Locksmith
 - a ticket contains credential or backend-native material
+- a result contains credential, device-session, or independently authenticating material
 - a generic refusal reveals device or credential details
 - generic refusal suppresses permitted Provenance evidence
 - Barbican decides grant validity, fulfills access, or judges the result
