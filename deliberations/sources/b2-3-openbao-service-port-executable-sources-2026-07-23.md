@@ -26,6 +26,10 @@ No binary or archive is downloaded in this increment.
 - AppRole API: https://openbao.org/api-docs/auth/approle/
 - Token self-revocation: https://openbao.org/api-docs/auth/token/
 - KV v2 exact-version read: https://openbao.org/api-docs/secret/kv/kv-v2/
+- OpenBao 2.6.1 workflow request construction:
+  https://github.com/openbao/openbao/blob/v2.6.1/helper/profiles/profiles.go
+- OpenBao 2.6.1 KV v2 read fields:
+  https://github.com/openbao/openbao/blob/v2.6.1/builtin/logical/kv/path_data.go
 
 ## Contract Findings
 
