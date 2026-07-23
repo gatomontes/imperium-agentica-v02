@@ -2,9 +2,9 @@
 
 ## Status
 
-Active selection candidate.
+Selection merged through PR #68 and squash commit `2fa08c120a75ca9b9b79d7946ee5ee14bbf7d199`; post-merge verified and closed by the B2.2 execution record.
 
-No OpenBao instance exists or is required to run for this selection.
+No OpenBao instance exists or is required to run.
 
 ## Authorization
 
