@@ -4,85 +4,64 @@
 
 Track A — Operative Creation is complete and fully recorded.
 
-B1 — Provider-Neutral Deployment Authorization and Authentication Policy is complete and closed through PR #56 and squash commit `b027f2332cab1fc5f008295ad6ba807bc5aac66e`.
+B1 — Provider-Neutral Deployment Authorization and Authentication Policy is complete and closed.
 
-RA Integration Review 001 is complete as a deliberation candidate and pending merge.
+RA Integration Review 001 is merged. Its post-merge execution record is pending merge.
 
-B2 remains the next eligible, separately authorized leg. B2 is not active.
+B2.1 Secret Custody and Adapter Boundary is authorized after that merge as the second bounded merge under `Proceed up to the 2nd merge`.
+
+B2 remains otherwise inactive and unimplemented.
 
 This file is a non-binding operational forecast.
 
 ## Current Theoretical Capability
 
-Imperium is currently best characterized as:
+Imperium remains a governed operative-production and deployment-admission system, not an operative deployment engine.
 
-> A governed operative-production and deployment-admission system, but not yet an operative deployment engine.
+Its current ceiling is a provider-neutral deployment-policy prerequisite set stopping before mission binding, credentials, readiness, crossing authority, Runtime, or deployment.
 
-The theoretical lifecycle reaches:
-
-```text
-Petition
-→ Mission Need
-→ approved Work Specification
-→ Profession Specification
-→ Canonical Persona resolution
-→ deployment-medium-specific Operative
-→ creation closure
-→ provider-neutral handoff assessment
-→ bounded Deployment Authorization assessment
-→ authentication-proof satisfaction assessment
-→ deployment-policy convergence assessment
-```
-
-The current ceiling remains one exact, bounded provider-neutral prerequisite set. It stops before mission binding, credentials, readiness, crossing authority, Runtime, or deployment.
-
-```text
-operative existence
-≠ mission binding
-≠ deployment authorization
-≠ authentication satisfaction
-≠ deployment-policy convergence
-≠ Tool Grant
-≠ Access Grant
-≠ credential possession
-≠ READY_FOR_LAUNCH
-≠ INITIAL_EXTERNAL_CROSSING authority
-≠ deployment execution
-```
-
-## Track B — Operative Deployment
+## Track B
 
 | Order | Approximate leg | State | RA allocation |
 |---:|---|---|---|
 | B1 | Deployment authorization and authentication policy | closed | no reopen |
-| B2 | Real secret-store adapter | next eligible; not active | CTRL-006 measurement direction begins with claimed evidence |
-| B3 | Live Runtime/provider driver | not active | resolve CTRL-004 before selection is finalized; define CTRL-003 and CTRL-005 |
-| B4 | Integrated nonproduction staging | not active | resolve CTRL-001, CTRL-002, CTRL-007; prove applicable CTRL-003, CTRL-005, CTRL-006 |
-| B5 | Production admission and deployment | not active | require current evidence for every applicable control; infer nothing from prior leg completion |
+| B2.1 | Secret custody and adapter boundary | authorized after RA execution record; not yet active | apply CTRL-006 evidence direction |
+| B2.2 | Store evaluation and selection | not active | depends on B2.1 |
+| B2.3 | Nonproduction adapter implementation | not active | depends on selected boundary and store |
+| B2.4 | Empirical credential lifecycle and outage tests | not active | must produce operating evidence |
+| B2.5 | B2 evidence review and closure | not active | infer nothing from implementation existence |
+| B3 | Live Runtime/provider driver | not active | CTRL-003, CTRL-004, CTRL-005 allocation preserved |
+| B4 | Integrated nonproduction staging | not active | CTRL-001, CTRL-002, CTRL-007 and applicable proofs |
+| B5 | Production admission and deployment | not active | current evidence required for every applicable control |
 
-## RA Integration Allocation
+## B2.1 Question
 
-| Control | Pending investigation | Required placement |
-|---|---|---|
-| CTRL-001 | Mission Risk Disposition | before B4 integrated staging |
-| CTRL-002 | Affected-Stakeholder Record and Recourse | before B4 integrated staging |
-| CTRL-003 | Per-Action Authorization Enforcement | define in B3; prove in B4 |
-| CTRL-004 | Capability Suitability Finding | before B3 provider/driver selection is finalized |
-| CTRL-005 | Change-Triggered Reauthorization | define in B3; prove in B4 |
-| CTRL-006 | Control Measurement Contract | begin with B2 evidence; required through B5 |
-| CTRL-007 | External Obligation Applicability | before B4 integrated staging |
+What provider-neutral custody, request, lease, exposure, redaction, rotation, revocation, outage, and evidence behavior must a real secret-store adapter preserve before any store is selected?
 
-The allocation:
+B2.1 must determine:
 
-- creates no new layer;
-- admits no owner;
-- admits and implements no control;
-- does not reopen B1;
-- does not activate B2;
-- does not convert societal risks into universal Imperium responsibility.
+- custody boundary;
+- allowed request and response shapes;
+- whether an operative may ever receive secret material;
+- lease and lifetime semantics;
+- redaction and evidence requirements;
+- rotation, revocation, denial, and outage behavior;
+- exact Authority and Provenance prerequisites;
+- Procedure and Runtime boundaries;
+- measurable evidence required by CTRL-006.
 
-## Next Gate
+## Explicit Exclusions
 
-Merge RA Integration Review 001.
+B2.1 may not select:
 
-After merge, B2 remains the next eligible leg but requires separate authorization. No provider/store/driver selection, credential operation, Runtime action, staging, deployment, or external effect is implicit.
+- a secret store or identity provider;
+- a credential format or protocol;
+- a Runtime driver or deployment mechanism.
+
+It may not retrieve, create, expose, rotate, revoke, or store a real credential.
+
+## Current Gate
+
+Merge the RA Integration Review execution record, then conduct B2.1 as the second authorized merge.
+
+Stop after the second merge.
