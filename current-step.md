@@ -4,43 +4,45 @@
 
 Track A, B1, B2.1, B2.1a, and B2.2 are complete and closed.
 
-B2.3 is active. Its service-port decision merged through PR #71 and squash commit `06b57e2a3fbce5cce311bfd5a312ca601716f973`.
+B2.3 is active. The OpenBao executable candidate merged through PR #72 and
+squash commit `b280ed2f92beadc7552a8de5f4e9fa541b9d007e`.
 
-No OpenBao instance is provisioned or running. B2 remains unimplemented as a live system.
+Pinned-binary pressure then confirmed a workflow-CAS defect. The operator
+subsequently deferred OpenBao as unnecessary complexity for this stage and
+selected a local `.env` bridge behind a separate adapter.
 
-## B2.3 Service-Port Executable Candidate
+B2 remains unimplemented as a live or production system.
+
+## B2.3 Local Environment Bridge Candidate
 
 ```text
-Store API pin: OpenBao 2.6.1
-Runtime acquisition: asynchronous
+Source: private local .env
+Loader: Node composition root
+Adapter source access: injected whitelisted variable reader
+Runtime reference: opaque
+Material encoding: canonical base64
+Version: explicit positive integer string
+Classification: SYNTHETIC_TEST_SECRET only
+Runtime acquisition: synchronous
 Runtime lease: existing bound, expiring, one-use synthetic lease
 Runtime consumption: synchronous and unchanged
 Provider dispatch: synchronous and unchanged
-OpenBao boundary: Imperium Service Port
-Client request: fixed operation ID + fresh correlation ID only
-Workflow: fixed lookup -> unwrap -> login -> read -> revoke -> output
-SecretID uses: 1
-Internal token uses: 2
-Internal token hard maximum: 30 seconds
-Token policy: exact read + self-revoke
-Fallback: checksum-pinned external plugin
-Core fork: not authorized; evidence-gated last resort
-Reusable OpenBao token exported to Imperium: NO
-Focused executable: 11 PASS / 0 FAIL
-Combined OpenBao executable: 21 PASS / 0 FAIL
+Focused executable: 9 PASS / 0 FAIL
 Real credential: NO
-Network contact: NO
-Instance running: NO
+Private .env committed: NO
+Database: NO
+Network contact by adapter: NO
+OpenBao active package export: NO
 ```
 
-The exact HCL, AppRole contract, and policy are repository candidates only. OpenBao 2.6.1 has not parsed or executed them.
+The OpenBao decisions, candidates, fixtures, and tests remain historical
+evidence. They are not the active implementation path.
 
 ## Current Gate
 
-Stop at the service-port executable-candidate merge gate.
+Stop at the local-environment bridge candidate merge gate.
 
-The executable candidate may merge only through explicit operator authorization.
+No real credential, PostgreSQL instance, external secret manager, VPS,
+deployment, Runtime action, production admission, or external effect is
+authorized by this candidate.
 
-If merged, the next bounded increment is pinned-binary OpenBao 2.6.1 workflow compatibility pressure using synthetic material only.
-
-No VPS purchase, provisioning, installation, initialization, unseal, account, real token, real RoleID, real SecretID, real secret, real credential, network contact, plugin installation, OpenBao core fork, Runtime action, deployment, or external effect is authorized.
