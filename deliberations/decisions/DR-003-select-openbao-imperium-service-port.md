@@ -6,9 +6,25 @@
 
 ## Status
 
-Recorded decision merged through PR #71 and squash commit `06b57e2a3fbce5cce311bfd5a312ca601716f973`.
+Superseded as the active B2.3 implementation path by DR-004.
 
-The decision is not a deployed or operationally admitted mechanism.
+The historical decision merged through PR #71 and squash commit
+`06b57e2a3fbce5cce311bfd5a312ca601716f973`. Its executable candidate merged
+through PR #72 and squash commit
+`b280ed2f92beadc7552a8de5f4e9fa541b9d007e`.
+
+No OpenBao mechanism was deployed or operationally admitted.
+
+## Supersession Note
+
+Pinned-binary pressure found that OpenBao 2.6.1 workflow CAS cannot receive the
+parsed CAS value because `handleWorkflowsUpdate` shadows the pointer passed to
+the workflow store. More importantly, the operator concluded that defining and
+integrating OpenBao was unnecessary complexity at this stage.
+
+DR-004 selects a local `.env` source behind a separate adapter for current
+nonproduction progress. This file remains historical evidence and may be
+reconsidered when real secret-manager requirements become active.
 
 ## Question
 
