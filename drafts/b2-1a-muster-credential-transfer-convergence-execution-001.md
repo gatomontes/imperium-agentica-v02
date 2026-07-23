@@ -4,6 +4,8 @@
 
 B2.1a completed, admitted as CB-006, and post-merge verified on 2026-07-23.
 
+Closure record merged through PR #65 and squash commit `779a026c467474627fc5a425f613f21bb124a533`.
+
 ## Authorization
 
 The operator authorized:

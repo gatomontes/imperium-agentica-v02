@@ -2,24 +2,26 @@
 
 ## Status
 
-Track A, B1, B2.1, and B2.1a are complete.
+Track A, B1, B2.1, and B2.1a are complete and closed.
 
-B2.1a corrected the CB-005 Muster credential-transfer defect and admitted CB-006 through PR #64.
+B2.1a corrected the CB-005 Muster credential-transfer defect and admitted CB-006.
 
-The B2.1a post-merge closure record is the final active gate for the current leg.
+Its closure record merged through PR #65 and squash commit `779a026c467474627fc5a425f613f21bb124a533`.
 
-B2.2 is eligible but not active.
+No leg is active.
+
+B2.2 is next eligible but requires a new instruction.
 
 This file is operational continuity, not doctrine, architecture, Authority, or control implementation.
 
-## Production Admission
+## B2.1a Final Record
 
 ```text
-Pull request: #64
-Squash commit: 830e5daaedb05c48b9f6a80473022f7e856688d1
-Rollback parent: fc74e25657111115598373c21ec00148559670c9
-Admission head: 457532f997c06bf6c0765c965458432913d2a9b9
-Baseline: CB-006
+Draft candidate: PR #62 / 2460a08cc35099956e7ca77894f5179139f00ea1
+Admission review: PR #63 / fc74e25657111115598373c21ec00148559670c9
+Production admission: PR #64 / 830e5daaedb05c48b9f6a80473022f7e856688d1
+Closure record: PR #65 / 779a026c467474627fc5a425f613f21bb124a533
+Cognitive baseline: CB-006
 Manifest: 36
 ```
 
@@ -36,6 +38,6 @@ Implementation files changed: 0
 
 ## Current Gate
 
-Merge the B2.1a closure record and stop.
+Stop.
 
-B2.2 requires a new instruction. No store/provider selection, credential operation, implementation, Runtime action, environment staging, deployment, or external effect is authorized.
+B2.2 requires a new operator instruction and substantive store/provider evaluation. No selection, credential operation, implementation, Runtime action, environment staging, deployment, or external effect is authorized.

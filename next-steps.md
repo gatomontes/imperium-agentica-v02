@@ -2,11 +2,11 @@
 
 ## Status
 
-Track A, B1, B2.1, and B2.1a are complete.
+Track A, B1, B2.1, and B2.1a are complete and closed.
 
 CB-006 is the admitted Cognitive baseline.
 
-B2 remains unimplemented.
+No leg is active. B2 remains unimplemented.
 
 This file is a non-binding operational forecast.
 
@@ -16,7 +16,7 @@ This file is a non-binding operational forecast.
 |---:|---|---|
 | B1 | Deployment authorization and authentication policy | closed |
 | B2.1 | Secret custody and adapter boundary | closed |
-| B2.1a | Credential-transfer convergence correction | closed as CB-006; closure record pending |
+| B2.1a | Credential-transfer convergence correction | closed as CB-006 |
 | B2.2 | Store evaluation and selection | next eligible; not active |
 | B2.3 | Nonproduction adapter implementation | blocked |
 | B2.4 | Empirical credential lifecycle and outage tests | blocked |
@@ -29,8 +29,8 @@ This file is a non-binding operational forecast.
 
 B2.2 must evaluate requirements and alternatives before selecting any store or provider.
 
-It requires a new operator instruction because provider constraints, operating environment, cost, threat model, and acceptable dependencies may require substantive choices.
+Its investigation should resolve operating environment, threat model, custody topology, dependency tolerance, cost, recovery requirements, and provider constraints before making a selection.
 
 ## Current Gate
 
-Merge the B2.1a closure record and stop before B2.2.
+Stop. Begin B2.2 only through a new operator instruction.
