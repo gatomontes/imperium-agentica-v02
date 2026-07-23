@@ -110,81 +110,43 @@ export class SyntheticSecretStorePort {
   }
 
   acquire({ secretReference, environment, component, scope, purpose, ttlMs } = {}) {
-    requireText(secretReference, "SYNTHETIC_SECRET_REFERENCE_REQUIRED");
-    const binding = { environment, component, scope, purpose };
-    validateBinding(binding);
-    if (!Number.isFinite(ttlMs) || ttlMs <= 0 || ttlMs > this.#maxTtlMs) {
-      throw new Error("SYNTHETIC_SECRET_TTL_REFUSED");
-    }
-    const acquiredAtMs = this.#now();
-
+    const request = this.#validateAcquisitionRequest({
+      secretReference, environment, component, scope, purpose, ttlMs,
+    });
     let acquired;
     try {
-      acquired = this.#backend.acquire({ secretReference });
-      if (!(acquired?.material instanceof Uint8Array) ||
-          acquired.material.byteLength === 0 ||
-          acquired.classification !== SyntheticCredentialClassification ||
-          typeof acquired.version !== "string" ||
-          acquired.version.length === 0) {
-        acquired?.material?.fill?.(0);
-        throw new Error("SYNTHETIC_SECRET_BACKEND_RESPONSE_REFUSED");
+      if (this.#backend.acquisitionMode === "ASYNC") {
+        throw new Error("SYNTHETIC_SECRET_ASYNC_ACQUISITION_REQUIRED");
       }
+      acquired = this.#backend.acquire({ secretReference });
+      if (acquired && typeof acquired.then === "function") {
+        acquired.then(
+          (value) => value?.material?.fill?.(0),
+          () => {},
+        );
+        throw new Error("SYNTHETIC_SECRET_ASYNC_ACQUISITION_REQUIRED");
+      }
+      this.#validateAcquired(acquired);
     } catch {
       this.#auditUnknown("ACQUIRE_REFUSED", secretReference);
       throw new Error("SYNTHETIC_SECRET_ACQUISITION_FAILED");
     }
+    return this.#createLease({ ...request, acquired });
+  }
 
-    let brokerHandle;
-    try {
-      brokerHandle = this.#broker.register({
-        material: acquired.material,
-        classification: acquired.classification,
-        ...binding,
-      });
-    } catch {
-      acquired.material.fill(0);
-      throw new Error("SYNTHETIC_SECRET_HANDOFF_FAILED");
-    }
-
-    let leaseHandle;
-    let auditId;
-    try {
-      leaseHandle = `synthetic-lease-${this.#idFactory()}`;
-      auditId = `synthetic-lease-audit-${this.#idFactory()}`;
-    } catch {
-      this.#broker.revoke(brokerHandle);
-      throw new Error("SYNTHETIC_SECRET_LEASE_ID_FAILED");
-    }
-    if (this.#leases.has(leaseHandle)) {
-      this.#broker.revoke(brokerHandle);
-      throw new Error("SYNTHETIC_SECRET_LEASE_ID_COLLISION");
-    }
-    const record = {
-      auditId,
-      binding: Object.freeze({ ...binding }),
-      brokerHandle,
-      secretReference,
-      secretVersion: acquired.version,
-      acquiredAtMs,
-      expiresAtMs: acquiredAtMs + ttlMs,
-    };
-    this.#leases.set(leaseHandle, record);
-    try {
-      this.#audit("ACQUIRED", record);
-    } catch {
-      this.#broker.revoke(brokerHandle);
-      this.#leases.delete(leaseHandle);
-      throw new Error("SYNTHETIC_SECRET_AUDIT_FAILED");
-    }
-
-    return Object.freeze({
-      leaseHandle,
-      classification: SyntheticCredentialClassification,
-      secretReference,
-      secretVersion: acquired.version,
-      acquiredAt: new Date(record.acquiredAtMs).toISOString(),
-      expiresAt: new Date(record.expiresAtMs).toISOString(),
+  async acquireAsync({ secretReference, environment, component, scope, purpose, ttlMs } = {}) {
+    const request = this.#validateAcquisitionRequest({
+      secretReference, environment, component, scope, purpose, ttlMs,
     });
+    let acquired;
+    try {
+      acquired = await this.#backend.acquire({ secretReference });
+      this.#validateAcquired(acquired);
+    } catch {
+      this.#auditUnknown("ACQUIRE_REFUSED", secretReference);
+      throw new Error("SYNTHETIC_SECRET_ACQUISITION_FAILED");
+    }
+    return this.#createLease({ ...request, acquired });
   }
 
   consume({ handle, environment, component, scope, purpose } = {}, consumer) {
@@ -250,6 +212,83 @@ export class SyntheticSecretStorePort {
       this.#leases.delete(handle);
       this.#audit("CLOSED", record);
     }
+  }
+
+  #validateAcquisitionRequest({
+    secretReference, environment, component, scope, purpose, ttlMs,
+  }) {
+    requireText(secretReference, "SYNTHETIC_SECRET_REFERENCE_REQUIRED");
+    const binding = { environment, component, scope, purpose };
+    validateBinding(binding);
+    if (!Number.isFinite(ttlMs) || ttlMs <= 0 || ttlMs > this.#maxTtlMs) {
+      throw new Error("SYNTHETIC_SECRET_TTL_REFUSED");
+    }
+    return { secretReference, binding, ttlMs, acquiredAtMs: this.#now() };
+  }
+
+  #validateAcquired(acquired) {
+    if (!(acquired?.material instanceof Uint8Array) ||
+        acquired.material.byteLength === 0 ||
+        acquired.classification !== SyntheticCredentialClassification ||
+        typeof acquired.version !== "string" ||
+        acquired.version.length === 0) {
+      acquired?.material?.fill?.(0);
+      throw new Error("SYNTHETIC_SECRET_BACKEND_RESPONSE_REFUSED");
+    }
+  }
+
+  #createLease({ secretReference, binding, ttlMs, acquiredAtMs, acquired }) {
+    let brokerHandle;
+    try {
+      brokerHandle = this.#broker.register({
+        material: acquired.material,
+        classification: acquired.classification,
+        ...binding,
+      });
+    } catch {
+      acquired.material.fill(0);
+      throw new Error("SYNTHETIC_SECRET_HANDOFF_FAILED");
+    }
+
+    let leaseHandle;
+    let auditId;
+    try {
+      leaseHandle = `synthetic-lease-${this.#idFactory()}`;
+      auditId = `synthetic-lease-audit-${this.#idFactory()}`;
+    } catch {
+      this.#broker.revoke(brokerHandle);
+      throw new Error("SYNTHETIC_SECRET_LEASE_ID_FAILED");
+    }
+    if (this.#leases.has(leaseHandle)) {
+      this.#broker.revoke(brokerHandle);
+      throw new Error("SYNTHETIC_SECRET_LEASE_ID_COLLISION");
+    }
+    const record = {
+      auditId,
+      binding: Object.freeze({ ...binding }),
+      brokerHandle,
+      secretReference,
+      secretVersion: acquired.version,
+      acquiredAtMs,
+      expiresAtMs: acquiredAtMs + ttlMs,
+    };
+    this.#leases.set(leaseHandle, record);
+    try {
+      this.#audit("ACQUIRED", record);
+    } catch {
+      this.#broker.revoke(brokerHandle);
+      this.#leases.delete(leaseHandle);
+      throw new Error("SYNTHETIC_SECRET_AUDIT_FAILED");
+    }
+
+    return Object.freeze({
+      leaseHandle,
+      classification: SyntheticCredentialClassification,
+      secretReference,
+      secretVersion: acquired.version,
+      acquiredAt: new Date(record.acquiredAtMs).toISOString(),
+      expiresAt: new Date(record.expiresAtMs).toISOString(),
+    });
   }
 
   #now() {

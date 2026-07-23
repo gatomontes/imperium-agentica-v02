@@ -127,3 +127,17 @@ The evaluation distinguishes product capability from deployment topology. No rea
 - implementation files changed: 0
 
 Selection merged through PR #68 and remains a design decision, not operational evidence.
+
+
+## B2.3 OpenBao Asynchronous Acquisition Candidate
+
+- exact API pin: OpenBao 2.6.1
+- focused OpenBao executable: 10 PASS / 0 FAIL
+- asynchronous existing-lease integration: PASS
+- pressure gates: 14 PASS / 0 FAIL
+- deterministic injected transport only
+- instance running: no
+- real credential: no
+- network contact: no
+
+The candidate preserves synchronous credential consumption and provider dispatch. It does not implement authenticated transport, AppRole bootstrap, a real HTTP client, or a live store. JSON-parser string copies prevent any complete secure-erasure claim.

@@ -4,28 +4,32 @@
 
 Track A, B1, B2.1, B2.1a, and B2.2 are complete and closed.
 
-B2.2 selected OpenBao on a separate single-node Ubuntu VPS as the bounded nonproduction target.
+B2.3 is active through its first repository-local candidate increment.
 
-No OpenBao instance is provisioned or running. B2 remains unimplemented.
+No OpenBao instance is provisioned or running. B2 remains unimplemented as a live system.
 
-No leg is active.
-
-## B2.2 Final Record
+## B2.3 Candidate
 
 ```text
-Evaluation foundation: PR #67 / 02fc149961632d888ac0da5b94cbbae358647587
-Selection: PR #68 / 2fa08c120a75ca9b9b79d7946ee5ee14bbf7d199
-Store: OpenBao
-Version family: 2.6.x
-Topology: isolated single-node Ubuntu VPS
-Selection pressure: 18 PASS / 0 FAIL
+Store API pin: OpenBao 2.6.1
+Acquisition: asynchronous
+Lease: existing bound, expiring, one-use synthetic lease
+Consumption: synchronous and unchanged
+Provider dispatch: synchronous and unchanged
+Transport: injected; authentication-owned; no network mechanism
+Focused OpenBao tests: 10 PASS / 0 FAIL
+Pressure gates: 14 PASS / 0 FAIL
+Real credential: NO
+Network contact: NO
 Instance running: NO
 ```
 
+The candidate records that JSON decoding creates immutable strings and does not claim complete memory erasure.
+
 ## Current Gate
 
-Stop.
+Stop at the candidate merge gate.
 
-B2.3 is next eligible but requires a new instruction. It may begin as repository-local, non-networked adapter implementation without running OpenBao.
+The first B2.3 increment may merge only through explicit operator authorization.
 
-No VPS purchase, provisioning, installation, initialization, unseal, account, secret, credential, network contact, Runtime action, deployment, or external effect is authorized.
+If merged, the next bounded increment is authenticated-transport and AppRole-bootstrap contract pressure using synthetic fixtures only. It does not authorize provisioning, installation, initialization, unseal, a real credential, network contact, Runtime action, deployment, or external effect.
