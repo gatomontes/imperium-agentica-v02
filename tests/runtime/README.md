@@ -16,7 +16,7 @@ Runtime Synthetic Credential Boundary 001 is merged and verified.
 
 Runtime Synthetic Credential-to-Provider Projection 001 is merged and verified.
 
-Runtime Synthetic Secret-Store Port 001 is the current candidate.
+B2.3 OpenBao Imperium Service-Port Executable 001 is the current candidate.
 
 ## Reference Implementation Evidence
 
@@ -141,3 +141,19 @@ Selection merged through PR #68 and remains a design decision, not operational e
 - network contact: no
 
 The candidate preserves synchronous credential consumption and provider dispatch. It does not implement authenticated transport, AppRole bootstrap, a real HTTP client, or a live store. JSON-parser string copies prevent any complete secure-erasure claim.
+
+
+## B2.3 OpenBao Imperium Service-Port Executable Candidate
+
+- exact API pin: OpenBao 2.6.1
+- focused service-port executable: 11 PASS / 0 FAIL
+- combined OpenBao executable: 21 PASS / 0 FAIL
+- repository conformance gates: 18 PASS / 0 FAIL
+- fixed operation ID and fresh correlation ID only at the Runtime boundary
+- static lookup -> unwrap -> login -> exact-version read -> revoke -> output workflow
+- pinned-binary compatibility: deferred
+- instance running: no
+- real credential: no
+- network contact: no
+
+The repository candidate preserves the existing one-use Runtime lease and synchronous provider dispatch. It does not establish that OpenBao 2.6.1 accepts or executes the HCL, nor does it authorize a process, plugin, core fork, deployment, or external effect.
