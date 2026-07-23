@@ -2,61 +2,46 @@
 
 ## Status
 
-B1 — Provider-Neutral Deployment Authorization and Authentication Policy is closed.
+B1 is closed.
 
-B1 closure merged through PR #56 and squash commit `b027f2332cab1fc5f008295ad6ba807bc5aac66e`.
+RA Integration Review 001 merged through PR #58 and squash commit `d7da390d274dfb5e1df6061ecf32e202f700cc77`.
 
-RA Integration Review 001 is complete as a deliberation candidate. Its record, decision, seven pending controls, program links, registry, and continuity updates are pending merge.
+Its post-merge execution record is the active administrative gate.
 
-B2 remains the next eligible leg and is not active.
+B2.1 Secret Custody and Adapter Boundary is authorized as the next investigation under the instruction `Proceed up to the 2nd merge`, but it begins only after this execution record merges.
 
-This file is operational continuity, not doctrine, architecture, authority, or control implementation.
+No store selection, credential operation, implementation, Runtime action, staging, deployment, or external effect is authorized.
 
-## B1 Closure
+This file is operational continuity, not doctrine, architecture, Authority, or control implementation.
 
-```text
-B1 closure pressure: 20 PASS / 0 FAIL
-Cross-layer closure convergence: 16 PASS / 0 FAIL
-Remaining provider-neutral policy gaps: 0
-Infrastructure-dependent concerns correctly deferred: 9
-B1 COMPLETE: YES
-```
-
-B1 closure does not create mission binding, Tool or Access Grants, credentials, readiness, crossing authority, Runtime action, or deployment.
-
-## RA Integration Finding
+## RA Review Result
 
 ```text
 B1 REOPEN REQUIRED: NO
-PENDING CONTROL RECORDS IDENTIFIED: 7
+PENDING CONTROL RECORDS: 7
 IMPLEMENTED CONTROLS: 0
 B2 NEXT ELIGIBLE: YES
 B2 ACTIVE: NO
 ```
 
-The review allocates:
+## Execution Record
 
-- `CTRL-001` Mission Risk Disposition — before B4
-- `CTRL-002` Affected-Stakeholder Record and Recourse — before B4
-- `CTRL-003` Per-Action Authorization Enforcement — define in B3; prove in B4
-- `CTRL-004` Capability Suitability Finding — before B3 selection is finalized
-- `CTRL-005` Change-Triggered Reauthorization — define in B3; prove in B4
-- `CTRL-006` Control Measurement Contract — begin with B2 evidence; required through B5
-- `CTRL-007` External Obligation Applicability — before B4
+`deliberations/assessments/2026-07-23-ra-integration-review-execution-001.md`
 
-These are pending investigation records. They are not admitted or implemented controls.
+## Verified Merge
 
-## Preserved Boundaries
+```text
+Pull request: #58
+Squash commit: d7da390d274dfb5e1df6061ecf32e202f700cc77
+Rollback parent: b027f2332cab1fc5f008295ad6ba807bc5aac66e
+Candidate head: 2a9776481dfdae8c786d0a8d81c260a3b84a3869
+Changed files: 19
+```
 
-- no new layer or institution is admitted
-- candidate ownership remains unassigned
-- B1 remains closed within its provider-neutral policy scope
-- B2 eligibility does not activate B2
-- no provider, store, protocol, credential format, Runtime driver, or deployment mechanism is selected
-- no credential operation, Runtime action, staging, deployment, or external effect is authorized
+## Next Gate
 
-## Current Gate
+Merge the RA Integration Review execution record.
 
-Merge or reject RA Integration Review 001.
+After that merge, conduct and merge the separately bounded B2.1 Secret Custody and Adapter Boundary candidate as the second authorized merge.
 
-Only after merge may the allocation be treated as the current deliberation record. B2 remains separately gated.
+No third merge is authorized.
