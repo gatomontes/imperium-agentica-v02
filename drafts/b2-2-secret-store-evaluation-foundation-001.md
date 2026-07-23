@@ -2,9 +2,9 @@
 
 ## Status
 
-Active investigation candidate.
+Evaluation foundation merged through PR #67 and squash commit `02fc149961632d888ac0da5b94cbbae358647587`.
 
-No store is selected.
+OpenBao isolated single-node selection candidate active.
 
 ## Authorization
 
@@ -115,15 +115,13 @@ These facts materially change the correct selection and must not be invented.
 
 ```text
 B2.2 REQUIREMENTS: SHAPED
-PROVISIONAL LEADER: OPENBAO SELF-HOSTED
-STORE SELECTED: NO
-TOPOLOGY SELECTED: NO
-B2.3 IMPLEMENTATION: BLOCKED
-OPERATOR INPUT REQUIRED: YES
+STORE SELECTED: OPENBAO
+TOPOLOGY SELECTED: ISOLATED SINGLE-NODE UBUNTU VPS
+INSTANCE RUNNING: NO
+B2.3 IMPLEMENTATION: BLOCKED UNTIL SELECTION MERGE AND CLOSURE
+OPERATOR INPUT: RESOLVED FOR NONPRODUCTION TARGET
 ```
 
 ## Next Gate
 
-Merge or reject this evaluation foundation.
-
-After merge, resolve the eight operator decisions, apply weighted scoring to concrete store × topology realizations, and select one bounded nonproduction target.
+Review and merge or reject the OpenBao selection candidate. No instance is required or authorized to run.
