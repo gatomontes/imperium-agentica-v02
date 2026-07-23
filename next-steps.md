@@ -4,19 +4,19 @@
 
 Track A, B1, B2.1, and B2.1a are complete and closed.
 
-B2.2's OpenBao selection is historical and no longer controls active implementation. Device selection is deferred until the Locksmith sole-accessor boundary is admitted and executable.
+DR-004 is merged. B2.2's OpenBao selection is historical; replacement device selection remains deferred.
 
-B2.3 is active at a superseding decision merge gate. Candidate review completed with 12 PASS / 0 FAIL. B2 remains unimplemented as a live system.
+B2.3 is active. Cognitive sole-accessor pressure found 15 PASS / 7 FAIL and requires a bounded CB-007 convergence correction. B2 remains unimplemented as a live system.
 
 ## Track B
 
 | Order | Leg | State |
 |---:|---|---|
 | B1 | Deployment authorization and authentication policy | closed |
-| B2.1 | Secret custody and adapter boundary | closed; convergence review pending |
+| B2.1 | Secret custody and adapter boundary | closed; sole-accessor convergence correction required |
 | B2.1a | Credential-transfer convergence correction | closed as CB-006 |
 | B2.2 | Store evaluation and selection | historical OpenBao decision superseded; replacement deferred |
-| B2.3 | Nonproduction adapter implementation | active; Locksmith boundary candidate reviewed and merge gated |
+| B2.3 | Nonproduction adapter implementation | active; Cognitive pressure record at merge gate |
 | B2.4 | Empirical credential lifecycle and outage tests | blocked |
 | B2.5 | B2 evidence review and closure | blocked |
 | B3 | Live Runtime/provider driver | not active |
@@ -25,17 +25,19 @@ B2.3 is active at a superseding decision merge gate. Candidate review completed 
 
 ## B2.3 Revised Sequence
 
-1. merge the reviewed Locksmith sole-accessor decision candidate;
-2. pressure admitted Cognitive contracts for device-access, custody, bearer, replay, cross-mission, expiry, revocation, confused-deputy, and outage cases;
-3. admit the minimum Cognitive convergence correction if required;
-4. define the Runtime-facing Locksmith port without backend-native inputs;
-5. remove direct secret-store implementations from active Runtime reference exports while preserving historical evidence;
-6. implement and pressure a synthetic Locksmith-owned adapter without selecting a device;
-7. review the B2.3 evidence;
-8. only then evaluate a concrete security-persistence device behind Locksmith.
+1. merge the Cognitive pressure record and post-merge status correction;
+2. prepare exact CB-007 draft revisions for Armory/Locksmith, Muster, and Barbican;
+3. rerun all 22 sole-accessor pressures against the drafts;
+4. conduct Authority–Cognitive and Provenance–Cognitive convergence reviews;
+5. conduct Cognitive production admission and request explicit promotion authorization;
+6. define the Runtime-facing Locksmith port without backend-native inputs;
+7. remove direct secret-store implementations from active Runtime reference exports while preserving historical evidence;
+8. implement and pressure a synthetic Locksmith-owned adapter without selecting a device;
+9. review B2.3 evidence;
+10. only then evaluate a concrete security-persistence device behind Locksmith.
 
 ## Current Gate
 
-Require explicit authorization to merge PR #73.
+Require explicit authorization to merge the pressure-record candidate.
 
 No persistence technology, real credential, running service, network contact, provisioning, deployment, Runtime action, or external effect is authorized.
