@@ -172,7 +172,7 @@ The default home for shaped but unproven artifacts is:
 /drafts
 ```
 
-Layer-specific artifacts live within their layer. The admitted cognitive baseline is `CB-005`. Cognitive artifacts use:
+Layer-specific artifacts live within their layer. The admitted cognitive baseline is `CB-006`. Cognitive artifacts use:
 
 ```text
 /layers/cognitive/drafts
