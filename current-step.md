@@ -13,6 +13,7 @@ B2.3 is active. No persistence device is selected and B2 remains unimplemented a
 ```text
 Draft artifacts: Armory/Locksmith, Muster, Barbican
 Test matrix: 22 assertions; not executed
+Candidate review: 14 PASS / 0 FAIL
 Production semantic files changed: 0
 Runtime implementation files changed: 0
 Persistence device selected: NO
@@ -23,9 +24,11 @@ Instance running: NO
 
 The drafts state the sole-accessor boundary, Locksmith-owned adapter boundary, Runtime custody distinction, backend-native input prohibition, Authority-produced finding precondition, generic external refusal, and retained internal Provenance evidence.
 
+Review also preserved the separate data classification of continuing provider results while excluding credential, device, backend, and authentication material.
+
 ## Current Gate
 
-Stop at the exact-draft candidate review and merge gate.
+Stop at PR #76's reviewed exact-draft merge gate.
 
 If merged, the next bounded increment is the immutable 22-assertion rerun plus Authority–Cognitive and Provenance–Cognitive convergence review.
 
