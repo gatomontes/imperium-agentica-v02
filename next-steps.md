@@ -6,9 +6,9 @@ Track A is complete.
 
 B1 is complete and closed.
 
-RA Integration Review 001 and its execution record are merged and closed.
+RA Integration Review 001 and B2.1 are closed as merged evidence increments.
 
-B2.1 Secret Custody and Adapter Boundary candidate is merged. Its execution record is pending merge.
+B2.1a Muster Credential-Transfer Convergence has an active draft candidate.
 
 B2 remains unimplemented.
 
@@ -19,9 +19,9 @@ This file is a non-binding operational forecast.
 | Order | Leg | State |
 |---:|---|---|
 | B1 | Deployment authorization and authentication policy | closed |
-| B2.1 | Secret custody and adapter boundary | candidate merged; execution record pending |
-| B2.1a | CB-005 credential-transfer convergence correction | next eligible after record merge; not active |
-| B2.2 | Store evaluation and selection | blocked by B2.1a |
+| B2.1 | Secret custody and adapter boundary | draft evidence increment closed |
+| B2.1a | CB-005 credential-transfer convergence correction | draft candidate active; production admission pending |
+| B2.2 | Store evaluation and selection | blocked by B2.1a production admission |
 | B2.3 | Nonproduction adapter implementation | blocked |
 | B2.4 | Empirical credential lifecycle and outage tests | blocked |
 | B2.5 | B2 evidence review and closure | blocked |
@@ -29,42 +29,32 @@ This file is a non-binding operational forecast.
 | B4 | Integrated nonproduction staging | not active |
 | B5 | Production admission and deployment | not active |
 
-## B2.1 Result
+## B2.1a Candidate
 
-The merged draft defines:
+The candidate corrects Muster so credential material remains with Locksmith responsibility and Runtime custody.
 
-- Secret Binding Reference;
-- Secret Operation Request;
-- Runtime-confined Custody Execution Context;
-- Access Result;
-- Secret Handling Observation;
-- exact Authority and correlation acceptance gates;
-- lifetime intersection;
-- rotation and supersession;
-- revocation uncertainty;
-- outage and recovery refusal;
-- no-cache default;
-- redaction quarantine.
+Muster and the Deployment Package may carry only:
 
-It selects and implements nothing.
+- non-secret, non-bearer credential-binding references;
+- access tickets and Access Grant references;
+- permission constraints;
+- expiration and revocation conditions;
+- permitted access results or refusals.
 
-## Next Required Correction
+An opaque value usable for independent authentication is a bearer capability, not a safe reference.
 
-Reconcile CB-005 so:
+## Evidence
 
 ```text
-credential material
-→ Locksmith responsibility and Runtime custody only
-
-Muster / Deployment Package
-→ non-secret binding, ticket, grant, constraint,
-  expiry, revocation, and result-routing references only
+Baseline pressure: 12 PASS / 4 FAIL
+Corrected draft pressure: 16 PASS / 0 FAIL
+Cross-layer convergence: 18 PASS / 0 FAIL
+Production semantic files changed: 0
+Implementation files changed: 0
 ```
-
-The correction requires independent Cognitive pressure, cross-layer convergence review, and explicit merge authorization.
 
 ## Current Gate
 
-Merge the B2.1 execution record.
+Review and merge or reject the B2.1a draft candidate.
 
-No later work is implicit.
+After candidate merge, conduct a separate production-admission review. B2.2 does not become eligible merely because the draft candidate merges.
