@@ -62,6 +62,7 @@ export function classifyOpenBaoHealth(status) {
 }
 
 export class OpenBaoKvV2SecretStoreBackend {
+  acquisitionMode = "ASYNC";
   #references;
   #transport;
 
