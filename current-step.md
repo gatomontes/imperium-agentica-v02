@@ -2,45 +2,36 @@
 
 ## Status
 
-Track A, B1, B2.1, B2.1a, and B2.2 are complete and closed.
+Track A, B1, B2.1, B2.1a, and B2.2's historical store evaluation are complete.
 
-B2.3 is active. Its service-port decision merged through PR #71 and squash commit `06b57e2a3fbce5cce311bfd5a312ca601716f973`.
+B2.3 is active, but its OpenBao implementation path is superseded by the Locksmith sole-accessor decision candidate. No replacement security-persistence device is selected.
 
-No OpenBao instance is provisioned or running. B2 remains unimplemented as a live system.
+B2 remains unimplemented as a live system.
 
-## B2.3 Service-Port Executable Candidate
+## Current Boundary Candidate
 
 ```text
-Store API pin: OpenBao 2.6.1
-Runtime acquisition: asynchronous
-Runtime lease: existing bound, expiring, one-use synthetic lease
-Runtime consumption: synchronous and unchanged
-Provider dispatch: synchronous and unchanged
-OpenBao boundary: Imperium Service Port
-Client request: fixed operation ID + fresh correlation ID only
-Workflow: fixed lookup -> unwrap -> login -> read -> revoke -> output
-SecretID uses: 1
-Internal token uses: 2
-Internal token hard maximum: 30 seconds
-Token policy: exact read + self-revoke
-Fallback: checksum-pinned external plugin
-Core fork: not authorized; evidence-gated last resort
-Reusable OpenBao token exported to Imperium: NO
-Focused executable: 11 PASS / 0 FAIL
-Combined OpenBao executable: 21 PASS / 0 FAIL
+Sole device accessor: Locksmith
+Device adapter owner: Locksmith
+Other direct device clients: forbidden
+Required public boundary: Locksmith access port; not yet admitted
+Preferred result: performed authenticated operation or permitted result/refusal
+Exceptional Runtime custody: separately admitted, bound, expiring, one-use
+Persistence device selected: NO
+Candidate review: 12 PASS / 0 FAIL
 Real credential: NO
 Network contact: NO
 Instance running: NO
 ```
 
-The exact HCL, AppRole contract, and policy are repository candidates only. OpenBao 2.6.1 has not parsed or executed them.
+Existing OpenBao executable artifacts remain nonproduction historical evidence. The local PostgreSQL and `.env` alternatives were considered but not selected and have no active candidate.
 
 ## Current Gate
 
-Stop at the service-port executable-candidate merge gate.
+Stop at the Locksmith sole-accessor decision-candidate merge gate.
 
-The executable candidate may merge only through explicit operator authorization.
+Candidate review is complete. Merge still requires explicit operator authorization.
 
-If merged, the next bounded increment is pinned-binary OpenBao 2.6.1 workflow compatibility pressure using synthetic material only.
+If merged, the next bounded increment is Cognitive convergence pressure against the admitted Armory/Locksmith and Muster contracts. Do not select or implement a persistence device during that increment.
 
-No VPS purchase, provisioning, installation, initialization, unseal, account, real token, real RoleID, real SecretID, real secret, real credential, network contact, plugin installation, OpenBao core fork, Runtime action, deployment, or external effect is authorized.
+No credential, secret, token, persistence instance, network contact, provisioning, deployment, Runtime action, or external effect is authorized.

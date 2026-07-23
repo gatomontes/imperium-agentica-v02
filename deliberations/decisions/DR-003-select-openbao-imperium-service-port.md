@@ -6,15 +6,25 @@
 
 ## Status
 
-Recorded decision merged through PR #71 and squash commit `06b57e2a3fbce5cce311bfd5a312ca601716f973`.
+Superseded as the active B2.3 implementation path by DR-004.
 
-The decision is not a deployed or operationally admitted mechanism.
+The historical decision merged through PR #71 and squash commit `06b57e2a3fbce5cce311bfd5a312ca601716f973`. Its executable candidate merged through PR #72 and squash commit `b280ed2f92beadc7552a8de5f4e9fa541b9d007e`.
+
+No OpenBao mechanism was deployed or operationally admitted.
+
+## Supersession Note
+
+Pinned-binary pressure found that OpenBao 2.6.1 workflow CAS could not receive the parsed CAS value because `handleWorkflowsUpdate` shadows the pointer passed to the workflow store. The complete service-port sequence was not established.
+
+The operator then established the more general boundary: Locksmith is the sole accessor to whatever security-persistence device is eventually selected. DR-004 therefore supersedes OpenBao as the active implementation path and defers device selection until the Locksmith boundary is executable.
+
+The complete historical decision remains below as evidence.
 
 ## Question
 
 How should Imperium cross the OpenBao authentication boundary without receiving or retaining a reusable OpenBao token?
 
-## Decision
+## Historical Decision
 
 OpenBao shall expose a narrow Imperium Service Port that performs one admitted credential-acquisition operation inside OpenBao and returns only the selected secret material and minimum non-secret result metadata.
 
@@ -22,7 +32,7 @@ The first realization target is an OpenBao 2.6.1 workflow over the supported Pro
 
 This is not a general command port. Runtime cannot supply an arbitrary OpenBao path, method, policy, workflow, template, field selector, or token.
 
-## Port Contract
+## Historical Port Contract
 
 For one exact server-side binding, the port shall:
 
@@ -63,11 +73,11 @@ The workflow trace endpoint is credential-bearing. Runtime shall have no capabil
 
 ## Relationship to DR-002
 
-DR-002 remains controlling for the selected OpenBao store, version family, isolated single-node nonproduction topology, manual Shamir boundary, audit requirement, backup, exposure, and no-running-instance state.
+DR-002 remains controlling for the historical OpenBao store, version family, isolated single-node nonproduction topology, manual Shamir boundary, audit requirement, backup, exposure, and no-running-instance state. DR-004 supersedes that selection for active implementation.
 
-This decision supersedes only the part of DR-002's bootstrap target that allowed the resulting OpenBao token to be process-confined in Imperium. The token is now intended to remain inside OpenBao.
+This historical decision superseded only the part of DR-002's bootstrap target that allowed the resulting OpenBao token to be process-confined in Imperium. The token was intended to remain inside OpenBao.
 
-The non-secret RoleID and response-wrapped, short-lived, single-use SecretID design remain provisional internal inputs to the service port and may still be replaced under threat pressure.
+The non-secret RoleID and response-wrapped, short-lived, single-use SecretID design were provisional internal inputs to the service port.
 
 ## Evidence
 
@@ -75,14 +85,15 @@ The non-secret RoleID and response-wrapped, short-lived, single-use SecretID des
 - OpenBao 2.6.x Workflows API documentation.
 - OpenBao 2.6.x external plugin architecture and management documentation.
 - OpenBao AppRole and response-wrapping documentation.
-- Operator direction: “Option 4- modify OpenBao with a Imperium-service-port that does what we say.”
+- Operator direction at the time: “Option 4- modify OpenBao with a Imperium-service-port that does what we say.”
+- `tests/runtime/b2-3-openbao-pinned-binary-pressure-run-001.md`.
 
-## Explicit Non-Decisions
+## Historical Explicit Non-Decisions
 
-This decision does not:
+This decision did not:
 
 - authorize an OpenBao instance, network contact, credential, token, RoleID, SecretID, secret, VPS, deployment, or external effect;
-- claim that the proposed workflow sequence has run against OpenBao 2.6.1;
+- establish that the proposed workflow sequence ran successfully against OpenBao 2.6.1;
 - approve a public or generally unauthenticated endpoint;
 - approve arbitrary caller-selected secret paths or operations;
 - select or implement an external plugin;
@@ -91,4 +102,4 @@ This decision does not:
 
 ## Supersession Conditions
 
-Reopen this decision if executable pressure shows that the service port cannot enforce fixed operation binding, one-use bootstrap, internal token confinement, exact versioning, minimum output, trace denial, generic refusal, revocation-before-output, audit completeness, or outage safety.
+DR-004 controls current work. Reconsider this historical implementation only after the Locksmith sole-accessor boundary is admitted and executable, and only if a later device-selection process selects OpenBao.
