@@ -2,67 +2,63 @@
 
 ## Status
 
-B1.2 Provider-Neutral Authentication-Proof Satisfaction merged and post-merge verified on 2026-07-22.
+`B1 — Provider-Neutral Deployment Authorization and Authentication Policy` has an active completeness investigation.
 
-B1.1 Provider-Neutral Deployment Authorization remains fully closed and recorded.
+B1.1 Provider-Neutral Deployment Authorization and B1.2 Provider-Neutral Authentication-Proof Satisfaction are fully merged and separately recorded.
 
-This separate execution record is the final B1.2 continuity increment. No later B1 or B2 increment is active.
+The operator instruction `Proceed with investigation` authorizes B1 completeness investigation and preparation of its finding only.
+
+No final B1 policy increment, candidate merge, B1 closure, B2 preparation, infrastructure selection, credential operation, Runtime action, deployment, or external effect is authorized by this investigation.
 
 This file is operational continuity, not doctrine, architecture, or authority.
 
-## Merge Record
+## Investigation Question
+
+Does B1 contain every provider-neutral policy decision required before later mission assembly and initial external crossing, or does one final bounded policy gap remain?
+
+## Pressure Result
 
 ```text
-Pull request: #51
-Squash commit: aa58caaf6f8917f450ff3cb59eae6f1ef992636f
-Rollback parent: 44d815ab413a1ae51e375f1117efa492009c450f
-Candidate head: 6060bc9c8bd764b985ab1c35e1ee74cc78704553
+B1 completeness pressure: 11 PASS / 4 FAIL
+Remaining provider-neutral policy gaps: 1
+Infrastructure-dependent gaps counted in B1: 0
 ```
 
-Execution record:
+## Finding
 
-`drafts/provider-neutral-authentication-proof-execution-001.md`
+One bounded Authority convergence gap remains.
 
-## Verified Evidence
+B1.1 determines whether one exact deployer may deploy one exact Operative version under exact scope and time bounds.
+
+B1.2 determines whether one exact authentication-proof presentation satisfies one exact requirement cited by that authorization.
+
+The repository does not yet define one canonical finding that proves those exact artifacts are simultaneously current, mutually correlated, scope-compatible, and available for downstream consumption.
+
+Without that finding, Procedure, Muster, Runtime, or Iron Gate would have to infer convergence from individually valid artifacts.
+
+## Native Ownership
+
+- Authority owns the convergence decision
+- Provenance supplies exact identity, correlation, ordering, supersession, and lineage
+- Procedure may require but cannot create the finding
+- Muster may consume but cannot infer it from assembly completeness
+- Runtime and Iron Gate may later enforce but cannot originate it
+- no new layer is justified
+
+## Required Final B1 Increment
+
+Define one provider-neutral Deployment Policy Convergence Assessment with bounded outcomes:
 
 ```text
-Theoretical baseline pressure: 7 PASS / 11 FAIL
-Corrected theoretical pressure: 18 PASS / 0 FAIL
-Theoretical cross-layer convergence: 14 PASS / 0 FAIL
-Candidate review: PASS
-Production semantic files changed: 0
-Implementation files changed: 0
+DEPLOYMENT_POLICY_CONFORMANT
+DEPLOYMENT_POLICY_NOT_CONFORMANT
+DEPLOYMENT_POLICY_UNRESOLVED
 ```
 
-No executable suite was rerun for the candidate.
-
-## B1.2 Result
-
-B1.2 establishes unadmitted draft Authority evidence for assessing one exact authentication-proof presentation against one exact authentication requirement, while Provenance preserves exact evidence and observation lineage.
-
-It defines:
-
-- exact subject, requirement, presentation, issuer/source, and verifier responsibility
-- exact audience, target, purpose, environment, and mission correlation
-- evidence-class, freshness, expiry, replay-resistance, revocation, compromise, contest, and supersession rules
-- `AUTHENTICATION_REQUIREMENT_SATISFIED`
-- `AUTHENTICATION_REQUIREMENT_NOT_SATISFIED`
-- `AUTHENTICATION_REQUIREMENT_UNRESOLVED`
-
-## Preserved Boundaries
-
-- Authority owns requirement satisfaction and remains the sole origin of permission
-- providers and verifiers may observe but cannot create permission or access
-- Provenance preserves lineage without determining universal identity truth or evidence sufficiency
-- successful authentication does not create an Access Grant
-- credential possession does not create custody authority
-- satisfaction does not bind, assemble, ready, launch, execute, or deploy
-- no new layer, infrastructure selection, production semantic, implementation, credential operation, Runtime action, or external effect was added
+It must align exact authorization and authentication-satisfaction findings while remaining distinct from mission binding, Tool or Access Grants, credential retrieval, `READY_FOR_LAUNCH`, `INITIAL_EXTERNAL_CROSSING`, and deployment execution.
 
 ## Next Gate
 
-Merge this separate B1.2 execution record.
+Approve or reject preparation of the final bounded B1 convergence candidate.
 
-After that merge, determine under a separate explicit gate whether B1 requires another policy increment or may close before B2 infrastructure selection.
-
-No execution-record merge, later B1 or B2 preparation, production admission, infrastructure selection, credential operation, Runtime action, deployment, or external effect is authorized by this record.
+No candidate preparation, merge, execution record, closure, B2 infrastructure work, provider/store/driver selection, credential operation, Runtime action, deployment, or external effect is implicit.
