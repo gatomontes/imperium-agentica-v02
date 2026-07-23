@@ -18,6 +18,7 @@ Public boundary: admitted Locksmith access port
 Preferred result: performed authenticated operation or permitted result/refusal
 Exceptional Runtime custody: separately admitted, bound, expiring, one-use
 Persistence device selected: NO
+Candidate review: 12 PASS / 0 FAIL
 Real credential: NO
 Network contact: NO
 Instance running: NO
@@ -28,6 +29,8 @@ Existing OpenBao executable artifacts remain nonproduction historical evidence. 
 ## Current Gate
 
 Stop at the Locksmith sole-accessor decision-candidate merge gate.
+
+Candidate review is complete. Merge still requires explicit operator authorization.
 
 If merged, the next bounded increment is Cognitive convergence pressure against the admitted Armory/Locksmith and Muster contracts. Do not select or implement a persistence device during that increment.
 
