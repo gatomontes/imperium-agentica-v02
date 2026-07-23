@@ -80,3 +80,4 @@ This record does not admit or implement a control, activate a Track B leg, or au
 
 - 2026-07-23 — Identified by RA Integration Review 001.
 - 2026-07-23 — B2.1 candidate applied the measurement direction without admitting or implementing this control.
+- 2026-07-23 — PR #60 merged the B2.1 evidence application; CTRL-006 remains pending and unimplemented.
