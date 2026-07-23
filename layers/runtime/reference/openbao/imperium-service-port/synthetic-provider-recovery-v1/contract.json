@@ -1,0 +1,36 @@
+{
+  "openBaoVersion": "2.6.1",
+  "operationId": "synthetic-provider-recovery-v1",
+  "workflow": {
+    "path": "imperium/credential-acquire/synthetic-provider-recovery-v1",
+    "allowUnauthenticated": true,
+    "casRequired": true
+  },
+  "approle": {
+    "roleName": "imperium-service-port-synthetic",
+    "roleId": "IMPERIUM_SYNTHETIC_ROLE_ID",
+    "bindSecretId": true,
+    "secretIdNumUses": 1,
+    "secretIdTtlSeconds": 60,
+    "tokenPolicies": [
+      "imperium-service-port-synthetic-read"
+    ],
+    "tokenNoDefaultPolicy": true,
+    "tokenNumUses": 2,
+    "tokenTtlSeconds": 30,
+    "tokenMaxTtlSeconds": 30,
+    "tokenExplicitMaxTtlSeconds": 30,
+    "tokenPeriodSeconds": 0,
+    "tokenType": "service"
+  },
+  "wrapping": {
+    "creationPath": "auth/approle/role/imperium-service-port-synthetic/secret-id",
+    "singleUse": true
+  },
+  "binding": {
+    "mount": "imperium-synthetic",
+    "path": "runtime/provider/recovery",
+    "field": "credential",
+    "version": 7
+  }
+}
