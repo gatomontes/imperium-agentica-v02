@@ -4,34 +4,31 @@
 
 Track A, B1, B2.1, B2.1a, and B2.2's historical store evaluation are complete.
 
-B2.3 is active, but its OpenBao implementation path is superseded by the Locksmith sole-accessor decision candidate. No replacement security-persistence device is selected.
+DR-004 merged through PR #73 and squash commit `7ba0b10baaf89c561e3a87650f65dde4596ec3b1`. Locksmith is the sole accessor to whatever security-persistence device is eventually selected.
 
-B2 remains unimplemented as a live system.
+B2.3 is active. No persistence device is selected and B2 remains unimplemented as a live system.
 
-## Current Boundary Candidate
+## Cognitive Pressure Candidate
 
 ```text
-Sole device accessor: Locksmith
-Device adapter owner: Locksmith
-Other direct device clients: forbidden
-Required public boundary: Locksmith access port; not yet admitted
-Preferred result: performed authenticated operation or permitted result/refusal
-Exceptional Runtime custody: separately admitted, bound, expiring, one-use
-Persistence device selected: NO
+Pressure target: admitted Armory/Locksmith, Muster, Barbican,
+                 Access Grant, and Provider Intervention Ledger contracts
+Pressure result: 15 PASS / 7 FAIL
 Candidate review: 12 PASS / 0 FAIL
+Finding: bounded Cognitive convergence correction required
+Production changed: NO
+Persistence device selected: NO
 Real credential: NO
 Network contact: NO
 Instance running: NO
 ```
 
-Existing OpenBao executable artifacts remain nonproduction historical evidence. The local PostgreSQL and `.env` alternatives were considered but not selected and have no active candidate.
+The failures concern sole device access, Locksmith adapter ownership, direct Runtime device prohibition, backend-native caller inputs, pre-access findings, failure secrecy with retained provenance, and exceptional custody isolation.
 
 ## Current Gate
 
-Stop at the Locksmith sole-accessor decision-candidate merge gate.
+Stop at PR #75's reviewed Cognitive pressure-record merge gate.
 
-Candidate review is complete. Merge still requires explicit operator authorization.
-
-If merged, the next bounded increment is Cognitive convergence pressure against the admitted Armory/Locksmith and Muster contracts. Do not select or implement a persistence device during that increment.
+If merged, the next bounded increment is the exact CB-007 draft revision and test matrix. Do not alter Cognitive production or implement a persistence adapter in this increment.
 
 No credential, secret, token, persistence instance, network contact, provisioning, deployment, Runtime action, or external effect is authorized.

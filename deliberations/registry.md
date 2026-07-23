@@ -76,9 +76,9 @@ None recorded.
 | DR-002 | Allocate RA controls without reopening B1 | Recorded decision |
 | DR-002 | Select OpenBao isolated single-node nonproduction target | Historical decision; superseded for active selection |
 | DR-003 | Select an OpenBao-hosted Imperium Service Port | Historical decision; superseded by DR-004 |
-| DR-004 | Make Locksmith the sole security-persistence accessor | Authorized decision candidate; merge gated |
+| DR-004 | Make Locksmith the sole security-persistence accessor | Recorded decision; merged through PR #73 |
 
-The two `DR-002` records are distinct historical files. The later OpenBao topology decision reused an existing ID before this registry was updated. This candidate preserves both and records the collision; renumbering a prior decision requires a separate traceable normalization.
+The two `DR-002` records are distinct historical files. The later OpenBao topology decision reused an existing ID before this registry was updated. This record preserves both and records the collision; renumbering a prior decision requires a separate traceable normalization.
 
 ## Maintenance Rule
 
