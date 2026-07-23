@@ -16,7 +16,7 @@ Runtime Synthetic Credential Boundary 001 is merged and verified.
 
 Runtime Synthetic Credential-to-Provider Projection 001 is merged and verified.
 
-B2.3 OpenBao Imperium Service-Port Executable 001 is the current candidate.
+B2.3 Local Environment Secret Bridge 001 is the current candidate.
 
 ## Reference Implementation Evidence
 
@@ -157,3 +157,32 @@ The candidate preserves synchronous credential consumption and provider dispatch
 - network contact: no
 
 The repository candidate preserves the existing one-use Runtime lease and synchronous provider dispatch. It does not establish that OpenBao 2.6.1 accepts or executes the HCL, nor does it authorize a process, plugin, core fork, deployment, or external effect.
+
+
+## B2.3 OpenBao Pinned-Binary Pressure
+
+- exact binary: OpenBao 2.6.1 at `ba7ad886`
+- release archive checksum: PASS
+- candidate HCL parse with workflow CAS disabled: PASS
+- CAS-protected workflow create/update: FAIL
+- root cause: parsed CAS pointer is shadowed in the 2.6.1 workflow handler
+- complete service-port sequence: not established
+- active implementation path: superseded by DR-004
+
+The ephemeral in-memory process was stopped. No instance, credential, VPS, or deployment persists.
+
+
+## B2.3 Local Environment Secret-Bridge Candidate
+
+- focused executable: 9 PASS / 0 FAIL
+- combined local-env and retained OpenBao executable: 30 PASS / 0 FAIL
+- Node `--env-file` composition smoke: PASS
+- source: injected whitelisted environment reader
+- material: canonical base64
+- version: explicit positive integer string
+- classification: `SYNTHETIC_TEST_SECRET` only
+- direct file, `process.env`, dotenv, database, and network access: absent
+- private `.env` committed: no
+- real credential: no
+
+The bridge changes only the source adapter. Existing lease, broker, consumption, audit, and provider-dispatch contracts remain unchanged.
