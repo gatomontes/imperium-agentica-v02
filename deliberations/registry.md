@@ -9,6 +9,7 @@
 - Decision records: 2
 - Initial assessment: `assessments/2026-07-23-mit-ai-risks-imperium-assessment.md`
 - Integration review: `assessments/2026-07-23-ra-integration-review-001.md`
+- Integration execution: `assessments/2026-07-23-ra-integration-review-execution-001.md`
 
 ## Risks
 
@@ -72,7 +73,7 @@ None recorded.
 | ID | Decision | Status |
 |---|---|---|
 | DR-001 | Separate risks, programs, and controls | Recorded conclusion |
-| DR-002 | Allocate RA controls without reopening B1 | Candidate decision; merge pending |
+| DR-002 | Allocate RA controls without reopening B1 | Recorded decision |
 
 ## Maintenance Rule
 
