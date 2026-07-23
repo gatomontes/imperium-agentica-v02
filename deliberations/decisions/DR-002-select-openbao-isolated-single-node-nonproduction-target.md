@@ -6,7 +6,7 @@
 
 ## Status
 
-Approved B2.2 selection candidate. Not implemented, deployed, or operationally admitted.
+Recorded B2.2 selection merged through PR #68 and squash commit `2fa08c120a75ca9b9b79d7946ee5ee14bbf7d199`. Not implemented, deployed, or operationally admitted.
 
 ## Question
 
