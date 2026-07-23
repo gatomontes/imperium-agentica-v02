@@ -6,7 +6,7 @@ Theoretical and empirical specifications, immutable run records, regression evid
 
 ## Current Admitted Baselines
 
-- Cognitive: `CB-005` — 36 artifacts
+- Cognitive: `CB-006` — 36 artifacts
 - Authority: `AB-003` — 6 artifacts, unchanged
 - Provenance: `PB-001` — 3 artifacts, unchanged
 - Procedure: `PRB-003` — 5 artifacts
@@ -97,3 +97,18 @@ Historical runs remain evidence of the state tested at their recorded time.
 A superseded expectation is classified explicitly rather than silently rewritten.
 
 Simulated or theoretical evidence is not overstated as a consensus implementation, live distributed system, provider, credential, deployment, or performance proof.
+
+
+## Muster Credential-Transfer Admission Evidence
+
+```text
+Admitted-baseline pressure: 12 PASS / 4 FAIL
+Corrected draft pressure: 16 PASS / 0 FAIL
+Cross-layer convergence: 18 PASS / 0 FAIL
+Production admission: 20 PASS / 0 FAIL
+Cognitive manifest: 36 / 36
+Other admitted baselines changed: 0
+Implementation files changed: 0
+```
+
+CB-006 revises only Muster's credential-transfer semantics. It does not select or implement a credential store, provider, adapter, or Runtime operation.

@@ -10,13 +10,17 @@ This cognitive artifact cites the following admitted contracts as external canon
 
 Admitted.
 
-Baseline: `CB-002`.
+Baseline: `CB-006`.
 
-Admission: `Cognitive Production Admission Review 004`.
+Admission: `B2.1a Muster Credential-Transfer Production Admission Review 001`.
 
-Evidence: `Constitutional Test Run 016 — 31 PASS / 0 FAIL`.
+Evidence:
 
-This file defines the provisional Muster for Imperium v02.
+- `B2.1a Muster Credential-Transfer Pressure Run 002 — 16 PASS / 0 FAIL`
+- `B2.1a Muster Credential-Transfer Convergence Review 001 — 18 PASS / 0 FAIL`
+- `B2.1a Muster Credential-Transfer Production Admission Run 001 — 20 PASS / 0 FAIL`
+
+This file defines the admitted Muster for Imperium v02.
 
 It does not admit live deployment automation, external execution authority, credential-management implementation, runtime orchestration, or a named launch institution.
 
@@ -64,7 +68,7 @@ Muster may receive:
 - deployment-medium-specific Operative from Conscription
 - Mission Inquest from Inquisition
 - authorized tools and usage constraints from Armory
-- authorized credentials, access bindings, and permission constraints from Locksmith
+- authorized non-secret credential-binding references, access tickets, Access Grant references, permission constraints, expiration and revocation conditions, and permitted access results or refusals from Locksmith
 - operator constraints
 - required reporting, escalation, return, and termination conditions
 
@@ -90,7 +94,7 @@ Mission Inquest reference:
 Mission Dossier:
 Mission brief:
 Tools issued:
-Credentials / access issued:
+Non-secret credential bindings / access references:
 Rules of engagement:
 Mission-specific constraints:
 Reporting requirements:
@@ -101,6 +105,12 @@ Termination conditions:
 Unresolved blockers:
 Assembly status:
 ```
+
+The credential-binding and access-reference field may contain only non-secret, non-bearer references. It must never contain credential values, bearer tokens, private keys, replayable session material, or any opaque value capable of independent authentication.
+
+A non-secret reference must not itself function as a bearer capability.
+
+A permitted access result or refusal must be non-secret and non-replayable. It must not contain credential values, session material, or another value capable of independent authentication.
 
 The Deployment Package is mission-specific and bound to exactly one Mission Identity, Operative Binding, and Muster Instance.
 
@@ -166,9 +176,11 @@ Muster must not fabricate missing mission intelligence.
 
 Armory supplies authorized tools and constraints.
 
-Locksmith supplies authorized credentials, access bindings, permission constraints, and revocation conditions.
+Locksmith retains responsibility for credential material and supplies only authorized non-secret credential-binding references, access tickets, Access Grant references, permission constraints, expiration and revocation conditions, and permitted access results or refusals.
 
-Muster assembles these into the Deployment Package.
+Runtime retains credential custody and performs authorized authenticated operations only through a custody mechanism separately admitted for that purpose.
+
+Muster assembles only those non-secret references, constraints, conditions, and permitted results into the Deployment Package. Muster does not receive, carry, resolve, or use credential material.
 
 Availability is not authorization.
 
@@ -243,7 +255,7 @@ Muster must not:
 - alter Hagiography canon
 - duplicate Conscription's platform transformation
 - fabricate mission research
-- issue unauthorized tools or credentials
+- include credential material, bearer capability, or unauthorized tool or access reference
 - treat assembly as launch
 - execute the mission
 - receive or judge mission results
@@ -279,6 +291,7 @@ Review or revise this draft if:
 - Muster duplicates Conscription's platform work
 - mission dossiers are written without Inquisition support
 - tools or access appear without authorization provenance
+- credential material or a bearer capability enters Muster or a Deployment Package
 - Ready For Launch is mistaken for launched
 - Muster becomes the unnamed execution layer
 - Muster receives or interprets Theatre returns

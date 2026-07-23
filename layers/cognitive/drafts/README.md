@@ -2,7 +2,7 @@
 
 ## Status
 
-Cognitive Baseline `CB-005` is represented by the production staging tree.
+Cognitive Baseline `CB-006` is represented by the production staging tree.
 
 Historical source drafts admitted through `Runtime Maintenance Artifact Production Admission Review 001`:
 
@@ -11,6 +11,7 @@ Historical source drafts admitted through `Runtime Maintenance Artifact Producti
 - `runtime-maintenance-disposition.md`
 - `production-artifact-catalog.md`
 - `cognitive-map.md`
+- `muster.md`
 
 Their canonical production targets live in `layers/cognitive/production/`.
 
@@ -30,7 +31,6 @@ Unadmitted draft evidence:
 - `persona-production-conformance-contract.md` — merged A2.3 evidence for exact no-match persona production through explicit Garrison admission; not admitted into CB-005
 - `conscription-selection-recruitment-contract.md` — merged A2.4 evidence for exact persona selection and recruitment into a deployment-medium-specific Operative; not admitted into CB-005
 - `creation-lineage-handoff-conformance-contract.md` — active A3.1 candidate for exact end-to-end creation composition, reproducibility, invalidation, repair routing, and separate A0 handoff conformance; not admitted into CB-005
-- `muster.md` — active B2.1a candidate correcting credential transfer to non-secret, non-bearer references while preserving Locksmith responsibility and Runtime custody; not admitted into CB-005
 
 ## Rule
 

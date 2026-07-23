@@ -2,21 +2,20 @@
 
 ## Status
 
-Cognitive Baseline `CB-005` is admitted for current cognitive use.
+Cognitive Baseline `CB-006` is admitted for current cognitive use.
 
 ```text
-Admission: Runtime Maintenance Artifact Production Admission Review 001
-Prior baseline: CB-004
+Admission: B2.1a Muster Credential-Transfer Production Admission Review 001
+Prior baseline: CB-005
 Evidence:
-- Runtime Maintenance Artifact Pressure Run 004 — 15 PASS / 0 FAIL
-- Runtime Maintenance Repository Regression 001 — PASS
-- Runtime Maintenance Admission Convergence Run 001 — 35 PASS / 0 FAIL
-- empirical harness rerun — 11 PASS / 0 FAIL
-Promotion date: 2026-07-18
+- B2.1a Muster Credential-Transfer Pressure Run 002 — 16 PASS / 0 FAIL
+- B2.1a Muster Credential-Transfer Convergence Review 001 — 18 PASS / 0 FAIL
+- B2.1a Muster Credential-Transfer Production Admission Run 001 — 20 PASS / 0 FAIL
+Promotion date: 2026-07-23
 Manifest size: 36 files
 ```
 
-CB-005 retains the first 33 CB-004 artifacts, revises Master Mason, and adds Runtime Operational Diagnosis and Runtime Maintenance Disposition as the canonical Cognitive meanings required by Runtime maintenance.
+CB-006 retains all 36 CB-005 artifacts and revises Muster so credential material remains with Locksmith responsibility and Runtime custody while mission assembly carries only non-secret, non-bearer references, constraints, and permitted non-replayable results or refusals.
 
 Production means admitted, versioned, revisable, demotable, and contestable. It does not mean instantiated, assigned, implemented, autonomous, externally authorized, or permanent.
 
@@ -32,7 +31,7 @@ Runtime Baseline `RTB-002` owns realization, dispatch, control-plane mechanics, 
 
 Cognitive artifacts may cite these contracts but do not originate or redefine them.
 
-## CB-005 Manifest
+## CB-006 Manifest
 
 ### Intake And Mission Formation
 
@@ -96,7 +95,7 @@ Cognitive artifacts may cite these contracts but do not originate or redefine th
 
 ## Explicit Exclusions
 
-CB-005 does not admit:
+CB-006 does not admit:
 
 - Commission — eliminated
 - Praetorium — reserved and undefined
@@ -119,7 +118,7 @@ CB-005 does not admit:
 
 A production artifact changes through a traceable revision and evidence record.
 
-A contested core boundary requires reviewing dependent CB-005, AB-003, PB-001, PRB-003, and RTB-002 artifacts as applicable.
+A contested core boundary requires reviewing dependent CB-006, AB-003, PB-001, PRB-003, and RTB-002 artifacts as applicable.
 
 Demotion returns an artifact to drafts; history is never overwritten.
 
