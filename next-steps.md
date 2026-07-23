@@ -6,7 +6,7 @@ Track A, B1, B2.1, and B2.1a are complete and closed.
 
 B2.2's OpenBao selection is historical and no longer controls active implementation. Device selection is deferred until the Locksmith sole-accessor boundary is admitted and executable.
 
-B2.3 is active at a superseding decision merge gate. B2 remains unimplemented as a live system.
+B2.3 is active at a superseding decision merge gate. Candidate review completed with 12 PASS / 0 FAIL. B2 remains unimplemented as a live system.
 
 ## Track B
 
@@ -16,7 +16,7 @@ B2.3 is active at a superseding decision merge gate. B2 remains unimplemented as
 | B2.1 | Secret custody and adapter boundary | closed; convergence review pending |
 | B2.1a | Credential-transfer convergence correction | closed as CB-006 |
 | B2.2 | Store evaluation and selection | historical OpenBao decision superseded; replacement deferred |
-| B2.3 | Nonproduction adapter implementation | active; reset to Locksmith sole-accessor boundary |
+| B2.3 | Nonproduction adapter implementation | active; Locksmith boundary candidate reviewed and merge gated |
 | B2.4 | Empirical credential lifecycle and outage tests | blocked |
 | B2.5 | B2 evidence review and closure | blocked |
 | B3 | Live Runtime/provider driver | not active |
@@ -25,7 +25,7 @@ B2.3 is active at a superseding decision merge gate. B2 remains unimplemented as
 
 ## B2.3 Revised Sequence
 
-1. merge the Locksmith sole-accessor decision candidate;
+1. merge the reviewed Locksmith sole-accessor decision candidate;
 2. pressure admitted Cognitive contracts for device-access, custody, bearer, replay, cross-mission, expiry, revocation, confused-deputy, and outage cases;
 3. admit the minimum Cognitive convergence correction if required;
 4. define the Runtime-facing Locksmith port without backend-native inputs;
@@ -36,6 +36,6 @@ B2.3 is active at a superseding decision merge gate. B2 remains unimplemented as
 
 ## Current Gate
 
-Require explicit authorization to merge the Locksmith sole-accessor decision candidate.
+Require explicit authorization to merge PR #73.
 
 No persistence technology, real credential, running service, network contact, provisioning, deployment, Runtime action, or external effect is authorized.
