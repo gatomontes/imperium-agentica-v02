@@ -14,7 +14,7 @@ B2 remains unimplemented as a live system.
 Sole device accessor: Locksmith
 Device adapter owner: Locksmith
 Other direct device clients: forbidden
-Public boundary: admitted Locksmith access port
+Required public boundary: Locksmith access port; not yet admitted
 Preferred result: performed authenticated operation or permitted result/refusal
 Exceptional Runtime custody: separately admitted, bound, expiring, one-use
 Persistence device selected: NO
