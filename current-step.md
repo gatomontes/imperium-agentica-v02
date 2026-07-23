@@ -2,48 +2,41 @@
 
 ## Status
 
-B1 is closed.
+B1 and B2.1 are closed.
 
-RA Integration Review 001 and its execution record are merged and closed.
+B2.1a Muster Credential-Transfer Convergence candidate merged through PR #62 and squash commit `2460a08cc35099956e7ca77894f5179139f00ea1`.
 
-B2.1 Secret Custody and Adapter Boundary candidate and execution record are merged and closed as a draft evidence increment.
-
-B2.1a Muster Credential-Transfer Convergence has an active unadmitted draft candidate.
+Its production admission review is the active B2.1a gate.
 
 B2.2 store selection and all implementation remain blocked.
 
 This file is operational continuity, not doctrine, architecture, Authority, or control implementation.
 
-## Prior Merge Record
+## Candidate Merge
 
 ```text
-Pull request: #61
-Squash commit: 973153fa875c967a245f8582d4aa39d1096b4fc0
-Prior candidate: B2.1 Secret Custody and Adapter Boundary
-Result: merged and post-merge recorded
+Pull request: #62
+Squash commit: 2460a08cc35099956e7ca77894f5179139f00ea1
+Rollback parent: 973153fa875c967a245f8582d4aa39d1096b4fc0
+Candidate head: e153202244090e3e97afd82d9f7a1bfb5697a786
+Changed files: 10
 ```
 
-## B2.1a Finding
+## Admission Review Finding
 
 ```text
-COGNITIVE CORRECTION NEEDED: YES
-DRAFT CANDIDATE COHERENT: YES
-Baseline pressure: 12 PASS / 4 FAIL
-Corrected draft pressure: 16 PASS / 0 FAIL
+Semantic necessity: DEMONSTRATED
+Minimal semantic targets: 1
+Candidate baseline: CB-006
+Manifest size: 36
+Focused pressure: 16 PASS / 0 FAIL
 Cross-layer convergence: 18 PASS / 0 FAIL
-PRODUCTION ADMISSION: NOT REQUESTED
-B2.2 STORE SELECTION: BLOCKED
-IMPLEMENTATION: BLOCKED
+PRODUCTION STAGING: READY
+B2.2: BLOCKED
 ```
-
-## Candidate Boundary
-
-Credential material remains with Locksmith responsibility and Runtime custody.
-
-Muster and the Deployment Package may carry only non-secret, non-bearer binding references, access tickets, Access Grant references, permission constraints, expiration and revocation conditions, and permitted access results or refusals.
 
 ## Current Gate
 
-Review and merge or reject the B2.1a draft candidate.
+Merge the B2.1a production admission review, then construct and verify the one-artifact CB-006 transition.
 
-A separate production-admission increment is required before CB-005 changes. No admission, store selection, credential operation, implementation, Runtime action, staging, deployment, or external effect is authorized by this candidate.
+No B2.2 selection, credential operation, implementation, Runtime action, staging, deployment, or external effect is authorized.
