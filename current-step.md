@@ -13,7 +13,8 @@ B2.3 is active. No persistence device is selected and B2 remains unimplemented a
 ```text
 Pressure target: admitted Armory/Locksmith, Muster, Barbican,
                  Access Grant, and Provider Intervention Ledger contracts
-Result: 15 PASS / 7 FAIL
+Pressure result: 15 PASS / 7 FAIL
+Candidate review: 12 PASS / 0 FAIL
 Finding: bounded Cognitive convergence correction required
 Production changed: NO
 Persistence device selected: NO
@@ -22,11 +23,11 @@ Network contact: NO
 Instance running: NO
 ```
 
-The failures concern sole device access, Locksmith adapter ownership, direct Runtime device prohibition, backend-native caller inputs, pre-access validation, failure secrecy, and exceptional custody isolation.
+The failures concern sole device access, Locksmith adapter ownership, direct Runtime device prohibition, backend-native caller inputs, pre-access findings, failure secrecy with retained provenance, and exceptional custody isolation.
 
 ## Current Gate
 
-Stop at the Cognitive pressure-record merge gate.
+Stop at PR #75's reviewed Cognitive pressure-record merge gate.
 
 If merged, the next bounded increment is the exact CB-007 draft revision and test matrix. Do not alter Cognitive production or implement a persistence adapter in this increment.
 
