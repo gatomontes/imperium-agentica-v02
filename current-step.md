@@ -2,30 +2,30 @@
 
 ## Status
 
-Track A, B1, B2.1, and B2.1a are closed.
+Track A, B1, B2.1, B2.1a, and B2.2 are complete and closed.
 
 B2.2 selected OpenBao on a separate single-node Ubuntu VPS as the bounded nonproduction target.
 
-The selection candidate is active. No OpenBao instance is provisioned or running.
+No OpenBao instance is provisioned or running. B2 remains unimplemented.
 
-B2 remains unimplemented.
+No leg is active.
 
-## Selection
+## B2.2 Final Record
 
 ```text
+Evaluation foundation: PR #67 / 02fc149961632d888ac0da5b94cbbae358647587
+Selection: PR #68 / 2fa08c120a75ca9b9b79d7946ee5ee14bbf7d199
 Store: OpenBao
 Version family: 2.6.x
 Topology: isolated single-node Ubuntu VPS
-Storage: integrated Raft, one voter
-Availability: fail closed; no HA claim
-Seal: manual operator-controlled Shamir
-Tenant scope: one
-Instance running: NO
 Selection pressure: 18 PASS / 0 FAIL
+Instance running: NO
 ```
 
 ## Current Gate
 
-Review and merge or reject the selection candidate, then close B2.2.
+Stop.
 
-No VPS purchase, provisioning, installation, initialization, unseal, account, SDK, secret, credential, network contact, Runtime action, deployment, or external effect is authorized.
+B2.3 is next eligible but requires a new instruction. It may begin as repository-local, non-networked adapter implementation without running OpenBao.
+
+No VPS purchase, provisioning, installation, initialization, unseal, account, secret, credential, network contact, Runtime action, deployment, or external effect is authorized.
