@@ -6,9 +6,9 @@
 
 ## Status
 
-Authorized decision candidate. Merge gated.
+Recorded decision merged through PR #73 and squash commit `7ba0b10baaf89c561e3a87650f65dde4596ec3b1`.
 
-This candidate supersedes the active OpenBao-specific B2.3 path without deleting its historical decisions, artifacts, or pressure evidence.
+This decision supersedes the active OpenBao-specific B2.3 path without deleting its historical decisions, artifacts, or pressure evidence.
 
 ## Question
 
