@@ -87,21 +87,23 @@ test("unknown references fail before service-port transport contact", async () =
 });
 
 test("invalid correlation generation fails before service-port transport contact", async () => {
-  let calls = 0;
-  const store = new OpenBaoImperiumServicePortBackend({
-    bindings: { [secretReference]: { operationId, version } },
-    idFactory: () => "",
-    transport: {
-      executeFixedOperation() {
-        calls += 1;
+  for (const invalid of ["", " ", "../request", "request_001", "x".repeat(129)]) {
+    let calls = 0;
+    const store = new OpenBaoImperiumServicePortBackend({
+      bindings: { [secretReference]: { operationId, version } },
+      idFactory: () => invalid,
+      transport: {
+        executeFixedOperation() {
+          calls += 1;
+        },
       },
-    },
-  });
-  await assert.rejects(
-    store.acquire({ secretReference }),
-    /^Error: OPENBAO_SERVICE_ACQUISITION_FAILED$/,
-  );
-  assert.equal(calls, 0);
+    });
+    await assert.rejects(
+      store.acquire({ secretReference }),
+      /^Error: OPENBAO_SERVICE_ACQUISITION_FAILED$/,
+    );
+    assert.equal(calls, 0);
+  }
 });
 
 test("binding catalog refuses generic paths, fields, policies, and implicit versions", () => {
