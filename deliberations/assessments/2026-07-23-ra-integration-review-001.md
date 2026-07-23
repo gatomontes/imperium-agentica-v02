@@ -6,7 +6,7 @@
 
 ## Status
 
-Completed deliberation candidate. Merge pending.
+Merged deliberation. Execution record pending merge.
 
 ## Authorization
 
@@ -140,7 +140,7 @@ This review does not:
 
 ```text
 B1 CLOSED: YES
-RA INTEGRATION REVIEW: COMPLETE AS DELIBERATION CANDIDATE
+RA INTEGRATION REVIEW: MERGED
 PENDING CONTROL RECORDS IDENTIFIED: 7
 IMPLEMENTED CONTROLS: 0
 B2 NEXT ELIGIBLE: YES
