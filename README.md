@@ -117,10 +117,10 @@ A future LLM session should read the repository in this order:
 2. `current-step.md` — active operational context.
 3. `next-steps.md` — pending operational queue.
 4. `deliberations/README.md` — cross-layer risk, deliberation, control-tracking, and implementation-status instructions, when evaluating gaps, external findings, or continuous improvement.
-7. `deliberations/registry.md` — current risk, program, control, and decision index, when deliberation work is relevant.
-8. `layers/cognitive/README.md` — cognitive-layer boundary and admission rules.
-5. `layers/cognitive/production/` — admitted cognitive baseline, when cognitive structure is relevant.
-6. `layers/authority/README.md` — approved authority boundary.
+5. `deliberations/registry.md` — current risk, program, control, and decision index, when deliberation work is relevant.
+6. `layers/cognitive/README.md` — cognitive-layer boundary and admission rules.
+7. `layers/cognitive/production/` — admitted cognitive baseline, when cognitive structure is relevant.
+8. `layers/authority/README.md` — approved authority boundary.
 9. `layers/authority/production/` — admitted Authority Baseline `AB-003`, when authority is relevant.
 10. `layers/authority/drafts/` — shaped but unproven authority contracts, only if relevant.
 11. `layers/provenance/README.md` — approved provenance boundary.
