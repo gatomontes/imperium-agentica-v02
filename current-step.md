@@ -2,65 +2,54 @@
 
 ## Status
 
-B1.3 Provider-Neutral Deployment Policy Convergence merged and post-merge verified on 2026-07-23.
+`B1 — Provider-Neutral Deployment Authorization and Authentication Policy` has an active closure review.
 
-B1.1 Deployment Authorization and B1.2 Authentication-Proof Satisfaction remain fully closed and recorded.
+B1.1 Deployment Authorization, B1.2 Authentication-Proof Satisfaction, and B1.3 Deployment Policy Convergence are fully merged and separately recorded.
 
-This separate execution record is the final B1.3 continuity increment. The B1 closure review and B2 are not active.
+The operator instruction `Proceed` authorizes this B1 closure review and preparation of its finding only.
+
+No closure-record merge, B2 preparation, infrastructure selection, credential operation, Runtime action, deployment, or external effect is authorized.
 
 This file is operational continuity, not doctrine, architecture, or authority.
 
-## Merge Record
+## Closure Question
+
+Does the merged B1 set contain every provider-neutral policy decision required before infrastructure selection, without forcing Procedure, Muster, Runtime, Iron Gate, a provider, or an implementation to invent Authority?
+
+## Pressure Result
 
 ```text
-Pull request: #54
-Squash commit: 9b1ace02cb1128dc3f780dff184ee5d0e6c3d9b8
-Rollback parent: fd398ce9add3c210a1fb28daef92309d4eaff9c6
-Candidate head: 536d61ba5134d13cf788b99f65513c1da296135a
-```
-
-Execution record:
-
-`drafts/provider-neutral-deployment-policy-convergence-execution-001.md`
-
-## Verified Evidence
-
-```text
-Baseline pressure: 12 PASS / 6 FAIL
-Corrected pressure: 18 PASS / 0 FAIL
-Cross-layer boundary review: 15 PASS / 0 FAIL
+B1 closure pressure: 20 PASS / 0 FAIL
+Cross-layer closure convergence: 16 PASS / 0 FAIL
+Remaining provider-neutral policy gaps: 0
+Infrastructure-dependent concerns correctly deferred: 9
 Production semantic files changed: 0
 Implementation files changed: 0
 ```
 
-No executable suite was rerun for the candidate.
+## Closure Finding
 
-## B1.3 Result
+```text
+B1 COMPLETE: YES
+REMAINING PROVIDER-NEUTRAL POLICY GAPS: 0
+B2 ELIGIBLE AS NEXT SEPARATELY AUTHORIZED LEG: YES
+B2 ACTIVE: NO
+```
 
-B1.3 establishes unadmitted draft Authority evidence for treating one exact Deployment Authorization and every required current authentication-satisfaction finding as one exact downstream prerequisite set only through a current convergence assessment.
-
-It defines:
-
-- `DEPLOYMENT_POLICY_CONFORMANT`
-- `DEPLOYMENT_POLICY_NOT_CONFORMANT`
-- `DEPLOYMENT_POLICY_UNRESOLVED`
-- exact identity, version, scope, correlation, interval, parent-validity, prerequisite, prohibition, contest, and supersession alignment
-- atomic unavailability and reassessment when any required prerequisite becomes unavailable
+B1 now defines exact deployment authorization, authentication-requirement satisfaction, and current policy convergence while preserving mission binding, grants, credentials, readiness, crossing authority, Runtime, and deployment as separate later concerns.
 
 ## Preserved Boundaries
 
-- Authority owns convergence
-- Provenance preserves exact evidence and lineage
-- Procedure may require but cannot create convergence
-- Muster may consume but cannot infer convergence
-- Runtime and Iron Gate may enforce but cannot originate convergence
-- convergence creates no mission binding, Tool or Access Grant, credential custody, readiness, crossing authority, Runtime action, or deployment
-- no production semantic, implementation, infrastructure selection, credential operation, or external effect was added
+- Authority owns authorization, authentication satisfaction, and convergence
+- Provenance preserves exact identity, correlation, ordering, contest, supersession, and lineage
+- Procedure may require but cannot create or repair the findings
+- Muster may consume but cannot infer them from assembly completeness
+- Runtime and Iron Gate may enforce but cannot originate Authority
+- missing infrastructure is correctly deferred rather than treated as a B1 policy failure
+- no new layer, production semantic, implementation, infrastructure selection, credential operation, or external effect is introduced
 
 ## Next Gate
 
-Merge this separate B1.3 execution record.
+Approve or reject merge of this B1 closure record.
 
-After that merge, perform a separately authorized B1 closure review to determine whether B1 may close before B2.
-
-No execution-record merge, B1 closure review, B1 closure, B2 preparation, infrastructure selection, credential operation, Runtime action, deployment, or external effect is authorized by this record.
+Only after that merge may B1 be treated as closed and B2 become the next eligible leg. B2 remains separately gated.
