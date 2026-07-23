@@ -40,6 +40,4 @@ B2.3 is active. Cognitive sole-accessor pressure found 15 PASS / 7 FAIL; candida
 
 Require explicit authorization to merge PR #75.
 
-PR #74 is a separate value-realization deliberation candidate and does not change this B2.3 gate. Because both candidates update `deliberations/registry.md`, the second merge requires registry reconciliation.
-
 No persistence technology, real credential, running service, network contact, provisioning, deployment, Runtime action, or external effect is authorized.
