@@ -30,7 +30,8 @@ The private package manifest exposes only these paths:
 | `@imperium-agentica/runtime-reference/providers/node-process-supervisor` | injected, credentialless Node process-supervisor reference adapter |
 | `@imperium-agentica/runtime-reference/security/synthetic-credentials` | in-memory, one-use synthetic credential boundary for tests |
 | `@imperium-agentica/runtime-reference/providers/node-process-supervisor/synthetic-credentials` | synthetic-only projection from the one-use broker to the injected supervisor driver |
-| `@imperium-agentica/runtime-reference/security/synthetic-secret-store` | expiring synthetic lease port with an in-memory test backend |
+| `@imperium-agentica/runtime-reference/security/synthetic-secret-store` | expiring synthetic lease port with synchronous and asynchronous acquisition paths |
+| `@imperium-agentica/runtime-reference/security/openbao-kv-v2` | pinned OpenBao 2.6.1 KV v2 backend over an injected authenticated transport |
 
 The placement and export names are stable enough for repository tests and future bounded investigations. Behavior remains revisable and contestable by evidence.
 
@@ -78,7 +79,17 @@ This projection does not define a real credential format, header, environment va
 
 Lease binding covers environment, component, scope, and purpose. Expiry, explicit lease revocation, secret-reference revocation, store unavailability, absent references, and close fail without material disclosure. Audit events use a separate non-capability lease identity and omit both lease and broker handles.
 
-This port does not select or emulate a real secret-store vendor, authentication method, SDK, network protocol, encryption scheme, file format, deployment, or availability guarantee.
+`acquireAsync()` awaits an asynchronous backend and then uses the same broker registration and lease-construction path. The synchronous entry refuses a backend declared asynchronous before invoking it. Consumption remains synchronous.
+
+This port does not itself select or emulate a real authentication method, SDK, network protocol, encryption scheme, file format, deployment, or availability guarantee.
+
+## OpenBao KV v2 Backend
+
+`OpenBaoKvV2SecretStoreBackend` pins OpenBao 2.6.1 and maps configured opaque references to an exact mount, path, field, and positive KV version. It sends only method, path, and accepted media type through an injected authenticated transport. Missing references, response failures, malformed content, missing fields, and version mismatches refuse generically.
+
+The injected transport owns authentication and network behavior. This package supplies no HTTP client, SDK, token header, AppRole bootstrap, environment variable, filesystem, or live connection. Health classification fails closed for unknown responses.
+
+Mutable response bytes are zeroed after parsing. UTF-8 decoding and JSON parsing create immutable JavaScript strings, so this behavior does not prove complete memory erasure. Tests use only material classified as `SYNTHETIC_TEST_SECRET`.
 
 ## Ownership Boundary
 
