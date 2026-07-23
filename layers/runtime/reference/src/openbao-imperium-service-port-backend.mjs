@@ -24,6 +24,13 @@ function requireText(value, code) {
   if (typeof value !== "string" || value.length === 0) throw new Error(code);
 }
 
+function requireCorrelationValue(value) {
+  requireText(value, "OPENBAO_SERVICE_CORRELATION_REQUIRED");
+  if (!/^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*$/.test(value) || value.length > 128) {
+    throw new Error("OPENBAO_SERVICE_CORRELATION_REFUSED");
+  }
+}
+
 function sameFields(actual, expected) {
   return actual.length === expected.length &&
     actual.every((field, index) => field === expected[index]);
@@ -121,7 +128,7 @@ export class OpenBaoImperiumServicePortBackend {
     let response;
     try {
       const correlationValue = this.#idFactory();
-      requireText(correlationValue, "OPENBAO_SERVICE_CORRELATION_REQUIRED");
+      requireCorrelationValue(correlationValue);
       const correlationId = `imperium-service-port-${correlationValue}`;
       response = await this.#transport.executeFixedOperation(Object.freeze({
         operationId: binding.operationId,
