@@ -6,7 +6,7 @@
 - Improvement programs recorded: 7
 - Pending control records: 7
 - Implemented control records: 0
-- Decision records: 4
+- Decision records: 5
 - Initial assessment: `assessments/2026-07-23-mit-ai-risks-imperium-assessment.md`
 - Integration review: `assessments/2026-07-23-ra-integration-review-001.md`
 - Integration execution: `assessments/2026-07-23-ra-integration-review-execution-001.md`
@@ -74,8 +74,9 @@ None recorded.
 |---|---|---|
 | DR-001 | Separate risks, programs, and controls | Recorded conclusion |
 | DR-002 | Allocate RA controls without reopening B1 | Recorded decision |
-| DR-002 | Select OpenBao isolated single-node nonproduction target | Recorded decision; historical duplicate ID |
-| DR-003 | Select an OpenBao-hosted Imperium Service Port | Recorded decision; merged through PR #71 |
+| DR-002 | Select OpenBao isolated single-node nonproduction target | Historical decision; superseded for active selection |
+| DR-003 | Select an OpenBao-hosted Imperium Service Port | Historical decision; superseded by DR-004 |
+| DR-004 | Make Locksmith the sole security-persistence accessor | Authorized decision candidate; merge gated |
 
 The two `DR-002` records are distinct historical files. The later OpenBao topology decision reused an existing ID before this registry was updated. This candidate preserves both and records the collision; renumbering a prior decision requires a separate traceable normalization.
 
