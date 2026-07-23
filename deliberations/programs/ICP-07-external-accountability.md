@@ -26,7 +26,9 @@ Cross-layer and unresolved. Relevant responsibilities may cite Cognitive, Author
 
 ## Proposed Controls
 
-No `CTRL-*` candidate is admitted by this initial program record. Controls must be split into independently verifiable behaviors before implementation claims are possible.
+- `CTRL-007 — External Obligation Applicability`
+
+This is a pending investigation record. It is not admitted or implemented.
 
 ## Evidence Required
 
@@ -51,8 +53,9 @@ No regulator, auditor, jurisdiction, standard, or external authority is selected
 
 ## Current Status
 
-`RECORDED_FOR_DELIBERATION`
+`CONTROL_CANDIDATE_RECORDED`
 
 ## Revision History
 
 - 2026-07-23 — Initial program record.
+- 2026-07-23 — RA Integration Review 001 linked `CTRL-007` as the smallest current pending control.

@@ -4,10 +4,11 @@
 
 - External risks recorded: 24
 - Improvement programs recorded: 7
-- Pending control records: 0
+- Pending control records: 7
 - Implemented control records: 0
-- Decision records: 1
+- Decision records: 2
 - Initial assessment: `assessments/2026-07-23-mit-ai-risks-imperium-assessment.md`
+- Integration review: `assessments/2026-07-23-ra-integration-review-001.md`
 
 ## Risks
 
@@ -42,17 +43,25 @@
 
 | ID | Program | Status | Pending Controls | Implemented Controls |
 |---|---|---|---:|---:|
-| ICP-01 | Risk function | `RECORDED_FOR_DELIBERATION` | 0 | 0 |
-| ICP-02 | Affected-stakeholder representation and recourse | `RECORDED_FOR_DELIBERATION` | 0 | 0 |
-| ICP-03 | Enforceable deployment authorization | `RECORDED_FOR_DELIBERATION` | 0 | 0 |
-| ICP-04 | Capability governance | `RECORDED_FOR_DELIBERATION` | 0 | 0 |
-| ICP-05 | Continuous assurance | `RECORDED_FOR_DELIBERATION` | 0 | 0 |
-| ICP-06 | Quantitative evidence | `RECORDED_FOR_DELIBERATION` | 0 | 0 |
-| ICP-07 | External accountability | `RECORDED_FOR_DELIBERATION` | 0 | 0 |
+| ICP-01 | Risk function | `CONTROL_CANDIDATE_RECORDED` | 1 | 0 |
+| ICP-02 | Affected-stakeholder representation and recourse | `CONTROL_CANDIDATE_RECORDED` | 1 | 0 |
+| ICP-03 | Enforceable deployment authorization | `CONTROL_CANDIDATE_RECORDED` | 1 | 0 |
+| ICP-04 | Capability governance | `CONTROL_CANDIDATE_RECORDED` | 1 | 0 |
+| ICP-05 | Continuous assurance | `CONTROL_CANDIDATE_RECORDED` | 1 | 0 |
+| ICP-06 | Quantitative evidence | `CONTROL_CANDIDATE_RECORDED` | 1 | 0 |
+| ICP-07 | External accountability | `CONTROL_CANDIDATE_RECORDED` | 1 | 0 |
 
 ## Pending Controls
 
-None recorded.
+| ID | Control | Program | Maturity | Required placement |
+|---|---|---|---|---|
+| CTRL-001 | Mission Risk Disposition | ICP-01 | `RECORDED_PENDING_INVESTIGATION` | before B4 |
+| CTRL-002 | Affected-Stakeholder Record and Recourse | ICP-02 | `RECORDED_PENDING_INVESTIGATION` | before B4 |
+| CTRL-003 | Per-Action Authorization Enforcement | ICP-03 | `RECORDED_PENDING_INVESTIGATION` | define B3; prove B4 |
+| CTRL-004 | Capability Suitability Finding | ICP-04 | `RECORDED_PENDING_INVESTIGATION` | before B3 selection finalizes |
+| CTRL-005 | Change-Triggered Reauthorization | ICP-05 | `RECORDED_PENDING_INVESTIGATION` | define B3; prove B4 |
+| CTRL-006 | Control Measurement Contract | ICP-06 | `RECORDED_PENDING_INVESTIGATION` | begin B2; required through B5 |
+| CTRL-007 | External Obligation Applicability | ICP-07 | `RECORDED_PENDING_INVESTIGATION` | before B4 |
 
 ## Implemented Controls
 
@@ -63,6 +72,7 @@ None recorded.
 | ID | Decision | Status |
 |---|---|---|
 | DR-001 | Separate risks, programs, and controls | Recorded conclusion |
+| DR-002 | Allocate RA controls without reopening B1 | Candidate decision; merge pending |
 
 ## Maintenance Rule
 
