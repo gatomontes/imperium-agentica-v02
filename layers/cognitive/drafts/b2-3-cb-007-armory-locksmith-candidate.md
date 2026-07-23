@@ -132,13 +132,11 @@ Locksmith enforces those cited findings as preconditions. It does not originate,
 
 The preferred outcome is a Locksmith-performed authenticated operation.
 
-Locksmith returns only:
+For initial Muster assembly, Locksmith returns only a permitted non-secret, non-replayable result, minimum permitted correlation metadata, or a generic external refusal.
 
-- the permitted non-secret, non-replayable result;
-- minimum permitted correlation metadata; or
-- a generic external refusal.
+For continuing Barbican traffic, Locksmith may return the permitted operation result, but it must contain no credential material, device credential, device session, backend-native detail, or value capable of independently authenticating to the persistence device or external provider.
 
-It does not return the device credential, device session, backend-native details, or independently replayable authentication material.
+This draft does not define the substantive data classification of a permitted provider result. Other admitted contracts remain controlling.
 
 ### Exceptional Runtime Custody
 
@@ -160,7 +158,7 @@ Locksmith produces the permitted non-secret intervention observation so the admi
 
 - ticket or entitlement requirement
 - performed authenticated operation
-- permitted non-secret, non-replayable result
+- permitted result containing no credential or independently authenticating material
 - generic external refusal
 - credential-class requirement without credential value
 - permission boundary
@@ -225,6 +223,7 @@ Review or revise this draft if:
 - callers can supply backend-native addressing or administration
 - Locksmith decides Authority validity or Provenance sufficiency
 - Runtime custody can be replayed or used against the persistence device
+- a result contains credential, device-session, or independently authenticating material
 - external failure reveals credential or backend details
 - generic refusal erases permitted intervention evidence
 - real credential behavior is implied before implementation authority exists
