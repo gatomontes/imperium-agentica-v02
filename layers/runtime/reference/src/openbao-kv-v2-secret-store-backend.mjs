@@ -1,4 +1,4 @@
-const SYNTHETIC_TEST_SECRET = "SYNTHETIC_TEST_SECRET";
+import { SyntheticCredentialClassification } from "./synthetic-credential-broker.mjs";
 
 export const OpenBaoContractPin = Object.freeze({
   version: "2.6.1",
@@ -48,7 +48,7 @@ function parseKvV2Body(body, reference) {
   }
   return {
     material: new TextEncoder().encode(value),
-    classification: SYNTHETIC_TEST_SECRET,
+    classification: SyntheticCredentialClassification,
     version: String(version),
   };
 }
