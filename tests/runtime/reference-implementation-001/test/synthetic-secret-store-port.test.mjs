@@ -372,3 +372,54 @@ test("store-port source contains no real persistence, transport, keychain, provi
   const source = readFileSync(new URL("../../../../layers/runtime/reference/src/synthetic-secret-store-port.mjs", import.meta.url), "utf8");
   assert.doesNotMatch(source, /process\.env|node:fs|node:http|node:https|node:net|fetch\(|child_process|keychain|apiKey|accessToken|password|privateKey/);
 });
+
+
+test("asynchronous backend acquisition enters the existing one-use lease boundary", async () => {
+  let backendCalls = 0;
+  const asyncBackend = {
+    acquisitionMode: "ASYNC",
+    async acquire({ secretReference: requestedReference }) {
+      backendCalls += 1;
+      assert.equal(requestedReference, secretReference);
+      return {
+        material: new TextEncoder().encode(secretMarker),
+        classification: SyntheticCredentialClassification,
+        version: "version-7",
+      };
+    },
+    revoke() {
+      return false;
+    },
+  };
+  const broker = new SyntheticCredentialBroker({
+    auditSink: { append() {} },
+    idFactory: ids(["async-broker-handle", "async-broker-audit"]),
+  });
+  const port = new SyntheticSecretStorePort({
+    backend: asyncBackend,
+    broker,
+    auditSink: { append() {} },
+    clock: () => 1_000,
+    idFactory: ids(["async-lease-handle", "async-lease-audit"]),
+    maxTtlMs: 100,
+  });
+
+  assert.throws(() => acquire(port), /SYNTHETIC_SECRET_ACQUISITION_FAILED/);
+  assert.equal(backendCalls, 0);
+
+  const lease = await port.acquireAsync({
+    secretReference,
+    ...binding,
+    ttlMs: 50,
+  });
+  assert.equal(backendCalls, 1);
+  assert.equal(lease.secretVersion, "version-7");
+
+  let observed;
+  assert.equal(consume(port, lease.leaseHandle, (view) => {
+    observed = new TextDecoder().decode(view);
+    return SyntheticCredentialResults.CONSUMED;
+  }), SyntheticCredentialResults.CONSUMED);
+  assert.equal(observed, secretMarker);
+  assert.equal(consume(port, lease.leaseHandle, () => SyntheticCredentialResults.CONSUMED), SyntheticCredentialResults.UNKNOWN);
+});
