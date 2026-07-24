@@ -61,6 +61,12 @@ Locksmith may refuse when the required finding is absent or mismatched. That ref
 
 AB-003 requires no semantic revision for this candidate.
 
+## Residual Administrative Scope
+
+AB-003 supplies the current mission-bound Access Grant semantics under pressure.
+
+This review does not infer an Authority profile for device bootstrap, backup, restore, root recovery, break-glass, migration, or other non-mission administration. Any such path requires separate admission and remains unavailable here.
+
 ## Explicit Non-Claims
 
 This review does not admit CB-007, implement Authority enforcement, create a real grant, or authorize an external operation.
