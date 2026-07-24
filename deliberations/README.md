@@ -100,6 +100,20 @@ If drift, a provider change, failed verification, invalidated assumptions, or im
 
 Git history preserves movement. A decision record preserves consequential semantic change.
 
+## Verifiable Language Discipline
+
+Imperium-authored deliberation must use exact, verifiable claims rather than undefined evaluative labels.
+
+A consequential claim records the subject, observed or alleged action or state, scope, evidence, provenance, verification method, uncertainty, contradicting evidence, and revision condition when applicable.
+
+External language may be preserved in a title, bounded quotation, imported taxonomy, or historical record for source fidelity. It cannot become an Imperium finding until translated into operationally defined claims.
+
+If translation cannot be made, preserve it as an attributed external assertion and mark the Imperium disposition unresolved.
+
+Do not perform context-free word replacement. Correct the underlying semantic defect.
+
+See `decisions/DR-007-verifiable-language-and-exact-claim-rule.md`.
+
 ## Deliberation Discipline
 
 Every material record separates:
