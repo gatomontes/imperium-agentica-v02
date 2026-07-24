@@ -16,7 +16,7 @@ Runtime Synthetic Credential Boundary 001 is merged and verified.
 
 Runtime Synthetic Credential-to-Provider Projection 001 is merged and verified.
 
-B2.3 Synthetic Locksmith-Owned Adapter 001 is the current candidate. Direct credential and store implementations remain retired historical evidence.
+B2.3 is closed through Locksmith Sole-Accessor Closure Review 001. Direct credential and store implementations remain retired historical evidence.
 
 ## Reference Implementation Evidence
 
@@ -129,6 +129,20 @@ Retirement removes active package reachability while preserving source, tests, d
 - network contact: no
 
 The adapter demonstrates exact-binding, availability, inactive-state, and replay behavior behind Locksmith. It does not demonstrate credential lifecycle, durability, provider authentication, or live operation.
+
+## Closed B2.3 Locksmith Sole-Accessor Implementation
+
+- Cognitive baseline: CB-007
+- closure review: 26 PASS / 0 FAIL
+- Runtime-facing port executable: 10 PASS / 0 FAIL
+- combined port/adapter executable: 19 PASS / 0 FAIL
+- active security-persistence package exports: Locksmith access only
+- retired direct credential/store exports: 5
+- historical source/tests preserved: yes
+- persistence device selected: no
+- repository CI/workflow signal: none available; no CI pass claimed
+
+B2.3 closes at bounded nonproduction reference scope. Real credential lifecycle, durability, outage, recovery, provider authentication, and device behavior remain for later evidence.
 
 ## Evidence Limits
 
