@@ -2,29 +2,32 @@
 
 ## Status
 
-Operative Creation and Selection Deliberation Review 001 is active in `current-step.md`.
+Operative Creation and Selection Deliberation Review 001 completed its first evidence increment.
 
-Track A remains closed. B2.4 and B2.5 are parked rather than treated as the critical path. No persistence device or topology is selected.
+Track A remains closed. Locksmith and credential infrastructure remain parked. No leg is currently active.
 
-## Track State
+## Map Findings Queue
 
-| Track or leg | State |
-|---|---|
-| Track A — Operative Creation | closed production history; under deliberation-first assurance review |
-| B1 | closed |
-| B2.1 / B2.1a / B2.3 | closed |
-| B2.2 | historical selection superseded |
-| B2.4 / B2.5 | parked until a concrete authenticated-integration trigger |
-| B3 / B4 / B5 | not active |
+| Order | Finding | State |
+|---:|---|---|
+| 1 | persona-selection ownership, criteria, and tie behavior | mapped; pressure not authorized |
+| 2 | Garrison admission-gate sufficiency | mapped; pressure not authorized |
+| 3 | execution-instrument capability suitability / CTRL-004 | mapped; narrowing and ownership unresolved |
+| 4 | change-triggered reevaluation after model/medium/tool changes | theoretically covered; admission/implementation unresolved |
+| 5 | unequal-performance evidence when affected groups are material | conditional gap mapped |
+| 6 | affected-stakeholder and recourse inputs | outside native creation ownership; dependency mapped |
+| 7 | measurement and invalidation discipline | partially applied; CTRL-006 remains pending |
+| 8 | multi-agent composition risk | outside current single-Operative chain |
 
-## Queue After the Current Evidence Increment
+## Next Proposed Bounded Increment
 
-1. pressure the lineage-and-decision findings for false gaps and layer-ownership drift;
-2. decide whether CTRL-004 duplicates existing suitability behavior, requires a narrower finding, or exposes a real missing boundary;
-3. map relevant fairness, unequal-performance, robustness, dangerous-capability, transparency, human-agency, and multi-agent risks without forcing all risk ownership into creation;
-4. identify the smallest candidate correction only where admitted contracts are demonstrably insufficient;
-5. require separate review, pressure, and promotion authority before changing production;
-6. continue the broader deliberation queue, including affected-stakeholder recourse, measurement, and recorded value-realization questions.
+If explicitly authorized:
+
+1. pressure the first three findings against admitted production and Track A evidence;
+2. reject false gaps and duplicated semantics;
+3. preserve Cognitive, Authority, Provenance, Procedure, and Runtime ownership;
+4. decide separately for each finding: no change, clarification, draft admission candidate, control narrowing, or unresolved;
+5. stop before creating or promoting a production correction.
 
 ## Parked Locksmith Restart Trigger
 
@@ -32,6 +35,6 @@ Do not resume credential infrastructure until a concrete authenticated operation
 
 ## Current Gate
 
-The active work is the Operative creation/selection evidence map recorded in `current-step.md`.
+No active leg.
 
-No production revision, pending-control admission, model/provider selection, credential work, deployment, or external effect is authorized by this queue.
+Require explicit authorization before beginning the findings-pressure increment. No production change, pending-control admission, model/provider/evaluator selection, credential work, deployment, or external effect is authorized.
