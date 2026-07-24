@@ -6,7 +6,7 @@
 
 ## Status
 
-Active bounded deliberation scope.
+First evidence increment complete; bounded follow-up pressure not yet authorized.
 
 ## Purpose
 
@@ -88,6 +88,17 @@ A proposed change may proceed only after:
 - Authority, Provenance, Procedure, Runtime, and Cognitive ownership are preserved;
 - pressure criteria and invalidation conditions are written;
 - separate promotion authority is obtained.
+
+## First Increment Result
+
+- decision map: `assessments/2026-07-24-operative-creation-selection-lineage-decision-map-001.md`
+- mapped decisions/gates: 21
+- classified findings: 12
+- map review: 18 PASS / 0 FAIL
+- production semantic files changed: 0
+- implementations changed: 0
+
+The map completed this scope's first evidence increment. Any follow-up correction requires a new bounded pressure decision.
 
 ## Explicit Non-Claims
 
