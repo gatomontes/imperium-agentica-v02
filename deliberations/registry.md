@@ -84,7 +84,7 @@ None recorded.
 | DR-004 | Make Locksmith the sole security-persistence accessor | Recorded decision; merged through PR #73 |
 | DR-005 | Park credential infrastructure and refocus on Operative creation and selection | Active focus decision |
 | DR-006 | Require achievement-grounded real-world exemplars for every professional persona | Principle retained; pressure-test dispositions refined by DR-007 |
-| DR-007 | Require verifiable language and exact claims; defer EC-01 and supersede EC-02 framing | Recorded operator-wide SOP decision; EC-03 interpretation refined by DR-008 |
+| DR-007 | Require verifiable language and exact claims; defer EC-01 and supersede EC-02 framing | Recorded operator-wide SOP decision; EC-03 closed by DR-009 |
 | DR-008 | Treat authorized bias as a declared persona or operative orientation, not Imperium doctrine | Historical alternative; superseded by DR-009 |
 | DR-009 | Require evidence without engineered political, ideological, or conclusion-seeking orientation | Active operator-wide SOP decision |
 
