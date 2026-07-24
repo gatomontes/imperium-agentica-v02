@@ -14,6 +14,7 @@
 - Distributed efficiency and value realization: `assessments/2026-07-23-distributed-efficiency-value-realization-001.md`
 - Operative creation/selection review scope: `assessments/2026-07-24-operative-creation-selection-deliberation-scope-001.md`
 - Operative creation/selection decision map: `assessments/2026-07-24-operative-creation-selection-lineage-decision-map-001.md`
+- DR-006 pressure test: `assessments/2026-07-24-dr-006-mandatory-exemplar-grounding-pressure-test-001.md` — 18 PASS / 3 FAIL
 
 ## Risks
 
@@ -82,7 +83,7 @@ None recorded.
 | DR-003 | Select an OpenBao-hosted Imperium Service Port | Historical decision; superseded by DR-004 |
 | DR-004 | Make Locksmith the sole security-persistence accessor | Recorded decision; merged through PR #73 |
 | DR-005 | Park credential infrastructure and refocus on Operative creation and selection | Active focus decision |
-| DR-006 | Require achievement-grounded real-world exemplars for every professional persona | Recorded operator SOP decision; production pressure pending |
+| DR-006 | Require achievement-grounded real-world exemplars for every professional persona | Pressure tested: principle retained; production admission blocked by EC-01–EC-03 |
 
 The two `DR-002` records are distinct historical files. The later OpenBao topology decision reused an existing ID before this registry was updated. This record preserves both and records the collision; renumbering a prior decision requires a separate traceable normalization.
 
