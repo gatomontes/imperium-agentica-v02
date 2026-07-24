@@ -6,7 +6,7 @@ Track A, B1, B2.1, B2.1a, and B2.3 are complete and closed. Cognitive Baseline C
 
 DR-005 parks Locksmith and credential infrastructure until an observed authenticated-integration trigger.
 
-**DR-008 Declared Persona and Operative Orientation is recorded.**
+**DR-009 Evidence Without Engineered Orientation is recorded. DR-008 is superseded.**
 
 No leg is currently active.
 
@@ -16,24 +16,27 @@ No leg is currently active.
 DR-006 exemplar-grounding principle: RETAINED
 EC-01 evidence-source standard: REQUIRED LATER; DEFERRED
 EC-02 prior framing: REJECTED AND SUPERSEDED
-EC-03: REFINED BY DR-008
-Authorized bias: DECLARED PERSONA OR OPERATIVE ORIENTATION
-Imperium doctrine: NOT CREATED
+EC-03 proposed orientation/calibration concern: CLOSED
+DR-008 Declared Orientation: SUPERSEDED
+Engineered persona or operative bias: PROHIBITED
+Operator judgment after handoff: PRESERVED
 Production files changed: 0
 Implementation files changed: 0
 External effect: NO
 ```
 
-## Orientation Boundary
+## Evidence Boundary
 
-An authorized operator may require a persona or operative to embody a declared political, philosophical, strategic, or methodological orientation.
+> It is what it is.
 
-A persistent orientation belongs to the Persona Specification. A mission-specific orientation belongs to the Operative configuration and must not silently mutate the Canonical Persona.
+Imperium provides the cleanest attainable evidence product: exact observations and source claims, contradiction, assumptions, unknowns, limitations, inferences, confidence, and revision conditions.
 
-The orientation may shape emphasis, tradeoffs, and recommendations. It cannot change facts, fabricate or suppress evidence, conceal required contrary evidence, or override authority and governance.
+Personas and Operatives may not be tuned toward preferred political, ideological, philosophical, or conclusion-seeking results.
+
+An operator may define the question and constraints and may decide however the operator wishes after handoff. Imperium must not alter the evidence in anticipation of that decision.
 
 ## Current Gate
 
-Stop after preserving DR-008.
+Stop after preserving DR-009 and superseding DR-008.
 
-No production correction, orientation selection, persona creation, model fine-tuning, Runtime action, or external effect is authorized.
+No production correction, orientation implementation, persona creation, model fine-tuning, Runtime action, or external effect is authorized.

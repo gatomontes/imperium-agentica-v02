@@ -12,8 +12,8 @@ Track A remains closed. Locksmith and credential infrastructure remain parked. N
 |---:|---|---|
 | 1 | EC-01 evidence-source standard | required when persona production or admission approaches; deferred |
 | 2 | prior EC-02 framing | rejected and superseded by DR-007 exact-claim requirements |
-| 3 | EC-03 orientation/composition concern | refined by DR-008; use declared persona or operative orientation and concrete Pit evidence |
-| 4 | pressure-test Declared Orientation semantics | when a concrete persona or operative orientation is requested |
+| 3 | EC-03 proposed orientation/calibration concern | closed by DR-009 |
+| 4 | evidence-without-orientation pressure tests | when persona-production admission approaches |
 | 5 | decide whether a minimal CB-007 admission candidate has earned promotion | deferred |
 
 ## Existing Operative-Creation Map Queue
@@ -33,16 +33,16 @@ Track A remains closed. Locksmith and credential infrastructure remain parked. N
 
 Draft EC-01 only when work approaches Human-Trait Canon construction, persona-production admission, or another concrete gate requiring a source-sufficiency decision.
 
-## Future Declared-Orientation Trigger
+## Future Evidence-Integrity Trigger
 
-When an operator requests a concrete orientation:
+When persona-production admission approaches, test that:
 
-1. decide whether it persists at persona level or is mission-specific to an Operative;
-2. record its authorization, exact behavioral meaning, scope, exclusions, evidence invariants, and removal conditions;
-3. test it in Pit against the requested orientation, professional competence, evidence duties, and governance;
-4. preserve any mission-specific difference from the Canonical Persona.
+1. professional traits shape method rather than preselect conclusions;
+2. the evidence product distinguishes observations, claims, disputes, assumptions, unknowns, limitations, and inferences;
+3. materially contradicting evidence is preserved;
+4. evidentiary weight follows declared source and verification criteria rather than political or emotional preference;
+5. requests to explain a viewpoint remain attributed objects of study and do not become the persona's orientation.
 
-Do not create an Imperium-wide ideology, abstract balancing regime, or automatic counter-orientation.
 
 ## Parked Locksmith Restart Trigger
 
@@ -52,4 +52,4 @@ Do not resume credential infrastructure until a concrete authenticated operation
 
 No active leg.
 
-No EC-01 draft, orientation selection, production change, model/provider/evaluator selection, credential work, deployment, or external effect is authorized.
+No EC-01 draft, persona-orientation work, production change, model/provider/evaluator selection, credential work, deployment, or external effect is authorized.

@@ -49,6 +49,16 @@ External source language may be preserved for fidelity, but Imperium must transl
 
 See `deliberations/decisions/DR-007-verifiable-language-and-exact-claim-rule.md`.
 
+## Evidence Without Orientation
+
+> **It is what it is.**
+
+Imperium must provide the cleanest attainable account of the evidence without tuning a persona or operative toward a preferred political, ideological, philosophical, or conclusion-seeking result.
+
+The operator may apply personal judgment after handoff. Imperium must not pre-distort the evidence in anticipation of that choice.
+
+See `deliberations/decisions/DR-009-evidence-without-engineered-orientation.md`.
+
 ---
 
 ## What Collapsed
