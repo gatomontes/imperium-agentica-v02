@@ -14,6 +14,7 @@ B2.3 is active. No persistence device is selected and B2 remains unimplemented a
 Sole-accessor pressure rerun: 22 PASS / 0 FAIL
 Authority–Cognitive convergence: 15 PASS / 0 FAIL
 Provenance–Cognitive convergence: 15 PASS / 0 FAIL
+Candidate review: 14 PASS / 0 FAIL
 Production semantic files changed: 0
 Runtime implementation files changed: 0
 Persistence device selected: NO
@@ -26,9 +27,11 @@ Authority remains the owner of Access Grant and exact-action permission semantic
 
 Provenance remains the owner of correlation, staged intervention observations, and append-preserving correction semantics.
 
+The evidence covers mission-bound access. Non-mission administration, bootstrap, backup, recovery, break-glass, emergency access, and migration remain unadmitted.
+
 ## Current Gate
 
-Stop at the CB-007 convergence-evidence review and merge gate.
+Stop at PR #77's reviewed CB-007 convergence-evidence merge gate.
 
 If merged, the next bounded increment is Cognitive production-admission pressure and an exact CB-007 production-staging candidate. Promotion still requires separate explicit authorization.
 
