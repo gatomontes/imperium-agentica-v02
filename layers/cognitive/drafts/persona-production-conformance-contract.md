@@ -2,9 +2,9 @@
 
 ## Status
 
-Draft A2.3 candidate only.
+Draft A2.4 candidate only.
 
-This contract does not revise `CB-005`, produce or admit a live persona, select a persona, construct an Operative, or authorize mission action.
+This revision consumes `deliberations/decisions/DR-006-mandatory-real-world-exemplar-grounding.md` as an operator SOP requirement. It does not revise `CB-007`, produce or admit a live persona, select a persona, construct an Operative, or authorize mission action.
 
 ## Canonical Dependencies
 
@@ -23,12 +23,13 @@ Candidate evidence dependencies:
 
 - `layers/cognitive/drafts/guildhall-profession-resolution-contract.md`
 - `layers/cognitive/drafts/garrison-persona-suitability-contract.md`
+- `deliberations/decisions/DR-006-mandatory-real-world-exemplar-grounding.md`
 
-These dependencies are unadmitted draft evidence. This contract must remain consistent with controlling production contracts if either is revised or rejected.
+The first two dependencies are unadmitted draft evidence. DR-006 is an operator SOP decision, not admitted Cognitive production semantics. This contract must remain consistent with controlling production contracts and must not represent the SOP amendment as production admission.
 
 ## Native Concerns
 
-Guildhall owns Profession Specification meaning. Studium owns Persona Governance Doctrine. Hagiography owns the Human-Trait Canon when applicable. Foundry owns integration into a Persona Specification Candidate. Pit owns independent pressure findings and recommendation. Garrison owns admission and exact inventory truth. Conscription owns later selection and recruitment.
+Guildhall owns Profession Specification meaning. Studium owns Persona Governance Doctrine. Hagiography owns the required Human-Trait Canon for professional personas. Foundry owns integration into a Persona Specification Candidate. Pit owns independent pressure findings and recommendation. Garrison owns admission and exact inventory truth. Conscription owns later selection and recruitment.
 
 No owner may absorb another's concern.
 
@@ -76,15 +77,26 @@ Studium must return profession defects to Guildhall rather than repair them.
 
 ## Human-Trait Canon Gate
 
-Hagiography applicability must be explicit:
+For every professional persona:
 
 ```text
 TRAIT_CANON_REQUIRED
-TRAIT_CANON_NOT_APPLICABLE
-TRAIT_CANON_APPLICABILITY_UNRESOLVED
 ```
 
-When required, Hagiography may produce one versioned Human-Trait Canon containing exact source evidence, observed behavior, transfer rationale, useful conditions, limits, counterweights, risks, conflicts, confidence, and failure signals.
+Hagiography must produce one versioned Human-Trait Canon grounded in at least one identifiable, exemplary real-world practitioner in the resolved profession. Multiple practitioners should be used when sufficient evidence exists.
+
+For every inherited trait, the canon must preserve the inspectable derivation:
+
+```text
+real practitioner
+→ profession-relevant achievement or demonstrated performance
+→ observed behavior
+→ inferred transferable trait
+→ intended persona behavior
+→ conditions, limits, counterweights, and failure signals
+```
+
+Minimum content includes exact practitioner identity, profession, achievement or demonstrated-performance evidence, exact evidence sources, observed behavior, transfer rationale, intended behavioral expression, useful conditions, non-transferable context or advantages, costs, risks, conflicts, confidence, counterweights, and failure signals.
 
 Canon findings:
 
@@ -94,7 +106,13 @@ TRAIT_CANON_REFUSED
 TRAIT_CANON_UNRESOLVED
 ```
 
-Non-applicability requires rationale and provenance; it is not permission to omit needed human-behavior evidence. Fame, reputation, or whole-person imitation cannot substitute for trait evidence. A canon cannot override doctrine or profession boundaries.
+A missing or unresolved derivation link blocks conformance. Insufficient exemplar evidence produces a refused or unresolved finding and blocks Foundry.
+
+The source practitioner's achievements remain provenance for trait derivation. They are never claims, credentials, affiliations, authority, identity, or lived experience of the persona.
+
+Fame, reputation, prestige, mythology, whole-person imitation, fictional or composite exemplars, and generic trait adjectives cannot substitute for evidence. A canon cannot override doctrine or profession boundaries.
+
+Non-professional artifacts remain outside this gate unless represented or used as professional personas.
 
 ## Foundry Integration Gate
 
@@ -107,8 +125,10 @@ Candidate identity and version
 Mission and production-correlation references
 Work and Profession Specification references
 Persona Governance Doctrine reference and finding
-Human-Trait Canon reference or explicit non-applicability finding
+Required Human-Trait Canon reference and finding
+Exemplar-achievement-to-trait derivation references
 Professional competence and reasoning behavior
+Inherited traits expressed as testable persona behavior
 Evidence, uncertainty, disclosure, refusal, and escalation behavior
 Communication and tool-use expectations without grants
 Expected inputs and outputs
@@ -127,13 +147,13 @@ PERSONA_CANDIDATE_REFUSED
 PERSONA_CANDIDATE_UNRESOLVED
 ```
 
-Foundry cannot silently repair upstream defects or infer missing authority. Only the exact conformant candidate version may enter Pit.
+Foundry cannot silently repair upstream defects, infer missing authority, impersonate a source practitioner, or attribute the practitioner's achievements to the persona. Only the exact conformant candidate version may enter Pit.
 
 ## Pit Test Gate
 
 Pit independently tests the exact candidate and exact upstream versions against declared pressures and acceptance criteria.
 
-Pit Findings must record competence, governance, refusal, evidence, uncertainty, trait behavior, failures, implicated owner, retest conditions, exact sources, PB-001 finding, and recommendation.
+Pit Findings must record competence, governance, refusal, evidence, uncertainty, inherited-trait behavior, performative-mimicry risk, context loss, trait conflict, overextension, failures, implicated owner, retest conditions, exact sources, PB-001 finding, and recommendation.
 
 Test findings:
 
@@ -152,7 +172,7 @@ Each defect returns to the responsible owner:
 - work defect → Castellan
 - profession defect → Guildhall
 - doctrine defect → Studium
-- trait defect → Hagiography
+- trait or exemplar-evidence defect → Hagiography
 - integration defect → Foundry
 
 Any semantic change creates a new artifact version, new downstream integration where affected, new assessment, new Pit test, and exact `SUPERSEDES` lineage. Failed candidates and findings remain historical evidence; no candidate is mutated in place.
@@ -169,9 +189,9 @@ CANONICAL_PERSONA_REFUSED
 CANONICAL_PERSONA_ADMISSION_UNRESOLVED
 ```
 
-An admitted result creates one immutable Canonical Persona identity and version and an exact Garrison inventory record containing its profession, doctrine, applicable canon, purpose, competence, boundaries, limits, Pit history, admission evidence, qualification basis, availability, revision, and provenance references.
+An admitted result creates one immutable Canonical Persona identity and version and an exact Garrison inventory record containing its profession, doctrine, required canon, exemplar derivation provenance, purpose, competence, boundaries, limits, Pit history, admission evidence, qualification basis, availability, revision, and provenance references.
 
-Pit recommendation, Foundry conformance, prior use, urgency, or name similarity cannot substitute for admission.
+Pit recommendation, Foundry conformance, prior use, urgency, name similarity, or admiration for a source practitioner cannot substitute for admission.
 
 Refused and unresolved findings do not create inventory availability. Admission does not select, reserve, recruit, package, activate, or deploy the persona.
 
@@ -185,7 +205,7 @@ The newly admitted persona is not automatically suitable, selected, or available
 
 Every produced artifact cites exact sources and records applicable `DERIVED_FROM`, `PRODUCED_BY`, `CORRELATED_TO`, `CITES`, and `SUPERSEDES` relations under PB-001.
 
-A semantic change to any required upstream artifact, finding, candidate, test, or admission evidence invalidates dependent downstream findings for future use. Historical artifacts remain preserved.
+A semantic change to any required upstream artifact, exemplar evidence, finding, candidate, test, or admission evidence invalidates dependent downstream findings for future use. Historical artifacts remain preserved.
 
 ## Non-Admissions
 
@@ -204,7 +224,10 @@ This draft admits no:
 Reject or revise this draft if it:
 
 - lets no match act as construction authority
-- skips doctrine, applicable trait evidence, independent testing, or explicit admission
+- permits a professional persona without qualifying real-practitioner evidence
+- lists achievements without an inspectable achievement-to-behavior-to-trait derivation
+- attributes a practitioner's identity, achievements, credentials, affiliations, or lived experience to the persona
+- skips doctrine, required trait evidence, independent testing, or explicit admission
 - lets Foundry invent or silently repair upstream meaning
 - treats Pit recommendation as admission
 - mutates a failed candidate in place or loses historical findings
