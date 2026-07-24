@@ -196,3 +196,25 @@ access reference ≠ credential value
 Ready For Launch ≠ authentication or execution
 permitted result ≠ custody transfer
 ```
+
+## Active CB-007 Locksmith Sole-Accessor Convergence
+
+- baseline pressure: 15 PASS / 7 FAIL
+- corrected draft pressure: 22 PASS / 0 FAIL
+- Authority–Cognitive convergence: 15 PASS / 0 FAIL
+- Provenance–Cognitive convergence: 15 PASS / 0 FAIL
+- exact draft review: 14 PASS / 0 FAIL
+- production semantic files changed: 0
+- Runtime implementation files changed: 0
+- persistence device selected: none
+
+Candidate distinctions:
+
+```text
+credential responsibility ≠ Authority
+Runtime credential custody ≠ persistence-device access
+non-secret reference ≠ bearer capability
+generic external refusal ≠ absent internal Provenance observation
+provider result ≠ credential or device session
+technical reachability ≠ permission
+```
