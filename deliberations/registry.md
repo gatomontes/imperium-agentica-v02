@@ -12,7 +12,8 @@
 - Integration execution: `assessments/2026-07-23-ra-integration-review-execution-001.md`
 - B2.3 Locksmith closure: `assessments/2026-07-23-b2-3-locksmith-sole-accessor-closure.md`
 - Distributed efficiency and value realization: `assessments/2026-07-23-distributed-efficiency-value-realization-001.md`
-- Active Operative creation/selection review: `assessments/2026-07-24-operative-creation-selection-deliberation-scope-001.md`
+- Operative creation/selection review scope: `assessments/2026-07-24-operative-creation-selection-deliberation-scope-001.md`
+- Operative creation/selection decision map: `assessments/2026-07-24-operative-creation-selection-lineage-decision-map-001.md`
 
 ## Risks
 
