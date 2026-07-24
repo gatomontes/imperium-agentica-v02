@@ -95,6 +95,21 @@ The exact CB-007 drafts satisfy all 22 sole-accessor assertions.
 
 They are eligible for cross-layer convergence review. They are not admitted to production by this run.
 
+## Residual Scope
+
+The 22 assertions cover mission-bound credential access, continuing provider operations, and exceptional execution-local Runtime custody.
+
+They do not admit or evaluate:
+
+- non-mission device administration;
+- initial bootstrap or initialization;
+- backup or restore;
+- root, unseal, recovery, or break-glass custody;
+- operator emergency access;
+- device migration.
+
+Any later administrative path must remain behind Locksmith, cite separately admitted Authority and Provenance contracts appropriate to that responsibility, and receive its own pressure evidence.
+
 ## Explicit Non-Claims
 
 This run does not:
