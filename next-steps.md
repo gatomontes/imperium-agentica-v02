@@ -6,7 +6,7 @@ Track A, B1, B2.1, B2.1a, and B2.3 are complete and closed. Cognitive Baseline C
 
 B2.2's OpenBao selection is historical and superseded for active selection. No replacement device or topology is selected.
 
-B2.4 and B2.5 remain blocked. B2 remains unimplemented as a live system.
+No leg is currently active. B2.4 and B2.5 remain blocked. B2 remains unimplemented as a live system.
 
 ## Track B
 
@@ -15,7 +15,7 @@ B2.4 and B2.5 remain blocked. B2 remains unimplemented as a live system.
 | B1 | Deployment authorization and authentication policy | closed |
 | B2.1 | Secret custody and adapter boundary | closed as CB-007 |
 | B2.1a | Credential-transfer convergence correction | closed as CB-006 |
-| B2.2 | Store evaluation and selection | historical selection superseded; replacement evaluation not authorized |
+| B2.2 | Store evaluation and selection | historical selection superseded; replacement evaluation proposed but not authorized |
 | B2.3 | Nonproduction adapter implementation | closed; 26 PASS / 0 FAIL closure review |
 | B2.4 | Empirical credential lifecycle and outage tests | blocked by device evaluation/selection and implementation authority |
 | B2.5 | B2 evidence review and closure | blocked by B2.4 |
@@ -23,9 +23,9 @@ B2.4 and B2.5 remain blocked. B2 remains unimplemented as a live system.
 | B4 | Integrated nonproduction staging | not active |
 | B5 | Production admission and deployment | not active |
 
-## Next Bounded Leg
+## Next Proposed Bounded Leg
 
-If authorized, open a new replacement security-persistence-device evaluation behind Locksmith:
+If explicitly authorized, open a fresh replacement security-persistence-device evaluation behind Locksmith:
 
 1. derive evaluation gates from CB-007 and the Runtime-facing Locksmith port;
 2. prohibit any Runtime/provider/backend-native direct access path;
@@ -36,6 +36,6 @@ If authorized, open a new replacement security-persistence-device evaluation beh
 
 ## Current Gate
 
-Stop after merging the B2.3 closure record.
+No active leg.
 
-Starting concrete device evaluation, selecting technology/topology, using credentials, running a service, contacting a network, provisioning, deploying, or producing external effects requires new authorization.
+Require explicit authorization before starting concrete device evaluation. Selecting technology or topology, using credentials, running a service, contacting a network, provisioning, deploying, or producing external effects requires separate authority.
