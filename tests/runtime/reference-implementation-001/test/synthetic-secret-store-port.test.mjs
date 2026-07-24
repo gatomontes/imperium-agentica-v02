@@ -165,9 +165,9 @@ function dispatch(instance) {
   });
 }
 
-test("private package exports the synthetic secret-store port", () => {
+test("historical synthetic secret-store port is not actively exported", () => {
   const manifest = JSON.parse(readFileSync(new URL("../../../../layers/runtime/reference/package.json", import.meta.url), "utf8"));
-  assert.equal(manifest.exports["./security/synthetic-secret-store"], "./src/synthetic-secret-store-port.mjs");
+  assert.equal(manifest.exports["./security/synthetic-secret-store"], undefined);
 });
 
 test("synthetic backend admits only classified bytes and zeroes the seed caller view", () => {
