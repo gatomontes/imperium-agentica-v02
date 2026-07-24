@@ -28,14 +28,21 @@ The private package manifest exposes only these paths:
 | `@imperium-agentica/runtime-reference/adapters/file` | single-process append-and-fsync filesystem evidence |
 | `@imperium-agentica/runtime-reference/coordination/deterministic` | linearizable in-memory quorum and fencing oracle |
 | `@imperium-agentica/runtime-reference/providers/node-process-supervisor` | injected, credentialless Node process-supervisor reference adapter |
-| `@imperium-agentica/runtime-reference/security/synthetic-credentials` | in-memory, one-use synthetic credential boundary for tests |
-| `@imperium-agentica/runtime-reference/providers/node-process-supervisor/synthetic-credentials` | synthetic-only projection from the one-use broker to the injected supervisor driver |
 | `@imperium-agentica/runtime-reference/security/locksmith-access` | fixed-operation, provider-neutral Runtime boundary to Locksmith-owned fulfillment |
-| `@imperium-agentica/runtime-reference/security/synthetic-secret-store` | expiring synthetic lease port with synchronous and asynchronous acquisition paths |
-| `@imperium-agentica/runtime-reference/security/openbao-kv-v2` | pinned OpenBao 2.6.1 KV v2 backend over an injected authenticated transport |
-| `@imperium-agentica/runtime-reference/security/openbao-imperium-service-port` | fixed-operation Runtime client for the OpenBao-hosted Imperium Service Port |
 
 The placement and export names are stable enough for repository tests and future bounded investigations. Behavior remains revisable and contestable by evidence.
+
+## Historical Retired Security Implementations
+
+The following source modules and their direct-path tests remain repository evidence but are no longer exposed by the package API:
+
+- `synthetic-credential-broker.mjs`
+- `synthetic-credential-node-process-supervisor-adapter.mjs`
+- `synthetic-secret-store-port.mjs`
+- `openbao-kv-v2-secret-store-backend.mjs`
+- `openbao-imperium-service-port-backend.mjs`
+
+Their retention preserves deliberation and empirical history. It does not authorize active Runtime use. The sole active security-persistence-facing package export is `security/locksmith-access`.
 
 ## Node Process-Supervisor Adapter
 
@@ -55,7 +62,7 @@ The driver receives only the effect identity, attempt identity, environment, com
 
 `RECOVERY_INITIATED` means only that the injected driver accepted the operational request. It does not mean the component recovered, the Procedure completed, or a mission outcome was achieved.
 
-## Synthetic Credential Boundary
+## Historical Synthetic Credential Boundary
 
 `SyntheticCredentialBroker` accepts only non-empty `Uint8Array` material explicitly classified as `SYNTHETIC_TEST_SECRET`.
 
@@ -63,7 +70,7 @@ Registration transfers test custody by copying the bytes and zeroing the caller'
 
 This is test evidence, not a real secret store. JavaScript cannot prevent a trusted consumer from copying bytes while its synchronous callback runs, and zeroing a view does not prove removal of every engine or operating-system copy. The broker has no environment-variable, file, keychain, transport, provider, encryption-at-rest, deployment, or real-credential mechanism.
 
-## Synthetic Provider Projection
+## Historical Synthetic Provider Projection
 
 `SyntheticCredentialNodeProcessSupervisorAdapter` composes the broker with the existing credentialless provider adapter.
 
@@ -83,7 +90,7 @@ The injected executor represents Locksmith-owned fulfillment. It receives a froz
 
 This executable boundary does not implement a persistence adapter, select a device, admit exceptional Runtime credential custody, or authorize external effects.
 
-## Synthetic Secret-Store Port
+## Historical Synthetic Secret-Store Port
 
 `SyntheticSecretStorePort` separates acquisition from one-use consumption. Its external opaque lease maps privately to the broker capability, carries bounded acquisition and expiry metadata, and implements the broker-compatible `consume` surface used by the synthetic provider projection.
 
@@ -95,7 +102,7 @@ Lease binding covers environment, component, scope, and purpose. Expiry, explici
 
 This port does not itself select or emulate a real authentication method, SDK, network protocol, encryption scheme, file format, deployment, or availability guarantee.
 
-## OpenBao KV v2 Backend
+## Historical OpenBao KV v2 Backend
 
 `OpenBaoKvV2SecretStoreBackend` pins OpenBao 2.6.1 and maps configured opaque references to an exact mount, path, field, and positive KV version. It sends only method, path, and accepted media type through an injected authenticated transport. Missing references, response failures, malformed content, missing fields, and version mismatches refuse generically.
 
@@ -103,7 +110,7 @@ The injected transport owns authentication and network behavior. This package su
 
 Mutable response bytes are zeroed after parsing. UTF-8 decoding and JSON parsing create immutable JavaScript strings, so this behavior does not prove complete memory erasure. Tests use only material classified as `SYNTHETIC_TEST_SECRET`.
 
-## OpenBao Imperium Service-Port Backend
+## Historical OpenBao Imperium Service-Port Backend
 
 `OpenBaoImperiumServicePortBackend` maps an opaque Runtime secret reference to one fixed operation ID and one positive secret version. Its injected transport receives only that operation ID and a fresh correlation ID; the Runtime client has no caller-selected OpenBao path, mount, field, policy, workflow, RoleID, token, credential header, or generic request surface.
 

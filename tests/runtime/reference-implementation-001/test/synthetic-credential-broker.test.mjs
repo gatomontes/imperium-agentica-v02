@@ -35,9 +35,9 @@ function register(broker, material = Uint8Array.from([115, 121, 110, 116, 104]))
   return { handle, material };
 }
 
-test("private package exposes the synthetic credential boundary", () => {
+test("historical synthetic credential boundary is not actively exported", () => {
   const manifest = JSON.parse(readFileSync(new URL("../../../../layers/runtime/reference/package.json", import.meta.url), "utf8"));
-  assert.equal(manifest.exports["./security/synthetic-credentials"], "./src/synthetic-credential-broker.mjs");
+  assert.equal(manifest.exports["./security/synthetic-credentials"], undefined);
 });
 
 test("registration accepts only byte material with the exact synthetic classification", () => {
