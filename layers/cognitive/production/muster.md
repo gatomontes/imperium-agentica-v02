@@ -2,29 +2,26 @@
 
 ## Canonical Dependencies
 
-This cognitive artifact cites the following admitted contracts as external canonical definitions; it does not originate or redefine them:
+This Cognitive contract cites the following admitted contracts as external canonical definitions; it does not originate or redefine them:
 
+- `layers/authority/production/capability-tool-and-access-grants.md`
 - `layers/provenance/production/mission-correlation-and-isolation-contract.md`
 
 ## Status
 
-Admitted.
+Admitted under Cognitive Baseline `CB-007`.
 
-Baseline: `CB-006`.
+Admission evidence:
 
-Admission: `B2.1a Muster Credential-Transfer Production Admission Review 001`.
+- `tests/cognitive/b2-3-cb-007-locksmith-sole-accessor-pressure-run-001.md` — 22 PASS / 0 FAIL
+- `tests/cognitive/b2-3-cb-007-authority-cognitive-convergence-review-001.md` — 15 PASS / 0 FAIL
+- `tests/cognitive/b2-3-cb-007-provenance-cognitive-convergence-review-001.md` — 15 PASS / 0 FAIL
+- `tests/cognitive/b2-3-cb-007-production-admission-run-001.md` — 24 PASS / 0 FAIL
+- `drafts/b2-3-cb-007-production-admission-review-001.md` — 16 PASS / 0 FAIL
 
-Evidence:
+CB-007 revises CB-006 only at the Locksmith sole-accessor boundary.
 
-- `B2.1a Muster Credential-Transfer Pressure Run 002 — 16 PASS / 0 FAIL`
-- `B2.1a Muster Credential-Transfer Convergence Review 001 — 18 PASS / 0 FAIL`
-- `B2.1a Muster Credential-Transfer Production Admission Run 001 — 20 PASS / 0 FAIL`
-
-This file defines the admitted Muster for Imperium v02.
-
-It does not admit live deployment automation, external execution authority, credential-management implementation, runtime orchestration, or a named launch institution.
-
----
+It does not admit live deployment automation, external execution authority, credential-management implementation, Runtime orchestration, a Runtime custody mechanism, or a named launch institution.
 
 ## Purpose
 
@@ -34,7 +31,7 @@ It assembles an operative for initial deployment, operationalizes authorized Cur
 
 It receives a deployment-medium-specific operative from Conscription, incorporates mission intelligence, obtains authorized tools and access, binds mission instructions and constraints, and produces a mission-bound Deployment Package.
 
-Muster does not forge the persona, recruit the operative, make Curia decisions, launch the deployment, execute the mission, or judge the return.
+Muster does not forge the persona, recruit the operative, make Curia decisions, launch the deployment, execute the mission, judge the return, access a security-persistence device, or receive credential material.
 
 ---
 
@@ -68,7 +65,7 @@ Muster may receive:
 - deployment-medium-specific Operative from Conscription
 - Mission Inquest from Inquisition
 - authorized tools and usage constraints from Armory
-- authorized non-secret credential-binding references, access tickets, Access Grant references, permission constraints, expiration and revocation conditions, and permitted access results or refusals from Locksmith
+- authorized non-secret credential-binding references, access tickets, Access Grant references, permission constraints, expiration and revocation conditions, and permitted non-secret access results or generic refusals from Locksmith
 - operator constraints
 - required reporting, escalation, return, and termination conditions
 
@@ -106,11 +103,11 @@ Unresolved blockers:
 Assembly status:
 ```
 
-The credential-binding and access-reference field may contain only non-secret, non-bearer references. It must never contain credential values, bearer tokens, private keys, replayable session material, or any opaque value capable of independent authentication.
+The credential-binding and access-reference field may contain only non-secret, non-bearer references. It must never contain credential values, bearer tokens, private keys, replayable session material, backend-native addresses, device credentials, or any opaque value capable of independent authentication.
 
-A non-secret reference must not itself function as a bearer capability.
+A non-secret reference must not itself function as a bearer capability or resolve directly against a security-persistence device.
 
-A permitted access result or refusal must be non-secret and non-replayable. It must not contain credential values, session material, or another value capable of independent authentication.
+A permitted access result or refusal must be non-secret and non-replayable. It must not contain credential values, session material, backend details, or another value capable of independent authentication.
 
 The Deployment Package is mission-specific and bound to exactly one Mission Identity, Operative Binding, and Muster Instance.
 
@@ -134,7 +131,7 @@ Cancelled
 
 These states describe the Deployment Package.
 
-They do not describe persona admission, operative recruitment, Theatre execution, or mission outcome.
+They do not describe persona admission, operative recruitment, Theatre execution, authentication, persistence-device access, or mission outcome.
 
 `Ready For Launch` means required assembly conditions are satisfied.
 
@@ -176,15 +173,21 @@ Muster must not fabricate missing mission intelligence.
 
 Armory supplies authorized tools and constraints.
 
-Locksmith retains responsibility for credential material and supplies only authorized non-secret credential-binding references, access tickets, Access Grant references, permission constraints, expiration and revocation conditions, and permitted access results or refusals.
+Locksmith retains responsibility for credential material, is the sole Imperium accessor to the security-persistence device, and preferably performs the authorized authenticated operation.
 
-Runtime retains credential custody and performs authorized authenticated operations only through a custody mechanism separately admitted for that purpose.
+Locksmith supplies Muster only authorized non-secret credential-binding references, access tickets, Access Grant references, permission constraints, expiration and revocation conditions, and permitted non-secret, non-replayable results or generic refusals.
 
-Muster assembles only those non-secret references, constraints, conditions, and permitted results into the Deployment Package. Muster does not receive, carry, resolve, or use credential material.
+If a Locksmith-performed operation is impossible, Runtime may hold credential material only through a separately admitted, execution-local custody mechanism.
+
+Such Runtime custody must not address, authenticate to, query, configure, observe, administer, or resolve against the security-persistence device. It does not confer device-adapter ownership.
+
+Muster assembles only the non-secret references, constraints, conditions, and permitted results into the Deployment Package. Muster does not receive, carry, resolve, or use credential material and cannot invoke a persistence adapter.
 
 Availability is not authorization.
 
 Access is not mission understanding.
+
+Runtime custody is not persistence-device access.
 
 ---
 
@@ -240,7 +243,7 @@ Muster prepares a Deployment Package for the launch boundary leading to Theatre.
 
 Muster presents a Ready For Launch Deployment Package to the Iron Gate, La Cortine's dedicated deployment exit.
 
-Muster does not manage continuing Barbican traffic and does not control what happens in Theatre and does not receive or judge Theatre returns.
+Muster does not manage continuing Barbican traffic, control what happens in Theatre, receive or judge Theatre returns, or mediate persistence-device access.
 
 ---
 
@@ -255,7 +258,8 @@ Muster must not:
 - alter Hagiography canon
 - duplicate Conscription's platform transformation
 - fabricate mission research
-- include credential material, bearer capability, or unauthorized tool or access reference
+- include credential material, bearer capability, backend-native device detail, or unauthorized tool or access reference
+- access or invoke the security-persistence device or its adapter
 - treat assembly as launch
 - execute the mission
 - receive or judge mission results
@@ -273,25 +277,28 @@ Castellan specifies the mission.
 Conscription produces the operative.
 Inquisition investigates.
 Armory equips.
-Locksmith unlocks.
+Locksmith alone accesses security persistence.
 Muster assembles, operationalizes, and releases mission binding.
 Iron Gate launches.
 Barbican sustains continuing operations.
 Theatre exposes consequence.
+Runtime custody is not device access.
 ```
 
 ---
 
 ## Failure Signals
 
-Review or revise this draft if:
+Review or revise this contract if:
 
 - Muster becomes a sovereign mission commander
 - mission assembly changes Castellan mission meaning
 - Muster duplicates Conscription's platform work
 - mission dossiers are written without Inquisition support
 - tools or access appear without authorization provenance
-- credential material or a bearer capability enters Muster or a Deployment Package
-- Ready For Launch is mistaken for launched
+- credential material, bearer capability, or backend-native detail enters Muster or a Deployment Package
+- a non-secret reference can resolve directly against the persistence device
+- Runtime custody can address or authenticate to the persistence device
+- Ready For Launch is mistaken for authentication, device access, or launch
 - Muster becomes the unnamed execution layer
 - Muster receives or interprets Theatre returns
