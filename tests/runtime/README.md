@@ -16,7 +16,7 @@ Runtime Synthetic Credential Boundary 001 is merged and verified.
 
 Runtime Synthetic Credential-to-Provider Projection 001 is merged and verified.
 
-B2.3 Direct Security Export Retirement 001 is the current candidate. The OpenBao, synthetic credential, and direct secret-store implementations remain historical direct-path evidence.
+B2.3 Synthetic Locksmith-Owned Adapter 001 is the current candidate. Direct credential and store implementations remain retired historical evidence.
 
 ## Reference Implementation Evidence
 
@@ -114,6 +114,21 @@ The candidate defines only the Runtime-facing boundary to Locksmith-owned fulfil
 - device selected: no
 
 Retirement removes active package reachability while preserving source, tests, deliberations, decisions, and immutable evidence.
+
+## B2.3 Synthetic Locksmith-Owned Adapter Candidate
+
+- focused adapter executable: 9 PASS / 0 FAIL
+- combined Locksmith executable: 19 PASS / 0 FAIL
+- pressure gates: 18 PASS / 0 FAIL
+- candidate review: 12 PASS / 0 FAIL
+- separate adapter package export: no
+- credential material present: no
+- backend-native addressing present: no
+- mutable administration API: no
+- device selected: no
+- network contact: no
+
+The adapter demonstrates exact-binding, availability, inactive-state, and replay behavior behind Locksmith. It does not demonstrate credential lifecycle, durability, provider authentication, or live operation.
 
 ## Evidence Limits
 
