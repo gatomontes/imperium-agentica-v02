@@ -6,43 +6,48 @@ Track A, B1, B2.1, B2.1a, and B2.3 are complete and closed. Cognitive Baseline C
 
 DR-005 parks Locksmith and credential infrastructure until an observed authenticated-integration trigger.
 
-**Operative Creation and Selection Deliberation Review 001 — first evidence increment is complete.**
+**DR-006 Mandatory Exemplar Grounding — Pressure Test 001 is complete.**
 
 No leg is currently active.
 
-## Map Result
+## Test Result
 
 ```text
-Decisions and gates mapped: 21
-Classified findings: 12
-Map review: 18 PASS / 0 FAIL
+Assertions: 21
+PASS: 18
+FAIL: 3
+DR-006 principle retained: YES
+Production admission readiness: NOT READY
 Cognitive production files changed: 0
 Implementation files changed: 0
-Model/provider/evaluator selected: NO
 External effect: NO
 ```
 
-The map distinguishes admitted CB-007 production, merged but unadmitted Track A assurance evidence, pending deliberation controls, and absent behavior.
+## Confirmed Strengths
 
-## Principal Findings
+DR-006 correctly blocks unsupported celebrity selection, achievement-only claims, generic traits, impersonation, achievement or credential leakage, governance override, context stripping, silent trait-conflict repair, and professional personas without a Human-Trait Canon.
 
-1. Persona suitability and latent execution-instrument capability suitability are different concerns.
-2. CTRL-004 is not satisfied by the existing Garrison suitability search and should not be assigned wholesale to Garrison.
-3. Exact persona-selection semantics—especially comparison criteria and unresolved ties—are coherent in the merged A2.4 draft but not fully admitted in production.
-4. Garrison owns admission, but its exact admitted/refused/unresolved gate remains draft-level.
-5. Model, medium, tool-interface, and transformation changes have strong theoretical invalidation rules but no admitted operating reevaluation mechanism.
-6. Unequal group performance is not a mandatory suitability evidence dimension.
-7. Affected-stakeholder recourse is mostly outside creation, although creation must consume relevant constraints.
-8. Multi-agent risk remains outside the single-Operative chain unless Conscription packages a composite operative.
+The achievement-to-trait derivation remains sound:
+
+```text
+real practitioner
+→ achievement or demonstrated performance
+→ observed behavior
+→ transferable trait
+→ testable persona behavior
+→ conditions, limits, counterweights, and failure signals
+```
+
+## Blocking Findings
+
+1. No determinate evidence-source hierarchy, corroboration threshold, or conflict rule.
+2. No operative safeguard for disputed, private, sensitive, or harmful claims about living practitioners.
+3. No required review of exemplar-set visibility, survivorship, cultural, or contextual selection bias.
+
+These are admission blockers, not reasons to abandon mandatory real-world exemplar grounding.
 
 ## Current Gate
 
-Stop after preserving the reviewed map.
+Stop after preserving Pressure Test 001.
 
-The next proposed increment is pressure—not correction—against three questions:
-
-- whether production needs explicit Persona Selection Assessment semantics;
-- whether Garrison's short production admission boundary is sufficient;
-- whether CTRL-004 should be narrowed into an execution-instrument capability-suitability concern consumed at Conscription/handoff.
-
-No production revision, pending-control admission, model/provider selection, Runtime action, or external effect is authorized.
+No production correction or admission is authorized by this test. The smallest next increment is to draft EC-01 through EC-03 and rerun the failed assertions before proposing any CB-007 revision.
