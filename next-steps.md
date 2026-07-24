@@ -12,8 +12,8 @@ Track A remains closed. Locksmith and credential infrastructure remain parked. N
 |---:|---|---|
 | 1 | EC-01 evidence-source standard | required when persona production or admission approaches; deferred |
 | 2 | prior EC-02 framing | rejected and superseded by DR-007 exact-claim requirements |
-| 3 | exemplar-composition concern formerly labeled EC-03 | later persona calibration through concrete Pit evidence |
-| 4 | rerun DR-006 pressure assertions | when EC-01 is drafted and a concrete persona exposes calibration behavior |
+| 3 | EC-03 orientation/composition concern | refined by DR-008; use declared persona or operative orientation and concrete Pit evidence |
+| 4 | pressure-test Declared Orientation semantics | when a concrete persona or operative orientation is requested |
 | 5 | decide whether a minimal CB-007 admission candidate has earned promotion | deferred |
 
 ## Existing Operative-Creation Map Queue
@@ -33,9 +33,16 @@ Track A remains closed. Locksmith and credential infrastructure remain parked. N
 
 Draft EC-01 only when work approaches Human-Trait Canon construction, persona-production admission, or another concrete gate requiring a source-sufficiency decision.
 
-## Future Persona-Calibration Trigger
+## Future Declared-Orientation Trigger
 
-Evaluate exemplar composition only against an actual canon and persona whose observed Pit behavior is narrow, distorted, contradictory, or ineffective. Do not create an abstract balancing regime.
+When an operator requests a concrete orientation:
+
+1. decide whether it persists at persona level or is mission-specific to an Operative;
+2. record its authorization, exact behavioral meaning, scope, exclusions, evidence invariants, and removal conditions;
+3. test it in Pit against the requested orientation, professional competence, evidence duties, and governance;
+4. preserve any mission-specific difference from the Canonical Persona.
+
+Do not create an Imperium-wide ideology, abstract balancing regime, or automatic counter-orientation.
 
 ## Parked Locksmith Restart Trigger
 
@@ -45,4 +52,4 @@ Do not resume credential infrastructure until a concrete authenticated operation
 
 No active leg.
 
-No EC-01 draft, abstract persona-calibration rule, production change, model/provider/evaluator selection, credential work, deployment, or external effect is authorized.
+No EC-01 draft, orientation selection, production change, model/provider/evaluator selection, credential work, deployment, or external effect is authorized.
