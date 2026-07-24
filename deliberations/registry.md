@@ -10,6 +10,7 @@
 - Initial assessment: `assessments/2026-07-23-mit-ai-risks-imperium-assessment.md`
 - Integration review: `assessments/2026-07-23-ra-integration-review-001.md`
 - Integration execution: `assessments/2026-07-23-ra-integration-review-execution-001.md`
+- B2.3 Locksmith closure: `assessments/2026-07-23-b2-3-locksmith-sole-accessor-closure.md`
 
 ## Risks
 
