@@ -2,35 +2,35 @@
 
 ## Status
 
-Track A, B1, B2.1, B2.1a, and B2.2's historical store evaluation are complete.
+Track A, B1, B2.1, B2.1a, and B2.2's historical store evaluation are complete. Cognitive Baseline CB-007 is admitted.
 
-PR #78 admitted Cognitive Baseline CB-007 through squash commit `13d6dd6b92cafffffd739e539659e0314600d8ad`.
+PR #79 merged the Runtime-facing Locksmith port through squash commit `1e50cf79aeeb80cf98d40be78620c486e082b4e8`.
 
-B2.3 is active. The Runtime-facing Locksmith port is implemented as a bounded nonproduction candidate. No persistence adapter or device is selected and B2 remains unimplemented as a live system.
+B2.3 is active. The direct credential and store exports are retired in the current candidate while every historical source and evidence artifact remains present.
 
-## Locksmith Access-Port Candidate
+## Direct Security Export Retirement Candidate
 
 ```text
-Focused executable: 10 PASS / 0 FAIL
-Pressure assertions: 18 PASS / 0 FAIL
-Candidate review: 14 PASS / 0 FAIL
-Fixed operation identity/version: YES
-Closed caller schema: YES
-Authority finding required: YES
-Provenance correlation required: YES
-Backend-native inputs accepted: NO
-Persistence adapter present: NO
+Focused structural executable: 3 PASS / 0 FAIL
+Pressure assertions: 14 PASS / 0 FAIL
+Candidate review: 8 PASS / 0 FAIL
+Active security-persistence exports: 1
+Active security-persistence path: Locksmith access
+Direct credential/store exports retired: 5
+Historical implementation sources deleted: 0
+Historical tests deleted: 0
+Replacement adapter present: NO
 Persistence device selected: NO
 Real credential: NO
 Network contact: NO
 ```
 
-The injected executor represents Locksmith-owned fulfillment. The port validates and freezes provider-neutral requests, validates the bounded result, and maps all failures to one generic refusal while preserving redacted stage evidence.
+The retired modules remain directly testable repository history but are no longer package API. This preserves evidence without offering Runtime consumers a path around Locksmith.
 
 ## Current Gate
 
-Merge the reviewed Locksmith access-port candidate under the standing B2.3 authorization.
+Merge the reviewed direct-security-export retirement under the standing B2.3 authorization.
 
-After merge, retire the direct secret-store and OpenBao exports from the active Runtime package surface while retaining their source, tests, and historical evidence. Do not yet implement the replacement synthetic adapter.
+After merge, implement and pressure the synthetic Locksmith-owned adapter behind the existing port. It must remain in-memory, nonproduction, device-neutral, and unreachable as a separate package export.
 
 No credential, secret, token, persistence instance, network contact, provisioning, deployment, or external effect is authorized.
