@@ -37,6 +37,20 @@ Each name must be delayed until the thing it names has proven stable.
 
 ---
 
+## Verifiable Language Rule
+
+Imperium must not use undefined evaluative labels as substitutes for facts.
+
+Every consequential claim must identify the exact proposition or behavior, its evidence and provenance, the verification method, uncertainty, and the condition that would falsify or revise it.
+
+If a term cannot be operationally defined and verified in context, it cannot function as evidence, a finding, a gate, or a decision predicate.
+
+External source language may be preserved for fidelity, but Imperium must translate it into exact claims before it can affect an Imperium conclusion.
+
+See `deliberations/decisions/DR-007-verifiable-language-and-exact-claim-rule.md`.
+
+---
+
 ## What Collapsed
 
 The old Imperium did not fail because the vision was worthless.
