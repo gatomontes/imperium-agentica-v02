@@ -4,7 +4,7 @@
 
 Draft A2.4 candidate only.
 
-This revision consumes `deliberations/decisions/DR-006-mandatory-real-world-exemplar-grounding.md` as an operator SOP requirement. It does not revise `CB-005`, produce or admit a live persona, select a persona, construct an Operative, or authorize mission action.
+This revision consumes `deliberations/decisions/DR-006-mandatory-real-world-exemplar-grounding.md` as an operator SOP requirement. It does not revise `CB-007`, produce or admit a live persona, select a persona, construct an Operative, or authorize mission action.
 
 ## Canonical Dependencies
 
