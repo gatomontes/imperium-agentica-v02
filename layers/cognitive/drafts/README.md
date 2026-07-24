@@ -2,22 +2,25 @@
 
 ## Status
 
-Cognitive Baseline `CB-006` is represented by the production tree.
+Cognitive Baseline `CB-007` is represented by the production tree.
 
-## Active Unadmitted Revision
+## Admitted CB-007 Source Drafts
 
-CB-007 Locksmith sole-accessor candidate:
+The exact reviewed CB-007 source drafts are retained as historical evidence:
 
 - `b2-3-cb-007-armory-locksmith-candidate.md`
 - `b2-3-cb-007-muster-candidate.md`
 - `b2-3-cb-007-barbican-candidate.md`
 
-Trigger evidence:
+Admission evidence:
 
-- `tests/cognitive/b2-3-locksmith-sole-accessor-pressure-run-001.md` — 15 PASS / 7 FAIL
-- `tests/cognitive/b2-3-cb-007-locksmith-sole-accessor-test-matrix-001.md` — candidate matrix, not executed
+- `tests/cognitive/b2-3-cb-007-locksmith-sole-accessor-pressure-run-001.md` — 22 PASS / 0 FAIL
+- Authority–Cognitive convergence — 15 PASS / 0 FAIL
+- Provenance–Cognitive convergence — 15 PASS / 0 FAIL
+- production admission — 24 PASS / 0 FAIL
+- production review — 16 PASS / 0 FAIL
 
-These files are exact unadmitted draft targets. They do not revise CB-006, admit a persistence device, or authorize implementation.
+Their canonical production targets are `armory-locksmith.md`, `muster.md`, and `barbican.md` under `layers/cognitive/production/`. Historical draft presence does not create a second canonical source.
 
 ## Historical Source Drafts
 

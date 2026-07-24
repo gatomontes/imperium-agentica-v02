@@ -6,11 +6,13 @@ Theoretical Cognitive scenarios, constitutional tests, immutable run records, an
 
 ## Production-Staging Baseline
 
-- `CB-006` — 36 artifacts
-- current admission review: `tests/cognitive/b2-1a-muster-credential-transfer-production-admission-review-001.md`
-- focused credential-transfer pressure: 16 PASS / 0 FAIL
-- cross-layer convergence: 18 PASS / 0 FAIL
-- production admission: 20 PASS / 0 FAIL
+- `CB-007` — 36 artifacts
+- current admission review: `drafts/b2-3-cb-007-production-admission-review-001.md`
+- sole-accessor pressure: 22 PASS / 0 FAIL
+- Authority–Cognitive convergence: 15 PASS / 0 FAIL
+- Provenance–Cognitive convergence: 15 PASS / 0 FAIL
+- production admission: 24 PASS / 0 FAIL
+- production review: 16 PASS / 0 FAIL
 
 ## Preserved Master Mason Evidence
 
@@ -197,14 +199,16 @@ Ready For Launch ≠ authentication or execution
 permitted result ≠ custody transfer
 ```
 
-## Active CB-007 Locksmith Sole-Accessor Convergence
+## Admitted CB-007 Locksmith Sole-Accessor Convergence
 
 - baseline pressure: 15 PASS / 7 FAIL
 - corrected draft pressure: 22 PASS / 0 FAIL
 - Authority–Cognitive convergence: 15 PASS / 0 FAIL
 - Provenance–Cognitive convergence: 15 PASS / 0 FAIL
 - exact draft review: 14 PASS / 0 FAIL
-- production semantic files changed: 0
+- production admission: 24 PASS / 0 FAIL
+- production review: 16 PASS / 0 FAIL
+- production semantic targets admitted: 3
 - Runtime implementation files changed: 0
 - persistence device selected: none
 
