@@ -2,40 +2,36 @@
 
 ## Status
 
-Track A, B1, B2.1, B2.1a, and B2.3 are complete and closed. Cognitive Baseline CB-007 is admitted.
+Operative Creation and Selection Deliberation Review 001 is active in `current-step.md`.
 
-B2.2's OpenBao selection is historical and superseded for active selection. No replacement device or topology is selected.
+Track A remains closed. B2.4 and B2.5 are parked rather than treated as the critical path. No persistence device or topology is selected.
 
-No leg is currently active. B2.4 and B2.5 remain blocked. B2 remains unimplemented as a live system.
+## Track State
 
-## Track B
+| Track or leg | State |
+|---|---|
+| Track A — Operative Creation | closed production history; under deliberation-first assurance review |
+| B1 | closed |
+| B2.1 / B2.1a / B2.3 | closed |
+| B2.2 | historical selection superseded |
+| B2.4 / B2.5 | parked until a concrete authenticated-integration trigger |
+| B3 / B4 / B5 | not active |
 
-| Order | Leg | State |
-|---:|---|---|
-| B1 | Deployment authorization and authentication policy | closed |
-| B2.1 | Secret custody and adapter boundary | closed as CB-007 |
-| B2.1a | Credential-transfer convergence correction | closed as CB-006 |
-| B2.2 | Store evaluation and selection | historical selection superseded; replacement evaluation proposed but not authorized |
-| B2.3 | Nonproduction adapter implementation | closed; 26 PASS / 0 FAIL closure review |
-| B2.4 | Empirical credential lifecycle and outage tests | blocked by device evaluation/selection and implementation authority |
-| B2.5 | B2 evidence review and closure | blocked by B2.4 |
-| B3 | Live Runtime/provider driver | not active |
-| B4 | Integrated nonproduction staging | not active |
-| B5 | Production admission and deployment | not active |
+## Queue After the Current Evidence Increment
 
-## Next Proposed Bounded Leg
+1. pressure the lineage-and-decision findings for false gaps and layer-ownership drift;
+2. decide whether CTRL-004 duplicates existing suitability behavior, requires a narrower finding, or exposes a real missing boundary;
+3. map relevant fairness, unequal-performance, robustness, dangerous-capability, transparency, human-agency, and multi-agent risks without forcing all risk ownership into creation;
+4. identify the smallest candidate correction only where admitted contracts are demonstrably insufficient;
+5. require separate review, pressure, and promotion authority before changing production;
+6. continue the broader deliberation queue, including affected-stakeholder recourse, measurement, and recorded value-realization questions.
 
-If explicitly authorized, open a fresh replacement security-persistence-device evaluation behind Locksmith:
+## Parked Locksmith Restart Trigger
 
-1. derive evaluation gates from CB-007 and the Runtime-facing Locksmith port;
-2. prohibit any Runtime/provider/backend-native direct access path;
-3. separately identify non-mission administration, bootstrap, backup, restore, recovery, break-glass, emergency access, and migration requirements;
-4. compare concrete devices and topologies without treating historical OpenBao work as an active selection;
-5. require a separate selection decision and implementation authority;
-6. only after implementation, run B2.4 empirical credential lifecycle and outage pressure.
+Do not resume credential infrastructure until a concrete authenticated operation identifies the provider, operation, credential class, topology, lifecycle/outage requirements, and operational authority.
 
 ## Current Gate
 
-No active leg.
+The active work is the Operative creation/selection evidence map recorded in `current-step.md`.
 
-Require explicit authorization before starting concrete device evaluation. Selecting technology or topology, using credentials, running a service, contacting a network, provisioning, deploying, or producing external effects requires separate authority.
+No production revision, pending-control admission, model/provider selection, credential work, deployment, or external effect is authorized by this queue.
