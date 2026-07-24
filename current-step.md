@@ -4,9 +4,9 @@
 
 Track A, B1, B2.1, B2.1a, B2.2's historical store evaluation, and B2.3 are complete. Cognitive Baseline CB-007 is admitted.
 
-PR #81 merged the synthetic Locksmith-owned adapter through squash commit `39aaf8d38a8ebc60b9982d70bdfc54b883b53a53`.
+PR #82 closed the Locksmith sole-accessor implementation leg through squash commit `45ad57afa67bebad7e78c75dd3cc026a54c1f766`.
 
-The B2.3 closure review records 26 PASS / 0 FAIL. No persistence device is selected and B2 remains unimplemented as a live system.
+No leg is currently active. No persistence device is selected and B2 remains unimplemented as a live system.
 
 ## Closed B2.3 Result
 
@@ -29,8 +29,12 @@ B2.3 establishes nonproduction boundary and ownership evidence only. It does not
 
 ## Current Gate
 
-Merge the reviewed B2.3 closure record under the standing authorization for this leg, then stop.
+Stop. The B2.3 leg is closed and its closure record is merged.
 
-The next leg requires explicit authorization to evaluate a concrete security-persistence device behind Locksmith. Historical OpenBao selection is not active and must not be treated as a default.
+The next proposed leg is a fresh evaluation of concrete security-persistence devices and topologies behind Locksmith. Starting it requires explicit authorization. Historical OpenBao selection is not active and must not be treated as a default.
 
 No credential, secret, token, persistence instance, network contact, provisioning, deployment, or external effect is authorized.
+
+## Continuation Breakpoint
+
+A new session should load the repository, read this file and `next-steps.md`, verify `main` at or after `45ad57afa67bebad7e78c75dd3cc026a54c1f766`, and ask before activating the proposed replacement-device evaluation.
