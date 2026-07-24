@@ -90,6 +90,14 @@ The injected executor represents Locksmith-owned fulfillment. It receives a froz
 
 This executable boundary does not implement a persistence adapter, select a device, admit exceptional Runtime credential custody, or authorize external effects.
 
+## Synthetic Locksmith-Owned Adapter
+
+`SyntheticLocksmithOwnedAdapter` is an internal, in-memory executor composed behind `LocksmithAccessPort`. It has no package export.
+
+It accepts immutable non-secret operation records fixed to one operation version, Mission, Deployment, Operative Binding, provider, and exact operation parameters. Inactive records, unavailable state, mismatches, malformed configuration, duplicate effective records, and ticket replay refuse through the port's generic external surface.
+
+The adapter contains no credential material, backend-native address, persistence mechanism, transport, environment reader, mutable administration API, or device selection. It demonstrates Locksmith ownership and boundary enforcement only.
+
 ## Historical Synthetic Secret-Store Port
 
 `SyntheticSecretStorePort` separates acquisition from one-use consumption. Its external opaque lease maps privately to the broker capability, carries bounded acquisition and expiry metadata, and implements the broker-compatible `consume` surface used by the synthetic provider projection.
