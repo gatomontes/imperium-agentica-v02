@@ -4,46 +4,45 @@
 
 Track A, B1, B2.1, B2.1a, and B2.3 are complete and closed. Cognitive Baseline CB-007 is admitted.
 
-DR-005 parks concrete credential infrastructure, B2.4, and B2.5 until an observed authenticated integration requires them. Locksmith's sole-accessor boundary remains admitted but is not active work.
+DR-005 parks Locksmith and credential infrastructure until an observed authenticated-integration trigger.
 
-The active bounded leg is **Operative Creation and Selection Deliberation Review 001**.
+**Operative Creation and Selection Deliberation Review 001 — first evidence increment is complete.**
 
-## Purpose
+No leg is currently active.
 
-Review the already-admitted Operative creation and selection chain against the current risk, improvement-program, and pending-control records before proposing any semantic or implementation change.
-
-This is an assurance review. It does not reopen completed Track A production by assumption.
-
-## Process Under Review
+## Map Result
 
 ```text
-Petition / operator need
-→ Castellan mission need and Work Specification
-→ Guildhall profession resolution
-→ Garrison suitability search
-   ├─ suitable admitted persona → selection
-   └─ no suitable persona
-      → Foundry construction
-      → Pit evaluation
-      → Garrison admission
-→ Conscription deployment-medium embodiment
-→ Operative handoff
+Decisions and gates mapped: 21
+Classified findings: 12
+Map review: 18 PASS / 0 FAIL
+Cognitive production files changed: 0
+Implementation files changed: 0
+Model/provider/evaluator selected: NO
+External effect: NO
 ```
 
-Mission binding, deployment preparation, credential persistence, and Theatre execution are downstream and outside this leg.
+The map distinguishes admitted CB-007 production, merged but unadmitted Track A assurance evidence, pending deliberation controls, and absent behavior.
 
-## First Evidence Increment
+## Principal Findings
 
-Produce an exact lineage-and-decision map that:
-
-1. identifies every profession-resolution, suitability, admission, selection, transformation, and handoff decision;
-2. cites the evidence accepted at each decision;
-3. records missing, stale, conflicting, cross-version, and platform-degradation failure behavior;
-4. maps the relevant AIR risks, ICP-04, CTRL-004, CTRL-002, and CTRL-006;
-5. classifies each potential issue as already covered, ambiguous, missing, duplicated, or outside this chain.
+1. Persona suitability and latent execution-instrument capability suitability are different concerns.
+2. CTRL-004 is not satisfied by the existing Garrison suitability search and should not be assigned wholesale to Garrison.
+3. Exact persona-selection semantics—especially comparison criteria and unresolved ties—are coherent in the merged A2.4 draft but not fully admitted in production.
+4. Garrison owns admission, but its exact admitted/refused/unresolved gate remains draft-level.
+5. Model, medium, tool-interface, and transformation changes have strong theoretical invalidation rules but no admitted operating reevaluation mechanism.
+6. Unequal group performance is not a mandatory suitability evidence dimension.
+7. Affected-stakeholder recourse is mostly outside creation, although creation must consume relevant constraints.
+8. Multi-agent risk remains outside the single-Operative chain unless Conscription packages a composite operative.
 
 ## Current Gate
 
-Proceed with the deliberation and evidence map only.
+Stop after preserving the reviewed map.
 
-Do not modify Cognitive production, admit or implement a pending control, select a persona/model/provider/evaluator, activate Runtime work, or authorize an external effect in the first increment.
+The next proposed increment is pressure—not correction—against three questions:
+
+- whether production needs explicit Persona Selection Assessment semantics;
+- whether Garrison's short production admission boundary is sufficient;
+- whether CTRL-004 should be narrowed into an execution-instrument capability-suitability concern consumed at Conscription/handoff.
+
+No production revision, pending-control admission, model/provider selection, Runtime action, or external effect is authorized.
