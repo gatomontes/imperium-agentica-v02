@@ -6,48 +6,32 @@ Track A, B1, B2.1, B2.1a, and B2.3 are complete and closed. Cognitive Baseline C
 
 DR-005 parks Locksmith and credential infrastructure until an observed authenticated-integration trigger.
 
-**DR-006 Mandatory Exemplar Grounding — Pressure Test 001 is complete.**
+**DR-007 Verifiable Language and Exact-Claim Rule is recorded.**
 
 No leg is currently active.
 
-## Test Result
+## Current Dispositions
 
 ```text
-Assertions: 21
-PASS: 18
-FAIL: 3
-DR-006 principle retained: YES
-Production admission readiness: NOT READY
-Cognitive production files changed: 0
+DR-006 exemplar-grounding principle: RETAINED
+EC-01 evidence-source standard: REQUIRED LATER; DEFERRED
+EC-02 prior framing: REJECTED AND SUPERSEDED
+EC-03 exemplar composition: LATER PERSONA CALIBRATION
+Production files changed: 0
 Implementation files changed: 0
 External effect: NO
 ```
 
-## Confirmed Strengths
+## Universal Language Rule
 
-DR-006 correctly blocks unsupported celebrity selection, achievement-only claims, generic traits, impersonation, achievement or credential leakage, governance override, context stripping, silent trait-conflict repair, and professional personas without a Human-Trait Canon.
+Imperium-authored findings, gates, and decisions must state exact propositions or behaviors with inspectable evidence, provenance, verification method, uncertainty, and revision conditions.
 
-The achievement-to-trait derivation remains sound:
+Undefined evaluative labels cannot function as evidence or decision predicates.
 
-```text
-real practitioner
-→ achievement or demonstrated performance
-→ observed behavior
-→ transferable trait
-→ testable persona behavior
-→ conditions, limits, counterweights, and failure signals
-```
-
-## Blocking Findings
-
-1. No determinate evidence-source hierarchy, corroboration threshold, or conflict rule.
-2. No operative safeguard for disputed, private, sensitive, or harmful claims about living practitioners.
-3. No required review of exemplar-set visibility, survivorship, cultural, or contextual selection bias.
-
-These are admission blockers, not reasons to abandon mandatory real-world exemplar grounding.
+External wording and historical records remain exact for provenance, but their terminology cannot affect an Imperium conclusion until translated into operationally defined, verifiable claims.
 
 ## Current Gate
 
-Stop after preserving Pressure Test 001.
+Stop after preserving DR-007 and the three dispositions.
 
-No production correction or admission is authorized by this test. The smallest next increment is to draft EC-01 through EC-03 and rerun the failed assertions before proposing any CB-007 revision.
+No production correction, EC-01 drafting, persona-calibration rule, Runtime validator, model/provider selection, persona action, or external effect is authorized.
