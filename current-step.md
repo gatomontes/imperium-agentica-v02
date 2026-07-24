@@ -2,34 +2,35 @@
 
 ## Status
 
-Track A, B1, B2.1, B2.1a, and B2.2's historical store evaluation are complete. Cognitive Baseline CB-007 is admitted.
+Track A, B1, B2.1, B2.1a, B2.2's historical store evaluation, and B2.3 are complete. Cognitive Baseline CB-007 is admitted.
 
-PR #80 retired the direct credential and store exports through squash commit `17dc2a161b29ff784d08a23c324eedc5cfd387da`.
+PR #81 merged the synthetic Locksmith-owned adapter through squash commit `39aaf8d38a8ebc60b9982d70bdfc54b883b53a53`.
 
-B2.3 is active. The synthetic Locksmith-owned adapter is implemented and pressured as a bounded nonproduction candidate behind the sole active security-persistence package surface.
+The B2.3 closure review records 26 PASS / 0 FAIL. No persistence device is selected and B2 remains unimplemented as a live system.
 
-## Synthetic Locksmith-Owned Adapter Candidate
+## Closed B2.3 Result
 
 ```text
-Focused adapter executable: 9 PASS / 0 FAIL
+Cognitive baseline: CB-007
+Runtime-facing Locksmith port: MERGED
+Sole active security-persistence package export: Locksmith access
+Direct credential/store exports retired: 5
+Historical implementation evidence preserved: YES
+Internal synthetic adapter: MERGED
 Combined Locksmith executable: 19 PASS / 0 FAIL
-Pressure assertions: 18 PASS / 0 FAIL
-Candidate review: 12 PASS / 0 FAIL
-Separate adapter export: NO
-Credential material present: NO
-Backend-native addressing present: NO
-Mutable administration API present: NO
+Closure review: 26 PASS / 0 FAIL
+Repository CI/workflow signal: NONE AVAILABLE
 Persistence device selected: NO
 Real credential: NO
 Network contact: NO
 ```
 
-The adapter stores only immutable non-secret synthetic operation bindings in memory. Exact mission-spine/provider matching, inactive state, unavailable state, and one-use ticket behavior are exercised through the Locksmith port.
+B2.3 establishes nonproduction boundary and ownership evidence only. It does not prove real credential lifecycle, durability, outage recovery, provider authentication, secure erasure, deployment safety, or live operation.
 
 ## Current Gate
 
-Merge the reviewed synthetic Locksmith-owned adapter under the standing B2.3 authorization.
+Merge the reviewed B2.3 closure record under the standing authorization for this leg, then stop.
 
-After merge, conduct the B2.3 closure review and update continuity. Device evaluation is not part of this leg and must remain deferred.
+The next leg requires explicit authorization to evaluate a concrete security-persistence device behind Locksmith. Historical OpenBao selection is not active and must not be treated as a default.
 
 No credential, secret, token, persistence instance, network contact, provisioning, deployment, or external effect is authorized.
