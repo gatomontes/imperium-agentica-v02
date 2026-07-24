@@ -2,39 +2,48 @@
 
 ## Status
 
-Track A, B1, B2.1, B2.1a, B2.2's historical store evaluation, and B2.3 are complete. Cognitive Baseline CB-007 is admitted.
+Track A, B1, B2.1, B2.1a, and B2.3 are complete and closed. Cognitive Baseline CB-007 is admitted.
 
-PR #82 closed the Locksmith sole-accessor implementation leg through squash commit `45ad57afa67bebad7e78c75dd3cc026a54c1f766`.
+DR-005 parks concrete credential infrastructure, B2.4, and B2.5 until an observed authenticated integration requires them. Locksmith's sole-accessor boundary remains admitted but is not active work.
 
-No leg is currently active. No persistence device is selected and B2 remains unimplemented as a live system.
+The active bounded leg is **Operative Creation and Selection Deliberation Review 001**.
 
-## Closed B2.3 Result
+## Purpose
+
+Review the already-admitted Operative creation and selection chain against the current risk, improvement-program, and pending-control records before proposing any semantic or implementation change.
+
+This is an assurance review. It does not reopen completed Track A production by assumption.
+
+## Process Under Review
 
 ```text
-Cognitive baseline: CB-007
-Runtime-facing Locksmith port: MERGED
-Sole active security-persistence package export: Locksmith access
-Direct credential/store exports retired: 5
-Historical implementation evidence preserved: YES
-Internal synthetic adapter: MERGED
-Combined Locksmith executable: 19 PASS / 0 FAIL
-Closure review: 26 PASS / 0 FAIL
-Repository CI/workflow signal: NONE AVAILABLE
-Persistence device selected: NO
-Real credential: NO
-Network contact: NO
+Petition / operator need
+→ Castellan mission need and Work Specification
+→ Guildhall profession resolution
+→ Garrison suitability search
+   ├─ suitable admitted persona → selection
+   └─ no suitable persona
+      → Foundry construction
+      → Pit evaluation
+      → Garrison admission
+→ Conscription deployment-medium embodiment
+→ Operative handoff
 ```
 
-B2.3 establishes nonproduction boundary and ownership evidence only. It does not prove real credential lifecycle, durability, outage recovery, provider authentication, secure erasure, deployment safety, or live operation.
+Mission binding, deployment preparation, credential persistence, and Theatre execution are downstream and outside this leg.
+
+## First Evidence Increment
+
+Produce an exact lineage-and-decision map that:
+
+1. identifies every profession-resolution, suitability, admission, selection, transformation, and handoff decision;
+2. cites the evidence accepted at each decision;
+3. records missing, stale, conflicting, cross-version, and platform-degradation failure behavior;
+4. maps the relevant AIR risks, ICP-04, CTRL-004, CTRL-002, and CTRL-006;
+5. classifies each potential issue as already covered, ambiguous, missing, duplicated, or outside this chain.
 
 ## Current Gate
 
-Stop. The B2.3 leg is closed and its closure record is merged.
+Proceed with the deliberation and evidence map only.
 
-The next proposed leg is a fresh evaluation of concrete security-persistence devices and topologies behind Locksmith. Starting it requires explicit authorization. Historical OpenBao selection is not active and must not be treated as a default.
-
-No credential, secret, token, persistence instance, network contact, provisioning, deployment, or external effect is authorized.
-
-## Continuation Breakpoint
-
-A new session should load the repository, read this file and `next-steps.md`, verify `main` at or after `45ad57afa67bebad7e78c75dd3cc026a54c1f766`, and ask before activating the proposed replacement-device evaluation.
+Do not modify Cognitive production, admit or implement a pending control, select a persona/model/provider/evaluator, activate Runtime work, or authorize an external effect in the first increment.
