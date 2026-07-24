@@ -16,7 +16,7 @@ Runtime Synthetic Credential Boundary 001 is merged and verified.
 
 Runtime Synthetic Credential-to-Provider Projection 001 is merged and verified.
 
-B2.3 OpenBao Imperium Service-Port Executable 001 is the current candidate.
+B2.3 Locksmith Access-Port 001 is the current candidate. The OpenBao and direct secret-store candidates are retained as historical evidence.
 
 ## Reference Implementation Evidence
 
@@ -85,6 +85,21 @@ B2.3 OpenBao Imperium Service-Port Executable 001 is the current candidate.
 - combined successor executable: 91 PASS / 0 FAIL
 - repository regression: `runtime-synthetic-secret-store-port-repository-regression-001.md` — PASS
 - candidate review: `runtime-synthetic-secret-store-port-candidate-review-001.md`
+
+## B2.3 Locksmith Access-Port Candidate
+
+- focused executable: 10 PASS / 0 FAIL
+- pressure gates: 18 PASS / 0 FAIL
+- candidate review: 14 PASS / 0 FAIL
+- fixed operation identity and version
+- exact closed request and parameter schemas
+- generic refusal with redacted staged evidence
+- persistence adapter selected: no
+- device selected: no
+- real credential: no
+- network contact: no
+
+The candidate defines only the Runtime-facing boundary to Locksmith-owned fulfillment. It does not implement the persistence adapter or authorize exceptional Runtime credential custody.
 
 ## Evidence Limits
 

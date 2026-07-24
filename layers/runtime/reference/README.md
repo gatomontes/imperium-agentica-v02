@@ -30,6 +30,7 @@ The private package manifest exposes only these paths:
 | `@imperium-agentica/runtime-reference/providers/node-process-supervisor` | injected, credentialless Node process-supervisor reference adapter |
 | `@imperium-agentica/runtime-reference/security/synthetic-credentials` | in-memory, one-use synthetic credential boundary for tests |
 | `@imperium-agentica/runtime-reference/providers/node-process-supervisor/synthetic-credentials` | synthetic-only projection from the one-use broker to the injected supervisor driver |
+| `@imperium-agentica/runtime-reference/security/locksmith-access` | fixed-operation, provider-neutral Runtime boundary to Locksmith-owned fulfillment |
 | `@imperium-agentica/runtime-reference/security/synthetic-secret-store` | expiring synthetic lease port with synchronous and asynchronous acquisition paths |
 | `@imperium-agentica/runtime-reference/security/openbao-kv-v2` | pinned OpenBao 2.6.1 KV v2 backend over an injected authenticated transport |
 | `@imperium-agentica/runtime-reference/security/openbao-imperium-service-port` | fixed-operation Runtime client for the OpenBao-hosted Imperium Service Port |
@@ -71,6 +72,16 @@ The opaque handle is constructor-held and never enters a Runtime plan, observati
 Binding refusal or an absent/replayed handle maps to operational failure without invoking the driver. A driver exception, Promise result, or unknown provider response remains indeterminate. The broker zeroes the temporary view after the synchronous call.
 
 This projection does not define a real credential format, header, environment variable, file, provider SDK, transport, authentication scheme, or live effect.
+
+## Locksmith Access Port
+
+`LocksmithAccessPort` accepts one fixed operation identity/version and an exact closed request containing non-secret Authority and Provenance finding references, the mission spine, expiry, and operation-specific parameters.
+
+The caller cannot supply a persistence technology, backend path, mount, field, query, policy, authentication method, token, credential, or administrative operation. Unknown identities, versions, fields, parameters, expired requests, executor failures, and unexpected results refuse generically.
+
+The injected executor represents Locksmith-owned fulfillment. It receives a frozen provider-neutral request. The port emits redacted staged observations without deciding Authority validity or Provenance sufficiency. It contains no persistence, transport, environment, credential, or provider mechanism.
+
+This executable boundary does not implement a persistence adapter, select a device, admit exceptional Runtime credential custody, or authorize external effects.
 
 ## Synthetic Secret-Store Port
 
