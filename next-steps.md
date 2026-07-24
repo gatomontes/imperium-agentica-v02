@@ -2,19 +2,19 @@
 
 ## Status
 
-DR-006 Mandatory Exemplar Grounding — Pressure Test 001 completed with 18 PASS / 3 FAIL.
+DR-007 records the repository-wide verifiable-language rule and resolves the immediate disposition of the three DR-006 pressure findings.
 
 Track A remains closed. Locksmith and credential infrastructure remain parked. No leg is currently active.
 
-## Immediate Exemplar-Grounding Queue
+## Exemplar-Grounding Queue
 
-| Order | Correction | State |
+| Order | Item | State |
 |---:|---|---|
-| 1 | EC-01 evidence source standard | required by EG-19 |
-| 2 | EC-02 living-person evidence safeguards | required by EG-20 |
-| 3 | EC-03 exemplar selection-bias review | required by EG-21 |
-| 4 | rerun EG-19 through EG-21 and regression-test EG-01 through EG-18 | pending corrections |
-| 5 | decide whether a minimal CB-007 admission candidate has earned promotion | blocked by rerun |
+| 1 | EC-01 evidence-source standard | required when persona production or admission approaches; deferred |
+| 2 | prior EC-02 framing | rejected and superseded by DR-007 exact-claim requirements |
+| 3 | exemplar-composition concern formerly labeled EC-03 | later persona calibration through concrete Pit evidence |
+| 4 | rerun DR-006 pressure assertions | when EC-01 is drafted and a concrete persona exposes calibration behavior |
+| 5 | decide whether a minimal CB-007 admission candidate has earned promotion | deferred |
 
 ## Existing Operative-Creation Map Queue
 
@@ -24,19 +24,18 @@ Track A remains closed. Locksmith and credential infrastructure remain parked. N
 | 2 | Garrison admission-gate sufficiency | mapped; overlaps DR-006 finding |
 | 3 | execution-instrument capability suitability / CTRL-004 | mapped; narrowing and ownership unresolved |
 | 4 | change-triggered reevaluation after model/medium/tool changes | theoretically covered; admission/implementation unresolved |
-| 5 | unequal-performance evidence when affected groups are material | conditional gap mapped; relevant to EC-03 |
+| 5 | unequal group performance when affected groups are material | conditional gap mapped; future wording must conform to DR-007 |
 | 6 | affected-stakeholder and recourse inputs | outside native creation ownership; dependency mapped |
 | 7 | measurement and invalidation discipline | partially applied; CTRL-006 remains pending |
 | 8 | multi-agent composition risk | outside current single-Operative chain |
 
-## Next Proposed Bounded Increment
+## Future EC-01 Trigger
 
-If explicitly authorized:
+Draft EC-01 only when work approaches Human-Trait Canon construction, persona-production admission, or another concrete gate requiring a source-sufficiency decision.
 
-1. draft the smallest EC-01, EC-02, and EC-03 amendments in deliberation/draft scope;
-2. preserve Hagiography, Studium, Foundry, Pit, Garrison, and Provenance ownership;
-3. rerun all 21 pressure assertions;
-4. stop before production promotion or admission.
+## Future Persona-Calibration Trigger
+
+Evaluate exemplar composition only against an actual canon and persona whose observed Pit behavior is narrow, distorted, contradictory, or ineffective. Do not create an abstract balancing regime.
 
 ## Parked Locksmith Restart Trigger
 
@@ -46,4 +45,4 @@ Do not resume credential infrastructure until a concrete authenticated operation
 
 No active leg.
 
-Require explicit authorization before drafting the three corrections. No production change, model/provider/evaluator selection, credential work, deployment, or external effect is authorized.
+No EC-01 draft, abstract persona-calibration rule, production change, model/provider/evaluator selection, credential work, deployment, or external effect is authorized.
