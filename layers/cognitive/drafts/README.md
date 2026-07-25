@@ -2,25 +2,11 @@
 
 ## Status
 
-Cognitive Baseline `CB-007` is represented by the production tree.
+CB-CURRENT is represented by the production tree. Numbered CB snapshots are historical progression records.
 
-## Admitted CB-007 Source Drafts
+## Historical CB-007 Source Evidence
 
-The exact reviewed CB-007 source drafts are retained as historical evidence:
-
-- `b2-3-cb-007-armory-locksmith-candidate.md`
-- `b2-3-cb-007-muster-candidate.md`
-- `b2-3-cb-007-barbican-candidate.md`
-
-Admission evidence:
-
-- `tests/cognitive/b2-3-cb-007-locksmith-sole-accessor-pressure-run-001.md` — 22 PASS / 0 FAIL
-- Authority–Cognitive convergence — 15 PASS / 0 FAIL
-- Provenance–Cognitive convergence — 15 PASS / 0 FAIL
-- production admission — 24 PASS / 0 FAIL
-- production review — 16 PASS / 0 FAIL
-
-Their canonical production targets are `armory-locksmith.md`, `muster.md`, and `barbican.md` under `layers/cognitive/production/`. Historical draft presence does not create a second canonical source.
+The reviewed CB-007 candidate material is preserved in `layers/cognitive/dumpster/` because its canonical production targets are already represented in the active CB-CURRENT artifact set. The admission evidence remains in `tests/cognitive/` and `tests/runtime/`. Historical material does not create a second canonical source.
 
 ## Historical Source Drafts
 
@@ -54,7 +40,7 @@ Unadmitted draft evidence:
 
 ## Rule
 
-Historical draft presence does not create a duplicate canonical origin or silently revise CB-006.
+Historical draft presence does not create a duplicate canonical origin or silently revise CB-CURRENT.
 
 An active draft candidate changes production only through separate pressure, convergence, admission, explicit promotion authorization, and a traceable production revision.
 
