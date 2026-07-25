@@ -8,7 +8,7 @@ DR-005 parks Locksmith and credential infrastructure until an observed authentic
 
 DR-009 Evidence Without Engineered Orientation is recorded. DR-008 is superseded.
 
-DR-010 Mission-Scoped Observator/Custos Operator Instance is recorded.
+DR-010 Mission-Scoped Observator/Custos (OC) Operator Instance is recorded. OC is one instance, not two roles or cooperating components.
 
 ## Active Focus
 
