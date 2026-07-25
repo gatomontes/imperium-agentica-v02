@@ -65,7 +65,7 @@ The contract requires distinct identities for:
 - Minutes and counsel assignments
 - closure and release records
 
-The cognitive owners of these subjects remain defined in CB-001 or its successor.
+The cognitive owners of these subjects remain defined in CB-CURRENT or its successor.
 
 This contract defines their correlation, not their responsibilities.
 
