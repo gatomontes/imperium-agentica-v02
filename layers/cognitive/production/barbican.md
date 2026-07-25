@@ -10,7 +10,7 @@ This Cognitive contract cites the following admitted contracts as external canon
 
 ## Status
 
-Admitted under Cognitive Baseline `CB-007`.
+Admitted under Cognitive Baseline `CB-CURRENT`.
 
 Admission evidence:
 
@@ -20,7 +20,7 @@ Admission evidence:
 - `tests/cognitive/b2-3-cb-007-production-admission-run-001.md` — 24 PASS / 0 FAIL
 - `drafts/b2-3-cb-007-production-admission-review-001.md` — 16 PASS / 0 FAIL
 
-CB-007 revises CB-006 only at the Locksmith sole-accessor boundary.
+CB-CURRENT revises CB-CURRENT only at the Locksmith sole-accessor boundary.
 
 It does not admit a persistence device, adapter, Runtime custody mechanism, real credential, external integration, or live provider operation.
 
