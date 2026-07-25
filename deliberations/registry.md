@@ -6,7 +6,7 @@
 - Improvement programs recorded: 7
 - Pending control records: 7
 - Implemented control records: 0
-- Decision records: 11
+- Decision records: 12
 - Initial assessment: `assessments/2026-07-23-mit-ai-risks-imperium-assessment.md`
 - Integration review: `assessments/2026-07-23-ra-integration-review-001.md`
 - Integration execution: `assessments/2026-07-23-ra-integration-review-execution-001.md`
@@ -15,6 +15,7 @@
 - Operative creation/selection review scope: `assessments/2026-07-24-operative-creation-selection-deliberation-scope-001.md`
 - Operative creation/selection decision map: `assessments/2026-07-24-operative-creation-selection-lineage-decision-map-001.md`
 - DR-006 pressure test: `assessments/2026-07-24-dr-006-mandatory-exemplar-grounding-pressure-test-001.md` — 18 PASS / 3 FAIL
+- EC-01 admission review: `assessments/2026-07-25-ec-01-admission-review-004.md` — admission criteria PASS; recommendation ADMIT
 
 ## Risks
 
@@ -88,6 +89,7 @@ None recorded.
 | DR-008 | Treat authorized bias as a declared persona or operative orientation, not Imperium doctrine | Historical alternative; superseded by DR-009 |
 | DR-009 | Require evidence without engineered political, ideological, or conclusion-seeking orientation | Active operator-wide SOP decision |
 | DR-010 | Model Observator/Custos as one mission-attached Operator instance with authorized visibility and interaction but no execution influence | Recorded decision; terminology clarified |
+| DR-011 | Admit EC-01 Evidence-Source Standard for current semantic use | Recorded decision; bounded evidence standard admitted |
 
 The two `DR-002` records are distinct historical files. The later OpenBao topology decision reused an existing ID before this registry was updated. This record preserves both and records the collision; renumbering a prior decision requires a separate traceable normalization.
 
