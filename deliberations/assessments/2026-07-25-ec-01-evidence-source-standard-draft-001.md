@@ -2,7 +2,7 @@
 
 ## Status
 
-Draft for pressure testing. Not admitted doctrine. Not a persona-production gate. Not a Human-Trait Canon.
+Admitted for current semantic use by DR-011. This artifact remains an evidence standard, not a persona-production gate or Human-Trait Canon.
 
 ## Purpose
 
@@ -172,4 +172,4 @@ Before EC-01 can be considered for admission, pressure it with at least:
 
 ## Current Disposition
 
-EC-01 draft exists for pressure testing. It is not admitted, does not revise CB-CURRENT, and does not authorize persona production or operative creation.
+EC-01 is admitted for current semantic use by DR-011. It does not revise CB-CURRENT and does not authorize persona production, operative creation, or external effect.
