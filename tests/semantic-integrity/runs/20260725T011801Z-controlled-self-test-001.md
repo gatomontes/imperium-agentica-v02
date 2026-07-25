@@ -54,10 +54,9 @@ The reconstruction above is supported directly by `current-step.md`, `next-steps
 
 ## Residual Findings
 
-1. The historical filename `DR-010-mission-scoped-observer-controller-operator-instance.md` remains a possible lexical source of drift even though the document title and contents are clarified.
-2. The term `Custos` still requires the explicit non-action boundary; without that boundary, a reader may infer that Custos acts on or transforms evidence.
-3. A true external interpretation run remains necessary. This run cannot establish that independent readers recover the same meaning.
-4. The packet successfully separates the questions to be answered from the answer key; preserve that separation in the external run.
+1. The term `Custos` still requires the explicit non-action boundary; without that boundary, a reader may infer that Custos acts on or transforms evidence.
+2. A true external interpretation run remains necessary. This run cannot establish that independent readers recover the same meaning.
+3. The packet successfully separates the questions to be answered from the answer key; preserve that separation in the external run.
 
 ## Disposition
 
