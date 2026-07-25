@@ -10,7 +10,7 @@ This cognitive artifact cites the following admitted contracts as external canon
 
 Admitted constitutional input.
 
-Baseline: `CB-002`.
+Baseline: `CB-CURRENT`.
 
 Admission: `Cognitive Production Admission Review 004`.
 
