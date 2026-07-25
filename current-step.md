@@ -8,53 +8,53 @@ DR-005 parks Locksmith and credential infrastructure until an observed authentic
 
 DR-009 Evidence Without Engineered Orientation is recorded. DR-008 is superseded.
 
-**DR-010 Mission-Scoped Observator/Custos Operator Instance is recorded.**
+DR-010 Mission-Scoped Observator/Custos Operator Instance is recorded.
 
-No leg is currently active.
+## Active Focus
+
+**Semantic Integrity — independent interpretation pressure test.**
+
+The immediate work is to determine whether the repository's language reliably communicates its intended ontology, authority boundaries, admission state, current operational state, and scope without relying on conversation history.
+
+The external reassessment is evidence of interpretation drift, not authority to implement an OC pattern. It incorrectly interpreted:
+
+- one OC Operator instance as two cooperating components;
+- Custos as an actor that acts on evidence;
+- a preserved decision and future queue as an active implementation step.
+
+These are the pressure findings to investigate.
+
+## Test Boundary
+
+The test must evaluate repository language, not agreement with an expected conclusion.
+
+An independent reader must be able to recover, from the required repository reading order:
+
+1. what an OC is;
+2. what an OC is not;
+3. what authority an OC does and does not possess;
+4. whether the current step is active, parked, deferred, or closed;
+5. whether a concept is admitted semantics, implementation, draft, or future possibility;
+6. which statements are evidence, interpretation, decision, or proposal.
+
+Failures must be recorded as exact interpretation results. Do not rewrite the result into a favorable account.
 
 ## Current Dispositions
 
 ```text
 DR-006 exemplar-grounding principle: RETAINED
-EC-01 evidence-source standard: REQUIRED LATER; DEFERRED
-EC-02 prior framing: REJECTED AND SUPERSEDED
-EC-03 proposed orientation/calibration concern: CLOSED
-DR-008 Declared Orientation: SUPERSEDED
-Engineered persona or operative bias: PROHIBITED
-Operator judgment after handoff: PRESERVED
-DR-010 OC mechanism: RECORDED
-OC expansion: Observator/Custos
+DR-009 evidence without engineered orientation: ACTIVE
+DR-010 Observator/Custos terminology: CLARIFIED
 OC ontology: one mission-attached Imperium Operator instance
-OC visibility and interaction: ALLOWED ONLY WHEN AUTHORIZED
 OC execution influence: PROHIBITED
-OC notifications and requests: FUTURE SECRETARIAT ROUTING
-Production files changed: 0
-Implementation files changed: 0
+Semantic integrity pressure test: ACTIVE
+OC implementation: NOT AUTHORIZED
+Production implementation: NOT AUTHORIZED
 External effect: NO
 ```
 
-## Evidence Boundary
-
-> It is what it is.
-
-Imperium provides the cleanest attainable evidence product: exact observations and source claims, contradiction, assumptions, unknowns, limitations, inferences, confidence, and revision conditions.
-
-Personas and Operatives may not be tuned toward preferred political, ideological, philosophical, or conclusion-seeking results.
-
-An operator may define the question and constraints and may decide however the operator wishes after handoff. Imperium must not alter the evidence in anticipation of that decision.
-
-## OC Boundary
-
-An Observator/Custos (`OC`) is one mission-attached Imperium Operator instance. The designation grants authorized observation, evidence and provenance inspection, interaction, and reporting capabilities; it does not describe two cooperating components and does not grant execution control.
-
-An OC may eventually observe, inspect evidence and provenance, receive notifications, ask questions, attend Curia as a non-voting/non-quorum presence, and submit observations within authorized boundaries.
-
-An OC may not pause, reroute, reprioritize, block, approve, reject, alter, or close a mission by virtue of OC status. Questions are not instructions. Observations are not approvals. Silence is not consent.
-
-Secretariat is the future home for OC assignment mechanics, notification subscriptions, invitations, question routing, response delivery, visibility requests, and scheduling.
-
 ## Current Gate
 
-Stop after preserving DR-010.
+Strengthen or clarify repository language only where the pressure test identifies recoverable ambiguity.
 
-No production correction, OC implementation, Secretariat implementation, Curia procedure change, runtime permission, stakeholder eligibility rule, persona creation, model fine-tuning, Runtime action, or external effect is authorized.
+No OC implementation, Secretariat implementation, Curia procedure change, runtime permission, persona creation, model fine-tuning, Runtime action, deployment, or external effect is authorized by this step.
