@@ -55,7 +55,7 @@
 | ICP-04 | Capability governance | `CONTROL_CANDIDATE_RECORDED` | 1 | 0 |
 | ICP-05 | Continuous assurance | `CONTROL_CANDIDATE_RECORDED` | 1 | 0 |
 | ICP-06 | Quantitative evidence | `CONTROL_CANDIDATE_RECORDED` | 1 | 0 |
-| ICP-07 | External accountability | `CONTROL_CANDIDATE_RECORDED` | 1 | 0 |
+| ICP-07 | External accountability | `CONTROL_CANDIDATE_RECORDED` | `CONTROL_CANDIDATE_RECORDED` | 1 | 0 |
 
 ## Pending Controls
 
@@ -87,7 +87,7 @@ None recorded.
 | DR-007 | Require verifiable language and exact claims; defer EC-01 and supersede EC-02 framing | Recorded operator-wide SOP decision; EC-03 closed by DR-009 |
 | DR-008 | Treat authorized bias as a declared persona or operative orientation, not Imperium doctrine | Historical alternative; superseded by DR-009 |
 | DR-009 | Require evidence without engineered political, ideological, or conclusion-seeking orientation | Active operator-wide SOP decision |
-| DR-010 | Model Observer/Controller as a mission-scoped Operator instance with visibility and interaction but no execution influence | Recorded decision |
+| DR-010 | Model Observator/Custos as one mission-attached Operator instance with authorized visibility and interaction but no execution influence | Recorded decision; terminology clarified |
 
 The two `DR-002` records are distinct historical files. The later OpenBao topology decision reused an existing ID before this registry was updated. This record preserves both and records the collision; renumbering a prior decision requires a separate traceable normalization.
 
