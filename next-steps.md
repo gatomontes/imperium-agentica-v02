@@ -2,7 +2,7 @@
 
 ## Status
 
-Semantic Integrity is complete and closed. The external reader recovered the intended meaning from the repository without relying on conversation history. Exemplar Grounding EC-01 is complete and admitted by DR-011. No next leg is active until explicitly selected.
+Semantic Integrity is complete and closed. The external reader recovered the intended meaning from the repository without relying on conversation history. Exemplar Grounding EC-01 is complete and admitted by DR-011. A synthetic Hagiography application also passed. No next leg is active until explicitly selected.
 
 DR-010 records **Observator/Custos (`OC`)** as one mission-attached Imperium Operator instance—not two roles or cooperating components—with authorized visibility and interaction but no execution influence.
 
@@ -34,7 +34,7 @@ The reader must answer:
 
 | Order | Item | State |
 |---:|---|---|
-| 1 | EC-01 evidence-source standard | completed and admitted by DR-011 for current semantic use |
+| 1 | EC-01 evidence-source standard | completed and admitted by DR-011 for current semantic use; synthetic application passed at `deliberations/assessments/2026-07-25-ec-01-synthetic-hagiography-case-001.md` |
 | 2 | evidence-without-orientation pressure tests | deferred until the relevant admission gate |
 | 3 | maintain CB-CURRENT and classify numbered CB snapshots or candidates through CB-DENIED | deferred |
 
