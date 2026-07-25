@@ -1,4 +1,4 @@
-# Semantic Integrity Run — Targeted Consistency Re-Audit
+# Semantic Integrity Run — Targeted Consistency Re-Audit (Superseded)
 
 ## Run Metadata
 
@@ -6,6 +6,7 @@
 - Test type: repository-only targeted consistency re-audit
 - Repository: imperium-agentica-v02
 - Independence: NOT ESTABLISHED
+- Status: SUPERSEDED by `20260725-cb-current-reference-audit-003`
 - External effect: none
 
 ## Scope
@@ -16,9 +17,9 @@ This run verifies the concrete findings from the full-source Claude audit and do
 
 | Check | Result |
 |---|---|
-| Root README cognitive baseline | PASS — CB-005 |
-| Current-step cognitive baseline | PASS — CB-005 |
-| Cognitive layer-owned baseline | PASS — CB-005 |
+| Root README cognitive baseline | SUPERSEDED — the prior check recorded CB-005; current active standard is CB-CURRENT with numbered snapshot CB-007 |
+| Current-step cognitive baseline | SUPERSEDED — the prior check recorded CB-005; current active standard is CB-CURRENT with numbered snapshot CB-007 |
+| Cognitive layer-owned baseline | SUPERSEDED — the prior check recorded CB-005; current active standard is CB-CURRENT with numbered snapshot CB-007 |
 | Root README identifies layer-owned authority | PASS |
 | Recovery status is operationally qualified | PASS — repository reset established; behavioral recovery unproven |
 | Current step surfaces self-test independence limitation | PASS |
@@ -30,7 +31,7 @@ This run verifies the concrete findings from the full-source Claude audit and do
 
 ## Findings
 
-1. The confirmed CB-007/CB-005 contradiction is corrected in the root README, current step, and queue references.
+1. This historical record incorrectly treated CB-005 as current; that result is superseded. The active standard is now CB-CURRENT, with CB-007 retained as the current numbered historical snapshot.
 2. The root README now identifies layer-owned README and production contents as authoritative for baseline records.
 3. The phrase Recovery status: successful has been replaced with the bounded statement: repository reset established; behavioral recovery unproven.
 4. The current operational status now states that the controlled self-test's independence is not established.
@@ -42,4 +43,4 @@ This is a consistency re-audit performed by the same working agent. It verifies 
 
 ## Disposition
 
-The corrected findings pass repository-consistency review. Semantic Integrity remains active until a genuinely independent reader completes the required packet.
+This record is retained for audit continuity but must not be used as current-state evidence. The later CB-CURRENT reference audit supersedes its CB-005 claims. Semantic Integrity remains active until a genuinely independent reader completes the required packet.
