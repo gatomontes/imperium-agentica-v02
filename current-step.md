@@ -69,6 +69,6 @@ External effect: NO
 
 ## Current Gate
 
-Review EC-01 across professional domains and test whether its evidence record is usable and determinate. It remains a language/evidence standard only. No persona production, operative creation, recruitment packaging, model fine-tuning, deployment, or external effect is authorized.
+Admission review complete: EC-01 passed all repository admission criteria and remains pending explicit operator decision. It remains a language/evidence standard only. No persona production, operative creation, recruitment packaging, model fine-tuning, deployment, or external effect is authorized.
 
 No OC implementation, Secretariat implementation, Curia procedure change, runtime permission, persona creation, model fine-tuning, Runtime action, deployment, or external effect is authorized by this step.
