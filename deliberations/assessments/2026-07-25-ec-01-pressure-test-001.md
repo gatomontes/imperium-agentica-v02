@@ -4,7 +4,7 @@
 
 - Test type: bounded draft pressure test
 - Target: EC-01 Evidence-Source Standard Draft 001
-- Source: delibrations/assessments/2026-07-25-ec-01-evidence-source-standard-draft-001.md
+- Source: deliberations/assessments/2026-07-25-ec-01-evidence-source-standard-draft-001.md
 - Independence: NOT ESTABLISHED
 - Production admission: not evaluated
 - External effect: none
