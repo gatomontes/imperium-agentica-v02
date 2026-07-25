@@ -1,8 +1,8 @@
-# Cognitive Production
+# Cognitive Production — Historical Snapshot CB-007
 
 ## Status
 
-Cognitive Baseline `CB-007` is admitted for current cognitive use.
+This file records the numbered CB-007 admission snapshot. The active cognitive standard is `CB-CURRENT`, maintained in `CB-CURRENT.md`.
 
 ```text
 Admission: B2.3 CB-007 Production Admission Review 001
@@ -33,7 +33,7 @@ Runtime Baseline `RTB-002` owns realization, dispatch, control-plane mechanics, 
 
 Cognitive artifacts may cite these contracts but do not originate or redefine them.
 
-## CB-007 Manifest
+## Historical CB-007 Manifest
 
 ### Intake And Mission Formation
 
