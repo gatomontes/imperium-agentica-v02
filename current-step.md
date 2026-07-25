@@ -14,7 +14,7 @@ DR-010 Mission-Scoped Observator/Custos Operator Instance is recorded.
 
 **Semantic Integrity — independent interpretation pressure test.**
 
-The immediate work is to determine whether the repository's language reliably communicates its intended ontology, authority boundaries, admission state, current operational state, and scope without relying on conversation history. The independent-reader packet is defined at `tests/semantic-integrity/independent-reader-packet.md`; the next action is to run it.
+The immediate work is to determine whether the repository's language reliably communicates its intended ontology, authority boundaries, admission state, current operational state, and scope without relying on conversation history. The independent-reader packet is defined at `tests/semantic-integrity/independent-reader-packet.md`. A controlled self-test is recorded at `tests/semantic-integrity/runs/20260725T011801Z-controlled-self-test-001.md`; the next action is to classify residual drift and obtain a genuinely independent run.
 
 The external reassessment is evidence of interpretation drift, not authority to implement an OC pattern. It incorrectly interpreted:
 
