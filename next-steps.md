@@ -2,7 +2,7 @@
 
 ## Status
 
-Semantic Integrity is complete and closed. The external reader recovered the intended meaning from the repository without relying on conversation history. Exemplar Grounding is now the active leg, beginning with EC-01.
+Semantic Integrity is complete and closed. The external reader recovered the intended meaning from the repository without relying on conversation history. Exemplar Grounding EC-01 is complete and admitted by DR-011. No next leg is active until explicitly selected.
 
 DR-010 records **Observator/Custos (`OC`)** as one mission-attached Imperium Operator instance—not two roles or cooperating components—with authorized visibility and interaction but no execution influence.
 
@@ -34,7 +34,7 @@ The reader must answer:
 
 | Order | Item | State |
 |---:|---|---|
-| 1 | EC-01 evidence-source standard | pressure test 001: 8 PASS / 0 FAIL; domain/usability review 002: 9 PASS / 1 revision; focused retest 003: 6 PASS / 0 FAIL; admission review 004 recommends ADMIT; operator decision pending |
+| 1 | EC-01 evidence-source standard | completed and admitted by DR-011 for current semantic use |
 | 2 | evidence-without-orientation pressure tests | deferred until the relevant admission gate |
 | 3 | maintain CB-CURRENT and classify numbered CB snapshots or candidates through CB-DENIED | deferred |
 
@@ -57,7 +57,7 @@ OC authority envelope, Secretariat routing, Curia presence procedure, provenance
 
 ## Current Gate
 
-Exemplar Grounding is active. Review EC-01 across professional domains and test whether its evidence record is usable and determinate. No persona production, operative creation, recruitment packaging, model fine-tuning, deployment, or external effect is authorized. No persona production, operative creation, recruitment packaging, model fine-tuning, deployment, or external effect is authorized.
+No active gate. A future step must be explicitly selected before work resumes. EC-01 admission does not authorize persona production, operative creation, recruitment packaging, model fine-tuning, deployment, or external effect. No persona production, operative creation, recruitment packaging, model fine-tuning, deployment, or external effect is authorized.
 
 No persona production, operative creation, recruitment packaging, model fine-tuning, deployment, or external effect is authorized.
 
