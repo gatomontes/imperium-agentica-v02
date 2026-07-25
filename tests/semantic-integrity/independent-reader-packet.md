@@ -41,13 +41,6 @@ Without consulting any answer key, the reader must provide:
 3. What do “Observator” and “Custos” each designate?
 4. What is OC explicitly not?
 
-### Cognitive Baseline State
-
-13. What is the sole active Cognitive standard?
-14. What is the relationship between CB-CURRENT and numbered CB snapshots?
-15. What is CB-DENIED, and how does it differ from a retired or superseded numbered snapshot?
-16. What is the authority status of material in the Cognitive dumpster?
-
 ### Authority
 
 5. What may OC observe, inspect, receive, ask, submit, or report?
@@ -61,6 +54,13 @@ Without consulting any answer key, the reader must provide:
 10. Is OC a current active implementation, a recorded decision, a future possibility, a draft, or another state?
 11. What is the current operational step?
 12. Which related work is deferred, parked, unauthorized, or future?
+
+### Cognitive Baseline State
+
+13. What is the sole active Cognitive standard?
+14. What is the relationship between CB-CURRENT and numbered CB snapshots?
+15. What is CB-DENIED, and how does it differ from a retired or superseded numbered snapshot?
+16. What is the authority status of material in the Cognitive dumpster?
 
 ### Evidence Classification
 
