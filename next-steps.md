@@ -4,7 +4,7 @@
 
 Semantic Integrity is the active focus. The current step tests whether an independent reader can recover Imperium's intended meaning from the repository without relying on conversation history.
 
-DR-010 records **Observator/Custos (`OC`)** as one mission-attached Imperium Operator instance with authorized visibility and interaction but no execution influence.
+DR-010 records **Observator/Custos (`OC`)** as one mission-attached Imperium Operator instance—not two roles or cooperating components—with authorized visibility and interaction but no execution influence.
 
 ## Semantic Integrity Queue
 
