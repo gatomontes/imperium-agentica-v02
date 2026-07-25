@@ -2,7 +2,7 @@
 
 ## Status
 
-Semantic Integrity is the active focus. The current step tests whether an independent reader can recover Imperium's intended meaning from the repository without relying on conversation history.
+Semantic Integrity is complete and closed. The external reader recovered the intended meaning from the repository without relying on conversation history. No next leg is active until explicitly selected.
 
 DR-010 records **Observator/Custos (`OC`)** as one mission-attached Imperium Operator instance—not two roles or cooperating components—with authorized visibility and interaction but no execution influence.
 
@@ -12,10 +12,10 @@ DR-010 records **Observator/Custos (`OC`)** as one mission-attached Imperium Ope
 |---:|---|---|
 | 1 | Define the independent-reader reading packet | completed: packet defined at `tests/semantic-integrity/independent-reader-packet.md` |
 | 2 | Run a bounded interpretation test | completed: controlled self-test recorded at `tests/semantic-integrity/runs/20260725T011801Z-controlled-self-test-001.md`; independence unproven |
-| 3 | Classify interpretation drift | open within the active Semantic Integrity focus: classify residual ambiguity and arrange a genuinely independent run; CB flattening is the active language correction |
+| 3 | Classify interpretation drift | completed: residual ambiguity classified; external reader pass arranged and recorded |
 | 4 | Complete CB flattening | completed: CB-CURRENT/CB-DENIED established; active references flattened; obsolete candidates moved to the Cognitive dumpster |
-| 5 | Re-run the interpretation test | open within the active Semantic Integrity focus: determine whether CB-CURRENT is recovered as the sole active Cognitive standard |
-| 6 | Record disposition and update continuity files | pending: close, repeat, or demote the language change based on evidence |
+| 5 | Re-run the interpretation test | completed: external reader recovered CB-CURRENT as sole active Cognitive standard |
+| 6 | Record disposition and update continuity files | completed: Semantic Integrity closed after PASS with minor language corrections |
 
 ## Required Interpretation Questions
 
@@ -57,6 +57,6 @@ OC authority envelope, Secretariat routing, Curia presence procedure, provenance
 
 ## Current Gate
 
-Semantic Integrity is active.
+No active gate. The next leg must be explicitly selected before work resumes.
 
-No OC implementation, Secretariat implementation, Curia procedure change, production change, model/provider/evaluator selection, credential work, deployment, or external effect is authorized.
+OC implementation, Secretariat implementation, Curia procedure change, production change, model/provider/evaluator selection, credential work, deployment, and external effect remain unauthorized until a future step explicitly admits them.
