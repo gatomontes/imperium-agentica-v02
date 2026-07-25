@@ -378,7 +378,7 @@ Previous campaign: **terminated**
 
 Cause of failure: **conceptual mass exceeded structural integrity**
 
-Recovery status: **successful**
+Recovery status: **repository reset established; behavioral recovery unproven**
 
 Current campaign: **Day 0**
 
