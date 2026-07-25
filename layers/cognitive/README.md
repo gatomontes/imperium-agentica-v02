@@ -11,7 +11,8 @@ It does not define runtime architecture, service topology, database schema, depl
 ```text
 layers/cognitive/
 ├── drafts/
-└── production/
+├── production/
+└── dumpster/
 ```
 
 ### Drafts
@@ -22,13 +23,17 @@ Approval of a diagram or terminology does not by itself promote an artifact. Dra
 
 ### Production
 
-`production/` contains cognitive artifacts admitted for current active use after sufficient scenario evidence.
+`production/` contains the active CB-CURRENT pointer and cognitive artifacts admitted for current active use after sufficient scenario evidence.
 
-Active standard: `CB-CURRENT`; current numbered snapshot: `CB-007`. The active pointer is `layers/cognitive/production/CB-CURRENT.md`.
+Active standard: `CB-CURRENT`; current numbered snapshot: `CB-007`. The active pointer is `layers/cognitive/production/CB-CURRENT.md`. The numbered CB-007 manifest is retained as historical admission evidence.
 
 CB-CURRENT cites Authority Baseline `AB-003`, Provenance Baseline `PB-001`, Procedure Baseline `PRB-003`, and Runtime Baseline `RTB-002` for contracts native to those parallel concerns. Numbered CBs preserve admitted progression; CB-DENIED records candidates never admitted.
 
 Production means admitted, not permanent. An artifact may return to drafts when later evidence contests it.
+
+### Dumpster
+
+`dumpster/` contains non-authoritative material removed from active Cognitive reading surfaces. It preserves provenance but does not contribute current semantic authority.
 
 ## Admission
 
