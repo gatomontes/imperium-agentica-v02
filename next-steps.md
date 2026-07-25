@@ -6,7 +6,7 @@ DR-007 records the repository-wide verifiable-language rule and resolves the imm
 
 Track A remains closed. Locksmith and credential infrastructure remain parked. No leg is currently active.
 
-DR-010 records the Observer/Controller (`OC`) concept as a mission-scoped Operator instance with visibility and interaction but no execution influence.
+DR-010 records the **Observator/Custos (`OC`)** concept as one mission-attached Imperium Operator instance with authorized visibility and interaction but no execution influence.
 
 ## Exemplar-Grounding Queue
 
@@ -31,7 +31,7 @@ DR-010 records the Observer/Controller (`OC`) concept as a mission-scoped Operat
 | 7 | measurement and invalidation discipline | partially applied; CTRL-006 remains pending |
 | 8 | multi-agent composition risk | outside current single-Operative chain |
 
-## Observer/Controller Queue
+## Observator/Custos Queue
 
 | Order | Item | State |
 |---:|---|---|
