@@ -4,7 +4,7 @@
 
 Admitted Cognitive production contract.
 
-Baseline: `CB-003`.
+Baseline: `CB-CURRENT`.
 
 Admission: `Cognitive Production Admission Review 005`.
 
@@ -15,7 +15,7 @@ Evidence:
 
 Origin draft: `layers/cognitive/drafts/counsel-availability-contract.md`.
 
-Supersedes the prior CB-002 production revision at `layers/cognitive/production/counsel-availability-contract.md`.
+Supersedes the prior CB-CURRENT production revision at `layers/cognitive/production/counsel-availability-contract.md`.
 
 ## Canonical Dependencies
 
