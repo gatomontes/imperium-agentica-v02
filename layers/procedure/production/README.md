@@ -30,7 +30,7 @@ Production means admitted, versioned, revisable, demotable, and contestable. It 
 
 ## Boundary
 
-PRB-003 defines what is supposed to happen, in what order, and under which conditions. It composes meanings supplied by Cognitive Baseline `CB-005`, Authority Baseline `AB-003`, Provenance Baseline `PB-001`, and Runtime Baseline `RTB-002`.
+PRB-003 defines what is supposed to happen, in what order, and under which conditions. It composes meanings supplied by Cognitive Standard `CB-CURRENT` (current numbered snapshot `CB-007`), Authority Baseline `AB-003`, Provenance Baseline `PB-001`, and Runtime Baseline `RTB-002`.
 
 It does not originate responsibility, permission, identity, correlation, lineage, artifact meaning, evidence sufficiency, ownership, Runtime mechanics, or execution.
 
