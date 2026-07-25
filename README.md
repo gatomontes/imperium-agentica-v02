@@ -143,7 +143,7 @@ A future LLM session should read the repository in this order:
 4. `deliberations/README.md` — cross-layer risk, deliberation, control-tracking, and implementation-status instructions, when evaluating gaps, external findings, or continuous improvement.
 5. `deliberations/registry.md` — current risk, program, control, and decision index, when deliberation work is relevant.
 6. `layers/cognitive/README.md` — cognitive-layer boundary and admission rules.
-7. `layers/cognitive/production/` — admitted cognitive baseline, when cognitive structure is relevant.
+7. `layers/cognitive/production/CB-CURRENT.md` — active cognitive standard; numbered CB snapshots and CB-DENIED are historical/disposition records.
 8. `layers/authority/README.md` — approved authority boundary.
 9. `layers/authority/production/` — admitted Authority Baseline `AB-003`, when authority is relevant.
 10. `layers/authority/drafts/` — shaped but unproven authority contracts, only if relevant.
@@ -196,7 +196,7 @@ The default home for shaped but unproven artifacts is:
 /drafts
 ```
 
-Layer-specific artifacts live within their layer. The admitted cognitive baseline is `CB-005`. The layer-owned README and production contents are authoritative for the baseline; the root README is a convenience summary. Cognitive artifacts use:
+Layer-specific artifacts live within their layer. The active cognitive standard is `CB-CURRENT`, whose current numbered snapshot is CB-007. The layer-owned CB-CURRENT manifest and production contents are authoritative; the root README is a convenience summary. Numbered CBs are historical progression records. CB-DENIED records candidates that were never admitted. Cognitive artifacts use:
 
 ```text
 /layers/cognitive/drafts
@@ -246,7 +246,7 @@ The admitted Runtime boundary and baseline use:
 
 Runtime is the operating machinery that realizes cited contracts through actual state and effects. It is not synonymous with code and does not own semantic contracts merely because they are encoded in software.
 
-Cognitive Baseline `CB-005`, Authority Baseline `AB-003`, Provenance Baseline `PB-001`, Procedure Baseline `PRB-003`, and Runtime Baseline `RTB-002` are admitted for current semantic use.
+Cognitive standard `CB-CURRENT` (current snapshot CB-007), Authority Baseline `AB-003`, Provenance Baseline `PB-001`, Procedure Baseline `PRB-003`, and Runtime Baseline `RTB-002` are admitted for current semantic use.
 
 `production` means admitted for current use, not permanent or implemented in software.
 
