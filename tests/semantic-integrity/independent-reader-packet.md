@@ -25,9 +25,7 @@ The reader must:
 4. `deliberations/README.md`
 5. `deliberations/registry.md`
 6. `deliberations/decisions/DR-009-evidence-without-engineered-orientation.md`
-7. `deliberations/decisions/DR-010-mission-scoped-observer-controller-operator-instance.md`
-
-The DR-010 filename is retained as historical provenance. The document title and contents are authoritative for its terminology.
+7. `deliberations/decisions/DR-010-mission-scoped-observator-custos-operator-instance.md`
 
 ## Required Reconstruction
 
