@@ -8,7 +8,7 @@ DR-005 parks Locksmith and credential infrastructure until an observed authentic
 
 DR-009 Evidence Without Engineered Orientation is recorded. DR-008 is superseded.
 
-**DR-010 Mission-Scoped Observer/Controller Operator Instance is recorded.**
+**DR-010 Mission-Scoped Observator/Custos Operator Instance is recorded.**
 
 No leg is currently active.
 
@@ -23,7 +23,8 @@ DR-008 Declared Orientation: SUPERSEDED
 Engineered persona or operative bias: PROHIBITED
 Operator judgment after handoff: PRESERVED
 DR-010 OC mechanism: RECORDED
-OC ontology: mission-attached Operator instance
+OC expansion: Observator/Custos
+OC ontology: one mission-attached Imperium Operator instance
 OC visibility and interaction: ALLOWED ONLY WHEN AUTHORIZED
 OC execution influence: PROHIBITED
 OC notifications and requests: FUTURE SECRETARIAT ROUTING
@@ -44,7 +45,7 @@ An operator may define the question and constraints and may decide however the o
 
 ## OC Boundary
 
-An Observer/Controller (`OC`) is a mission-attached Operator instance with visibility and interaction permissions but no execution influence.
+An Observator/Custos (`OC`) is one mission-attached Imperium Operator instance. The designation grants authorized observation, evidence and provenance inspection, interaction, and reporting capabilities; it does not describe two cooperating components and does not grant execution control.
 
 An OC may eventually observe, inspect evidence and provenance, receive notifications, ask questions, attend Curia as a non-voting/non-quorum presence, and submit observations within authorized boundaries.
 
