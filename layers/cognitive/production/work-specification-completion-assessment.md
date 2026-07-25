@@ -4,7 +4,7 @@
 
 Admitted Cognitive production contract.
 
-Baseline: `CB-003`.
+Baseline: `CB-CURRENT`.
 
 Admission: `Cognitive Production Admission Review 005`.
 
