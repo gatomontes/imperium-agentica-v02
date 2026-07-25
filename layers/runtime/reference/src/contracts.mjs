@@ -3,8 +3,8 @@ export const Contracts = Object.freeze({
   observation: "layers/runtime/production/runtime-observation-envelope.md@RTB-001",
   controlPlane: "layers/runtime/production/runtime-control-plane-contract.md@RTB-002",
   maintenanceProcedure: "layers/procedure/production/runtime-maintenance-procedure.md@PRB-003",
-  diagnosis: "layers/cognitive/production/runtime-operational-diagnosis.md@CB-005",
-  disposition: "layers/cognitive/production/runtime-maintenance-disposition.md@CB-005",
+  diagnosis: "layers/cognitive/production/runtime-operational-diagnosis.md@CB-CURRENT",
+  disposition: "layers/cognitive/production/runtime-maintenance-disposition.md@CB-CURRENT",
   authority: "layers/authority/production/runtime-control-plane-authority-profile.md@AB-003",
   provenance: "layers/provenance/production/provenance-contract.md@PB-001",
 });
