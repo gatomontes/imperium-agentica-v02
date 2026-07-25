@@ -34,7 +34,7 @@ The reader must answer:
 
 | Order | Item | State |
 |---:|---|---|
-| 1 | EC-01 evidence-source standard | pressure test 001: 8 PASS / 0 FAIL; domain/usability review 002: 9 PASS / 1 revision; revised evidence chain requires focused re-test |
+| 1 | EC-01 evidence-source standard | pressure test 001: 8 PASS / 0 FAIL; domain/usability review 002: 9 PASS / 1 revision; focused retest 003: 6 PASS / 0 FAIL; admission review pending |
 | 2 | evidence-without-orientation pressure tests | deferred until the relevant admission gate |
 | 3 | maintain CB-CURRENT and classify numbered CB snapshots or candidates through CB-DENIED | deferred |
 
