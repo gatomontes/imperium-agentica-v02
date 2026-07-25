@@ -26,6 +26,9 @@ The reader must:
 5. `deliberations/registry.md`
 6. `deliberations/decisions/DR-009-evidence-without-engineered-orientation.md`
 7. `deliberations/decisions/DR-010-mission-scoped-observator-custos-operator-instance.md`
+8. `layers/cognitive/README.md`
+9. `layers/cognitive/production/CB-CURRENT.md`
+10. `layers/cognitive/CB-DENIED.md`
 
 ## Required Reconstruction
 
@@ -37,6 +40,13 @@ Without consulting any answer key, the reader must provide:
 2. Is OC one Imperium Operator instance, multiple components, a role performed by multiple actors, or something else?
 3. What do “Observator” and “Custos” each designate?
 4. What is OC explicitly not?
+
+### Cognitive Baseline State
+
+13. What is the sole active Cognitive standard?
+14. What is the relationship between CB-CURRENT and numbered CB snapshots?
+15. What is CB-DENIED, and how does it differ from a retired or superseded numbered snapshot?
+16. What is the authority status of material in the Cognitive dumpster?
 
 ### Authority
 
@@ -81,4 +91,4 @@ The evaluator must preserve the reader's original response, including errors and
 
 Do not correct, coach, summarize favorably, or rewrite the response before classification.
 
-A clarification is successful only if a new independent reader recovers the intended meaning without access to the prior reader's answers or the expected answer key.
+A clarification is successful only if a new independent reader recovers the intended meaning without access to the prior reader's answers or the expected answer key. For the Cognitive Baseline questions, the reader must distinguish active CB-CURRENT, historical numbered snapshots, never-admitted CB-DENIED candidates, and non-authoritative dumpster material.
