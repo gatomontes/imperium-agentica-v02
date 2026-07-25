@@ -16,7 +16,7 @@ DR-010 Mission-Scoped Observator/Custos (OC) Operator Instance is recorded. OC i
 
 The external reader recovered the intended OC ontology, authority boundary, implementation status, current step, and Cognitive Baseline distinctions. Minor first-contact and queue-label ambiguities were corrected in `current-step.md` and `next-steps.md`. The repository now has evidence that its language can communicate the tested distinctions without conversation history.
 
-The next bounded inquiry is Exemplar Grounding: define what evidence may support a real-world exemplar record before persona production or admission approaches. EC-01 must distinguish source fidelity, extraction, interpretation, uncertainty, provenance, and disqualifying evidence. A draft exists at `deliberations/assessments/2026-07-25-ec-01-evidence-source-standard-draft-001.md`; the next action is to pressure-test it. It remains a specification and evidence rule, not a persona-production mechanism.
+The next bounded inquiry is Exemplar Grounding: define what evidence may support a real-world exemplar record before persona production or admission approaches. EC-01 must distinguish source fidelity, extraction, interpretation, uncertainty, provenance, and disqualifying evidence. A draft exists at `deliberations/assessments/2026-07-25-ec-01-evidence-source-standard-draft-001.md`; the first pressure test passed all eight adversarial cases; the next action is a domain-variation and evidence-record usability review. It remains a specification and evidence rule, not a persona-production mechanism.
 
 The external reassessment is evidence of interpretation drift, not authority to implement an OC pattern. It incorrectly interpreted:
 
@@ -69,6 +69,6 @@ External effect: NO
 
 ## Current Gate
 
-Define and pressure-test EC-01 as a language/evidence standard only. No persona production, operative creation, recruitment packaging, model fine-tuning, deployment, or external effect is authorized.
+Review EC-01 across professional domains and test whether its evidence record is usable and determinate. It remains a language/evidence standard only. No persona production, operative creation, recruitment packaging, model fine-tuning, deployment, or external effect is authorized.
 
 No OC implementation, Secretariat implementation, Curia procedure change, runtime permission, persona creation, model fine-tuning, Runtime action, deployment, or external effect is authorized by this step.
