@@ -2,7 +2,7 @@
 
 ## Status
 
-Semantic Integrity is complete and closed. The external reader recovered the intended meaning from the repository without relying on conversation history. No next leg is active until explicitly selected.
+Semantic Integrity is complete and closed. The external reader recovered the intended meaning from the repository without relying on conversation history. Exemplar Grounding is now the active leg, beginning with EC-01.
 
 DR-010 records **Observator/Custos (`OC`)** as one mission-attached Imperium Operator instance—not two roles or cooperating components—with authorized visibility and interaction but no execution influence.
 
@@ -34,7 +34,7 @@ The reader must answer:
 
 | Order | Item | State |
 |---:|---|---|
-| 1 | EC-01 evidence-source standard | required when persona production or admission approaches; deferred |
+| 1 | EC-01 evidence-source standard | current: define the evidence-source standard before persona production or admission approaches |
 | 2 | evidence-without-orientation pressure tests | deferred until the relevant admission gate |
 | 3 | maintain CB-CURRENT and classify numbered CB snapshots or candidates through CB-DENIED | deferred |
 
@@ -57,6 +57,8 @@ OC authority envelope, Secretariat routing, Curia presence procedure, provenance
 
 ## Current Gate
 
-No active gate. The next leg must be explicitly selected before work resumes.
+Exemplar Grounding is active. Define and pressure-test EC-01 as a language/evidence standard only.
+
+No persona production, operative creation, recruitment packaging, model fine-tuning, deployment, or external effect is authorized.
 
 OC implementation, Secretariat implementation, Curia procedure change, production change, model/provider/evaluator selection, credential work, deployment, and external effect remain unauthorized until a future step explicitly admits them.
