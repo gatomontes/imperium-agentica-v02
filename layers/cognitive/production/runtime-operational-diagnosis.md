@@ -2,7 +2,7 @@
 
 ## Status
 
-Admitted Cognitive production contract under Cognitive Baseline `CB-005`.
+Admitted Cognitive production contract under Cognitive Baseline `CB-CURRENT`.
 
 Admission: `Runtime Maintenance Artifact Production Admission Review 001`.
 
