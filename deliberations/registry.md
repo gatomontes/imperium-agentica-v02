@@ -55,7 +55,7 @@
 | ICP-04 | Capability governance | `CONTROL_CANDIDATE_RECORDED` | 1 | 0 |
 | ICP-05 | Continuous assurance | `CONTROL_CANDIDATE_RECORDED` | 1 | 0 |
 | ICP-06 | Quantitative evidence | `CONTROL_CANDIDATE_RECORDED` | 1 | 0 |
-| ICP-07 | External accountability | `CONTROL_CANDIDATE_RECORDED` | `CONTROL_CANDIDATE_RECORDED` | 1 | 0 |
+| ICP-07 | External accountability | `CONTROL_CANDIDATE_RECORDED` | 1 | 0 |
 
 ## Pending Controls
 
