@@ -40,6 +40,8 @@ Independent corroboration:
 Contradicting or limiting evidence:
 Context and non-transferable advantages:
 Bounded trait statement:
+Trait conflict status: compatible / bounded conflict / unresolved conflict:
+Conflict disposition and affected entries:
 Behavioral expression:
 Conditions of usefulness:
 Limits and counterweights:
@@ -104,6 +106,14 @@ Hagiography evidence review
 ```
 
 Movement does not erase provenance. A revised or decanonized entry preserves the prior version and records the changed proposition, evidence, and downstream consequences.
+
+## Canonization Authority
+
+Hagiography owns evidence review and the canonization recommendation. Canonization must identify the exact entry version, EC-01 disposition, reviewer, decision record, scope of downstream use, limitations, and revision conditions.
+
+An unresolved trait conflict blocks canonization. A bounded conflict may be canonized only when the counterweight, conditions, and affected entries are explicit. Compatible traits require a recorded basis for compatibility.
+
+Foundry does not canonize Human-Trait Canon entries. Foundry may accept, reject, or return a canonized entry during persona construction review, and must preserve the exact version and its limits.
 
 ## Downstream Contract
 
