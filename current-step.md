@@ -12,9 +12,11 @@ DR-010 Mission-Scoped Observator/Custos (OC) Operator Instance is recorded. OC i
 
 ## Active Focus
 
-**No active step.** Semantic Integrity is closed after the external reader pass recorded at `tests/semantic-integrity/runs/20260725T-external-reader-pass-005.md`.
+**Exemplar Grounding — define EC-01 evidence-source standard.** Semantic Integrity is closed after the external reader pass recorded at `tests/semantic-integrity/runs/20260725T-external-reader-pass-005.md`.
 
 The external reader recovered the intended OC ontology, authority boundary, implementation status, current step, and Cognitive Baseline distinctions. Minor first-contact and queue-label ambiguities were corrected in `current-step.md` and `next-steps.md`. The repository now has evidence that its language can communicate the tested distinctions without conversation history.
+
+The next bounded inquiry is Exemplar Grounding: define what evidence may support a real-world exemplar record before persona production or admission approaches. EC-01 must distinguish source fidelity, extraction, interpretation, uncertainty, provenance, and disqualifying evidence. It must remain a specification and evidence rule, not a persona-production mechanism.
 
 The external reassessment is evidence of interpretation drift, not authority to implement an OC pattern. It incorrectly interpreted:
 
@@ -33,7 +35,7 @@ CB-CURRENT flattening: complete
 CB-DENIED disposition surface: established
 Historical numbered CBs: preserved
 Independent-reader packet: expanded to include Cognitive authority files
-Next step: not selected
+Next step: define EC-01 evidence-source standard
 ```
 
 ## Test Boundary
@@ -67,6 +69,6 @@ External effect: NO
 
 ## Current Gate
 
-No active gate. The next leg must be explicitly selected before work resumes.
+Define and pressure-test EC-01 as a language/evidence standard only. No persona production, operative creation, recruitment packaging, model fine-tuning, deployment, or external effect is authorized.
 
 No OC implementation, Secretariat implementation, Curia procedure change, runtime permission, persona creation, model fine-tuning, Runtime action, deployment, or external effect is authorized by this step.
