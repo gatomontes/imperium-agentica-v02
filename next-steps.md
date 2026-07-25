@@ -34,7 +34,7 @@ The reader must answer:
 
 | Order | Item | State |
 |---:|---|---|
-| 1 | EC-01 evidence-source standard | current: define the evidence-source standard before persona production or admission approaches |
+| 1 | EC-01 evidence-source standard | completed as draft: `deliberations/assessments/2026-07-25-ec-01-evidence-source-standard-draft-001.md` |
 | 2 | evidence-without-orientation pressure tests | deferred until the relevant admission gate |
 | 3 | maintain CB-CURRENT and classify numbered CB snapshots or candidates through CB-DENIED | deferred |
 
@@ -57,7 +57,7 @@ OC authority envelope, Secretariat routing, Curia presence procedure, provenance
 
 ## Current Gate
 
-Exemplar Grounding is active. Define and pressure-test EC-01 as a language/evidence standard only.
+Exemplar Grounding is active. Pressure-test the EC-01 draft as a language/evidence standard only. No persona production, operative creation, recruitment packaging, model fine-tuning, deployment, or external effect is authorized.
 
 No persona production, operative creation, recruitment packaging, model fine-tuning, deployment, or external effect is authorized.
 
