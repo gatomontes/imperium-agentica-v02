@@ -2,28 +2,48 @@
 
 ## Status
 
-DR-007 records the repository-wide verifiable-language rule and resolves the immediate disposition of the three DR-006 pressure findings.
+Semantic Integrity is the active focus. The current step tests whether an independent reader can recover Imperium's intended meaning from the repository without relying on conversation history.
 
-Track A remains closed. Locksmith and credential infrastructure remain parked. No leg is currently active.
+DR-010 records **Observator/Custos (`OC`)** as one mission-attached Imperium Operator instance with authorized visibility and interaction but no execution influence.
 
-DR-010 records the **Observator/Custos (`OC`)** concept as one mission-attached Imperium Operator instance with authorized visibility and interaction but no execution influence.
+## Semantic Integrity Queue
+
+| Order | Item | State |
+|---:|---|---|
+| 1 | Define the independent-reader reading packet | current: identify the minimum repository surfaces required for interpretation |
+| 2 | Run a bounded interpretation test | pending: record the reader's exact reconstruction of ontology, authority, state, admission, and scope |
+| 3 | Classify interpretation drift | pending: distinguish ambiguous language, omitted boundary, reading-order failure, and unsupported inference |
+| 4 | Strengthen only demonstrated ambiguity | pending: update the narrowest authoritative surface and preserve the failed interpretation |
+| 5 | Re-run the interpretation test | pending: determine whether the clarified language survives independently |
+| 6 | Record disposition and update continuity files | pending: close, repeat, or demote the language change based on evidence |
+
+## Required Interpretation Questions
+
+The reader must answer:
+
+1. What is an Observator/Custos?
+2. Is OC one Operator instance or multiple components?
+3. What may OC observe, inspect, ask, submit, or receive?
+4. What may OC not do?
+5. Is OC implementation currently authorized?
+6. What is the current step?
+7. Which concepts are admitted, deferred, parked, draft, historical, or unauthorized?
+8. What evidence supports each answer?
 
 ## Exemplar-Grounding Queue
 
 | Order | Item | State |
 |---:|---|---|
 | 1 | EC-01 evidence-source standard | required when persona production or admission approaches; deferred |
-| 2 | prior EC-02 framing | rejected and superseded by DR-007 exact-claim requirements |
-| 3 | EC-03 proposed orientation/calibration concern | closed by DR-009 |
-| 4 | evidence-without-orientation pressure tests | when persona-production admission approaches |
-| 5 | decide whether a minimal CB-007 admission candidate has earned promotion | deferred |
+| 2 | evidence-without-orientation pressure tests | deferred until the relevant admission gate |
+| 3 | decide whether a minimal CB-007 admission candidate has earned promotion | deferred |
 
 ## Existing Operative-Creation Map Queue
 
 | Order | Finding | State |
 |---:|---|---|
 | 1 | persona-selection ownership, criteria, and tie behavior | mapped; pressure not authorized |
-| 2 | Garrison admission-gate sufficiency | mapped; overlaps DR-006 finding |
+| 2 | Garrison admission-gate sufficiency | mapped; pressure not authorized |
 | 3 | execution-instrument capability suitability / CTRL-004 | mapped; narrowing and ownership unresolved |
 | 4 | change-triggered reevaluation after model/medium/tool changes | theoretically covered; admission/implementation unresolved |
 | 5 | unequal group performance when affected groups are material | conditional gap mapped; future wording must conform to DR-007 |
@@ -31,36 +51,12 @@ DR-010 records the **Observator/Custos (`OC`)** concept as one mission-attached 
 | 7 | measurement and invalidation discipline | partially applied; CTRL-006 remains pending |
 | 8 | multi-agent composition risk | outside current single-Operative chain |
 
-## Observator/Custos Queue
+## Deferred Observator/Custos Work
 
-| Order | Item | State |
-|---:|---|---|
-| 1 | OC authority envelope | future decision: who may hold OC status, what each OC may see, and what each OC may ask or receive |
-| 2 | Secretariat routing contract | future draft: assignment mechanics, notification subscriptions, invitations, questions, responses, visibility requests, and scheduling |
-| 3 | Curia presence rule | future procedure: non-voting, non-quorum, non-office attendance unless another role is separately assigned |
-| 4 | Provenance record schema | future draft: OC assignment, notifications, questions, answers, observations, and required access events |
-| 5 | OC pressure test | future review before any implementation or production admission |
-
-## Future EC-01 Trigger
-
-Draft EC-01 only when work approaches Human-Trait Canon construction, persona-production admission, or another concrete gate requiring a source-sufficiency decision.
-
-## Future Evidence-Integrity Trigger
-
-When persona-production admission approaches, test that:
-
-1. professional traits shape method rather than preselect conclusions;
-2. the evidence product distinguishes observations, claims, disputes, assumptions, unknowns, limitations, and inferences;
-3. materially contradicting evidence is preserved;
-4. evidentiary weight follows declared source and verification criteria rather than political or emotional preference;
-5. requests to explain a viewpoint remain attributed objects of study and do not become the persona's orientation.
-
-## Parked Locksmith Restart Trigger
-
-Do not resume credential infrastructure until a concrete authenticated operation identifies the provider, operation, credential class, topology, lifecycle/outage requirements, and operational authority.
+OC authority envelope, Secretariat routing, Curia presence procedure, provenance record schema, and OC implementation remain future work. None is authorized by the current semantic-integrity step.
 
 ## Current Gate
 
-No active leg.
+Semantic Integrity is active.
 
-No EC-01 draft, persona-orientation work, OC implementation, Secretariat implementation, Curia procedure change, production change, model/provider/evaluator selection, credential work, deployment, or external effect is authorized.
+No OC implementation, Secretariat implementation, Curia procedure change, production change, model/provider/evaluator selection, credential work, deployment, or external effect is authorized.
