@@ -16,7 +16,7 @@ DR-010 Mission-Scoped Observator/Custos (OC) Operator Instance is recorded. OC i
 
 The external reader recovered the intended OC ontology, authority boundary, implementation status, current step, and Cognitive Baseline distinctions. Minor first-contact and queue-label ambiguities were corrected in `current-step.md` and `next-steps.md`. The repository now has evidence that its language can communicate the tested distinctions without conversation history.
 
-The next bounded inquiry is Exemplar Grounding: define what evidence may support a real-world exemplar record before persona production or admission approaches. EC-01 must distinguish source fidelity, extraction, interpretation, uncertainty, provenance, and disqualifying evidence. A draft exists at `deliberations/assessments/2026-07-25-ec-01-evidence-source-standard-draft-001.md`; the first pressure test passed all eight adversarial cases; the domain-variation and usability review found one narrow gap, now corrected in EC-01 Draft 001. The next action is a focused re-test of the revised evidence chain. It remains a specification and evidence rule, not a persona-production mechanism.
+EC-CURRENT is the active correction-state pointer. EC-01 is admitted by DR-011; EC-02 is deferred and EC-03 is closed. The Human-Trait Canon draft at `layers/cognitive/drafts/human-trait-canon.md` is the active bounded review target. The next action is to review its schema, provenance, lifecycle, and non-authority boundaries. No real-person data is being used.
 
 The external reassessment is evidence of interpretation drift, not authority to implement an OC pattern. It incorrectly interpreted:
 
@@ -35,7 +35,7 @@ CB-CURRENT flattening: complete
 CB-DENIED disposition surface: established
 Historical numbered CBs: preserved
 Independent-reader packet: expanded to include Cognitive authority files
-Next step: define EC-01 evidence-source standard
+Next step: review Human-Trait Canon draft
 ```
 
 ## Test Boundary
@@ -58,10 +58,11 @@ Failures must be recorded as exact interpretation results. Do not rewrite the re
 ```text
 DR-006 exemplar-grounding principle: RETAINED
 DR-009 evidence without engineered orientation: ACTIVE
+EC-CURRENT: EC-01 admitted; EC-02 deferred; EC-03 closed
 DR-010 Observator/Custos terminology: CLARIFIED
 OC ontology: one mission-attached Imperium Operator instance
 OC execution influence: PROHIBITED
-Semantic integrity pressure test: ACTIVE
+Semantic integrity pressure test: CLOSED
 OC implementation: NOT AUTHORIZED
 Production implementation: NOT AUTHORIZED
 External effect: NO
@@ -69,6 +70,6 @@ External effect: NO
 
 ## Current Gate
 
-Admission complete: EC-01 is admitted for current semantic use by DR-011. It remains a language/evidence standard only. No persona production, operative creation, recruitment packaging, model fine-tuning, deployment, or external effect is authorized.
+Review the Human-Trait Canon draft as a cognitive artifact only. EC-CURRENT governs the active exemplar-grounding correction state. No real-person data, persona production, operative creation, recruitment packaging, model fine-tuning, deployment, or external effect is authorized.
 
 No OC implementation, Secretariat implementation, Curia procedure change, runtime permission, persona creation, model fine-tuning, Runtime action, deployment, or external effect is authorized by this step.
