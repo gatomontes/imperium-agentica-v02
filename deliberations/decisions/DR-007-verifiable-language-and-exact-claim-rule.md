@@ -58,21 +58,21 @@ Historical artifacts are not silently rewritten. This decision governs their fut
 
 ## DR-006 Pressure-Test Dispositions
 
-### EC-01
+### EC Correction State
 
-The evidence-source standard remains a required future task. It is deferred until exemplar-grounding work approaches Human-Trait Canon construction, persona production, or admission. No EC-01 draft is authorized now.
+The active correction state is maintained by `deliberations/EC-CURRENT.md`. EC-01 was subsequently admitted for current semantic use by DR-011. EC-02 remains deferred, and EC-03 is closed as recorded there. This historical section must not override EC-CURRENT.
 
-### EC-02
+### EC-02 Historical Disposition
 
-The prior “living-person safeguards” framing is rejected and superseded.
+The prior “living-person safeguards” framing is rejected and superseded. Current disposition: deferred under EC-CURRENT.
 
 The retained exact questions are whether evidence is profession-relevant, exactly sourced, verifiable, supported or disputed, necessary to the achievement-to-behavior-to-trait derivation, and subject to a stated correction condition.
 
 These truth, provenance, relevance, and correction duties apply to evidence about every real practitioner.
 
-### EC-03
+### EC-03 Historical Disposition
 
-The former exemplar-set “bias” framing is not admitted as doctrine or a current gate.
+The former exemplar-set “bias” framing is not admitted as doctrine or a current gate. Current disposition: closed under EC-CURRENT.
 
 The underlying concern is deferred as later persona calibration. When a concrete persona and canon exist, Pit may test whether the selected exemplar composition produces narrow, distorted, contradictory, or ineffective professional behavior. Hagiography and Foundry may then revise the canon from preserved findings.
 
