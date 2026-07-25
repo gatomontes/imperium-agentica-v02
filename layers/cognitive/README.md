@@ -24,9 +24,9 @@ Approval of a diagram or terminology does not by itself promote an artifact. Dra
 
 `production/` contains cognitive artifacts admitted for current active use after sufficient scenario evidence.
 
-Current baseline: `CB-005` — 36 files, admitted 2026-07-18 under Runtime Maintenance Artifact Production Admission Review 001.
+Active standard: `CB-CURRENT`; current numbered snapshot: `CB-007`. The active pointer is `layers/cognitive/production/CB-CURRENT.md`.
 
-CB-005 cites Authority Baseline `AB-003`, Provenance Baseline `PB-001`, Procedure Baseline `PRB-003`, and Runtime Baseline `RTB-002` for contracts native to those parallel concerns.
+CB-CURRENT cites Authority Baseline `AB-003`, Provenance Baseline `PB-001`, Procedure Baseline `PRB-003`, and Runtime Baseline `RTB-002` for contracts native to those parallel concerns. Numbered CBs preserve admitted progression; CB-DENIED records candidates never admitted.
 
 Production means admitted, not permanent. An artifact may return to drafts when later evidence contests it.
 
@@ -56,8 +56,10 @@ Tests challenge cognitive structure, responsibility, competence, and its boundar
 ## Current Baseline
 
 ```text
-Cognitive Baseline: CB-005
-Manifest: layers/cognitive/production/README.md
+Cognitive Standard: CB-CURRENT
+Current snapshot: CB-007
+Manifest: layers/cognitive/production/CB-CURRENT.md
+Historical snapshot: layers/cognitive/production/README.md
 Evidence: tests/runtime/runtime-maintenance-production-admission-review-001.md
 Admission: tests/runtime/runtime-maintenance-production-admission-review-001.md
 Result: focused pressure 15 PASS / 0 FAIL; convergence 35 PASS / 0 FAIL; repository regression PASS; empirical harness 11 PASS / 0 FAIL
