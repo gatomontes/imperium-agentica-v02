@@ -12,7 +12,7 @@ DR-010 Mission-Scoped Observator/Custos (OC) Operator Instance is recorded. OC i
 
 ## Active Focus
 
-**No active step.** EC-01 is admitted; its synthetic Hagiography application is complete. Semantic Integrity is closed after the external reader pass recorded at `tests/semantic-integrity/runs/20260725T-external-reader-pass-005.md`.
+**Exemplar Grounding — review the Human-Trait Canon draft artifact.** EC-01 is admitted; its synthetic Hagiography application is complete. Semantic Integrity is closed after the external reader pass recorded at `tests/semantic-integrity/runs/20260725T-external-reader-pass-005.md`.
 
 The external reader recovered the intended OC ontology, authority boundary, implementation status, current step, and Cognitive Baseline distinctions. Minor first-contact and queue-label ambiguities were corrected in `current-step.md` and `next-steps.md`. The repository now has evidence that its language can communicate the tested distinctions without conversation history.
 
