@@ -57,6 +57,6 @@ OC authority envelope, Secretariat routing, Curia presence procedure, provenance
 
 ## Current Gate
 
-Review the Human-Trait Canon draft as a cognitive artifact only. EC-CURRENT governs exemplar-grounding corrections. No real-person data, persona production, operative creation, recruitment packaging, model fine-tuning, deployment, or external effect is authorized.
+Apply the four Human-Trait Canon design revisions, then run a synthetic entry test. Review the artifact as cognitive-only; no real-person data, persona production, operative creation, recruitment packaging, model fine-tuning, deployment, or external effect is authorized. EC-CURRENT governs exemplar-grounding corrections. No real-person data, persona production, operative creation, recruitment packaging, model fine-tuning, deployment, or external effect is authorized.
 
 OC implementation, Secretariat implementation, Curia procedure change, production change, model/provider/evaluator selection, credential work, deployment, and external effect remain unauthorized until a future step explicitly admits them.
