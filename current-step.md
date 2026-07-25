@@ -16,7 +16,7 @@ DR-010 Mission-Scoped Observator/Custos (OC) Operator Instance is recorded. OC i
 
 The external reader recovered the intended OC ontology, authority boundary, implementation status, current step, and Cognitive Baseline distinctions. Minor first-contact and queue-label ambiguities were corrected in `current-step.md` and `next-steps.md`. The repository now has evidence that its language can communicate the tested distinctions without conversation history.
 
-The next bounded inquiry is Exemplar Grounding: define what evidence may support a real-world exemplar record before persona production or admission approaches. EC-01 must distinguish source fidelity, extraction, interpretation, uncertainty, provenance, and disqualifying evidence. It must remain a specification and evidence rule, not a persona-production mechanism.
+The next bounded inquiry is Exemplar Grounding: define what evidence may support a real-world exemplar record before persona production or admission approaches. EC-01 must distinguish source fidelity, extraction, interpretation, uncertainty, provenance, and disqualifying evidence. A draft exists at `deliberations/assessments/2026-07-25-ec-01-evidence-source-standard-draft-001.md`; the next action is to pressure-test it. It remains a specification and evidence rule, not a persona-production mechanism.
 
 The external reassessment is evidence of interpretation drift, not authority to implement an OC pattern. It incorrectly interpreted:
 
