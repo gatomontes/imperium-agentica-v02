@@ -15,13 +15,17 @@ EC-01 operationalizes DR-007 and DR-009 without treating source count, reputatio
 EC-01 applies only when evidence about a real-world human is used to support:
 
 ```text
-achievement or outcome
-→ observed behavior
+demonstrated professional performance, decision, work product, or outcome
+→ observed behavior or decision pattern
 → bounded trait
 → proposed professional or Officer behavior
 ```
 
 It does not evaluate a person's moral worth, diagnose a person, establish universal causation, or authorize persona or Officer production.
+
+## Evidence Chain
+
+The evidence chain must identify a demonstrated professional performance, decision, work product, or outcome. A discrete achievement is not required. A sustained practice, prevented failure, documented refusal, or bounded decision may qualify when the exact event or record and its relevance are inspectable.
 
 ## Required Evidence Record
 
@@ -32,9 +36,10 @@ Source identifier and exact locator:
 Source class:
 Publication or event date:
 Claim being supported:
+Work product or event identifier:
 Observed action or decision:
 Reported outcome:
-Achievement or performance context:
+Performance or decision context:
 Directness of evidence:
 Provenance and access path:
 Independent corroboration:
