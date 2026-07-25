@@ -2,7 +2,7 @@
 
 ## Status
 
-Admitted cross-cutting Cognitive production map under Cognitive Baseline `CB-005`.
+Admitted cross-cutting Cognitive production map under Cognitive Baseline `CB-CURRENT`.
 
 Admission: `Runtime Maintenance Artifact Production Admission Review 001`.
 
