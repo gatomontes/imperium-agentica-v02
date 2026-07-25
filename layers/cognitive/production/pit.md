@@ -4,7 +4,7 @@
 
 Admitted cognitive persona stress-test boundary.
 
-Baseline: `CB-001`.
+Baseline: `CB-CURRENT`.
 
 Admission: `Production Admission Review 003`.
 
