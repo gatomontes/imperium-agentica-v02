@@ -12,9 +12,9 @@ DR-010 records **Observator/Custos (`OC`)** as one mission-attached Imperium Ope
 |---:|---|---|
 | 1 | Define the independent-reader reading packet | completed: packet defined at `tests/semantic-integrity/independent-reader-packet.md` |
 | 2 | Run a bounded interpretation test | completed: controlled self-test recorded at `tests/semantic-integrity/runs/20260725T011801Z-controlled-self-test-001.md`; independence unproven |
-| 3 | Classify interpretation drift | current: classify residual ambiguity and arrange a genuinely independent run |
-| 4 | Strengthen only demonstrated ambiguity | pending: update the narrowest authoritative surface and preserve the failed interpretation |
-| 5 | Re-run the interpretation test | pending: determine whether the clarified language survives independently |
+| 3 | Classify interpretation drift | current: classify residual ambiguity and arrange a genuinely independent run; CB flattening is the active language correction |
+| 4 | Complete CB flattening | pending: audit numbered CB references, establish CB-CURRENT/CB-DENIED dispositions, and move obsolete material to a non-authoritative dumpster without deleting provenance |
+| 5 | Re-run the interpretation test | pending: determine whether CB-CURRENT is recovered as the sole active Cognitive standard |
 | 6 | Record disposition and update continuity files | pending: close, repeat, or demote the language change based on evidence |
 
 ## Required Interpretation Questions
