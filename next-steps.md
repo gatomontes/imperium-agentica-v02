@@ -10,8 +10,8 @@ DR-010 records **Observator/Custos (`OC`)** as one mission-attached Imperium Ope
 
 | Order | Item | State |
 |---:|---|---|
-| 1 | Define the independent-reader reading packet | current: identify the minimum repository surfaces required for interpretation |
-| 2 | Run a bounded interpretation test | pending: record the reader's exact reconstruction of ontology, authority, state, admission, and scope |
+| 1 | Define the independent-reader reading packet | completed: packet defined at `tests/semantic-integrity/independent-reader-packet.md` |
+| 2 | Run a bounded interpretation test | current: record the reader's exact reconstruction of ontology, authority, state, admission, and scope |
 | 3 | Classify interpretation drift | pending: distinguish ambiguous language, omitted boundary, reading-order failure, and unsupported inference |
 | 4 | Strengthen only demonstrated ambiguity | pending: update the narrowest authoritative surface and preserve the failed interpretation |
 | 5 | Re-run the interpretation test | pending: determine whether the clarified language survives independently |
