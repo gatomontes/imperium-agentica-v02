@@ -2,7 +2,7 @@
 
 ## Status
 
-Semantic Integrity is complete and closed. The external reader recovered the intended meaning from the repository without relying on conversation history. Exemplar Grounding EC-01 is complete and admitted by DR-011. A synthetic Hagiography application also passed. No next leg is active until explicitly selected.
+Semantic Integrity is complete and closed. The external reader recovered the intended meaning from the repository without relying on conversation history. Exemplar Grounding EC-01 is complete and admitted by DR-011. A synthetic Hagiography application also passed. Human-Trait Canon design review is now active.
 
 DR-010 records **Observator/Custos (`OC`)** as one mission-attached Imperium Operator instance—not two roles or cooperating components—with authorized visibility and interaction but no execution influence.
 
@@ -57,7 +57,7 @@ OC authority envelope, Secretariat routing, Curia presence procedure, provenance
 
 ## Current Gate
 
-No active gate. A future step must be explicitly selected before work resumes. EC-01 admission does not authorize persona production, operative creation, recruitment packaging, model fine-tuning, deployment, or external effect. No persona production, operative creation, recruitment packaging, model fine-tuning, deployment, or external effect is authorized.
+Review the Human-Trait Canon draft as a cognitive artifact only. No real-person data, persona production, operative creation, recruitment packaging, model fine-tuning, deployment, or external effect is authorized. No persona production, operative creation, recruitment packaging, model fine-tuning, deployment, or external effect is authorized.
 
 No persona production, operative creation, recruitment packaging, model fine-tuning, deployment, or external effect is authorized.
 
