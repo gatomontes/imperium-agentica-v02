@@ -16,6 +16,8 @@ A Human-Trait Canon entry may be proposed only when EC-01 produces an `ADMISSIBL
 
 That disposition permits review; it does not automatically canonize the trait.
 
+No real-person Human-Trait Canon entry may proceed until EC-02 is defined and admitted, unless a later explicit decision authorizes a bounded exception. Synthetic fixtures may be used for testing without creating real-person records.
+
 A candidate must remain in draft status when evidence is `UNRESOLVED` or `REFUSED`.
 
 ## Entry Schema
@@ -125,7 +127,6 @@ This artifact does not:
 
 ## Open Questions
 
-- What minimum review record is required before `candidate` becomes `canonized`?
-- Should Hagiography or Foundry own final canonization authority?
-- How should multiple canon entries interact when traits conflict?
-- Which EC-02 safeguards must be mandatory before a real-person entry is permitted?
+- What additional domain-specific review record is needed before `candidate` becomes `canonized`?
+- How should multiple canon entries interact after a conflict is resolved and recorded?
+- Which EC-02 safeguards must be mandatory before any later real-person entry is permitted?
