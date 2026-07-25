@@ -196,7 +196,7 @@ The default home for shaped but unproven artifacts is:
 /drafts
 ```
 
-Layer-specific artifacts live within their layer. The admitted cognitive baseline is `CB-007`. Cognitive artifacts use:
+Layer-specific artifacts live within their layer. The admitted cognitive baseline is `CB-005`. The layer-owned README and production contents are authoritative for the baseline; the root README is a convenience summary. Cognitive artifacts use:
 
 ```text
 /layers/cognitive/drafts
@@ -246,7 +246,7 @@ The admitted Runtime boundary and baseline use:
 
 Runtime is the operating machinery that realizes cited contracts through actual state and effects. It is not synonymous with code and does not own semantic contracts merely because they are encoded in software.
 
-Cognitive Baseline `CB-007`, Authority Baseline `AB-003`, Provenance Baseline `PB-001`, Procedure Baseline `PRB-003`, and Runtime Baseline `RTB-002` are admitted for current semantic use.
+Cognitive Baseline `CB-005`, Authority Baseline `AB-003`, Provenance Baseline `PB-001`, Procedure Baseline `PRB-003`, and Runtime Baseline `RTB-002` are admitted for current semantic use.
 
 `production` means admitted for current use, not permanent or implemented in software.
 
