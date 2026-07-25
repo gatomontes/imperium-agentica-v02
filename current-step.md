@@ -2,7 +2,7 @@
 
 ## Status
 
-Track A, B1, B2.1, B2.1a, and B2.3 are complete and closed. Cognitive standard CB-CURRENT is active; current numbered snapshot CB-007.
+Track A, B1, B2.1, B2.1a, and B2.3 are complete and closed. Cognitive standard CB-CURRENT is active; current numbered snapshot CB-007. Semantic Integrity is complete and closed after the external reader pass.
 
 DR-005 parks Locksmith and credential infrastructure until an observed authenticated-integration trigger.
 
@@ -12,9 +12,9 @@ DR-010 Mission-Scoped Observator/Custos (OC) Operator Instance is recorded. OC i
 
 ## Active Focus
 
-**Semantic Integrity — independent interpretation pressure test and Cognitive Baseline flattening.**
+**No active step.** Semantic Integrity is closed after the external reader pass recorded at `tests/semantic-integrity/runs/20260725T-external-reader-pass-005.md`.
 
-The immediate work is to determine whether the repository's language reliably communicates its intended ontology, authority boundaries, admission state, current operational state, and scope without relying on conversation history. The first flattening increment establishes CB-CURRENT as the active Cognitive standard, preserves CB-007 as the current numbered snapshot, and introduces CB-DENIED for never-admitted candidates. The independent-reader packet is defined at `tests/semantic-integrity/independent-reader-packet.md`. A controlled self-test is recorded at `tests/semantic-integrity/runs/20260725T011801Z-controlled-self-test-001.md`; its independence is not established. The next action is to re-run the independent-reader test against the CB-CURRENT model.
+The external reader recovered the intended OC ontology, authority boundary, implementation status, current step, and Cognitive Baseline distinctions. Minor first-contact and queue-label ambiguities were corrected in `current-step.md` and `next-steps.md`. The repository now has evidence that its language can communicate the tested distinctions without conversation history.
 
 The external reassessment is evidence of interpretation drift, not authority to implement an OC pattern. It incorrectly interpreted:
 
@@ -23,6 +23,18 @@ The external reassessment is evidence of interpretation drift, not authority to 
 - a preserved decision and future queue as an active implementation step.
 
 These are the pressure findings to investigate.
+
+## Closed-Step Record
+
+```text
+Result: PASS with minor language corrections
+External reader pass: 20260725T-external-reader-pass-005
+CB-CURRENT flattening: complete
+CB-DENIED disposition surface: established
+Historical numbered CBs: preserved
+Independent-reader packet: expanded to include Cognitive authority files
+Next step: not selected
+```
 
 ## Test Boundary
 
@@ -55,6 +67,6 @@ External effect: NO
 
 ## Current Gate
 
-Strengthen or clarify repository language only where the pressure test identifies recoverable ambiguity.
+No active gate. The next leg must be explicitly selected before work resumes.
 
 No OC implementation, Secretariat implementation, Curia procedure change, runtime permission, persona creation, model fine-tuning, Runtime action, deployment, or external effect is authorized by this step.
