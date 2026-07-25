@@ -4,7 +4,7 @@
 
 Admitted cognitive intake and delivery boundary.
 
-Baseline: `CB-001`.
+Baseline: `CB-CURRENT`.
 
 Admission: `Production Admission Review 003`.
 
