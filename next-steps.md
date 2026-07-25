@@ -36,7 +36,7 @@ The reader must answer:
 |---:|---|---|
 | 1 | EC-01 evidence-source standard | required when persona production or admission approaches; deferred |
 | 2 | evidence-without-orientation pressure tests | deferred until the relevant admission gate |
-| 3 | preserve and verify the CB-005 cognitive baseline lineage | deferred |
+| 3 | maintain CB-CURRENT and classify numbered CB snapshots or candidates through CB-DENIED | deferred |
 
 ## Existing Operative-Creation Map Queue
 
