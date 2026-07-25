@@ -144,6 +144,8 @@ A future LLM session should read the repository in this order:
 5. `deliberations/registry.md` — current risk, program, control, and decision index, when deliberation work is relevant.
 6. `layers/cognitive/README.md` — cognitive-layer boundary and admission rules.
 7. `layers/cognitive/production/CB-CURRENT.md` — active cognitive standard; numbered CB snapshots and CB-DENIED are historical/disposition records.
+
+`layers/cognitive/dumpster/` contains non-authoritative historical Cognitive material and is excluded from current-state reconstruction.
 8. `layers/authority/README.md` — approved authority boundary.
 9. `layers/authority/production/` — admitted Authority Baseline `AB-003`, when authority is relevant.
 10. `layers/authority/drafts/` — shaped but unproven authority contracts, only if relevant.
