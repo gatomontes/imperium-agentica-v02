@@ -2,7 +2,7 @@
 
 ## Status
 
-Track A, B1, B2.1, B2.1a, and B2.3 are complete and closed. Cognitive Baseline CB-007 is admitted.
+Track A, B1, B2.1, B2.1a, and B2.3 are complete and closed. Cognitive Baseline CB-005 is admitted.
 
 DR-005 parks Locksmith and credential infrastructure until an observed authenticated-integration trigger.
 
