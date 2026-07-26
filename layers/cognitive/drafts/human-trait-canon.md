@@ -2,7 +2,7 @@
 
 ## Status
 
-Draft cognitive artifact. Not admitted. No real-person record is contained here.
+Admitted for current semantic use by DR-012. No real-person record is contained here.
 
 ## Purpose
 
