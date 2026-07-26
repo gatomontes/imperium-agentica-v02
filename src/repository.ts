@@ -30,6 +30,9 @@ export class InMemoryArtifactRepository implements ArtifactStore {
     }
     const storedPrevious = this.get<T>(previous.identity, previous.version);
     if (!storedPrevious) throw new Error("previous artifact is not stored");
+    if (storedPrevious.status !== "CURRENT") {
+      throw new Error("previous artifact is not current");
+    }
     assertArtifactEnvelope(successor);
     const successorKey = artifactKey(successor.identity, successor.version);
     if (this.artifacts.has(successorKey)) {
