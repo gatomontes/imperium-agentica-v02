@@ -13,7 +13,7 @@ EC-01 admitted → Human-Trait Canon admitted → EC-02 admitted
 
 Active pointers:
 
-- DR-CURRENT: active decision pointer through DR-017
+- DR-CURRENT: active decision pointer through DR-018
 - EC-CURRENT: EC-01 and EC-02 admitted; EC-03 closed
 - OP-CURRENT: OP-SYN-001 v0.1 admitted, inactive synthetic package
 
@@ -100,3 +100,8 @@ The next proposed action is a review of each creation institution as an institut
 The review must distinguish responsibilities already admitted, draft-only contracts, missing doctrine or SOPs, required artifacts and owners, admission gates and refusal behavior, implementation requirements, deferred dependencies, and the smallest independently reviewable completion increments.
 
 No creation-apparatus completion work, Execution-layer work, OC implementation, credential work, deployment, or external effect is authorized until explicitly selected and admitted.
+
+
+## Creation Apparatus Completion
+
+The eight bounded completion contracts were admitted by DR-018 after Pressure Run 002 and Admission Review 001. Their admission is semantic only. Implementation and operational proof remain future, separately authorized work.
