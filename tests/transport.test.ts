@@ -15,4 +15,19 @@ describe("transport adapter contract", () => {
     expect(result.petition.payload.finding).toBe("PETITION_RECEIVED");
     expect(result.work).not.toBeNull();
   });
+
+  it("maps clarification through the same transport-neutral contract", () => {
+    const adapter = new DirectTransportAdapter();
+    const submitted = adapter.submit({
+      transportId: "direct-clarify-001",
+      request: {
+        content: "Investigate this.",
+        sessionReference: "opaque-transport-clarify",
+      },
+    });
+    const pending = adapter["imperium"] ?? undefined;
+    void pending;
+    expect(submitted.work).not.toBeNull();
+  });
+
 });
