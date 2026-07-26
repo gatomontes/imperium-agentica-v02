@@ -57,6 +57,13 @@ Path: `deliberations/decisions/DR-012-human-trait-canon-schema.md`
 
 The Human-Trait Canon schema is admitted for current semantic use. EC-02 remains a precondition for real-person entries.
 
+### DR-014 — Foundry Persona Production Conformance
+
+Status: active admitted semantic contract.
+Path: `deliberations/decisions/DR-014-foundry-persona-production-conformance.md`
+
+The professional persona path may integrate exact upstream semantic versions into a Persona Specification Candidate. No candidate, persona, Operative, or deployment is admitted by this decision.
+
 ### DR-013 — EC-02 Living-Person Evidence Safeguards
 
 Status: active admitted semantic standard.
