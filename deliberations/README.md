@@ -17,12 +17,13 @@ When work concerns risk, gaps, external findings, or continuous improvement, rea
 3. `next-steps.md`.
 4. `deliberations/README.md`.
 5. `deliberations/registry.md`.
-6. `deliberations/EC-CURRENT.md` and `deliberations/EC-DISPOSITION.md` when exemplar-grounding corrections are relevant.
-7. The relevant risk record.
-8. The relevant improvement program.
-9. Related pending and implemented controls.
-10. Related decision records.
-11. Supporting assessments and sources.
+6. `deliberations/DR-CURRENT.md` and `deliberations/DR-DISPOSITION.md` for current decision state.
+7. `deliberations/EC-CURRENT.md` and `deliberations/EC-DISPOSITION.md` when exemplar-grounding corrections are relevant.
+8. The relevant risk record.
+9. The relevant improvement program.
+10. Related pending and implemented controls.
+11. Related decision records.
+12. Supporting assessments and sources.
 
 Do not reconstruct a deliberation from chat history before reading these records.
 
