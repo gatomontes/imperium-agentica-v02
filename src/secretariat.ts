@@ -31,7 +31,7 @@ export interface Petition {
 export class Secretariat {
   receive(request: OperatorRequest): ArtifactEnvelope<Petition> {
     const normalizedContent = request.content.trim();
-    const finding: PetitionFinding = normalizedContent
+    const finding: PetitionFinding = normalizedContent && request.sessionReference.trim()
       ? "PETITION_RECEIVED"
       : "PETITION_UNRESOLVED";
 
