@@ -50,3 +50,22 @@ Handoff records package identity/version, recipient boundary, source lineage, de
 ## Non-Admissions
 
 No Runtime action, activation, mission execution, credential, provider, deployment, or external effect.
+
+
+## Selection and Tie-Resolution Record
+
+When more than one exact Canonical Persona is eligible, Conscription must preserve the complete eligible set and consume only an authorized selection criterion.
+
+The selection record must identify:
+
+- assessment identity and version;
+- complete eligible candidate identities and versions;
+- declared selection criterion and its provenance;
+- criterion applicability to the mission;
+- selector identity and separately established authority;
+- comparison result for every candidate;
+- tie outcome;
+- unresolved or refusal result when no authorized tie rule exists;
+- supersession lineage.
+
+Conscription must not invent a criterion from availability, popularity, prior use, name similarity, convenience, or medium preference. An unresolved tie blocks package creation until the missing criterion is supplied by its native owner or the selection is explicitly refused.
