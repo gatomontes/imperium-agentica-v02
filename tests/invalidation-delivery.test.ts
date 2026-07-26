@@ -36,4 +36,15 @@ describe("invalidation and delivery boundaries", () => {
     expect(acknowledged.payload.state).toBe("RESPONSE_ACKNOWLEDGED");
     expect(acknowledged.payload.attempt).toBe(2);
   });
+
+  it("rejects dispatch after acknowledgement", () => {
+    const service = new ResponseDeliveryService();
+    const prepared = service.prepare("response-002@1", "corr-002", "fixture");
+    const acknowledged = service.dispatch(prepared, true);
+
+    expect(() => service.dispatch(acknowledged, false)).toThrow(
+      "response cannot be dispatched",
+    );
+  });
+
 });
