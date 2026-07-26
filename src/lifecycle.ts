@@ -21,6 +21,7 @@ export function transitionOperativePackage(
   return {
     ...packageArtifact,
     version: packageArtifact.version + 1,
+    supersedes: packageArtifact.identity + "@" + packageArtifact.version,
     payload: { ...packageArtifact.payload, state: next },
   };
 }
