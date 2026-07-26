@@ -70,6 +70,6 @@ External effect: NO
 
 ## Current Gate
 
-EC-02 pressure test passed 8/8 and admission review passed 7/7. DR-013 admitted EC-02 for current semantic use. Foundry review 001 identified six revisions; all were applied. Synthetic candidate integration passed 10/10. Synthetic Pit test 003 passed 10/10 as PERSONA_TEST_CONFORMANT. No candidate admission, persona inventory, Operative creation, recruitment packaging, model fine-tuning, deployment, or external effect is authorized.
+EC-02 pressure test passed 8/8 and admission review passed 7/7. DR-013 admitted EC-02 for current semantic use. Foundry review 001 identified six revisions; all were applied. Synthetic candidate integration passed 10/10. Synthetic Pit test 003 passed 10/10 as PERSONA_TEST_CONFORMANT. Garrison admission review 004 passed all criteria and recommends admission of the synthetic candidate. The next action is explicit operator admission; no Operative creation, recruitment packaging, model fine-tuning, deployment, or external effect is authorized.
 
 No OC implementation, Secretariat implementation, Curia procedure change, runtime permission, persona creation, model fine-tuning, Runtime action, deployment, or external effect is authorized by this step.
