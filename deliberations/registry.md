@@ -6,7 +6,7 @@
 - Improvement programs recorded: 7
 - Pending control records: 7
 - Implemented control records: 0
-- Decision records: 13
+- Decision records: 14
 - Initial assessment: `assessments/2026-07-23-mit-ai-risks-imperium-assessment.md`
 - Integration review: `assessments/2026-07-23-ra-integration-review-001.md`
 - Integration execution: `assessments/2026-07-23-ra-integration-review-execution-001.md`
@@ -17,6 +17,7 @@
 - DR-006 pressure test: `assessments/2026-07-24-dr-006-mandatory-exemplar-grounding-pressure-test-001.md` — 18 PASS / 3 FAIL
 - EC-01 admission review: `assessments/2026-07-25-ec-01-admission-review-004.md` — admission criteria PASS; recommendation ADMIT
 - Human-Trait Canon admission review: `assessments/2026-07-25-human-trait-canon-admission-review-003.md` — admission criteria PASS; recommendation ADMIT
+- EC-02 admission review: `assessments/2026-07-25-ec-02-admission-review-002.md` — admission criteria PASS; recommendation ADMIT
 
 ## Risks
 
@@ -92,6 +93,7 @@ None recorded.
 | DR-010 | Model Observator/Custos as one mission-attached Operator instance with authorized visibility and interaction but no execution influence | Recorded decision; terminology clarified |
 | DR-011 | Admit EC-01 Evidence-Source Standard for current semantic use | Recorded decision; bounded evidence standard admitted |
 | DR-012 | Admit Human-Trait Canon schema and lifecycle for current semantic use | Recorded decision; real-person use gated by EC-02 |
+| DR-013 | Admit EC-02 Living-Person Evidence Safeguards for current semantic use | Recorded decision; case-specific evidence record still required |
 
 The two `DR-002` records are distinct historical files. The later OpenBao topology decision reused an existing ID before this registry was updated. This record preserves both and records the collision; renumbering a prior decision requires a separate traceable normalization.
 
