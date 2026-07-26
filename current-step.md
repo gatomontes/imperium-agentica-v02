@@ -10,7 +10,7 @@ DR-009 Evidence Without Engineered Orientation is recorded. DR-008 is superseded
 
 DR-010 Mission-Scoped Observator/Custos (OC) Operator Instance is recorded. OC is one instance, not two roles or cooperating components.
 
-DR-CURRENT is the active decision pointer through DR-017. EC-CURRENT is the active exemplar-grounding correction pointer. OP-CURRENT is the active synthetic Operative Package pointer.
+DR-CURRENT is the active decision pointer through DR-018. EC-CURRENT is the active exemplar-grounding correction pointer. OP-CURRENT is the active synthetic Operative Package pointer.
 
 ## Active Focus
 
@@ -84,3 +84,8 @@ Track A closure establishes theoretical creation-chain conformance. It does not 
 Track A proves that the proposed creation chain can preserve exact ownership, versions, evidence, repair routing, and handoff conformance from Petition through a deployment-medium-specific Operative. It does not certify the participating institutions as complete in all responsibilities, admit draft contracts as live operating semantics, or cause them to perform live work.
 
 Creation-apparatus institutional completion remains unestablished. Live persona production or admission, live Garrison mutation/reservation/selection, live Operative construction, and mission binding/readiness/activation/deployment are not established by Track A.
+
+
+## Creation Apparatus Admission
+
+DR-018 admits eight bounded Cognitive completion contracts for the professional Operative path. They are semantic contracts only; institutional implementation, live data, live persona/Operative creation, Runtime action, deployment, Officer/Gesta work, OC implementation, and external effect remain unauthorized.
