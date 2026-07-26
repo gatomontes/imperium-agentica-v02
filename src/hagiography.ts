@@ -1,3 +1,5 @@
+import { randomUUID } from "node:crypto";
+
 import { ArtifactEnvelope, createArtifact } from "./artifact.js";
 
 export type CanonFinding =
@@ -48,7 +50,7 @@ export class Hagiography {
     return createArtifact(
       "HumanTraitCanon",
       "Hagiography",
-      crypto.randomUUID(),
+      randomUUID(),
       {
         syntheticSource: input.syntheticSource,
         sourceRef: input.sourceRef ?? "",
