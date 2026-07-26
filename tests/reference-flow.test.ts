@@ -62,4 +62,21 @@ describe("Secretariat to Castellan reference flow", () => {
     expect(new Castellan().receivePetition(resolved)).not.toBeNull();
   });
 
+
+  it("rejects routing before clarification is resolved", () => {
+    const secretariat = new Secretariat();
+    const petition = secretariat.receive({
+      content: "Investigate this.",
+      sessionReference: "opaque-session-routing",
+    });
+    const clarified = secretariat.requestClarification(
+      petition,
+      "scope required",
+    );
+
+    expect(() => secretariat.markRouted(clarified)).toThrow(
+      "only received petitions can be routed",
+    );
+  });
+
 });
