@@ -60,6 +60,7 @@ describe("synthetic creation chain", () => {
     expect(result.persona.payload.finding).toBe("CANONICAL_PERSONA_ADMITTED");
     expect(result.operative.payload.finding).toBe("OPERATIVE_PACKAGE_CONFORMANT");
     expect(result.operative.payload.medium).toBe("node-reference");
+    expect(result.operative.payload.state).toBe("PACKAGED");
   });
 
   it("blocks packaging when the medium is absent", () => {
