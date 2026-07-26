@@ -45,6 +45,42 @@ describe("PostgresArtifactStore", () => {
       null,
     ]);
   });
+  it("maps database rows back to artifact envelopes", async () => {
+    const pool = {
+      query: async () => ({
+        rows: [
+          {
+            identity: "petition-pg-2",
+            version: 1,
+            artifact_type: "Petition",
+            status: "CURRENT",
+            producer: "Secretariat",
+            correlation_id: "corr-pg-read",
+            created_at: "2026-07-26T12:00:00.000Z",
+            payload: { content: "request" },
+            source_refs: ["operator-input"],
+            supersedes: null,
+            invalidation_reason: null,
+          },
+        ],
+        rowCount: 1,
+      }),
+    } as unknown as Pool;
+
+    const store = new PostgresArtifactStore(pool);
+    await expect(store.get("petition-pg-2", 1)).resolves.toEqual({
+      artifactType: "Petition",
+      identity: "petition-pg-2",
+      version: 1,
+      status: "CURRENT",
+      producer: "Secretariat",
+      correlationId: "corr-pg-read",
+      createdAt: "2026-07-26T12:00:00.000Z",
+      payload: { content: "request" },
+      sourceRefs: ["operator-input"],
+    });
+  });
+
   it("normalizes duplicate-key failures", async () => {
     const pool = {
       query: async () => {
