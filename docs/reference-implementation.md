@@ -60,3 +60,16 @@ The reference implementation does not provide:
 - OC behavior.
 
 One Imperium instance is modeled per operator.
+
+
+## Response boundary
+
+Operator response content and delivery state are separate artifacts:
+
+~~~text
+Petition
+→ OperatorResponse
+→ ResponseDelivery
+~~~
+
+A delivery failure does not alter response content.
