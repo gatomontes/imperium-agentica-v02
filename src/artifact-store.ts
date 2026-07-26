@@ -16,7 +16,7 @@ export function artifactKey(identity: string, version: number): ArtifactKey {
 export interface ArtifactStore {
   save<T>(artifact: ArtifactEnvelope<T>): ArtifactEnvelope<T>;
   get<T>(identity: string, version: number): ArtifactEnvelope<T> | undefined;
-  findByCorrelationId<T>(correlationId: string): ArtifactEnvelope<T>[];
+  findByCorrelationId(correlationId: string): ArtifactEnvelope<unknown>[];
   supersede<T>(
     previous: ArtifactEnvelope<T>,
     successor: ArtifactEnvelope<T>,
