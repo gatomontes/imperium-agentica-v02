@@ -1,3 +1,4 @@
+import { assertArtifactEnvelope } from "./schema.js";
 import { ArtifactEnvelope, createArtifact } from "./artifact.js";
 import { Petition } from "./secretariat.js";
 
@@ -12,6 +13,7 @@ export class Castellan {
   receivePetition(
     petition: ArtifactEnvelope<Petition>,
   ): ArtifactEnvelope<WorkSpecification> | null {
+    assertArtifactEnvelope(petition);
     if (petition.status !== "CURRENT") return null;
     if (petition.payload.finding !== "PETITION_RECEIVED") return null;
     if (!petition.payload.normalizedContent) return null;
