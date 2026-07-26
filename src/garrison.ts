@@ -11,7 +11,7 @@ export interface CanonicalPersona {
   candidateRef: string;
   pitFindingRef: string;
   professionRef: string;
-  status: "ADMITTED" | "NOT_ADMITTED";
+  status: "ADMITTED" | "NOT_ADMITTED" | "SUPERSEDED" | "RETIRED";
   finding: GarrisonFinding;
 }
 
