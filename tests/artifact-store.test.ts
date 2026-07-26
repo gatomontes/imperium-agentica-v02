@@ -18,6 +18,24 @@ describe("artifact persistence boundary", () => {
     expect(store.get(artifact.identity, artifact.version)).toEqual(artifact);
   });
 
+  it("finds the complete correlation trail in deterministic order", () => {
+    const store: ArtifactStore = new InMemoryArtifactRepository();
+    const later = createArtifact("WorkSpecification", "Castellan", "corr-trail", {
+      work: "later",
+    }, [], { now: () => "2026-07-26T12:00:00.000Z", identityFactory: () => "work-1" });
+    const earlier = createArtifact("Petition", "Secretariat", "corr-trail", {
+      content: "earlier",
+    }, [], { now: () => "2026-07-26T11:00:00.000Z", identityFactory: () => "petition-1" });
+
+    store.save(later);
+    store.save(earlier);
+
+    expect(store.findByCorrelationId("corr-trail").map((artifact) => artifact.identity)).toEqual([
+      "petition-1",
+      "work-1",
+    ]);
+  });
+
   it("does not expose a current-version shortcut that could hide history", () => {
     const store: ArtifactStore = new InMemoryArtifactRepository();
     const first = createArtifact("Petition", "Secretariat", "corr-history", {
