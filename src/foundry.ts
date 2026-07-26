@@ -26,6 +26,7 @@ export class Foundry {
     inputs: FoundryInputs,
   ): ArtifactEnvelope<PersonaSpecificationCandidate> {
     const unresolved: string[] = [];
+    if (inputs.profession.status !== "CURRENT") unresolved.push("profession status");
     if (!inputs.profession?.payload?.professionIdentity) unresolved.push("profession");
     if (!inputs.doctrineRef) unresolved.push("doctrine");
     if (!inputs.provenanceComplete) unresolved.push("provenance");
