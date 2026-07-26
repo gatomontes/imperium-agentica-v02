@@ -19,6 +19,13 @@ export class ImperiumReference {
     };
   }
 
+  requestClarification(
+    petition: ArtifactEnvelope<Petition>,
+    reason: string,
+  ): ArtifactEnvelope<Petition> {
+    return this.secretariat.requestClarification(petition, reason);
+  }
+
   clarify(
     petition: ArtifactEnvelope<Petition>,
     correctedContent: string,
