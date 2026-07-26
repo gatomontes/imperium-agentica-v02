@@ -29,7 +29,8 @@ export class Conscription {
   ): ArtifactEnvelope<OperativePackage> {
     const finding: OperativeFinding =
       persona.status === "CURRENT" &&
-      persona.payload.finding === "CANONICAL_PERSONA_ADMITTED" &&      persona.payload.finding === "CANONICAL_PERSONA_ADMITTED" && medium.trim()
+      persona.payload.finding === "CANONICAL_PERSONA_ADMITTED" &&
+      medium.trim()
         ? "OPERATIVE_PACKAGE_CONFORMANT"
         : "OPERATIVE_PACKAGE_UNRESOLVED";
 
