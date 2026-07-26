@@ -81,3 +81,22 @@ OC authority envelope, Secretariat routing, Curia presence procedure, provenance
 Human-Trait Canon revisions applied; synthetic entry test passed 10/10; schema admitted by DR-012. EC-02 admitted by DR-013. Case-specific evidence records remain required. No real-person data, persona production, operative creation, recruitment packaging, model fine-tuning, deployment, or external effect is authorized. EC-CURRENT governs exemplar-grounding corrections. No real-person data, persona production, operative creation, recruitment packaging, model fine-tuning, deployment, or external effect is authorized.
 
 OC implementation, Secretariat implementation, Curia procedure change, production change, model/provider/evaluator selection, credential work, deployment, and external effect remain unauthorized until a future step explicitly admits them.
+
+
+## Creation Apparatus Institutional Completion Review
+
+The next proposed action is a review of each creation institution as an institution, not merely as a node in the Track A conformance chain. It requires explicit authorization.
+
+| Institution | Review target |
+|---|---|
+| Guildhall | profession-research ownership, SOP, evidence inputs, Profession Specification artifact, refusal, revision, and stewardship |
+| Studium | Persona Governance Doctrine authorship, versioning, review, applicability, amendment, and delivery to Foundry |
+| Hagiography | real-practitioner evidence intake, EC-01 source sufficiency, achievement verification, transferable-trait derivation, Human-Trait Canon, and supersession |
+| Foundry | Persona Specification synthesis, provenance-preserving integration, conflict handling, versioning, and delivery to Pit |
+| Pit | independent test design, findings, failure classification, repair return, retest, and recommendation boundary |
+| Garrison | admission authority, inventory truth, suitability search, reservation, selection visibility, invalidation, and removal |
+| Conscription/Recruitment | exact Persona selection, deployment-medium packaging, permitted transformation, deviation evidence, Operative identity/version, and handoff |
+
+The review must distinguish responsibilities already admitted, draft-only contracts, missing doctrine or SOPs, required artifacts and owners, admission gates and refusal behavior, implementation requirements, deferred dependencies, and the smallest independently reviewable completion increments.
+
+No creation-apparatus completion work, Execution-layer work, OC implementation, credential work, deployment, or external effect is authorized until explicitly selected and admitted.
