@@ -24,7 +24,8 @@ export class Garrison {
     const pitRef = pit.identity + "@" + pit.version;
     const conformant =
       candidate.status === "CURRENT" &&
-      pit.status === "CURRENT" &&      candidate.payload.finding === "PERSONA_INPUTS_CONFORMANT" &&
+      pit.status === "CURRENT" &&
+      candidate.payload.finding === "PERSONA_INPUTS_CONFORMANT" &&
       pit.payload.finding === "PERSONA_TEST_CONFORMANT";
 
     return createArtifact(
