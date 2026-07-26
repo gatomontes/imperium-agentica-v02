@@ -1,3 +1,4 @@
+import { assertArtifactEnvelope } from "./schema.js";
 import { randomUUID } from "node:crypto";
 
 import { createArtifact, ArtifactEnvelope } from "./artifact.js";
@@ -34,7 +35,7 @@ export class Secretariat {
       ? "PETITION_RECEIVED"
       : "PETITION_UNRESOLVED";
 
-    return createArtifact(
+    const petition = createArtifact(
       "Petition",
       "Secretariat",
       randomUUID(),
@@ -48,6 +49,7 @@ export class Secretariat {
         finding,
       },
     );
+    return assertArtifactEnvelope(petition);
   }
 
   requestClarification(
