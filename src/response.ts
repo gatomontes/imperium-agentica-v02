@@ -15,7 +15,7 @@ export function prepareOperatorResponse(
   const normalized = content.trim();
   if (!normalized) throw new Error("response content cannot be empty");
 
-  const response = createArtifact(
+  const response = createArtifact<OperatorResponse>(
     "OperatorResponse",
     "Secretariat",
     petition.correlationId,
