@@ -26,6 +26,12 @@ describe.skipIf(!enabled)("PostgresArtifactStore integration", () => {
   });
 
   it("persists, reads, and retrieves correlation history", async () => {
+    const migration = await pool.query(
+      "SELECT version FROM imperium_schema_migrations WHERE version = $1",
+      ["001_artifact_envelopes"],
+    );
+    expect(migration.rowCount).toBe(1);
+
     const petition = createArtifact(
       "Petition",
       "Secretariat",
