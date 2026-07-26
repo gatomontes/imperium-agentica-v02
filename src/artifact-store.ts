@@ -22,3 +22,18 @@ export interface ArtifactStore {
     successor: ArtifactEnvelope<T>,
   ): ArtifactEnvelope<T>;
 }
+
+export interface AsyncArtifactStore {
+  save<T>(artifact: ArtifactEnvelope<T>): Promise<ArtifactEnvelope<T>>;
+  get<T>(
+    identity: string,
+    version: number,
+  ): Promise<ArtifactEnvelope<T> | undefined>;
+  findByCorrelationId(
+    correlationId: string,
+  ): Promise<ArtifactEnvelope<unknown>[]>;
+  supersede<T>(
+    previous: ArtifactEnvelope<T>,
+    successor: ArtifactEnvelope<T>,
+  ): Promise<ArtifactEnvelope<T>>;
+}
