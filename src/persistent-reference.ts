@@ -1,7 +1,7 @@
 import { ArtifactEnvelope } from "./artifact.js";
 import { AsyncArtifactStore } from "./artifact-store.js";
-import { Castellan, WorkSpecification } from "./castellan.js";
-import { ResponseDelivery, ResponseDeliveryService } from "./delivery.js";
+import { WorkSpecification } from "./castellan.js";
+import { ResponseDelivery } from "./delivery.js";
 import { ImperiumReference } from "./reference.js";
 import { OperatorResponse } from "./response.js";
 import { OperatorRequest, Petition } from "./secretariat.js";
