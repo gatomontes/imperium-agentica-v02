@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "tsc --noEmit",
-    "test": "vitest run tests/reference-flow.test.ts tests/guildhall.test.ts tests/foundry.test.ts tests/studium.test.ts tests/hagiography.test.ts"
+    "test": "vitest run tests/reference-flow.test.ts tests/guildhall.test.ts tests/foundry.test.ts tests/studium.test.ts tests/hagiography.test.ts tests/creation-chain.test.ts"
   },
   "devDependencies": {
     "typescript": "^5.8.0",
