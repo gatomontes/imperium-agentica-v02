@@ -20,13 +20,13 @@ describe("Imperium reference facade", () => {
       content: "Investigate this.",
       sessionReference: "opaque-facade-clarification",
     });
-    const clarification = new (class {
-      request(secretariat: import("../src/secretariat.js").Secretariat) {
-        return secretariat;
-      }
-    })();
+    const pending = reference.requestClarification(
+      submitted.petition,
+      "scope is materially ambiguous",
+    );
 
-    void clarification;
-    expect(submitted.work).not.toBeNull();
+    expect(pending.payload.finding).toBe("PETITION_NEEDS_CLARIFICATION");
+    expect(reference.clarify(pending, "Investigate the professional pattern.").work)
+      .not.toBeNull();
   });
 });
