@@ -249,3 +249,31 @@ Before coding begins, a separate decision must approve:
 - whether a reference implementation or production implementation is intended.
 
 Until then, this remains an implementation plan only.
+
+
+## Secretariat Boundary Correction
+
+Secretariat is the general operator-facing ingress and routing institution. It is not an OC component.
+
+The request path begins:
+
+~~~text
+Operator
+→ Secretariat
+→ Petition / request record
+→ Castellan
+→ approved Work Specification
+→ Guildhall
+~~~
+
+Secretariat must preserve the original operator request, establish correlation, route the request to Castellan, receive clarification requests and outcomes, and deliver responses to the operator.
+
+Secretariat must not determine professional truth, author doctrine, forge personas, select Operatives, grant authority, or execute missions.
+
+## OC Separation
+
+An OC is a mission-attached, read-only Imperium Operator instance. OC status is not an institution and is not a Secretariat subsystem.
+
+OC capabilities may eventually include authorized observation, inspection, questioning, notification receipt, and reporting. Those capabilities are deferred and must not be confused with Secretariat's foundational request-ingress and routing role.
+
+The implementation scope therefore includes Secretariat ingress and operator request routing, while excluding OC participation mechanics from this plan.
