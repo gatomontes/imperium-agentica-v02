@@ -50,6 +50,47 @@ export class Secretariat {
     );
   }
 
+  requestClarification(
+    petition: ArtifactEnvelope<Petition>,
+    reason: string,
+  ): ArtifactEnvelope<Petition> {
+    if (petition.payload.finding !== "PETITION_RECEIVED") {
+      throw new Error("only received petitions can require clarification");
+    }
+    return {
+      ...petition,
+      version: petition.version + 1,
+      payload: {
+        ...petition.payload,
+        finding: "PETITION_NEEDS_CLARIFICATION",
+        constraints: [...petition.payload.constraints, "clarification: " + reason],
+      },
+    };
+  }
+
+  resolveClarification(
+    petition: ArtifactEnvelope<Petition>,
+    correctedContent: string,
+  ): ArtifactEnvelope<Petition> {
+    if (petition.payload.finding !== "PETITION_NEEDS_CLARIFICATION") {
+      throw new Error("petition is not awaiting clarification");
+    }
+    const normalizedContent = correctedContent.trim();
+    if (!normalizedContent) {
+      throw new Error("clarified content cannot be empty");
+    }
+    return {
+      ...petition,
+      version: petition.version + 1,
+      payload: {
+        ...petition.payload,
+        originalContent: correctedContent,
+        normalizedContent,
+        finding: "PETITION_RECEIVED",
+      },
+    };
+  }
+
   markRouted(
     petition: ArtifactEnvelope<Petition>,
   ): ArtifactEnvelope<Petition> {
