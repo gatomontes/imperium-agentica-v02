@@ -1,4 +1,4 @@
-CREATE TABLE artifact_envelopes (
+CREATE TABLE IF NOT EXISTS artifact_envelopes (
   identity TEXT NOT NULL,
   version INTEGER NOT NULL CHECK (version > 0),
   artifact_type TEXT NOT NULL,
