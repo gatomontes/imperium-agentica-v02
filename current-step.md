@@ -70,6 +70,6 @@ External effect: NO
 
 ## Current Gate
 
-EC-02 pressure test passed 8/8 and admission review passed 7/7. DR-013 admitted EC-02 for current semantic use. Foundry review 001 identified six revisions; all were applied. Synthetic candidate integration passed 10/10. Synthetic Pit test 003 passed 10/10 as PERSONA_TEST_CONFORMANT. Garrison admission review 004 passed all criteria, and DR-015 admitted PSC-SYN-001 v0.1 as a synthetic Canonical Persona. Conscription packaging test 001 passed 10/10 as OPERATIVE_PACKAGE_CONFORMANT. Activation, mission binding, and deployment remain separate and unauthorized.
+EC-02 pressure test passed 8/8 and admission review passed 7/7. DR-013 admitted EC-02 for current semantic use. Foundry review 001 identified six revisions; all were applied. Synthetic candidate integration passed 10/10. Synthetic Pit test 003 passed 10/10 as PERSONA_TEST_CONFORMANT. Garrison admission review 004 passed all criteria, and DR-015 admitted PSC-SYN-001 v0.1 as a synthetic Canonical Persona. Conscription packaging test 001 passed 10/10; failure test 002 passed 8/8; admission review 003 passed all criteria; DR-016 admitted OP-SYN-001 v0.1 as an inactive synthetic package. Stop and reassess before Muster.
 
 No OC implementation, Secretariat implementation, Curia procedure change, runtime permission, persona creation, model fine-tuning, Runtime action, deployment, or external effect is authorized by this step.
