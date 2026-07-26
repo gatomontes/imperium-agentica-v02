@@ -57,6 +57,13 @@ Path: `deliberations/decisions/DR-012-human-trait-canon-schema.md`
 
 The Human-Trait Canon schema is admitted for current semantic use. EC-02 remains a precondition for real-person entries.
 
+### DR-013 — EC-02 Living-Person Evidence Safeguards
+
+Status: active admitted semantic standard.
+Path: `deliberations/decisions/DR-013-ec-02-living-person-evidence-safeguards.md`
+
+EC-02 governs minimization, professional relevance, sensitive information, disputes, corrections, and retention for real-person evidence. It does not itself authorize collection or processing.
+
 ## Retained Principles
 
 ### DR-006 — Mandatory Real-World Exemplar Grounding
