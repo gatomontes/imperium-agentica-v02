@@ -46,4 +46,24 @@ describe("Imperium reference facade", () => {
     expect(acknowledged.payload.state).toBe("RESPONSE_ACKNOWLEDGED");
   });
 
+
+  it("creates response content separately from delivery", () => {
+    const reference = new ImperiumReference();
+    const submitted = reference.submit({
+      content: "Define the professional pattern.",
+      sessionReference: "opaque-response-e2e",
+    });
+    const response = reference.prepareOperatorResponse(
+      submitted.petition,
+      "The request was received.",
+    );
+    const delivery = reference.prepareResponse(
+      submitted.petition,
+      "fixture",
+    );
+
+    expect(response.payload.content).toBe("The request was received.");
+    expect(response.correlationId).toBe(delivery.correlationId);
+  });
+
 });
