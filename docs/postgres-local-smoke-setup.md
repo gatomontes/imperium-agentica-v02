@@ -10,7 +10,7 @@ Using `psql`:
 CREATE DATABASE imperium_test;
 ```
 
-Apply the schema:
+Apply the schema (safe to repeat for the current schema):
 
 ```powershell
 psql -d imperium_test -f migrations/001_artifact_envelopes.sql
