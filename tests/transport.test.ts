@@ -19,13 +19,18 @@ describe("transport adapter contract", () => {
 
   it("maps clarification through the transport-neutral contract", () => {
     const adapter = new DirectTransportAdapter();
-    const petition = new Secretariat().receive({
+    const secretariat = new Secretariat();
+    const petition = secretariat.receive({
       content: "Investigate this.",
       sessionReference: "opaque-transport-clarify",
     });
+    const pending = secretariat.requestClarification(
+      petition,
+      "scope is materially ambiguous",
+    );
     const result = adapter.clarify({
       transportId: "direct-clarify-001",
-      petition,
+      petition: pending,
       correctedContent: "Investigate the professional pattern.",
     });
 
