@@ -8,5 +8,3 @@ DELETE FROM imperium_schema_migrations
 DROP INDEX IF EXISTS artifact_envelopes_supersedes_idx;
 DROP INDEX IF EXISTS artifact_envelopes_correlation_history_idx;
 DROP TABLE IF EXISTS artifact_envelopes;
-
-DROP TABLE IF EXISTS imperium_schema_migrations;
