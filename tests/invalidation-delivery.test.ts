@@ -32,6 +32,8 @@ describe("invalidation and delivery boundaries", () => {
     const retry = service.dispatch(prepared, false);
     const acknowledged = service.dispatch(retry, true);
 
+    expect(retry.supersedes).toBe(prepared.identity + "@1");
+    expect(acknowledged.supersedes).toBe(retry.identity + "@2");
     expect(retry.payload.state).toBe("RESPONSE_RETRY_REQUIRED");
     expect(acknowledged.payload.state).toBe("RESPONSE_ACKNOWLEDGED");
     expect(acknowledged.payload.attempt).toBe(2);
