@@ -12,7 +12,7 @@ DR-010 Mission-Scoped Observator/Custos (OC) Operator Instance is recorded. OC i
 
 ## Active Focus
 
-**No active step.** Human-Trait Canon schema and lifecycle admitted by DR-012. EC-01 is admitted; its synthetic Hagiography application is complete. Semantic Integrity is closed after the external reader pass recorded at `tests/semantic-integrity/runs/20260725T-external-reader-pass-005.md`.
+**Exemplar Grounding — define and pressure-test EC-02 living-person evidence safeguards.** Human-Trait Canon schema and lifecycle are admitted by DR-012. EC-01 is admitted; its synthetic Hagiography application is complete. Semantic Integrity is closed after the external reader pass recorded at `tests/semantic-integrity/runs/20260725T-external-reader-pass-005.md`.
 
 The external reader recovered the intended OC ontology, authority boundary, implementation status, current step, and Cognitive Baseline distinctions. Minor first-contact and queue-label ambiguities were corrected in `current-step.md` and `next-steps.md`. The repository now has evidence that its language can communicate the tested distinctions without conversation history.
 
@@ -70,6 +70,6 @@ External effect: NO
 
 ## Current Gate
 
-No active gate. The Human-Trait Canon schema is admitted, but EC-02 must be admitted before real-person entries are processed. No persona production, operative creation, recruitment packaging, model fine-tuning, deployment, or external effect is authorized.
+EC-02 is drafted at `deliberations/assessments/2026-07-25-ec-02-living-person-evidence-safeguards-draft-001.md`; pressure-test it before admission. No real-person data, persona production, operative creation, recruitment packaging, model fine-tuning, deployment, or external effect is authorized.
 
 No OC implementation, Secretariat implementation, Curia procedure change, runtime permission, persona creation, model fine-tuning, Runtime action, deployment, or external effect is authorized by this step.
