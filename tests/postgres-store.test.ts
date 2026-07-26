@@ -45,4 +45,20 @@ describe("PostgresArtifactStore", () => {
       null,
     ]);
   });
+  it("normalizes duplicate-key failures", async () => {
+    const pool = {
+      query: async () => {
+        throw Object.assign(new Error("duplicate key"), { code: "23505" });
+      },
+    } as unknown as Pool;
+
+    const store = new PostgresArtifactStore(pool);
+    const artifact = createArtifact("Petition", "Secretariat", "corr-pg-duplicate", {
+      content: "request",
+    });
+
+    await expect(store.save(artifact)).rejects.toThrow(
+      "artifact version already exists",
+    );
+  });
 });
