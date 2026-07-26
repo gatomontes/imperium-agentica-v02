@@ -7,6 +7,12 @@ export interface TransportRequest {
   transportId: string;
 }
 
+export interface ClarificationRequest {
+  petition: ArtifactEnvelope<Petition>;
+  correctedContent: string;
+  transportId: string;
+}
+
 export interface TransportResponse {
   transportId: string;
   petition: ArtifactEnvelope<Petition>;
@@ -15,4 +21,5 @@ export interface TransportResponse {
 
 export interface ImperiumTransportAdapter {
   submit(input: TransportRequest): TransportResponse;
+  clarify(input: ClarificationRequest): TransportResponse;
 }
