@@ -33,9 +33,10 @@ The PostgreSQL client library reads these standard variables. The repository doe
 The smoke check should verify:
 
 1. schema creation succeeds;
-2. one artifact can be inserted and read;
-3. correlation history returns deterministic order;
-4. supersession commits predecessor and successor together;
+2. migration ledger contains `001_artifact_envelopes`;
+3. one artifact can be inserted and read;
+4. correlation history returns deterministic order;
+5. supersession commits predecessor and successor together;
 5. a failed supersession leaves the predecessor unchanged.
 
 The normal `npm test` suite remains database-independent. PostgreSQL verification is an explicit local step until CI database provisioning is authorized.
