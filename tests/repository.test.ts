@@ -63,6 +63,26 @@ describe("in-memory artifact repository", () => {
     expect(() => repository.save(invalid)).toThrow("invalid artifact envelope");
   });
 
+  it("rejects replayed supersession of a non-current predecessor", () => {
+    const repository = new InMemoryArtifactRepository();
+    const previous = createArtifact("Petition", "Secretariat", "corr-replay", {
+      content: "old",
+    });
+    const successor = {
+      ...createArtifact("Petition", "Secretariat", "corr-replay", {
+        content: "new",
+      }),
+      supersedes: previous.identity + "@" + previous.version,
+    };
+
+    repository.save(previous);
+    repository.supersede(previous, successor);
+
+    expect(() => repository.supersede(previous, successor)).toThrow(
+      "previous artifact is not current",
+    );
+  });
+
   it("does not mutate the predecessor when the successor is invalid", () => {
     const repository = new InMemoryArtifactRepository();
     const previous = createArtifact("Petition", "Secretariat", "corr-atomic", {
