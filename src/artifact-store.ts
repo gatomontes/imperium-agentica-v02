@@ -3,7 +3,7 @@ import { ArtifactEnvelope } from "./artifact.js";
 export type ArtifactKey = `${string}@${number}`;
 
 export function artifactKey(identity: string, version: number): ArtifactKey {
-  return identity + "@" + version;
+  return `${identity}@${version}`;
 }
 
 /**
