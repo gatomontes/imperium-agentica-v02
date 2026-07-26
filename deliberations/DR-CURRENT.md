@@ -57,6 +57,13 @@ Path: `deliberations/decisions/DR-012-human-trait-canon-schema.md`
 
 The Human-Trait Canon schema is admitted for current semantic use. EC-02 remains a precondition for real-person entries.
 
+### DR-017 — Synthetic Persona Governance Doctrine
+
+Status: active synthetic professional doctrine.
+Path: `deliberations/decisions/DR-017-synthetic-persona-governance-doctrine.md`
+
+PGD-SYN-002 v0.1 is admitted for the synthetic emergency-systems-engineer path only. It does not grant authority or admit a persona.
+
 ### DR-016 — Synthetic Operative Package Admission
 
 Status: active synthetic package admission record.
