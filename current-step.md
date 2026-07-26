@@ -70,6 +70,6 @@ External effect: NO
 
 ## Current Gate
 
-EC-02 pressure test passed 8/8 and admission review passed 7/7. DR-013 admitted EC-02 for current semantic use. Foundry review 001 found the core boundaries sound but identified six required revisions: replace stale DR-006-centered evidence references with DR-CURRENT/EC-CURRENT, bind the admitted Human-Trait Canon schema, require EC-01 and EC-02 records, distinguish synthetic testing from production evidence, preserve exact Canon/safeguard versions, and keep Officer/Gesta concerns excluded. Apply these revisions before a synthetic Foundry integration test. No real-person data, persona production, operative creation, recruitment packaging, model fine-tuning, deployment, or external effect is authorized.
+EC-02 pressure test passed 8/8 and admission review passed 7/7. DR-013 admitted EC-02 for current semantic use. Foundry review 001 identified six revisions; all were applied. Synthetic Persona Specification Candidate test 002 passed 10/10 and produced PERSONA_CANDIDATE_CONFORMANT for a draft synthetic candidate. The next action is an admission review for the Foundry conformance contract. No real-person data, persona admission, Operative creation, recruitment packaging, model fine-tuning, deployment, or external effect is authorized.
 
 No OC implementation, Secretariat implementation, Curia procedure change, runtime permission, persona creation, model fine-tuning, Runtime action, deployment, or external effect is authorized by this step.
