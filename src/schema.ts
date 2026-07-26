@@ -30,7 +30,15 @@ const artifactEnvelopeSchema = {
   additionalProperties: false,
 } as const;
 
-const ajv = new Ajv();
+type AjvConstructor = new () => {
+  compile(schema: object): ((data: unknown) => boolean) & {
+    errors?: unknown;
+  };
+  errorsText(errors: unknown): string;
+};
+
+const AjvClass = Ajv as unknown as AjvConstructor;
+const ajv = new AjvClass();
 const validateEnvelope = ajv.compile(artifactEnvelopeSchema);
 
 export function assertArtifactEnvelope<T>(
