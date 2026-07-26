@@ -1,5 +1,10 @@
 import { randomUUID } from "node:crypto";
 
+export interface ArtifactContext {
+  identityFactory?: (prefix: string) => string;
+  now?: () => string;
+}
+
 export type ArtifactStatus =
   | "CURRENT"
   | "REFUSED"
@@ -31,15 +36,18 @@ export function createArtifact<T>(
   correlationId: string,
   payload: T,
   sourceRefs: string[] = [],
+  context: ArtifactContext = {},
 ): ArtifactEnvelope<T> {
   return {
     artifactType,
-    identity: nextIdentity(artifactType.toLowerCase()),
+    identity: context.identityFactory
+      ? context.identityFactory(artifactType.toLowerCase())
+      : nextIdentity(artifactType.toLowerCase()),
     version: 1,
     status: "CURRENT",
     producer,
     correlationId,
-    createdAt: new Date().toISOString(),
+    createdAt: context.now ? context.now() : new Date().toISOString(),
     payload,
     sourceRefs,
   };
