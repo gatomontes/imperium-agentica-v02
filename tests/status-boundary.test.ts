@@ -41,8 +41,9 @@ describe("superseded and invalidated artifact boundaries", () => {
   it("blocks a superseded Profession Specification at Foundry", () => {
     const current = candidate();
     const supersededProfession = {
-      ...({ ...current, status: "SUPERSEDED" } as typeof current),
-    };
+      ...current,
+      status: "SUPERSEDED" as const,
+    } as unknown as Parameters<Foundry["integrate"]>[0]["profession"];
 
     const result = new Foundry().integrate({
       profession: supersededProfession,
