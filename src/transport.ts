@@ -29,6 +29,11 @@ export interface ImperiumTransportAdapter {
     content: string,
     transportId: string,
   ): { transportId: string; response: ArtifactEnvelope<OperatorResponse> };
+  prepareDelivery(
+    petition: ArtifactEnvelope<Petition>,
+    channel: string,
+    transportId: string,
+  ): { transportId: string; delivery: ArtifactEnvelope<ResponseDelivery> };
   dispatchResponse(
     delivery: ArtifactEnvelope<ResponseDelivery>,
     successful: boolean,
