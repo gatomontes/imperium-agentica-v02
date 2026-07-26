@@ -83,40 +83,40 @@ Studium must return profession defects to Guildhall rather than repair them.
 
 For every professional persona:
 
-```text
+```
 TRAIT_CANON_REQUIRED
 ```
 
-Hagiography must produce one versioned Human-Trait Canon grounded in at least one identifiable, exemplary real-world practitioner in the resolved profession. Multiple practitioners should be used when sufficient evidence exists.
+Hagiography must provide one exact version of the admitted Human-Trait Canon schema. The entry must carry an EC-01 disposition and, for real-person evidence, an EC-02 case record. Synthetic fixtures may exercise this gate but do not satisfy real-person production evidence requirements.
 
-For every inherited trait, the canon must preserve the inspectable derivation:
+For every inherited trait, the Canon must preserve the inspectable derivation:
 
-```text
-real practitioner
-→ profession-relevant achievement or demonstrated performance
-→ observed behavior
-→ inferred transferable trait
+```
+profession-relevant evidence
+→ demonstrated performance, decision, work product, or outcome
+→ observed behavior or decision pattern
+→ bounded transferable trait
 → intended persona behavior
 → conditions, limits, counterweights, and failure signals
 ```
 
-Minimum content includes exact practitioner identity, profession, achievement or demonstrated-performance evidence, exact evidence sources, observed behavior, transfer rationale, intended behavioral expression, useful conditions, non-transferable context or advantages, costs, risks, conflicts, confidence, counterweights, and failure signals.
+The candidate must preserve the exact Canon entry identifier and version, EC-01 disposition, EC-02 safeguards record where applicable, evidence provenance, contradictions, uncertainty, and downstream restrictions.
 
 Canon findings:
 
-```text
+```
 TRAIT_CANON_CONFORMANT
 TRAIT_CANON_REFUSED
 TRAIT_CANON_UNRESOLVED
 ```
 
-A missing or unresolved derivation link blocks conformance. Insufficient exemplar evidence produces a refused or unresolved finding and blocks Foundry.
+A missing, stale, refused, unresolved, or superseded derivation link blocks conformance. An unresolved trait conflict blocks canonization and Foundry integration.
 
-The source practitioner's achievements remain provenance for trait derivation. They are never claims, credentials, affiliations, authority, identity, or lived experience of the persona.
+The source practitioner's evidence remains provenance for trait derivation. It is never a claim, credential, affiliation, authority, identity, or lived experience of the persona.
 
-Fame, reputation, prestige, mythology, whole-person imitation, fictional or composite exemplars, and generic trait adjectives cannot substitute for evidence. A canon cannot override doctrine or profession boundaries.
+Fame, reputation, prestige, mythology, whole-person imitation, and generic trait adjectives cannot substitute for evidence. Synthetic fixtures are test inputs only. A Canon cannot override doctrine or profession boundaries.
 
-Non-professional artifacts remain outside this gate unless represented or used as professional personas.
+Non-professional artifacts remain outside this gate. Officer/Gesta requirements are outside this contract.
 
 ## Foundry Integration Gate
 
