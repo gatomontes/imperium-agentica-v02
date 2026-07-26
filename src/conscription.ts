@@ -6,11 +6,19 @@ export type OperativeFinding =
   | "OPERATIVE_PACKAGE_REFUSED"
   | "OPERATIVE_PACKAGE_UNRESOLVED";
 
+export type OperativePackageState =
+  | "PACKAGED"
+  | "ACTIVATION_PENDING"
+  | "MISSION_BOUND"
+  | "RELEASED"
+  | "DEPLOYED";
+
 export interface OperativePackage {
   personaRef: string;
   medium: string;
   deviations: string[];
   finding: OperativeFinding;
+  state: OperativePackageState;
 }
 
 export class Conscription {
@@ -34,6 +42,7 @@ export class Conscription {
         medium: medium.trim(),
         deviations,
         finding,
+        state: finding === "OPERATIVE_PACKAGE_CONFORMANT" ? "PACKAGED" : "PACKAGED",
       },
       [personaRef],
     );
