@@ -94,6 +94,9 @@ export class Secretariat {
   markRouted(
     petition: ArtifactEnvelope<Petition>,
   ): ArtifactEnvelope<Petition> {
+    if (petition.payload.finding !== "PETITION_RECEIVED") {
+      throw new Error("only received petitions can be routed");
+    }
     return {
       ...petition,
       version: petition.version + 1,
