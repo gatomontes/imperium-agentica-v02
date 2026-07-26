@@ -57,6 +57,13 @@ Path: `deliberations/decisions/DR-012-human-trait-canon-schema.md`
 
 The Human-Trait Canon schema is admitted for current semantic use. EC-02 remains a precondition for real-person entries.
 
+### DR-015 — Synthetic Canonical Persona Admission
+
+Status: active synthetic admission record.
+Path: `deliberations/decisions/DR-015-synthetic-canonical-persona-admission.md`
+
+PSC-SYN-001 v0.1 is admitted as a synthetic Canonical Persona only. Selection, Conscription, activation, and deployment remain separate.
+
 ### DR-014 — Foundry Persona Production Conformance
 
 Status: active admitted semantic contract.
