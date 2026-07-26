@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "tsc --noEmit",
-    "test": "vitest run tests/reference-flow.test.ts tests/guildhall.test.ts tests/foundry.test.ts tests/studium.test.ts tests/hagiography.test.ts tests/creation-chain.test.ts tests/invalidation-delivery.test.ts tests/repository.test.ts tests/reference-trace.test.ts tests/boundary-verification.test.ts tests/ingress-adapter.test.ts tests/schema.test.ts tests/repository-integration.test.ts tests/lifecycle.test.ts tests/serialization.test.ts tests/reference-facade.test.ts tests/public-api.test.ts tests/status-boundary.test.ts"
+    "test": "vitest run tests/reference-flow.test.ts tests/guildhall.test.ts tests/foundry.test.ts tests/studium.test.ts tests/hagiography.test.ts tests/creation-chain.test.ts tests/invalidation-delivery.test.ts tests/repository.test.ts tests/reference-trace.test.ts tests/boundary-verification.test.ts tests/ingress-adapter.test.ts tests/schema.test.ts tests/repository-integration.test.ts tests/lifecycle.test.ts tests/serialization.test.ts tests/reference-facade.test.ts tests/public-api.test.ts tests/status-boundary.test.ts tests/response.test.ts"
   },
   "devDependencies": {
     "typescript": "^5.8.0",
