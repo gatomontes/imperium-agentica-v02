@@ -81,6 +81,51 @@ describe("PostgresArtifactStore", () => {
     });
   });
 
+  it("returns correlation history in database-defined order", async () => {
+    const pool = {
+      query: async () => ({
+        rows: [
+          {
+            identity: "petition-pg-3",
+            version: 1,
+            artifact_type: "Petition",
+            status: "CURRENT",
+            producer: "Secretariat",
+            correlation_id: "corr-pg-history",
+            created_at: "2026-07-26T11:00:00.000Z",
+            payload: { content: "request" },
+            source_refs: [],
+            supersedes: null,
+            invalidation_reason: null,
+          },
+          {
+            identity: "work-pg-3",
+            version: 1,
+            artifact_type: "WorkSpecification",
+            status: "CURRENT",
+            producer: "Castellan",
+            correlation_id: "corr-pg-history",
+            created_at: "2026-07-26T12:00:00.000Z",
+            payload: { work: "form" },
+            source_refs: ["petition-pg-3@1"],
+            supersedes: null,
+            invalidation_reason: null,
+          },
+        ],
+        rowCount: 2,
+      }),
+    } as unknown as Pool;
+
+    const store = new PostgresArtifactStore(pool);
+    await expect(store.findByCorrelationId("corr-pg-history")).resolves.toHaveLength(2);
+    await expect(store.findByCorrelationId("corr-pg-history")).resolves.toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ identity: "petition-pg-3" }),
+        expect.objectContaining({ identity: "work-pg-3" }),
+      ]),
+    );
+  });
+
   it("normalizes duplicate-key failures", async () => {
     const pool = {
       query: async () => {
