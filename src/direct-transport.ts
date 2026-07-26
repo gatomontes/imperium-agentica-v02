@@ -1,3 +1,4 @@
+import { ArtifactEnvelope } from "./artifact.js";
 import { ImperiumReference } from "./reference.js";
 import {
   ImperiumTransportAdapter,
@@ -26,6 +27,28 @@ export class DirectTransportAdapter implements ImperiumTransportAdapter {
       transportId: input.transportId,
       petition: result.petition,
       work: result.work,
+    };
+  }
+
+  prepareResponse(
+    petition: ArtifactEnvelope<import("./secretariat.js").Petition>,
+    content: string,
+    transportId: string,
+  ) {
+    return {
+      transportId,
+      response: this.imperium.prepareOperatorResponse(petition, content),
+    };
+  }
+
+  dispatchResponse(
+    delivery: ArtifactEnvelope<import("./delivery.js").ResponseDelivery>,
+    successful: boolean,
+    transportId: string,
+  ) {
+    return {
+      transportId,
+      delivery: this.imperium.dispatchResponse(delivery, successful),
     };
   }
 
