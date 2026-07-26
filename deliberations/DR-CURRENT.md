@@ -18,7 +18,7 @@ Locksmith remains the sole security-persistence accessor under its admitted boun
 ### DR-005 — Park Credential Infrastructure
 
 Status: active focus decision.
-Path: `deliberations/decisions/DR-005-park-credential-infrastructure-and-refocus.md`
+Path: `deliberations/decisions/DR-005-park-credential-infrastructure-refocus-operative-selection.md`
 
 Credential infrastructure remains parked until an observed authenticated-integration trigger.
 
