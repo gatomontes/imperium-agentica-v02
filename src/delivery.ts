@@ -36,6 +36,14 @@ export class ResponseDeliveryService {
     delivery: ArtifactEnvelope<ResponseDelivery>,
     successful: boolean,
   ): ArtifactEnvelope<ResponseDelivery> {
+    if (
+      delivery.payload.state !== "RESPONSE_PREPARED" &&
+      delivery.payload.state !== "RESPONSE_RETRY_REQUIRED"
+    ) {
+      throw new Error(
+        "response cannot be dispatched from state: " + delivery.payload.state,
+      );
+    }
     const nextState: ResponseDeliveryState = successful
       ? "RESPONSE_ACKNOWLEDGED"
       : "RESPONSE_RETRY_REQUIRED";
