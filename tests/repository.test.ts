@@ -63,4 +63,25 @@ describe("in-memory artifact repository", () => {
     expect(() => repository.save(invalid)).toThrow("invalid artifact envelope");
   });
 
+  it("does not mutate the predecessor when the successor is invalid", () => {
+    const repository = new InMemoryArtifactRepository();
+    const previous = createArtifact("Petition", "Secretariat", "corr-atomic", {
+      content: "old",
+    });
+    const invalidSuccessor = {
+      ...createArtifact("Petition", "Secretariat", "corr-atomic", {
+        content: "new",
+      }),
+      version: 0,
+      supersedes: previous.identity + "@" + previous.version,
+    };
+
+    repository.save(previous);
+    expect(() => repository.supersede(previous, invalidSuccessor)).toThrow(
+      "invalid artifact envelope",
+    );
+    expect(repository.get(previous.identity, previous.version)?.status).toBe(
+      "CURRENT",
+    );
+  });
 });
