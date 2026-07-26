@@ -11,6 +11,7 @@ export * from "./invalidation.js";
 export * from "./ingress.js";
 export * from "./lifecycle.js";
 export * from "./pit.js";
+export * from "./postgres-store.js";
 export * from "./reference.js";
 export * from "./repository.js";
 export * from "./schema.js";
