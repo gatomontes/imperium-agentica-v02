@@ -31,7 +31,7 @@ describe("Studium Persona Doctrine evaluator", () => {
     });
 
     expect(result.payload.finding).toBe("DOCTRINE_CONFORMANT");
-    expect(result.payload.professionRef).toContain("professionalspecification-");
+    expect(result.payload.professionRef).toContain("professionspecification-");
   });
 
   it("blocks incomplete doctrine without entering the Officer path", () => {
