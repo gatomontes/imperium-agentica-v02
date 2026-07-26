@@ -1,3 +1,5 @@
+BEGIN;
+
 CREATE TABLE IF NOT EXISTS imperium_schema_migrations (
   version TEXT PRIMARY KEY,
   applied_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP
@@ -30,3 +32,5 @@ CREATE INDEX artifact_envelopes_supersedes_idx
 INSERT INTO imperium_schema_migrations (version)
 VALUES ('001_artifact_envelopes')
 ON CONFLICT (version) DO NOTHING;
+
+COMMIT;
