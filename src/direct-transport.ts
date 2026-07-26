@@ -41,6 +41,18 @@ export class DirectTransportAdapter implements ImperiumTransportAdapter {
     };
   }
 
+
+  prepareDelivery(
+    petition: ArtifactEnvelope<import("./secretariat.js").Petition>,
+    channel: string,
+    transportId: string,
+  ) {
+    return {
+      transportId,
+      delivery: this.imperium.prepareResponse(petition, channel),
+    };
+  }
+
   dispatchResponse(
     delivery: ArtifactEnvelope<import("./delivery.js").ResponseDelivery>,
     successful: boolean,
