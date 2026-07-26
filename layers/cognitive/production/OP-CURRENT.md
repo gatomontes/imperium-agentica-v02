@@ -19,3 +19,5 @@ It distinguishes packaged artifacts from activated, mission-bound, or deployed O
 OP-CURRENT records a synthetic packaged artifact only. It grants no tools, credentials, authority, mission intent, activation, deployment, or external effect.
 
 A new package version must preserve exact source persona and upstream versions, pass Conscription conformance and failure tests, record supersession lineage, and receive a separate admission decision.
+
+Second-medium candidate: `OP-SYN-002 v0.1` for `MEDIUM-SYN-002` passed conformance testing but is not admitted and does not replace OP-SYN-001.
