@@ -12,7 +12,7 @@ DR-010 Mission-Scoped Observator/Custos (OC) Operator Instance is recorded. OC i
 
 ## Active Focus
 
-**Foundry / Operative Path — review the Persona Production Conformance boundary.** EC-01, EC-02, and the Human-Trait Canon schema are admitted for the Operative/Foundry path. Officer/Gesta work is out of scope. Human-Trait Canon schema and lifecycle are admitted by DR-012. EC-01 is admitted; its synthetic Hagiography application is complete. Semantic Integrity is closed after the external reader pass recorded at `tests/semantic-integrity/runs/20260725T-external-reader-pass-005.md`.
+**No active step.** Foundry Persona Production Conformance admitted by DR-014. EC-01, EC-02, and the Human-Trait Canon schema are admitted for the Operative/Foundry path. Officer/Gesta work is out of scope. Human-Trait Canon schema and lifecycle are admitted by DR-012. EC-01 is admitted; its synthetic Hagiography application is complete. Semantic Integrity is closed after the external reader pass recorded at `tests/semantic-integrity/runs/20260725T-external-reader-pass-005.md`.
 
 The external reader recovered the intended OC ontology, authority boundary, implementation status, current step, and Cognitive Baseline distinctions. Minor first-contact and queue-label ambiguities were corrected in `current-step.md` and `next-steps.md`. The repository now has evidence that its language can communicate the tested distinctions without conversation history.
 
@@ -70,6 +70,6 @@ External effect: NO
 
 ## Current Gate
 
-EC-02 pressure test passed 8/8 and admission review passed 7/7. DR-013 admitted EC-02 for current semantic use. Foundry review 001 identified six revisions; all were applied. Synthetic Persona Specification Candidate test 002 passed 10/10 and produced PERSONA_CANDIDATE_CONFORMANT for a draft synthetic candidate. The next action is an admission review for the Foundry conformance contract. No real-person data, persona admission, Operative creation, recruitment packaging, model fine-tuning, deployment, or external effect is authorized.
+EC-02 pressure test passed 8/8 and admission review passed 7/7. DR-013 admitted EC-02 for current semantic use. Foundry review 001 identified six revisions; all were applied. Synthetic Persona Specification Candidate test 002 passed 10/10. Admission review passed 7/7, and DR-014 admitted the contract for current semantic use. No candidate, persona, Operative, recruitment packaging, model fine-tuning, deployment, or external effect is authorized.
 
 No OC implementation, Secretariat implementation, Curia procedure change, runtime permission, persona creation, model fine-tuning, Runtime action, deployment, or external effect is authorized by this step.
