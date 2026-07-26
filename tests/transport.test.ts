@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { DirectTransportAdapter } from "../src/direct-transport.js";
+import { Secretariat } from "../src/secretariat.js";
 
 describe("transport adapter contract", () => {
   it("maps a transport request to the existing reference flow", () => {
@@ -16,18 +17,21 @@ describe("transport adapter contract", () => {
     expect(result.work).not.toBeNull();
   });
 
-  it("maps clarification through the same transport-neutral contract", () => {
+  it("maps clarification through the transport-neutral contract", () => {
     const adapter = new DirectTransportAdapter();
-    const submitted = adapter.submit({
-      transportId: "direct-clarify-001",
-      request: {
-        content: "Investigate this.",
-        sessionReference: "opaque-transport-clarify",
-      },
+    const petition = new Secretariat().receive({
+      content: "Investigate this.",
+      sessionReference: "opaque-transport-clarify",
     });
-    const pending = adapter["imperium"] ?? undefined;
-    void pending;
-    expect(submitted.work).not.toBeNull();
+    const result = adapter.clarify({
+      transportId: "direct-clarify-001",
+      petition,
+      correctedContent: "Investigate the professional pattern.",
+    });
+
+    expect(result.transportId).toBe("direct-clarify-001");
+    expect(result.petition.payload.finding).toBe("PETITION_RECEIVED");
+    expect(result.work).not.toBeNull();
   });
 
 });
