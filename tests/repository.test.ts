@@ -52,4 +52,15 @@ describe("in-memory artifact repository", () => {
       successor,
     );
   });
+
+  it("rejects an invalid artifact envelope at save time", () => {
+    const repository = new InMemoryArtifactRepository();
+    const artifact = createArtifact("Petition", "Secretariat", "corr-invalid", {
+      content: "request",
+    });
+    const invalid = { ...artifact, version: 0 };
+
+    expect(() => repository.save(invalid)).toThrow("invalid artifact envelope");
+  });
+
 });
