@@ -2,7 +2,7 @@
 
 ## Status
 
-Track A, B1, B2.1, B2.1a, and B2.3 are complete and closed. Cognitive standard CB-CURRENT is active; current numbered snapshot CB-007. Semantic Integrity is complete and closed after the external reader pass.
+Track A, B1, B2.1, B2.1a, and B2.3 are complete and closed. Cognitive standard CB-CURRENT is active; current numbered snapshot CB-007. DR-CURRENT is the active decision pointer. Semantic Integrity is complete and closed after the external reader pass.
 
 DR-005 parks Locksmith and credential infrastructure until an observed authenticated-integration trigger.
 
