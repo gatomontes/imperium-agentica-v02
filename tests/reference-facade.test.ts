@@ -29,4 +29,21 @@ describe("Imperium reference facade", () => {
     expect(reference.clarify(pending, "Investigate the professional pattern.").work)
       .not.toBeNull();
   });
+
+  it("prepares and dispatches a correlated operator response", () => {
+    const reference = new ImperiumReference();
+    const submitted = reference.submit({
+      content: "Define the professional pattern.",
+      sessionReference: "opaque-response-session",
+    });
+    const prepared = reference.prepareResponse(
+      submitted.petition,
+      "fixture",
+    );
+    const acknowledged = reference.dispatchResponse(prepared, true);
+
+    expect(prepared.correlationId).toBe(submitted.petition.correlationId);
+    expect(acknowledged.payload.state).toBe("RESPONSE_ACKNOWLEDGED");
+  });
+
 });
