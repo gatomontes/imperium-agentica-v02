@@ -2,7 +2,7 @@
 
 ## Status
 
-Draft for pressure testing. Not admitted. No real-person evidence is included.
+Admitted for current semantic use by DR-013. No real-person evidence is included.
 
 ## Purpose
 
