@@ -79,4 +79,14 @@ describe("Secretariat to Castellan reference flow", () => {
     );
   });
 
+
+  it("blocks requests without an operator session reference", () => {
+    const petition = new Secretariat().receive({
+      content: "Define the professional pattern.",
+      sessionReference: " ",
+    });
+    expect(petition.payload.finding).toBe("PETITION_UNRESOLVED");
+    expect(new Castellan().receivePetition(petition)).toBeNull();
+  });
+
 });
