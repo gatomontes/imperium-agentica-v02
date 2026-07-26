@@ -1,3 +1,5 @@
+import { randomUUID } from "node:crypto";
+
 export type ArtifactStatus =
   | "CURRENT"
   | "REFUSED"
@@ -20,7 +22,7 @@ export interface ArtifactEnvelope<T> {
 }
 
 export function nextIdentity(prefix: string): string {
-  return prefix + "-" + crypto.randomUUID();
+  return prefix + "-" + randomUUID();
 }
 
 export function createArtifact<T>(
