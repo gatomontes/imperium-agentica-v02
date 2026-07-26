@@ -1,8 +1,8 @@
-# EC-01 Synthetic Gesta Case 001
+# EC-01 Synthetic Gesta Case 001 — Out of Scope
 
 ## Status
 
-Synthetic test fixture. No real person, Officer-Trait Canon, Officer, or production artifact is created.
+Out-of-scope exploratory record. This artifact is retained for traceability but is not part of the active Operative/Foundry path. No real person, Officer-Trait Canon, Officer, or production artifact is created.
 
 ## Purpose
 
@@ -100,6 +100,10 @@ Human-Trait Canon: not applicable
 Officer-Trait Canon: not created; candidate only
 Smith or Spur action: not authorized
 ```
+
+## Scope Disposition
+
+This case was created during an incorrect branch selection. It does not advance the active Hagiography → Human-Trait Canon → Foundry → Operative path and must not be treated as current work or a next-step recommendation.
 
 ## Result
 
