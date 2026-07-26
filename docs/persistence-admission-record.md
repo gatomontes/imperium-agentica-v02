@@ -7,6 +7,7 @@
 - `AsyncArtifactStore` is the durable-store boundary.
 - PostgreSQL is the first durable persistence target.
 - Artifact history is append-oriented.
+- Schema version is tracked in `imperium_schema_migrations`.
 - `(identity, version)` is the storage key.
 - Supersession is transactional and row-locked.
 - Correlation history is queryable and deterministic.
