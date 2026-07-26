@@ -2,7 +2,7 @@
 
 ## Status
 
-Draft A2.4 candidate only.
+Admitted for current semantic use by DR-014. This contract does not admit a persona or Operative.
 
 This revision consumes `DR-CURRENT`, `EC-CURRENT`, `DR-011`, `DR-012`, and `DR-013` as the active decision and exemplar-grounding evidence state. It does not revise `CB-007`, produce or admit a live persona, select a persona, construct an Operative, or authorize mission action.
 
