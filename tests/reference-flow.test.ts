@@ -38,4 +38,28 @@ describe("Secretariat to Castellan reference flow", () => {
     expect(petition.payload.finding).toBe("PETITION_UNRESOLVED");
     expect(castellan.receivePetition(petition)).toBeNull();
   });
+
+  it("requires clarification before routing an ambiguous request", () => {
+    const secretariat = new Secretariat();
+    const petition = secretariat.receive({
+      content: "Investigate this.",
+      sessionReference: "opaque-session-clarification",
+    });
+    const clarified = secretariat.requestClarification(
+      petition,
+      "scope is materially ambiguous",
+    );
+    expect(clarified.payload.finding).toBe("PETITION_NEEDS_CLARIFICATION");
+    expect(() => new Castellan().receivePetition(clarified)).not.toThrow();
+    expect(new Castellan().receivePetition(clarified)).toBeNull();
+
+    const resolved = secretariat.resolveClarification(
+      clarified,
+      "Investigate the applicable professional pattern.",
+    );
+    expect(resolved.version).toBe(clarified.version + 1);
+    expect(resolved.payload.finding).toBe("PETITION_RECEIVED");
+    expect(new Castellan().receivePetition(resolved)).not.toBeNull();
+  });
+
 });
