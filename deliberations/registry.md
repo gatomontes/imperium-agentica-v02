@@ -6,7 +6,7 @@
 - Improvement programs recorded: 7
 - Pending control records: 7
 - Implemented control records: 0
-- Decision records: 15
+- Decision records: 16
 - Initial assessment: `assessments/2026-07-23-mit-ai-risks-imperium-assessment.md`
 - Integration review: `assessments/2026-07-23-ra-integration-review-001.md`
 - Integration execution: `assessments/2026-07-23-ra-integration-review-execution-001.md`
@@ -19,6 +19,7 @@
 - Human-Trait Canon admission review: `assessments/2026-07-25-human-trait-canon-admission-review-003.md` — admission criteria PASS; recommendation ADMIT
 - EC-02 admission review: `assessments/2026-07-25-ec-02-admission-review-002.md` — admission criteria PASS; recommendation ADMIT
 - Foundry conformance admission review: `assessments/2026-07-26-foundry-persona-conformance-admission-review-003.md` — admission criteria PASS; recommendation ADMIT
+- Synthetic Canonical Persona admission review: `assessments/2026-07-26-foundry-synthetic-garrison-admission-review-004.md` — admission criteria PASS; recommendation ADMIT
 
 ## Risks
 
@@ -96,6 +97,7 @@ None recorded.
 | DR-012 | Admit Human-Trait Canon schema and lifecycle for current semantic use | Recorded decision; real-person use gated by EC-02 |
 | DR-013 | Admit EC-02 Living-Person Evidence Safeguards for current semantic use | Recorded decision; case-specific evidence record still required |
 | DR-014 | Admit Foundry Persona Production Conformance for current semantic use | Recorded decision; professional persona path only |
+| DR-015 | Admit PSC-SYN-001 v0.1 as synthetic Canonical Persona | Recorded decision; synthetic admission only |
 
 The two `DR-002` records are distinct historical files. The later OpenBao topology decision reused an existing ID before this registry was updated. This record preserves both and records the collision; renumbering a prior decision requires a separate traceable normalization.
 
