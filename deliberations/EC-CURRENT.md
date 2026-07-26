@@ -26,7 +26,9 @@ Status: **deferred; not admitted**.
 
 Scope: privacy minimization, disputed claims, sensitive information, redaction, refusal, and correction handling for real-person evidence.
 
-EC-02 must be defined before real-person exemplar material is used for canonization or persona production. No EC-02 rule is implied by EC-01.
+Draft: `deliberations/assessments/2026-07-25-ec-02-living-person-evidence-safeguards-draft-001.md`
+
+EC-02 must be defined and admitted before real-person exemplar material is used for canonization or persona production. No EC-02 rule is implied by EC-01.
 
 ## Closed Correction
 
