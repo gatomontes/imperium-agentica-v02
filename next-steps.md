@@ -57,6 +57,6 @@ OC authority envelope, Secretariat routing, Curia presence procedure, provenance
 
 ## Current Gate
 
-Human-Trait Canon revisions applied; synthetic entry test passed 10/10; schema admitted by DR-012. No real-person data, persona production, operative creation, recruitment packaging, model fine-tuning, deployment, or external effect is authorized. EC-CURRENT governs exemplar-grounding corrections. No real-person data, persona production, operative creation, recruitment packaging, model fine-tuning, deployment, or external effect is authorized.
+Human-Trait Canon revisions applied; synthetic entry test passed 10/10; schema admitted by DR-012. EC-02 draft created; pressure-test it before admission. No real-person data, persona production, operative creation, recruitment packaging, model fine-tuning, deployment, or external effect is authorized. EC-CURRENT governs exemplar-grounding corrections. No real-person data, persona production, operative creation, recruitment packaging, model fine-tuning, deployment, or external effect is authorized.
 
 OC implementation, Secretariat implementation, Curia procedure change, production change, model/provider/evaluator selection, credential work, deployment, and external effect remain unauthorized until a future step explicitly admits them.
