@@ -1,12 +1,13 @@
 import { assertArtifactEnvelope } from "./schema.js";
 import { ArtifactEnvelope } from "./artifact.js";
+import { artifactKey, ArtifactStore } from "./artifact-store.js";
 
-export class InMemoryArtifactRepository {
+export class InMemoryArtifactRepository implements ArtifactStore {
   private readonly artifacts = new Map<string, ArtifactEnvelope<unknown>>();
 
   save<T>(artifact: ArtifactEnvelope<T>): ArtifactEnvelope<T> {
     assertArtifactEnvelope(artifact);
-    const key = artifact.identity + "@" + artifact.version;
+    const key = artifactKey(artifact.identity, artifact.version);
     if (this.artifacts.has(key)) {
       throw new Error("artifact version already exists: " + key);
     }
@@ -15,7 +16,7 @@ export class InMemoryArtifactRepository {
   }
 
   get<T>(identity: string, version: number): ArtifactEnvelope<T> | undefined {
-    return this.artifacts.get(identity + "@" + version) as
+    return this.artifacts.get(artifactKey(identity, version)) as
       | ArtifactEnvelope<T>
       | undefined;
   }
@@ -24,7 +25,7 @@ export class InMemoryArtifactRepository {
     previous: ArtifactEnvelope<T>,
     successor: ArtifactEnvelope<T>,
   ): ArtifactEnvelope<T> {
-    if (successor.supersedes !== previous.identity + "@" + previous.version) {
+    if (successor.supersedes !== artifactKey(previous.identity, previous.version)) {
       throw new Error("successor must explicitly supersede previous artifact");
     }
     const storedPrevious = this.get<T>(previous.identity, previous.version);
