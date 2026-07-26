@@ -30,15 +30,21 @@ export class InMemoryArtifactRepository implements ArtifactStore {
     }
     const storedPrevious = this.get<T>(previous.identity, previous.version);
     if (!storedPrevious) throw new Error("previous artifact is not stored");
+    assertArtifactEnvelope(successor);
+    const successorKey = artifactKey(successor.identity, successor.version);
+    if (this.artifacts.has(successorKey)) {
+      throw new Error("artifact version already exists: " + successorKey);
+    }
 
     const superseded: ArtifactEnvelope<T> = {
       ...storedPrevious,
       status: "SUPERSEDED",
     };
     this.artifacts.set(
-      previous.identity + "@" + previous.version,
+      artifactKey(previous.identity, previous.version),
       superseded as ArtifactEnvelope<unknown>,
     );
-    return this.save(successor);
+    this.artifacts.set(successorKey, successor as ArtifactEnvelope<unknown>);
+    return successor;
   }
 }
