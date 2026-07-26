@@ -63,6 +63,29 @@ describe("PersistentImperiumReference", () => {
     ).resolves.toEqual(result.work);
   });
 
+  it("persists clarification supersession", async () => {
+    const store = new AsyncMemoryStore();
+    const reference = new PersistentImperiumReference(
+      new ImperiumReference(),
+      store,
+    );
+    const submitted = await reference.submit({
+      content: "Define the professional pattern.",
+      sessionReference: "persistent-clarification-session",
+    });
+    const pending = await reference.requestClarification(
+      submitted.petition,
+      "scope is materially ambiguous",
+    );
+
+    await expect(
+      store.get(submitted.petition.identity, submitted.petition.version),
+    ).resolves.toMatchObject({ status: "SUPERSEDED" });
+    await expect(
+      store.get(pending.identity, pending.version),
+    ).resolves.toEqual(pending);
+  });
+
   it("persists delivery supersession", async () => {
     const store = new AsyncMemoryStore();
     const reference = new PersistentImperiumReference(
