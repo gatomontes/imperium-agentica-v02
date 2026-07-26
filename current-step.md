@@ -10,6 +10,8 @@ DR-009 Evidence Without Engineered Orientation is recorded. DR-008 is superseded
 
 DR-010 Mission-Scoped Observator/Custos (OC) Operator Instance is recorded. OC is one instance, not two roles or cooperating components.
 
+DR-CURRENT is the active decision pointer through DR-017. EC-CURRENT is the active exemplar-grounding correction pointer. OP-CURRENT is the active synthetic Operative Package pointer.
+
 ## Active Focus
 
 **No active step.** Foundry Persona Production Conformance is admitted by DR-014. Synthetic Pit pressure test is complete. EC-01, EC-02, and the Human-Trait Canon schema are admitted for the Operative/Foundry path. Officer/Gesta work is out of scope. Human-Trait Canon schema and lifecycle are admitted by DR-012. EC-01 is admitted; its synthetic Hagiography application is complete. Semantic Integrity is closed after the external reader pass recorded at `tests/semantic-integrity/runs/20260725T-external-reader-pass-005.md`.
