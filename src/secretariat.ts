@@ -1,3 +1,5 @@
+import { randomUUID } from "node:crypto";
+
 import { createArtifact, ArtifactEnvelope } from "./artifact.js";
 
 export type PetitionFinding =
@@ -35,7 +37,7 @@ export class Secretariat {
     return createArtifact(
       "Petition",
       "Secretariat",
-      crypto.randomUUID(),
+      randomUUID(),
       {
         originalContent: request.content,
         normalizedContent,
