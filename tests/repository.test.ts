@@ -83,6 +83,29 @@ describe("in-memory artifact repository", () => {
     );
   });
 
+  it("does not mutate the predecessor when the successor conflicts", () => {
+    const repository = new InMemoryArtifactRepository();
+    const previous = createArtifact("Petition", "Secretariat", "corr-conflict", {
+      content: "old",
+    });
+    const successor = {
+      ...createArtifact("Petition", "Secretariat", "corr-conflict", {
+        content: "new",
+      }),
+      supersedes: previous.identity + "@" + previous.version,
+    };
+
+    repository.save(previous);
+    repository.save(successor);
+
+    expect(() => repository.supersede(previous, successor)).toThrow(
+      "artifact version already exists",
+    );
+    expect(repository.get(previous.identity, previous.version)?.status).toBe(
+      "CURRENT",
+    );
+  });
+
   it("does not mutate the predecessor when the successor is invalid", () => {
     const repository = new InMemoryArtifactRepository();
     const previous = createArtifact("Petition", "Secretariat", "corr-atomic", {
