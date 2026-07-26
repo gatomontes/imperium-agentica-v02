@@ -21,13 +21,13 @@ export class InMemoryArtifactRepository implements ArtifactStore {
       | undefined;
   }
 
-  findByCorrelationId<T>(correlationId: string): ArtifactEnvelope<T>[] {
+  findByCorrelationId(correlationId: string): ArtifactEnvelope<unknown>[] {
     return [...this.artifacts.values()]
       .filter((artifact) => artifact.correlationId === correlationId)
       .sort((left, right) =>
         left.createdAt.localeCompare(right.createdAt) ||
         left.identity.localeCompare(right.identity),
-      ) as ArtifactEnvelope<T>[];
+      );
   }
 
   supersede<T>(
