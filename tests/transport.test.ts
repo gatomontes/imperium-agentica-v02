@@ -54,10 +54,6 @@ describe("transport adapter contract", () => {
       "The request was received.",
       "direct-response-001",
     );
-    const delivery = new (class {
-      state = "prepared";
-    })();
-    void delivery;
     expect(response.response.payload.content).toBe("The request was received.");
   });
 
