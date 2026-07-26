@@ -57,4 +57,30 @@ describe("transport adapter contract", () => {
     expect(response.response.payload.content).toBe("The request was received.");
   });
 
+
+  it("completes response delivery through the adapter", () => {
+    const adapter = new DirectTransportAdapter();
+    const submitted = adapter.submit({
+      transportId: "direct-delivery-001",
+      request: {
+        content: "Define the professional pattern.",
+        sessionReference: "opaque-transport-delivery",
+      },
+    });
+    const prepared = adapter.prepareDelivery(
+      submitted.petition,
+      "fixture",
+      "direct-delivery-001",
+    );
+    const acknowledged = adapter.dispatchResponse(
+      prepared.delivery,
+      true,
+      "direct-delivery-001",
+    );
+
+    expect(acknowledged.delivery.payload.state).toBe(
+      "RESPONSE_ACKNOWLEDGED",
+    );
+  });
+
 });
