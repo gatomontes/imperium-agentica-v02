@@ -40,7 +40,8 @@ export class PostgresArtifactStore implements AsyncArtifactStore {
 
   async save<T>(artifact: ArtifactEnvelope<T>): Promise<ArtifactEnvelope<T>> {
     assertArtifactEnvelope(artifact);
-    await this.pool.query(
+    try {
+      await this.pool.query(
       `INSERT INTO artifact_envelopes
         (identity, version, artifact_type, status, producer, correlation_id,
          created_at, payload, source_refs, supersedes, invalidation_reason)
@@ -58,7 +59,16 @@ export class PostgresArtifactStore implements AsyncArtifactStore {
         artifact.supersedes ?? null,
         artifact.invalidationReason ?? null,
       ],
-    );
+      );
+    } catch (error) {
+      if (isUniqueViolation(error)) {
+        throw new Error(
+          "artifact version already exists: " +
+            artifactKey(artifact.identity, artifact.version),
+        );
+      }
+      throw error;
+    }
     return artifact;
   }
 
@@ -170,5 +180,14 @@ async function insertWithClient<T>(
       artifact.supersedes ?? null,
       artifact.invalidationReason ?? null,
     ],
+  );
+}
+
+function isUniqueViolation(error: unknown): boolean {
+  return (
+    typeof error === "object" &&
+    error !== null &&
+    "code" in error &&
+    error.code === "23505"
   );
 }
