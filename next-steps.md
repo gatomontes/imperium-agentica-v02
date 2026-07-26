@@ -1,4 +1,25 @@
-# Next Steps
+## Next Steps
+
+## New-Chat Breakpoint
+
+Completed synthetic sequence:
+
+```text
+EC-01 admitted → Human-Trait Canon admitted → EC-02 admitted
+→ Foundry conformance admitted → synthetic Persona admitted
+→ Conscription package admitted → Studium PGD-SYN-002 admitted
+→ downstream Foundry/Pit/Garrison/Conscription/Muster revalidation PASS
+```
+
+Active pointers:
+
+- DR-CURRENT: active decision pointer through DR-017
+- EC-CURRENT: EC-01 and EC-02 admitted; EC-03 closed
+- OP-CURRENT: OP-SYN-001 v0.1 admitted, inactive synthetic package
+
+Operational maturity remains unproven. No live provider, credential, tool, runtime, mission, activation, deployment, or external effect has been exercised.
+
+No next step is selected; choose explicitly in the new chat.
 
 ## Status
 
