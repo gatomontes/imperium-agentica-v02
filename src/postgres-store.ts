@@ -1,6 +1,6 @@
 import type { Pool, PoolClient } from "pg";
 import { ArtifactEnvelope } from "./artifact.js";
-import { artifactKey, ArtifactStore } from "./artifact-store.js";
+import { artifactKey, AsyncArtifactStore } from "./artifact-store.js";
 import { assertArtifactEnvelope } from "./schema.js";
 
 type ArtifactRow = {
@@ -35,7 +35,7 @@ function fromRow<T>(row: ArtifactRow): ArtifactEnvelope<T> {
   };
 }
 
-export class PostgresArtifactStore implements ArtifactStore {
+export class PostgresArtifactStore implements AsyncArtifactStore {
   constructor(private readonly pool: Pool) {}
 
   async save<T>(artifact: ArtifactEnvelope<T>): Promise<ArtifactEnvelope<T>> {
