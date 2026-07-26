@@ -1,9 +1,11 @@
+import { assertArtifactEnvelope } from "./schema.js";
 import { ArtifactEnvelope } from "./artifact.js";
 
 export class InMemoryArtifactRepository {
   private readonly artifacts = new Map<string, ArtifactEnvelope<unknown>>();
 
   save<T>(artifact: ArtifactEnvelope<T>): ArtifactEnvelope<T> {
+    assertArtifactEnvelope(artifact);
     const key = artifact.identity + "@" + artifact.version;
     if (this.artifacts.has(key)) {
       throw new Error("artifact version already exists: " + key);
