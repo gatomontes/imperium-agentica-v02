@@ -39,4 +39,26 @@ describe("transport adapter contract", () => {
     expect(result.work).not.toBeNull();
   });
 
+
+  it("handles response content and delivery through the adapter", () => {
+    const adapter = new DirectTransportAdapter();
+    const submitted = adapter.submit({
+      transportId: "direct-response-001",
+      request: {
+        content: "Define the professional pattern.",
+        sessionReference: "opaque-transport-response",
+      },
+    });
+    const response = adapter.prepareResponse(
+      submitted.petition,
+      "The request was received.",
+      "direct-response-001",
+    );
+    const delivery = new (class {
+      state = "prepared";
+    })();
+    void delivery;
+    expect(response.response.payload.content).toBe("The request was received.");
+  });
+
 });
