@@ -1,4 +1,5 @@
 import { ArtifactEnvelope, createArtifact } from "./artifact.js";
+import { assertArtifactEnvelope } from "./schema.js";
 import { Petition } from "./secretariat.js";
 
 export interface OperatorResponse {
@@ -14,7 +15,7 @@ export function prepareOperatorResponse(
   const normalized = content.trim();
   if (!normalized) throw new Error("response content cannot be empty");
 
-  return createArtifact(
+  const response = createArtifact(
     "OperatorResponse",
     "Secretariat",
     petition.correlationId,
@@ -25,4 +26,5 @@ export function prepareOperatorResponse(
     },
     [petition.identity + "@" + petition.version],
   );
+  return assertArtifactEnvelope(response);
 }
