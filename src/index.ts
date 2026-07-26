@@ -16,3 +16,4 @@ export * from "./schema.js";
 export * from "./secretariat.js";
 export * from "./serialization.js";
 export * from "./studium.js";
+export * from "./response.js";
