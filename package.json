@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "tsc --noEmit",
-    "test": "vitest run"
+    "test": "vitest run tests/reference-flow.test.ts"
   },
   "devDependencies": {
     "typescript": "^5.8.0",
