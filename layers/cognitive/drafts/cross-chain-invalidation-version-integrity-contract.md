@@ -57,3 +57,24 @@ Artifacts from different semantic lineages may not be combined unless an explici
 ## Non-Admissions
 
 No automatic mutation, approval, Procedure transition, Runtime validator, deployment, credential, or external effect.
+
+
+## Disputed or Unavailable Invalidation Ownership
+
+The invalidation record must distinguish:
+
+- owner identified and accepting responsibility;
+- ownership disputed;
+- owner unavailable;
+- ownership genuinely cross-boundary.
+
+When ownership is disputed or unavailable:
+
+1. suspend downstream eligibility;
+2. preserve the exact dispute, affected artifacts, and competing ownership claims;
+3. do not select an owner by inference;
+4. route the dispute to the already-authorized decision authority for the affected artifact;
+5. if no authorized authority exists, record INVALIDATION_OWNERSHIP_UNRESOLVED and block downstream use;
+6. resume only after an explicit owner and successor action are recorded.
+
+This rule creates no universal governance layer and grants no Runtime or automatic adjudication authority.
