@@ -20,7 +20,10 @@ export class Pit {
     candidate: ArtifactEnvelope<PersonaSpecificationCandidate>,
     pressures: string[],
   ): ArtifactEnvelope<PitResult> {
-    const failures = pressures.length === 0 ? ["no pressures declared"] : [];
+    const failures = pressures.length === 0 || candidate.status !== "CURRENT" ? [
+      ...(pressures.length === 0 ? ["no pressures declared"] : []),
+      ...(candidate.status !== "CURRENT" ? ["candidate is not current"] : []),
+    ] : [];
     const finding: PitFinding =
       failures.length === 0
         ? "PERSONA_TEST_CONFORMANT"
