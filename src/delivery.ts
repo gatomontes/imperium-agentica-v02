@@ -50,6 +50,7 @@ export class ResponseDeliveryService {
     return {
       ...delivery,
       version: delivery.version + 1,
+      supersedes: delivery.identity + "@" + delivery.version,
       payload: {
         ...delivery.payload,
         state: nextState,
