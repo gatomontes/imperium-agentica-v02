@@ -151,6 +151,12 @@ export class PostgresArtifactStore implements AsyncArtifactStore {
       return successor;
     } catch (error) {
       await client.query("ROLLBACK");
+      if (isUniqueViolation(error)) {
+        throw new Error(
+          "artifact version already exists: " +
+            artifactKey(successor.identity, successor.version),
+        );
+      }
       throw error;
     } finally {
       client.release();
