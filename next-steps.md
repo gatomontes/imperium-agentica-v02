@@ -2,7 +2,7 @@
 
 ## Status
 
-Semantic Integrity is complete and closed. The external reader recovered the intended meaning from the repository without relying on conversation history. EC-CURRENT is the active exemplar-grounding correction pointer: EC-01 admitted, EC-02 deferred, EC-03 closed. A synthetic Hagiography application passed. Human-Trait Canon design review is active.
+Semantic Integrity is complete and closed. The external reader recovered the intended meaning from the repository without relying on conversation history. DR-CURRENT is the active decision pointer. EC-CURRENT is the active exemplar-grounding correction pointer: EC-01 admitted, EC-02 deferred, EC-03 closed. A synthetic Hagiography application passed. Human-Trait Canon design review is active.
 
 DR-010 records **Observator/Custos (`OC`)** as one mission-attached Imperium Operator instance—not two roles or cooperating components—with authorized visibility and interaction but no execution influence.
 
