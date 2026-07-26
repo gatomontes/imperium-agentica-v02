@@ -22,13 +22,13 @@ EC-01 does not create a Human-Trait Canon, persona, Officer, Operative, Runtime 
 
 ### EC-02 — Living-Person Evidence Safeguards
 
-Status: **deferred; not admitted**.
+Status: **admitted for current semantic use** by DR-013.
 
 Scope: privacy minimization, disputed claims, sensitive information, redaction, refusal, and correction handling for real-person evidence.
 
-Draft: `deliberations/assessments/2026-07-25-ec-02-living-person-evidence-safeguards-draft-001.md`
+Active artifact: `deliberations/assessments/2026-07-25-ec-02-living-person-evidence-safeguards-draft-001.md`
 
-EC-02 must be defined and admitted before real-person exemplar material is used for canonization or persona production. No EC-02 rule is implied by EC-01.
+EC-02 is admitted but does not itself authorize real-person evidence collection. Each case still requires an exact professional proposition, minimization record, provenance, and disposition. No EC-02 rule is implied by EC-01.
 
 ## Closed Correction
 
