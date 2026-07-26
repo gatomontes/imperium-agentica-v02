@@ -12,6 +12,10 @@ describe("Operative Package lifecycle guard", () => {
     );
     const bound = transitionOperativePackage(pending, "MISSION_BOUND");
 
+    expect(pending.supersedes).toBe(
+      trace.operative.identity + "@" + trace.operative.version,
+    );
+    expect(bound.supersedes).toBe(pending.identity + "@" + pending.version);
     expect(bound.payload.state).toBe("MISSION_BOUND");
     expect(bound.version).toBe(trace.operative.version + 2);
   });
