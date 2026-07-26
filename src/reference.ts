@@ -1,5 +1,6 @@
 import { ArtifactEnvelope } from "./artifact.js";
 import { ResponseDelivery, ResponseDeliveryService } from "./delivery.js";
+import { OperatorResponse, prepareOperatorResponse } from "./response.js";
 import { Castellan, WorkSpecification } from "./castellan.js";
 import { OperatorRequest, Petition, Secretariat } from "./secretariat.js";
 
@@ -9,6 +10,13 @@ export class ImperiumReference {
     private readonly castellan = new Castellan(),
     private readonly delivery = new ResponseDeliveryService(),
   ) {}
+
+  prepareOperatorResponse(
+    petition: ArtifactEnvelope<Petition>,
+    content: string,
+  ): ArtifactEnvelope<OperatorResponse> {
+    return prepareOperatorResponse(petition, content);
+  }
 
   prepareResponse(
     petition: ArtifactEnvelope<Petition>,
