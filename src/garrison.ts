@@ -11,7 +11,7 @@ export interface CanonicalPersona {
   candidateRef: string;
   pitFindingRef: string;
   professionRef: string;
-  status: "ADMITTED";
+  status: "ADMITTED" | "NOT_ADMITTED";
   finding: GarrisonFinding;
 }
 
@@ -34,7 +34,7 @@ export class Garrison {
         candidateRef,
         pitFindingRef: pitRef,
         professionRef: candidate.payload.professionRef,
-        status: conformant ? "ADMITTED" : "ADMITTED",
+        status: conformant ? "ADMITTED" : "NOT_ADMITTED",
         finding: conformant
           ? "CANONICAL_PERSONA_ADMITTED"
           : "CANONICAL_PERSONA_ADMISSION_UNRESOLVED",
