@@ -2,7 +2,7 @@
 
 ## Status
 
-Draft Studium artifact for pressure testing. Synthetic professional scope only. Not admitted doctrine and not a persona or Operative.
+Admitted synthetic Studium doctrine by DR-017. Synthetic professional scope only. Not a persona or Operative.
 
 ## Scope
 
