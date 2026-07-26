@@ -57,6 +57,13 @@ Path: `deliberations/decisions/DR-012-human-trait-canon-schema.md`
 
 The Human-Trait Canon schema is admitted for current semantic use. EC-02 remains a precondition for real-person entries.
 
+### DR-016 — Synthetic Operative Package Admission
+
+Status: active synthetic package admission record.
+Path: `deliberations/decisions/DR-016-synthetic-operative-package-admission.md`
+
+OP-SYN-001 v0.1 is admitted as a packaged, inactive synthetic Operative artifact. Activation, mission binding, and deployment remain separate.
+
 ### DR-015 — Synthetic Canonical Persona Admission
 
 Status: active synthetic admission record.
