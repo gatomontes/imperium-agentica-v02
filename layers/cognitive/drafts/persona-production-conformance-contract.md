@@ -4,7 +4,7 @@
 
 Draft A2.4 candidate only.
 
-This revision consumes `deliberations/decisions/DR-006-mandatory-real-world-exemplar-grounding.md` as an operator SOP requirement. It does not revise `CB-007`, produce or admit a live persona, select a persona, construct an Operative, or authorize mission action.
+This revision consumes `DR-CURRENT`, `EC-CURRENT`, `DR-011`, `DR-012`, and `DR-013` as the active decision and exemplar-grounding evidence state. It does not revise `CB-007`, produce or admit a live persona, select a persona, construct an Operative, or authorize mission action.
 
 ## Canonical Dependencies
 
@@ -23,7 +23,11 @@ Candidate evidence dependencies:
 
 - `layers/cognitive/drafts/guildhall-profession-resolution-contract.md`
 - `layers/cognitive/drafts/garrison-persona-suitability-contract.md`
-- `deliberations/decisions/DR-006-mandatory-real-world-exemplar-grounding.md`
+- `deliberations/DR-CURRENT.md`
+- `deliberations/EC-CURRENT.md`
+- `deliberations/decisions/DR-011-ec-01-evidence-source-standard.md`
+- `deliberations/decisions/DR-012-human-trait-canon-schema.md`
+- `deliberations/decisions/DR-013-ec-02-living-person-evidence-safeguards.md`
 
 The first two dependencies are unadmitted draft evidence. DR-006 is an operator SOP decision, not admitted Cognitive production semantics. This contract must remain consistent with controlling production contracts and must not represent the SOP amendment as production admission.
 
@@ -125,8 +129,10 @@ Candidate identity and version
 Mission and production-correlation references
 Work and Profession Specification references
 Persona Governance Doctrine reference and finding
-Required Human-Trait Canon reference and finding
-Exemplar-achievement-to-trait derivation references
+Required Human-Trait Canon entry identifier and exact version
+EC-01 evidence-source disposition and exact derivation references
+EC-02 safeguards record for real-person evidence, or explicit synthetic-fixture status
+Exemplar-performance-to-trait derivation references
 Professional competence and reasoning behavior
 Inherited traits expressed as testable persona behavior
 Evidence, uncertainty, disclosure, refusal, and escalation behavior
