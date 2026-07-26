@@ -1,4 +1,5 @@
 export * from "./artifact.js";
+export * from "./artifact-store.js";
 export * from "./castellan.js";
 export * from "./conscription.js";
 export * from "./delivery.js";
