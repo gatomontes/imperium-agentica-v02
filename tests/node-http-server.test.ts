@@ -63,13 +63,22 @@ describe("Node HTTP adapter", () => {
     );
     const custom = createNodeHttpServer(
       new HttpTransportHandler(new DirectTransportAdapter()),
-      { requestTimeoutMs: 5_000, headersTimeoutMs: 2_000 },
+      {
+        requestTimeoutMs: 5_000,
+        headersTimeoutMs: 2_000,
+        keepAliveTimeoutMs: 1_500,
+        maxConnections: 25,
+      },
     );
 
     expect(defaults.requestTimeout).toBe(30_000);
     expect(defaults.headersTimeout).toBe(10_000);
+    expect(defaults.keepAliveTimeout).toBe(5_000);
+    expect(defaults.maxConnections).toBe(100);
     expect(custom.requestTimeout).toBe(5_000);
     expect(custom.headersTimeout).toBe(2_000);
+    expect(custom.keepAliveTimeout).toBe(1_500);
+    expect(custom.maxConnections).toBe(25);
 
   });
 
