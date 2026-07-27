@@ -14,6 +14,35 @@ describe("framework-neutral HTTP handler", () => {
     if (result.ok) expect(result.result.petition.payload.finding).toBe("PETITION_RECEIVED");
   });
 
+  it("maps response preparation and dispatch", () => {
+    const handler = new HttpTransportHandler(new DirectTransportAdapter());
+    const submitted = handler.submit(
+      { content: "Define the professional pattern.", sessionReference: "http-response" },
+      { requestId: "http-3", operatorInstanceId: "operator-1" },
+    );
+    if (!submitted.ok) throw new Error("submission failed");
+
+    const prepared = handler.prepareDelivery(
+      submitted.result.petition,
+      "fixture",
+      { requestId: "http-4", operatorInstanceId: "operator-1" },
+    );
+    if (!prepared.ok) throw new Error("delivery preparation failed");
+
+    const dispatched = handler.dispatchResponse(
+      prepared.result.delivery,
+      true,
+      { requestId: "http-5", operatorInstanceId: "operator-1" },
+    );
+
+    expect(dispatched.ok).toBe(true);
+    if (dispatched.ok) {
+      expect(dispatched.result.delivery.payload.state).toBe(
+        "RESPONSE_ACKNOWLEDGED",
+      );
+    }
+  });
+
   it("rejects missing transport metadata before routing", () => {
     const handler = new HttpTransportHandler(new DirectTransportAdapter());
     const result = handler.submit(
