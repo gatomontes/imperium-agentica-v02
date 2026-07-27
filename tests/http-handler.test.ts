@@ -3,6 +3,36 @@ import { HttpTransportHandler } from "../src/http-handler.js";
 import { DirectTransportAdapter } from "../src/direct-transport.js";
 
 describe("framework-neutral HTTP handler", () => {
+  it("enforces an injected authorizer", () => {
+    const handler = new HttpTransportHandler(
+      new DirectTransportAdapter(),
+      {
+        authorize: ({ authorization }) => {
+          if (authorization !== "Bearer valid") throw new Error("invalid token");
+        },
+      },
+    );
+
+    const missing = handler.submit(
+      { content: "request", sessionReference: "auth-handler" },
+      { requestId: "http-auth-1", operatorInstanceId: "operator-1" },
+    );
+    expect(missing).toMatchObject({
+      ok: false,
+      error: { code: "HTTP_UNAUTHORIZED" },
+    });
+
+    const accepted = handler.submit(
+      { content: "request", sessionReference: "auth-handler" },
+      {
+        requestId: "http-auth-2",
+        operatorInstanceId: "operator-1",
+        authorization: "Bearer valid",
+      },
+    );
+    expect(accepted.ok).toBe(true);
+  });
+
   it("wraps transport submission in a success envelope", () => {
     const handler = new HttpTransportHandler(new DirectTransportAdapter());
     const result = handler.submit(
