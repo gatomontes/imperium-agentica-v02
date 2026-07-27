@@ -73,6 +73,37 @@ describe("Node HTTP adapter", () => {
 
   });
 
+  it("generates a request ID when the client omits one", async () => {
+    const server = createNodeHttpServer(
+      new HttpTransportHandler(new DirectTransportAdapter()),
+    );
+    await new Promise<void>((resolve) => server.listen(0, resolve));
+    const address = server.address();
+    if (!address || typeof address === "string") throw new Error("server did not bind");
+
+    try {
+      const response = await fetch(`http://127.0.0.1:${address.port}/v1/requests`, {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+          "x-imperium-operator-instance": "operator-1",
+        },
+        body: JSON.stringify({
+          content: "request",
+          sessionReference: "generated-request-id",
+        }),
+      });
+
+      expect(response.status).toBe(200);
+      const body = await response.json();
+      expect(body.requestId).toMatch(/^http-[0-9a-f-]{36}$/);
+    } finally {
+      await new Promise<void>((resolve, reject) =>
+        server.close((error) => (error ? reject(error) : resolve())),
+      );
+    }
+  });
+
   it("serves request submission over HTTP", async () => {
     const server = createNodeHttpServer(
       new HttpTransportHandler(new DirectTransportAdapter()),
