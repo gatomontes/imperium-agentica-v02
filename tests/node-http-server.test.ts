@@ -41,6 +41,38 @@ describe("Node HTTP adapter", () => {
     }
   });
 
+  it("returns a client error for malformed JSON", async () => {
+    const server = createNodeHttpServer(
+      new HttpTransportHandler(new DirectTransportAdapter()),
+    );
+    await new Promise<void>((resolve) => server.listen(0, resolve));
+    const address = server.address();
+    if (!address || typeof address === "string") throw new Error("server did not bind");
+
+    try {
+      const response = await fetch(`http://127.0.0.1:${address.port}/v1/requests`, {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+          "x-request-id": "node-http-3",
+          "x-imperium-operator-instance": "operator-1",
+        },
+        body: "{not-json",
+      });
+
+      expect(response.status).toBe(400);
+      await expect(response.json()).resolves.toMatchObject({
+        ok: false,
+        requestId: "node-http-3",
+        error: { code: "HTTP_INVALID_JSON" },
+      });
+    } finally {
+      await new Promise<void>((resolve, reject) =>
+        server.close((error) => (error ? reject(error) : resolve())),
+      );
+    }
+  });
+
   it("returns a stable error for unknown routes", async () => {
     const server = createNodeHttpServer(
       new HttpTransportHandler(new DirectTransportAdapter()),
