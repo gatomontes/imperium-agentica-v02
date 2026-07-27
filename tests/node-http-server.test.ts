@@ -18,8 +18,6 @@ describe("Node HTTP adapter", () => {
     expect(custom.requestTimeout).toBe(5_000);
     expect(custom.headersTimeout).toBe(2_000);
 
-    defaults.close();
-    custom.close();
   });
 
   it("serves request submission over HTTP", async () => {
