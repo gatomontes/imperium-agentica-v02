@@ -17,6 +17,8 @@ export class HttpTransportHandler {
     body: HttpSubmitBody,
     metadata: { requestId: string; operatorInstanceId: string },
   ): HttpResponse<ReturnType<ImperiumTransportAdapter["submit"]>> {
+    const metadataError = validateMetadata(metadata);
+    if (metadataError) return metadataError;
     try {
       const result = this.adapter.submit({
         request: body,
@@ -33,6 +35,8 @@ export class HttpTransportHandler {
     body: HttpClarifyBody,
     metadata: { requestId: string; operatorInstanceId: string },
   ): HttpResponse<ReturnType<ImperiumTransportAdapter["clarify"]>> {
+    const metadataError = validateMetadata(metadata);
+    if (metadataError) return metadataError;
     try {
       const result = this.adapter.clarify({
         petition,
@@ -55,4 +59,21 @@ function failure(requestId: string, error: unknown): HttpResponse<never> {
       message: error instanceof Error ? error.message : "request failed",
     },
   };
+}
+
+function validateMetadata(metadata: {
+  requestId: string;
+  operatorInstanceId: string;
+}): HttpResponse<never> | null {
+  if (!metadata.requestId.trim() || !metadata.operatorInstanceId.trim()) {
+    return {
+      ok: false,
+      requestId: metadata.requestId,
+      error: {
+        code: "HTTP_METADATA_INVALID",
+        message: "requestId and operatorInstanceId are required",
+      },
+    };
+  }
+  return null;
 }
