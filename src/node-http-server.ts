@@ -45,7 +45,33 @@ async function route(
     request.headers["x-imperium-operator-instance"]?.toString() ?? "";
   const authorization = request.headers.authorization?.toString();
 
+  if (request.url === "/v1/requests" && request.method !== "POST") {
+    response.setHeader("allow", "POST");
+    writeJson(response, 405, {
+      ok: false,
+      requestId,
+      error: {
+        code: "HTTP_METHOD_NOT_ALLOWED",
+        message: "only POST is supported for this route",
+      },
+    });
+    return;
+  }
+
   if (request.method === "POST" && request.url === "/v1/requests") {
+    const declaredLength = Number(request.headers["content-length"] ?? 0);
+    if (declaredLength > 1024 * 1024) {
+      writeJson(response, 413, {
+        ok: false,
+        requestId,
+        error: {
+          code: "HTTP_BODY_TOO_LARGE",
+          message: "request body exceeds 1 MiB",
+        },
+      });
+      return;
+    }
+
     const contentType = request.headers["content-type"]?.split(";")[0];
     if (contentType !== "application/json") {
       writeJson(response, 415, {
@@ -76,6 +102,21 @@ async function route(
       });
       return;
     }
+    if (
+      typeof body.content !== "string" ||
+      typeof body.sessionReference !== "string"
+    ) {
+      writeJson(response, 400, {
+        ok: false,
+        requestId,
+        error: {
+          code: "HTTP_INVALID_BODY",
+          message: "content and sessionReference must be strings",
+        },
+      });
+      return;
+    }
+
     const result = handler.submit(body, {
       requestId,
       operatorInstanceId,
