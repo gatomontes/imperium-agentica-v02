@@ -19,7 +19,7 @@ export class HttpTransportHandler {
 
   submit(
     body: HttpSubmitBody,
-    metadata: { requestId: string; operatorInstanceId: string },
+    metadata: { requestId: string; operatorInstanceId: string; authorization?: string },
   ): HttpResponse<ReturnType<ImperiumTransportAdapter["submit"]>> {
     const metadataError = validateMetadata(metadata);
     if (metadataError) return metadataError;
@@ -39,7 +39,7 @@ export class HttpTransportHandler {
   prepareResponse(
     petition: Parameters<ImperiumTransportAdapter["prepareResponse"]>[0],
     content: string,
-    metadata: { requestId: string; operatorInstanceId: string },
+    metadata: { requestId: string; operatorInstanceId: string; authorization?: string },
   ): HttpResponse<ReturnType<ImperiumTransportAdapter["prepareResponse"]>> {
     const metadataError = validateMetadata(metadata);
     if (metadataError) return metadataError;
@@ -60,7 +60,7 @@ export class HttpTransportHandler {
   prepareDelivery(
     petition: Parameters<ImperiumTransportAdapter["prepareDelivery"]>[0],
     channel: string,
-    metadata: { requestId: string; operatorInstanceId: string },
+    metadata: { requestId: string; operatorInstanceId: string; authorization?: string },
   ): HttpResponse<ReturnType<ImperiumTransportAdapter["prepareDelivery"]>> {
     const metadataError = validateMetadata(metadata);
     if (metadataError) return metadataError;
@@ -81,7 +81,7 @@ export class HttpTransportHandler {
   dispatchResponse(
     delivery: Parameters<ImperiumTransportAdapter["dispatchResponse"]>[0],
     successful: boolean,
-    metadata: { requestId: string; operatorInstanceId: string },
+    metadata: { requestId: string; operatorInstanceId: string; authorization?: string },
   ): HttpResponse<ReturnType<ImperiumTransportAdapter["dispatchResponse"]>> {
     const metadataError = validateMetadata(metadata);
     if (metadataError) return metadataError;
@@ -102,7 +102,7 @@ export class HttpTransportHandler {
   clarify(
     petition: Parameters<ImperiumTransportAdapter["clarify"]>[0]["petition"],
     body: HttpClarifyBody,
-    metadata: { requestId: string; operatorInstanceId: string },
+    metadata: { requestId: string; operatorInstanceId: string; authorization?: string },
   ): HttpResponse<ReturnType<ImperiumTransportAdapter["clarify"]>> {
     const metadataError = validateMetadata(metadata);
     if (metadataError) return metadataError;
