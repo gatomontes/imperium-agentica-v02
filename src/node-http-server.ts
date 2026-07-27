@@ -9,6 +9,8 @@ import { HttpTransportHandler } from "./http-handler.js";
 export interface NodeHttpServerOptions {
   requestTimeoutMs?: number;
   headersTimeoutMs?: number;
+  keepAliveTimeoutMs?: number;
+  maxConnections?: number;
 }
 
 export function createNodeHttpServer(
@@ -31,6 +33,8 @@ export function createNodeHttpServer(
   });
   server.requestTimeout = options.requestTimeoutMs ?? 30_000;
   server.headersTimeout = options.headersTimeoutMs ?? 10_000;
+  server.keepAliveTimeout = options.keepAliveTimeoutMs ?? 5_000;
+  server.maxConnections = options.maxConnections ?? 100;
   return server;
 }
 
