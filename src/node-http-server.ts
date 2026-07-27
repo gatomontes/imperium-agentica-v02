@@ -39,7 +39,8 @@ async function route(
   response: ServerResponse,
   handler: HttpTransportHandler,
 ): Promise<void> {
-  const requestId = request.headers["x-request-id"]?.toString() ?? "";
+  const requestId =
+    request.headers["x-request-id"]?.toString() ?? "http-" + randomUUID();
   const operatorInstanceId =
     request.headers["x-imperium-operator-instance"]?.toString() ?? "";
   const authorization = request.headers.authorization?.toString();
