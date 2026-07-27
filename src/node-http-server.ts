@@ -119,6 +119,8 @@ function writeJson(
 ): void {
   response.statusCode = statusCode;
   response.setHeader("content-type", "application/json; charset=utf-8");
+  response.setHeader("cache-control", "no-store");
+  response.setHeader("x-content-type-options", "nosniff");
   if (
     typeof body === "object" &&
     body !== null &&
