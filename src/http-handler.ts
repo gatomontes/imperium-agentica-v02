@@ -1,4 +1,5 @@
 import { HttpResponse } from "./http-contract.js";
+import { HttpAuthorizer } from "./http-auth.js";
 import { ImperiumTransportAdapter } from "./transport.js";
 
 export interface HttpSubmitBody {
@@ -11,7 +12,10 @@ export interface HttpClarifyBody {
 }
 
 export class HttpTransportHandler {
-  constructor(private readonly adapter: ImperiumTransportAdapter) {}
+  constructor(
+    private readonly adapter: ImperiumTransportAdapter,
+    private readonly authorizer?: HttpAuthorizer,
+  ) {}
 
   submit(
     body: HttpSubmitBody,
@@ -19,6 +23,8 @@ export class HttpTransportHandler {
   ): HttpResponse<ReturnType<ImperiumTransportAdapter["submit"]>> {
     const metadataError = validateMetadata(metadata);
     if (metadataError) return metadataError;
+    const authorizationError = authorize(metadata, this.authorizer);
+    if (authorizationError) return authorizationError;
     try {
       const result = this.adapter.submit({
         request: body,
@@ -37,6 +43,8 @@ export class HttpTransportHandler {
   ): HttpResponse<ReturnType<ImperiumTransportAdapter["prepareResponse"]>> {
     const metadataError = validateMetadata(metadata);
     if (metadataError) return metadataError;
+    const authorizationError = authorize(metadata, this.authorizer);
+    if (authorizationError) return authorizationError;
     try {
       const result = this.adapter.prepareResponse(
         petition,
@@ -56,6 +64,8 @@ export class HttpTransportHandler {
   ): HttpResponse<ReturnType<ImperiumTransportAdapter["prepareDelivery"]>> {
     const metadataError = validateMetadata(metadata);
     if (metadataError) return metadataError;
+    const authorizationError = authorize(metadata, this.authorizer);
+    if (authorizationError) return authorizationError;
     try {
       const result = this.adapter.prepareDelivery(
         petition,
@@ -75,6 +85,8 @@ export class HttpTransportHandler {
   ): HttpResponse<ReturnType<ImperiumTransportAdapter["dispatchResponse"]>> {
     const metadataError = validateMetadata(metadata);
     if (metadataError) return metadataError;
+    const authorizationError = authorize(metadata, this.authorizer);
+    if (authorizationError) return authorizationError;
     try {
       const result = this.adapter.dispatchResponse(
         delivery,
@@ -94,6 +106,8 @@ export class HttpTransportHandler {
   ): HttpResponse<ReturnType<ImperiumTransportAdapter["clarify"]>> {
     const metadataError = validateMetadata(metadata);
     if (metadataError) return metadataError;
+    const authorizationError = authorize(metadata, this.authorizer);
+    if (authorizationError) return authorizationError;
     try {
       const result = this.adapter.clarify({
         petition,
@@ -133,4 +147,42 @@ function validateMetadata(metadata: {
     };
   }
   return null;
+}
+
+function authorize(
+  metadata: {
+    requestId: string;
+    operatorInstanceId: string;
+    authorization?: string;
+  },
+  authorizer?: HttpAuthorizer,
+): HttpResponse<never> | null {
+  if (!authorizer) return null;
+  if (!metadata.authorization?.trim()) {
+    return {
+      ok: false,
+      requestId: metadata.requestId,
+      error: {
+        code: "HTTP_UNAUTHORIZED",
+        message: "authorization is required",
+      },
+    };
+  }
+  try {
+    authorizer.authorize({
+      requestId: metadata.requestId,
+      operatorInstanceId: metadata.operatorInstanceId,
+      authorization: metadata.authorization,
+    });
+    return null;
+  } catch (error) {
+    return {
+      ok: false,
+      requestId: metadata.requestId,
+      error: {
+        code: "HTTP_UNAUTHORIZED",
+        message: error instanceof Error ? error.message : "authorization failed",
+      },
+    };
+  }
 }
