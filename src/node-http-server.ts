@@ -33,7 +33,20 @@ async function route(
     request.headers["x-imperium-operator-instance"]?.toString() ?? "";
 
   if (request.method === "POST" && request.url === "/v1/requests") {
-    const body = await readJson(request);
+    let body: { content: string; sessionReference: string };
+    try {
+      body = await readJson(request);
+    } catch {
+      writeJson(response, 400, {
+        ok: false,
+        requestId,
+        error: {
+          code: "HTTP_INVALID_JSON",
+          message: "request body must be valid JSON",
+        },
+      });
+      return;
+    }
     const result = handler.submit(body, { requestId, operatorInstanceId });
     writeJson(response, result.ok ? 200 : 400, result);
     return;
