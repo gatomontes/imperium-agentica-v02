@@ -97,6 +97,7 @@ describe("Node HTTP adapter", () => {
       expect(response.status).toBe(200);
       const body = await response.json();
       expect(body.requestId).toMatch(/^http-[0-9a-f-]{36}$/);
+      expect(response.headers.get("x-request-id")).toBe(body.requestId);
     } finally {
       await new Promise<void>((resolve, reject) =>
         server.close((error) => (error ? reject(error) : resolve())),
@@ -127,6 +128,7 @@ describe("Node HTTP adapter", () => {
       });
 
       expect(response.status).toBe(200);
+      expect(response.headers.get("x-request-id")).toBe("node-http-1");
       await expect(response.json()).resolves.toMatchObject({
         ok: true,
         requestId: "node-http-1",
