@@ -6,8 +6,16 @@ import {
 } from "node:http";
 import { HttpTransportHandler } from "./http-handler.js";
 
-export function createNodeHttpServer(handler: HttpTransportHandler): Server {
-  return createServer(async (request, response) => {
+export interface NodeHttpServerOptions {
+  requestTimeoutMs?: number;
+  headersTimeoutMs?: number;
+}
+
+export function createNodeHttpServer(
+  handler: HttpTransportHandler,
+  options: NodeHttpServerOptions = {},
+): Server {
+  const server = createServer(async (request, response) => {
     try {
       await route(request, response, handler);
     } catch (error) {
@@ -21,6 +29,9 @@ export function createNodeHttpServer(handler: HttpTransportHandler): Server {
       });
     }
   });
+  server.requestTimeout = options.requestTimeoutMs ?? 30_000;
+  server.headersTimeout = options.headersTimeoutMs ?? 10_000;
+  return server;
 }
 
 async function route(
