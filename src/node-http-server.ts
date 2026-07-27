@@ -178,3 +178,26 @@ function writeJson(
 }
 
 class HttpBodyTooLargeError extends Error {}
+
+export async function shutdownNodeHttpServer(
+  server: Server,
+  timeoutMs = 10_000,
+): Promise<void> {
+  await new Promise<void>((resolve, reject) => {
+    let settled = false;
+    const timer = setTimeout(() => {
+      if (settled) return;
+      settled = true;
+      server.closeAllConnections();
+      reject(new Error("HTTP server shutdown timed out"));
+    }, timeoutMs);
+
+    server.close((error) => {
+      if (settled) return;
+      settled = true;
+      clearTimeout(timer);
+      if (error) reject(error);
+      else resolve();
+    });
+  });
+}
