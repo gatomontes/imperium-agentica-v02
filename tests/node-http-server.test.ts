@@ -4,6 +4,24 @@ import { HttpTransportHandler } from "../src/http-handler.js";
 import { createNodeHttpServer } from "../src/node-http-server.js";
 
 describe("Node HTTP adapter", () => {
+  it("applies bounded timeout defaults and overrides", () => {
+    const defaults = createNodeHttpServer(
+      new HttpTransportHandler(new DirectTransportAdapter()),
+    );
+    const custom = createNodeHttpServer(
+      new HttpTransportHandler(new DirectTransportAdapter()),
+      { requestTimeoutMs: 5_000, headersTimeoutMs: 2_000 },
+    );
+
+    expect(defaults.requestTimeout).toBe(30_000);
+    expect(defaults.headersTimeout).toBe(10_000);
+    expect(custom.requestTimeout).toBe(5_000);
+    expect(custom.headersTimeout).toBe(2_000);
+
+    defaults.close();
+    custom.close();
+  });
+
   it("serves request submission over HTTP", async () => {
     const server = createNodeHttpServer(
       new HttpTransportHandler(new DirectTransportAdapter()),
