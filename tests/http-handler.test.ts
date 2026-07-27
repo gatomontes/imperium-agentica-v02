@@ -14,6 +14,22 @@ describe("framework-neutral HTTP handler", () => {
     if (result.ok) expect(result.result.petition.payload.finding).toBe("PETITION_RECEIVED");
   });
 
+  it("rejects missing transport metadata before routing", () => {
+    const handler = new HttpTransportHandler(new DirectTransportAdapter());
+    const result = handler.submit(
+      { content: "Define the professional pattern.", sessionReference: "http-session" },
+      { requestId: "", operatorInstanceId: "" },
+    );
+
+    expect(result).toMatchObject({
+      ok: false,
+      requestId: "",
+      error: {
+        code: "HTTP_METADATA_INVALID",
+      },
+    });
+  });
+
   it("maps domain failures into a stable failure envelope", () => {
     const handler = new HttpTransportHandler(new DirectTransportAdapter());
     const result = handler.submit(
