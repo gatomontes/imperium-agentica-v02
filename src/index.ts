@@ -7,6 +7,7 @@ export * from "./foundry.js";
 export * from "./garrison.js";
 export * from "./guildhall.js";
 export * from "./hagiography.js";
+export * from "./http-handler.js";
 export * from "./http-contract.js";
 export * from "./invalidation.js";
 export * from "./ingress.js";
