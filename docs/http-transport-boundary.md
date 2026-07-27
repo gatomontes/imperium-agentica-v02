@@ -20,4 +20,4 @@ Every request carries:
 
 Successful responses use `{ ok: true, requestId, result }`. Failures use `{ ok: false, requestId, error: { code, message } }`.
 
-Authentication, authorization policy, rate limits, framework choice, TLS termination, and deployment topology remain unadmitted.
+Authentication is injected through `HttpAuthorizer`; the provider and authorization policy remain unadmitted. Rate limits, framework choice, TLS termination, and deployment topology also remain unadmitted.
