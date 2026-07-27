@@ -41,6 +41,68 @@ describe("Node HTTP adapter", () => {
     }
   });
 
+  it("rejects unsupported content types", async () => {
+    const server = createNodeHttpServer(
+      new HttpTransportHandler(new DirectTransportAdapter()),
+    );
+    await new Promise<void>((resolve) => server.listen(0, resolve));
+    const address = server.address();
+    if (!address || typeof address === "string") throw new Error("server did not bind");
+
+    try {
+      const response = await fetch(`http://127.0.0.1:${address.port}/v1/requests`, {
+        method: "POST",
+        headers: {
+          "content-type": "text/plain",
+          "x-request-id": "node-http-4",
+          "x-imperium-operator-instance": "operator-1",
+        },
+        body: "{}",
+      });
+
+      expect(response.status).toBe(415);
+      await expect(response.json()).resolves.toMatchObject({
+        ok: false,
+        error: { code: "HTTP_UNSUPPORTED_CONTENT_TYPE" },
+      });
+    } finally {
+      await new Promise<void>((resolve, reject) =>
+        server.close((error) => (error ? reject(error) : resolve())),
+      );
+    }
+  });
+
+  it("rejects bodies larger than 1 MiB", async () => {
+    const server = createNodeHttpServer(
+      new HttpTransportHandler(new DirectTransportAdapter()),
+    );
+    await new Promise<void>((resolve) => server.listen(0, resolve));
+    const address = server.address();
+    if (!address || typeof address === "string") throw new Error("server did not bind");
+
+    try {
+      const response = await fetch(`http://127.0.0.1:${address.port}/v1/requests`, {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+          "x-request-id": "node-http-5",
+          "x-imperium-operator-instance": "operator-1",
+        },
+        body: "x".repeat(1024 * 1024 + 1),
+      });
+
+      expect(response.status).toBe(413);
+      await expect(response.json()).resolves.toMatchObject({
+        ok: false,
+        error: { code: "HTTP_BODY_TOO_LARGE" },
+      });
+    } finally {
+      await new Promise<void>((resolve, reject) =>
+        server.close((error) => (error ? reject(error) : resolve())),
+      );
+    }
+  });
+
   it("returns a client error for malformed JSON", async () => {
     const server = createNodeHttpServer(
       new HttpTransportHandler(new DirectTransportAdapter()),
