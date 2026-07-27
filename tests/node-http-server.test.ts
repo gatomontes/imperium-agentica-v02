@@ -4,6 +4,59 @@ import { HttpTransportHandler } from "../src/http-handler.js";
 import { createNodeHttpServer } from "../src/node-http-server.js";
 
 describe("Node HTTP adapter", () => {
+  it("enforces injected authorization over HTTP", async () => {
+    const handler = new HttpTransportHandler(
+      new DirectTransportAdapter(),
+      {
+        authorize: ({ authorization }) => {
+          if (authorization !== "Bearer valid") throw new Error("invalid token");
+        },
+      },
+    );
+    const server = createNodeHttpServer(handler);
+    await new Promise<void>((resolve) => server.listen(0, resolve));
+    const address = server.address();
+    if (!address || typeof address === "string") throw new Error("server did not bind");
+
+    try {
+      const rejected = await fetch(`http://127.0.0.1:${address.port}/v1/requests`, {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+          "x-request-id": "node-auth-1",
+          "x-imperium-operator-instance": "operator-1",
+        },
+        body: JSON.stringify({
+          content: "request",
+          sessionReference: "node-auth",
+        }),
+      });
+      expect(rejected.status).toBe(400);
+      await expect(rejected.json()).resolves.toMatchObject({
+        error: { code: "HTTP_UNAUTHORIZED" },
+      });
+
+      const accepted = await fetch(`http://127.0.0.1:${address.port}/v1/requests`, {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+          authorization: "Bearer valid",
+          "x-request-id": "node-auth-2",
+          "x-imperium-operator-instance": "operator-1",
+        },
+        body: JSON.stringify({
+          content: "request",
+          sessionReference: "node-auth",
+        }),
+      });
+      expect(accepted.status).toBe(200);
+    } finally {
+      await new Promise<void>((resolve, reject) =>
+        server.close((error) => (error ? reject(error) : resolve())),
+      );
+    }
+  });
+
   it("applies bounded timeout defaults and overrides", () => {
     const defaults = createNodeHttpServer(
       new HttpTransportHandler(new DirectTransportAdapter()),
