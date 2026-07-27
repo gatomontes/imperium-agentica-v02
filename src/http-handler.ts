@@ -30,6 +30,63 @@ export class HttpTransportHandler {
     }
   }
 
+  prepareResponse(
+    petition: Parameters<ImperiumTransportAdapter["prepareResponse"]>[0],
+    content: string,
+    metadata: { requestId: string; operatorInstanceId: string },
+  ): HttpResponse<ReturnType<ImperiumTransportAdapter["prepareResponse"]>> {
+    const metadataError = validateMetadata(metadata);
+    if (metadataError) return metadataError;
+    try {
+      const result = this.adapter.prepareResponse(
+        petition,
+        content,
+        metadata.requestId,
+      );
+      return { ok: true, requestId: metadata.requestId, result };
+    } catch (error) {
+      return failure(metadata.requestId, error);
+    }
+  }
+
+  prepareDelivery(
+    petition: Parameters<ImperiumTransportAdapter["prepareDelivery"]>[0],
+    channel: string,
+    metadata: { requestId: string; operatorInstanceId: string },
+  ): HttpResponse<ReturnType<ImperiumTransportAdapter["prepareDelivery"]>> {
+    const metadataError = validateMetadata(metadata);
+    if (metadataError) return metadataError;
+    try {
+      const result = this.adapter.prepareDelivery(
+        petition,
+        channel,
+        metadata.requestId,
+      );
+      return { ok: true, requestId: metadata.requestId, result };
+    } catch (error) {
+      return failure(metadata.requestId, error);
+    }
+  }
+
+  dispatchResponse(
+    delivery: Parameters<ImperiumTransportAdapter["dispatchResponse"]>[0],
+    successful: boolean,
+    metadata: { requestId: string; operatorInstanceId: string },
+  ): HttpResponse<ReturnType<ImperiumTransportAdapter["dispatchResponse"]>> {
+    const metadataError = validateMetadata(metadata);
+    if (metadataError) return metadataError;
+    try {
+      const result = this.adapter.dispatchResponse(
+        delivery,
+        successful,
+        metadata.requestId,
+      );
+      return { ok: true, requestId: metadata.requestId, result };
+    } catch (error) {
+      return failure(metadata.requestId, error);
+    }
+  }
+
   clarify(
     petition: Parameters<ImperiumTransportAdapter["clarify"]>[0]["petition"],
     body: HttpClarifyBody,
