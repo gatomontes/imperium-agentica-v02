@@ -119,6 +119,14 @@ function writeJson(
 ): void {
   response.statusCode = statusCode;
   response.setHeader("content-type", "application/json; charset=utf-8");
+  if (
+    typeof body === "object" &&
+    body !== null &&
+    "requestId" in body &&
+    typeof body.requestId === "string"
+  ) {
+    response.setHeader("x-request-id", body.requestId);
+  }
   response.end(JSON.stringify(body));
 }
 
