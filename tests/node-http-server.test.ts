@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { DirectTransportAdapter } from "../src/direct-transport.js";
 import { HttpTransportHandler } from "../src/http-handler.js";
-import { createNodeHttpServer } from "../src/node-http-server.js";
+import { createNodeHttpServer, shutdownNodeHttpServer } from "../src/node-http-server.js";
 
 describe("Node HTTP adapter", () => {
   it("enforces injected authorization over HTTP", async () => {
@@ -55,6 +55,15 @@ describe("Node HTTP adapter", () => {
         server.close((error) => (error ? reject(error) : resolve())),
       );
     }
+  });
+
+
+  it("shuts down a listening server cleanly", async () => {
+    const server = createNodeHttpServer(
+      new HttpTransportHandler(new DirectTransportAdapter()),
+    );
+    await new Promise<void>((resolve) => server.listen(0, resolve));
+    await expect(shutdownNodeHttpServer(server, 1_000)).resolves.toBeUndefined();
   });
 
   it("applies bounded timeout defaults and overrides", () => {
