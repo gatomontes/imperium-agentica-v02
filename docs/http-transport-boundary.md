@@ -18,6 +18,6 @@ Every request carries:
 - `POST /v1/petitions/:petitionRef/deliveries` → prepare delivery;
 - `POST /v1/deliveries/:deliveryRef/dispatch` → record dispatch outcome.
 
-Successful responses use `{ ok: true, requestId, result }`. Failures use `{ ok: false, requestId, error: { code, message } }`.
+The Node adapter accepts only `POST /v1/requests`, requires JSON with string `content` and `sessionReference`, and caps request bodies at 1 MiB. Successful responses use `{ ok: true, requestId, result }`. Failures use `{ ok: false, requestId, error: { code, message } }`.
 
 Authentication is injected through `HttpAuthorizer`; the provider and authorization policy remain unadmitted. Rate limits, framework choice, TLS termination, and deployment topology also remain unadmitted.
