@@ -33,16 +33,32 @@ async function route(
     request.headers["x-imperium-operator-instance"]?.toString() ?? "";
 
   if (request.method === "POST" && request.url === "/v1/requests") {
-    let body: { content: string; sessionReference: string };
-    try {
-      body = await readJson(request);
-    } catch {
-      writeJson(response, 400, {
+    const contentType = request.headers["content-type"]?.split(";")[0];
+    if (contentType !== "application/json") {
+      writeJson(response, 415, {
         ok: false,
         requestId,
         error: {
-          code: "HTTP_INVALID_JSON",
-          message: "request body must be valid JSON",
+          code: "HTTP_UNSUPPORTED_CONTENT_TYPE",
+          message: "content-type must be application/json",
+        },
+      });
+      return;
+    }
+
+    let body: { content: string; sessionReference: string };
+    try {
+      body = await readJson(request);
+    } catch (error) {
+      const tooLarge = error instanceof HttpBodyTooLargeError;
+      writeJson(response, tooLarge ? 413 : 400, {
+        ok: false,
+        requestId,
+        error: {
+          code: tooLarge ? "HTTP_BODY_TOO_LARGE" : "HTTP_INVALID_JSON",
+          message: tooLarge
+            ? "request body exceeds 1 MiB"
+            : "request body must be valid JSON",
         },
       });
       return;
@@ -67,7 +83,15 @@ async function readJson(request: IncomingMessage): Promise<{
   sessionReference: string;
 }> {
   const chunks: Buffer[] = [];
-  for await (const chunk of request) chunks.push(Buffer.from(chunk));
+  let size = 0;
+  for await (const chunk of request) {
+    const buffer = Buffer.from(chunk);
+    size += buffer.length;
+    if (size > 1024 * 1024) {
+      throw new HttpBodyTooLargeError();
+    }
+    chunks.push(buffer);
+  }
   return JSON.parse(Buffer.concat(chunks).toString("utf8"));
 }
 
@@ -80,3 +104,5 @@ function writeJson(
   response.setHeader("content-type", "application/json; charset=utf-8");
   response.end(JSON.stringify(body));
 }
+
+class HttpBodyTooLargeError extends Error {}
