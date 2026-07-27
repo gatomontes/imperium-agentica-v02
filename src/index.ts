@@ -13,6 +13,7 @@ export * from "./http-contract.js";
 export * from "./invalidation.js";
 export * from "./ingress.js";
 export * from "./lifecycle.js";
+export * from "./node-http-server.js";
 export * from "./pit.js";
 export * from "./persistent-reference.js";
 export * from "./postgres-store.js";
