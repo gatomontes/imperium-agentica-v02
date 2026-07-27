@@ -42,6 +42,7 @@ async function route(
   const requestId = request.headers["x-request-id"]?.toString() ?? "";
   const operatorInstanceId =
     request.headers["x-imperium-operator-instance"]?.toString() ?? "";
+  const authorization = request.headers.authorization?.toString();
 
   if (request.method === "POST" && request.url === "/v1/requests") {
     const contentType = request.headers["content-type"]?.split(";")[0];
@@ -74,7 +75,11 @@ async function route(
       });
       return;
     }
-    const result = handler.submit(body, { requestId, operatorInstanceId });
+    const result = handler.submit(body, {
+      requestId,
+      operatorInstanceId,
+      authorization,
+    });
     writeJson(response, result.ok ? 200 : 400, result);
     return;
   }
