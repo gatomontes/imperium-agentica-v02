@@ -20,4 +20,4 @@ Every request carries:
 
 The Node adapter accepts only `POST /v1/requests`, requires JSON with string `content` and `sessionReference`, and caps request bodies at 1 MiB. Successful responses use `{ ok: true, requestId, result }`. Failures use `{ ok: false, requestId, error: { code, message } }`.
 
-Authentication is injected through `HttpAuthorizer`; the provider and authorization policy remain unadmitted. Rate limits, framework choice, TLS termination, and deployment topology also remain unadmitted.
+The Node adapter defaults to a 30-second request timeout, 10-second headers timeout, 5-second keep-alive timeout, and 100 concurrent connections; these are configurable. Authentication is injected through `HttpAuthorizer`; the provider and authorization policy remain unadmitted. Rate limits, framework choice, TLS termination, and deployment topology also remain unadmitted.
