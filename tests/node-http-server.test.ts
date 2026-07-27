@@ -129,6 +129,8 @@ describe("Node HTTP adapter", () => {
 
       expect(response.status).toBe(200);
       expect(response.headers.get("x-request-id")).toBe("node-http-1");
+      expect(response.headers.get("cache-control")).toBe("no-store");
+      expect(response.headers.get("x-content-type-options")).toBe("nosniff");
       await expect(response.json()).resolves.toMatchObject({
         ok: true,
         requestId: "node-http-1",
