@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { HttpTransportHandler } from "../src/http-handler.js";
 import { DirectTransportAdapter } from "../src/direct-transport.js";
 
-describe("framework-neutral HTTP handler", async () => {
+describe("framework-neutral HTTP handler", () => {
   it("enforces an injected authorizer", async () => {
     const handler = new HttpTransportHandler(
       new DirectTransportAdapter(),
