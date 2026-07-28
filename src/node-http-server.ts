@@ -89,6 +89,52 @@ async function route(
     return;
   }
 
+  if (request.method === "POST" && request.url?.match(/^\/v1\/petitions\/[^/]+\/clarifications$/)) {
+    if (!artifactResolver) {
+      writeJson(response, 501, {
+        ok: false,
+        requestId,
+        error: {
+          code: "HTTP_ARTIFACT_RESOLVER_UNAVAILABLE",
+          message: "artifact resolver is required for this route",
+        },
+      });
+      return;
+    }
+    const match = request.url.match(/^\/v1\/petitions\/([^/]+)\/clarifications$/);
+    if (!match) return;
+    const petition = await artifactResolver.resolvePetition(
+      decodeURIComponent(match[1]),
+    );
+    if (!petition) {
+      writeJson(response, 404, {
+        ok: false,
+        requestId,
+        error: { code: "PETITION_NOT_FOUND", message: "petition not found" },
+      });
+      return;
+    }
+    const body = await readJson<{ correctedContent: string }>(request);
+    if (typeof body.correctedContent !== "string") {
+      writeJson(response, 400, {
+        ok: false,
+        requestId,
+        error: {
+          code: "HTTP_INVALID_BODY",
+          message: "correctedContent must be a string",
+        },
+      });
+      return;
+    }
+    const result = handler.clarify(
+      petition,
+      { correctedContent: body.correctedContent },
+      { requestId, operatorInstanceId, authorization },
+    );
+    writeJson(response, result.ok ? 200 : 400, result);
+    return;
+  }
+
   if (request.method === "POST" && request.url?.match(/^\/v1\/petitions\/[^/]+\/(responses|deliveries)$/)) {
     if (!artifactResolver) {
       writeJson(response, 501, {
