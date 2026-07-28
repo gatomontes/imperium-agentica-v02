@@ -173,6 +173,43 @@ describe("Node HTTP adapter", () => {
     }
   });
 
+
+  it("validates lifecycle route bodies", async () => {
+    const delivery = createArtifact("ResponseDelivery", "Secretariat", "http-validation", {
+      responseRef: "response-validation@1",
+      channel: "fixture",
+      state: "RESPONSE_PREPARED",
+      attempt: 0,
+    });
+    const server = createNodeHttpServer(
+      new HttpTransportHandler(new DirectTransportAdapter()),
+      {
+        artifactResolver: {
+          resolvePetition: () => undefined,
+          resolveDelivery: (ref) => ref === delivery.identity ? delivery : undefined,
+        },
+      },
+    );
+    await new Promise<void>((resolve) => server.listen(0, resolve));
+    const address = server.address();
+    if (!address || typeof address === "string") throw new Error("server did not bind");
+    try {
+      const response = await fetch(`http://127.0.0.1:${address.port}/v1/deliveries/${delivery.identity}/dispatch`, {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ successful: "yes" }),
+      });
+      expect(response.status).toBe(400);
+      await expect(response.json()).resolves.toMatchObject({
+        error: { code: "HTTP_INVALID_BODY" },
+      });
+    } finally {
+      await new Promise<void>((resolve, reject) =>
+        server.close((error) => (error ? reject(error) : resolve())),
+      );
+    }
+  });
+
   it("serves an unauthenticated health endpoint", async () => {
     const server = createNodeHttpServer(
       new HttpTransportHandler(new DirectTransportAdapter()),
