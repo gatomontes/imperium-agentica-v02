@@ -103,7 +103,7 @@ async function route(
     }
     const match = request.url.match(/^\/v1\/petitions\/([^/]+)\/(responses|deliveries)$/);
     if (!match) return;
-    const petition = artifactResolver.resolvePetition(decodeURIComponent(match[1]));
+    const petition = await artifactResolver.resolvePetition(decodeURIComponent(match[1]));
     if (!petition) {
       writeJson(response, 404, {
         ok: false,
@@ -155,7 +155,7 @@ async function route(
     }
     const match = request.url.match(/^\/v1\/deliveries\/([^/]+)\/dispatch$/);
     if (!match) return;
-    const delivery = artifactResolver.resolveDelivery(decodeURIComponent(match[1]));
+    const delivery = await artifactResolver.resolveDelivery(decodeURIComponent(match[1]));
     if (!delivery) {
       writeJson(response, 404, {
         ok: false,
