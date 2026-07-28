@@ -11,6 +11,7 @@ export interface NodeHttpServerOptions {
   headersTimeoutMs?: number;
   keepAliveTimeoutMs?: number;
   maxConnections?: number;
+  readinessCheck?: () => boolean | Promise<boolean>;
 }
 
 export function createNodeHttpServer(
@@ -19,7 +20,12 @@ export function createNodeHttpServer(
 ): Server {
   const server = createServer(async (request, response) => {
     try {
-      await route(request, response, handler);
+      await route(
+        request,
+        response,
+        handler,
+        options.readinessCheck ?? (() => true),
+      );
     } catch (error) {
       writeJson(response, 500, {
         ok: false,
@@ -42,6 +48,7 @@ async function route(
   request: IncomingMessage,
   response: ServerResponse,
   handler: HttpTransportHandler,
+  readinessCheck: () => boolean | Promise<boolean>,
 ): Promise<void> {
   const requestId =
     request.headers["x-request-id"]?.toString() ?? "http-" + randomUUID();
@@ -53,6 +60,15 @@ async function route(
     writeJson(response, 200, {
       ok: true,
       status: "healthy",
+    });
+    return;
+  }
+
+  if (request.method === "GET" && request.url === "/ready") {
+    const ready = await readinessCheck();
+    writeJson(response, ready ? 200 : 503, {
+      ok: ready,
+      status: ready ? "ready" : "not_ready",
     });
     return;
   }
