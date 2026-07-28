@@ -117,6 +117,50 @@ describe("Node HTTP adapter", () => {
   });
 
 
+
+  it("routes petition clarification", async () => {
+    const petition = createArtifact("Petition", "Secretariat", "http-clarify", {
+      originalContent: "ambiguous",
+      normalizedContent: "ambiguous",
+      sessionReference: "http-clarify",
+      constraints: ["clarification: scope"],
+      attachments: [],
+      finding: "PETITION_NEEDS_CLARIFICATION",
+    });
+    const server = createNodeHttpServer(
+      new HttpTransportHandler(new DirectTransportAdapter()),
+      {
+        artifactResolver: {
+          resolvePetition: (ref) => ref === petition.identity ? petition : undefined,
+          resolveDelivery: () => undefined,
+        },
+      },
+    );
+    await new Promise<void>((resolve) => server.listen(0, resolve));
+    const address = server.address();
+    if (!address || typeof address === "string") throw new Error("server did not bind");
+    try {
+      const response = await fetch(`http://127.0.0.1:${address.port}/v1/petitions/${petition.identity}/clarifications`, {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+          "x-request-id": "http-clarify-1",
+          "x-imperium-operator-instance": "operator-1",
+        },
+        body: JSON.stringify({ correctedContent: "bounded request" }),
+      });
+      expect(response.status).toBe(200);
+      await expect(response.json()).resolves.toMatchObject({
+        ok: true,
+        result: { petition: { payload: { finding: "PETITION_RECEIVED" } } },
+      });
+    } finally {
+      await new Promise<void>((resolve, reject) =>
+        server.close((error) => (error ? reject(error) : resolve())),
+      );
+    }
+  });
+
   it("routes response preparation and delivery dispatch", async () => {
     const petition = createArtifact("Petition", "Secretariat", "http-lifecycle", {
       originalContent: "request",
