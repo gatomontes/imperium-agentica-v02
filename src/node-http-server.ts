@@ -5,6 +5,7 @@ import {
   ServerResponse,
 } from "node:http";
 import { HttpTransportHandler } from "./http-handler.js";
+import { HttpArtifactResolver } from "./http-resolver.js";
 
 export interface NodeHttpServerOptions {
   requestTimeoutMs?: number;
@@ -12,6 +13,7 @@ export interface NodeHttpServerOptions {
   keepAliveTimeoutMs?: number;
   maxConnections?: number;
   readinessCheck?: () => boolean | Promise<boolean>;
+  artifactResolver?: HttpArtifactResolver;
 }
 
 export function createNodeHttpServer(
@@ -25,6 +27,7 @@ export function createNodeHttpServer(
         response,
         handler,
         options.readinessCheck ?? (() => true),
+        options.artifactResolver,
       );
     } catch (error) {
       writeJson(response, 500, {
@@ -49,6 +52,7 @@ async function route(
   response: ServerResponse,
   handler: HttpTransportHandler,
   readinessCheck: () => boolean | Promise<boolean>,
+  artifactResolver?: HttpArtifactResolver,
 ): Promise<void> {
   const requestId =
     request.headers["x-request-id"]?.toString() ?? "http-" + randomUUID();
@@ -70,6 +74,76 @@ async function route(
       ok: ready,
       status: ready ? "ready" : "not_ready",
     });
+    return;
+  }
+
+  if (request.method === "POST" && request.url?.match(/^\/v1\/petitions\/[^/]+\/(responses|deliveries)$/)) {
+    if (!artifactResolver) {
+      writeJson(response, 501, {
+        ok: false,
+        requestId,
+        error: {
+          code: "HTTP_ARTIFACT_RESOLVER_UNAVAILABLE",
+          message: "artifact resolver is required for this route",
+        },
+      });
+      return;
+    }
+    const match = request.url.match(/^\/v1\/petitions\/([^/]+)\/(responses|deliveries)$/);
+    if (!match) return;
+    const petition = artifactResolver.resolvePetition(match[1]);
+    if (!petition) {
+      writeJson(response, 404, {
+        ok: false,
+        requestId,
+        error: { code: "PETITION_NOT_FOUND", message: "petition not found" },
+      });
+      return;
+    }
+    const body = await readJson(request);
+    const metadata = {
+      requestId,
+      operatorInstanceId,
+      authorization,
+    };
+    const result =
+      match[2] === "responses"
+        ? handler.prepareResponse(petition, body.content, metadata)
+        : handler.prepareDelivery(petition, body.channel, metadata);
+    writeJson(response, result.ok ? 200 : 400, result);
+    return;
+  }
+
+  if (request.method === "POST" && request.url?.match(/^\/v1\/deliveries\/[^/]+\/dispatch$/)) {
+    if (!artifactResolver) {
+      writeJson(response, 501, {
+        ok: false,
+        requestId,
+        error: {
+          code: "HTTP_ARTIFACT_RESOLVER_UNAVAILABLE",
+          message: "artifact resolver is required for this route",
+        },
+      });
+      return;
+    }
+    const match = request.url.match(/^\/v1\/deliveries\/([^/]+)\/dispatch$/);
+    if (!match) return;
+    const delivery = artifactResolver.resolveDelivery(match[1]);
+    if (!delivery) {
+      writeJson(response, 404, {
+        ok: false,
+        requestId,
+        error: { code: "DELIVERY_NOT_FOUND", message: "delivery not found" },
+      });
+      return;
+    }
+    const body = await readJson(request);
+    const result = handler.dispatchResponse(delivery, body.successful, {
+      requestId,
+      operatorInstanceId,
+      authorization,
+    });
+    writeJson(response, result.ok ? 200 : 400, result);
     return;
   }
 
