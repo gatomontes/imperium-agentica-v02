@@ -126,7 +126,7 @@ async function route(
       });
       return;
     }
-    const result = handler.clarify(
+    const result = await handler.clarify(
       petition,
       { correctedContent: body.correctedContent },
       { requestId, operatorInstanceId, authorization },
@@ -181,8 +181,8 @@ async function route(
     };
     const result =
       match[2] === "responses"
-        ? handler.prepareResponse(petition, String(body.content ?? ""), metadata)
-        : handler.prepareDelivery(petition, String(body.channel ?? ""), metadata);
+        ? await handler.prepareResponse(petition, String(body.content ?? ""), metadata)
+        : await handler.prepareDelivery(petition, String(body.channel ?? ""), metadata);
     writeJson(response, result.ok ? 200 : 400, result);
     return;
   }
@@ -222,7 +222,7 @@ async function route(
       });
       return;
     }
-    const result = handler.dispatchResponse(delivery, body.successful, {
+    const result = await handler.dispatchResponse(delivery, body.successful, {
       requestId,
       operatorInstanceId,
       authorization,
@@ -303,7 +303,7 @@ async function route(
       return;
     }
 
-    const result = handler.submit(body, {
+    const result = await handler.submit(body, {
       requestId,
       operatorInstanceId,
       authorization,
