@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { DirectTransportAdapter } from "../src/direct-transport.js";
+import { createArtifact } from "../src/artifact.js";
 import { HttpTransportHandler } from "../src/http-handler.js";
 import { createNodeHttpServer, shutdownNodeHttpServer } from "../src/node-http-server.js";
 
@@ -108,6 +109,61 @@ describe("Node HTTP adapter", () => {
         ok: false,
         status: "not_ready",
       });
+    } finally {
+      await new Promise<void>((resolve, reject) =>
+        server.close((error) => (error ? reject(error) : resolve())),
+      );
+    }
+  });
+
+
+  it("routes response preparation and delivery dispatch", async () => {
+    const petition = createArtifact("Petition", "Secretariat", "http-lifecycle", {
+      content: "request",
+      finding: "PETITION_RECEIVED",
+      sessionReference: "http-lifecycle",
+      clarificationConstraints: [],
+    });
+    const delivery = createArtifact("ResponseDelivery", "Secretariat", "http-lifecycle", {
+      responseRef: "response-1@1",
+      channel: "fixture",
+      state: "RESPONSE_PREPARED",
+      attempt: 0,
+    });
+    const resolver = {
+      resolvePetition: (ref: string) => ref === petition.identity ? petition : undefined,
+      resolveDelivery: (ref: string) => ref === delivery.identity ? delivery : undefined,
+    };
+    const server = createNodeHttpServer(
+      new HttpTransportHandler(new DirectTransportAdapter()),
+      { artifactResolver: resolver },
+    );
+    await new Promise<void>((resolve) => server.listen(0, resolve));
+    const address = server.address();
+    if (!address || typeof address === "string") throw new Error("server did not bind");
+    try {
+      const base = `http://127.0.0.1:${address.port}`;
+      const prepared = await fetch(`${base}/v1/petitions/${petition.identity}/deliveries`, {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+          "x-request-id": "http-route-1",
+          "x-imperium-operator-instance": "operator-1",
+        },
+        body: JSON.stringify({ channel: "fixture" }),
+      });
+      expect(prepared.status).toBe(200);
+
+      const dispatched = await fetch(`${base}/v1/deliveries/${delivery.identity}/dispatch`, {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+          "x-request-id": "http-route-2",
+          "x-imperium-operator-instance": "operator-1",
+        },
+        body: JSON.stringify({ successful: true }),
+      });
+      expect(dispatched.status).toBe(200);
     } finally {
       await new Promise<void>((resolve, reject) =>
         server.close((error) => (error ? reject(error) : resolve())),
