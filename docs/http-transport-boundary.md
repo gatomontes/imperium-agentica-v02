@@ -13,6 +13,7 @@ Every request carries:
 ## Endpoint mapping
 
 - `GET /health` → unauthenticated liveness check;
+- `GET /ready` → injected readiness check, returning `503` when dependencies are unavailable;
 
 - `POST /v1/requests` → submit operator request;
 - `POST /v1/petitions/:petitionRef/clarifications` → submit corrected petition content;
