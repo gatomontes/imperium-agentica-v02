@@ -2,8 +2,8 @@ import { describe, expect, it } from "vitest";
 import { HttpTransportHandler } from "../src/http-handler.js";
 import { DirectTransportAdapter } from "../src/direct-transport.js";
 
-describe("framework-neutral HTTP handler", () => {
-  it("enforces an injected authorizer", () => {
+describe("framework-neutral HTTP handler", async () => {
+  it("enforces an injected authorizer", async () => {
     const handler = new HttpTransportHandler(
       new DirectTransportAdapter(),
       {
@@ -13,7 +13,7 @@ describe("framework-neutral HTTP handler", () => {
       },
     );
 
-    const missing = handler.submit(
+    const missing = await handler.submit(
       { content: "request", sessionReference: "auth-handler" },
       { requestId: "http-auth-1", operatorInstanceId: "operator-1" },
     );
@@ -22,7 +22,7 @@ describe("framework-neutral HTTP handler", () => {
       error: { code: "HTTP_UNAUTHORIZED" },
     });
 
-    const accepted = handler.submit(
+    const accepted = await handler.submit(
       { content: "request", sessionReference: "auth-handler" },
       {
         requestId: "http-auth-2",
@@ -33,9 +33,9 @@ describe("framework-neutral HTTP handler", () => {
     expect(accepted.ok).toBe(true);
   });
 
-  it("wraps transport submission in a success envelope", () => {
+  it("wraps transport submission in a success envelope", async () => {
     const handler = new HttpTransportHandler(new DirectTransportAdapter());
-    const result = handler.submit(
+    const result = await handler.submit(
       { content: "Define the professional pattern.", sessionReference: "http-session" },
       { requestId: "http-1", operatorInstanceId: "operator-1" },
     );
@@ -44,7 +44,7 @@ describe("framework-neutral HTTP handler", () => {
     if (result.ok) expect(result.result.petition.payload.finding).toBe("PETITION_RECEIVED");
   });
 
-  it("maps response preparation and dispatch", () => {
+  it("maps response preparation and dispatch", async () => {
     const handler = new HttpTransportHandler(new DirectTransportAdapter());
     const submitted = handler.submit(
       { content: "Define the professional pattern.", sessionReference: "http-response" },
@@ -73,9 +73,9 @@ describe("framework-neutral HTTP handler", () => {
     }
   });
 
-  it("rejects missing transport metadata before routing", () => {
+  it("rejects missing transport metadata before routing", async () => {
     const handler = new HttpTransportHandler(new DirectTransportAdapter());
-    const result = handler.submit(
+    const result = await handler.submit(
       { content: "Define the professional pattern.", sessionReference: "http-session" },
       { requestId: "", operatorInstanceId: "" },
     );
@@ -89,9 +89,9 @@ describe("framework-neutral HTTP handler", () => {
     });
   });
 
-  it("maps domain failures into a stable failure envelope", () => {
+  it("maps domain failures into a stable failure envelope", async () => {
     const handler = new HttpTransportHandler(new DirectTransportAdapter());
-    const result = handler.submit(
+    const result = await handler.submit(
       { content: "", sessionReference: "http-session" },
       { requestId: "http-2", operatorInstanceId: "operator-1" },
     );
