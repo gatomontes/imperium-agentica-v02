@@ -92,6 +92,29 @@ describe("Node HTTP adapter", () => {
   });
 
 
+
+  it("separates readiness from liveness", async () => {
+    const server = createNodeHttpServer(
+      new HttpTransportHandler(new DirectTransportAdapter()),
+      { readinessCheck: async () => false },
+    );
+    await new Promise<void>((resolve) => server.listen(0, resolve));
+    const address = server.address();
+    if (!address || typeof address === "string") throw new Error("server did not bind");
+    try {
+      const response = await fetch(`http://127.0.0.1:${address.port}/ready`);
+      expect(response.status).toBe(503);
+      await expect(response.json()).resolves.toMatchObject({
+        ok: false,
+        status: "not_ready",
+      });
+    } finally {
+      await new Promise<void>((resolve, reject) =>
+        server.close((error) => (error ? reject(error) : resolve())),
+      );
+    }
+  });
+
   it("serves an unauthenticated health endpoint", async () => {
     const server = createNodeHttpServer(
       new HttpTransportHandler(new DirectTransportAdapter()),
