@@ -30,12 +30,24 @@ export function createNodeHttpServer(
         options.artifactResolver,
       );
     } catch (error) {
-      writeJson(response, 500, {
+      const badBody = error instanceof HttpInvalidJsonError;
+      const tooLarge = error instanceof HttpBodyTooLargeError;
+      writeJson(response, badBody || tooLarge ? tooLarge ? 413 : 400 : 500, {
         ok: false,
         requestId: request.headers["x-request-id"]?.toString() ?? "",
         error: {
-          code: "HTTP_INTERNAL_ERROR",
-          message: error instanceof Error ? error.message : "internal error",
+          code: tooLarge
+            ? "HTTP_BODY_TOO_LARGE"
+            : badBody
+              ? "HTTP_INVALID_JSON"
+              : "HTTP_INTERNAL_ERROR",
+          message: tooLarge
+            ? "request body exceeds 1 MiB"
+            : badBody
+              ? "request body must be valid JSON"
+              : error instanceof Error
+                ? error.message
+                : "internal error",
         },
       });
     }
@@ -91,7 +103,7 @@ async function route(
     }
     const match = request.url.match(/^\/v1\/petitions\/([^/]+)\/(responses|deliveries)$/);
     if (!match) return;
-    const petition = artifactResolver.resolvePetition(match[1]);
+    const petition = artifactResolver.resolvePetition(decodeURIComponent(match[1]));
     if (!petition) {
       writeJson(response, 404, {
         ok: false,
@@ -101,6 +113,21 @@ async function route(
       return;
     }
     const body = await readJson<Record<string, unknown>>(request);
+    if (
+      match[2] === "responses"
+        ? typeof body.content !== "string"
+        : typeof body.channel !== "string"
+    ) {
+      writeJson(response, 400, {
+        ok: false,
+        requestId,
+        error: {
+          code: "HTTP_INVALID_BODY",
+          message: "response content or delivery channel must be a string",
+        },
+      });
+      return;
+    }
     const metadata = {
       requestId,
       operatorInstanceId,
@@ -128,7 +155,7 @@ async function route(
     }
     const match = request.url.match(/^\/v1\/deliveries\/([^/]+)\/dispatch$/);
     if (!match) return;
-    const delivery = artifactResolver.resolveDelivery(match[1]);
+    const delivery = artifactResolver.resolveDelivery(decodeURIComponent(match[1]));
     if (!delivery) {
       writeJson(response, 404, {
         ok: false,
@@ -138,6 +165,17 @@ async function route(
       return;
     }
     const body = await readJson<{ successful: boolean }>(request);
+    if (typeof body.successful !== "boolean") {
+      writeJson(response, 400, {
+        ok: false,
+        requestId,
+        error: {
+          code: "HTTP_INVALID_BODY",
+          message: "successful must be a boolean",
+        },
+      });
+      return;
+    }
     const result = handler.dispatchResponse(delivery, body.successful, {
       requestId,
       operatorInstanceId,
@@ -249,7 +287,11 @@ async function readJson<T>(request: IncomingMessage): Promise<T> {
     }
     chunks.push(buffer);
   }
-  return JSON.parse(Buffer.concat(chunks).toString("utf8")) as T;
+  try {
+    return JSON.parse(Buffer.concat(chunks).toString("utf8")) as T;
+  } catch {
+    throw new HttpInvalidJsonError();
+  }
 }
 
 function writeJson(
@@ -273,6 +315,7 @@ function writeJson(
 }
 
 class HttpBodyTooLargeError extends Error {}
+class HttpInvalidJsonError extends Error {}
 
 export async function shutdownNodeHttpServer(
   server: Server,
