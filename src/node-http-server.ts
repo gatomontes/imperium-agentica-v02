@@ -49,6 +49,14 @@ async function route(
     request.headers["x-imperium-operator-instance"]?.toString() ?? "";
   const authorization = request.headers.authorization?.toString();
 
+  if (request.method === "GET" && request.url === "/health") {
+    writeJson(response, 200, {
+      ok: true,
+      status: "healthy",
+    });
+    return;
+  }
+
   if (request.url === "/v1/requests" && request.method !== "POST") {
     response.setHeader("allow", "POST");
     writeJson(response, 405, {
