@@ -17,10 +17,10 @@ export class HttpTransportHandler {
     private readonly authorizer?: HttpAuthorizer,
   ) {}
 
-  submit(
+  async submit(
     body: HttpSubmitBody,
     metadata: { requestId: string; operatorInstanceId: string; authorization?: string },
-  ): HttpResponse<ReturnType<ImperiumTransportAdapter["submit"]>> {
+  ): Promise<HttpResponse<ReturnType<ImperiumTransportAdapter["submit"]>> {
     const metadataError = validateMetadata(metadata);
     if (metadataError) return metadataError;
     const authorizationError = authorize(metadata, this.authorizer);
@@ -36,11 +36,11 @@ export class HttpTransportHandler {
     }
   }
 
-  prepareResponse(
+  async prepareResponse(
     petition: Parameters<ImperiumTransportAdapter["prepareResponse"]>[0],
     content: string,
     metadata: { requestId: string; operatorInstanceId: string; authorization?: string },
-  ): HttpResponse<ReturnType<ImperiumTransportAdapter["prepareResponse"]>> {
+  ): Promise<HttpResponse<ReturnType<ImperiumTransportAdapter["prepareResponse"]>> {
     const metadataError = validateMetadata(metadata);
     if (metadataError) return metadataError;
     const authorizationError = authorize(metadata, this.authorizer);
@@ -57,11 +57,11 @@ export class HttpTransportHandler {
     }
   }
 
-  prepareDelivery(
+  async prepareDelivery(
     petition: Parameters<ImperiumTransportAdapter["prepareDelivery"]>[0],
     channel: string,
     metadata: { requestId: string; operatorInstanceId: string; authorization?: string },
-  ): HttpResponse<ReturnType<ImperiumTransportAdapter["prepareDelivery"]>> {
+  ): Promise<HttpResponse<ReturnType<ImperiumTransportAdapter["prepareDelivery"]>> {
     const metadataError = validateMetadata(metadata);
     if (metadataError) return metadataError;
     const authorizationError = authorize(metadata, this.authorizer);
@@ -78,11 +78,11 @@ export class HttpTransportHandler {
     }
   }
 
-  dispatchResponse(
+  async dispatchResponse(
     delivery: Parameters<ImperiumTransportAdapter["dispatchResponse"]>[0],
     successful: boolean,
     metadata: { requestId: string; operatorInstanceId: string; authorization?: string },
-  ): HttpResponse<ReturnType<ImperiumTransportAdapter["dispatchResponse"]>> {
+  ): Promise<HttpResponse<ReturnType<ImperiumTransportAdapter["dispatchResponse"]>> {
     const metadataError = validateMetadata(metadata);
     if (metadataError) return metadataError;
     const authorizationError = authorize(metadata, this.authorizer);
@@ -99,11 +99,11 @@ export class HttpTransportHandler {
     }
   }
 
-  clarify(
+  async clarify(
     petition: Parameters<ImperiumTransportAdapter["clarify"]>[0]["petition"],
     body: HttpClarifyBody,
     metadata: { requestId: string; operatorInstanceId: string; authorization?: string },
-  ): HttpResponse<ReturnType<ImperiumTransportAdapter["clarify"]>> {
+  ): Promise<HttpResponse<ReturnType<ImperiumTransportAdapter["clarify"]>> {
     const metadataError = validateMetadata(metadata);
     if (metadataError) return metadataError;
     const authorizationError = authorize(metadata, this.authorizer);
@@ -121,7 +121,7 @@ export class HttpTransportHandler {
   }
 }
 
-function failure(requestId: string, error: unknown): HttpResponse<never> {
+function failure(requestId: string, error: unknown): Promise<HttpResponse<never> {
   return {
     ok: false,
     requestId,
@@ -135,7 +135,7 @@ function failure(requestId: string, error: unknown): HttpResponse<never> {
 function validateMetadata(metadata: {
   requestId: string;
   operatorInstanceId: string;
-}): HttpResponse<never> | null {
+}): Promise<HttpResponse<never> | null {
   if (!metadata.requestId.trim() || !metadata.operatorInstanceId.trim()) {
     return {
       ok: false,
@@ -156,7 +156,7 @@ function authorize(
     authorization?: string;
   },
   authorizer?: HttpAuthorizer,
-): HttpResponse<never> | null {
+): Promise<HttpResponse<never> | null {
   if (!authorizer) return null;
   if (!metadata.authorization?.trim()) {
     return {
