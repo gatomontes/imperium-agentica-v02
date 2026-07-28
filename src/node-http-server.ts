@@ -100,7 +100,7 @@ async function route(
       });
       return;
     }
-    const body = await readJson(request);
+    const body = await readJson<Record<string, unknown>>(request);
     const metadata = {
       requestId,
       operatorInstanceId,
@@ -108,8 +108,8 @@ async function route(
     };
     const result =
       match[2] === "responses"
-        ? handler.prepareResponse(petition, body.content, metadata)
-        : handler.prepareDelivery(petition, body.channel, metadata);
+        ? handler.prepareResponse(petition, String(body.content ?? ""), metadata)
+        : handler.prepareDelivery(petition, String(body.channel ?? ""), metadata);
     writeJson(response, result.ok ? 200 : 400, result);
     return;
   }
@@ -137,7 +137,7 @@ async function route(
       });
       return;
     }
-    const body = await readJson(request);
+    const body = await readJson<{ successful: boolean }>(request);
     const result = handler.dispatchResponse(delivery, body.successful, {
       requestId,
       operatorInstanceId,
@@ -189,7 +189,7 @@ async function route(
 
     let body: { content: string; sessionReference: string };
     try {
-      body = await readJson(request);
+      body = await readJson<{ content: string; sessionReference: string }>(request);
     } catch (error) {
       const tooLarge = error instanceof HttpBodyTooLargeError;
       writeJson(response, tooLarge ? 413 : 400, {
@@ -238,10 +238,7 @@ async function route(
   });
 }
 
-async function readJson(request: IncomingMessage): Promise<{
-  content: string;
-  sessionReference: string;
-}> {
+async function readJson<T>(request: IncomingMessage): Promise<T> {
   const chunks: Buffer[] = [];
   let size = 0;
   for await (const chunk of request) {
@@ -252,7 +249,7 @@ async function readJson(request: IncomingMessage): Promise<{
     }
     chunks.push(buffer);
   }
-  return JSON.parse(Buffer.concat(chunks).toString("utf8"));
+  return JSON.parse(Buffer.concat(chunks).toString("utf8")) as T;
 }
 
 function writeJson(
