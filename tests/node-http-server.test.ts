@@ -119,10 +119,12 @@ describe("Node HTTP adapter", () => {
 
   it("routes response preparation and delivery dispatch", async () => {
     const petition = createArtifact("Petition", "Secretariat", "http-lifecycle", {
-      content: "request",
-      finding: "PETITION_RECEIVED",
+      originalContent: "request",
+      normalizedContent: "request",
       sessionReference: "http-lifecycle",
-      clarificationConstraints: [],
+      constraints: [],
+      attachments: [],
+      finding: "PETITION_RECEIVED",
     });
     const delivery = createArtifact("ResponseDelivery", "Secretariat", "http-lifecycle", {
       responseRef: "response-1@1",
