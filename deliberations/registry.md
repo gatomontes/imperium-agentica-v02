@@ -6,7 +6,7 @@
 - Improvement programs recorded: 7
 - Pending control records: 7
 - Implemented control records: 0
-- Decision records: 19
+- Decision records: 25
 - Initial assessment: `assessments/2026-07-23-mit-ai-risks-imperium-assessment.md`
 - Integration review: `assessments/2026-07-23-ra-integration-review-001.md`
 - Integration execution: `assessments/2026-07-23-ra-integration-review-execution-001.md`
@@ -102,6 +102,14 @@ None recorded.
 | DR-015 | Admit PSC-SYN-001 v0.1 as synthetic Canonical Persona | Recorded decision; synthetic admission only |
 | DR-016 | Admit OP-SYN-001 v0.1 as synthetic packaged Operative | Recorded decision; inactive package only |
 | DR-017 | Admit PGD-SYN-002 v0.1 synthetic Persona Governance Doctrine | Recorded decision; synthetic professional doctrine only |
+| DR-018 | Admit eight creation-apparatus completion contracts | Recorded decision; semantic contracts only |
+| DR-019 | Establish Guildhall deliberative committee | Recorded decision; semantic only |
+| DR-020 | Establish Courtyard office operating surface | Recorded decision; semantic only |
+| DR-022 | Define Pit return and Guildhall admission disposition | Recorded decision; semantic only |
+| DR-023 | Require Guildhall candidate approval before Studium doctrine fitting | Recorded decision; semantic only |
+| DR-024 | Define Foundry resident station operatives | Recorded decision; semantic only |
+| DR-025 | Define Pit adversarial qualification boundary | Recorded decision; semantic only |
+| DR-026 | Define Studium functional chambers and distinct doctrinal lines | Recorded decision; semantic only |
 
 The two `DR-002` records are distinct historical files. The later OpenBao topology decision reused an existing ID before this registry was updated. This record preserves both and records the collision; renumbering a prior decision requires a separate traceable normalization.
 
@@ -118,3 +126,10 @@ Update this registry in the same increment that creates, promotes, demotes, inva
 | DR-025 | Define Pit adversarial qualification and Guildhall disposition boundary | Recorded decision; semantic process model only |
 
 DR-025 establishes Pit as the adversarial qualification office and preserves Guildhall Committee disposition authority. Pit produces findings and a recommendation; Garrison remains roster custodian only. No implementation or external effect is authorized.
+
+
+## Latest Decision
+
+| DR-026 | Define Studium functional chambers and distinct doctrinal lines | Recorded decision; semantic process model only |
+
+DR-026 establishes separate Applicability, Boundary, Conduct, Evidence, Conflict, and Issuance chambers within Studium. Persona Governance Doctrine remains directed to Foundry; Officer Governance Doctrine remains directed to Smith. No implementation or external effect is authorized.
