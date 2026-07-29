@@ -10,11 +10,11 @@ DR-009 Evidence Without Engineered Orientation is recorded. DR-008 is superseded
 
 DR-010 Mission-Scoped Observator/Custos (OC) Operator Instance is recorded. OC is one instance, not two roles or cooperating components.
 
-DR-CURRENT is the active decision pointer through DR-041, retaining the numbered records explicitly listed in `deliberations/DR-CURRENT.md`. EC-CURRENT is the active exemplar-grounding correction pointer. OP-CURRENT is the active synthetic Operative Package pointer.
+DR-CURRENT is the active decision pointer through DR-042, retaining the numbered records explicitly listed in `deliberations/DR-CURRENT.md`. EC-CURRENT is the active exemplar-grounding correction pointer. OP-CURRENT is the active synthetic Operative Package pointer.
 
 ## Active Work Focus
 
-The Hagiography Evidence-to-Canon Contract was pressure-tested 10/10 and admitted by DR-038. The Foundry Input and Conflict Contract was pressure-tested 14/14 and admitted by DR-040. The active contract is the Pit Independent Validation Contract under the creation-apparatus review queue. Do not implement, activate, or create live personas or Operatives during this step.
+The Hagiography Evidence-to-Canon Contract was pressure-tested 10/10 and admitted by DR-038. The Foundry Input and Conflict Contract was pressure-tested 14/14 and admitted by DR-040. Pit’s Independent Validation Contract was pressure-tested 16/16 and admitted by DR-042. The active queue advances to Garrison Admission and Suitability. Do not implement, activate, or create live personas or Operatives during this step.
 
 The previously composed HTTP/persistence implementation remains historical context, not the active work leg.
 
