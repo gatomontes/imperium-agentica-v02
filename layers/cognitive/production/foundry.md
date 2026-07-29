@@ -10,7 +10,30 @@ Admission: `Production Admission Review 003`.
 
 Evidence: `Constitutional Test Run 015 — 30 PASS / 0 FAIL`.
 
-Foundry integrates governed professional inputs into a deployment-medium-agnostic Persona Specification Candidate.
+Foundry integrates governed professional inputs into a deployment-medium-agnostic Persona Specification Candidate. Its forging process is organized into bounded functional stations, or chambers, whose resident intelligent operatives perform the station work.
+
+## Station model
+
+Foundry is an office, not a single undifferentiated action. A Foundry Officer governs and authenticates one candidate packet's passage through bounded stations. Each station is a functional part of Foundry, occupied by a resident operative assigned to perform its intelligent work.
+
+The production line is:
+
+```text
+Foundry Officer → Receiving → Confluence → Temperance → Specification → Provenance → Dispatch → Pit
+```
+
+The stations are:
+
+- **Receiving:** accepts and verifies the approved Foundry entry packet and post-approval Studium doctrinal packet.
+- **Confluence:** integrates profession, exemplar material, doctrine, traits, methods, duties, limits, and required persona characteristics.
+- **Temperance:** identifies and resolves permitted conflicts, excesses, omissions, and tensions without weakening upstream authority.
+- **Specification:** composes the coherent, testable Persona Specification Candidate.
+- **Provenance:** preserves lineage for consequential features, transformations, decisions, and unresolved tensions.
+- **Dispatch:** verifies completeness and releases the candidate to Pit.
+
+Chambers are functions, not officers or independent authorities. Deterministic Runtime mechanisms may perform schema validation, formatting, versioning, and record linkage. The resident operatives perform the bounded intelligent work.
+
+The Foundry Officer may return unresolved defects to the responsible upstream authority. The officer governs the passage and authenticates the result; the officer does not replace the station operatives.
 
 ## Inputs
 
@@ -54,6 +77,16 @@ Foundry must not:
 - produce a platform-specific operative
 - grant tools, credentials, mission authority, or deployment
 - mutate an admitted Canonical Persona in place
+
+## Resident-operative boundary
+
+```text
+The Foundry Officer governs the passage.
+Resident station operatives do the forging.
+Runtime mechanisms perform deterministic work.
+Pit tests the candidate.
+Guildhall admits, recycles, or discards.
+```
 
 ## Boundary Maxim
 
