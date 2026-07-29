@@ -1,19 +1,5 @@
 ## Next Steps
 
-## Current Work Step — Courtyard Institutional Definition
-
-The active step is to define the Courtyard as the operating surface of the Citadel’s offices and Imperium Officers.
-
-Review targets:
-1. office and Officer placement;
-2. station and resident-operative relationships;
-3. authority, assignment, and authentication boundaries;
-4. institutional requests, determinations, artifacts, evidence, and records;
-5. office interaction with Runtime and Master Mason;
-6. the boundary between Courtyard operation, La Cortine crossing, and Lazaretto return.
-
-This is semantic and architectural work only. It does not authorize implementation, Runtime action, credentials, activation, deployment, or external effect. HTTP/persistence composition remains deferred historical implementation work.
-
 ## New-Chat Breakpoint
 
 Completed synthetic sequence:
@@ -33,11 +19,11 @@ Active pointers:
 
 Operational maturity remains unproven. No live provider, credential, tool, runtime, mission, activation, deployment, or external effect has been exercised.
 
-Courtyard institutional definition is selected as the active step. Its completion requires an admitted semantic contract; implementation and activation remain separately gated.
+The active step is recorded in `current-step.md`; this file contains only later candidates and historical context.
 
 ## Status
 
-Semantic Integrity is complete and closed. The external reader recovered the intended meaning from the repository without relying on conversation history. DR-CURRENT is the active decision pointer. EC-CURRENT is the active exemplar-grounding correction pointer: EC-01 admitted, EC-02 deferred, EC-03 closed. A synthetic Hagiography application passed. Human-Trait Canon design review is active.
+Semantic Integrity is complete and closed. The external reader recovered the intended meaning from the repository without relying on conversation history. DR-CURRENT is the active decision pointer. EC-CURRENT is the active exemplar-grounding correction pointer: EC-01 admitted, EC-02 deferred, EC-03 closed. A synthetic Hagiography application passed. Human-Trait Canon schema and lifecycle review were completed and admitted by DR-012.
 
 DR-010 records **Observator/Custos (`OC`)** as one mission-attached Imperium Operator instance—not two roles or cooperating components—with authorized visibility and interaction but no execution influence.
 
