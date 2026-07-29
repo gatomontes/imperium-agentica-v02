@@ -13,7 +13,7 @@ EC-01 admitted → Human-Trait Canon admitted → EC-02 admitted
 
 Active pointers:
 
-- DR-CURRENT: active decision pointer through DR-048
+- DR-CURRENT: active decision pointer through DR-050
 - EC-CURRENT: EC-01 and EC-02 admitted; EC-03 closed
 - OP-CURRENT: OP-SYN-001 v0.1 admitted, inactive synthetic package
 
@@ -139,4 +139,9 @@ Each increment requires its own semantic pressure test and admission review. Syn
 
 ## Active Contract Queue
 
-DR-046 admitted DR-045 after a 20/20 synthetic pressure test. DR-047 was admitted by DR-048 after a 20/20 synthetic pressure test. The creation-apparatus contract queue is complete; DR-049 scopes the active closure and reconciliation review. No implementation or external effect is authorized.
+DR-046 admitted DR-045 after a 20/20 synthetic pressure test. DR-047 was admitted by DR-048 after a 20/20 synthetic pressure test. DR-049 was admitted by DR-050 after a 24/24 synthetic reconciliation test. The creation-apparatus contract chain is semantically closed. No implementation or external effect is authorized.
+
+
+## Creation-Apparatus Closure
+
+DR-049 was reconciled and admitted by DR-050 after a 24/24 synthetic end-to-end matrix. The admitted chain preserves one authoritative contract per function, authority boundaries, complete lineage, successor-version behavior, refusal/return/escalation, synchronized pointers, and explicit non-activation boundaries. Creation-apparatus semantic work is closed; no subsequent step is selected. Implementation, Runtime, activation, deployment, credentials, live data, and external effects remain unauthorized.
