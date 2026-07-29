@@ -6,7 +6,7 @@
 - Improvement programs recorded: 7
 - Pending control records: 7
 - Implemented control records: 0
-- Decision records: 39
+- Decision records: 41
 - Initial assessment: `assessments/2026-07-23-mit-ai-risks-imperium-assessment.md`
 - Integration review: `assessments/2026-07-23-ra-integration-review-001.md`
 - Integration execution: `assessments/2026-07-23-ra-integration-review-execution-001.md`
@@ -124,9 +124,17 @@ None recorded.
 | DR-038 | Admit Hagiography Evidence-to-Canon Contract after synthetic pressure test | Recorded decision; semantic only |
 | DR-039 | Define Foundry Input and Conflict Contract | Recorded decision; admitted semantic contract |
 | DR-040 | Admit Foundry Input and Conflict Contract after synthetic pressure test | Recorded decision; semantic only |
+| DR-041 | Define Pit Independent Validation Contract | Recorded decision; active semantic contract proposal |
 | DR-039 | Define Foundry Input and Conflict Contract | Recorded decision; active semantic contract proposal |
 
 The two `DR-002` records are distinct historical files. The later OpenBao topology decision reused an existing ID before this registry was updated. This record preserves both and records the collision; renumbering a prior decision requires a separate traceable normalization.
+
+### DR-041 — Pit Independent Validation Contract
+
+Status: active semantic contract proposal; admission pending synthetic pressure test.
+Path: `deliberations/decisions/DR-041-pit-independent-validation-contract.md`
+
+Pit’s independent examination boundary, refusal/return behavior, evidence and findings contract, retest/invalidation rules, and Guildhall recommendation boundary are defined for review. No implementation or external effect is authorized.
 
 ## Maintenance Rule
 
