@@ -13,7 +13,7 @@ EC-01 admitted → Human-Trait Canon admitted → EC-02 admitted
 
 Active pointers:
 
-- DR-CURRENT: active decision pointer through DR-039
+- DR-CURRENT: active decision pointer through DR-041
 - EC-CURRENT: EC-01 and EC-02 admitted; EC-03 closed
 - OP-CURRENT: OP-SYN-001 v0.1 admitted, inactive synthetic package
 
@@ -140,3 +140,11 @@ Each increment requires its own semantic pressure test and admission review. Syn
 ## Active Contract Queue
 
 DR-040 admitted DR-039 after a 14/14 synthetic pressure test. The active queue advances to Pit Independent Validation Contract. Implementation, Runtime, live data, activation, deployment, credentials, and external effects remain unauthorized.
+
+
+### DR-041 — Pit Independent Validation Contract
+
+Status: active semantic contract proposal; admission pending synthetic pressure test.
+Path: `deliberations/decisions/DR-041-pit-independent-validation-contract.md`
+
+Pit’s independent examination boundary, refusal/return behavior, evidence and findings contract, retest/invalidation rules, and Guildhall recommendation boundary are defined for review. No implementation or external effect is authorized.
