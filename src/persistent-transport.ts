@@ -3,7 +3,6 @@ import { ResponseDelivery } from "./delivery.js";
 import { PersistentImperiumReference } from "./persistent-reference.js";
 import { OperatorResponse } from "./response.js";
 import { Petition, OperatorRequest } from "./secretariat.js";
-import { WorkSpecification } from "./castellan.js";
 import {
   AsyncImperiumTransportAdapter,
   ClarificationRequest,
