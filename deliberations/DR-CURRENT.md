@@ -114,3 +114,11 @@ Status: active admitted semantic contract set.
 Path: deliberations/decisions/DR-018-creation-apparatus-completion-contracts.md
 
 Eight bounded Cognitive completion contracts for the professional Operative path are admitted for current semantic use. The decision does not authorize implementation, live data, Runtime, deployment, Officer/Gesta work, or external effect.
+
+
+### DR-020 — Courtyard Office Operating Surface
+
+Status: active semantic architecture decision.
+Path: `deliberations/decisions/DR-020-courtyard-office-operating-surface.md`
+
+The Courtyard is the operating surface for Imperium offices and their authorized Imperium Officers. It does not itself grant authority or authorize Runtime, deployment, credentials, boundary crossing, or external effect.

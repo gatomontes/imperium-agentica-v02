@@ -118,3 +118,8 @@ No creation-apparatus completion work, Execution-layer work, OC implementation, 
 ## Creation Apparatus Completion
 
 The eight bounded completion contracts were admitted by DR-018 after Pressure Run 002 and Admission Review 001. Their admission is semantic only. Implementation and operational proof remain future, separately authorized work.
+
+
+## Courtyard Surface Decision
+
+DR-020 records the Courtyard as the operating surface for Imperium offices and their authorized Imperium Officers. It is distinct from La Cortine, external research/deployment surfaces, and Lazaretto. Detailed Courtyard contracts remain future work and require explicit authorization. No office implementation, officer activation, Runtime permission, deployment, research dispatch, boundary crossing, or external effect is authorized.
