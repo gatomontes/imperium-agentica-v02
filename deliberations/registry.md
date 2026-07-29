@@ -6,7 +6,7 @@
 - Improvement programs recorded: 7
 - Pending control records: 7
 - Implemented control records: 0
-- Decision records: 31
+- Decision records: 32
 - Initial assessment: `assessments/2026-07-23-mit-ai-risks-imperium-assessment.md`
 - Integration review: `assessments/2026-07-23-ra-integration-review-001.md`
 - Integration execution: `assessments/2026-07-23-ra-integration-review-execution-001.md`
@@ -112,6 +112,7 @@ None recorded.
 | DR-026 | Define Studium functional chambers and distinct doctrinal lines | Recorded decision; semantic only |
 | DR-027 | Define Courtyard membership, office-versus-Officer distinction, station/operative relationship, and inter-office movement | Recorded decision; semantic only |
 | DR-028 | Review Courtyard contracts against admitted office and external-boundary responsibilities | Recorded decision; semantic only |\n| DR-029 | Close Courtyard office and station contracts | Recorded decision; semantic only |\n| DR-030 | Close Courtyard semantic definition | Recorded decision; semantic closure; implementation not authorized |\n| DR-031 | Select creation-apparatus institutional completion review scope | Recorded decision; semantic only |
+| DR-032 | Record creation-apparatus institutional completion review findings and queue | Recorded decision; semantic only |
 
 The two `DR-002` records are distinct historical files. The later OpenBao topology decision reused an existing ID before this registry was updated. This record preserves both and records the collision; renumbering a prior decision requires a separate traceable normalization.
 
@@ -150,3 +151,10 @@ Status: completed semantic boundary review.
 Path: `deliberations/decisions/DR-028-courtyard-cross-office-consistency-review.md`
 
 Courtyard composes, but does not absorb, the admitted boundaries of the principal offices and external interfaces. No implementation or external effect is authorized.
+
+### DR-032 — Creation-Apparatus Institutional Completion Review Findings
+
+Status: active semantic review boundary.
+Path: `deliberations/decisions/DR-032-creation-apparatus-completion-review-findings.md`
+
+The professional creation path remains synthetically conformant but institutionally incomplete. Eight independently reviewable contracts are queued, beginning with Guildhall. No implementation or external effect is authorized.

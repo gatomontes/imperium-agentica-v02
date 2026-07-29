@@ -123,3 +123,16 @@ Completed: Courtyard’s institutional boundary, membership, office-versus-Offic
 Completed: Courtyard cross-office consistency review is recorded in `current-step.md` and DR-028. The review confirms that Courtyard composes admitted office boundaries without absorbing their authority or the roles of La Cortine, Lazaretto, Curia, Garrison, or Runtime.
 
 Courtyard semantic closure is complete. Candidate next paths include creation-apparatus institutional completion review, provider-neutral deployment authorization investigation, or a separately scoped implementation-readiness review. None is active; implementation, Runtime, activation, deployment, credentials, live data, and external effects remain unauthorized.
+
+## Creation-Apparatus Completion Queue — DR-032
+
+1. Guildhall Profession Resolution Contract
+2. Studium Doctrine Lifecycle Contract
+3. Hagiography Evidence-to-Canon Contract
+4. Foundry Input and Conflict Contract
+5. Pit Independent Validation Contract
+6. Garrison Admission and Suitability Contract
+7. Conscription Transformation and Handoff Contract
+8. Cross-Chain Invalidation and Version-Integrity Contract
+
+Each increment requires its own semantic pressure test and admission review. Synthetic evidence remains non-operational; implementation, Runtime, live data, activation, deployment, credentials, and external effects remain unauthorized.
