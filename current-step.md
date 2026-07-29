@@ -101,3 +101,8 @@ Creation-apparatus institutional completion remains unestablished. Live persona 
 ## Creation Apparatus Admission
 
 DR-018 admits eight bounded Cognitive completion contracts for the professional Operative path. They are semantic contracts only; institutional implementation, live data, live persona/Operative creation, Runtime action, deployment, Officer/Gesta work, OC implementation, and external effect remain unauthorized.
+
+
+## Foundry Update — DR-024
+
+Foundry's forging process is now semantically defined as a station sequence: Receiving, Confluence, Temperance, Specification, Provenance, and Dispatch. Each station is occupied by a resident operative that performs its bounded intelligent work. The Foundry Officer governs and authenticates packet passage. Chambers are functions, not officers or independent authorities; deterministic Runtime work remains distinct. No implementation, activation, live persona production, deployment, or external effect is authorized.
