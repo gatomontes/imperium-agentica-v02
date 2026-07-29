@@ -6,7 +6,7 @@
 - Improvement programs recorded: 7
 - Pending control records: 7
 - Implemented control records: 0
-- Decision records: 37
+- Decision records: 38
 - Initial assessment: `assessments/2026-07-23-mit-ai-risks-imperium-assessment.md`
 - Integration review: `assessments/2026-07-23-ra-integration-review-001.md`
 - Integration execution: `assessments/2026-07-23-ra-integration-review-execution-001.md`
@@ -121,6 +121,7 @@ None recorded.
 | DR-035 | Define Studium Persona Governance Doctrine Lifecycle Contract | Recorded decision; admitted semantic contract; Persona branch only |
 | DR-036 | Admit Studium Doctrine Lifecycle Contract after synthetic pressure test | Recorded decision; semantic only |
 | DR-037 | Define Hagiography Evidence-to-Canon Contract | Recorded decision; active semantic contract proposal |
+| DR-038 | Admit Hagiography Evidence-to-Canon Contract after synthetic pressure test | Recorded decision; semantic only |
 
 The two `DR-002` records are distinct historical files. The later OpenBao topology decision reused an existing ID before this registry was updated. This record preserves both and records the collision; renumbering a prior decision requires a separate traceable normalization.
 

@@ -195,6 +195,13 @@ Path: `deliberations/decisions/DR-037-hagiography-evidence-to-canon-contract.md`
 
 Hagiography’s evidence-to-canon boundary is under semantic review. Admission requires synthetic pressure testing; no implementation or external effect is authorized.
 
+### DR-038 — Hagiography Evidence-to-Canon Admission Review
+
+Status: admitted semantic contract.
+Path: `deliberations/decisions/DR-038-hagiography-evidence-to-canon-admission-review.md`
+
+Synthetic pressure testing passed 10/10. DR-037 is admitted for current semantic use. Hagiography requires Guildhall approval/exemplar-fit input and an explicit canonization gate before downstream handoff. No implementation or external effect is authorized.
+
 ### DR-033 — Guildhall Profession Resolution Contract
 
 Status: admitted semantic contract.
