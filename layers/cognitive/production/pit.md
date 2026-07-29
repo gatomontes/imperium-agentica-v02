@@ -10,7 +10,7 @@ Admission: `Production Admission Review 003`.
 
 Evidence: `Constitutional Test Run 015 — 30 PASS / 0 FAIL`.
 
-Pit tests the integrated Persona Specification Candidate before Garrison admission.
+Pit is Imperium's adversarial qualification office. It tests the integrated Persona Specification Candidate before Guildhall Committee disposition.
 
 ## Core Question
 
@@ -18,9 +18,24 @@ Pit tests the integrated Persona Specification Candidate before Garrison admissi
 Does the whole persona preserve competence, governance, evidence duties, and bounded traits under pressure?
 ```
 
+## Stations
+
+Pit may be organized into bounded functional stations occupied by resident testing operatives:
+
+- **Receiving:** verifies the candidate, lineage, and test inputs.
+- **Contrarian:** attacks assumptions and searches for contradictions.
+- **Boundary:** tests duties, prohibitions, authority, refusal, and scope limits.
+- **Stress:** applies difficult, ambiguous, and adversarial scenarios.
+- **Failure:** identifies unsafe behavior, drift, omissions, and collapse conditions.
+- **Evidence:** records tests, results, artifacts, and uncertainty.
+- **Briefing:** composes the versioned Pit Brief.
+
+The Pit Officer governs the candidate's passage, preserves examination independence, and authenticates the brief. Resident testing operatives perform the bounded intelligent work.
+
 ## Inputs
 
 - Persona Specification Candidate
+- upstream versions and provenance
 - Work and Profession Specifications
 - Persona Governance Doctrine
 - Human-Trait Canon when applicable
@@ -28,45 +43,49 @@ Does the whole persona preserve competence, governance, evidence duties, and bou
 
 ## Product
 
-Pit produces versioned Pit Findings containing:
+Pit produces a versioned Pit Brief containing:
 
-- tested candidate and upstream versions
-- competence results
-- governance and refusal results
-- evidence and uncertainty results
-- trait behavior under pressure
-- failures and implicated upstream artifacts
-- retest conditions
-- admission or revision recommendation
+- tested candidate and upstream versions;
+- competence results;
+- governance, authority, and refusal results;
+- evidence and uncertainty results;
+- trait behavior under pressure;
+- failures and implicated upstream artifacts;
+- retest conditions;
+- a disposition recommendation.
 
-Recommendation is not admission.
+Recommendation is not disposition.
 
-## Return Paths
+## Disposition and Return Paths
 
-Pit may return findings to:
+Pit submits the Pit Brief to the Guildhall Committee. The Committee determines **Admit**, **Recycle**, or **Discard**.
 
-- Foundry for integration defects
-- Studium for doctrine defects
-- Hagiography for trait-canon defects
-- Guildhall for profession defects
-- Castellan for work-specification defects
+Pit may identify repair targets for:
+
+- Foundry integration defects;
+- Studium doctrine defects;
+- Hagiography trait-canon defects;
+- Guildhall profession defects;
+- Castellan work-specification defects.
+
+Pit does not perform those repairs.
 
 ## Non-Authority
 
 Pit must not:
 
-- edit the artifacts it tests
-- admit the candidate
-- recruit or deploy an operative
-- treat fluency as proof
-- hide governance failure behind task accuracy
-- overwrite historical findings
+- edit the artifacts it tests;
+- admit the candidate;
+- recruit or deploy an operative;
+- treat fluency as proof;
+- hide governance failure behind task accuracy;
+- overwrite historical findings.
 
 ## Boundary Maxim
 
 ```text
-Foundry integrates.
-Pit pressures and records.
-Upstream owners revise.
-Garrison admits.
+Foundry forges.
+Pit attacks and records.
+Guildhall determines disposition.
+Garrison keeps the admitted roster.
 ```
