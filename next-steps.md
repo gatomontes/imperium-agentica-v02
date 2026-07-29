@@ -118,3 +118,12 @@ No creation-apparatus completion work, Execution-layer work, OC implementation, 
 ## Creation Apparatus Completion
 
 The eight bounded completion contracts were admitted by DR-018 after Pressure Run 002 and Admission Review 001. Their admission is semantic only. Implementation and operational proof remain future, separately authorized work.
+
+
+## DR-019 — Secretariat Office Record
+
+DR-019 is admitted as a semantic decision. Secretariat is an office, not an agent or decision-maker. Its authorized officeholder is an Imperium Officer; Isolde is designated for that role. The Secretariat Acta records the office’s activity and correspondence, while a separate Secretariat Office Specification defines the office itself.
+
+The office/officeholder distinction applies to all Imperium offices. Castellan retains the authority to determine whether an operator request requires persona production, recruitment, mission execution, or a combination. Secretariat brings requests and determinations between the operator and responsible offices.
+
+No Secretariat implementation, Isolde activation, persona production, recruitment, deployment, Runtime action, credential work, or external effect is authorized by this record.
