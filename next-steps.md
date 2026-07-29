@@ -13,13 +13,13 @@ EC-01 admitted → Human-Trait Canon admitted → EC-02 admitted
 
 Active pointers:
 
-- DR-CURRENT: active decision pointer through DR-031
+- DR-CURRENT: active decision pointer through DR-035
 - EC-CURRENT: EC-01 and EC-02 admitted; EC-03 closed
 - OP-CURRENT: OP-SYN-001 v0.1 admitted, inactive synthetic package
 
 Operational maturity remains unproven. No live provider, credential, tool, runtime, mission, activation, deployment, or external effect has been exercised.
 
-Creation-apparatus institutional completion review is now the active semantic step under DR-031. Guildhall’s Profession Resolution Contract was admitted by DR-034. Courtyard remains closed. This file contains later candidates and historical context.
+Creation-apparatus institutional completion review is now the active semantic step under DR-031. Guildhall’s Profession Resolution Contract was admitted by DR-034. Studium Doctrine Lifecycle is now the active contract review under DR-035. Courtyard remains closed. This file contains later candidates and historical context.
 
 ## Status
 
@@ -141,7 +141,4 @@ Each increment requires its own semantic pressure test and admission review. Syn
 
 DR-033 — Guildhall Profession Resolution Contract: pressure-test refusal, decomposition, ambiguity, multi-profession tie, reassessment, artifact ownership, and Garrison-search eligibility. Admission requires a separate review record; implementation and external effects remain unauthorized.
 
-
-## Active Contract Queue
-
-DR-035 — Studium Doctrine Lifecycle Contract: pressure-test doctrine intake, applicability, boundary, conduct, evidence, conflict, issuance, revision, and invalidation. Admission requires a separate review record; implementation and external effects remain unauthorized.
+\n## Active Contract Queue\n\nDR-035 — Studium Doctrine Lifecycle Contract: pressure-test intake, applicability, boundary, conduct, evidence, conflict, issuance, revision, invalidation, and receiving-office refusal behavior. Admission requires a separate review record; implementation and external effects remain unauthorized.\n
