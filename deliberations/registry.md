@@ -6,7 +6,7 @@
 - Improvement programs recorded: 7
 - Pending control records: 7
 - Implemented control records: 0
-- Decision records: 45
+- Decision records: 46
 - Initial assessment: `assessments/2026-07-23-mit-ai-risks-imperium-assessment.md`
 - Integration review: `assessments/2026-07-23-ra-integration-review-001.md`
 - Integration execution: `assessments/2026-07-23-ra-integration-review-execution-001.md`
@@ -208,3 +208,16 @@ Status: active admitted semantic contract.
 Path: `deliberations/decisions/DR-034-guildhall-profession-resolution-admission-review.md`
 
 Synthetic pressure testing passed 8/8 criteria. DR-033 is admitted for current semantic use; no implementation or external effect is authorized.
+
+
+### DR-045 — Recruitment/Conscription Transformation and Handoff Contract
+
+Status: admitted semantic contract.
+
+DR-045 is admitted by DR-046 after a 20/20 synthetic pressure test. Recruitment/Conscription preserves eligible-set selection, transformation fidelity, immutable lineage, and accepted-handoff boundaries. No implementation or external effect is authorized.
+
+### DR-046 — Recruitment/Conscription Transformation and Handoff Admission Review
+
+Status: admitted semantic contract.
+
+DR-045 passed 20/20 synthetic pressure-test criteria and is admitted for current semantic use. The active queue advances to Cross-Chain Invalidation and Version-Integrity. No implementation or external effect is authorized.
