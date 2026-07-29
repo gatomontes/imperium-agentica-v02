@@ -209,3 +209,4 @@ Status: active semantic contract proposal; admission pending pressure test.
 Path: `deliberations/decisions/DR-035-studium-doctrine-lifecycle-contract.md`
 
 Studium’s doctrine intake, applicability, boundary, conduct, evidence, conflict, issuance, revision, and invalidation contract is recorded for review. No implementation or external effect is authorized.
+\n\n### DR-036 — Studium Doctrine Lifecycle Admission Review\n\nStatus: active admitted semantic contract.\nPath: `deliberations/decisions/DR-036-studium-doctrine-lifecycle-admission-review.md`\n\nDR-035 is admitted for the Persona Governance Doctrine → Foundry branch only after a 12/12 synthetic pressure test. Officer Governance Doctrine and Smith remain outside this admission. No implementation or external effect is authorized.\n
