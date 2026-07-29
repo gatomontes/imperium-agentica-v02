@@ -187,3 +187,10 @@ Status: active semantic review boundary.
 Path: `deliberations/decisions/DR-032-creation-apparatus-completion-review-findings.md`
 
 The creation chain is synthetically conformant but institutionally incomplete. Eight remaining contracts are queued for independent semantic review, beginning with Guildhall. No implementation or external effect is authorized.
+
+### DR-033 — Guildhall Profession Resolution Contract
+
+Status: active semantic contract proposal.
+Path: `deliberations/decisions/DR-033-guildhall-profession-resolution-contract.md`
+
+Guildhall’s professional-resolution boundary and review gate are recorded. Admission remains pending pressure testing; no implementation or external effect is authorized.
