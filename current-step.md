@@ -166,3 +166,16 @@ Courtyard is therefore distinct from:
 - the external execution surface.
 
 This boundary is a semantic contract only. It authorizes no implementation, activation, deployment, credential use, Runtime action, or external effect.
+
+
+## Courtyard Cross-Office Consistency Review — DR-028
+
+DR-028 records a semantic consistency review of the Courtyard contracts against the admitted boundaries of Guildhall, Studium, Hagiography, Foundry, Pit, Garrison, Recruitment/Conscription, Muster, Curia, La Cortine, and Lazaretto.
+
+The review confirms that Courtyard is an operating surface, not an authority source. Guildhall retains profession and candidate-disposition responsibilities; Studium retains doctrinal fitting and issuance responsibilities; Hagiography retains exemplar and Human-Trait Canon responsibilities; Foundry retains Persona Specification production; Pit retains adversarial qualification and recommendation; Garrison retains roster and availability custody; Recruitment/Conscription retains deployment-medium packaging; Muster retains outbound mission orchestration; and Curia retains mission-level decision authority.
+
+Courtyard offices may exchange artifacts and requests only within their admitted contracts. Courtyard does not absorb La Cortine’s external boundary and routing function, Lazaretto’s return quarantine and sanitization function, Curia’s mission decision authority, Garrison’s roster custody, or Runtime’s operational role. No office gains authority merely through receipt, proximity, or participation in a handoff.
+
+The consistency review identifies no semantic merge of office responsibilities and no new orchestration or governance layer. Any unresolved implementation, artifact-schema, Runtime, activation, deployment, credential, or external-effect questions remain future work and are not authorized by this review.
+
+This is semantic only; no implementation, Runtime action, activation, deployment, credential use, or external effect is authorized.
