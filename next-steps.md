@@ -139,7 +139,7 @@ Each increment requires its own semantic pressure test and admission review. Syn
 
 ## Active Contract Queue
 
-DR-042 admitted DR-041 after a 16/16 synthetic pressure test. The active queue advances to Garrison Admission and Suitability.
+DR-044 admitted DR-043 after an 18/18 synthetic pressure test. The active queue advances to Recruitment/Conscription Transformation and Handoff.
 
 ### DR-045 — Recruitment/Conscription Transformation and Handoff Contract
 
