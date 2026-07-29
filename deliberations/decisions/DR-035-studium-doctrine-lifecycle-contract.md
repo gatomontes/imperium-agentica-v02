@@ -6,7 +6,7 @@ Semantic contract proposal. Pressure testing and admission remain separate. Synt
 
 ## Boundary
 
-Studium is the doctrinal office. It receives a defined institutional subject and determines which admitted doctrine applies, what boundaries and conduct rules govern the subject, what evidence standard is required, how conflicts are exposed, and what versioned doctrinal artifact must be issued to the receiving office.
+For this increment, Studium’s lifecycle contract is limited to the Persona Governance Doctrine branch delivered to Foundry. Studium receives a defined approved Guildhall candidate and determines which admitted Persona Governance Doctrine applies, what boundaries and conduct rules govern the subject, what evidence standard is required, how conflicts are exposed, and what versioned doctrinal artifact must be issued to the receiving office.
 
 Studium does not determine professional fit, select personas, approve Guildhall candidates, forge Persona Specifications, test candidates, reserve Garrison inventory, recruit Operatives, or deploy them. Guildhall’s approved candidate is a precondition for doctrine fitting.
 
@@ -40,8 +40,8 @@ Studium owns doctrine-lifecycle artifacts and their doctrinal provenance. The re
 
 The Studium Officer governs and authenticates Studium work. Resident operatives perform bounded chamber work and may not adjudicate conflicts, issue doctrine, or cross chambers on their own authority.
 
-## Separation of doctrinal lines
+## Authorized doctrinal branch
 
-Persona Governance Doctrine is directed to Foundry. Officer Governance Doctrine is directed to Smith. A Studium artifact must identify its doctrinal line and may not silently substitute one for the other.
+This contract governs only Persona Governance Doctrine delivered to Foundry after Guildhall candidate approval. Officer Governance Doctrine and Smith are explicitly outside this increment. A Studium artifact in this contract must identify the Persona Governance Doctrine line and may not silently substitute Officer Governance Doctrine for it.
 
 Admission requires synthetic pressure testing of intake, applicability, boundaries, conduct, evidence, conflict, issuance, revision, invalidation, and receiving-office refusal behavior.
