@@ -218,45 +218,14 @@ DR-039 was admitted after a 14/14 synthetic pressure test. No implementation or 
 
 ### DR-041 — Pit Independent Validation Contract
 
-Status: active semantic contract proposal; admission pending synthetic pressure test.
+Status: admitted semantic contract.
 Path: `deliberations/decisions/DR-041-pit-independent-validation-contract.md`
 
-Pit's independent examination boundary, independence requirement, test identity, failure taxonomy and ownership, refusal/return behavior, retest/invalidation rules, and Guildhall disposition boundary are defined for review. No implementation or external effect is authorized.
+DR-041 is admitted by DR-042 after a 16/16 synthetic pressure test. Pit preserves independent examination, classified findings, Guildhall disposition authority, provenance, and immutable retest lineage. No implementation or external effect is authorized.
 
-### DR-033 — Guildhall Profession Resolution Contract
-
-Status: admitted semantic contract.
-Path: `deliberations/decisions/DR-033-guildhall-profession-resolution-contract.md`
-
-Guildhall’s professional-resolution boundary and review gate are recorded. Admission remains pending pressure testing; no implementation or external effect is authorized.
-
-
-### DR-034 — Guildhall Profession Resolution Admission Review
+### DR-042 — Pit Independent Validation Admission Review
 
 Status: active admitted semantic contract.
-Path: `deliberations/decisions/DR-034-guildhall-profession-resolution-admission-review.md`
+Path: `deliberations/decisions/DR-042-pit-independent-validation-admission-review.md`
 
-Synthetic pressure testing passed 8/8. DR-033 is admitted for current semantic use. No implementation or external effect is authorized.
-
-### DR-035 — Studium Doctrine Lifecycle Contract
-
-Status: active semantic contract proposal; admission pending pressure test.
-Path: `deliberations/decisions/DR-035-studium-doctrine-lifecycle-contract.md`
-
-Studium’s doctrine intake, applicability, boundary, conduct, evidence, conflict, issuance, revision, and invalidation contract is recorded for review. No implementation or external effect is authorized.
-\n\n### DR-036 — Studium Doctrine Lifecycle Admission Review\n\nStatus: active admitted semantic contract.\nPath: `deliberations/decisions/DR-036-studium-doctrine-lifecycle-admission-review.md`\n\nDR-035 is admitted for the Persona Governance Doctrine → Foundry branch only after a 12/12 synthetic pressure test. Officer Governance Doctrine and Smith remain outside this admission. No implementation or external effect is authorized.\n
-
-### DR-040 — Foundry Input and Conflict Admission Review
-
-Status: admitted semantic contract.
-Path: `decisions/DR-040-foundry-input-conflict-admission-review.md`
-
-DR-039 was admitted after a 14/14 synthetic pressure test. Foundry’s complete-input, provenance, conflict, refusal/return, immutable successor-version, and Pit handoff rules are admitted for current semantic use. No implementation or external effect is authorized.
-
-
-### DR-041 — Pit Independent Validation Contract
-
-Status: active semantic contract proposal; admission pending synthetic pressure test.
-Path: `decisions/DR-041-pit-independent-validation-contract.md`
-
-Pit’s independent examination boundary, refusal/return behavior, evidence and findings contract, retest/invalidation rules, and Guildhall recommendation boundary are defined for review. No implementation or external effect is authorized.
+DR-041 is admitted for current semantic use after a 16/16 synthetic pressure test. No implementation or external effect is authorized.
