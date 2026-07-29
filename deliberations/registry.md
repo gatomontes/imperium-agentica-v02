@@ -6,7 +6,7 @@
 - Improvement programs recorded: 7
 - Pending control records: 7
 - Implemented control records: 0
-- Decision records: 35
+- Decision records: 36
 - Initial assessment: `assessments/2026-07-23-mit-ai-risks-imperium-assessment.md`
 - Integration review: `assessments/2026-07-23-ra-integration-review-001.md`
 - Integration execution: `assessments/2026-07-23-ra-integration-review-execution-001.md`
@@ -114,7 +114,7 @@ None recorded.
 | DR-028 | Review Courtyard contracts against admitted office and external-boundary responsibilities | Recorded decision; semantic only |\n| DR-029 | Close Courtyard office and station contracts | Recorded decision; semantic only |\n| DR-030 | Close Courtyard semantic definition | Recorded decision; semantic closure; implementation not authorized |\n| DR-031 | Select creation-apparatus institutional completion review scope | Recorded decision; semantic only |
 | DR-032 | Record creation-apparatus institutional completion review findings and queue | Recorded decision; semantic only |
 | DR-033 | Define Guildhall Profession Resolution Contract | Recorded decision; admitted semantic contract |\n| DR-034 | Admit Guildhall Profession Resolution Contract after synthetic pressure test | Recorded decision; semantic only |
-| DR-035 | Define Studium Persona Governance Doctrine Lifecycle Contract | Recorded decision; semantic contract proposal; admission pending pressure test |
+| DR-035 | Define Studium Persona Governance Doctrine Lifecycle Contract | Recorded decision; admitted semantic contract; Persona branch only |\n| DR-036 | Admit Studium Doctrine Lifecycle Contract after synthetic pressure test | Recorded decision; semantic only |
 
 The two `DR-002` records are distinct historical files. The later OpenBao topology decision reused an existing ID before this registry was updated. This record preserves both and records the collision; renumbering a prior decision requires a separate traceable normalization.
 
@@ -126,7 +126,7 @@ Update this registry in the same increment that creates, promotes, demotes, inva
 - Creation Apparatus Completion Contract admission review: `assessments/2026-07-26-creation-apparatus-completion-admission-review-001.md` — all eight contracts PASS; DR-018 admitted
 
 
-## Latest Decision
+- Studium doctrine pressure test: `assessments/2026-07-29-studium-doctrine-lifecycle-pressure-test-001.md` — 12/12 PASS\n\n## Latest Decision
 
 | DR-025 | Define Pit adversarial qualification and Guildhall disposition boundary | Recorded decision; semantic process model only |
 
