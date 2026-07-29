@@ -136,3 +136,7 @@ Courtyard semantic closure is complete. Candidate next paths include creation-ap
 8. Cross-Chain Invalidation and Version-Integrity Contract
 
 Each increment requires its own semantic pressure test and admission review. Synthetic evidence remains non-operational; implementation, Runtime, live data, activation, deployment, credentials, and external effects remain unauthorized.
+
+## Active Contract Queue
+
+DR-033 — Guildhall Profession Resolution Contract: pressure-test refusal, decomposition, ambiguity, multi-profession tie, reassessment, artifact ownership, and Garrison-search eligibility. Admission requires a separate review record; implementation and external effects remain unauthorized.
