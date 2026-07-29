@@ -13,7 +13,7 @@ EC-01 admitted → Human-Trait Canon admitted → EC-02 admitted
 
 Active pointers:
 
-- DR-CURRENT: active decision pointer through DR-036
+- DR-CURRENT: active decision pointer through DR-037
 - EC-CURRENT: EC-01 and EC-02 admitted; EC-03 closed
 - OP-CURRENT: OP-SYN-001 v0.1 admitted, inactive synthetic package
 
@@ -139,4 +139,4 @@ Each increment requires its own semantic pressure test and admission review. Syn
 
 ## Active Contract Queue
 
-DR-037 — Hagiography Evidence-to-Canon Contract: define evidence intake, source sufficiency, achievement verification, transferable-trait derivation, canon entry ownership, refusal, revision, supersession, and downstream handoff. Admission requires a separate semantic pressure test; implementation and external effects remain unauthorized.
+DR-037 — Hagiography Evidence-to-Canon Contract: pressure-test evidence intake, source sufficiency, achievement verification, transferable-trait derivation, canon entry ownership, refusal, revision, supersession, and downstream handoff. Admission requires a separate semantic pressure test; implementation and external effects remain unauthorized.
