@@ -225,7 +225,21 @@ DR-045 passed 20/20 synthetic pressure-test criteria and is admitted for current
 
 ### DR-047 — Cross-Chain Invalidation and Version-Integrity Contract
 
-Status: active semantic contract proposal.
+Status: active admitted semantic contract.
 Path: `deliberations/decisions/DR-047-cross-chain-invalidation-version-integrity-contract.md`
 
-Cross-chain invalidation, quarantine, successor-version, revalidation, and provenance rules are under review. No implementation or external effect is authorized.
+DR-047 is admitted by DR-048 after a 20/20 synthetic pressure test. Cross-chain invalidation, quarantine, successor-version, revalidation, and provenance rules are admitted for current semantic use. No implementation or external effect is authorized.
+
+### DR-048 — Cross-Chain Invalidation and Version-Integrity Admission Review
+
+Status: active admitted semantic contract.
+Path: `deliberations/decisions/DR-048-cross-chain-invalidation-admission-review.md`
+
+DR-047 passed 20/20 synthetic pressure-test criteria and is admitted. The creation-apparatus contract queue is complete; closure and reconciliation review is next. No implementation or external effect is authorized.
+
+### DR-049 — Creation-Apparatus Closure and Reconciliation Review
+
+Status: active semantic review boundary.
+Path: `deliberations/decisions/DR-049-creation-apparatus-closure-reconciliation-review.md`
+
+The admitted creation-apparatus contract chain is under end-to-end semantic reconciliation. Admission requires synthetic closure testing; no implementation or external effect is authorized.
