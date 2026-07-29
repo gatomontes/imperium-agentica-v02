@@ -114,3 +114,53 @@ Status: active admitted semantic contract set.
 Path: deliberations/decisions/DR-018-creation-apparatus-completion-contracts.md
 
 Eight bounded Cognitive completion contracts for the professional Operative path are admitted for current semantic use. The decision does not authorize implementation, live data, Runtime, deployment, Officer/Gesta work, or external effect.
+
+
+### DR-019 — Guildhall Deliberative Committee
+
+Status: active semantic boundary.
+Path: `deliberations/decisions/DR-019-guildhall-deliberative-committee.md`
+
+Craftsmen deliberate; Journeymen research and present evidence; Guildmaster presides and authenticates. Garrison remains roster custodian.
+
+### DR-020 — Courtyard Office Operating Surface
+
+Status: active semantic boundary.
+Path: `deliberations/decisions/DR-020-courtyard-office-operating-surface.md`
+
+The Courtyard is the operating surface of Citadel offices and Officers. La Cortine and Lazaretto retain their external-boundary and return/quarantine roles.
+
+### DR-022 — Pit Return and Guildhall Admission Disposition
+
+Status: active semantic boundary.
+Path: `deliberations/decisions/DR-022-pit-return-and-guildhall-admission-disposition.md`
+
+Pit returns findings; Guildhall Committee determines Admit, Recycle, or Discard; Garrison records and exposes admitted roster state.
+
+### DR-023 — Guildhall Candidate Approval Precedes Studium Doctrine Fitting
+
+Status: active semantic boundary.
+Path: `deliberations/decisions/DR-023-guildhall-candidate-approval-precedes-studium-doctrine-fitting.md`
+
+Guildhall approves the complete candidate before Studium applies doctrine; Foundry then forges the Persona Specification.
+
+### DR-024 — Foundry Resident Station Operatives
+
+Status: active semantic boundary.
+Path: `deliberations/decisions/DR-024-foundry-resident-station-operatives.md`
+
+Foundry chambers are bounded stations whose resident operatives perform the work under the Foundry Officer.
+
+### DR-025 — Pit Adversarial Qualification Boundary
+
+Status: active semantic boundary.
+Path: `deliberations/decisions/DR-025-pit-adversarial-qualification-boundary.md`
+
+Pit attacks and records; Guildhall retains disposition authority.
+
+### DR-026 — Studium Functional Chambers
+
+Status: active semantic boundary clarification.
+Path: `deliberations/decisions/DR-026-studium-functional-chambers.md`
+
+Studium uses separate functional chambers for applicability, boundaries, conduct, evidence, conflict, and issuance. Persona Governance Doctrine and Officer Governance Doctrine remain distinct. No implementation, Runtime action, deployment, or external effect is authorized.

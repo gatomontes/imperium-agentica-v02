@@ -10,7 +10,7 @@ DR-009 Evidence Without Engineered Orientation is recorded. DR-008 is superseded
 
 DR-010 Mission-Scoped Observator/Custos (OC) Operator Instance is recorded. OC is one instance, not two roles or cooperating components.
 
-DR-CURRENT is the active decision pointer through DR-018. EC-CURRENT is the active exemplar-grounding correction pointer. OP-CURRENT is the active synthetic Operative Package pointer.
+DR-CURRENT is the active decision pointer through DR-026, retaining the numbered records explicitly listed in `deliberations/DR-CURRENT.md`. EC-CURRENT is the active exemplar-grounding correction pointer. OP-CURRENT is the active synthetic Operative Package pointer.
 
 ## Active Implementation Focus
 
@@ -106,3 +106,8 @@ DR-018 admits eight bounded Cognitive completion contracts for the professional 
 ## Pit Semantic Update — DR-025
 
 Pit is the adversarial qualification office. Resident testing operatives perform bounded examination through Receiving, Contrarian, Boundary, Stress, Failure, Evidence, and Briefing stations. A Pit Officer governs and authenticates the Pit Brief. Pit recommends; the Guildhall Committee determines Admit, Recycle, or Discard. Garrison remains roster custodian only. No implementation, activation, live persona production, deployment, or external effect is authorized.
+
+
+## Studium Semantic Update — DR-026
+
+Studium is clarified as a chambered doctrinal office. Applicability, Boundary, Conduct, Evidence, Conflict, and Issuance are separate functional stations performed by resident operatives under the Studium Officer. Persona Governance Doctrine remains directed to Foundry; Officer Governance Doctrine remains directed to Smith. This is semantic only; no implementation, Runtime action, deployment, or external effect is authorized.

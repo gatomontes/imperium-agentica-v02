@@ -26,7 +26,7 @@ EC-01 admitted → Human-Trait Canon admitted → EC-02 admitted
 
 Active pointers:
 
-- DR-CURRENT: active decision pointer through DR-018
+- DR-CURRENT: active decision pointer through DR-026
 - EC-CURRENT: EC-01 and EC-02 admitted; EC-03 closed
 - OP-CURRENT: OP-SYN-001 v0.1 admitted, inactive synthetic package
 
@@ -123,3 +123,8 @@ The eight bounded completion contracts were admitted by DR-018 after Pressure Ru
 ## Latest Semantic Decision — DR-025
 
 Pit is the adversarial qualification office: `Foundry → Pit → Guildhall Committee`. Pit attacks and records; Guildhall determines disposition; Garrison keeps the admitted roster. No implementation, activation, deployment, or external effect is authorized. Reconcile this semantic sequence with previously admitted contracts and downstream gates during the institutional completion review.
+
+
+## Latest Semantic Decision — DR-026
+
+Studium now has separate functional chambers: Applicability, Boundary, Conduct, Evidence, Conflict, and Issuance. The chamber model preserves distinct Persona Governance Doctrine → Foundry and Officer Governance Doctrine → Smith lines. Reconcile the chamber contracts with the institutional completion review. No implementation or external effect is authorized.
