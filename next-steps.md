@@ -13,7 +13,7 @@ EC-01 admitted → Human-Trait Canon admitted → EC-02 admitted
 
 Active pointers:
 
-- DR-CURRENT: active decision pointer through DR-046
+- DR-CURRENT: active decision pointer through DR-047
 - EC-CURRENT: EC-01 and EC-02 admitted; EC-03 closed
 - OP-CURRENT: OP-SYN-001 v0.1 admitted, inactive synthetic package
 
