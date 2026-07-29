@@ -190,7 +190,15 @@ The creation chain is synthetically conformant but institutionally incomplete. E
 
 ### DR-033 — Guildhall Profession Resolution Contract
 
-Status: active semantic contract proposal.
+Status: admitted semantic contract.
 Path: `deliberations/decisions/DR-033-guildhall-profession-resolution-contract.md`
 
 Guildhall’s professional-resolution boundary and review gate are recorded. Admission remains pending pressure testing; no implementation or external effect is authorized.
+
+
+### DR-034 — Guildhall Profession Resolution Admission Review
+
+Status: active admitted semantic contract.
+Path: `deliberations/decisions/DR-034-guildhall-profession-resolution-admission-review.md`
+
+Synthetic pressure testing passed 8/8. DR-033 is admitted for current semantic use. No implementation or external effect is authorized.
