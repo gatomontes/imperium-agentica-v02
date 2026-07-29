@@ -118,3 +118,15 @@ No creation-apparatus completion work, Execution-layer work, OC implementation, 
 ## Creation Apparatus Completion
 
 The eight bounded completion contracts were admitted by DR-018 after Pressure Run 002 and Admission Review 001. Their admission is semantic only. Implementation and operational proof remain future, separately authorized work.
+
+
+## Latest Creation-Apparatus Decision
+
+DR-023 records the approved sequencing:
+
+```text
+Guildhall Committee → approved Foundry candidate → Studium doctrinal fitting
+→ Foundry Persona Specification → Pit → Guildhall Committee disposition
+```
+
+Studium does not determine profession or exemplar fit and does not apply doctrine before Committee approval. Guildhall operating rules remain deferred until the Committee is put to work. This decision is semantic only; implementation, live research, persona production, Runtime action, deployment, and external effect remain unauthorized.

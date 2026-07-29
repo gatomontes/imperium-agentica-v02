@@ -114,3 +114,11 @@ Status: active admitted semantic contract set.
 Path: deliberations/decisions/DR-018-creation-apparatus-completion-contracts.md
 
 Eight bounded Cognitive completion contracts for the professional Operative path are admitted for current semantic use. The decision does not authorize implementation, live data, Runtime, deployment, Officer/Gesta work, or external effect.
+
+
+### DR-023 — Guildhall Candidate Approval Precedes Studium Doctrine Fitting
+
+Status: active semantic sequencing decision.
+Path: `deliberations/decisions/DR-023-guildhall-candidate-approval-precedes-studium-doctrine-fitting.md`
+
+The Guildhall Committee approves the complete Foundry candidate before Studium applies Imperium doctrine. Foundry then forges the complete Persona Specification for Pit. The decision does not authorize live research, persona production, implementation, Runtime action, deployment, or external effect.
