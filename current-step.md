@@ -101,3 +101,8 @@ Creation-apparatus institutional completion remains unestablished. Live persona 
 ## Creation Apparatus Admission
 
 DR-018 admits eight bounded Cognitive completion contracts for the professional Operative path. They are semantic contracts only; institutional implementation, live data, live persona/Operative creation, Runtime action, deployment, Officer/Gesta work, OC implementation, and external effect remain unauthorized.
+
+
+## Courtyard Office Operating Surface
+
+DR-020 records the Courtyard as the operating surface for Imperium offices and their authorized Imperium Officers. Offices retain their bounded authority; Officers occupy offices and exercise that authority. The Courtyard is not itself an officeholder or authority. This is semantic architecture only: Courtyard implementation, officer activation, Runtime permissions, credential use, deployment, La Cortine crossing, Journeyman research, and external effect remain unauthorized.
