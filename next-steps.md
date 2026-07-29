@@ -1,5 +1,19 @@
 ## Next Steps
 
+## Institutional Officeholder Rule
+
+Preserve the following rule in all future workflow descriptions and implementation boundaries:
+
+> Office is the institution and native authority; Imperium Officer is the authorized officeholder who performs the office’s functions. Office authority is bounded by the office and is not personal to the Officer.
+
+For the current persona lane, the operator-facing path is:
+
+```text
+Operator → Secretariat Officer → Secretariat office → Castellan Officer → Castellan office
+```
+
+The Secretariat Officer brings the request before Castellan. Castellan determines whether the request requires persona production, recruitment, or production plus mission execution. Secretariat then brings that determination to Guildhall or Garrison as directed. Neither Secretariat nor its Officer interprets or decides the request.
+
 ## Current Implementation Breakpoint
 
 Theoretical creation-chain conformance remains complete. The implementation leg has advanced through PostgreSQL persistence, a persistent reference facade, HTTP contracts, and a Node HTTP adapter. The async transport contract and `PersistentTransportAdapter` are now present.
