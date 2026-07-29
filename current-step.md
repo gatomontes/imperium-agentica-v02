@@ -101,3 +101,8 @@ Creation-apparatus institutional completion remains unestablished. Live persona 
 ## Creation Apparatus Admission
 
 DR-018 admits eight bounded Cognitive completion contracts for the professional Operative path. They are semantic contracts only; institutional implementation, live data, live persona/Operative creation, Runtime action, deployment, Officer/Gesta work, OC implementation, and external effect remain unauthorized.
+
+
+## Latest Semantic Decision
+
+DR-023 establishes the creation sequencing boundary: the Guildhall Committee approves the complete Foundry candidate before Studium applies Imperium doctrine. Hagiography supplies evidence-grounded exemplar material; Studium then supplies doctrinal boundaries, duties, prohibitions, constraints, tempering, and refusal conditions; Foundry forges the complete Persona Specification for Pit. This is semantic only. Live research, persona production, implementation, Runtime action, deployment, and external effect remain unauthorized.
