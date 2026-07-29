@@ -245,3 +245,11 @@ Status: active admitted semantic contract.
 Path: `deliberations/decisions/DR-044-garrison-admission-suitability-admission-review.md`
 
 DR-043 is admitted for current semantic use after an 18/18 synthetic pressure test. Garrison remains roster and availability custodian; Guildhall retains authoritative professional-suitability judgment. No implementation or external effect is authorized.
+
+
+### DR-045 — Recruitment/Conscription Transformation and Handoff Contract
+
+Status: active semantic contract proposal.
+Path: `deliberations/decisions/DR-045-recruitment-transformation-and-handoff-contract.md`
+
+Recruitment/Conscription’s bounded transformation and handoff contract is under review. No activation, deployment, implementation, or external effect is authorized.
