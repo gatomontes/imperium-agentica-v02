@@ -1,17 +1,18 @@
 ## Next Steps
 
-## Current Implementation Breakpoint
+## Current Work Step — Courtyard Institutional Definition
 
-Theoretical creation-chain conformance remains complete. The implementation leg has advanced through PostgreSQL persistence, a persistent reference facade, HTTP contracts, and a Node HTTP adapter. The async transport contract and `PersistentTransportAdapter` are now present.
+The active step is to define the Courtyard as the operating surface of the Citadel’s offices and Imperium Officers.
 
-Next implementation increments:
-1. wire the async transport adapter into the HTTP handler;
-2. compose `PostgresArtifactStore`, `PersistentImperiumReference`, `PersistentTransportAdapter`, resolver, and Node server;
-3. run `npm run build` and `npm test`;
-4. repair the first concrete failure;
-5. admit the completed HTTP/persistence implementation increment.
+Review targets:
+1. office and Officer placement;
+2. station and resident-operative relationships;
+3. authority, assignment, and authentication boundaries;
+4. institutional requests, determinations, artifacts, evidence, and records;
+5. office interaction with Runtime and Master Mason;
+6. the boundary between Courtyard operation, La Cortine crossing, and Lazaretto return.
 
-Production authentication provider, TLS/reverse proxy, deployment, CI database provisioning, message transport, OC implementation, and Execution-layer work remain deferred.
+This is semantic and architectural work only. It does not authorize implementation, Runtime action, credentials, activation, deployment, or external effect. HTTP/persistence composition remains deferred historical implementation work.
 
 ## New-Chat Breakpoint
 
@@ -32,7 +33,7 @@ Active pointers:
 
 Operational maturity remains unproven. No live provider, credential, tool, runtime, mission, activation, deployment, or external effect has been exercised.
 
-No next step is selected; choose explicitly in the new chat.
+Courtyard institutional definition is selected as the active step. Its completion requires an admitted semantic contract; implementation and activation remain separately gated.
 
 ## Status
 
@@ -98,7 +99,7 @@ OC implementation, Secretariat implementation, Curia procedure change, productio
 
 ## Creation Apparatus Institutional Completion Review
 
-The next proposed action is a review of each creation institution as an institution, not merely as a node in the Track A conformance chain. It requires explicit authorization.
+The creation-apparatus institutional review remains a later candidate. Courtyard institutional definition is the current selected step.
 
 | Institution | Review target |
 |---|---|
