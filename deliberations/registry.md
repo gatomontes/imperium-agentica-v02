@@ -243,3 +243,11 @@ Status: active semantic review boundary.
 Path: `deliberations/decisions/DR-049-creation-apparatus-closure-reconciliation-review.md`
 
 The admitted creation-apparatus contract chain is under end-to-end semantic reconciliation. Admission requires synthetic closure testing; no implementation or external effect is authorized.
+
+
+### DR-050 — Creation-Apparatus Closure and Reconciliation Admission Review
+
+Status: admitted semantic closure review.
+Path: `deliberations/decisions/DR-050-creation-apparatus-closure-reconciliation-admission-review.md`
+
+DR-049 passed 24/24 synthetic end-to-end reconciliation criteria and is admitted. The creation-apparatus semantic chain is closed; no implementation or external effect is authorized.
