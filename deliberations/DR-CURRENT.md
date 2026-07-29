@@ -202,3 +202,10 @@ Status: active admitted semantic contract.
 Path: `deliberations/decisions/DR-034-guildhall-profession-resolution-admission-review.md`
 
 Synthetic pressure testing passed 8/8. DR-033 is admitted for current semantic use. No implementation or external effect is authorized.
+
+### DR-035 — Studium Doctrine Lifecycle Contract
+
+Status: active semantic contract proposal; admission pending pressure test.
+Path: `deliberations/decisions/DR-035-studium-doctrine-lifecycle-contract.md`
+
+Studium’s doctrine intake, applicability, boundary, conduct, evidence, conflict, issuance, revision, and invalidation contract is recorded for review. No implementation or external effect is authorized.
