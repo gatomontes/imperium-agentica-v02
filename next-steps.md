@@ -13,13 +13,13 @@ EC-01 admitted → Human-Trait Canon admitted → EC-02 admitted
 
 Active pointers:
 
-- DR-CURRENT: active decision pointer through DR-053
+- DR-CURRENT: active decision pointer through DR-056
 - EC-CURRENT: EC-01 and EC-02 admitted; EC-03 closed
 - OP-CURRENT: OP-SYN-001 v0.1 admitted, inactive synthetic package
 
 Operational maturity remains unproven. No live provider, credential, tool, runtime, mission, activation, deployment, or external effect has been exercised.
 
-Creation-apparatus institutional completion review is complete and semantically closed through DR-050. DR-052 Execution-layer boundary and envelope contract was admitted by DR-053 after an 18/18 synthetic pressure test. The next semantic increment is Execution failure, interruption, and return-state contract review; scope remains semantic/architectural only. Guildhall’s Profession Resolution Contract was admitted by DR-034. Studium Doctrine Lifecycle was admitted by DR-036 for the Persona Governance Doctrine → Foundry branch only. Courtyard remains closed. This file contains later candidates and historical context.
+Creation-apparatus institutional completion review is complete and semantically closed through DR-050. DR-052 Execution-layer boundary and envelope contract was admitted by DR-053 after an 18/18 synthetic pressure test. DR-054 was admitted by DR-055 after a 20/20 synthetic pressure test. The next semantic increment is the Execution attempt-record and evidence/provenance contract review; scope remains semantic/architectural only. Guildhall’s Profession Resolution Contract was admitted by DR-034. Studium Doctrine Lifecycle was admitted by DR-036 for the Persona Governance Doctrine → Foundry branch only. Courtyard remains closed. This file contains later candidates and historical context.
 
 ## Status
 
