@@ -10,11 +10,11 @@ DR-009 Evidence Without Engineered Orientation is recorded. DR-008 is superseded
 
 DR-010 Mission-Scoped Observator/Custos (OC) Operator Instance is recorded. OC is one instance, not two roles or cooperating components.
 
-DR-CURRENT is the active decision pointer through DR-035, retaining the numbered records explicitly listed in `deliberations/DR-CURRENT.md`. EC-CURRENT is the active exemplar-grounding correction pointer. OP-CURRENT is the active synthetic Operative Package pointer.
+DR-CURRENT is the active decision pointer through DR-036, retaining the numbered records explicitly listed in `deliberations/DR-CURRENT.md`. EC-CURRENT is the active exemplar-grounding correction pointer. OP-CURRENT is the active synthetic Operative Package pointer.
 
 ## Active Work Focus
 
-The current work is the Studium Doctrine Lifecycle Contract under DR-035. Define and pressure-test doctrine intake, applicability, boundary, conduct, evidence, conflict, issuance, revision, and invalidation rules. Do not implement, activate, or create live personas or Operatives during this step.
+The Studium Doctrine Lifecycle Contract was pressure-tested 12/12 and admitted by DR-036 for the Persona Governance Doctrine → Foundry branch only. The next active contract is Hagiography Evidence-to-Canon. Do not implement, activate, or create live personas or Operatives during this step.
 
 The previously composed HTTP/persistence implementation remains historical context, not the active work leg.
 
