@@ -333,3 +333,11 @@ Status: active semantic contract proposal; admission pending pressure test.
 Path: `deliberations/decisions/DR-052-execution-layer-boundary-envelope-contract.md`
 
 DR-052 defines the Execution boundary, mission-scoped execution envelope, output distinctions, refusal behavior, and non-activation gate. No implementation or external effect is authorized.
+
+
+### DR-053 — Execution-Layer Boundary and Envelope Admission Review
+
+Status: active admitted semantic contract.
+Path: `deliberations/decisions/DR-053-execution-layer-boundary-envelope-admission-review.md`
+
+DR-052 passed 18/18 synthetic pressure-test criteria and is admitted for current semantic use. The next semantic increment is Execution failure, interruption, and return-state contract review. No implementation or external effect is authorized.
