@@ -24,7 +24,7 @@ The previously composed HTTP/persistence implementation remains historical conte
 
 The external reader recovered the intended OC ontology, authority boundary, implementation status, current step, and Cognitive Baseline distinctions. Minor first-contact and queue-label ambiguities were corrected in `current-step.md` and `next-steps.md`. The repository now has evidence that its language can communicate the tested distinctions without conversation history.
 
-EC-CURRENT is the active correction-state pointer. EC-01 is admitted by DR-011; EC-02 is deferred and EC-03 is closed. The Human-Trait Canon draft at `layers/cognitive/drafts/human-trait-canon.md` is the active bounded review target. The next action is to review its schema, provenance, lifecycle, and non-authority boundaries. No real-person data is being used.
+EC-CURRENT is the active correction-state pointer. EC-01 is admitted by DR-011; EC-02 is deferred and EC-03 is closed. The Human-Trait Canon schema and lifecycle were reviewed and admitted by DR-012. It remains an admitted semantic dependency, not the active work step. No real-person data is being used.
 
 The external reassessment is evidence of interpretation drift, not authority to implement an OC pattern. It incorrectly interpreted:
 
@@ -43,7 +43,7 @@ CB-CURRENT flattening: complete
 CB-DENIED disposition surface: established
 Historical numbered CBs: preserved
 Independent-reader packet: expanded to include Cognitive authority files
-Next step: review Human-Trait Canon draft
+Next step: Courtyard institutional definition
 ```
 
 ## Test Boundary
