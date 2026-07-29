@@ -12,6 +12,14 @@ DR-010 Mission-Scoped Observator/Custos (OC) Operator Instance is recorded. OC i
 
 DR-CURRENT is the active decision pointer through DR-018. EC-CURRENT is the active exemplar-grounding correction pointer. OP-CURRENT is the active synthetic Operative Package pointer.
 
+## Institutional Officeholder Distinction
+
+An Imperium office is an institution: it owns the office’s functions, responsibilities, and bounded authority. An Imperium Officer occupies the office and performs its functions under that office’s authority. The Officer does not acquire personal, transferable, or expanded authority merely by holding the office.
+
+This applies uniformly to Secretariat, Castellan, Guildhall, Studium, Foundry, Garrison, Curia, and every other Imperium office. Secretariat is the operator-facing office; its Officer receives and preserves the operator’s request, brings it before Castellan, carries Castellan’s determination to the responsible office, maintains correspondence and records, and returns outcomes. Secretariat does not determine the request. Castellan is the determining office for the initial production/recruitment/execution route; its Officer exercises that authority within Castellan’s bounds.
+
+The office/Officer distinction is recorded in DR-019.
+
 ## Active Implementation Focus
 
 The reference implementation now includes:
