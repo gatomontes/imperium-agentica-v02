@@ -202,6 +202,13 @@ Path: `deliberations/decisions/DR-038-hagiography-evidence-to-canon-admission-re
 
 Synthetic pressure testing passed 10/10. DR-037 is admitted for current semantic use. Hagiography requires Guildhall approval/exemplar-fit input and an explicit canonization gate before downstream handoff. No implementation or external effect is authorized.
 
+### DR-039 — Foundry Input and Conflict Contract
+
+Status: active semantic contract proposal; admission pending pressure test.
+Path: `deliberations/decisions/DR-039-foundry-input-and-conflict-contract.md`
+
+Foundry’s accepted Persona Specification inputs, source precedence, conflict handling, provenance preservation, refusal/return, versioning, and downstream handoff to Pit are under semantic review. No implementation or external effect is authorized.
+
 ### DR-033 — Guildhall Profession Resolution Contract
 
 Status: admitted semantic contract.
