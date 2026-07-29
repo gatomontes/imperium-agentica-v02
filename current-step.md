@@ -101,3 +101,8 @@ Creation-apparatus institutional completion remains unestablished. Live persona 
 ## Creation Apparatus Admission
 
 DR-018 admits eight bounded Cognitive completion contracts for the professional Operative path. They are semantic contracts only; institutional implementation, live data, live persona/Operative creation, Runtime action, deployment, Officer/Gesta work, OC implementation, and external effect remain unauthorized.
+
+
+## Latest Semantic Decision — DR-022
+
+DR-022 establishes the Foundry → Pit → Guildhall Committee admission loop. Foundry forges; Pit stress-tests and returns a brief; the Guildhall Committee determines Admit, Recycle to Foundry, or Discard. Garrison only owns and exposes the admitted-persona roster. This is semantic only: no live persona production, admission, implementation, activation, deployment, Runtime action, or external effect is authorized.
