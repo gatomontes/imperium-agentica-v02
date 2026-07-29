@@ -10,7 +10,7 @@ DR-009 Evidence Without Engineered Orientation is recorded. DR-008 is superseded
 
 DR-010 Mission-Scoped Observator/Custos (OC) Operator Instance is recorded. OC is one instance, not two roles or cooperating components.
 
-DR-CURRENT is the active decision pointer through DR-018. EC-CURRENT is the active exemplar-grounding correction pointer. OP-CURRENT is the active synthetic Operative Package pointer.
+DR-CURRENT is the active decision pointer through DR-020. EC-CURRENT is the active exemplar-grounding correction pointer. OP-CURRENT is the active synthetic Operative Package pointer.
 
 ## Active Implementation Focus
 
@@ -101,3 +101,8 @@ Creation-apparatus institutional completion remains unestablished. Live persona 
 ## Creation Apparatus Admission
 
 DR-018 admits eight bounded Cognitive completion contracts for the professional Operative path. They are semantic contracts only; institutional implementation, live data, live persona/Operative creation, Runtime action, deployment, Officer/Gesta work, OC implementation, and external effect remain unauthorized.
+
+
+## DR-020 Semantic Clarification
+
+Guildhall is the office that holds the authority to determine which person or persons best fit the Castellan brief. Guildmaster is the accountable Imperium Officer who exercises that authority. Craftsman is the research role; multiple Craftsman instances may investigate candidates and present evidence-based findings, but do not select. Garrison owns and maintains the readable roster of admitted persona specifications; it does not search, recommend, or select. Offices and records do not act as agents. No implementation, live selection, roster mutation, recruitment, activation, deployment, or external effect is authorized.

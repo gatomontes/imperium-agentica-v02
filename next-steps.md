@@ -26,7 +26,7 @@ EC-01 admitted → Human-Trait Canon admitted → EC-02 admitted
 
 Active pointers:
 
-- DR-CURRENT: active decision pointer through DR-018
+- DR-CURRENT: active decision pointer through DR-020
 - EC-CURRENT: EC-01 and EC-02 admitted; EC-03 closed
 - OP-CURRENT: OP-SYN-001 v0.1 admitted, inactive synthetic package
 
@@ -95,6 +95,16 @@ Human-Trait Canon revisions applied; synthetic entry test passed 10/10; schema a
 
 OC implementation, Secretariat implementation, Curia procedure change, production change, model/provider/evaluator selection, credential work, deployment, and external effect remain unauthorized until a future step explicitly admits them.
 
+
+## DR-020 Semantic Clarification
+
+- Guildmaster decides which person or persons best fit the Castellan brief.
+- Craftsman instances research and present evidence-based findings.
+- Garrison owns the readable roster of admitted persona specifications and does not search or select.
+- Isolde records and communicates the result through the Secretariat Acta.
+- Offices and records do not act; authorized Imperium Officers and assigned instances act within bounded roles.
+
+This clarification is semantic only and does not authorize implementation or live selection.
 
 ## Creation Apparatus Institutional Completion Review
 
