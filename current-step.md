@@ -2,7 +2,7 @@
 
 ## Status
 
-Track A, B1, B2.1, B2.1a, and B2.3 are complete and closed. Courtyard institutional definition is complete and closed at the semantic/architectural boundary by DR-030. The current authorized work is the creation-apparatus institutional completion review, scoped by DR-031. The Courtyard is the operating surface of the Citadel’s offices and Imperium Officers. This step is semantic and architectural only; it does not authorize implementation, Runtime action, deployment, activation, credentials, or external effect. Cognitive standard CB-CURRENT is active; current numbered snapshot CB-007. DR-CURRENT is the active decision pointer. Semantic Integrity is complete and closed after the external reader pass.
+Track A, B1, B2.1, B2.1a, and B2.3 are complete and closed. Courtyard institutional definition is complete and closed at the semantic/architectural boundary by DR-030. The creation-apparatus institutional completion review is complete and closed through DR-050. No subsequent semantic, implementation, Runtime, activation, deployment, credential, or external-effect step is currently selected. The Courtyard is the operating surface of the Citadel’s offices and Imperium Officers. This step is semantic and architectural only; it does not authorize implementation, Runtime action, deployment, activation, credentials, or external effect. Cognitive standard CB-CURRENT is active; current numbered snapshot CB-007. DR-CURRENT is the active decision pointer. Semantic Integrity is complete and closed after the external reader pass.
 
 DR-005 parks Locksmith and credential infrastructure until an observed authenticated-integration trigger.
 
@@ -12,7 +12,7 @@ DR-010 Mission-Scoped Observator/Custos (OC) Operator Instance is recorded. OC i
 
 DR-CURRENT is the active decision pointer through DR-050, retaining the numbered records explicitly listed in `deliberations/DR-CURRENT.md`. EC-CURRENT is the active exemplar-grounding correction pointer. OP-CURRENT is the active synthetic Operative Package pointer.
 
-## Active Work Focus
+## Closed Work Focus
 
 DR-046 admits DR-045 after a 20/20 synthetic pressure test. DR-047 is admitted by DR-048 after a 20/20 synthetic pressure test. DR-049 is admitted by DR-050 after a 24/24 synthetic reconciliation test. The creation-apparatus contract chain is semantically closed; no implementation, activation, or live persona or Operative creation is authorized.
 
