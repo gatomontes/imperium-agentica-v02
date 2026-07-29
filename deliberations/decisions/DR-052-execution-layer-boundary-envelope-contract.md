@@ -13,11 +13,11 @@ Execution begins only after an Operative Package, mission assignment, authority 
 Execution is distinct from:
 
 - Curia, which convenes and decides within its authority;
-- Muster, which briefs and launches an authorized mission;
+- Muster, which briefs and assembles an authorized mission;
 - Armory, which supplies tool capability facts and tool artifacts;
 - Locksmith, which governs credential access and does not surrender credential authority;
 - Runtime, which operates the execution machinery;
-- La Cortine, which enforces the boundary and routes crossings;
+- La Cortine, which contains the boundary ports; the appropriate port performs each crossing;
 - Lazaretto, which quarantines and sanitizes returning field material;
 - external providers, which remain outside Imperium authority.
 
