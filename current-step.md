@@ -14,7 +14,7 @@ DR-CURRENT is the active decision pointer through DR-031, retaining the numbered
 
 ## Active Work Focus
 
-The current work is the creation-apparatus institutional completion review under DR-032. Review Guildhall, Studium, Hagiography, Foundry, Pit, Garrison, and Conscription/Recruitment, then define and admit the remaining institution-level semantic contracts. Do not implement, activate, or create live personas or Operatives during this step.
+The current work is the Guildhall Profession Resolution Contract under DR-033. Define and pressure-test Guildhall’s professional-resolution authority, inputs, outputs, refusal, decomposition, ambiguity, tie, reassessment, and artifact-ownership rules. Do not implement, activate, or create live personas or Operatives during this step.
 
 The previously composed HTTP/persistence implementation remains historical context, not the active work leg.
 
@@ -172,3 +172,7 @@ This boundary is a semantic contract only. It authorizes no implementation, acti
 ## Creation-Apparatus Review Findings — DR-032
 
 DR-032 records that the existing creation chain is synthetically conformant but institutionally incomplete. The remaining review contracts are: Guildhall Profession Resolution; Studium Doctrine Lifecycle; Hagiography Evidence-to-Canon; Foundry Input and Conflict; Pit Independent Validation; Garrison Admission and Suitability; Conscription Transformation and Handoff; and Cross-Chain Invalidation and Version Integrity. They are to be reviewed independently in that order. Officer, The Gesta, Smith, Spur, and Curia work remain outside this review. No implementation, Runtime action, live data, persona or Operative creation, activation, deployment, credential use, or external effect is authorized.
+
+## Guildhall Profession Resolution Contract — DR-033
+
+Guildhall determines the professional pattern required by an approved Work Specification. It produces a versioned Profession Specification and Resolution Assessment, preserves candidate sets and unresolved outcomes, and may request decomposition or clarification. It does not silently rewrite work, break multi-profession ties, select or reserve personas, forge or test personas, or recruit/deploy Operatives. Admission requires semantic pressure tests using synthetic fixtures only.
