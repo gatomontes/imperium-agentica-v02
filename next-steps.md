@@ -34,6 +34,10 @@ Operational maturity remains unproven. No live provider, credential, tool, runti
 
 No next step is selected; choose explicitly in the new chat.
 
+## Current Semantic Update
+
+DR-024 records the Foundry station model: a Foundry Officer governs packet passage, while resident operatives perform the bounded intelligent work of Receiving, Confluence, Temperance, Specification, Provenance, and Dispatch. No implementation or activation is authorized.
+
 ## Status
 
 Semantic Integrity is complete and closed. The external reader recovered the intended meaning from the repository without relying on conversation history. DR-CURRENT is the active decision pointer. EC-CURRENT is the active exemplar-grounding correction pointer: EC-01 admitted, EC-02 deferred, EC-03 closed. A synthetic Hagiography application passed. Human-Trait Canon design review is active.
