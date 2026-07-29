@@ -6,7 +6,7 @@
 - Improvement programs recorded: 7
 - Pending control records: 7
 - Implemented control records: 0
-- Decision records: 18
+- Decision records: 19
 - Initial assessment: `assessments/2026-07-23-mit-ai-risks-imperium-assessment.md`
 - Integration review: `assessments/2026-07-23-ra-integration-review-001.md`
 - Integration execution: `assessments/2026-07-23-ra-integration-review-execution-001.md`
@@ -108,3 +108,6 @@ The two `DR-002` records are distinct historical files. The later OpenBao topolo
 ## Maintenance Rule
 
 Update this registry in the same increment that creates, promotes, demotes, invalidates, or supersedes a tracked artifact. The registry summarizes records; it does not replace them.
+
+
+- Creation Apparatus Completion Contract admission review: `assessments/2026-07-26-creation-apparatus-completion-admission-review-001.md` — all eight contracts PASS; DR-018 admitted

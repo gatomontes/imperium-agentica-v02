@@ -106,3 +106,11 @@ DR-006 remains a governing principle, not a bypass for evidence, privacy safegua
 DR-CURRENT is an authority index, not a new authority source. It summarizes and locates decisions; the numbered decision records contain the full rationale and exact boundaries.
 
 No DR-CURRENT entry by itself authorizes persona production, Operative creation, deployment, Runtime behavior, or external effect unless the underlying decision explicitly does so. Current active decisions remain subject to layer boundaries, current-step gates, and later superseding decisions.
+
+
+### DR-018 — Creation Apparatus Completion Contracts
+
+Status: active admitted semantic contract set.
+Path: deliberations/decisions/DR-018-creation-apparatus-completion-contracts.md
+
+Eight bounded Cognitive completion contracts for the professional Operative path are admitted for current semantic use. The decision does not authorize implementation, live data, Runtime, deployment, Officer/Gesta work, or external effect.

@@ -1,5 +1,18 @@
 ## Next Steps
 
+## Current Implementation Breakpoint
+
+Theoretical creation-chain conformance remains complete. The implementation leg has advanced through PostgreSQL persistence, a persistent reference facade, HTTP contracts, and a Node HTTP adapter. The async transport contract and `PersistentTransportAdapter` are now present.
+
+Next implementation increments:
+1. wire the async transport adapter into the HTTP handler;
+2. compose `PostgresArtifactStore`, `PersistentImperiumReference`, `PersistentTransportAdapter`, resolver, and Node server;
+3. run `npm run build` and `npm test`;
+4. repair the first concrete failure;
+5. admit the completed HTTP/persistence implementation increment.
+
+Production authentication provider, TLS/reverse proxy, deployment, CI database provisioning, message transport, OC implementation, and Execution-layer work remain deferred.
+
 ## New-Chat Breakpoint
 
 Completed synthetic sequence:
@@ -13,7 +26,7 @@ EC-01 admitted → Human-Trait Canon admitted → EC-02 admitted
 
 Active pointers:
 
-- DR-CURRENT: active decision pointer through DR-017
+- DR-CURRENT: active decision pointer through DR-018
 - EC-CURRENT: EC-01 and EC-02 admitted; EC-03 closed
 - OP-CURRENT: OP-SYN-001 v0.1 admitted, inactive synthetic package
 
@@ -81,3 +94,27 @@ OC authority envelope, Secretariat routing, Curia presence procedure, provenance
 Human-Trait Canon revisions applied; synthetic entry test passed 10/10; schema admitted by DR-012. EC-02 admitted by DR-013. Case-specific evidence records remain required. No real-person data, persona production, operative creation, recruitment packaging, model fine-tuning, deployment, or external effect is authorized. EC-CURRENT governs exemplar-grounding corrections. No real-person data, persona production, operative creation, recruitment packaging, model fine-tuning, deployment, or external effect is authorized.
 
 OC implementation, Secretariat implementation, Curia procedure change, production change, model/provider/evaluator selection, credential work, deployment, and external effect remain unauthorized until a future step explicitly admits them.
+
+
+## Creation Apparatus Institutional Completion Review
+
+The next proposed action is a review of each creation institution as an institution, not merely as a node in the Track A conformance chain. It requires explicit authorization.
+
+| Institution | Review target |
+|---|---|
+| Guildhall | profession-research ownership, SOP, evidence inputs, Profession Specification artifact, refusal, revision, and stewardship |
+| Studium | Persona Governance Doctrine authorship, versioning, review, applicability, amendment, and delivery to Foundry |
+| Hagiography | real-practitioner evidence intake, EC-01 source sufficiency, achievement verification, transferable-trait derivation, Human-Trait Canon, and supersession |
+| Foundry | Persona Specification synthesis, provenance-preserving integration, conflict handling, versioning, and delivery to Pit |
+| Pit | independent test design, findings, failure classification, repair return, retest, and recommendation boundary |
+| Garrison | admission authority, inventory truth, suitability search, reservation, selection visibility, invalidation, and removal |
+| Conscription/Recruitment | exact Persona selection, deployment-medium packaging, permitted transformation, deviation evidence, Operative identity/version, and handoff |
+
+The review must distinguish responsibilities already admitted, draft-only contracts, missing doctrine or SOPs, required artifacts and owners, admission gates and refusal behavior, implementation requirements, deferred dependencies, and the smallest independently reviewable completion increments.
+
+No creation-apparatus completion work, Execution-layer work, OC implementation, credential work, deployment, or external effect is authorized until explicitly selected and admitted.
+
+
+## Creation Apparatus Completion
+
+The eight bounded completion contracts were admitted by DR-018 after Pressure Run 002 and Admission Review 001. Their admission is semantic only. Implementation and operational proof remain future, separately authorized work.

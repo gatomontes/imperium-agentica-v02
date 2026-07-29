@@ -1,0 +1,26 @@
+# HTTP Transport Boundary
+
+The HTTP layer is a transport adapter over the existing transport-neutral contract. It does not define new Imperium workflow semantics.
+
+## Request metadata
+
+Every request carries:
+
+- `x-request-id` — caller-supplied or gateway-generated correlation for the HTTP exchange;
+- `x-imperium-operator-instance` — the single operator instance receiving the request;
+- `authorization` — authentication material, validated outside the domain layer.
+
+## Endpoint mapping
+
+- `GET /health` → unauthenticated liveness check;
+- `GET /ready` → injected readiness check, returning `503` when dependencies are unavailable;
+
+- `POST /v1/requests` → submit operator request;
+- `POST /v1/petitions/:petitionRef/clarifications` → submit corrected petition content;
+- `POST /v1/petitions/:petitionRef/responses` → prepare operator response content;
+- `POST /v1/petitions/:petitionRef/deliveries` → prepare delivery;
+- `POST /v1/deliveries/:deliveryRef/dispatch` → record dispatch outcome.
+
+The Node adapter accepts only `POST /v1/requests`, requires JSON with string `content` and `sessionReference`, and caps request bodies at 1 MiB. Successful responses use `{ ok: true, requestId, result }`. Failures use `{ ok: false, requestId, error: { code, message } }`.
+
+The Node adapter exposes bounded graceful shutdown and defaults to a 30-second request timeout, 10-second headers timeout, 5-second keep-alive timeout, and 100 concurrent connections; these are configurable. Authentication is injected through `HttpAuthorizer`; the provider and authorization policy remain unadmitted. Rate limits, framework choice, TLS termination, and deployment topology also remain unadmitted.
