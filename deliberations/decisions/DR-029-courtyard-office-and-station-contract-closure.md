@@ -52,7 +52,7 @@ A failed handoff, station action, or contract condition must be recorded at the 
 ## Consequences
 
 - Courtyard offices remain composable without becoming a shared authority.
-- Stations remain functional locations with bounded resident- operative work, not hidden Officers or autonomous offices.
+- Stations remain functional locations with bounded resident-operative work, not hidden Officers or autonomous offices.
 - Institutional artifacts remain traceable through acceptance, refusal, return, repair, escalation, and closure.
 - Future implementation review must map each component and state transition to one of these admitted semantic contracts before implementation is considered.
 
