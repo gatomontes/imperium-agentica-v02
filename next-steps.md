@@ -142,9 +142,11 @@ Each increment requires its own semantic pressure test and admission review. Syn
 DR-040 admitted DR-039 after a 14/14 synthetic pressure test. The active queue advances to Pit Independent Validation Contract. Implementation, Runtime, live data, activation, deployment, credentials, and external effects remain unauthorized.
 
 
-### DR-041 — Pit Independent Validation Contract
+### DR-042 admitted DR-041 after a 16/16 synthetic pressure test. The active queue advances to Garrison Admission and Suitability. Implementation, Runtime, live data, activation, deployment, credentials, and external effects remain unauthorized.
 
-Status: active semantic contract proposal; admission pending synthetic pressure test.
-Path: `deliberations/decisions/DR-041-pit-independent-validation-contract.md`
+### DR-043 — Garrison Admission and Suitability Contract
 
-Pit’s independent examination boundary, refusal/return behavior, evidence and findings contract, retest/invalidation rules, and Guildhall recommendation boundary are defined for review. No implementation or external effect is authorized.
+Status: next semantic contract proposal.
+Path: `deliberations/decisions/DR-043-garrison-admission-and-suitability-contract.md`
+
+Define Garrison's admission, suitability, roster-state, refusal, and downstream handoff boundaries. Admission requires synthetic pressure testing; no implementation or external effect is authorized.
