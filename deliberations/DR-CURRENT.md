@@ -180,3 +180,10 @@ Status: active semantic boundary review.
 Path: `deliberations/decisions/DR-028-courtyard-cross-office-consistency-review.md`
 
 The review confirms that Courtyard composes admitted office boundaries without absorbing authority from Guildhall, Studium, Hagiography, Foundry, Pit, Garrison, Recruitment/Conscription, Muster, Curia, La Cortine, or Lazaretto. No implementation, Runtime action, activation, deployment, credential use, or external effect is authorized.
+
+### DR-032 — Creation-Apparatus Institutional Completion Review Findings
+
+Status: active semantic review boundary.
+Path: `deliberations/decisions/DR-032-creation-apparatus-completion-review-findings.md`
+
+The creation chain is synthetically conformant but institutionally incomplete. Eight remaining contracts are queued for independent semantic review, beginning with Guildhall. No implementation or external effect is authorized.
