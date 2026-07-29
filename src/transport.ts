@@ -40,3 +40,23 @@ export interface ImperiumTransportAdapter {
     transportId: string,
   ): { transportId: string; delivery: ArtifactEnvelope<ResponseDelivery> };
 }
+
+export interface AsyncImperiumTransportAdapter {
+  submit(input: TransportRequest): Promise<TransportResponse>;
+  clarify(input: ClarificationRequest): Promise<TransportResponse>;
+  prepareResponse(
+    petition: ArtifactEnvelope<Petition>,
+    content: string,
+    transportId: string,
+  ): Promise<{ transportId: string; response: ArtifactEnvelope<OperatorResponse> }>;
+  prepareDelivery(
+    petition: ArtifactEnvelope<Petition>,
+    channel: string,
+    transportId: string,
+  ): Promise<{ transportId: string; delivery: ArtifactEnvelope<ResponseDelivery> }>;
+  dispatchResponse(
+    delivery: ArtifactEnvelope<ResponseDelivery>,
+    successful: boolean,
+    transportId: string,
+  ): Promise<{ transportId: string; delivery: ArtifactEnvelope<ResponseDelivery> }>;
+}
