@@ -114,3 +114,4 @@ Status: active admitted semantic contract set.
 Path: deliberations/decisions/DR-018-creation-apparatus-completion-contracts.md
 
 Eight bounded Cognitive completion contracts for the professional Operative path are admitted for current semantic use. The decision does not authorize implementation, live data, Runtime, deployment, Officer/Gesta work, or external effect.
+\n\n### DR-026 — Studium Functional Chambers\n\nStatus: active semantic boundary clarification.\nPath: `deliberations/decisions/DR-026-studium-functional-chambers.md`\n\nStudium uses separate functional chambers for applicability, boundaries, conduct, evidence, conflict, and issuance. Persona Governance Doctrine and Officer Governance Doctrine remain distinct. No implementation, Runtime action, deployment, or external effect is authorized.\n

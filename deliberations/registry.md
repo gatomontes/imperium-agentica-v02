@@ -118,3 +118,4 @@ Update this registry in the same increment that creates, promotes, demotes, inva
 | DR-025 | Define Pit adversarial qualification and Guildhall disposition boundary | Recorded decision; semantic process model only |
 
 DR-025 establishes Pit as the adversarial qualification office and preserves Guildhall Committee disposition authority. Pit produces findings and a recommendation; Garrison remains roster custodian only. No implementation or external effect is authorized.
+\n\n## Latest Decision\n\n| DR-026 | Define Studium functional chambers and distinct doctrinal lines | Recorded decision; semantic process model only |\n\nDR-026 establishes separate Applicability, Boundary, Conduct, Evidence, Conflict, and Issuance chambers within Studium. Persona Governance Doctrine remains directed to Foundry; Officer Governance Doctrine remains directed to Smith. No implementation or external effect is authorized.\n
