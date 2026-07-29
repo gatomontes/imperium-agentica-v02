@@ -123,3 +123,4 @@ The eight bounded completion contracts were admitted by DR-018 after Pressure Ru
 ## Latest Semantic Decision — DR-025
 
 Pit is the adversarial qualification office: `Foundry → Pit → Guildhall Committee`. Pit attacks and records; Guildhall determines disposition; Garrison keeps the admitted roster. No implementation, activation, deployment, or external effect is authorized. Reconcile this semantic sequence with previously admitted contracts and downstream gates during the institutional completion review.
+\n\n## Latest Semantic Decision — DR-026\n\nStudium now has separate functional chambers: Applicability, Boundary, Conduct, Evidence, Conflict, and Issuance. The chamber model preserves distinct Persona Governance Doctrine → Foundry and Officer Governance Doctrine → Smith lines. Reconcile the chamber contracts with the institutional completion review. No implementation or external effect is authorized.\n
