@@ -164,3 +164,11 @@ Status: active semantic boundary clarification.
 Path: `deliberations/decisions/DR-026-studium-functional-chambers.md`
 
 Studium uses separate functional chambers for applicability, boundaries, conduct, evidence, conflict, and issuance. Persona Governance Doctrine and Officer Governance Doctrine remain distinct. No implementation, Runtime action, deployment, or external effect is authorized.
+
+
+### DR-027 — Courtyard Membership, Office/Officer Distinction, and Internal Movement
+
+Status: active semantic boundary.
+Path: `deliberations/decisions/DR-027-courtyard-membership-office-officer-and-internal-movement.md`
+
+Courtyard membership includes offices, Officers, stations, resident operatives, and institutional artifacts. Offices govern institutional responsibilities; Officers exercise bounded institutional cognition and judgment; resident operatives perform station-bound specialist work. Inter-office movement occurs through explicit, traceable artifact handoffs. No implementation, Runtime action, activation, deployment, credential use, or external effect is authorized.
