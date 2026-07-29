@@ -132,3 +132,19 @@ Pit is the adversarial qualification office. Resident testing operatives perform
 ## Studium Semantic Update — DR-026
 
 Studium is clarified as a chambered doctrinal office. Applicability, Boundary, Conduct, Evidence, Conflict, and Issuance are separate functional stations performed by resident operatives under the Studium Officer. Persona Governance Doctrine remains directed to Foundry; Officer Governance Doctrine remains directed to Smith. This is semantic only; no implementation, Runtime action, deployment, or external effect is authorized.
+
+## Courtyard Boundary — Institutional Surface
+
+Courtyard is the operating surface of Imperium’s offices: the bounded institutional space in which Citadel offices and Imperium Officers perform their assigned functions, exchange institutional artifacts, and hand work between authorized stations.
+
+Courtyard includes office functions, resident operatives, Officers, their governed stations, and the institutional records produced or received by those functions. It does not itself decide missions, supply authority, hold credentials, cross the external boundary, quarantine returning field data, execute deployment, or operate Runtime.
+
+Courtyard is therefore distinct from:
+
+- Curia’s mission-level decision authority;
+- La Cortine’s boundary and routing function;
+- Lazaretto’s return quarantine and sanitization function;
+- Runtime’s operational substrate;
+- the external execution surface.
+
+This boundary is a semantic contract only. It authorizes no implementation, activation, deployment, credential use, Runtime action, or external effect.
