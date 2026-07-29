@@ -10,11 +10,11 @@ DR-009 Evidence Without Engineered Orientation is recorded. DR-008 is superseded
 
 DR-010 Mission-Scoped Observator/Custos (OC) Operator Instance is recorded. OC is one instance, not two roles or cooperating components.
 
-DR-CURRENT is the active decision pointer through DR-031, retaining the numbered records explicitly listed in `deliberations/DR-CURRENT.md`. EC-CURRENT is the active exemplar-grounding correction pointer. OP-CURRENT is the active synthetic Operative Package pointer.
+DR-CURRENT is the active decision pointer through DR-034, retaining the numbered records explicitly listed in `deliberations/DR-CURRENT.md`. EC-CURRENT is the active exemplar-grounding correction pointer. OP-CURRENT is the active synthetic Operative Package pointer.
 
 ## Active Work Focus
 
-The current work is the Guildhall Profession Resolution Contract under DR-033. Define and pressure-test Guildhall’s professional-resolution authority, inputs, outputs, refusal, decomposition, ambiguity, tie, reassessment, and artifact-ownership rules. Do not implement, activate, or create live personas or Operatives during this step.
+The current work is the Studium Doctrine Lifecycle Contract under DR-035. Define and pressure-test doctrine intake, applicability, boundary, conduct, evidence, conflict, issuance, revision, and invalidation rules. Do not implement, activate, or create live personas or Operatives during this step.
 
 The previously composed HTTP/persistence implementation remains historical context, not the active work leg.
 
@@ -176,3 +176,8 @@ DR-032 records that the existing creation chain is synthetically conformant but 
 ## Guildhall Profession Resolution Contract — DR-033
 
 Guildhall determines the professional pattern required by an approved Work Specification. It produces a versioned Profession Specification and Resolution Assessment, preserves candidate sets and unresolved outcomes, and may request decomposition or clarification. It does not silently rewrite work, break multi-profession ties, select or reserve personas, forge or test personas, or recruit/deploy Operatives. Admission requires semantic pressure tests using synthetic fixtures only.
+
+
+## Guildhall Profession Resolution Admission — DR-034
+
+DR-034 records a synthetic pressure test passing 8/8 criteria and admits DR-033 for current semantic use. Unresolved, refused, and no-match outcomes remain explicit. Guildhall does not select personas, reserve Garrison inventory, forge or test personas, or recruit/deploy Operatives. No implementation or external effect is authorized.
