@@ -13,7 +13,7 @@ EC-01 admitted → Human-Trait Canon admitted → EC-02 admitted
 
 Active pointers:
 
-- DR-CURRENT: active decision pointer through DR-045
+- DR-CURRENT: active decision pointer through DR-046
 - EC-CURRENT: EC-01 and EC-02 admitted; EC-03 closed
 - OP-CURRENT: OP-SYN-001 v0.1 admitted, inactive synthetic package
 
@@ -139,11 +139,4 @@ Each increment requires its own semantic pressure test and admission review. Syn
 
 ## Active Contract Queue
 
-DR-044 admitted DR-043 after an 18/18 synthetic pressure test. The active queue advances to Recruitment/Conscription Transformation and Handoff.
-
-### DR-045 — Recruitment/Conscription Transformation and Handoff Contract
-
-Status: active semantic contract proposal.
-Path: `deliberations/decisions/DR-045-recruitment-transformation-and-handoff-contract.md`
-
-Define bounded receipt, transformation, provenance, refusal/return, immutable successor lineage, and downstream handoff. Admission requires synthetic pressure testing and review; no implementation or external effect is authorized.
+DR-046 admitted DR-045 after a 20/20 synthetic pressure test. The active queue advances to Cross-Chain Invalidation and Version-Integrity. No implementation or external effect is authorized.
