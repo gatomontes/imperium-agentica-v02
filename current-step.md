@@ -14,7 +14,7 @@ DR-CURRENT is the active decision pointer through DR-039, retaining the numbered
 
 ## Active Work Focus
 
-The Hagiography Evidence-to-Canon Contract was pressure-tested 10/10 and admitted by DR-038. The active contract is Foundry Input and Conflict under DR-039, defining the accepted Persona Specification inputs, source precedence, conflict handling, provenance, refusal/return, versioning, and handoff to Pit. Do not implement, activate, or create live personas or Operatives during this step.
+The Hagiography Evidence-to-Canon Contract was pressure-tested 10/10 and admitted by DR-038. The Foundry Input and Conflict Contract was pressure-tested 14/14 and admitted by DR-040. The active contract advances to Pit Independent Validation under the creation-apparatus review queue. Do not implement, activate, or create live personas or Operatives during this step.
 
 The previously composed HTTP/persistence implementation remains historical context, not the active work leg.
 

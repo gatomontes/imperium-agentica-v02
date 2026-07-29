@@ -139,4 +139,4 @@ Each increment requires its own semantic pressure test and admission review. Syn
 
 ## Active Contract Queue
 
-DR-039 — Foundry Input and Conflict Contract: define Persona Specification inputs, source precedence, conflict handling, provenance preservation, refusal/return, versioning, and downstream handoff to Pit. Admission requires a separate semantic pressure test; implementation and external effects remain unauthorized.
+DR-040 admitted DR-039 after a 14/14 synthetic pressure test. The active queue advances to Pit Independent Validation Contract. Implementation, Runtime, live data, activation, deployment, credentials, and external effects remain unauthorized.
