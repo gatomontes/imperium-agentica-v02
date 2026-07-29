@@ -115,3 +115,4 @@ Pit is the adversarial qualification office: `Foundry → Pit → Guildhall Comm
 ## Latest Semantic Decision — DR-026
 
 Studium now has separate functional chambers: Applicability, Boundary, Conduct, Evidence, Conflict, and Issuance. The chamber model preserves distinct Persona Governance Doctrine → Foundry and Officer Governance Doctrine → Smith lines. Reconcile the chamber contracts with the institutional completion review. No implementation or external effect is authorized.
+
