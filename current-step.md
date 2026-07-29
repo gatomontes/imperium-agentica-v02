@@ -101,3 +101,12 @@ Creation-apparatus institutional completion remains unestablished. Live persona 
 ## Creation Apparatus Admission
 
 DR-018 admits eight bounded Cognitive completion contracts for the professional Operative path. They are semantic contracts only; institutional implementation, live data, live persona/Operative creation, Runtime action, deployment, Officer/Gesta work, OC implementation, and external effect remain unauthorized.
+
+
+## DR-019 — Office, Officeholder, and Institutional Record Distinction
+
+DR-019 records that every Imperium office owns its institutional authority and responsibilities; an authorized Imperium Officer occupies the office and exercises only its bounded authority. Secretariat is the operator-facing office, and Isolde is its designated Imperium Officer.
+
+The Secretariat Acta is the office’s authoritative chronological, provenance-linked activity and correspondence record. The Secretariat Office Specification is a separate artifact defining the office’s purpose, placement, authority, functions, boundaries, workflows, records, and handoffs.
+
+This is semantic clarification only. Secretariat implementation, Isolde activation, persona production, recruitment, deployment, Runtime action, credentials, and external effect remain unauthorized.
