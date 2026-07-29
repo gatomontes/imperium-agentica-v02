@@ -118,3 +118,8 @@ No creation-apparatus completion work, Execution-layer work, OC implementation, 
 ## Creation Apparatus Completion
 
 The eight bounded completion contracts were admitted by DR-018 after Pressure Run 002 and Admission Review 001. Their admission is semantic only. Implementation and operational proof remain future, separately authorized work.
+
+
+## Latest Semantic Decision — DR-025
+
+Pit is the adversarial qualification office: `Foundry → Pit → Guildhall Committee`. Pit attacks and records; Guildhall determines disposition; Garrison keeps the admitted roster. No implementation, activation, deployment, or external effect is authorized. Reconcile this semantic sequence with previously admitted contracts and downstream gates during the institutional completion review.

@@ -111,3 +111,10 @@ Update this registry in the same increment that creates, promotes, demotes, inva
 
 
 - Creation Apparatus Completion Contract admission review: `assessments/2026-07-26-creation-apparatus-completion-admission-review-001.md` — all eight contracts PASS; DR-018 admitted
+
+
+## Latest Decision
+
+| DR-025 | Define Pit adversarial qualification and Guildhall disposition boundary | Recorded decision; semantic process model only |
+
+DR-025 establishes Pit as the adversarial qualification office and preserves Guildhall Committee disposition authority. Pit produces findings and a recommendation; Garrison remains roster custodian only. No implementation or external effect is authorized.

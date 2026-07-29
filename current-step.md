@@ -101,3 +101,8 @@ Creation-apparatus institutional completion remains unestablished. Live persona 
 ## Creation Apparatus Admission
 
 DR-018 admits eight bounded Cognitive completion contracts for the professional Operative path. They are semantic contracts only; institutional implementation, live data, live persona/Operative creation, Runtime action, deployment, Officer/Gesta work, OC implementation, and external effect remain unauthorized.
+
+
+## Pit Semantic Update — DR-025
+
+Pit is the adversarial qualification office. Resident testing operatives perform bounded examination through Receiving, Contrarian, Boundary, Stress, Failure, Evidence, and Briefing stations. A Pit Officer governs and authenticates the Pit Brief. Pit recommends; the Guildhall Committee determines Admit, Recycle, or Discard. Garrison remains roster custodian only. No implementation, activation, live persona production, deployment, or external effect is authorized.
