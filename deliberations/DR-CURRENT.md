@@ -249,7 +249,14 @@ DR-043 is admitted for current semantic use after an 18/18 synthetic pressure te
 
 ### DR-045 — Recruitment/Conscription Transformation and Handoff Contract
 
-Status: active semantic contract proposal.
+Status: active admitted semantic contract.
 Path: `deliberations/decisions/DR-045-recruitment-transformation-and-handoff-contract.md`
 
-Recruitment/Conscription’s bounded transformation and handoff contract is under review. No activation, deployment, implementation, or external effect is authorized.
+DR-045 is admitted for current semantic use by DR-046 after a 20/20 synthetic pressure test. Recruitment/Conscription selection, preservation, transformation, and accepted-handoff boundaries remain separate from activation and deployment.
+
+### DR-046 — Recruitment/Conscription Transformation and Handoff Admission Review
+
+Status: active admitted semantic contract.
+Path: `deliberations/decisions/DR-046-recruitment-transformation-handoff-admission-review.md`
+
+DR-045 passed 20/20 synthetic pressure-test criteria and is admitted. The active queue advances to Cross-Chain Invalidation and Version-Integrity. No implementation or external effect is authorized.
