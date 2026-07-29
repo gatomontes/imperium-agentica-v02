@@ -19,7 +19,7 @@ Active pointers:
 
 Operational maturity remains unproven. No live provider, credential, tool, runtime, mission, activation, deployment, or external effect has been exercised.
 
-Creation-apparatus institutional completion review is complete and semantically closed through DR-050. No subsequent step is selected. Guildhall’s Profession Resolution Contract was admitted by DR-034. Studium Doctrine Lifecycle was admitted by DR-036 for the Persona Governance Doctrine → Foundry branch only. Courtyard remains closed. This file contains later candidates and historical context.
+Creation-apparatus institutional completion review is complete and semantically closed through DR-050. Execution-layer definition is the current selected semantic step under DR-051; its scope is semantic/architectural only. Guildhall’s Profession Resolution Contract was admitted by DR-034. Studium Doctrine Lifecycle was admitted by DR-036 for the Persona Governance Doctrine → Foundry branch only. Courtyard remains closed. This file contains later candidates and historical context.
 
 ## Status
 
