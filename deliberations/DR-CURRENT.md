@@ -229,3 +229,11 @@ Status: active admitted semantic contract.
 Path: `deliberations/decisions/DR-042-pit-independent-validation-admission-review.md`
 
 DR-041 is admitted for current semantic use after a 16/16 synthetic pressure test. No implementation or external effect is authorized.
+
+
+### DR-043 — Garrison Admission and Suitability Contract
+
+Status: active semantic contract proposal.
+Path: `deliberations/decisions/DR-043-garrison-admission-and-suitability-contract.md`
+
+Garrison’s admission, roster-state, availability-fact, refusal/return, provenance, successor-version, invalidation, and Recruitment/Conscription handoff boundaries are under semantic review. Guildhall retains authoritative professional-suitability judgment. Admission requires synthetic pressure testing; no implementation or external effect is authorized.
