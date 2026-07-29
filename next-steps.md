@@ -26,7 +26,7 @@ EC-01 admitted → Human-Trait Canon admitted → EC-02 admitted
 
 Active pointers:
 
-- DR-CURRENT: active decision pointer through DR-018
+- DR-CURRENT: active decision pointer through DR-019
 - EC-CURRENT: EC-01 and EC-02 admitted; EC-03 closed
 - OP-CURRENT: OP-SYN-001 v0.1 admitted, inactive synthetic package
 
@@ -118,3 +118,13 @@ No creation-apparatus completion work, Execution-layer work, OC implementation, 
 ## Creation Apparatus Completion
 
 The eight bounded completion contracts were admitted by DR-018 after Pressure Run 002 and Admission Review 001. Their admission is semantic only. Implementation and operational proof remain future, separately authorized work.
+
+
+## Guildhall Deliberative Committee
+- Craftsmen compose the Guildhall Committee and collectively determine professions and exemplars.
+- Journeymen research and present evidence.
+- Guildmaster presides and authenticates rather than deciding unilaterally.
+- Diverse seats are analytical lenses, not permanent biases.
+- Garrison remains a readable roster owner; it does not search, select, evaluate, or admit.
+
+DR-019 is semantic only. Live committee dispatch and persona-production work remain separately unauthorized.
