@@ -259,4 +259,11 @@ DR-045 is admitted for current semantic use by DR-046 after a 20/20 synthetic pr
 Status: active admitted semantic contract.
 Path: `deliberations/decisions/DR-046-recruitment-transformation-handoff-admission-review.md`
 
-DR-045 passed 20/20 synthetic pressure-test criteria and is admitted. The active queue advances to Cross-Chain Invalidation and Version-Integrity. No implementation or external effect is authorized.
+DR-045 passed 20/20 synthetic pressure-test criteria and is admitted. The active queue advances to Cross-Chain Invalidation and Version-Integrity.
+
+### DR-047 — Cross-Chain Invalidation and Version-Integrity Contract
+
+Status: active semantic contract proposal.
+Path: `deliberations/decisions/DR-047-cross-chain-invalidation-version-integrity-contract.md`
+
+Cross-chain invalidation and successor-version rules are under semantic review. Admission requires synthetic pressure testing; no implementation or external effect is authorized.
