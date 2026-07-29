@@ -13,7 +13,7 @@ EC-01 admitted → Human-Trait Canon admitted → EC-02 admitted
 
 Active pointers:
 
-- DR-CURRENT: active decision pointer through DR-027
+- DR-CURRENT: active decision pointer through DR-028
 - EC-CURRENT: EC-01 and EC-02 admitted; EC-03 closed
 - OP-CURRENT: OP-SYN-001 v0.1 admitted, inactive synthetic package
 
@@ -120,4 +120,6 @@ Studium now has separate functional chambers: Applicability, Boundary, Conduct, 
 
 Completed: Courtyard’s institutional boundary, membership, office-versus-Officer distinction, station/operative relationship, and inter-office movement contract are defined in `current-step.md` and DR-027.
 
-The next increment is an independent consistency review of the Courtyard contracts against the admitted Guildhall, Studium, Foundry, Pit, Garrison, Recruitment/Conscription, Muster, Curia, La Cortine, and Lazaretto boundaries. The review remains semantic only; implementation, Runtime, activation, deployment, credential use, and external effect remain unauthorized.
+Completed: Courtyard cross-office consistency review is recorded in `current-step.md` and DR-028. The review confirms that Courtyard composes admitted office boundaries without absorbing their authority or the roles of La Cortine, Lazaretto, Curia, Garrison, or Runtime.
+
+The next increment is to identify any remaining semantic gaps in Courtyard’s office/station contracts and define the smallest independently reviewable closure batch. The review remains semantic only; implementation, Runtime, activation, deployment, credential use, and external effect remain unauthorized.
