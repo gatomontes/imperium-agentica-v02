@@ -19,7 +19,7 @@ Active pointers:
 
 Operational maturity remains unproven. No live provider, credential, tool, runtime, mission, activation, deployment, or external effect has been exercised.
 
-Creation-apparatus institutional completion review is now the active semantic step under DR-031. Guildhall’s Profession Resolution Contract was admitted by DR-034. Studium Doctrine Lifecycle was admitted by DR-036 for the Persona Governance Doctrine → Foundry branch only. Courtyard remains closed. This file contains later candidates and historical context.
+Creation-apparatus institutional completion review is complete and semantically closed through DR-050. No subsequent step is selected. Guildhall’s Profession Resolution Contract was admitted by DR-034. Studium Doctrine Lifecycle was admitted by DR-036 for the Persona Governance Doctrine → Foundry branch only. Courtyard remains closed. This file contains later candidates and historical context.
 
 ## Status
 
@@ -137,7 +137,7 @@ Courtyard semantic closure is complete. Candidate next paths include creation-ap
 
 Each increment requires its own semantic pressure test and admission review. Synthetic evidence remains non-operational; implementation, Runtime, live data, activation, deployment, credentials, and external effects remain unauthorized.
 
-## Active Contract Queue
+## Closed Contract Queue
 
 DR-046 admitted DR-045 after a 20/20 synthetic pressure test. DR-047 was admitted by DR-048 after a 20/20 synthetic pressure test. DR-049 was admitted by DR-050 after a 24/24 synthetic reconciliation test. The creation-apparatus contract chain is semantically closed. No implementation or external effect is authorized.
 
