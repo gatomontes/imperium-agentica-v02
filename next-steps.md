@@ -98,6 +98,12 @@ OC implementation, Secretariat implementation, Curia procedure change, productio
 
 ## Creation Apparatus Institutional Completion Review
 
+### Newly recorded dependency closure
+
+DR-022 resolves persona-admission authority: Foundry output passes through Pit; Pit returns a stress-test brief to the Guildhall Committee; the Committee determines Admit, Recycle to Foundry, or Discard; Garrison remains roster custodian only. This remains semantic and does not authorize implementation or live admission.
+
+
+
 The next proposed action is a review of each creation institution as an institution, not merely as a node in the Track A conformance chain. It requires explicit authorization.
 
 | Institution | Review target |
