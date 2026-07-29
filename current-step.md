@@ -10,16 +10,14 @@ DR-009 Evidence Without Engineered Orientation is recorded. DR-008 is superseded
 
 DR-010 Mission-Scoped Observator/Custos (OC) Operator Instance is recorded. OC is one instance, not two roles or cooperating components.
 
-DR-CURRENT is the active decision pointer through DR-043, retaining the numbered records explicitly listed in `deliberations/DR-CURRENT.md`. EC-CURRENT is the active exemplar-grounding correction pointer. OP-CURRENT is the active synthetic Operative Package pointer.
+DR-CURRENT is the active decision pointer through DR-044, retaining the numbered records explicitly listed in `deliberations/DR-CURRENT.md`. EC-CURRENT is the active exemplar-grounding correction pointer. OP-CURRENT is the active synthetic Operative Package pointer.
 
 ## Active Work Focus
 
-Garrison Admission and Suitability Contract (DR-043) is the active semantic proposal. Garrison remains roster and availability custodian; it does not determine professional fit, forge or test Persona Specifications, decide Committee disposition, recruit, activate, or deploy. The next gate is synthetic pressure testing and admission review. Do not implement, activate, or create live personas or Operatives during this step.
+DR-043 Garrison Admission and Suitability Contract was pressure-tested 18/18 and admitted by DR-044. The active queue advances to Recruitment/Conscription Transformation and Handoff Contract. Do not implement, activate, or create live personas or Operatives during this step.
 
 The previously composed HTTP/persistence implementation remains historical context, not the active work leg.
 
-## Garrison Admission and Suitability Contract — DR-043
+## Garrison Admission and Suitability Admission — DR-044
 
-DR-043 defines Garrison’s bounded receipt and verification of an explicit Committee-admitted candidate packet, versioned roster-state transitions, suitability reporting against supplied criteria, refusal/return, provenance preservation, invalidation after upstream change, and downstream handoff to Recruitment/Conscription. Pit evidence and recommendation do not replace Committee disposition. Garrison does not silently repair artifacts, infer fit, substitute successor versions, or authorize transformation, activation, deployment, or external effects.
-
-This proposal is semantic only. Admission requires synthetic pressure testing; implementation, Runtime action, live data, persona or Operative creation, activation, deployment, credential use, and external effect remain unauthorized.
+DR-044 records the 18/18 synthetic admission of DR-043. Garrison remains roster and availability custodian; Guildhall retains authoritative professional-suitability judgment. This admission is semantic only. Admission requires synthetic pressure testing; implementation, Runtime action, live data, persona or Operative creation, activation, deployment, credential use, and external effect remain unauthorized.
