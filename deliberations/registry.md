@@ -6,7 +6,7 @@
 - Improvement programs recorded: 7
 - Pending control records: 7
 - Implemented control records: 0
-- Decision records: 46
+- Decision records: 47
 - Initial assessment: `assessments/2026-07-23-mit-ai-risks-imperium-assessment.md`
 - Integration review: `assessments/2026-07-23-ra-integration-review-001.md`
 - Integration execution: `assessments/2026-07-23-ra-integration-review-execution-001.md`
@@ -221,3 +221,11 @@ DR-045 is admitted by DR-046 after a 20/20 synthetic pressure test. Recruitment/
 Status: admitted semantic contract.
 
 DR-045 passed 20/20 synthetic pressure-test criteria and is admitted for current semantic use. The active queue advances to Cross-Chain Invalidation and Version-Integrity. No implementation or external effect is authorized.
+
+
+### DR-047 — Cross-Chain Invalidation and Version-Integrity Contract
+
+Status: active semantic contract proposal.
+Path: `deliberations/decisions/DR-047-cross-chain-invalidation-version-integrity-contract.md`
+
+Cross-chain invalidation, quarantine, successor-version, revalidation, and provenance rules are under review. No implementation or external effect is authorized.
