@@ -183,10 +183,38 @@ The review confirms that Courtyard composes admitted office boundaries without a
 
 ### DR-032 — Creation-Apparatus Institutional Completion Review Findings
 
-Status: active semantic review boundary.
+Status: retained semantic review boundary; queue completed by DR-050.
 Path: `deliberations/decisions/DR-032-creation-apparatus-completion-review-findings.md`
 
 The creation chain is synthetically conformant but institutionally incomplete. Eight remaining contracts are queued for independent semantic review, beginning with Guildhall. No implementation or external effect is authorized.
+
+### DR-033 — Guildhall Profession Resolution Contract
+
+Status: active admitted semantic contract.
+Path: deliberations/decisions/DR-033-guildhall-profession-resolution-contract.md
+
+DR-033 is admitted by DR-034 after an 8/8 synthetic pressure test. Guildhall retains profession-resolution authority; no implementation or external effect is authorized.
+
+### DR-034 — Guildhall Profession Resolution Admission Review
+
+Status: active admitted semantic contract.
+Path: deliberations/decisions/DR-034-guildhall-profession-resolution-admission-review.md
+
+DR-033 is admitted for current semantic use after an 8/8 synthetic pressure test. No implementation or external effect is authorized.
+
+### DR-035 — Studium Persona Governance Doctrine Lifecycle Contract
+
+Status: active admitted semantic contract; Persona Governance Doctrine branch only.
+Path: deliberations/decisions/DR-035-studium-doctrine-lifecycle-contract.md
+
+DR-035 is admitted by DR-036 after a 12/12 synthetic pressure test for Persona Governance Doctrine → Foundry only. Officer Governance Doctrine → Smith remains separate; no implementation or external effect is authorized.
+
+### DR-036 — Studium Doctrine Lifecycle Admission Review
+
+Status: active admitted semantic contract; Persona Governance Doctrine branch only.
+Path: deliberations/decisions/DR-036-studium-doctrine-lifecycle-admission-review.md
+
+DR-035 is admitted for current semantic use after a 12/12 synthetic pressure test. No implementation or external effect is authorized.
 
 ### DR-037 — Hagiography Evidence-to-Canon Contract
 
@@ -277,10 +305,10 @@ DR-047 passed 20/20 synthetic pressure-test criteria and is admitted for current
 
 ### DR-049 — Creation-Apparatus Closure and Reconciliation Review
 
-Status: active semantic review boundary.
+Status: completed semantic closure review; admitted by DR-050.
 Path: `deliberations/decisions/DR-049-creation-apparatus-closure-reconciliation-review.md`
 
-The admitted creation-apparatus contract chain is under end-to-end semantic reconciliation. Admission requires synthetic closure testing; no implementation or external effect is authorized.
+DR-049 reconciled the admitted creation-apparatus contract chain; DR-050 admitted that reconciliation after 24/24 synthetic end-to-end criteria. No implementation or external effect is authorized.
 
 
 ### DR-050 — Creation-Apparatus Closure and Reconciliation Admission Review
