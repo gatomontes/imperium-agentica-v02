@@ -1,5 +1,18 @@
 ## Next Steps
 
+## Current Implementation Breakpoint
+
+Theoretical creation-chain conformance remains complete. The implementation leg has advanced through PostgreSQL persistence, a persistent reference facade, HTTP contracts, and a Node HTTP adapter. The async transport contract and `PersistentTransportAdapter` are now present.
+
+Next implementation increments:
+1. wire the async transport adapter into the HTTP handler;
+2. compose `PostgresArtifactStore`, `PersistentImperiumReference`, `PersistentTransportAdapter`, resolver, and Node server;
+3. run `npm run build` and `npm test`;
+4. repair the first concrete failure;
+5. admit the completed HTTP/persistence implementation increment.
+
+Production authentication provider, TLS/reverse proxy, deployment, CI database provisioning, message transport, OC implementation, and Execution-layer work remain deferred.
+
 ## New-Chat Breakpoint
 
 Completed synthetic sequence:
