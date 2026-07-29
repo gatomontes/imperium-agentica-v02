@@ -2,7 +2,7 @@
 
 ## Status
 
-Track A, B1, B2.1, B2.1a, and B2.3 are complete and closed. Cognitive standard CB-CURRENT is active; current numbered snapshot CB-007. DR-CURRENT is the active decision pointer. Semantic Integrity is complete and closed after the external reader pass.
+Track A, B1, B2.1, B2.1a, and B2.3 are complete and closed. The current implementation leg is HTTP transport and persistence composition on branch `agent/clarify-creation-institution-completion`. Cognitive standard CB-CURRENT is active; current numbered snapshot CB-007. DR-CURRENT is the active decision pointer. Semantic Integrity is complete and closed after the external reader pass.
 
 DR-005 parks Locksmith and credential infrastructure until an observed authenticated-integration trigger.
 
@@ -12,7 +12,19 @@ DR-010 Mission-Scoped Observator/Custos (OC) Operator Instance is recorded. OC i
 
 DR-CURRENT is the active decision pointer through DR-018. EC-CURRENT is the active exemplar-grounding correction pointer. OP-CURRENT is the active synthetic Operative Package pointer.
 
+## Active Implementation Focus
+
+The reference implementation now includes:
+- TypeScript/Node artifact and workflow contracts;
+- PostgreSQL persistence schema, adapter, migration ledger, and opt-in integration coverage;
+- persistent reference and transport adapters;
+- framework-neutral HTTP contracts and handler;
+- built-in Node HTTP server with health/readiness, request limits, authorization injection, graceful shutdown, and lifecycle routes.
+
+The next implementation increment is to complete the async HTTP/runtime composition so the PostgreSQL-backed transport adapter can serve the Node HTTP boundary. Local verification remains required after the async transport changes.
+
 ## Active Focus
+
 
 **No active step.** Foundry Persona Production Conformance is admitted by DR-014. Synthetic Pit pressure test is complete. EC-01, EC-02, and the Human-Trait Canon schema are admitted for the Operative/Foundry path. Officer/Gesta work is out of scope. Human-Trait Canon schema and lifecycle are admitted by DR-012. EC-01 is admitted; its synthetic Hagiography application is complete. Semantic Integrity is closed after the external reader pass recorded at `tests/semantic-integrity/runs/20260725T-external-reader-pass-005.md`.
 
