@@ -13,13 +13,13 @@ EC-01 admitted → Human-Trait Canon admitted → EC-02 admitted
 
 Active pointers:
 
-- DR-CURRENT: active decision pointer through DR-028
+- DR-CURRENT: active decision pointer through DR-030
 - EC-CURRENT: EC-01 and EC-02 admitted; EC-03 closed
 - OP-CURRENT: OP-SYN-001 v0.1 admitted, inactive synthetic package
 
 Operational maturity remains unproven. No live provider, credential, tool, runtime, mission, activation, deployment, or external effect has been exercised.
 
-The active step is recorded in `current-step.md`; this file contains only later candidates and historical context.
+Courtyard institutional definition is complete and closed by DR-030. The active step is recorded in `current-step.md`; this file contains later candidates and historical context.
 
 ## Status
 
@@ -122,4 +122,4 @@ Completed: Courtyard’s institutional boundary, membership, office-versus-Offic
 
 Completed: Courtyard cross-office consistency review is recorded in `current-step.md` and DR-028. The review confirms that Courtyard composes admitted office boundaries without absorbing their authority or the roles of La Cortine, Lazaretto, Curia, Garrison, or Runtime.
 
-The next increment is to identify any remaining semantic gaps in Courtyard’s office/station contracts and define the smallest independently reviewable closure batch. The review remains semantic only; implementation, Runtime, activation, deployment, credential use, and external effect remain unauthorized.
+Courtyard semantic closure is complete. Candidate next paths include creation-apparatus institutional completion review, provider-neutral deployment authorization investigation, or a separately scoped implementation-readiness review. None is active; implementation, Runtime, activation, deployment, credentials, live data, and external effects remain unauthorized.

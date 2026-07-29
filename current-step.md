@@ -2,7 +2,7 @@
 
 ## Status
 
-Track A, B1, B2.1, B2.1a, and B2.3 are complete and closed. The current authorized work is Courtyard institutional definition. The Courtyard is the operating surface of the Citadel’s offices and Imperium Officers. This step is semantic and architectural only; it does not authorize implementation, Runtime action, deployment, activation, credentials, or external effect. Cognitive standard CB-CURRENT is active; current numbered snapshot CB-007. DR-CURRENT is the active decision pointer. Semantic Integrity is complete and closed after the external reader pass.
+Track A, B1, B2.1, B2.1a, and B2.3 are complete and closed. Courtyard institutional definition is complete and closed at the semantic/architectural boundary by DR-030. The Courtyard is the operating surface of the Citadel’s offices and Imperium Officers. This step is semantic and architectural only; it does not authorize implementation, Runtime action, deployment, activation, credentials, or external effect. Cognitive standard CB-CURRENT is active; current numbered snapshot CB-007. DR-CURRENT is the active decision pointer. Semantic Integrity is complete and closed after the external reader pass.
 
 DR-005 parks Locksmith and credential infrastructure until an observed authenticated-integration trigger.
 
@@ -10,7 +10,7 @@ DR-009 Evidence Without Engineered Orientation is recorded. DR-008 is superseded
 
 DR-010 Mission-Scoped Observator/Custos (OC) Operator Instance is recorded. OC is one instance, not two roles or cooperating components.
 
-DR-CURRENT is the active decision pointer through DR-027, retaining the numbered records explicitly listed in `deliberations/DR-CURRENT.md`. EC-CURRENT is the active exemplar-grounding correction pointer. OP-CURRENT is the active synthetic Operative Package pointer.
+DR-CURRENT is the active decision pointer through DR-030, retaining the numbered records explicitly listed in `deliberations/DR-CURRENT.md`. EC-CURRENT is the active exemplar-grounding correction pointer. OP-CURRENT is the active synthetic Operative Package pointer.
 
 ## Active Work Focus
 
@@ -167,15 +167,4 @@ Courtyard is therefore distinct from:
 
 This boundary is a semantic contract only. It authorizes no implementation, activation, deployment, credential use, Runtime action, or external effect.
 
-
-## Courtyard Cross-Office Consistency Review — DR-028
-
-DR-028 records a semantic consistency review of the Courtyard contracts against the admitted boundaries of Guildhall, Studium, Hagiography, Foundry, Pit, Garrison, Recruitment/Conscription, Muster, Curia, La Cortine, and Lazaretto.
-
-The review confirms that Courtyard is an operating surface, not an authority source. Guildhall retains profession and candidate-disposition responsibilities; Studium retains doctrinal fitting and issuance responsibilities; Hagiography retains exemplar and Human-Trait Canon responsibilities; Foundry retains Persona Specification production; Pit retains adversarial qualification and recommendation; Garrison retains roster and availability custody; Recruitment/Conscription retains deployment-medium packaging; Muster retains outbound mission orchestration; and Curia retains mission-level decision authority.
-
-Courtyard offices may exchange artifacts and requests only within their admitted contracts. Courtyard does not absorb La Cortine’s external boundary and routing function, Lazaretto’s return quarantine and sanitization function, Curia’s mission decision authority, Garrison’s roster custody, or Runtime’s operational role. No office gains authority merely through receipt, proximity, or participation in a handoff.
-
-The consistency review identifies no semantic merge of office responsibilities and no new orchestration or governance layer. Any unresolved implementation, artifact-schema, Runtime, activation, deployment, credential, or external-effect questions remain future work and are not authorized by this review.
-
-This is semantic only; no implementation, Runtime action, activation, deployment, credential use, or external effect is authorized.
+\n## Courtyard Semantic Closure — DR-030\n\nDR-030 records that Courtyard’s semantic definition is complete: its boundary, membership, office/Officer distinction, station and resident-operative contracts, artifact movement, provenance, lifecycle, refusal/return/escalation, and failure/recovery accountability are admitted. Courtyard composes offices without supplying authority, deciding missions, holding credentials, quarantining returns, operating Runtime, or authorizing implementation.\n\nThis closure is semantic and architectural only. Concrete schemas, persistence, transport, enforcement, Runtime behavior, activation, deployment, credentials, live providers, and external effects require a separately authorized step.\n
