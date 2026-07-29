@@ -2,7 +2,7 @@
 
 ## Status
 
-Track A, B1, B2.1, B2.1a, and B2.3 are complete and closed. The current implementation leg is HTTP transport and persistence composition on branch `agent/clarify-creation-institution-completion`. Cognitive standard CB-CURRENT is active; current numbered snapshot CB-007. DR-CURRENT is the active decision pointer. Semantic Integrity is complete and closed after the external reader pass.
+Track A, B1, B2.1, B2.1a, and B2.3 are complete and closed. The current authorized work is Courtyard institutional definition. The Courtyard is the operating surface of the Citadel’s offices and Imperium Officers. This step is semantic and architectural only; it does not authorize implementation, Runtime action, deployment, activation, credentials, or external effect. Cognitive standard CB-CURRENT is active; current numbered snapshot CB-007. DR-CURRENT is the active decision pointer. Semantic Integrity is complete and closed after the external reader pass.
 
 DR-005 parks Locksmith and credential infrastructure until an observed authenticated-integration trigger.
 
@@ -12,25 +12,19 @@ DR-010 Mission-Scoped Observator/Custos (OC) Operator Instance is recorded. OC i
 
 DR-CURRENT is the active decision pointer through DR-026, retaining the numbered records explicitly listed in `deliberations/DR-CURRENT.md`. EC-CURRENT is the active exemplar-grounding correction pointer. OP-CURRENT is the active synthetic Operative Package pointer.
 
-## Active Implementation Focus
+## Active Work Focus
 
-The reference implementation now includes:
-- TypeScript/Node artifact and workflow contracts;
-- PostgreSQL persistence schema, adapter, migration ledger, and opt-in integration coverage;
-- persistent reference and transport adapters;
-- framework-neutral HTTP contracts and handler;
-- built-in Node HTTP server with health/readiness, request limits, authorization injection, graceful shutdown, and lifecycle routes.
+The current work is Courtyard institutional definition. Define the office-operating surface of the Citadel, including office and Officer placement, station/operative relationships, authority boundaries, institutional artifacts, inter-office exchanges, and Runtime contracts. Do not implement or activate these elements during this step.
 
-The next implementation increment is to complete the async HTTP/runtime composition so the PostgreSQL-backed transport adapter can serve the Node HTTP boundary. Local verification remains required after the async transport changes.
+The previously composed HTTP/persistence implementation remains historical context, not the active work leg.
 
 ## Active Focus
 
-
-**No active step.** Foundry Persona Production Conformance is admitted by DR-014. Synthetic Pit pressure test is complete. EC-01, EC-02, and the Human-Trait Canon schema are admitted for the Operative/Foundry path. Officer/Gesta work is out of scope. Human-Trait Canon schema and lifecycle are admitted by DR-012. EC-01 is admitted; its synthetic Hagiography application is complete. Semantic Integrity is closed after the external reader pass recorded at `tests/semantic-integrity/runs/20260725T-external-reader-pass-005.md`.
+**Courtyard institutional definition is active.** Foundry Persona Production Conformance is admitted by DR-014. Synthetic Pit pressure test is complete. EC-01, EC-02, and the Human-Trait Canon schema are admitted for the Operative/Foundry path. Officer/Gesta work is out of scope. Human-Trait Canon schema and lifecycle are admitted by DR-012. EC-01 is admitted; its synthetic Hagiography application is complete. Semantic Integrity is closed after the external reader pass recorded at `tests/semantic-integrity/runs/20260725T-external-reader-pass-005.md`.
 
 The external reader recovered the intended OC ontology, authority boundary, implementation status, current step, and Cognitive Baseline distinctions. Minor first-contact and queue-label ambiguities were corrected in `current-step.md` and `next-steps.md`. The repository now has evidence that its language can communicate the tested distinctions without conversation history.
 
-EC-CURRENT is the active correction-state pointer. EC-01 is admitted by DR-011; EC-02 is deferred and EC-03 is closed. The Human-Trait Canon draft at `layers/cognitive/drafts/human-trait-canon.md` is the active bounded review target. The next action is to review its schema, provenance, lifecycle, and non-authority boundaries. No real-person data is being used.
+EC-CURRENT is the active correction-state pointer. EC-01 is admitted by DR-011; EC-02 is deferred and EC-03 is closed. The Human-Trait Canon schema and lifecycle were reviewed and admitted by DR-012. It remains an admitted semantic dependency, not the active work step. No real-person data is being used.
 
 The external reassessment is evidence of interpretation drift, not authority to implement an OC pattern. It incorrectly interpreted:
 
@@ -49,7 +43,7 @@ CB-CURRENT flattening: complete
 CB-DENIED disposition surface: established
 Historical numbered CBs: preserved
 Independent-reader packet: expanded to include Cognitive authority files
-Next step: review Human-Trait Canon draft
+Next step: Courtyard institutional definition
 ```
 
 ## Test Boundary
@@ -84,7 +78,7 @@ External effect: NO
 
 ## Current Gate
 
-EC-02 pressure test passed 8/8 and admission review passed 7/7. DR-013 admitted EC-02 for current semantic use. Foundry review 001 identified six revisions; all were applied. Synthetic candidate integration passed 10/10. Synthetic Pit test 003 passed 10/10 as PERSONA_TEST_CONFORMANT. Garrison admission review 004 passed all criteria, and DR-015 admitted PSC-SYN-001 v0.1 as a synthetic Canonical Persona. PGD-SYN-002 pressure test passed 10/10; admission review passed 7/7; DR-017 admitted the doctrine. Reviewed downstream revalidation passed 5/5 across Foundry, Pit, Garrison, Conscription, and Muster. OP-CURRENT and DP-SYN-001 remain historical/provisional; no live execution or external effect exists.
+Courtyard definition gate: establish the Courtyard’s institutional boundaries and contracts before any implementation or activation is considered. Existing semantic admissions remain preserved. EC-02 pressure test passed 8/8 and admission review passed 7/7. DR-013 admitted EC-02 for current semantic use. Foundry review 001 identified six revisions; all were applied. Synthetic candidate integration passed 10/10. Synthetic Pit test 003 passed 10/10 as PERSONA_TEST_CONFORMANT. Garrison admission review 004 passed all criteria, and DR-015 admitted PSC-SYN-001 v0.1 as a synthetic Canonical Persona. PGD-SYN-002 pressure test passed 10/10; admission review passed 7/7; DR-017 admitted the doctrine. Reviewed downstream revalidation passed 5/5 across Foundry, Pit, Garrison, Conscription, and Muster. OP-CURRENT and DP-SYN-001 remain historical/provisional; no live execution or external effect exists.
 
 No OC implementation, Secretariat implementation, Curia procedure change, runtime permission, persona creation, model fine-tuning, Runtime action, deployment, or external effect is authorized by this step.
 

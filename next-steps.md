@@ -1,18 +1,5 @@
 ## Next Steps
 
-## Current Implementation Breakpoint
-
-Theoretical creation-chain conformance remains complete. The implementation leg has advanced through PostgreSQL persistence, a persistent reference facade, HTTP contracts, and a Node HTTP adapter. The async transport contract and `PersistentTransportAdapter` are now present.
-
-Next implementation increments:
-1. wire the async transport adapter into the HTTP handler;
-2. compose `PostgresArtifactStore`, `PersistentImperiumReference`, `PersistentTransportAdapter`, resolver, and Node server;
-3. run `npm run build` and `npm test`;
-4. repair the first concrete failure;
-5. admit the completed HTTP/persistence implementation increment.
-
-Production authentication provider, TLS/reverse proxy, deployment, CI database provisioning, message transport, OC implementation, and Execution-layer work remain deferred.
-
 ## New-Chat Breakpoint
 
 Completed synthetic sequence:
@@ -32,11 +19,11 @@ Active pointers:
 
 Operational maturity remains unproven. No live provider, credential, tool, runtime, mission, activation, deployment, or external effect has been exercised.
 
-No next step is selected; choose explicitly in the new chat.
+The active step is recorded in `current-step.md`; this file contains only later candidates and historical context.
 
 ## Status
 
-Semantic Integrity is complete and closed. The external reader recovered the intended meaning from the repository without relying on conversation history. DR-CURRENT is the active decision pointer. EC-CURRENT is the active exemplar-grounding correction pointer: EC-01 admitted, EC-02 deferred, EC-03 closed. A synthetic Hagiography application passed. Human-Trait Canon design review is active.
+Semantic Integrity is complete and closed. The external reader recovered the intended meaning from the repository without relying on conversation history. DR-CURRENT is the active decision pointer. EC-CURRENT is the active exemplar-grounding correction pointer: EC-01 admitted, EC-02 deferred, EC-03 closed. A synthetic Hagiography application passed. Human-Trait Canon schema and lifecycle review were completed and admitted by DR-012.
 
 DR-010 records **Observator/Custos (`OC`)** as one mission-attached Imperium Operator instance—not two roles or cooperating components—with authorized visibility and interaction but no execution influence.
 
@@ -98,7 +85,7 @@ OC implementation, Secretariat implementation, Curia procedure change, productio
 
 ## Creation Apparatus Institutional Completion Review
 
-The next proposed action is a review of each creation institution as an institution, not merely as a node in the Track A conformance chain. It requires explicit authorization.
+The creation-apparatus institutional review remains a later candidate. Courtyard institutional definition is the current selected step.
 
 | Institution | Review target |
 |---|---|
