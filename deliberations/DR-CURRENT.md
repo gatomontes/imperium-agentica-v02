@@ -188,6 +188,13 @@ Path: `deliberations/decisions/DR-032-creation-apparatus-completion-review-findi
 
 The creation chain is synthetically conformant but institutionally incomplete. Eight remaining contracts are queued for independent semantic review, beginning with Guildhall. No implementation or external effect is authorized.
 
+### DR-037 — Hagiography Evidence-to-Canon Contract
+
+Status: active semantic contract proposal.
+Path: `deliberations/decisions/DR-037-hagiography-evidence-to-canon-contract.md`
+
+Hagiography’s evidence-to-canon boundary is under semantic review. Admission requires synthetic pressure testing; no implementation or external effect is authorized.
+
 ### DR-033 — Guildhall Profession Resolution Contract
 
 Status: admitted semantic contract.
