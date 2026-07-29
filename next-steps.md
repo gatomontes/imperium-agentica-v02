@@ -141,4 +141,7 @@ Each increment requires its own semantic pressure test and admission review. Syn
 
 DR-033 — Guildhall Profession Resolution Contract: pressure-test refusal, decomposition, ambiguity, multi-profession tie, reassessment, artifact ownership, and Garrison-search eligibility. Admission requires a separate review record; implementation and external effects remain unauthorized.
 
-\n## Active Contract Queue\n\nDR-035 — Studium Doctrine Lifecycle Contract: pressure-test intake, applicability, boundary, conduct, evidence, conflict, issuance, revision, invalidation, and receiving-office refusal behavior. Admission requires a separate review record; implementation and external effects remain unauthorized.\n
+
+## Active Contract Queue
+
+DR-035 — Studium Doctrine Lifecycle Contract: pressure-test intake, applicability, boundary, conduct, evidence, conflict, issuance, revision, invalidation, and receiving-office refusal behavior. Admission requires a separate review record; implementation and external effects remain unauthorized.
