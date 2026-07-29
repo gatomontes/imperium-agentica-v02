@@ -113,7 +113,7 @@ None recorded.
 | DR-027 | Define Courtyard membership, office-versus-Officer distinction, station/operative relationship, and inter-office movement | Recorded decision; semantic only |
 | DR-028 | Review Courtyard contracts against admitted office and external-boundary responsibilities | Recorded decision; semantic only |
 | DR-029 | Close Courtyard office and station contracts | Recorded decision; semantic only |
-| DR-030 | Close Courtyard semantic definition | Recorded decision; semantic closure; implementation not authorized |
+| DR-030 | Close Courtyard semantic definition | Recorded decision; semantic closure; implementation not authorized |\n| DR-051 | Select Execution-layer definition | Recorded decision; active semantic work boundary |
 | DR-031 | Select creation-apparatus institutional completion review scope | Recorded decision; semantic only |
 | DR-032 | Record creation-apparatus institutional completion review findings and queue | Recorded decision; semantic only |
 | DR-033 | Define Guildhall Profession Resolution Contract | Recorded decision; admitted semantic contract |
@@ -251,3 +251,4 @@ Status: admitted semantic closure review.
 Path: `deliberations/decisions/DR-050-creation-apparatus-closure-reconciliation-admission-review.md`
 
 DR-049 passed 24/24 synthetic end-to-end reconciliation criteria and is admitted. The creation-apparatus semantic chain is closed; no implementation or external effect is authorized.
+\n\n### DR-051 — Execution-Layer Definition Scope\n\nStatus: active semantic work boundary.\nPath: `deliberations/decisions/DR-051-execution-layer-definition-scope.md`\n\nExecution-layer definition is selected as the current semantic increment. No implementation, Runtime operation, activation, deployment, credentials, provider interaction, live data, or external effect is authorized.\n
