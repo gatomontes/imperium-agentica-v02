@@ -114,3 +114,11 @@ Status: active admitted semantic contract set.
 Path: deliberations/decisions/DR-018-creation-apparatus-completion-contracts.md
 
 Eight bounded Cognitive completion contracts for the professional Operative path are admitted for current semantic use. The decision does not authorize implementation, live data, Runtime, deployment, Officer/Gesta work, or external effect.
+
+
+### DR-024 — Foundry Resident Station Operatives
+
+Status: active recorded semantic decision.
+Path: `deliberations/decisions/DR-024-foundry-resident-station-operatives.md`
+
+Foundry's chambers are bounded functional stations occupied by resident operatives. The Foundry Officer governs and authenticates the packet's passage; resident operatives perform the intelligent station work. No implementation, Runtime activation, live production, deployment, or external effect is authorized.
