@@ -10,14 +10,14 @@ DR-009 Evidence Without Engineered Orientation is recorded. DR-008 is superseded
 
 DR-010 Mission-Scoped Observator/Custos (OC) Operator Instance is recorded. OC is one instance, not two roles or cooperating components.
 
-DR-CURRENT is the active decision pointer through DR-047, retaining the numbered records explicitly listed in `deliberations/DR-CURRENT.md`. EC-CURRENT is the active exemplar-grounding correction pointer. OP-CURRENT is the active synthetic Operative Package pointer.
+DR-CURRENT is the active decision pointer through DR-048, retaining the numbered records explicitly listed in `deliberations/DR-CURRENT.md`. EC-CURRENT is the active exemplar-grounding correction pointer. OP-CURRENT is the active synthetic Operative Package pointer.
 
 ## Active Work Focus
 
-DR-046 admits DR-045 after a 20/20 synthetic pressure test. The active queue advances to the Cross-Chain Invalidation and Version-Integrity Contract. Do not implement, activate, or create live personas or Operatives during this step.
+DR-046 admits DR-045 after a 20/20 synthetic pressure test. DR-047 is admitted by DR-048 after a 20/20 synthetic pressure test. The creation-apparatus contract queue is complete; the active queue advances to closure and reconciliation review. Do not implement, activate, or create live personas or Operatives during this step.
 
 The previously composed HTTP/persistence implementation remains historical context, not the active work leg.
 
-## Cross-Chain Invalidation and Version-Integrity Contract — DR-047
+## Creation-Apparatus Closure and Reconciliation Review — DR-049
 
-DR-047 defines bounded propagation of invalidation, supersession, quarantine, successor versioning, revalidation, refusal, and provenance across dependent creation-apparatus artifacts. This proposal is semantic only. Admission requires synthetic pressure testing; implementation, Runtime action, activation, deployment, credentials, and external effects remain unauthorized.
+DR-047 defines bounded propagation of invalidation, supersession, quarantine, successor versioning, revalidation, refusal, and provenance across dependent creation-apparatus artifacts. DR-048 admitted that contract after a 20/20 synthetic pressure test. DR-049 now scopes closure and reconciliation of the admitted creation-apparatus contracts and their authoritative pointers. Implementation, Runtime action, activation, deployment, credentials, and external effects remain unauthorized.

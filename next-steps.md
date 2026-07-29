@@ -13,7 +13,7 @@ EC-01 admitted → Human-Trait Canon admitted → EC-02 admitted
 
 Active pointers:
 
-- DR-CURRENT: active decision pointer through DR-047
+- DR-CURRENT: active decision pointer through DR-048
 - EC-CURRENT: EC-01 and EC-02 admitted; EC-03 closed
 - OP-CURRENT: OP-SYN-001 v0.1 admitted, inactive synthetic package
 
@@ -139,4 +139,4 @@ Each increment requires its own semantic pressure test and admission review. Syn
 
 ## Active Contract Queue
 
-DR-046 admitted DR-045 after a 20/20 synthetic pressure test. The active queue advances to Cross-Chain Invalidation and Version-Integrity. No implementation or external effect is authorized.
+DR-046 admitted DR-045 after a 20/20 synthetic pressure test. DR-047 was admitted by DR-048 after a 20/20 synthetic pressure test. The creation-apparatus contract queue is complete; DR-049 scopes the active closure and reconciliation review. No implementation or external effect is authorized.
