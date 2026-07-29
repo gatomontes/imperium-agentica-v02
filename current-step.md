@@ -18,6 +18,33 @@ The current work is Courtyard institutional definition. Define the office-operat
 
 The previously composed HTTP/persistence implementation remains historical context, not the active work leg.
 
+## Courtyard Office Inventory
+
+Courtyard’s institutional inventory includes:
+
+- Secretariat
+- Castellan
+- Guildhall
+- Studium
+- Hagiography
+- Foundry
+- Pit
+- Garrison
+- Smith
+- Recruitment/Conscription
+- Armory
+- Locksmith
+- Curia
+- Collegium
+- Preceptory
+- Inquisition
+- Muster
+- Spur
+- The Gesta
+
+These are offices or institutional functions within the Courtyard operating surface. Their inclusion does not create a new governance layer, authority layer, Runtime component, execution surface, or implementation authorization.
+
+
 ## Active Focus
 
 **Courtyard institutional definition is active.** Foundry Persona Production Conformance is admitted by DR-014. Synthetic Pit pressure test is complete. EC-01, EC-02, and the Human-Trait Canon schema are admitted for the Operative/Foundry path. Officer/Gesta work is out of scope. Human-Trait Canon schema and lifecycle are admitted by DR-012. EC-01 is admitted; its synthetic Hagiography application is complete. Semantic Integrity is closed after the external reader pass recorded at `tests/semantic-integrity/runs/20260725T-external-reader-pass-005.md`.
