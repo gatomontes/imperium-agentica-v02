@@ -341,3 +341,11 @@ Status: active admitted semantic contract.
 Path: `deliberations/decisions/DR-053-execution-layer-boundary-envelope-admission-review.md`
 
 DR-052 passed 18/18 synthetic pressure-test criteria and is admitted for current semantic use. The next semantic increment is Execution failure, interruption, and return-state contract review. No implementation or external effect is authorized.
+
+
+### DR-054 — Execution Failure, Interruption, and Return-State Contract
+
+Status: active semantic contract proposal; admission pending pressure test.
+Path: `deliberations/decisions/DR-054-execution-failure-interruption-return-state-contract.md`
+
+DR-054 defines bounded failure, interruption, indeterminate-state, retry, quarantine, and return behavior for Execution. No implementation or external effect is authorized.
