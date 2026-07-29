@@ -10,7 +10,7 @@ DR-009 Evidence Without Engineered Orientation is recorded. DR-008 is superseded
 
 DR-010 Mission-Scoped Observator/Custos (OC) Operator Instance is recorded. OC is one instance, not two roles or cooperating components.
 
-DR-CURRENT is the active decision pointer through DR-034, retaining the numbered records explicitly listed in `deliberations/DR-CURRENT.md`. EC-CURRENT is the active exemplar-grounding correction pointer. OP-CURRENT is the active synthetic Operative Package pointer.
+DR-CURRENT is the active decision pointer through DR-035, retaining the numbered records explicitly listed in `deliberations/DR-CURRENT.md`. EC-CURRENT is the active exemplar-grounding correction pointer. OP-CURRENT is the active synthetic Operative Package pointer.
 
 ## Active Work Focus
 
@@ -181,3 +181,7 @@ Guildhall determines the professional pattern required by an approved Work Speci
 ## Guildhall Profession Resolution Admission — DR-034
 
 DR-034 records a synthetic pressure test passing 8/8 criteria and admits DR-033 for current semantic use. Unresolved, refused, and no-match outcomes remain explicit. Guildhall does not select personas, reserve Garrison inventory, forge or test personas, or recruit/deploy Operatives. No implementation or external effect is authorized.
+
+## Studium Doctrine Lifecycle Contract — DR-035
+
+DR-035 defines Studium’s semantic lifecycle contract: bounded intake, applicability, boundary, conduct, evidence, conflict, issuance, revision, and invalidation. Studium fits admitted doctrine only after Guildhall candidate approval; it does not determine professional fit, select personas, forge or test Persona Specifications, reserve Garrison inventory, recruit Operatives, or deploy. Persona Governance Doctrine remains directed to Foundry and Officer Governance Doctrine to Smith. Admission requires synthetic pressure testing; implementation and external effects remain unauthorized.
