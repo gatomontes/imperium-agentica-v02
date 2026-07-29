@@ -10,11 +10,11 @@ DR-009 Evidence Without Engineered Orientation is recorded. DR-008 is superseded
 
 DR-010 Mission-Scoped Observator/Custos (OC) Operator Instance is recorded. OC is one instance, not two roles or cooperating components.
 
-DR-CURRENT is the active decision pointer through DR-039, retaining the numbered records explicitly listed in `deliberations/DR-CURRENT.md`. EC-CURRENT is the active exemplar-grounding correction pointer. OP-CURRENT is the active synthetic Operative Package pointer.
+DR-CURRENT is the active decision pointer through DR-041, retaining the numbered records explicitly listed in `deliberations/DR-CURRENT.md`. EC-CURRENT is the active exemplar-grounding correction pointer. OP-CURRENT is the active synthetic Operative Package pointer.
 
 ## Active Work Focus
 
-The Hagiography Evidence-to-Canon Contract was pressure-tested 10/10 and admitted by DR-038. The active contract is Foundry Input and Conflict under DR-039, defining the accepted Persona Specification inputs, source precedence, conflict handling, provenance, refusal/return, versioning, and handoff to Pit. Do not implement, activate, or create live personas or Operatives during this step.
+The Hagiography Evidence-to-Canon Contract was pressure-tested 10/10 and admitted by DR-038. The Foundry Input and Conflict Contract was pressure-tested 14/14 and admitted by DR-040. The active contract is the Pit Independent Validation Contract under the creation-apparatus review queue. Do not implement, activate, or create live personas or Operatives during this step.
 
 The previously composed HTTP/persistence implementation remains historical context, not the active work leg.
 
@@ -185,3 +185,14 @@ DR-034 records a synthetic pressure test passing 8/8 criteria and admits DR-033 
 ## Studium Doctrine Lifecycle Contract — DR-035
 
 DR-035 defines Studium’s semantic lifecycle contract: bounded intake, applicability, boundary, conduct, evidence, conflict, issuance, revision, and invalidation. Studium fits admitted doctrine only after Guildhall candidate approval; it does not determine professional fit, select personas, forge or test Persona Specifications, reserve Garrison inventory, recruit Operatives, or deploy. Persona Governance Doctrine remains directed to Foundry and Officer Governance Doctrine to Smith. Admission requires synthetic pressure testing; implementation and external effects remain unauthorized.
+
+
+## Pit Independent Validation Contract — DR-041
+
+DR-041 defines Pit as the independent validation office for a Foundry candidate. Pit receives only a complete, released candidate packet; its resident testing operatives examine the candidate through bounded adversarial stations covering conformance, boundary adherence, stress behavior, failure behavior, evidence sufficiency, and report integrity. Pit records classified findings with failure class, severity, native repair owner, evidence references, uncertainty, retest eligibility, and examination identity/version without silently repairing the candidate or changing its source authority.
+
+The Pit Officer preserves examination independence, governs and authenticates the versioned Pit Brief, and ensures each examination has a distinct identity. Pit may accept examination or refuse receipt when pre-examination conditions are unmet; after examination, findings go to Guildhall for disposition and are not directly returned for repair. Pit does not admit personas, select or reserve roster entries, resolve profession fit, author doctrine, canonize exemplars, recruit Operatives, or deploy. Its recommendation is not disposition: the Guildhall Committee remains the authority for Admit, Recycle, or Discard.
+
+A retest must identify the repaired successor version and preserve the prior findings. A changed upstream input, doctrine, canon, or candidate version invalidates the affected validation result and requires a new examination. Pit releases only a complete, versioned, provenance-preserving Pit Brief to Guildhall; receipt is not approval.
+
+This is a semantic contract only. No implementation, Runtime action, live data, persona production, Operative creation, activation, deployment, credential use, or external effect is authorized.
