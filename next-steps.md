@@ -13,13 +13,13 @@ EC-01 admitted → Human-Trait Canon admitted → EC-02 admitted
 
 Active pointers:
 
-- DR-CURRENT: active decision pointer through DR-030
+- DR-CURRENT: active decision pointer through DR-031
 - EC-CURRENT: EC-01 and EC-02 admitted; EC-03 closed
 - OP-CURRENT: OP-SYN-001 v0.1 admitted, inactive synthetic package
 
 Operational maturity remains unproven. No live provider, credential, tool, runtime, mission, activation, deployment, or external effect has been exercised.
 
-Courtyard institutional definition is complete and closed by DR-030. The active step is recorded in `current-step.md`; this file contains later candidates and historical context.
+Creation-apparatus institutional completion review is now the active semantic step under DR-031. Courtyard remains closed. This file contains later candidates and historical context.
 
 ## Status
 
