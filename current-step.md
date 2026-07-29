@@ -10,7 +10,7 @@ DR-009 Evidence Without Engineered Orientation is recorded. DR-008 is superseded
 
 DR-010 Mission-Scoped Observator/Custos (OC) Operator Instance is recorded. OC is one instance, not two roles or cooperating components.
 
-DR-CURRENT is the active decision pointer through DR-026, retaining the numbered records explicitly listed in `deliberations/DR-CURRENT.md`. EC-CURRENT is the active exemplar-grounding correction pointer. OP-CURRENT is the active synthetic Operative Package pointer.
+DR-CURRENT is the active decision pointer through DR-027, retaining the numbered records explicitly listed in `deliberations/DR-CURRENT.md`. EC-CURRENT is the active exemplar-grounding correction pointer. OP-CURRENT is the active synthetic Operative Package pointer.
 
 ## Active Work Focus
 
@@ -132,6 +132,24 @@ Pit is the adversarial qualification office. Resident testing operatives perform
 ## Studium Semantic Update — DR-026
 
 Studium is clarified as a chambered doctrinal office. Applicability, Boundary, Conduct, Evidence, Conflict, and Issuance are separate functional stations performed by resident operatives under the Studium Officer. Persona Governance Doctrine remains directed to Foundry; Officer Governance Doctrine remains directed to Smith. This is semantic only; no implementation, Runtime action, deployment, or external effect is authorized.
+
+## Courtyard Membership and Internal Institutional Contracts — DR-027
+
+Courtyard membership is institutional: it includes Citadel offices and bounded stations, Citadel Officers assigned to office responsibilities, resident operatives performing bounded specialist work, and the institutional artifacts and records those functions produce, receive, or exchange.
+
+An office is a governed institutional function, not an intelligent actor. It owns a responsibility, applies relevant doctrine and procedure within its authority, establishes station boundaries, receives or produces institutional artifacts, and may refuse, return, or escalate work when conditions are not satisfied.
+
+An Officer is an institutional cognitive actor assigned to bounded office responsibilities. Officers interpret and apply admitted doctrine within office authority, govern or authenticate office work, resolve matters assigned to Officer judgment, and record decisions or findings. Officers do not create authority merely by judging, replace the office, or perform every specialist operation.
+
+Resident operatives perform bounded specialist work at stations. They may inspect, transform, test, assemble, or record evidence as permitted by the station contract. They do not govern the office, interpret doctrine beyond that contract, adjudicate institutional disposition, or cross station boundaries on their own authority.
+
+The Praetorium is the institutional placement of Imperium Officers. Garrison remains roster and availability custodian; it is not the Officers’ residential or governance location.
+
+A station is a bounded functional point within an office with an owning office, input/output contract, resident operative assignment, evidence and refusal conditions, and receiving/releasing authority. Stations are not Officers and do not become offices merely because resident operatives work there.
+
+Inter-office movement occurs through explicit, traceable artifact handoffs. A sending function releases only an artifact satisfying its release conditions and identifying required contents, provenance, version, status, and recipient. The receiving function acknowledges, rejects, or returns it for named repair. Receipt is not approval; absence of rejection is not approval; and a receiving office may not silently rewrite the sender’s artifact or provenance. Returned work preserves reason, sender, recipient, version, and prior record.
+
+This is semantic only; no implementation, Runtime action, activation, deployment, credential use, or external effect is authorized.
 
 ## Courtyard Boundary — Institutional Surface
 
