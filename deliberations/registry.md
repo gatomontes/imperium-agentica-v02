@@ -261,3 +261,11 @@ Status: active semantic work boundary.
 Path: `deliberations/decisions/DR-051-execution-layer-definition-scope.md`
 
 Execution-layer definition is selected as the current semantic increment. No implementation, Runtime operation, activation, deployment, credentials, provider interaction, live data, or external effect is authorized.
+
+
+### DR-052 — Execution-Layer Boundary and Envelope Contract
+
+Status: active semantic contract proposal; admission pending pressure test.
+Path: `deliberations/decisions/DR-052-execution-layer-boundary-envelope-contract.md`
+
+Execution is bounded by an admitted envelope and does not absorb Curia, Muster, Armory, Locksmith, Runtime, La Cortine, Lazaretto, or provider authority. No implementation or external effect is authorized.
