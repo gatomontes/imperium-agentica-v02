@@ -116,3 +116,6 @@ Pit is the adversarial qualification office: `Foundry → Pit → Guildhall Comm
 
 Studium now has separate functional chambers: Applicability, Boundary, Conduct, Evidence, Conflict, and Issuance. The chamber model preserves distinct Persona Governance Doctrine → Foundry and Officer Governance Doctrine → Smith lines. Reconcile the chamber contracts with the institutional completion review. No implementation or external effect is authorized.
 
+## Courtyard Boundary Increment
+
+Completed: Courtyard’s institutional boundary is defined in `current-step.md`. The next increment is membership and office-versus-Officer distinction, followed by station/operative relationships and inter-office movement contracts.
