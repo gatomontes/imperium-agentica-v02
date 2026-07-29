@@ -10,7 +10,7 @@ DR-009 Evidence Without Engineered Orientation is recorded. DR-008 is superseded
 
 DR-010 Mission-Scoped Observator/Custos (OC) Operator Instance is recorded. OC is one instance, not two roles or cooperating components.
 
-DR-CURRENT is the active decision pointer through DR-018. EC-CURRENT is the active exemplar-grounding correction pointer. OP-CURRENT is the active synthetic Operative Package pointer.
+DR-CURRENT is the active decision pointer through DR-019. EC-CURRENT is the active exemplar-grounding correction pointer. OP-CURRENT is the active synthetic Operative Package pointer.
 
 ## Active Implementation Focus
 
@@ -99,5 +99,12 @@ Creation-apparatus institutional completion remains unestablished. Live persona 
 
 
 ## Creation Apparatus Admission
+
+## Guildhall Deliberative Committee
+
+DR-019 records that Guildhall profession and exemplar determination is exercised by a committee of Craftsmen. Journeymen research and present evidence. The Guildmaster presides and authenticates the committee’s determination rather than deciding unilaterally. Contrarian, Advocate, Outsider, Legalist, Purist, and Synthesist may serve as analytical lenses; they are not permanent biases or required conclusions.
+
+Garrison owns and exposes the admitted-persona roster. It does not search, evaluate, select, or admit personas. This is semantic only: no live committee dispatch, real-person research, persona production, Garrison mutation, recruitment, implementation, deployment, Runtime action, or external effect is authorized.
+
 
 DR-018 admits eight bounded Cognitive completion contracts for the professional Operative path. They are semantic contracts only; institutional implementation, live data, live persona/Operative creation, Runtime action, deployment, Officer/Gesta work, OC implementation, and external effect remain unauthorized.

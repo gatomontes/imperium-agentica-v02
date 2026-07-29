@@ -6,7 +6,7 @@
 - Improvement programs recorded: 7
 - Pending control records: 7
 - Implemented control records: 0
-- Decision records: 19
+- Decision records: 20
 - Initial assessment: `assessments/2026-07-23-mit-ai-risks-imperium-assessment.md`
 - Integration review: `assessments/2026-07-23-ra-integration-review-001.md`
 - Integration execution: `assessments/2026-07-23-ra-integration-review-execution-001.md`
@@ -102,6 +102,7 @@ None recorded.
 | DR-015 | Admit PSC-SYN-001 v0.1 as synthetic Canonical Persona | Recorded decision; synthetic admission only |
 | DR-016 | Admit OP-SYN-001 v0.1 as synthetic packaged Operative | Recorded decision; inactive package only |
 | DR-017 | Admit PGD-SYN-002 v0.1 synthetic Persona Governance Doctrine | Recorded decision; synthetic professional doctrine only |
+| DR-019 | Establish Guildhall deliberative committee: Craftsmen deliberate, Journeymen research, Guildmaster presides | Recorded decision; semantic only |
 
 The two `DR-002` records are distinct historical files. The later OpenBao topology decision reused an existing ID before this registry was updated. This record preserves both and records the collision; renumbering a prior decision requires a separate traceable normalization.
 
