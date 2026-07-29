@@ -13,7 +13,7 @@ EC-01 admitted → Human-Trait Canon admitted → EC-02 admitted
 
 Active pointers:
 
-- DR-CURRENT: active decision pointer through DR-026
+- DR-CURRENT: active decision pointer through DR-027
 - EC-CURRENT: EC-01 and EC-02 admitted; EC-03 closed
 - OP-CURRENT: OP-SYN-001 v0.1 admitted, inactive synthetic package
 
@@ -116,6 +116,8 @@ Pit is the adversarial qualification office: `Foundry → Pit → Guildhall Comm
 
 Studium now has separate functional chambers: Applicability, Boundary, Conduct, Evidence, Conflict, and Issuance. The chamber model preserves distinct Persona Governance Doctrine → Foundry and Officer Governance Doctrine → Smith lines. Reconcile the chamber contracts with the institutional completion review. No implementation or external effect is authorized.
 
-## Courtyard Boundary Increment
+## Courtyard Institutional Contracts Increment
 
-Completed: Courtyard’s institutional boundary is defined in `current-step.md`. The next increment is membership and office-versus-Officer distinction, followed by station/operative relationships and inter-office movement contracts.
+Completed: Courtyard’s institutional boundary, membership, office-versus-Officer distinction, station/operative relationship, and inter-office movement contract are defined in `current-step.md` and DR-027.
+
+The next increment is an independent consistency review of the Courtyard contracts against the admitted Guildhall, Studium, Foundry, Pit, Garrison, Recruitment/Conscription, Muster, Curia, La Cortine, and Lazaretto boundaries. The review remains semantic only; implementation, Runtime, activation, deployment, credential use, and external effect remain unauthorized.
