@@ -6,7 +6,7 @@
 - Improvement programs recorded: 7
 - Pending control records: 7
 - Implemented control records: 0
-- Decision records: 42
+- Decision records: 43
 - Initial assessment: `assessments/2026-07-23-mit-ai-risks-imperium-assessment.md`
 - Integration review: `assessments/2026-07-23-ra-integration-review-001.md`
 - Integration execution: `assessments/2026-07-23-ra-integration-review-execution-001.md`
@@ -141,6 +141,13 @@ Status: active admitted semantic contract.
 Path: `deliberations/decisions/DR-042-pit-independent-validation-admission-review.md`
 
 DR-041 is admitted for current semantic use. No implementation or external effect is authorized.
+
+### DR-043 — Garrison Admission and Suitability Contract
+
+Status: active semantic contract proposal; admission pending pressure test.
+Path: `deliberations/decisions/DR-043-garrison-admission-and-suitability-contract.md`
+
+Garrison’s roster admission, state, availability-fact, refusal/return, provenance, invalidation, and downstream handoff boundaries are defined for review. Guildhall retains authoritative professional-suitability judgment. No implementation or external effect is authorized.
 
 ## Maintenance Rule
 
