@@ -6,7 +6,7 @@
 - Improvement programs recorded: 7
 - Pending control records: 7
 - Implemented control records: 0
-- Decision records: 25
+- Decision records: 26
 - Initial assessment: `assessments/2026-07-23-mit-ai-risks-imperium-assessment.md`
 - Integration review: `assessments/2026-07-23-ra-integration-review-001.md`
 - Integration execution: `assessments/2026-07-23-ra-integration-review-execution-001.md`
@@ -110,6 +110,7 @@ None recorded.
 | DR-024 | Define Foundry resident station operatives | Recorded decision; semantic only |
 | DR-025 | Define Pit adversarial qualification boundary | Recorded decision; semantic only |
 | DR-026 | Define Studium functional chambers and distinct doctrinal lines | Recorded decision; semantic only |
+| DR-027 | Define Courtyard membership, office-versus-Officer distinction, station/operative relationship, and inter-office movement | Recorded decision; semantic only |
 
 The two `DR-002` records are distinct historical files. The later OpenBao topology decision reused an existing ID before this registry was updated. This record preserves both and records the collision; renumbering a prior decision requires a separate traceable normalization.
 
@@ -133,3 +134,10 @@ DR-025 establishes Pit as the adversarial qualification office and preserves Gui
 | DR-026 | Define Studium functional chambers and distinct doctrinal lines | Recorded decision; semantic process model only |
 
 DR-026 establishes separate Applicability, Boundary, Conduct, Evidence, Conflict, and Issuance chambers within Studium. Persona Governance Doctrine remains directed to Foundry; Officer Governance Doctrine remains directed to Smith. No implementation or external effect is authorized.
+
+
+## Latest Decision
+
+| DR-027 | Define Courtyard membership, office-versus-Officer distinction, station/operative relationship, and inter-office movement | Recorded decision; semantic process model only |
+
+DR-027 establishes Courtyard membership as offices, Officers, stations, resident operatives, and institutional artifacts. Offices govern institutional responsibilities; Officers exercise bounded institutional cognition and judgment; resident operatives perform station-bound specialist work. Inter-office movement requires explicit, traceable artifact handoffs. No implementation or external effect is authorized.
