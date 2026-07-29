@@ -6,7 +6,7 @@
 - Improvement programs recorded: 7
 - Pending control records: 7
 - Implemented control records: 0
-- Decision records: 33
+- Decision records: 34
 - Initial assessment: `assessments/2026-07-23-mit-ai-risks-imperium-assessment.md`
 - Integration review: `assessments/2026-07-23-ra-integration-review-001.md`
 - Integration execution: `assessments/2026-07-23-ra-integration-review-execution-001.md`
@@ -113,7 +113,7 @@ None recorded.
 | DR-027 | Define Courtyard membership, office-versus-Officer distinction, station/operative relationship, and inter-office movement | Recorded decision; semantic only |
 | DR-028 | Review Courtyard contracts against admitted office and external-boundary responsibilities | Recorded decision; semantic only |\n| DR-029 | Close Courtyard office and station contracts | Recorded decision; semantic only |\n| DR-030 | Close Courtyard semantic definition | Recorded decision; semantic closure; implementation not authorized |\n| DR-031 | Select creation-apparatus institutional completion review scope | Recorded decision; semantic only |
 | DR-032 | Record creation-apparatus institutional completion review findings and queue | Recorded decision; semantic only |
-| DR-033 | Define Guildhall Profession Resolution Contract | Recorded decision; semantic only; admission pending review |
+| DR-033 | Define Guildhall Profession Resolution Contract | Recorded decision; admitted semantic contract |\n| DR-034 | Admit Guildhall Profession Resolution Contract after synthetic pressure test | Recorded decision; semantic only |
 
 The two `DR-002` records are distinct historical files. The later OpenBao topology decision reused an existing ID before this registry was updated. This record preserves both and records the collision; renumbering a prior decision requires a separate traceable normalization.
 
@@ -166,3 +166,11 @@ Status: active semantic contract proposal; admission pending pressure test.
 Path: `deliberations/decisions/DR-033-guildhall-profession-resolution-contract.md`
 
 Guildhall’s professional-resolution authority, artifact contract, refusal paths, ambiguity/tie behavior, and reassessment triggers are defined for review. No implementation or external effect is authorized.
+
+
+### DR-034 — Guildhall Profession Resolution Admission Review
+
+Status: active admitted semantic contract.
+Path: `deliberations/decisions/DR-034-guildhall-profession-resolution-admission-review.md`
+
+Synthetic pressure testing passed 8/8 criteria. DR-033 is admitted for current semantic use; no implementation or external effect is authorized.
