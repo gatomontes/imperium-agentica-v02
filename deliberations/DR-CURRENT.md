@@ -172,3 +172,11 @@ Status: active semantic boundary.
 Path: `deliberations/decisions/DR-027-courtyard-membership-office-officer-and-internal-movement.md`
 
 Courtyard membership includes offices, Officers, stations, resident operatives, and institutional artifacts. Offices govern institutional responsibilities; Officers exercise bounded institutional cognition and judgment; resident operatives perform station-bound specialist work. Inter-office movement occurs through explicit, traceable artifact handoffs. No implementation, Runtime action, activation, deployment, credential use, or external effect is authorized.
+
+
+### DR-028 — Courtyard Cross-Office Consistency Review
+
+Status: active semantic boundary review.
+Path: `deliberations/decisions/DR-028-courtyard-cross-office-consistency-review.md`
+
+The review confirms that Courtyard composes admitted office boundaries without absorbing authority from Guildhall, Studium, Hagiography, Foundry, Pit, Garrison, Recruitment/Conscription, Muster, Curia, La Cortine, or Lazaretto. No implementation, Runtime action, activation, deployment, credential use, or external effect is authorized.
