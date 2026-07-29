@@ -317,3 +317,11 @@ Status: admitted semantic closure review.
 Path: `deliberations/decisions/DR-050-creation-apparatus-closure-reconciliation-admission-review.md`
 
 DR-049 passed 24/24 synthetic end-to-end reconciliation criteria and is admitted. The creation-apparatus semantic chain is closed; no implementation or external effect is authorized.
+
+
+### DR-051 — Execution-Layer Definition Scope
+
+Status: active semantic work boundary.
+Path: `deliberations/decisions/DR-051-execution-layer-definition-scope.md`
+
+Execution-layer definition is selected as the next semantic increment. It does not authorize implementation, Runtime operation, activation, deployment, credentials, provider interaction, live data, or external effect.
