@@ -87,14 +87,6 @@ OC implementation, Secretariat implementation, Curia procedure change, productio
 
 The creation-apparatus institutional review remains a later candidate. Courtyard institutional definition is the current selected step.
 
-### Courtyard Inventory Correction
-
-The Courtyard inventory must include the full office set, including Inquisition, Muster, Spur, and The Gesta:
-
-`Secretariat · Castellan · Guildhall · Studium · Hagiography · Foundry · Pit · Garrison · Smith · Recruitment/Conscription · Armory · Locksmith · Curia · Collegium · Preceptory · Inquisition · Muster · Spur · The Gesta`
-
-These entries are institutional offices/functions on the Courtyard operating surface. This inventory correction does not authorize implementation, Runtime action, activation, deployment, credentials, or external effect.
-
 | Institution | Review target |
 |---|---|
 | Guildhall | profession-research ownership, SOP, evidence inputs, Profession Specification artifact, refusal, revision, and stewardship |
@@ -123,3 +115,4 @@ Pit is the adversarial qualification office: `Foundry → Pit → Guildhall Comm
 ## Latest Semantic Decision — DR-026
 
 Studium now has separate functional chambers: Applicability, Boundary, Conduct, Evidence, Conflict, and Issuance. The chamber model preserves distinct Persona Governance Doctrine → Foundry and Officer Governance Doctrine → Smith lines. Reconcile the chamber contracts with the institutional completion review. No implementation or external effect is authorized.
+
