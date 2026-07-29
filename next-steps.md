@@ -13,7 +13,7 @@ EC-01 admitted → Human-Trait Canon admitted → EC-02 admitted
 
 Active pointers:
 
-- DR-CURRENT: active decision pointer through DR-050
+- DR-CURRENT: active decision pointer through DR-051
 - EC-CURRENT: EC-01 and EC-02 admitted; EC-03 closed
 - OP-CURRENT: OP-SYN-001 v0.1 admitted, inactive synthetic package
 
@@ -85,7 +85,7 @@ OC implementation, Secretariat implementation, Curia procedure change, productio
 
 ## Creation Apparatus Institutional Completion Review
 
-The creation-apparatus institutional review remains a later candidate. Courtyard institutional definition is the current selected step.
+The creation-apparatus institutional review was completed and closed through DR-050. Execution-layer definition is the current selected semantic step under DR-051.
 
 | Institution | Review target |
 |---|---|
@@ -99,7 +99,7 @@ The creation-apparatus institutional review remains a later candidate. Courtyard
 
 The review must distinguish responsibilities already admitted, draft-only contracts, missing doctrine or SOPs, required artifacts and owners, admission gates and refusal behavior, implementation requirements, deferred dependencies, and the smallest independently reviewable completion increments.
 
-No creation-apparatus completion work, Execution-layer work, OC implementation, credential work, deployment, or external effect is authorized until explicitly selected and admitted.
+Execution-layer definition is selected under DR-051. No implementation, Runtime operation, activation, deployment, credential work, provider interaction, live data, or external effect is authorized.
 
 
 ## Creation Apparatus Completion
@@ -144,4 +144,4 @@ DR-046 admitted DR-045 after a 20/20 synthetic pressure test. DR-047 was admitte
 
 ## Creation-Apparatus Closure
 
-DR-049 was reconciled and admitted by DR-050 after a 24/24 synthetic end-to-end matrix. The admitted chain preserves one authoritative contract per function, authority boundaries, complete lineage, successor-version behavior, refusal/return/escalation, synchronized pointers, and explicit non-activation boundaries. Creation-apparatus semantic work is closed; no subsequent step is selected. Implementation, Runtime, activation, deployment, credentials, live data, and external effects remain unauthorized.
+DR-049 was reconciled and admitted by DR-050 after a 24/24 synthetic end-to-end matrix. The admitted chain preserves one authoritative contract per function, authority boundaries, complete lineage, successor-version behavior, refusal/return/escalation, synchronized pointers, and explicit non-activation boundaries. Creation-apparatus semantic work is closed. Execution-layer definition is selected under DR-051; implementation, Runtime operation, activation, deployment, credentials, live data, and external effects remain unauthorized.

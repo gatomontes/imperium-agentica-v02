@@ -10,7 +10,7 @@ DR-009 Evidence Without Engineered Orientation is recorded. DR-008 is superseded
 
 DR-010 Mission-Scoped Observator/Custos (OC) Operator Instance is recorded. OC is one instance, not two roles or cooperating components.
 
-DR-CURRENT is the active decision pointer through DR-050, retaining the numbered records explicitly listed in `deliberations/DR-CURRENT.md`. EC-CURRENT is the active exemplar-grounding correction pointer. OP-CURRENT is the active synthetic Operative Package pointer.
+DR-CURRENT is the active decision pointer through DR-051, retaining the numbered records explicitly listed in `deliberations/DR-CURRENT.md`. EC-CURRENT is the active exemplar-grounding correction pointer. OP-CURRENT is the active synthetic Operative Package pointer.
 
 ## Closed Work Focus
 

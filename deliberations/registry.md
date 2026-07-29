@@ -114,6 +114,7 @@ None recorded.
 | DR-028 | Review Courtyard contracts against admitted office and external-boundary responsibilities | Recorded decision; semantic only |
 | DR-029 | Close Courtyard office and station contracts | Recorded decision; semantic only |
 | DR-030 | Close Courtyard semantic definition | Recorded decision; semantic closure; implementation not authorized |
+| DR-051 | Select Execution-layer definition | Recorded decision; active semantic work boundary |
 | DR-031 | Select creation-apparatus institutional completion review scope | Recorded decision; semantic only |
 | DR-032 | Record creation-apparatus institutional completion review findings and queue | Recorded decision; semantic only |
 | DR-033 | Define Guildhall Profession Resolution Contract | Recorded decision; admitted semantic contract |
@@ -124,7 +125,8 @@ None recorded.
 | DR-038 | Admit Hagiography Evidence-to-Canon Contract after synthetic pressure test | Recorded decision; semantic only |
 | DR-039 | Define Foundry Input and Conflict Contract | Recorded decision; admitted semantic contract |
 | DR-040 | Admit Foundry Input and Conflict Contract after synthetic pressure test | Recorded decision; semantic only |
-| DR-041 | Define Pit Independent Validation Contract | Recorded decision; admitted semantic contract |\n| DR-042 | Admit Pit Independent Validation Contract after synthetic pressure test | Recorded decision; semantic only |
+| DR-041 | Define Pit Independent Validation Contract | Recorded decision; admitted semantic contract |
+| DR-042 | Admit Pit Independent Validation Contract after synthetic pressure test | Recorded decision; semantic only |
 
 The two `DR-002` records are distinct historical files. The later OpenBao topology decision reused an existing ID before this registry was updated. This record preserves both and records the collision; renumbering a prior decision requires a separate traceable normalization.
 
@@ -251,3 +253,11 @@ Status: admitted semantic closure review.
 Path: `deliberations/decisions/DR-050-creation-apparatus-closure-reconciliation-admission-review.md`
 
 DR-049 passed 24/24 synthetic end-to-end reconciliation criteria and is admitted. The creation-apparatus semantic chain is closed; no implementation or external effect is authorized.
+
+
+### DR-051 — Execution-Layer Definition Scope
+
+Status: active semantic work boundary.
+Path: `deliberations/decisions/DR-051-execution-layer-definition-scope.md`
+
+Execution-layer definition is selected as the current semantic increment. No implementation, Runtime operation, activation, deployment, credentials, provider interaction, live data, or external effect is authorized.
