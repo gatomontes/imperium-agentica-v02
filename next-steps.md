@@ -13,7 +13,7 @@ EC-01 admitted → Human-Trait Canon admitted → EC-02 admitted
 
 Active pointers:
 
-- DR-CURRENT: active decision pointer through DR-043
+- DR-CURRENT: active decision pointer through DR-044
 - EC-CURRENT: EC-01 and EC-02 admitted; EC-03 closed
 - OP-CURRENT: OP-SYN-001 v0.1 admitted, inactive synthetic package
 
@@ -141,9 +141,9 @@ Each increment requires its own semantic pressure test and admission review. Syn
 
 DR-042 admitted DR-041 after a 16/16 synthetic pressure test. The active queue advances to Garrison Admission and Suitability.
 
-### DR-043 — Garrison Admission and Suitability Contract
+### DR-044 — Garrison Admission and Suitability Admission
 
-Status: active semantic contract proposal.
-Path: `deliberations/decisions/DR-043-garrison-admission-and-suitability-contract.md`
+Status: admitted semantic review.
+Path: `deliberations/decisions/DR-044-garrison-admission-suitability-admission-review.md`
 
-Defines Garrison’s admission authority boundary, complete-packet receipt gate, roster identity and state transitions, suitability reporting, refusal/return behavior, provenance and successor-version handling, invalidation after upstream change, and downstream handoff to Recruitment/Conscription. Admission requires synthetic pressure testing and review; no implementation or external effect is authorized.
+DR-043 passed 18/18 synthetic pressure-test criteria and is admitted for current semantic use. The active queue advances to Recruitment/Conscription Transformation and Handoff Contract. No implementation or external effect is authorized.
