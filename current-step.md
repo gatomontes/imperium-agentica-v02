@@ -10,14 +10,14 @@ DR-009 Evidence Without Engineered Orientation is recorded. DR-008 is superseded
 
 DR-010 Mission-Scoped Observator/Custos (OC) Operator Instance is recorded. OC is one instance, not two roles or cooperating components.
 
-DR-CURRENT is the active decision pointer through DR-044, retaining the numbered records explicitly listed in `deliberations/DR-CURRENT.md`. EC-CURRENT is the active exemplar-grounding correction pointer. OP-CURRENT is the active synthetic Operative Package pointer.
+DR-CURRENT is the active decision pointer through DR-045, retaining the numbered records explicitly listed in `deliberations/DR-CURRENT.md`. EC-CURRENT is the active exemplar-grounding correction pointer. OP-CURRENT is the active synthetic Operative Package pointer.
 
 ## Active Work Focus
 
-DR-043 Garrison Admission and Suitability Contract was pressure-tested 18/18 and admitted by DR-044. The active queue advances to Recruitment/Conscription Transformation and Handoff Contract. Do not implement, activate, or create live personas or Operatives during this step.
+DR-045 Recruitment/Conscription Transformation and Handoff Contract is the active semantic proposal. Recruitment packages admitted Persona Specifications into deployment-medium-specific Operative assets; it does not activate or deploy. Admission requires synthetic pressure testing. Do not implement, activate, or create live personas or Operatives during this step.
 
 The previously composed HTTP/persistence implementation remains historical context, not the active work leg.
 
-## Garrison Admission and Suitability Admission — DR-044
+## Recruitment/Conscription Transformation and Handoff Contract — DR-045
 
-DR-044 records the 18/18 synthetic admission of DR-043. Garrison remains roster and availability custodian; Guildhall retains authoritative professional-suitability judgment. This admission is semantic only. Admission requires synthetic pressure testing; implementation, Runtime action, live data, persona or Operative creation, activation, deployment, credential use, and external effect remain unauthorized.
+DR-045 defines bounded receipt, verification, transformation, provenance, refusal/return, immutable successor lineage, and downstream handoff. Recruitment does not select, admit, forge, test, activate, deploy, or produce external effects. This proposal is semantic only. Admission requires synthetic pressure testing; implementation, Runtime action, live data, persona or Operative creation, activation, deployment, credential use, and external effect remain unauthorized.
