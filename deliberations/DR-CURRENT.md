@@ -383,10 +383,10 @@ DR-058 passed 24/24 synthetic pressure-test criteria and is admitted. No impleme
 
 ### DR-060 — Execution-Layer Closure and Reconciliation Review
 
-Status: active semantic review boundary.
+Status: completed semantic closure review; admitted by DR-061.
 Path: `deliberations/decisions/DR-060-execution-layer-closure-reconciliation-review.md`
 
-The admitted Execution contracts are under cross-contract semantic reconciliation. Closure requires synthetic testing; no implementation or external effect is authorized.
+DR-060 reconciled the admitted Execution contracts; DR-061 admitted that reconciliation after 28/28 synthetic criteria. No implementation or external effect is authorized.
 
 
 ### DR-061 — Execution-Layer Closure and Reconciliation Admission Review
