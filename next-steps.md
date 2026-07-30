@@ -19,7 +19,7 @@ Active pointers:
 
 Operational maturity remains unproven. No live provider, credential, tool, runtime, mission, activation, deployment, or external effect has been exercised.
 
-Creation-apparatus institutional completion review is complete and semantically closed through DR-050. DR-052 Execution-layer boundary and envelope contract was admitted by DR-053 after an 18/18 synthetic pressure test. DR-054 was admitted by DR-055 after a 20/20 synthetic pressure test. DR-056 was admitted by DR-057 after a 22/22 synthetic pressure test. DR-058 Execution result interpretation and disposition handoff was admitted by DR-059 after a 24/24 synthetic pressure test. The next semantic increment is not selected. Scope remains semantic/architectural only. Guildhall’s Profession Resolution Contract was admitted by DR-034. Studium Doctrine Lifecycle was admitted by DR-036 for the Persona Governance Doctrine → Foundry branch only. Courtyard remains closed. This file contains later candidates and historical context.
+Creation-apparatus institutional completion review is complete and semantically closed through DR-050. DR-052 Execution-layer boundary and envelope contract was admitted by DR-053 after an 18/18 synthetic pressure test. DR-054 was admitted by DR-055 after a 20/20 synthetic pressure test. DR-056 was admitted by DR-057 after a 22/22 synthetic pressure test. DR-058 Execution result interpretation and disposition handoff was admitted by DR-059 after a 24/24 synthetic pressure test. The next semantic increment is DR-060: Execution-layer closure and reconciliation review. Scope remains semantic/architectural only. Guildhall’s Profession Resolution Contract was admitted by DR-034. Studium Doctrine Lifecycle was admitted by DR-036 for the Persona Governance Doctrine → Foundry branch only. Courtyard remains closed. This file contains later candidates and historical context.
 
 ## Status
 
@@ -85,7 +85,7 @@ OC implementation, Secretariat implementation, Curia procedure change, productio
 
 ## Creation Apparatus Institutional Completion Review
 
-The creation-apparatus institutional review was completed and closed through DR-050. Execution-layer definition remains the current selected semantic step under DR-051; DR-058 is admitted through DR-059.
+The creation-apparatus institutional review was completed and closed through DR-050. Execution-layer definition remains the current selected semantic step under DR-051; DR-058 is admitted through DR-059; DR-060 is the active closure/reconciliation review.
 
 | Institution | Review target |
 |---|---|
