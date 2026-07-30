@@ -322,13 +322,6 @@ Path: `deliberations/decisions/DR-058-execution-result-disposition-handoff-contr
 DR-058 is admitted by DR-059 after a 24/24 synthetic pressure test. Execution owns bounded interpretation and return packaging; authority owns disposition; Lazaretto owns sanitation and release. No implementation or external effect is authorized.
 
 
-### DR-058 — Execution Result Interpretation and Disposition Handoff Contract
-
-Status: admitted semantic contract.
-Path: `deliberations/decisions/DR-058-execution-result-disposition-handoff-contract.md`
-
-DR-058 is admitted by DR-059 after a 24/24 synthetic pressure test. No implementation or external effect is authorized.
-
 ### DR-059 — Execution Result Interpretation and Disposition Admission Review
 
 Status: active admitted semantic contract.
