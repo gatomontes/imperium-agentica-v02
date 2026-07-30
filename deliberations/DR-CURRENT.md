@@ -349,3 +349,18 @@ Status: active semantic contract proposal; admission pending pressure test.
 Path: `deliberations/decisions/DR-054-execution-failure-interruption-return-state-contract.md`
 
 DR-054 defines bounded failure, interruption, indeterminate-state, retry, quarantine, and return behavior for Execution. No implementation or external effect is authorized.
+
+
+### DR-056 — Execution Attempt-Record and Evidence/Provenance Contract
+
+Status: active admitted semantic contract.
+Path: `deliberations/decisions/DR-056-execution-attempt-record-evidence-contract.md`
+
+DR-056 is admitted by DR-057 after a 22/22 synthetic pressure test. Immutable attempt records preserve mission and envelope correlation, action/effect lineage, evidence status, provenance, custody, and return linkage. Execution records; authority decides; Lazaretto sanitizes external material. No implementation or external effect is authorized.
+
+### DR-057 — Execution Attempt-Record and Evidence/Provenance Admission Review
+
+Status: active admitted semantic contract.
+Path: `deliberations/decisions/DR-057-execution-attempt-record-evidence-admission-review.md`
+
+DR-056 passed 22/22 synthetic pressure-test criteria and is admitted. No subsequent semantic increment is selected. No implementation or external effect is authorized.
