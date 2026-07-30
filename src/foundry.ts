@@ -1,5 +1,7 @@
 import { ArtifactEnvelope, createArtifact } from "./artifact.js";
 import { ProfessionSpecification } from "./guildhall.js";
+import { PersonaGovernanceDoctrine } from "./studium.js";
+import { CanonEntry } from "./hagiography.js";
 
 export type FoundryFinding =
   | "PERSONA_INPUTS_CONFORMANT"
@@ -10,6 +12,8 @@ export interface FoundryInputs {
   profession: ArtifactEnvelope<ProfessionSpecification>;
   doctrineRef?: string;
   canonRefs?: string[];
+  doctrine?: ArtifactEnvelope<PersonaGovernanceDoctrine>;
+  canons?: ArtifactEnvelope<CanonEntry>[];
   provenanceComplete?: boolean;
 }
 
@@ -30,6 +34,18 @@ export class Foundry {
     if (!inputs.profession?.payload?.professionIdentity) unresolved.push("profession");
     if (!inputs.doctrineRef) unresolved.push("doctrine");
     if (!inputs.provenanceComplete) unresolved.push("provenance");
+    if (inputs.doctrine && (
+      inputs.doctrine.status !== "CURRENT" ||
+      inputs.doctrine.payload.finding !== "DOCTRINE_CONFORMANT" ||
+      inputs.doctrine.correlationId !== inputs.profession.correlationId ||
+      inputs.doctrine.identity + "@" + inputs.doctrine.version !== inputs.doctrineRef
+    )) unresolved.push("doctrine lineage");
+    if (inputs.canons && inputs.canons.some((canon) =>
+      canon.status !== "CURRENT" ||
+      canon.payload.finding !== "TRAIT_CANON_CONFORMANT" ||
+      canon.correlationId !== inputs.profession.correlationId ||
+      !inputs.canonRefs?.includes(canon.identity + "@" + canon.version)
+    )) unresolved.push("canon lineage");
 
     const finding: FoundryFinding =
       unresolved.length === 0
@@ -52,3 +68,4 @@ export class Foundry {
     );
   }
 }
+
