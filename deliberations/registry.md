@@ -328,3 +328,11 @@ Status: active admitted semantic contract.
 Path: `deliberations/decisions/DR-059-execution-result-disposition-admission-review.md`
 
 DR-058 passed 24/24 synthetic pressure-test criteria and is admitted. No implementation or external effect is authorized.
+
+
+### DR-060 — Execution-Layer Closure and Reconciliation Review
+
+Status: active semantic review boundary.
+Path: `deliberations/decisions/DR-060-execution-layer-closure-reconciliation-review.md`
+
+The admitted Execution contracts are under cross-contract semantic reconciliation. No implementation or external effect is authorized.
