@@ -20,6 +20,7 @@ export interface CanonEntry {
 }
 
 export interface CanonInput {
+  correlationId?: string;
   syntheticSource: boolean;
   sourceRef?: string;
   performanceEvidence?: string;
@@ -50,7 +51,7 @@ export class Hagiography {
     return createArtifact(
       "HumanTraitCanon",
       "Hagiography",
-      randomUUID(),
+      input.correlationId ?? randomUUID(),
       {
         syntheticSource: input.syntheticSource,
         sourceRef: input.sourceRef ?? "",
@@ -66,3 +67,4 @@ export class Hagiography {
     );
   }
 }
+
