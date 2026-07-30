@@ -106,17 +106,106 @@ describe("synthetic emergency-systems-engineer creation chain", () => {
     const unresolvedPit = new Pit().test(unresolvedCandidate, []);
     expect(unresolvedPit.payload.finding).toBe("PERSONA_TEST_UNRESOLVED");
 
-    const notAdmitted = new Garrison().admit(unresolvedCandidate, unresolvedPit);
+    const notAdmitted = new Garrison().admit(
+      unresolvedCandidate,
+      unresolvedPit,
+      new Guildhall().dispose(unresolvedCandidate, unresolvedPit, "ADMIT"),
+    );
     expect(notAdmitted.payload.finding).toBe(
       "CANONICAL_PERSONA_ADMISSION_UNRESOLVED",
     );
     expect(notAdmitted.payload.status).toBe("NOT_ADMITTED");
 
-    const unresolvedPackage = new Conscription().package(notAdmitted, "");
+    const unresolvedPackage = new Conscription().package(notAdmitted, "", "A2");
     expect(unresolvedPackage.payload.finding).toBe(
       "OPERATIVE_PACKAGE_UNRESOLVED",
     );
     expect(unresolvedPackage.payload.state).toBe("PACKAGED");
+  });
+
+  it("requires Committee disposition and does not treat Pit recommendation as admission", () => {
+    const petition = new Secretariat().receive({
+      content: "Create a synthetic emergency-systems-engineer persona.",
+      sessionReference: "opaque-committee-disposition-test",
+    });
+    const work = new Castellan().receivePetition(petition)!;
+    const profession = new Guildhall().resolve(work, {
+      professionIdentity: "emergency systems engineer",
+      requiredCompetence: ["incident diagnosis"],
+      practiceBoundaries: ["stop unsafe restoration"],
+      suitabilityCriteria: ["evidence-disciplined diagnosis"],
+    });
+    const doctrine = new Studium().authorPersonaDoctrine({ profession });
+    const canon = new Hagiography().canonize({ syntheticSource: true, sourceRef: "synthetic-exemplar@1", performanceEvidence: "staged diagnosis", observedBehavior: "separated facts from hypotheses", boundedTrait: "evidence-first reasoning", conditions: ["incomplete telemetry"], limits: ["does not replace authority"], counterweights: ["escalate uncertainty"], ec01Disposition: "ADMISSIBLE FOR CANON REVIEW" });
+    const candidate = new Foundry().integrate({ profession, doctrineRef: doctrine.identity + "@" + doctrine.version, canonRefs: [canon.identity + "@" + canon.version], provenanceComplete: true });
+    const pit = new Pit().test(candidate, ["contradictory alerts"]);
+    const guildhall = new Guildhall();
+
+    const missing = new Garrison().admit(candidate, pit, guildhall.dispose(candidate, pit, "RECYCLE"));
+    expect(missing.payload.status).toBe("NOT_ADMITTED");
+    expect(missing.payload.finding).toBe("CANONICAL_PERSONA_ADMISSION_UNRESOLVED");
+
+    const admitted = new Garrison().admit(candidate, pit, guildhall.dispose(candidate, pit, "ADMIT"));
+    expect(admitted.payload.status).toBe("ADMITTED");
+    expect(admitted.payload.finding).toBe("CANONICAL_PERSONA_ADMITTED");
+  });
+
+  it("requires evidence-bearing doctrine and canon lineage", () => {
+    const petition = new Secretariat().receive({
+      content: "Create a synthetic emergency-systems-engineer persona.",
+      sessionReference: "opaque-lineage-test",
+    });
+    const work = new Castellan().receivePetition(petition)!;
+    const profession = new Guildhall().resolve(work, {
+      professionIdentity: "emergency systems engineer",
+      requiredCompetence: ["incident diagnosis"],
+      practiceBoundaries: ["stop unsafe restoration"],
+      suitabilityCriteria: ["evidence-disciplined diagnosis"],
+    });
+    const doctrine = new Studium().authorPersonaDoctrine({
+      profession,
+      mandatoryConduct: ["establish current system state"],
+      prohibitedConduct: ["fabricate telemetry"],
+      evidenceDuties: ["record uncertainty"],
+      refusalConditions: ["insufficient evidence"],
+      escalationTriggers: ["material contradiction"],
+      stopConditions: ["unsafe continuation"],
+    });
+    const canon = new Hagiography().canonize({
+      correlationId: petition.correlationId,
+      syntheticSource: true,
+      sourceRef: "synthetic-lineage-exemplar@1",
+      performanceEvidence: "staged diagnosis",
+      observedBehavior: "separated facts from hypotheses",
+      boundedTrait: "evidence-first reasoning",
+      conditions: ["incomplete telemetry"],
+      limits: ["does not replace authority"],
+      counterweights: ["escalate uncertainty"],
+      ec01Disposition: "ADMISSIBLE FOR CANON REVIEW",
+    });
+    expect(canon.correlationId).toBe(petition.correlationId);
+
+    const valid = new Foundry().integrate({
+      profession,
+      doctrineRef: doctrine.identity + "@" + doctrine.version,
+      canonRefs: [canon.identity + "@" + canon.version],
+      doctrine,
+      canons: [canon],
+      provenanceComplete: true,
+    });
+    expect(valid.payload.finding).toBe("PERSONA_INPUTS_CONFORMANT");
+
+    const staleDoctrine = { ...doctrine, status: "SUPERSEDED" as const };
+    const rejected = new Foundry().integrate({
+      profession,
+      doctrineRef: staleDoctrine.identity + "@" + staleDoctrine.version,
+      canonRefs: [canon.identity + "@" + canon.version],
+      doctrine: staleDoctrine,
+      canons: [canon],
+      provenanceComplete: true,
+    });
+    expect(rejected.payload.finding).toBe("PERSONA_INPUTS_UNRESOLVED");
+    expect(rejected.payload.unresolvedInputs).toContain("doctrine lineage");
   });
 
   it("passes every stage and stops at inactive packaging", () => {
@@ -204,19 +293,37 @@ describe("synthetic emergency-systems-engineer creation chain", () => {
     ]);
     expect(pit.payload.finding).toBe("PERSONA_TEST_CONFORMANT");
 
-    const persona = new Garrison().admit(candidate, pit);
+    const persona = new Garrison().admit(candidate, pit, new Guildhall().dispose(candidate, pit, "ADMIT"));
     expect(persona.payload.finding).toBe("CANONICAL_PERSONA_ADMITTED");
     expect(persona.payload.status).toBe("ADMITTED");
 
-    const operative = new Conscription().package(persona, "node-reference");
+    const operative = new Conscription().package(persona, "node-reference", "A2");
     expect(operative.payload.finding).toBe("OPERATIVE_PACKAGE_CONFORMANT");
     expect(operative.payload.state).toBe("PACKAGED");
+    expect(operative.payload.autonomyClass).toBe("A2");
     expect(operative.payload.state).not.toBe("ACTIVATION_PENDING");
     expect(operative.payload.state).not.toBe("DEPLOYED");
 
     for (const artifact of [profession, doctrine, candidate, pit, persona, operative]) {
       expect(artifact.correlationId).toBe(petition.correlationId);
     }
+  });
+
+  it("requires and preserves an explicit autonomy class without activating the package", () => {
+    const trace = new ReferenceCreationTrace().run();
+    const operative = new Conscription().package(trace.persona, "node-reference", "A2");
+
+    expect(operative.payload.autonomyClass).toBe("A2");
+    expect(operative.payload.autonomyClass).not.toBe("");
+
+    const pending = {
+      ...operative,
+      version: operative.version + 1,
+      supersedes: operative.identity + "@" + operative.version,
+      payload: { ...operative.payload, state: "ACTIVATION_PENDING" as const },
+    };
+    expect(pending.payload.autonomyClass).toBe("A2");
+    expect(pending.payload.state).toBe("ACTIVATION_PENDING");
   });
 
   it("preserves lifecycle references and requires owned invalidation", () => {
@@ -258,8 +365,8 @@ describe("synthetic emergency-systems-engineer creation chain", () => {
       provenanceComplete: true,
     });
     const pit = new Pit().test(candidate, ["contradictory alerts"]);
-    const persona = new Garrison().admit(candidate, pit);
-    const operative = new Conscription().package(persona, "node-reference");
+    const persona = new Garrison().admit(candidate, pit, new Guildhall().dispose(candidate, pit, "ADMIT"));
+    const operative = new Conscription().package(persona, "node-reference", "A2");
 
     expect(candidate.payload.doctrineRef).toBe(
       doctrine.identity + "@" + doctrine.version,
@@ -313,4 +420,89 @@ describe("synthetic emergency-systems-engineer creation chain", () => {
       supersedes: trace.persona.identity + "@" + trace.persona.version,
     })).toThrow("previous artifact is not current");
   });
+
+  it("re-enters the full chain with a successor and rejects stale downstream artifacts", () => {
+    const first = new ReferenceCreationTrace().run();
+    const repository = new InMemoryArtifactRepository();
+    repository.save(first.persona);
+
+    const invalidation = new InvalidationCoordinator().record(
+      first.persona.identity + "@" + first.persona.version,
+      [first.persona.identity + "@" + first.persona.version],
+      "synthetic successor requires re-entry",
+      "IDENTIFIED",
+    );
+    expect(invalidation.payload.status).toBe("SUSPENDED");
+
+    const successor = {
+      ...first.persona,
+      version: first.persona.version + 1,
+      supersedes: first.persona.identity + "@" + first.persona.version,
+      payload: { ...first.persona.payload, finding: "CANONICAL_PERSONA_ADMITTED" as const },
+    };
+    repository.supersede(first.persona, successor);
+    expect(repository.get(first.persona.identity, first.persona.version)?.status).toBe(
+      "SUPERSEDED",
+    );
+
+    const stalePersona = repository.get(first.persona.identity, first.persona.version)! as typeof first.persona;
+    expect(new Conscription().package(stalePersona, "node-reference", "A2").payload.finding).toBe(
+      "OPERATIVE_PACKAGE_UNRESOLVED",
+    );
+
+    const petition = new Secretariat().receive({
+      content: "Create a synthetic emergency-systems-engineer persona.",
+      sessionReference: "opaque-successor-reentry-test",
+    });
+    const work = new Castellan().receivePetition(petition)!;
+    const profession = new Guildhall().resolve(work, {
+      professionIdentity: "emergency systems engineer",
+      requiredCompetence: ["incident diagnosis", "safe service restoration"],
+      practiceBoundaries: ["do not exceed granted authority"],
+      suitabilityCriteria: ["evidence-disciplined reasoning"],
+    });
+    const doctrine = new Studium().authorPersonaDoctrine({
+      profession,
+      mandatoryConduct: ["establish current system state"],
+      prohibitedConduct: ["fabricate system state"],
+      evidenceDuties: ["record uncertainty"],
+      refusalConditions: ["insufficient evidence"],
+      escalationTriggers: ["material risk"],
+      stopConditions: ["unsafe continuation"],
+    });
+    const canon = new Hagiography().canonize({
+      syntheticSource: true,
+      sourceRef: "synthetic-emergency-engineer-exemplar@2",
+      performanceEvidence: "Restored a failing service through staged diagnosis.",
+      observedBehavior: "Separated facts from hypotheses.",
+      boundedTrait: "evidence-first reasoning",
+      conditions: ["incomplete telemetry"],
+      limits: ["does not replace domain authority"],
+      counterweights: ["escalate when uncertainty exceeds bounds"],
+      ec01Disposition: "ADMISSIBLE FOR CANON REVIEW",
+    });
+    const candidate = new Foundry().integrate({
+      profession,
+      doctrineRef: doctrine.identity + "@" + doctrine.version,
+      canonRefs: [canon.identity + "@" + canon.version],
+      provenanceComplete: true,
+    });
+    const pit = new Pit().test(candidate, ["contradictory alerts"]);
+    const persona = new Garrison().admit(candidate, pit, new Guildhall().dispose(candidate, pit, "ADMIT"));
+    const operative = new Conscription().package(persona, "node-reference", "A2");
+
+    expect(persona.payload.finding).toBe("CANONICAL_PERSONA_ADMITTED");
+    expect(operative.payload.finding).toBe("OPERATIVE_PACKAGE_CONFORMANT");
+    expect(operative.payload.state).toBe("PACKAGED");
+    expect(operative.payload.state).not.toBe("ACTIVATION_PENDING");
+    expect(operative.payload.state).not.toBe("DEPLOYED");
+    expect(operative.payload.personaRef).toBe(persona.identity + "@" + persona.version);
+    expect(operative.payload.personaRef).not.toBe(
+      first.persona.identity + "@" + first.persona.version,
+    );
+    expect([petition, work, profession, doctrine, candidate, pit, persona, operative].every(
+      (artifact) => artifact.correlationId === petition.correlationId,
+    )).toBe(true);
+  });
 });
+
