@@ -9,6 +9,8 @@ import { InvalidationCoordinator } from "../src/invalidation.js";
 import { Pit } from "../src/pit.js";
 import { Secretariat } from "../src/secretariat.js";
 import { Studium } from "../src/studium.js";
+import { InMemoryArtifactRepository } from "../src/repository.js";
+import { ReferenceCreationTrace } from "../src/reference-trace.js";
 
 describe("synthetic emergency-systems-engineer creation chain", () => {
   it("refuses incomplete Secretariat intake and keeps it out of Castellan", () => {
@@ -286,5 +288,29 @@ describe("synthetic emergency-systems-engineer creation chain", () => {
     expect(operative.payload.state).toBe("PACKAGED");
     expect(operative.payload.state).not.toBe("ACTIVATION_PENDING");
     expect(operative.payload.state).not.toBe("DEPLOYED");
+  });
+
+  it("requires explicit successor versioning before re-entry", () => {
+    const trace = new ReferenceCreationTrace().run();
+    const repository = new InMemoryArtifactRepository();
+    repository.save(trace.persona);
+
+    const successor = {
+      ...trace.persona,
+      version: trace.persona.version + 1,
+      supersedes: trace.persona.identity + "@" + trace.persona.version,
+      payload: { ...trace.persona.payload, finding: "CANONICAL_PERSONA_ADMITTED" },
+    };
+    repository.supersede(trace.persona, successor);
+
+    expect(repository.get(trace.persona.identity, trace.persona.version)?.status).toBe(
+      "SUPERSEDED",
+    );
+    expect(repository.get(successor.identity, successor.version)).toEqual(successor);
+    expect(() => repository.supersede(trace.persona, {
+      ...successor,
+      version: successor.version + 1,
+      supersedes: trace.persona.identity + "@" + trace.persona.version,
+    })).toThrow("previous artifact is not current");
   });
 });
