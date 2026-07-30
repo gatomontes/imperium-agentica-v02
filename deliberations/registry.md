@@ -320,3 +320,18 @@ Status: active semantic contract proposal; admission pending pressure test.
 Path: `deliberations/decisions/DR-058-execution-result-disposition-handoff-contract.md`
 
 Execution may interpret outcomes within its envelope and package bounded return material; authority retains disposition, and Lazaretto retains sanitation/release of external material. No implementation or external effect is authorized.
+
+
+### DR-058 — Execution Result Interpretation and Disposition Handoff Contract
+
+Status: admitted semantic contract.
+Path: `deliberations/decisions/DR-058-execution-result-disposition-handoff-contract.md`
+
+DR-058 is admitted by DR-059 after a 24/24 synthetic pressure test. No implementation or external effect is authorized.
+
+### DR-059 — Execution Result Interpretation and Disposition Admission Review
+
+Status: active admitted semantic contract.
+Path: `deliberations/decisions/DR-059-execution-result-disposition-admission-review.md`
+
+DR-058 passed 24/24 synthetic pressure-test criteria and is admitted. No implementation or external effect is authorized.
