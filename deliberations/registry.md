@@ -298,3 +298,18 @@ Status: active semantic contract proposal; admission pending pressure test.
 Path: `deliberations/decisions/DR-056-execution-attempt-record-evidence-contract.md`
 
 Execution attempt records, effect lineage, evidence/provenance status, custody, and return linkage are defined for review. No implementation or external effect is authorized.
+
+
+### DR-056 — Execution Attempt-Record and Evidence/Provenance Contract
+
+Status: admitted semantic contract.
+Path: `deliberations/decisions/DR-056-execution-attempt-record-evidence-contract.md`
+
+DR-056 is admitted by DR-057 after a 22/22 synthetic pressure test. No implementation or external effect is authorized.
+
+### DR-057 — Execution Attempt-Record and Evidence/Provenance Admission Review
+
+Status: admitted semantic contract.
+Path: `deliberations/decisions/DR-057-execution-attempt-record-evidence-admission-review.md`
+
+DR-056 passed 22/22 synthetic pressure-test criteria and is admitted. No subsequent semantic increment is selected. No implementation or external effect is authorized.
