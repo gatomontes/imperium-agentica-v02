@@ -1,5 +1,7 @@
 import { ArtifactEnvelope } from "./artifact.js";
 
+export type { ArtifactEnvelope } from "./artifact.js";
+
 export type ArtifactKey = `${string}@${number}`;
 
 export function artifactKey(identity: string, version: number): ArtifactKey {
