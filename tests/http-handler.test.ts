@@ -89,7 +89,7 @@ describe("framework-neutral HTTP handler", () => {
     });
   });
 
-  it("maps domain failures into a stable failure envelope", async () => {
+  it("preserves unresolved petitions in a stable success envelope", async () => {
     const handler = new HttpTransportHandler(new DirectTransportAdapter());
     const result = await handler.submit(
       { content: "", sessionReference: "http-session" },
@@ -97,9 +97,9 @@ describe("framework-neutral HTTP handler", () => {
     );
 
     expect(result).toMatchObject({
-      ok: false,
+      ok: true,
       requestId: "http-2",
-      error: { code: "IMPERIUM_REQUEST_FAILED" },
+      result: { petition: { payload: { finding: "PETITION_UNRESOLVED" } } },
     });
   });
 });
