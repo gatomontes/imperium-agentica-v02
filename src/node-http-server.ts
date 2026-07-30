@@ -4,6 +4,7 @@ import {
   Server,
   ServerResponse,
 } from "node:http";
+import { randomUUID } from "node:crypto";
 import { HttpTransportHandler } from "./http-handler.js";
 import { HttpArtifactResolver } from "./http-resolver.js";
 
