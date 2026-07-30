@@ -387,3 +387,11 @@ Status: active semantic review boundary.
 Path: `deliberations/decisions/DR-060-execution-layer-closure-reconciliation-review.md`
 
 The admitted Execution contracts are under cross-contract semantic reconciliation. Closure requires synthetic testing; no implementation or external effect is authorized.
+
+
+### DR-061 — Execution-Layer Closure and Reconciliation Admission Review
+
+Status: admitted semantic closure review.
+Path: `deliberations/decisions/DR-061-execution-layer-closure-reconciliation-admission-review.md`
+
+DR-060 passed 28/28 synthetic cross-contract reconciliation criteria and is admitted. No implementation or external effect is authorized.
