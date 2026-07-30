@@ -13,9 +13,13 @@ export type OperativePackageState =
   | "RELEASED"
   | "DEPLOYED";
 
+/** Provisional autonomy classes; class is distinct from capability and authority. */
+export type AutonomyClass = "A0" | "A1" | "A2" | "A3" | "A4";
+
 export interface OperativePackage {
   personaRef: string;
   medium: string;
+  autonomyClass: AutonomyClass;
   deviations: string[];
   finding: OperativeFinding;
   state: OperativePackageState;
@@ -25,6 +29,7 @@ export class Conscription {
   package(
     persona: ArtifactEnvelope<CanonicalPersona>,
     medium: string,
+    autonomyClass: AutonomyClass,
     deviations: string[] = [],
   ): ArtifactEnvelope<OperativePackage> {
     const finding: OperativeFinding =
@@ -42,6 +47,7 @@ export class Conscription {
       {
         personaRef,
         medium: medium.trim(),
+        autonomyClass,
         deviations,
         finding,
         state: finding === "OPERATIVE_PACKAGE_CONFORMANT" ? "PACKAGED" : "PACKAGED",

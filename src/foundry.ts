@@ -15,6 +15,10 @@ export interface FoundryInputs {
   doctrine?: ArtifactEnvelope<PersonaGovernanceDoctrine>;
   canons?: ArtifactEnvelope<CanonEntry>[];
   provenanceComplete?: boolean;
+  inputConflicts?: Array<{
+    owner: string;
+    claims: string[];
+  }>;
 }
 
 export interface PersonaSpecificationCandidate {
@@ -23,6 +27,10 @@ export interface PersonaSpecificationCandidate {
   canonRefs: string[];
   finding: FoundryFinding;
   unresolvedInputs: string[];
+  inputConflicts: Array<{
+    owner: string;
+    claims: string[];
+  }>;
 }
 
 export class Foundry {
@@ -30,9 +38,12 @@ export class Foundry {
     inputs: FoundryInputs,
   ): ArtifactEnvelope<PersonaSpecificationCandidate> {
     const unresolved: string[] = [];
+    const inputConflicts = inputs.inputConflicts ?? [];
+    if (inputConflicts.length > 0) unresolved.push("conflicting inputs");
     if (inputs.profession.status !== "CURRENT") unresolved.push("profession status");
     if (!inputs.profession?.payload?.professionIdentity) unresolved.push("profession");
     if (!inputs.doctrineRef) unresolved.push("doctrine");
+    if (inputs.doctrineRef && !inputs.doctrine) unresolved.push("doctrine evidence");
     if (!inputs.provenanceComplete) unresolved.push("provenance");
     if (inputs.doctrine && (
       inputs.doctrine.status !== "CURRENT" ||
@@ -50,7 +61,9 @@ export class Foundry {
     const finding: FoundryFinding =
       unresolved.length === 0
         ? "PERSONA_INPUTS_CONFORMANT"
-        : "PERSONA_INPUTS_UNRESOLVED";
+        : inputConflicts.length > 0
+          ? "PERSONA_INPUTS_REFUSED"
+          : "PERSONA_INPUTS_UNRESOLVED";
 
     const professionRef = inputs.profession.identity + "@" + inputs.profession.version;
     return createArtifact(
@@ -63,9 +76,9 @@ export class Foundry {
         canonRefs: inputs.canonRefs ?? [],
         finding,
         unresolvedInputs: unresolved,
+        inputConflicts,
       },
-      [professionRef, ...(inputs.canonRefs ?? [])],
+      [professionRef, ...(inputs.doctrine ? [inputs.doctrineRef!] : []), ...(inputs.canonRefs ?? [])],
     );
   }
 }
-

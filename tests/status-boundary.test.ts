@@ -67,8 +67,8 @@ describe("superseded and invalidated artifact boundaries", () => {
     const current = candidate();
     const invalidated = { ...current, status: "INVALIDATED" as const };
     const pit = new Pit().test(invalidated, ["pressure"]);
-    const persona = new Garrison().admit(invalidated, pit);
-    const packaged = new Conscription().package(persona, "node-reference");
+    const persona = new Garrison().admit(invalidated, pit, new Guildhall().dispose(invalidated, pit, "ADMIT"));
+  const packaged = new Conscription().package(persona, "node-reference", "A2");
 
     expect(persona.payload.status).toBe("NOT_ADMITTED");
     expect(packaged.payload.finding).toBe("OPERATIVE_PACKAGE_UNRESOLVED");

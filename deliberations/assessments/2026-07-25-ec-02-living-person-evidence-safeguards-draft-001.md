@@ -158,4 +158,4 @@ Before admission, pressure EC-02 with at least:
 
 ## Current Disposition
 
-EC-02 draft exists for pressure testing. It is not admitted and does not authorize real-person evidence collection or processing.
+EC-02 is admitted for current semantic use by DR-013. This supporting draft does not, by itself, authorize real-person evidence collection or processing. Each proposed case still requires a separate case-specific evidence record and explicit admission decision.

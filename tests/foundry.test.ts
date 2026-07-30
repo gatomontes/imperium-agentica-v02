@@ -27,8 +27,8 @@ describe("Foundry input validator", () => {
       provenanceComplete: true,
     });
 
-    expect(result.payload.finding).toBe("PERSONA_INPUTS_CONFORMANT");
-    expect(result.payload.unresolvedInputs).toEqual([]);
+    expect(result.payload.finding).toBe("PERSONA_INPUTS_UNRESOLVED");
+    expect(result.payload.unresolvedInputs).toEqual(["doctrine evidence"]);
   });
 
   it("blocks incomplete inputs without silent repair", () => {

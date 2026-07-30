@@ -10,6 +10,7 @@ export type PitFinding =
 export interface PitResult {
   candidateRef: string;
   testRef: string;
+  retestOf?: string;
   pressures: string[];
   finding: PitFinding;
   failures: string[];
@@ -19,10 +20,16 @@ export class Pit {
   test(
     candidate: ArtifactEnvelope<PersonaSpecificationCandidate>,
     pressures: string[],
+    retestOf?: string,
   ): ArtifactEnvelope<PitResult> {
-    const failures = pressures.length === 0 || candidate.status !== "CURRENT" ? [
+    const failures = pressures.length === 0 ||
+      candidate.status !== "CURRENT" ||
+      candidate.payload.finding !== "PERSONA_INPUTS_CONFORMANT" ? [
       ...(pressures.length === 0 ? ["no pressures declared"] : []),
       ...(candidate.status !== "CURRENT" ? ["candidate is not current"] : []),
+      ...(candidate.payload.finding !== "PERSONA_INPUTS_CONFORMANT"
+        ? ["candidate inputs are not conformant"]
+        : []),
     ] : [];
     const finding: PitFinding =
       failures.length === 0
@@ -37,11 +44,12 @@ export class Pit {
       {
         candidateRef,
         testRef: "pit-test-" + randomUUID(),
+        ...(retestOf ? { retestOf } : {}),
         pressures,
         finding,
         failures,
       },
-      [candidateRef],
+      [candidateRef, ...(retestOf ? [retestOf] : [])],
     );
   }
 }

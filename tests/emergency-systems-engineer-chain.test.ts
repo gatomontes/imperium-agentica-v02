@@ -135,9 +135,17 @@ describe("synthetic emergency-systems-engineer creation chain", () => {
       practiceBoundaries: ["stop unsafe restoration"],
       suitabilityCriteria: ["evidence-disciplined diagnosis"],
     });
-    const doctrine = new Studium().authorPersonaDoctrine({ profession });
-    const canon = new Hagiography().canonize({ syntheticSource: true, sourceRef: "synthetic-exemplar@1", performanceEvidence: "staged diagnosis", observedBehavior: "separated facts from hypotheses", boundedTrait: "evidence-first reasoning", conditions: ["incomplete telemetry"], limits: ["does not replace authority"], counterweights: ["escalate uncertainty"], ec01Disposition: "ADMISSIBLE FOR CANON REVIEW" });
-    const candidate = new Foundry().integrate({ profession, doctrineRef: doctrine.identity + "@" + doctrine.version, canonRefs: [canon.identity + "@" + canon.version], provenanceComplete: true });
+    const doctrine = new Studium().authorPersonaDoctrine({
+      profession,
+      mandatoryConduct: ["establish current system state"],
+      prohibitedConduct: ["fabricate system state"],
+      evidenceDuties: ["record uncertainty"],
+      refusalConditions: ["insufficient evidence"],
+      escalationTriggers: ["material contradiction"],
+      stopConditions: ["unsafe continuation"],
+    });
+    const canon = new Hagiography().canonize({ correlationId: petition.correlationId, syntheticSource: true, sourceRef: "synthetic-exemplar@1", performanceEvidence: "staged diagnosis", observedBehavior: "separated facts from hypotheses", boundedTrait: "evidence-first reasoning", conditions: ["incomplete telemetry"], limits: ["does not replace authority"], counterweights: ["escalate uncertainty"], ec01Disposition: "ADMISSIBLE FOR CANON REVIEW" });
+    const candidate = new Foundry().integrate({ profession, doctrineRef: doctrine.identity + "@" + doctrine.version, doctrine, canons: [canon], canonRefs: [canon.identity + "@" + canon.version], provenanceComplete: true });
     const pit = new Pit().test(candidate, ["contradictory alerts"]);
     const guildhall = new Guildhall();
 
@@ -208,6 +216,52 @@ describe("synthetic emergency-systems-engineer creation chain", () => {
     expect(rejected.payload.unresolvedInputs).toContain("doctrine lineage");
   });
 
+  it("records explicit Pit retest lineage for a successor and rejects the predecessor finding", () => {
+    const petition = new Secretariat().receive({
+      content: "Create a synthetic emergency-systems-engineer persona.",
+      sessionReference: "opaque-pit-retest-lineage-test",
+    });
+    const work = new Castellan().receivePetition(petition)!;
+    const profession = new Guildhall().resolve(work, {
+      professionIdentity: "emergency systems engineer",
+      requiredCompetence: ["incident diagnosis"],
+      practiceBoundaries: ["stop unsafe restoration"],
+      suitabilityCriteria: ["evidence-disciplined diagnosis"],
+    });
+    const doctrine = new Studium().authorPersonaDoctrine({ profession });
+    const canon = new Hagiography().canonize({
+      correlationId: petition.correlationId,
+      syntheticSource: true,
+      sourceRef: "synthetic-retest-exemplar@1",
+      performanceEvidence: "staged diagnosis",
+      observedBehavior: "separated facts from hypotheses",
+      boundedTrait: "evidence-first reasoning",
+      conditions: ["incomplete telemetry"],
+      limits: ["does not replace authority"],
+      counterweights: ["escalate uncertainty"],
+      ec01Disposition: "ADMISSIBLE FOR CANON REVIEW",
+    });
+    const foundry = new Foundry();
+    const predecessor = foundry.integrate({
+      profession,
+      doctrineRef: doctrine.identity + "@" + doctrine.version,
+      canonRefs: [canon.identity + "@" + canon.version],
+      doctrine,
+      canons: [canon],
+      provenanceComplete: true,
+    });
+    const oldPit = new Pit().test(predecessor, ["contradictory alerts"]);
+    const successor = { ...predecessor, identity: predecessor.identity + "-successor", version: predecessor.version + 1 };
+    const newPit = new Pit().test(successor, ["contradictory alerts"], oldPit.identity + "@" + oldPit.version);
+
+    expect(newPit.payload.retestOf).toBe(oldPit.identity + "@" + oldPit.version);
+    expect(newPit.sourceRefs).toContain(newPit.payload.candidateRef);
+    expect(newPit.sourceRefs).toContain(newPit.payload.retestOf!);
+    expect(newPit.payload.candidateRef).not.toBe(oldPit.payload.candidateRef);
+    expect(new Pit().test({ ...predecessor, status: "SUPERSEDED" }, ["contradictory alerts"]).payload.finding)
+      .toBe("PERSONA_TEST_UNRESOLVED");
+  });
+
   it("passes every stage and stops at inactive packaging", () => {
     const petition = new Secretariat().receive({
       content: "Create a synthetic emergency-systems-engineer persona.",
@@ -265,6 +319,7 @@ describe("synthetic emergency-systems-engineer creation chain", () => {
     expect(doctrine.payload.finding).toBe("DOCTRINE_CONFORMANT");
 
     const canon = new Hagiography().canonize({
+      correlationId: petition.correlationId,
       syntheticSource: true,
       sourceRef: "synthetic-emergency-engineer-exemplar@1",
       performanceEvidence: "Restored a failing service through staged diagnosis.",
@@ -281,6 +336,8 @@ describe("synthetic emergency-systems-engineer creation chain", () => {
     const candidate = new Foundry().integrate({
       profession,
       doctrineRef: doctrine.identity + "@" + doctrine.version,
+      doctrine,
+      canons: [canon],
       canonRefs: [canon.identity + "@" + canon.version],
       provenanceComplete: true,
     });
@@ -348,6 +405,7 @@ describe("synthetic emergency-systems-engineer creation chain", () => {
       stopConditions: ["unsafe continuation"],
     });
     const canon = new Hagiography().canonize({
+      correlationId: petition.correlationId,
       syntheticSource: true,
       sourceRef: "synthetic-emergency-engineer-exemplar@1",
       performanceEvidence: "Restored a failing service through staged diagnosis.",
@@ -361,6 +419,8 @@ describe("synthetic emergency-systems-engineer creation chain", () => {
     const candidate = new Foundry().integrate({
       profession,
       doctrineRef: doctrine.identity + "@" + doctrine.version,
+      doctrine,
+      canons: [canon],
       canonRefs: [canon.identity + "@" + canon.version],
       provenanceComplete: true,
     });
@@ -471,6 +531,7 @@ describe("synthetic emergency-systems-engineer creation chain", () => {
       stopConditions: ["unsafe continuation"],
     });
     const canon = new Hagiography().canonize({
+      correlationId: petition.correlationId,
       syntheticSource: true,
       sourceRef: "synthetic-emergency-engineer-exemplar@2",
       performanceEvidence: "Restored a failing service through staged diagnosis.",
@@ -484,6 +545,8 @@ describe("synthetic emergency-systems-engineer creation chain", () => {
     const candidate = new Foundry().integrate({
       profession,
       doctrineRef: doctrine.identity + "@" + doctrine.version,
+      doctrine,
+      canons: [canon],
       canonRefs: [canon.identity + "@" + canon.version],
       provenanceComplete: true,
     });
@@ -505,4 +568,3 @@ describe("synthetic emergency-systems-engineer creation chain", () => {
     )).toBe(true);
   });
 });
-

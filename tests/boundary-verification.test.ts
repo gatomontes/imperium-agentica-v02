@@ -33,6 +33,7 @@ function baseArtifacts() {
   const candidate = new Foundry().integrate({
     profession,
     doctrineRef: doctrine.identity + "@" + doctrine.version,
+    doctrine,
     canonRefs: ["canon-synthetic@1"],
     provenanceComplete: true,
   });
@@ -53,7 +54,7 @@ describe("reference boundary verification", () => {
   it("does not admit a candidate without a conformant Pit finding", () => {
     const { candidate } = baseArtifacts();
     const pit = new Pit().test(candidate, []);
-    const persona = new Garrison().admit(candidate, pit);
+    const persona = new Garrison().admit(candidate, pit, new Guildhall().dispose(candidate, pit, "ADMIT"));
     expect(pit.payload.finding).toBe("PERSONA_TEST_UNRESOLVED");
     expect(persona.payload.finding).toBe(
       "CANONICAL_PERSONA_ADMISSION_UNRESOLVED",
@@ -64,8 +65,8 @@ describe("reference boundary verification", () => {
   it("does not package a non-admitted persona", () => {
     const { candidate } = baseArtifacts();
     const pit = new Pit().test(candidate, []);
-    const persona = new Garrison().admit(candidate, pit);
-    const packageResult = new Conscription().package(persona, "node-reference");
+    const persona = new Garrison().admit(candidate, pit, new Guildhall().dispose(candidate, pit, "ADMIT"));
+  const packageResult = new Conscription().package(persona, "node-reference", "A2");
     expect(packageResult.payload.finding).toBe(
       "OPERATIVE_PACKAGE_UNRESOLVED",
     );
