@@ -3,6 +3,7 @@ export * from "./artifact-store.js";
 export * from "./castellan.js";
 export * from "./conscription.js";
 export * from "./delivery.js";
+export * from "./exemplar-review.js";
 export * from "./foundry.js";
 export * from "./garrison.js";
 export * from "./guildhall.js";

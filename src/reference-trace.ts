@@ -33,6 +33,7 @@ export class ReferenceCreationTrace {
       stopConditions: ["unsafe continuation"],
     });
     const canon = new Hagiography().canonize({
+      correlationId: petition.correlationId,
       syntheticSource: true,
       sourceRef: "synthetic-saint-trace@1",
       performanceEvidence: "Compared conflicting reports.",
@@ -46,12 +47,15 @@ export class ReferenceCreationTrace {
     const candidate = new Foundry().integrate({
       profession,
       doctrineRef: doctrine.identity + "@" + doctrine.version,
+      doctrine,
+      canons: [canon],
       canonRefs: [canon.identity + "@" + canon.version],
       provenanceComplete: true,
     });
     const pit = new Pit().test(candidate, ["conflicting evidence"]);
-    const persona = new Garrison().admit(candidate, pit);
-    const operative = new Conscription().package(persona, "node-reference");
+    const disposition = new Guildhall().dispose(candidate, pit, "ADMIT");
+    const persona = new Garrison().admit(candidate, pit, disposition);
+    const operative = new Conscription().package(persona, "node-reference", "A2");
 
     return { petition, work, profession, doctrine, canon, candidate, pit, persona, operative };
   }

@@ -11,5 +11,6 @@ describe("public reference API", () => {
     expect(Imperium.Pit).toBeDefined();
     expect(Imperium.Garrison).toBeDefined();
     expect(Imperium.Conscription).toBeDefined();
+    expect(Imperium.ExemplarReview).toBeDefined();
   });
 });

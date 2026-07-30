@@ -22,6 +22,15 @@ export interface ProfessionResolutionInput {
   suitabilityCriteria?: string[];
 }
 
+export type CommitteeDispositionKind = "ADMIT" | "RECYCLE" | "DISCARD";
+
+export interface CommitteeDisposition {
+  candidateRef: string;
+  pitFindingRef: string;
+  decision: CommitteeDispositionKind;
+  authority: "GUILDHALL_COMMITTEE";
+}
+
 export class Guildhall {
   resolve(
     work: ArtifactEnvelope<WorkSpecification>,
@@ -50,6 +59,25 @@ export class Guildhall {
         finding,
       },
       [work.identity + "@" + work.version],
+    );
+  }
+
+  dispose(
+    candidate: ArtifactEnvelope<import("./foundry.js").PersonaSpecificationCandidate>,
+    pit: ArtifactEnvelope<import("./pit.js").PitResult>,
+    decision: CommitteeDispositionKind,
+  ): ArtifactEnvelope<CommitteeDisposition> {
+    return createArtifact(
+      "CommitteeDisposition",
+      "GuildhallCommittee",
+      candidate.correlationId,
+      {
+        candidateRef: candidate.identity + "@" + candidate.version,
+        pitFindingRef: pit.identity + "@" + pit.version,
+        decision,
+        authority: "GUILDHALL_COMMITTEE",
+      },
+      [candidate.identity + "@" + candidate.version, pit.identity + "@" + pit.version],
     );
   }
 }

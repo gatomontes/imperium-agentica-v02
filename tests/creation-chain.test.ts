@@ -44,12 +44,13 @@ function chain() {
   const candidate = new Foundry().integrate({
     profession,
     doctrineRef: doctrine.identity + "@" + doctrine.version,
+    doctrine,
     canonRefs: [canon.identity + "@" + canon.version],
     provenanceComplete: true,
   });
   const pit = new Pit().test(candidate, ["missing evidence", "conflicting evidence"]);
-  const persona = new Garrison().admit(candidate, pit);
-  const operative = new Conscription().package(persona, "node-reference");
+  const persona = new Garrison().admit(candidate, pit, new Guildhall().dispose(candidate, pit, "ADMIT"));
+  const operative = new Conscription().package(persona, "node-reference", "A2");
 
   return { work, profession, doctrine, canon, candidate, pit, persona, operative };
 }
@@ -65,7 +66,7 @@ describe("synthetic creation chain", () => {
 
   it("blocks packaging when the medium is absent", () => {
     const result = chain();
-    const blocked = new Conscription().package(result.persona, " ");
+  const blocked = new Conscription().package(result.persona, " ", "A2");
     expect(blocked.payload.finding).toBe("OPERATIVE_PACKAGE_UNRESOLVED");
   });
 });
