@@ -363,4 +363,11 @@ DR-056 is admitted by DR-057 after a 22/22 synthetic pressure test. Immutable at
 Status: active admitted semantic contract.
 Path: `deliberations/decisions/DR-057-execution-attempt-record-evidence-admission-review.md`
 
-DR-056 passed 22/22 synthetic pressure-test criteria and is admitted. No subsequent semantic increment is selected. No implementation or external effect is authorized.
+DR-056 passed 22/22 synthetic pressure-test criteria and is admitted. The next semantic increment is DR-058: Execution Result Interpretation and Disposition Handoff. No implementation or external effect is authorized.
+
+### DR-058 — Execution Result Interpretation and Disposition Handoff Contract
+
+Status: active semantic contract proposal; admission pending pressure test.
+Path: `deliberations/decisions/DR-058-execution-result-disposition-handoff-contract.md`
+
+Execution may interpret outcomes within its envelope and package bounded return material; authority retains disposition, and Lazaretto retains sanitation/release of external material. No implementation or external effect is authorized.
