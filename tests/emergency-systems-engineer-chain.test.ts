@@ -313,4 +313,88 @@ describe("synthetic emergency-systems-engineer creation chain", () => {
       supersedes: trace.persona.identity + "@" + trace.persona.version,
     })).toThrow("previous artifact is not current");
   });
+
+  it("re-enters the full chain with a successor and rejects stale downstream artifacts", () => {
+    const first = new ReferenceCreationTrace().run();
+    const repository = new InMemoryArtifactRepository();
+    repository.save(first.persona);
+
+    const invalidation = new InvalidationCoordinator().record(
+      first.persona.identity + "@" + first.persona.version,
+      [first.persona.identity + "@" + first.persona.version],
+      "synthetic successor requires re-entry",
+      "IDENTIFIED",
+    );
+    expect(invalidation.payload.status).toBe("SUSPENDED");
+
+    const successor = {
+      ...first.persona,
+      version: first.persona.version + 1,
+      supersedes: first.persona.identity + "@" + first.persona.version,
+      payload: { ...first.persona.payload, finding: "CANONICAL_PERSONA_ADMITTED" as const },
+    };
+    repository.supersede(first.persona, successor);
+    expect(repository.get(first.persona.identity, first.persona.version)?.status).toBe(
+      "SUPERSEDED",
+    );
+
+    const stalePersona = repository.get(first.persona.identity, first.persona.version)! as typeof first.persona;
+    expect(new Conscription().package(stalePersona, "node-reference").payload.finding).toBe(
+      "OPERATIVE_PACKAGE_UNRESOLVED",
+    );
+
+    const petition = new Secretariat().receive({
+      content: "Create a synthetic emergency-systems-engineer persona.",
+      sessionReference: "opaque-successor-reentry-test",
+    });
+    const work = new Castellan().receivePetition(petition)!;
+    const profession = new Guildhall().resolve(work, {
+      professionIdentity: "emergency systems engineer",
+      requiredCompetence: ["incident diagnosis", "safe service restoration"],
+      practiceBoundaries: ["do not exceed granted authority"],
+      suitabilityCriteria: ["evidence-disciplined reasoning"],
+    });
+    const doctrine = new Studium().authorPersonaDoctrine({
+      profession,
+      mandatoryConduct: ["establish current system state"],
+      prohibitedConduct: ["fabricate system state"],
+      evidenceDuties: ["record uncertainty"],
+      refusalConditions: ["insufficient evidence"],
+      escalationTriggers: ["material risk"],
+      stopConditions: ["unsafe continuation"],
+    });
+    const canon = new Hagiography().canonize({
+      syntheticSource: true,
+      sourceRef: "synthetic-emergency-engineer-exemplar@2",
+      performanceEvidence: "Restored a failing service through staged diagnosis.",
+      observedBehavior: "Separated facts from hypotheses.",
+      boundedTrait: "evidence-first reasoning",
+      conditions: ["incomplete telemetry"],
+      limits: ["does not replace domain authority"],
+      counterweights: ["escalate when uncertainty exceeds bounds"],
+      ec01Disposition: "ADMISSIBLE FOR CANON REVIEW",
+    });
+    const candidate = new Foundry().integrate({
+      profession,
+      doctrineRef: doctrine.identity + "@" + doctrine.version,
+      canonRefs: [canon.identity + "@" + canon.version],
+      provenanceComplete: true,
+    });
+    const pit = new Pit().test(candidate, ["contradictory alerts"]);
+    const persona = new Garrison().admit(candidate, pit);
+    const operative = new Conscription().package(persona, "node-reference");
+
+    expect(persona.payload.finding).toBe("CANONICAL_PERSONA_ADMITTED");
+    expect(operative.payload.finding).toBe("OPERATIVE_PACKAGE_CONFORMANT");
+    expect(operative.payload.state).toBe("PACKAGED");
+    expect(operative.payload.state).not.toBe("ACTIVATION_PENDING");
+    expect(operative.payload.state).not.toBe("DEPLOYED");
+    expect(operative.payload.personaRef).toBe(persona.identity + "@" + persona.version);
+    expect(operative.payload.personaRef).not.toBe(
+      first.persona.identity + "@" + first.persona.version,
+    );
+    expect([petition, work, profession, doctrine, candidate, pit, persona, operative].every(
+      (artifact) => artifact.correlationId === petition.correlationId,
+    )).toBe(true);
+  });
 });
