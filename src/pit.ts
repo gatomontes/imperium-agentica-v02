@@ -14,6 +14,8 @@ export interface PitResult {
   pressures: string[];
   finding: PitFinding;
   failures: string[];
+  professionQueueRef?: string;
+  queuePosition?: number;
 }
 
 export class Pit {
@@ -31,6 +33,9 @@ export class Pit {
         ? ["candidate inputs are not conformant"]
         : []),
     ] : [];
+    if (candidate.payload.professionQueueRef && candidate.payload.queuePosition === undefined) {
+      failures.push("profession queue assignment is unresolved");
+    }
     const finding: PitFinding =
       failures.length === 0
         ? "PERSONA_TEST_CONFORMANT"
@@ -48,6 +53,8 @@ export class Pit {
         pressures,
         finding,
         failures,
+        ...(candidate.payload.professionQueueRef ? { professionQueueRef: candidate.payload.professionQueueRef } : {}),
+        ...(candidate.payload.queuePosition !== undefined ? { queuePosition: candidate.payload.queuePosition } : {}),
       },
       [candidateRef, ...(retestOf ? [retestOf] : [])],
     );

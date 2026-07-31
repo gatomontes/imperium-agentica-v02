@@ -18,6 +18,18 @@ DR-046 admits DR-045 after a 20/20 synthetic pressure test. DR-047 is admitted b
 
 The previously composed HTTP/persistence implementation remains historical context, not the active work leg.
 
+## Synthetic Implementation Checkpoint — B1
+
+The provider-neutral B1 authorization boundary is implemented and pressure-tested as a synthetic contract path through Iron Gate: authorization envelope, authentication-proof satisfaction, policy convergence and disposition, eligibility assessment and disposition, access-decision request, and non-authorizing referral. Exact correlation and provenance are preserved. This checkpoint does not authorize credentials, provider selection, live data, activation, deployment, Runtime action, or external effect.
+
+## Persona Production Readiness Review — #2
+
+The first synthetic Persona/Operative chain has been reviewed for production readiness. Creation-chain completeness, lineage, boundary enforcement, and the non-authorizing B1 path pass repository evidence. Production readiness is deferred: the evidence remains synthetic and inactive, with no live provider, credential, Runtime, mission, activation, deployment, or external effect exercised. The review is recorded at `tests/cognitive/persona-production-readiness-review-001.md`. The next step must be separately authorized and remain non-live.
+
+## Persona Acceptance Integrity Checkpoint
+
+The non-live acceptance assessment and disposition boundary is implemented and pressure-tested. Acceptance evidence must correspond to the current readiness artifact; mismatched evidence remains `ACCEPTANCE_DEFERRED`, and malformed, stale, incomplete, or self-referential dispositions are rejected. Production admission, live authority, activation, deployment, credentials, Runtime action, and external effects remain explicitly false and unexercised.
+
 ## Creation-Apparatus Closure and Reconciliation Review — DR-049 / DR-050
 
 DR-047 defines bounded propagation of invalidation, supersession, quarantine, successor versioning, revalidation, refusal, and provenance across dependent creation-apparatus artifacts. DR-048 admitted that contract after a 20/20 synthetic pressure test. DR-049 reconciled the admitted creation-apparatus contracts and authoritative pointers; DR-050 records the 24/24 admission. The creation-apparatus semantic chain is closed. Implementation, Runtime action, activation, deployment, credentials, and external effects remain unauthorized.

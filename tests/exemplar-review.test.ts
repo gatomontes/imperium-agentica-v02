@@ -28,4 +28,19 @@ describe("automatic exemplar review boundary", () => {
     expect(proposal.payload.finding).toBe("EXEMPLARS_REFUSED");
     expect(review.recordOperatorReview(proposal, "APPROVE", "exemplar-a", "looks good")).toBeNull();
   });
+
+  it("does not require operator attributes; Hagiography remains the trait-discovery owner", () => {
+    const review = new ExemplarReview();
+    const proposal = review.rank("corr-3", "legal-assistant", [
+      { exemplarRef: "saint-a", score: 10, evidenceRefs: ["award-a"], uncertainty: [] },
+    ]);
+
+    expect(proposal.payload.finding).toBe("EXEMPLARS_RANKED");
+    expect(proposal.payload).not.toHaveProperty("requestedAttributes");
+
+    const withOptionalAttribute = review.rank("corr-4", "legal-assistant", [
+      { exemplarRef: "saint-a", score: 10, evidenceRefs: ["award-a"], uncertainty: [] },
+    ], ["rigorous legal drafting"]);
+    expect(withOptionalAttribute.payload.requestedAttributes).toEqual(["rigorous legal drafting"]);
+  });
 });

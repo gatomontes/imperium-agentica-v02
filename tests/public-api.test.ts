@@ -12,5 +12,7 @@ describe("public reference API", () => {
     expect(Imperium.Garrison).toBeDefined();
     expect(Imperium.Conscription).toBeDefined();
     expect(Imperium.ExemplarReview).toBeDefined();
+    expect(Imperium.IronGate).toBeDefined();
+    expect(Imperium.PersonaReadiness).toBeDefined();
   });
 });

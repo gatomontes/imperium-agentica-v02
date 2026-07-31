@@ -38,4 +38,32 @@ describe("Studium Persona Doctrine evaluator", () => {
     const result = new Studium().authorPersonaDoctrine({ profession: profession() });
     expect(result.payload.finding).toBe("DOCTRINE_UNRESOLVED");
   });
+
+  it("does not advance an unresolved profession queue item into doctrine", () => {
+    const petition = new Secretariat().receive({
+      content: "Compose a Gothic Metal song.",
+      sessionReference: "opaque-session-queue-studium",
+    });
+    const work = new Castellan().receivePetition(petition)!;
+    const queue = new Guildhall().queue(work, [
+      { position: 1, professionIdentity: "Lyricist", taskCluster: "write lyrics", rationale: "lyrics" },
+      { position: 2, professionIdentity: "Chorus Specialist", taskCluster: "refine chorus", rationale: "chorus follows lyrics" },
+    ]);
+    const unresolved = new Guildhall().resolveQueueItem(work, queue, 2, {
+      requiredCompetence: ["refrain analysis"],
+      practiceBoundaries: ["preserve meaning"],
+      suitabilityCriteria: ["memorability"],
+    });
+    const result = new Studium().authorPersonaDoctrine({
+      profession: unresolved,
+      mandatoryConduct: ["stay within scope"],
+      prohibitedConduct: ["invent authority"],
+      evidenceDuties: ["cite sources"],
+      refusalConditions: ["missing evidence"],
+      escalationTriggers: ["material uncertainty"],
+      stopConditions: ["unsafe request"],
+    });
+
+    expect(result.payload.finding).toBe("DOCTRINE_UNRESOLVED");
+  });
 });

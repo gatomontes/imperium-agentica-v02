@@ -14,6 +14,8 @@ export interface CanonicalPersona {
   professionRef: string;
   status: "ADMITTED" | "NOT_ADMITTED" | "SUPERSEDED" | "RETIRED";
   finding: GarrisonFinding;
+  professionQueueRef?: string;
+  queuePosition?: number;
 }
 
 export class Garrison {
@@ -35,6 +37,11 @@ export class Garrison {
       disposition.payload.authority === "GUILDHALL_COMMITTEE" &&
       disposition.payload.candidateRef === candidateRef &&
       disposition.payload.pitFindingRef === pitRef;
+    const queueConformant =
+      candidate.payload.professionQueueRef === pit.payload.professionQueueRef &&
+      candidate.payload.queuePosition === pit.payload.queuePosition &&
+      (candidate.payload.professionQueueRef === undefined || candidate.payload.queuePosition !== undefined);
+    const admitted = conformant && queueConformant;
 
     return createArtifact(
       "CanonicalPersona",
@@ -44,10 +51,12 @@ export class Garrison {
         candidateRef,
         pitFindingRef: pitRef,
         professionRef: candidate.payload.professionRef,
-        status: conformant ? "ADMITTED" : "NOT_ADMITTED",
-        finding: conformant
+        status: admitted ? "ADMITTED" : "NOT_ADMITTED",
+        finding: admitted
           ? "CANONICAL_PERSONA_ADMITTED"
           : "CANONICAL_PERSONA_ADMISSION_UNRESOLVED",
+        ...(candidate.payload.professionQueueRef ? { professionQueueRef: candidate.payload.professionQueueRef } : {}),
+        ...(candidate.payload.queuePosition !== undefined ? { queuePosition: candidate.payload.queuePosition } : {}),
       },
       [candidateRef, pitRef, disposition.identity + "@" + disposition.version],
     );

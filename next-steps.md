@@ -145,3 +145,17 @@ DR-046 admitted DR-045 after a 20/20 synthetic pressure test. DR-047 was admitte
 ## Creation-Apparatus Closure
 
 DR-049 was reconciled and admitted by DR-050 after a 24/24 synthetic end-to-end matrix. The admitted chain preserves one authoritative contract per function, authority boundaries, complete lineage, successor-version behavior, refusal/return/escalation, synchronized pointers, and explicit non-activation boundaries. Creation-apparatus semantic work is closed. Execution-layer semantic work is closed through DR-061; no implementation, Runtime operation, activation, deployment, credentials, live data, or external effect is authorized.
+
+## Synthetic Implementation Checkpoint — B1
+
+B1 provider-neutral authorization implementation is complete through the Iron Gate access-decision referral boundary. The chain is synthetic and non-authorizing: it records authorization/proof assessments, eligibility, and referral to independent access authority while preserving lineage and correlation. No credential custody, provider-specific access, activation, crossing, deployment, Runtime operation, live data, or external effect has been exercised.
+
+Next: review this B1 checkpoint and continuity state before selecting a subsequent implementation increment.
+
+## Persona Production Readiness — #2
+
+Completed: readiness review recorded at `tests/cognitive/persona-production-readiness-review-001.md`. The synthetic chain and B1 non-authorizing boundary pass repository checks; production readiness remains deferred because no live operational proof exists. Next candidate: define the smallest separately authorized, non-live implementation-readiness increment.
+
+## Persona Acceptance Integrity Checkpoint
+
+Completed: acceptance assessment and disposition now require exact readiness/evidence lineage. Evidence that does not belong to the current readiness artifact remains deferred, and stale, incomplete, malformed, or self-referential dispositions are rejected. This remains a synthetic, non-live checkpoint; production admission, live authority, credentials, activation, deployment, Runtime, and external effects remain closed.

@@ -28,4 +28,19 @@ describe("Hagiography synthetic Canon evaluator", () => {
 
     expect(result.payload.finding).toBe("TRAIT_CANON_UNRESOLVED");
   });
+
+  it("does not process an unresolved queued profession assignment", () => {
+    const result = new Hagiography().canonize({
+      syntheticSource: true,
+      sourceRef: "synthetic-saint-002@1",
+      performanceEvidence: "Drafted precise filings.",
+      observedBehavior: "Checked every citation.",
+      boundedTrait: "rigorous drafting",
+      conditions: ["legal drafting"], limits: ["not legal advice"],
+      counterweights: ["escalate ambiguity"], ec01Disposition: "ADMISSIBLE FOR CANON REVIEW",
+      professionRef: "professionspecification-001@1", professionQueueRef: "professionqueue-001@1",
+      queuePosition: 2, professionConformant: false,
+    });
+    expect(result.payload.finding).toBe("TRAIT_CANON_UNRESOLVED");
+  });
 });

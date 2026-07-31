@@ -18,6 +18,8 @@ export type AutonomyClass = "A0" | "A1" | "A2" | "A3" | "A4";
 
 export interface OperativePackage {
   personaRef: string;
+  professionQueueRef?: string;
+  queuePosition?: number;
   medium: string;
   autonomyClass: AutonomyClass;
   deviations: string[];
@@ -32,10 +34,14 @@ export class Conscription {
     autonomyClass: AutonomyClass,
     deviations: string[] = [],
   ): ArtifactEnvelope<OperativePackage> {
+    const queueConformant =
+      persona.payload.professionQueueRef === undefined ||
+      (persona.payload.professionQueueRef.trim() !== "" && persona.payload.queuePosition !== undefined);
     const finding: OperativeFinding =
       persona.status === "CURRENT" &&
       persona.payload.finding === "CANONICAL_PERSONA_ADMITTED" &&
-      medium.trim()
+      medium.trim() &&
+      queueConformant
         ? "OPERATIVE_PACKAGE_CONFORMANT"
         : "OPERATIVE_PACKAGE_UNRESOLVED";
 
@@ -46,6 +52,8 @@ export class Conscription {
       persona.correlationId,
       {
         personaRef,
+        ...(persona.payload.professionQueueRef ? { professionQueueRef: persona.payload.professionQueueRef } : {}),
+        ...(persona.payload.queuePosition !== undefined ? { queuePosition: persona.payload.queuePosition } : {}),
         medium: medium.trim(),
         autonomyClass,
         deviations,
