@@ -170,3 +170,14 @@ Runtime, activate, deploy, use live data, or create an external effect.
 
 Next: stop at the separate production-admission decision gate.
 
+## Persona Production Admission Review 001
+
+Completed: `tests/cognitive/persona-production-admission-review-001.md`.
+The synthetic Persona → Operative package passed the bounded admission review,
+but production admission was explicitly deferred because operational proof has
+not been established.
+
+Next bounded increment: define and review the non-live Runtime/Master Mason
+governor boundary and credential-custody contract. This does not authorize
+credentials, provider selection, Runtime operation, activation, deployment,
+live data, or external effects.
