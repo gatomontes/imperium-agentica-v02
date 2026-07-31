@@ -70,3 +70,8 @@ DR-047 defines bounded propagation of invalidation, supersession, quarantine, su
 ## Collegium → Guildhall Candidate Assembly Review 001
 
 The creation-side review is recorded at `tests/cognitive/collegium-guildhall-candidate-assembly-review-001.md`. The Profession Queue remains an ordered workflow for resolving composed professional requirements without introducing multi-persona coordination. Malformed, underspecified, or skipped items remain unresolved and cannot enter downstream creation artifacts. This is synthetic evidence only; no Persona, Operative, activation, Runtime operation, credential use, deployment, or external effect is authorized.
+
+
+## Guildhall → Studium/Hagiography → Foundry Handoff Review 001
+
+The non-live handoff review is recorded at `tests/cognitive/guildhall-studium-hagiography-foundry-handoff-review-001.md`. Guildhall emits the ordered candidate-assembly packet; Studium applies doctrine; Hagiography supplies admissible exemplar evidence; Foundry preserves provenance and forges the Persona Specification. Missing, contradictory, stale, malformed, or unresolved inputs remain refused or returned for repair. No live persona, Operative, activation, Runtime operation, credentials, deployment, or external effect is authorized.
