@@ -352,3 +352,11 @@ DR-060 passed 28/28 synthetic cross-contract reconciliation criteria and is admi
 - CIO Dive AI-spend/resource-governance assessment: `assessments/2026-07-30-cio-dive-ai-spend-cost-governance-assessment.md` — resource envelope, cost attribution, cost ownership, spend-triggered interruption, outcome-chain separation, and value-realization refinements; no semantic admission or implementation claimed
 
 - CIO Dive token-cost / AI-spend assessment: `assessments/2026-07-31-cio-dive-token-costs-judicature-of-scales-assessment.md` — records Judicature of Scales as a candidate function for proportionate resource expenditure, cost attribution, threshold behavior, and reconciliation; no semantic admission or implementation claimed
+
+
+### DR-064 — Foundry Input and Conflict Revalidation
+
+Status: admitted synthetic semantic revalidation; implementation remains unauthorized.
+Path: deliberations/decisions/DR-064-foundry-input-conflict-revalidation.md
+
+The revalidation passed 14/14 synthetic cases. It confirms exact-input validation, native-owner conflict return, provenance preservation, immutable successor versions, and Foundry → Pit handoff. No implementation or external effect is authorized.
