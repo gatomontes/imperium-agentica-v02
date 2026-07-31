@@ -350,3 +350,5 @@ DR-060 passed 28/28 synthetic cross-contract reconciliation criteria and is admi
 
 
 - CIO Dive AI-spend/resource-governance assessment: `assessments/2026-07-30-cio-dive-ai-spend-cost-governance-assessment.md` — resource envelope, cost attribution, cost ownership, spend-triggered interruption, outcome-chain separation, and value-realization refinements; no semantic admission or implementation claimed
+
+- CIO Dive token-cost / AI-spend assessment: `assessments/2026-07-31-cio-dive-token-costs-judicature-of-scales-assessment.md` — records Judicature of Scales as a candidate function for proportionate resource expenditure, cost attribution, threshold behavior, and reconciliation; no semantic admission or implementation claimed
