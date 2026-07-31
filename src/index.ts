@@ -24,6 +24,7 @@ export * from "./persona-readiness.js";
 export * from "./persistent-reference.js";
 export * from "./postgres-store.js";
 export * from "./reference.js";
+export * from "./reference-boundary.js";
 export * from "./repository.js";
 export * from "./schema.js";
 export * from "./secretariat.js";

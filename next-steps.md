@@ -268,3 +268,7 @@ Next creation-side candidate: creation-apparatus closure review.
 The independent synthetic closure review is recorded at `tests/cognitive/creation-apparatus-closure-review-001.md`. The complete creation apparatus passes 30/30 bounded reconciliation cases. Native ownership, lineage/version integrity, refusal/return behavior, synchronized pointers, and inactive handoff are preserved. The creation apparatus is semantically closed and admitted for future implementation design and synthetic testing only. No implementation or operational boundary is authorized.
 
 Next step, if selected: separately scope and authorize a non-live implementation-design review.
+
+## Implementation Increment 004 — In-Memory Secretariat/Castellan Boundary
+
+Completed on a dedicated branch as the first executable implementation increment. The coordinator and focused tests are non-live and dependency-free. After admission, the next increment is an independent implementation review of the coordinator’s ownership, refusal, and contract-isolation behavior before any transport or persistence work is considered.
