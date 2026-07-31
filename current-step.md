@@ -53,6 +53,15 @@ data, and external effects remain closed.
 The next bounded increment is a non-live Runtime/Master Mason governor and
 credential-custody boundary review.
 
+## Non-Live Runtime Governor and Credential-Custody Boundary
+
+DR-062 and `tests/runtime/non-live-runtime-governor-custody-pressure-run-001.md`
+record the synthetic governor/custody contract and a 10/10 pressure run.
+Master Mason remains limited to Runtime mechanics; Locksmith remains the sole
+credential custodian and security-persistence accessor. The contract is not
+yet admitted and does not authorize Runtime operation, credential use,
+activation, deployment, live data, or external effect.
+
 ## Creation-Apparatus Closure and Reconciliation Review — DR-049 / DR-050
 
 DR-047 defines bounded propagation of invalidation, supersession, quarantine, successor versioning, revalidation, refusal, and provenance across dependent creation-apparatus artifacts. DR-048 admitted that contract after a 20/20 synthetic pressure test. DR-049 reconciled the admitted creation-apparatus contracts and authoritative pointers; DR-050 records the 24/24 admission. The creation-apparatus semantic chain is closed. Implementation, Runtime action, activation, deployment, credentials, and external effects remain unauthorized.
