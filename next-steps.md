@@ -249,3 +249,8 @@ Next creation-side candidate: Recruitment transformation and handoff.
 Completed synthetic review at `tests/cognitive/recruitment-transformation-handoff-review-001.md`. DR-067 records 20/20 passing cases covering exact Persona/version selection, medium fit, permitted transformation, deviation refusal, lineage, immutable Operative versioning, native-owner return, and inactive handoff. Recruitment remains downstream of Garrison and does not activate or deploy. No live or operational boundary is authorized.
 
 Next creation-side candidate: cross-chain invalidation and version-integrity reconciliation.
+
+
+## Cross-Chain Invalidation and Version Integrity 001
+
+The next creation-side increment is complete as a synthetic review recorded at `tests/cognitive/cross-chain-invalidation-version-integrity-review-001.md`. DR-068 records 24/24 passing cases. The contract preserves native-owner invalidation, quarantine, successor lineage, revalidation, pointer convergence, and refusal of stale, ambiguous, repaired, or mixed-version chains. No implementation or operational boundary is authorized.
