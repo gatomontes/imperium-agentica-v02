@@ -118,3 +118,8 @@ DR-066 records the Garrison admission and suitability operating contract. The sy
 ## Recruitment Transformation and Handoff Review 001
 
 DR-067 records the synthetic Recruitment contract. Recruitment accepts only an exact admitted Persona version and approved medium envelope; it records permitted transformations, refuses semantic or boundary deviations, issues an immutable Operative identity/version, preserves lineage, and hands off an inactive package. The companion review records 20/20 passing cases. This is admitted for future implementation design and synthetic testing only. No real-person intake, Persona or Operative production, credentials, Runtime, activation, deployment, live data, or external effect is authorized.
+
+
+## Cross-Chain Invalidation and Version-Integrity Review 001
+
+DR-068 records the synthetic cross-chain invalidation and version-integrity contract. Twenty-four of twenty-four bounded cases pass across invalidation, supersession, quarantine, successor lineage, revalidation, pointer divergence, refusal, and inactive handoff. Native authorities retain ownership; downstream offices detect and return but do not silently repair upstream truth. This is admitted for future implementation design and synthetic testing only. Real-person intake, Persona and Operative production, credentials, Runtime, activation, deployment, live data, provider access, and external effects remain closed.
