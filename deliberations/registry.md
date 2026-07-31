@@ -344,3 +344,9 @@ Status: admitted semantic closure review.
 Path: `deliberations/decisions/DR-061-execution-layer-closure-reconciliation-admission-review.md`
 
 DR-060 passed 28/28 synthetic cross-contract reconciliation criteria and is admitted. No implementation or external effect is authorized.
+
+
+- CIO Dive agentic-governance gap assessment: `assessments/2026-07-30-cio-dive-agentic-governance-gap-assessment.md` — external finding translated into proportional-autonomy, capability/access separation, continuous-assurance, and measurement refinements; no semantic admission or implementation claimed
+
+
+- CIO Dive AI-spend/resource-governance assessment: `assessments/2026-07-30-cio-dive-ai-spend-cost-governance-assessment.md` — resource envelope, cost attribution, cost ownership, spend-triggered interruption, outcome-chain separation, and value-realization refinements; no semantic admission or implementation claimed
