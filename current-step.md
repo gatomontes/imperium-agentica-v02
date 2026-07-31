@@ -30,6 +30,17 @@ The first synthetic Persona/Operative chain has been reviewed for production rea
 
 The non-live acceptance assessment and disposition boundary is implemented and pressure-tested. Acceptance evidence must correspond to the current readiness artifact; mismatched evidence remains `ACCEPTANCE_DEFERRED`, and malformed, stale, incomplete, or self-referential dispositions are rejected. Production admission, live authority, activation, deployment, credentials, Runtime action, and external effects remain explicitly false and unexercised.
 
+## Persona Production Readiness Increment 001
+
+The first non-live implementation-readiness increment is recorded at
+`tests/cognitive/persona-production-readiness-increment-001.md`. It consolidates
+the existing synthetic readiness, acceptance-integrity, disposition-lineage,
+and regression evidence without admitting a production Persona or Operative.
+The next step is a separate production-admission decision. Provider selection,
+credentials, Runtime operation, activation, deployment, live data, and
+external effects remain closed.
+
 ## Creation-Apparatus Closure and Reconciliation Review — DR-049 / DR-050
 
 DR-047 defines bounded propagation of invalidation, supersession, quarantine, successor versioning, revalidation, refusal, and provenance across dependent creation-apparatus artifacts. DR-048 admitted that contract after a 20/20 synthetic pressure test. DR-049 reconciled the admitted creation-apparatus contracts and authoritative pointers; DR-050 records the 24/24 admission. The creation-apparatus semantic chain is closed. Implementation, Runtime action, activation, deployment, credentials, and external effects remain unauthorized.
+
