@@ -188,3 +188,8 @@ The bounded contract and synthetic 10/10 pressure run are recorded in DR-062
 and `tests/runtime/non-live-runtime-governor-custody-pressure-run-001.md`.
 Master Mason governs Runtime mechanics only; Locksmith retains sole custody and
 security-persistence access. The next gate is independent review/admission.
+
+
+## Collegium → Guildhall Candidate Assembly
+
+Completed review: `tests/cognitive/collegium-guildhall-candidate-assembly-review-001.md`. The queue contract covers ordered profession composition, sequential resolution, lineage propagation, and refusal of malformed or skipped items. The next creation-side review may examine the Guildhall handoff through Studium and Hagiography into Foundry. Master Mason and Locksmith work remains parked.
