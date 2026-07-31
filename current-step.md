@@ -93,3 +93,8 @@ boundaries remain closed.
 ## Hagiography Evidence-to-Canon Operating Contract 001
 
 DR-063 admits a synthetic, non-live operating contract for Hagiography. The contract governs evidence intake, source sufficiency, authority and provenance, bounded trait derivation, profession-fit preservation, contradiction handling, invalidation, supersession, decanonization, lineage, and refusal. The synthetic review records 10/10 passing cases. Real-person intake, Persona production, Operative creation, Runtime operation, credentials, activation, deployment, and external effects remain closed.
+
+
+## Foundry Input and Conflict Revalidation 001
+
+DR-064 and tests/cognitive/foundry-input-conflict-revalidation-001.md record a 14/14 synthetic revalidation of Foundry's exact-input, provenance, conflict, refusal, native-owner return, immutable-successor, and Pit-handoff rules against the completed Guildhall → Studium → Hagiography chain. This is semantic evidence only. No implementation, real-person intake, Persona or Operative production, Runtime operation, credentials, activation, deployment, live data, or external effect is authorized.
