@@ -242,3 +242,10 @@ Next creation-side candidates: Pit independent validation, Garrison admission/su
 Completed synthetic review at tests/cognitive/garrison-admission-suitability-review-001.md. DR-066 admits the Garrison contract for future implementation design and synthetic testing only. The 18/18 cases preserve inventory truth, admission authority, constrained suitability, reservation/selection separation, exact versioned dispositions, refusal, invalidation, supersession, and removal. Garrison determines whether a suitable Persona exists; Recruitment remains downstream. No Persona, Operative, real-person intake, Runtime, credentials, activation, deployment, live data, or external effect is authorized.
 
 Next creation-side candidate: Recruitment transformation and handoff.
+
+
+## Recruitment Transformation and Handoff 001
+
+Completed synthetic review at `tests/cognitive/recruitment-transformation-handoff-review-001.md`. DR-067 records 20/20 passing cases covering exact Persona/version selection, medium fit, permitted transformation, deviation refusal, lineage, immutable Operative versioning, native-owner return, and inactive handoff. Recruitment remains downstream of Garrison and does not activate or deploy. No live or operational boundary is authorized.
+
+Next creation-side candidate: cross-chain invalidation and version-integrity reconciliation.
