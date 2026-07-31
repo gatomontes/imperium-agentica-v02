@@ -75,3 +75,8 @@ The creation-side review is recorded at `tests/cognitive/collegium-guildhall-can
 ## Guildhall → Studium/Hagiography → Foundry Handoff Review 001
 
 The non-live handoff review is recorded at `tests/cognitive/guildhall-studium-hagiography-foundry-handoff-review-001.md`. Guildhall emits the ordered candidate-assembly packet; Studium applies doctrine; Hagiography supplies admissible exemplar evidence; Foundry preserves provenance and forges the Persona Specification. Missing, contradictory, stale, malformed, or unresolved inputs remain refused or returned for repair. No live persona, Operative, activation, Runtime operation, credentials, deployment, or external effect is authorized.
+
+
+## Hagiography Evidence-to-Canon Review 001
+
+The synthetic review is recorded at `tests/cognitive/hagiography-evidence-to-canon-review-001.md`. The existing Human-Trait Canon schema passes source, evidence, bounded-trait, profession-fit, lineage, contradiction, invalidation, and decanonization checks within synthetic scope. Institutional completion still requires a separately admitted Evidence-to-Canon operating contract. Real-person intake, Persona production, Operative creation, Runtime operation, credentials, activation, deployment, and external effects remain closed.
