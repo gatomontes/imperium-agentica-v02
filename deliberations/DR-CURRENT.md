@@ -395,3 +395,11 @@ Status: admitted semantic closure review.
 Path: `deliberations/decisions/DR-061-execution-layer-closure-reconciliation-admission-review.md`
 
 DR-060 passed 28/28 synthetic cross-contract reconciliation criteria and is admitted. No implementation or external effect is authorized.
+
+
+### DR-064 — Foundry Input and Conflict Revalidation
+
+Status: active admitted synthetic semantic revalidation.
+Path: deliberations/decisions/DR-064-foundry-input-conflict-revalidation.md
+
+DR-064 passed 14/14 synthetic cases against the current Guildhall → Studium → Hagiography handoff. Foundry refuses incomplete, stale, conflicting, incompatible, malformed, unowned, or cross-version inputs; returns defects to native owners; preserves lineage; and emits immutable successors. No implementation, real-person intake, Persona or Operative production, Runtime operation, credentials, activation, deployment, live data, or external effect is authorized.
