@@ -12,6 +12,7 @@ export type PetitionFinding =
 
 export interface OperatorRequest {
   content: string;
+  requestedOutput?: "PERSONA_SPECIFICATION";
   sessionReference: string;
   responseChannel?: string;
   constraints?: string[];
@@ -25,10 +26,17 @@ export interface Petition {
   responseChannel?: string;
   constraints: string[];
   attachments: string[];
+  requestedOutput?: "PERSONA_SPECIFICATION";
   finding: PetitionFinding;
 }
 
 export class Secretariat {
+  receivePersonaProduction(
+    request: Omit<OperatorRequest, "requestedOutput">,
+  ): ArtifactEnvelope<Petition> {
+    return this.receive({ ...request, requestedOutput: "PERSONA_SPECIFICATION" });
+  }
+
   receive(request: OperatorRequest): ArtifactEnvelope<Petition> {
     const normalizedContent = request.content.trim();
     const finding: PetitionFinding = normalizedContent && request.sessionReference.trim()
@@ -46,6 +54,7 @@ export class Secretariat {
         responseChannel: request.responseChannel,
         constraints: request.constraints ?? [],
         attachments: request.attachments ?? [],
+        requestedOutput: request.requestedOutput,
         finding,
       },
     );
