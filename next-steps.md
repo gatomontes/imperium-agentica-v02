@@ -218,6 +218,17 @@ remain closed.
 
 DR-063 admits a synthetic, non-live operating contract for Hagiography. The contract governs evidence intake, source sufficiency, authority and provenance, bounded trait derivation, profession-fit preservation, contradiction handling, invalidation, supersession, decanonization, lineage, and refusal. The synthetic review records 10/10 passing cases. Real-person intake, Persona production, Operative creation, Runtime operation, credentials, activation, deployment, and external effects remain closed.
 
+## Pit Independent Validation 001
+
+Completed synthetic review at `tests/cognitive/pit-independent-validation-review-001.md`.
+DR-065 admits the Pit's independent adversarial qualification contract. The
+16/16 bounded cases confirm exact packet intake, version/provenance integrity,
+challenge-only behavior, finding classification, native-owner return, and
+Guildhall-only disposition authority. The next creation-side candidate is
+Garrison admission and suitability. Real-person intake, Persona production,
+Operative creation, Recruitment, Runtime, credentials, activation, deployment,
+and external effects remain closed.
+
 
 ## Foundry Input and Conflict Revalidation 001
 
