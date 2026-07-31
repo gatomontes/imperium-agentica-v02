@@ -181,3 +181,10 @@ Next bounded increment: define and review the non-live Runtime/Master Mason
 governor boundary and credential-custody contract. This does not authorize
 credentials, provider selection, Runtime operation, activation, deployment,
 live data, or external effects.
+
+## Non-Live Runtime Governor and Credential-Custody Boundary
+
+The bounded contract and synthetic 10/10 pressure run are recorded in DR-062
+and `tests/runtime/non-live-runtime-governor-custody-pressure-run-001.md`.
+Master Mason governs Runtime mechanics only; Locksmith retains sole custody and
+security-persistence access. The next gate is independent review/admission.
