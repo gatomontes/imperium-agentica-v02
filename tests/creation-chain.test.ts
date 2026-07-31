@@ -64,6 +64,23 @@ describe("synthetic creation chain", () => {
     expect(result.operative.payload.state).toBe("PACKAGED");
   });
 
+  it("preserves the admitted queue assignment through packaging", () => {
+    const result = chain();
+    result.persona.payload.professionQueueRef = "professionqueue-001@1";
+    result.persona.payload.queuePosition = 2;
+    const operative = new Conscription().package(result.persona, "node-reference", "A2");
+    expect(operative.payload.finding).toBe("OPERATIVE_PACKAGE_CONFORMANT");
+    expect(operative.payload.professionQueueRef).toBe("professionqueue-001@1");
+    expect(operative.payload.queuePosition).toBe(2);
+  });
+
+  it("rejects a canonical persona with an incomplete queue assignment", () => {
+    const result = chain();
+    result.persona.payload.professionQueueRef = "professionqueue-001@1";
+    const operative = new Conscription().package(result.persona, "node-reference", "A2");
+    expect(operative.payload.finding).toBe("OPERATIVE_PACKAGE_UNRESOLVED");
+  });
+
   it("blocks packaging when the medium is absent", () => {
     const result = chain();
   const blocked = new Conscription().package(result.persona, " ", "A2");

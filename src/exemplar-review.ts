@@ -17,6 +17,8 @@ export interface ExemplarMeritAssessment {
 
 export interface ExemplarReviewProposal {
   propositionRef: string;
+  /** Optional operator-supplied emphasis; Hagiography still discovers the traits. */
+  requestedAttributes?: string[];
   ranked: ExemplarMeritAssessment[];
   finding: ExemplarReviewFinding;
   selectedExemplarRef?: string;
@@ -35,6 +37,7 @@ export class ExemplarReview {
     correlationId: string,
     propositionRef: string,
     assessments: ExemplarMeritAssessment[],
+    requestedAttributes: string[] = [],
   ): ArtifactEnvelope<ExemplarReviewProposal> {
     const valid = assessments.length > 0 && assessments.every((assessment) =>
       assessment.exemplarRef &&
@@ -53,6 +56,7 @@ export class ExemplarReview {
       correlationId,
       {
         propositionRef,
+        ...(requestedAttributes.length > 0 ? { requestedAttributes } : {}),
         ranked,
         finding,
         selectedExemplarRef: finding === "EXEMPLARS_RANKED" ? ranked[0].exemplarRef : undefined,

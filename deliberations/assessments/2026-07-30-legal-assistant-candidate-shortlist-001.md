@@ -16,8 +16,15 @@ Candidates were limited to people named in an official professional recognition 
 
 The proposition remains subject to case-specific review and must be narrowed before evidence entry.
 
-The owner may define the profession and bounded professional proposition, but may not select the
-practitioner. Candidate selection is automatic and merit-based. The system must apply the same
+The operator need not specify a profession. The operator may request work, and Guildhall may
+resolve the required professional functions into an ordered queue. One creation packet advances
+through that queue; no multi-persona coordination or parallel/dependent persona structure is
+implied. Where a profession is specified, it remains an input constraint; where it is not,
+Hagiography and the rest of the creation path operate on the professional functions resolved from
+the work. The owner may optionally define a bounded professional proposition or
+desired attribute, but may not select the practitioner by default. If no attribute is supplied,
+Hagiography must discover the relevant traits and capabilities from each exemplar's evidence.
+Candidate selection is automatic and merit-based. The system must apply the same
 declared criteria to every eligible candidate, preserve the underlying evidence and uncertainty,
 and produce a ranked disposition for Committee review. Popularity, familiarity, identity, user
 preference, or convenience must not determine selection.

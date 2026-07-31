@@ -8,6 +8,8 @@ export type DoctrineFinding =
 
 export interface PersonaGovernanceDoctrine {
   professionRef: string;
+  professionQueueRef?: string;
+  queuePosition?: number;
   mandatoryConduct: string[];
   prohibitedConduct: string[];
   evidenceDuties: string[];
@@ -32,7 +34,7 @@ export class Studium {
     input: DoctrineInput,
   ): ArtifactEnvelope<PersonaGovernanceDoctrine> {
     const missing: string[] = [];
-    if (!input.profession.payload.professionIdentity) missing.push("profession");
+    if (!input.profession.payload.professionIdentity || input.profession.payload.finding !== "PROFESSION_CONFORMANT") missing.push("profession");
     if (!input.mandatoryConduct?.length) missing.push("mandatoryConduct");
     if (!input.prohibitedConduct?.length) missing.push("prohibitedConduct");
     if (!input.evidenceDuties?.length) missing.push("evidenceDuties");
@@ -50,6 +52,8 @@ export class Studium {
       input.profession.correlationId,
       {
         professionRef,
+        ...(input.profession.payload.professionQueueRef ? { professionQueueRef: input.profession.payload.professionQueueRef } : {}),
+        ...(input.profession.payload.queuePosition !== undefined ? { queuePosition: input.profession.payload.queuePosition } : {}),
         mandatoryConduct: input.mandatoryConduct ?? [],
         prohibitedConduct: input.prohibitedConduct ?? [],
         evidenceDuties: input.evidenceDuties ?? [],

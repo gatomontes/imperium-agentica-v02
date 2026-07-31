@@ -13,6 +13,8 @@ export interface ProfessionSpecification {
   suitabilityCriteria: string[];
   workSpecificationRef: string;
   finding: ProfessionFinding;
+  professionQueueRef?: string;
+  queuePosition?: number;
 }
 
 export interface ProfessionResolutionInput {
@@ -20,6 +22,19 @@ export interface ProfessionResolutionInput {
   requiredCompetence?: string[];
   practiceBoundaries?: string[];
   suitabilityCriteria?: string[];
+}
+
+export interface ProfessionQueueItem {
+  position: number;
+  professionIdentity: string;
+  taskCluster: string;
+  rationale: string;
+}
+
+export interface ProfessionQueue {
+  workSpecificationRef: string;
+  items: ProfessionQueueItem[];
+  finding: "QUEUE_CONFORMANT" | "QUEUE_UNRESOLVED";
 }
 
 export type CommitteeDispositionKind = "ADMIT" | "RECYCLE" | "DISCARD";
@@ -32,6 +47,63 @@ export interface CommitteeDisposition {
 }
 
 export class Guildhall {
+  queue(work: ArtifactEnvelope<WorkSpecification>, items: ProfessionQueueItem[]): ArtifactEnvelope<ProfessionQueue> {
+    const valid = items.length > 0 && items.every((item, index) =>
+      item.position === index + 1 && item.professionIdentity.trim() && item.taskCluster.trim() && item.rationale.trim(),
+    );
+    return createArtifact("ProfessionQueue", "Guildhall", work.correlationId, {
+      workSpecificationRef: work.identity + "@" + work.version,
+      items,
+      finding: valid ? "QUEUE_CONFORMANT" : "QUEUE_UNRESOLVED",
+    }, [work.identity + "@" + work.version]);
+  }
+
+  resolveQueueItem(
+    work: ArtifactEnvelope<WorkSpecification>,
+    queue: ArtifactEnvelope<ProfessionQueue>,
+    position: number,
+    input: Omit<ProfessionResolutionInput, "professionIdentity"> & { requiredCompetence?: string[]; practiceBoundaries?: string[]; suitabilityCriteria?: string[] },
+    previous?: ArtifactEnvelope<ProfessionSpecification>,
+  ): ArtifactEnvelope<ProfessionSpecification> {
+    const item = queue.payload.items.find((candidate) => candidate.position === position);
+    const professionIdentity = item?.professionIdentity;
+    const competence = input.requiredCompetence ?? [];
+    const boundaries = input.practiceBoundaries ?? [];
+    const criteria = input.suitabilityCriteria ?? [];
+    const previousValid = position === 1
+      ? previous === undefined
+      : previous?.status === "CURRENT" &&
+        previous.payload.finding === "PROFESSION_CONFORMANT" &&
+        previous.payload.professionQueueRef === queue.identity + "@" + queue.version &&
+        previous.payload.queuePosition === position - 1;
+    const valid = queue.status === "CURRENT" &&
+      queue.payload.finding === "QUEUE_CONFORMANT" &&
+      queue.payload.workSpecificationRef === work.identity + "@" + work.version &&
+      !!item && !!professionIdentity?.trim() && previousValid &&
+      competence.length > 0 && boundaries.length > 0 && criteria.length > 0;
+
+    return createArtifact(
+      "ProfessionSpecification",
+      "Guildhall",
+      work.correlationId,
+      {
+        professionIdentity: professionIdentity ?? "",
+        requiredCompetence: competence,
+        practiceBoundaries: boundaries,
+        suitabilityCriteria: criteria,
+        workSpecificationRef: work.identity + "@" + work.version,
+        professionQueueRef: queue.identity + "@" + queue.version,
+        queuePosition: position,
+        finding: valid ? "PROFESSION_CONFORMANT" : "PROFESSION_UNRESOLVED",
+      },
+      [
+        work.identity + "@" + work.version,
+        queue.identity + "@" + queue.version,
+        ...(previous ? [previous.identity + "@" + previous.version] : []),
+      ],
+    );
+  }
+
   resolve(
     work: ArtifactEnvelope<WorkSpecification>,
     input: ProfessionResolutionInput,

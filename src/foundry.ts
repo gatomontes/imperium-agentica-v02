@@ -31,6 +31,8 @@ export interface PersonaSpecificationCandidate {
     owner: string;
     claims: string[];
   }>;
+  professionQueueRef?: string;
+  queuePosition?: number;
 }
 
 export class Foundry {
@@ -42,6 +44,10 @@ export class Foundry {
     if (inputConflicts.length > 0) unresolved.push("conflicting inputs");
     if (inputs.profession.status !== "CURRENT") unresolved.push("profession status");
     if (!inputs.profession?.payload?.professionIdentity) unresolved.push("profession");
+    if (inputs.profession.payload.professionQueueRef && (
+      inputs.profession.payload.queuePosition === undefined ||
+      inputs.profession.payload.finding !== "PROFESSION_CONFORMANT"
+    )) unresolved.push("profession queue assignment");
     if (!inputs.doctrineRef) unresolved.push("doctrine");
     if (inputs.doctrineRef && !inputs.doctrine) unresolved.push("doctrine evidence");
     if (!inputs.provenanceComplete) unresolved.push("provenance");
@@ -77,6 +83,8 @@ export class Foundry {
         finding,
         unresolvedInputs: unresolved,
         inputConflicts,
+        ...(inputs.profession.payload.professionQueueRef ? { professionQueueRef: inputs.profession.payload.professionQueueRef } : {}),
+        ...(inputs.profession.payload.queuePosition !== undefined ? { queuePosition: inputs.profession.payload.queuePosition } : {}),
       },
       [professionRef, ...(inputs.doctrine ? [inputs.doctrineRef!] : []), ...(inputs.canonRefs ?? [])],
     );

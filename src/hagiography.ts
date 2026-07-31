@@ -17,6 +17,9 @@ export interface CanonEntry {
   limits: string[];
   counterweights: string[];
   finding: CanonFinding;
+  professionRef?: string;
+  professionQueueRef?: string;
+  queuePosition?: number;
 }
 
 export interface CanonInput {
@@ -30,6 +33,10 @@ export interface CanonInput {
   limits?: string[];
   counterweights?: string[];
   ec01Disposition?: string;
+  professionRef?: string;
+  professionQueueRef?: string;
+  queuePosition?: number;
+  professionConformant?: boolean;
 }
 
 export class Hagiography {
@@ -44,6 +51,7 @@ export class Hagiography {
     if (!input.limits?.length) missing.push("limits");
     if (!input.counterweights?.length) missing.push("counterweights");
     if (!input.ec01Disposition) missing.push("ec01Disposition");
+    if (input.professionRef && input.professionConformant !== true) missing.push("profession assignment");
 
     const finding: CanonFinding =
       missing.length === 0 ? "TRAIT_CANON_CONFORMANT" : "TRAIT_CANON_UNRESOLVED";
@@ -62,9 +70,11 @@ export class Hagiography {
         limits: input.limits ?? [],
         counterweights: input.counterweights ?? [],
         finding,
+        ...(input.professionRef ? { professionRef: input.professionRef } : {}),
+        ...(input.professionQueueRef ? { professionQueueRef: input.professionQueueRef } : {}),
+        ...(input.queuePosition !== undefined ? { queuePosition: input.queuePosition } : {}),
       },
       input.sourceRef ? [input.sourceRef] : [],
     );
   }
 }
-
