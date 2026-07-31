@@ -350,3 +350,6 @@ DR-060 passed 28/28 synthetic cross-contract reconciliation criteria and is admi
 
 
 - CIO Dive AI-spend/resource-governance assessment: `assessments/2026-07-30-cio-dive-ai-spend-cost-governance-assessment.md` — resource envelope, cost attribution, cost ownership, spend-triggered interruption, outcome-chain separation, and value-realization refinements; no semantic admission or implementation claimed
+
+
+- Operator–Integrity–Execution Chain deliberation: `assessments/2026-07-31-operator-integrity-execution-chain.md` — records operator identity and auditability, Locksmith/Armory/data separation, directive and operative integrity verification, and the bounded meaning of hashes; no new semantic contract or implementation claimed
