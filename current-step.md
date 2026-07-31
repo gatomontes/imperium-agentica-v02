@@ -80,3 +80,8 @@ The non-live handoff review is recorded at `tests/cognitive/guildhall-studium-ha
 ## Hagiography Evidence-to-Canon Review 001
 
 The synthetic review is recorded at `tests/cognitive/hagiography-evidence-to-canon-review-001.md`. The existing Human-Trait Canon schema passes source, evidence, bounded-trait, profession-fit, lineage, contradiction, invalidation, and decanonization checks within synthetic scope. Institutional completion still requires a separately admitted Evidence-to-Canon operating contract. Real-person intake, Persona production, Operative creation, Runtime operation, credentials, activation, deployment, and external effects remain closed.
+
+
+## Hagiography Evidence-to-Canon Operating Contract 001
+
+DR-063 admits a synthetic, non-live operating contract for Hagiography. The contract governs evidence intake, source sufficiency, authority and provenance, bounded trait derivation, profession-fit preservation, contradiction handling, invalidation, supersession, decanonization, lineage, and refusal. The synthetic review records 10/10 passing cases. Real-person intake, Persona production, Operative creation, Runtime operation, credentials, activation, deployment, and external effects remain closed.
