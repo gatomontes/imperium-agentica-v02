@@ -235,3 +235,10 @@ and external effects remain closed.
 DR-064 records the 14/14 synthetic revalidation at tests/cognitive/foundry-input-conflict-revalidation-001.md. The review confirms exact-input validation, provenance preservation, native-owner return routing, immutable successor versions, and the Foundry → Pit boundary. No implementation, real-person intake, Persona or Operative production, Runtime operation, credentials, activation, deployment, live data, or external effect is authorized.
 
 Next creation-side candidates: Pit independent validation, Garrison admission/suitability, or Recruitment transformation/handoff. Selection remains at the next explicit gate.
+
+
+## Garrison Admission and Suitability 001
+
+Completed synthetic review at tests/cognitive/garrison-admission-suitability-review-001.md. DR-066 admits the Garrison contract for future implementation design and synthetic testing only. The 18/18 cases preserve inventory truth, admission authority, constrained suitability, reservation/selection separation, exact versioned dispositions, refusal, invalidation, supersession, and removal. Garrison determines whether a suitable Persona exists; Recruitment remains downstream. No Persona, Operative, real-person intake, Runtime, credentials, activation, deployment, live data, or external effect is authorized.
+
+Next creation-side candidate: Recruitment transformation and handoff.
