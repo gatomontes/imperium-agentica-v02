@@ -193,3 +193,8 @@ security-persistence access. The next gate is independent review/admission.
 ## Collegium → Guildhall Candidate Assembly
 
 Completed review: `tests/cognitive/collegium-guildhall-candidate-assembly-review-001.md`. The queue contract covers ordered profession composition, sequential resolution, lineage propagation, and refusal of malformed or skipped items. The next creation-side review may examine the Guildhall handoff through Studium and Hagiography into Foundry. Master Mason and Locksmith work remains parked.
+
+
+## Guildhall → Studium/Hagiography → Foundry Handoff
+
+The next creation-side review examines bounded handoff responsibilities, artifact lineage, provenance, conflict handling, and refusal behavior across Guildhall, Studium, Hagiography, and Foundry. This remains synthetic and non-live; Master Mason and Locksmith work remains parked.
