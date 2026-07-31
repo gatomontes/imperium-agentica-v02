@@ -7,6 +7,7 @@ export interface WorkSpecification {
   requestedWork: string;
   constraints: string[];
   petitionRef: string;
+  requestedOutput?: "PERSONA_SPECIFICATION";
 }
 
 export class Castellan {
@@ -27,6 +28,7 @@ export class Castellan {
         requestedWork: petition.payload.normalizedContent,
         constraints: petition.payload.constraints,
         petitionRef: petition.identity + "@" + petition.version,
+        requestedOutput: petition.payload.requestedOutput,
       },
       [petition.identity + "@" + petition.version],
     );
