@@ -13,13 +13,13 @@ EC-01 admitted → Human-Trait Canon admitted → EC-02 admitted
 
 Active pointers:
 
-- DR-CURRENT: active decision pointer through DR-043
+- DR-CURRENT: active decision pointer through DR-061
 - EC-CURRENT: EC-01 and EC-02 admitted; EC-03 closed
 - OP-CURRENT: OP-SYN-001 v0.1 admitted, inactive synthetic package
 
 Operational maturity remains unproven. No live provider, credential, tool, runtime, mission, activation, deployment, or external effect has been exercised.
 
-Creation-apparatus institutional completion review is now the active semantic step under DR-031. Guildhall’s Profession Resolution Contract was admitted by DR-034. Studium Doctrine Lifecycle was admitted by DR-036 for the Persona Governance Doctrine → Foundry branch only. Courtyard remains closed. This file contains later candidates and historical context.
+Creation-apparatus institutional completion review is complete and semantically closed through DR-050. DR-052 Execution-layer boundary and envelope contract was admitted by DR-053 after an 18/18 synthetic pressure test. DR-054 was admitted by DR-055 after a 20/20 synthetic pressure test. DR-056 was admitted by DR-057 after a 22/22 synthetic pressure test. DR-058 Execution result interpretation and disposition handoff was admitted by DR-059 after a 24/24 synthetic pressure test. DR-060 Execution-layer closure and reconciliation review was admitted by DR-061 after a 28/28 synthetic cross-contract reconciliation test. The Execution-layer semantic chain is closed; no subsequent semantic increment is selected. Scope remains semantic/architectural only. Guildhall’s Profession Resolution Contract was admitted by DR-034. Studium Doctrine Lifecycle was admitted by DR-036 for the Persona Governance Doctrine → Foundry branch only. Courtyard remains closed. This file contains later candidates and historical context.
 
 ## Status
 
@@ -85,7 +85,7 @@ OC implementation, Secretariat implementation, Curia procedure change, productio
 
 ## Creation Apparatus Institutional Completion Review
 
-The creation-apparatus institutional review remains a later candidate. Courtyard institutional definition is the current selected step.
+The creation-apparatus institutional review was completed and closed through DR-050. Execution-layer definition was selected under DR-051 and is semantically closed through DR-061.
 
 | Institution | Review target |
 |---|---|
@@ -99,7 +99,7 @@ The creation-apparatus institutional review remains a later candidate. Courtyard
 
 The review must distinguish responsibilities already admitted, draft-only contracts, missing doctrine or SOPs, required artifacts and owners, admission gates and refusal behavior, implementation requirements, deferred dependencies, and the smallest independently reviewable completion increments.
 
-No creation-apparatus completion work, Execution-layer work, OC implementation, credential work, deployment, or external effect is authorized until explicitly selected and admitted.
+Execution-layer definition is selected under DR-051. No implementation, Runtime operation, activation, deployment, credential work, provider interaction, live data, or external effect is authorized.
 
 
 ## Creation Apparatus Completion
@@ -137,13 +137,108 @@ Courtyard semantic closure is complete. Candidate next paths include creation-ap
 
 Each increment requires its own semantic pressure test and admission review. Synthetic evidence remains non-operational; implementation, Runtime, live data, activation, deployment, credentials, and external effects remain unauthorized.
 
-## Active Contract Queue
+## Closed Contract Queue
 
-DR-042 admitted DR-041 after a 16/16 synthetic pressure test. The active queue advances to Garrison Admission and Suitability.
+DR-046 admitted DR-045 after a 20/20 synthetic pressure test. DR-047 was admitted by DR-048 after a 20/20 synthetic pressure test. DR-049 was admitted by DR-050 after a 24/24 synthetic reconciliation test. The creation-apparatus contract chain is semantically closed. No implementation or external effect is authorized.
 
-### DR-043 — Garrison Admission and Suitability Contract
 
-Status: active semantic contract proposal.
-Path: `deliberations/decisions/DR-043-garrison-admission-and-suitability-contract.md`
+## Creation-Apparatus Closure
 
-Defines Garrison’s admission authority boundary, complete-packet receipt gate, roster identity and state transitions, suitability reporting, refusal/return behavior, provenance and successor-version handling, invalidation after upstream change, and downstream handoff to Recruitment/Conscription. Admission requires synthetic pressure testing and review; no implementation or external effect is authorized.
+DR-049 was reconciled and admitted by DR-050 after a 24/24 synthetic end-to-end matrix. The admitted chain preserves one authoritative contract per function, authority boundaries, complete lineage, successor-version behavior, refusal/return/escalation, synchronized pointers, and explicit non-activation boundaries. Creation-apparatus semantic work is closed. Execution-layer semantic work is closed through DR-061; no implementation, Runtime operation, activation, deployment, credentials, live data, or external effect is authorized.
+
+## Synthetic Implementation Checkpoint — B1
+
+B1 provider-neutral authorization implementation is complete through the Iron Gate access-decision referral boundary. The chain is synthetic and non-authorizing: it records authorization/proof assessments, eligibility, and referral to independent access authority while preserving lineage and correlation. No credential custody, provider-specific access, activation, crossing, deployment, Runtime operation, live data, or external effect has been exercised.
+
+Next: review this B1 checkpoint and continuity state before selecting a subsequent implementation increment.
+
+## Persona Production Readiness — #2
+
+Completed: readiness review recorded at `tests/cognitive/persona-production-readiness-review-001.md`. The synthetic chain and B1 non-authorizing boundary pass repository checks; production readiness remains deferred because no live operational proof exists. Next candidate: define the smallest separately authorized, non-live implementation-readiness increment.
+
+## Persona Acceptance Integrity Checkpoint
+
+Completed: acceptance assessment and disposition now require exact readiness/evidence lineage. Evidence that does not belong to the current readiness artifact remains deferred, and stale, incomplete, malformed, or self-referential dispositions are rejected. This remains a synthetic, non-live checkpoint; production admission, live authority, credentials, activation, deployment, Runtime, and external effects remain closed.
+
+## Non-Live Readiness Increment 001
+
+Completed: the existing synthetic readiness and acceptance-integrity evidence
+has been consolidated into `tests/cognitive/persona-production-readiness-increment-001.md`.
+This increment is documentation and verification scope only; it does not admit
+production, grant authority, select a provider, custody credentials, operate
+Runtime, activate, deploy, use live data, or create an external effect.
+
+Next: stop at the separate production-admission decision gate.
+
+## Persona Production Admission Review 001
+
+Completed: `tests/cognitive/persona-production-admission-review-001.md`.
+The synthetic Persona → Operative package passed the bounded admission review,
+but production admission was explicitly deferred because operational proof has
+not been established.
+
+Next bounded increment: define and review the non-live Runtime/Master Mason
+governor boundary and credential-custody contract. This does not authorize
+credentials, provider selection, Runtime operation, activation, deployment,
+live data, or external effects.
+
+## Non-Live Runtime Governor and Credential-Custody Boundary
+
+The bounded contract and synthetic 10/10 pressure run are recorded in DR-062
+and `tests/runtime/non-live-runtime-governor-custody-pressure-run-001.md`.
+Master Mason governs Runtime mechanics only; Locksmith retains sole custody and
+security-persistence access. The next gate is independent review/admission.
+
+
+## Collegium → Guildhall Candidate Assembly
+
+Completed review: `tests/cognitive/collegium-guildhall-candidate-assembly-review-001.md`. The queue contract covers ordered profession composition, sequential resolution, lineage propagation, and refusal of malformed or skipped items. The next creation-side review may examine the Guildhall handoff through Studium and Hagiography into Foundry. Master Mason and Locksmith work remains parked.
+
+
+## Guildhall → Studium/Hagiography → Foundry Handoff
+
+The next creation-side review examines bounded handoff responsibilities, artifact lineage, provenance, conflict handling, and refusal behavior across Guildhall, Studium, Hagiography, and Foundry. This remains synthetic and non-live; Master Mason and Locksmith work remains parked.
+
+
+## Hagiography Evidence-to-Canon Review 001
+
+Completed synthetic review at `tests/cognitive/hagiography-evidence-to-canon-review-001.md`. The review confirms the existing Human-Trait Canon schema is conformant for source sufficiency, bounded-trait derivation, profession-fit preservation, lineage, contradiction handling, invalidation, and decanonization within synthetic scope. The next creation-side increment is the separately admitted Hagiography Evidence-to-Canon operating contract. Real-person intake and all live or deployment-side work remain closed.
+
+
+## Hagiography Evidence-to-Canon Admission Review 001
+
+The independent synthetic admission review is recorded at
+`tests/cognitive/hagiography-evidence-to-canon-admission-review-001.md`.
+DR-063 passes 10/10 bounded cases and is admitted for future implementation
+design and synthetic testing only. Real-person intake and operational
+Runtime, credential, activation, deployment, and external-effect boundaries
+remain closed.
+
+## Hagiography Evidence-to-Canon Operating Contract 001
+
+DR-063 admits a synthetic, non-live operating contract for Hagiography. The contract governs evidence intake, source sufficiency, authority and provenance, bounded trait derivation, profession-fit preservation, contradiction handling, invalidation, supersession, decanonization, lineage, and refusal. The synthetic review records 10/10 passing cases. Real-person intake, Persona production, Operative creation, Runtime operation, credentials, activation, deployment, and external effects remain closed.
+
+## Pit Independent Validation 001
+
+Completed synthetic review at `tests/cognitive/pit-independent-validation-review-001.md`.
+DR-065 admits the Pit's independent adversarial qualification contract. The
+16/16 bounded cases confirm exact packet intake, version/provenance integrity,
+challenge-only behavior, finding classification, native-owner return, and
+Guildhall-only disposition authority. The next creation-side candidate is
+Garrison admission and suitability. Real-person intake, Persona production,
+Operative creation, Recruitment, Runtime, credentials, activation, deployment,
+and external effects remain closed.
+
+
+## Foundry Input and Conflict Revalidation 001
+
+DR-064 records the 14/14 synthetic revalidation at tests/cognitive/foundry-input-conflict-revalidation-001.md. The review confirms exact-input validation, provenance preservation, native-owner return routing, immutable successor versions, and the Foundry → Pit boundary. No implementation, real-person intake, Persona or Operative production, Runtime operation, credentials, activation, deployment, live data, or external effect is authorized.
+
+Next creation-side candidates: Pit independent validation, Garrison admission/suitability, or Recruitment transformation/handoff. Selection remains at the next explicit gate.
+
+
+## Garrison Admission and Suitability 001
+
+Completed synthetic review at tests/cognitive/garrison-admission-suitability-review-001.md. DR-066 admits the Garrison contract for future implementation design and synthetic testing only. The 18/18 cases preserve inventory truth, admission authority, constrained suitability, reservation/selection separation, exact versioned dispositions, refusal, invalidation, supersession, and removal. Garrison determines whether a suitable Persona exists; Recruitment remains downstream. No Persona, Operative, real-person intake, Runtime, credentials, activation, deployment, live data, or external effect is authorized.
+
+Next creation-side candidate: Recruitment transformation and handoff.
