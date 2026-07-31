@@ -133,3 +133,7 @@ The independent synthetic admission review of DR-068 records 24/24 passing cases
 ## Creation-Apparatus Closure Review 001
 
 The independent synthetic closure review is recorded at `tests/cognitive/creation-apparatus-closure-review-001.md`. The complete creation apparatus—Collegium, Guildhall, Studium, Hagiography, Foundry, Pit, Garrison, and Recruitment—passes a 30/30 bounded reconciliation matrix. Each office retains one bounded responsibility, native authority, complete lineage/version behavior, refusal/return rules, and explicit inactive handoff. The chain is semantically closed and admitted for future implementation design and synthetic testing only. Real-person intake, Persona and Operative production, credentials, Runtime, activation, deployment, live data, provider access, and external effects remain closed.
+
+## Implementation Increment 004 — In-Memory Secretariat/Castellan Boundary
+
+The dependency-free `InMemoryReferenceBoundary` is implemented and tested as the smallest executable coordinator for Secretariat ingress → Petition → Castellan handoff. It sequences injected contracts, preserves identity/version/correlation relationships, and refuses unresolved or non-current Petitions. This remains an in-memory/reference boundary only; transport, persistence, authentication, providers, credentials, Runtime, activation, deployment, live data, and external effects remain closed.
