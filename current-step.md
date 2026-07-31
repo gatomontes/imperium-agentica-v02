@@ -65,23 +65,18 @@ activation, deployment, live data, or external effect.
 ## Creation-Apparatus Closure and Reconciliation Review — DR-049 / DR-050
 
 DR-047 defines bounded propagation of invalidation, supersession, quarantine, successor versioning, revalidation, refusal, and provenance across dependent creation-apparatus artifacts. DR-048 admitted that contract after a 20/20 synthetic pressure test. DR-049 reconciled the admitted creation-apparatus contracts and authoritative pointers; DR-050 records the 24/24 admission. The creation-apparatus semantic chain is closed. Implementation, Runtime action, activation, deployment, credentials, and external effects remain unauthorized.
-## Collegium → Guildhall Candidate-Assembly Review 001
 
-The creation-side profession-resolution review is recorded at
-`tests/cognitive/collegium-guildhall-candidate-assembly-review-001.md`.
-The existing Profession Queue contract is conformant for ordered,
-multi-profession composition without introducing multi-persona coordination.
-Malformed, underspecified, or skipped items remain unresolved. This is
-synthetic, non-live evidence only; no Persona, Operative, activation, Runtime
-operation, credential use, deployment, or external effect is authorized.
+
+## Collegium → Guildhall Candidate Assembly Review 001
+
+The creation-side review is recorded at `tests/cognitive/collegium-guildhall-candidate-assembly-review-001.md`. The Profession Queue remains an ordered workflow for resolving composed professional requirements without introducing multi-persona coordination. Malformed, underspecified, or skipped items remain unresolved and cannot enter downstream creation artifacts. This is synthetic evidence only; no Persona, Operative, activation, Runtime operation, credential use, deployment, or external effect is authorized.
+
+
+## Guildhall → Studium/Hagiography → Foundry Handoff Review 001
+
+The non-live handoff review is recorded at `tests/cognitive/guildhall-studium-hagiography-foundry-handoff-review-001.md`. Guildhall emits the ordered candidate-assembly packet; Studium applies doctrine; Hagiography supplies admissible exemplar evidence; Foundry preserves provenance and forges the Persona Specification. Missing, contradictory, stale, malformed, or unresolved inputs remain refused or returned for repair. No live persona, Operative, activation, Runtime operation, credentials, deployment, or external effect is authorized.
+
 
 ## Hagiography Evidence-to-Canon Review 001
 
-The synthetic review is recorded at
-`tests/cognitive/hagiography-evidence-to-canon-review-001.md`. The existing
-Human-Trait Canon schema passes source, evidence, bounded-trait, profession-fit,
-lineage, contradiction, invalidation, and decanonization checks within synthetic
-scope. Institutional completion still requires a separately admitted
-Evidence-to-Canon operating contract. Real-person intake, Persona production,
-Operative creation, Runtime operation, credentials, activation, deployment, and
-external effects remain closed.
+The synthetic review is recorded at `tests/cognitive/hagiography-evidence-to-canon-review-001.md`. The existing Human-Trait Canon schema passes source, evidence, bounded-trait, profession-fit, lineage, contradiction, invalidation, and decanonization checks within synthetic scope. Institutional completion still requires a separately admitted Evidence-to-Canon operating contract. Real-person intake, Persona production, Operative creation, Runtime operation, credentials, activation, deployment, and external effects remain closed.
