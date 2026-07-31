@@ -123,3 +123,8 @@ DR-067 records the synthetic Recruitment contract. Recruitment accepts only an e
 ## Cross-Chain Invalidation and Version-Integrity Review 001
 
 DR-068 records the synthetic cross-chain invalidation and version-integrity contract. Twenty-four of twenty-four bounded cases pass across invalidation, supersession, quarantine, successor lineage, revalidation, pointer divergence, refusal, and inactive handoff. Native authorities retain ownership; downstream offices detect and return but do not silently repair upstream truth. This is admitted for future implementation design and synthetic testing only. Real-person intake, Persona and Operative production, credentials, Runtime, activation, deployment, live data, provider access, and external effects remain closed.
+
+
+## Cross-Chain Invalidation and Version-Integrity Admission Review 001
+
+The independent synthetic admission review of DR-068 records 24/24 passing cases across invalidation, supersession, quarantine, successor lineage, revalidation, pointer divergence, refusal, and inactive handoff. DR-068 is admitted for future implementation design and synthetic testing only. Native authorities retain ownership; downstream offices may detect and return but may not silently repair upstream truth. Real-person intake, Persona and Operative production, credentials, Runtime, activation, deployment, live data, provider access, and external effects remain closed.
