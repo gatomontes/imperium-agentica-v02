@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { InMemoryReferenceBoundary } from "../src/reference-boundary.js";
-import { Secretariat } from "../src/secretariat.js";
+import { ArtifactEnvelope } from "../src/artifact.js";
+import { Petition } from "../src/secretariat.js";
 
 describe("dependency-free in-memory reference boundary", () => {
   it("coordinates valid ingress through Castellan without adding a transport", () => {
@@ -30,12 +31,59 @@ describe("dependency-free in-memory reference boundary", () => {
 
   it("does not hand off a non-current petition", () => {
     const boundary = new InMemoryReferenceBoundary();
-    const petition = new Secretariat().receive({
+    const petition = boundary.submit({
       content: "Define the professional pattern.",
       sessionReference: "opaque-stale",
+    }).petition;
+
+    const stale: ArtifactEnvelope<Petition> = {
+      ...petition,
+      status: "SUPERSEDED",
+    };
+    expect(boundary.handoff(stale)).toBeNull();
+  });
+
+  it("uses injected contracts exactly once and returns their refusal", () => {
+    const petitions: ArtifactEnvelope<Petition>[] = [];
+    let formationCalls = 0;
+    const boundary = new InMemoryReferenceBoundary(
+      {
+        receive(request) {
+          const petition = {
+            artifactType: "Petition",
+            identity: "petition-injected",
+            version: 7,
+            status: "CURRENT" as const,
+            producer: "InjectedSecretariat",
+            correlationId: "correlation-injected",
+            createdAt: "2026-07-31T00:00:00.000Z",
+            payload: {
+              content: request.content,
+              sessionReference: request.sessionReference,
+              finding: "PETITION_RECEIVED" as const,
+            },
+            sourceRefs: [],
+          };
+          petitions.push(petition);
+          return petition;
+        },
+      },
+      {
+        receivePetition(petition) {
+          formationCalls += 1;
+          expect(petition).toBe(petitions[0]);
+          return null;
+        },
+      },
+    );
+
+    const result = boundary.submit({
+      content: "Injected request",
+      sessionReference: "opaque-injected",
     });
 
-    const stale = { ...petition, status: "SUPERSEDED" as const };
-    expect(boundary.handoff(stale)).toBeNull();
+    expect(petitions).toHaveLength(1);
+    expect(formationCalls).toBe(1);
+    expect(result.work).toBeNull();
   });
 });
