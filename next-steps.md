@@ -159,3 +159,14 @@ Completed: readiness review recorded at `tests/cognitive/persona-production-read
 ## Persona Acceptance Integrity Checkpoint
 
 Completed: acceptance assessment and disposition now require exact readiness/evidence lineage. Evidence that does not belong to the current readiness artifact remains deferred, and stale, incomplete, malformed, or self-referential dispositions are rejected. This remains a synthetic, non-live checkpoint; production admission, live authority, credentials, activation, deployment, Runtime, and external effects remain closed.
+
+## Non-Live Readiness Increment 001
+
+Completed: the existing synthetic readiness and acceptance-integrity evidence
+has been consolidated into `tests/cognitive/persona-production-readiness-increment-001.md`.
+This increment is documentation and verification scope only; it does not admit
+production, grant authority, select a provider, custody credentials, operate
+Runtime, activate, deploy, use live data, or create an external effect.
+
+Next: stop at the separate production-admission decision gate.
+
