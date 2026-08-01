@@ -3,7 +3,10 @@ import { Castellan, WorkSpecification } from "./castellan.js";
 import { OperatorRequest, Petition, Secretariat } from "./secretariat.js";
 
 export interface PetitionIngress {
-  receive(request: OperatorRequest): ArtifactEnvelope<Petition>;
+  receive(
+    request: OperatorRequest,
+    correlationId?: string,
+  ): ArtifactEnvelope<Petition>;
 }
 
 export interface WorkFormation {
@@ -15,8 +18,11 @@ export interface WorkFormation {
 export class SecretariatIngressAdapter implements PetitionIngress {
   constructor(private readonly secretariat: Secretariat) {}
 
-  receive(request: OperatorRequest): ArtifactEnvelope<Petition> {
-    return this.secretariat.receive(request);
+  receive(
+    request: OperatorRequest,
+    correlationId?: string,
+  ): ArtifactEnvelope<Petition> {
+    return this.secretariat.receive(request, correlationId);
   }
 }
 

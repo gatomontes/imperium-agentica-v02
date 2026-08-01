@@ -33,11 +33,18 @@ export interface Petition {
 export class Secretariat {
   receivePersonaProduction(
     request: Omit<OperatorRequest, "requestedOutput">,
+    correlationId?: string,
   ): ArtifactEnvelope<Petition> {
-    return this.receive({ ...request, requestedOutput: "PERSONA_SPECIFICATION" });
+    return this.receive(
+      { ...request, requestedOutput: "PERSONA_SPECIFICATION" },
+      correlationId,
+    );
   }
 
-  receive(request: OperatorRequest): ArtifactEnvelope<Petition> {
+  receive(
+    request: OperatorRequest,
+    correlationId: string = randomUUID(),
+  ): ArtifactEnvelope<Petition> {
     const normalizedContent = request.content.trim();
     const finding: PetitionFinding = normalizedContent && request.sessionReference.trim()
       ? "PETITION_RECEIVED"
@@ -46,7 +53,7 @@ export class Secretariat {
     const petition = createArtifact(
       "Petition",
       "Secretariat",
-      randomUUID(),
+      correlationId,
       {
         originalContent: request.content,
         normalizedContent,

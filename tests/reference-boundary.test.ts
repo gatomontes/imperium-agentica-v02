@@ -18,6 +18,17 @@ describe("dependency-free in-memory reference boundary", () => {
     expect(result.work?.correlationId).toBe(result.petition.correlationId);
   });
 
+  it("preserves a caller-supplied transport correlation through Secretariat and Castellan", () => {
+    const boundary = new InMemoryReferenceBoundary();
+    const result = boundary.submit(
+      { content: "Define the professional pattern.", sessionReference: "transport-session" },
+      "transport-correlation-001",
+    );
+
+    expect(result.petition.correlationId).toBe("transport-correlation-001");
+    expect(result.work?.correlationId).toBe("transport-correlation-001");
+  });
+
   it("refuses unresolved ingress at the handoff", () => {
     const boundary = new InMemoryReferenceBoundary();
     const result = boundary.submit({
@@ -36,10 +47,7 @@ describe("dependency-free in-memory reference boundary", () => {
       sessionReference: "opaque-stale",
     }).petition;
 
-    const stale: ArtifactEnvelope<Petition> = {
-      ...petition,
-      status: "SUPERSEDED",
-    };
+    const stale: ArtifactEnvelope<Petition> = { ...petition, status: "SUPERSEDED" };
     expect(boundary.handoff(stale)).toBeNull();
   });
 
@@ -48,14 +56,14 @@ describe("dependency-free in-memory reference boundary", () => {
     let formationCalls = 0;
     const boundary = new InMemoryReferenceBoundary(
       {
-        receive(request) {
+        receive(request, correlationId) {
           const petition = {
             artifactType: "Petition",
             identity: "petition-injected",
             version: 7,
             status: "CURRENT" as const,
             producer: "InjectedSecretariat",
-            correlationId: "correlation-injected",
+            correlationId: correlationId ?? "correlation-injected",
             createdAt: "2026-07-31T00:00:00.000Z",
             payload: {
               content: request.content,
@@ -77,13 +85,14 @@ describe("dependency-free in-memory reference boundary", () => {
       },
     );
 
-    const result = boundary.submit({
-      content: "Injected request",
-      sessionReference: "opaque-injected",
-    });
+    const result = boundary.submit(
+      { content: "Injected request", sessionReference: "opaque-injected" },
+      "correlation-injected-explicit",
+    );
 
     expect(petitions).toHaveLength(1);
     expect(formationCalls).toBe(1);
+    expect(result.petition.correlationId).toBe("correlation-injected-explicit");
     expect(result.work).toBeNull();
   });
 });
