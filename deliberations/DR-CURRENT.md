@@ -107,6 +107,18 @@ DR-CURRENT is an authority index, not a new authority source. It summarizes and 
 
 No DR-CURRENT entry by itself authorizes persona production, Operative creation, deployment, Runtime behavior, or external effect unless the underlying decision explicitly does so. Current active decisions remain subject to layer boundaries, current-step gates, and later superseding decisions.
 
+### DR-069 — Senate Ownership of Core Imperium Doctrine
+
+Status: active institutional and legislative boundary.
+Path: `deliberations/DR-069.md`
+
+Senate is the legislative body and sole institutional owner and steward of Core
+Imperium Doctrine. Studium and all other Offices apply enacted doctrine through
+bounded profiles; they do not originate or silently amend Core Doctrine.
+Propagation notices require prospective adoption or revalidation without
+silently mutating downstream artifacts. No operational authority or external
+effect is granted.
+
 
 ### DR-018 — Creation Apparatus Completion Contracts
 

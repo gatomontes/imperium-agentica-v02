@@ -343,3 +343,20 @@ The next separately bounded choice is:
 2. Resume the parked B1.1 Provider-Neutral Deployment Authorization investigation, limited to authorization semantics and without selecting a provider, credential store, Runtime driver, or deployment mechanism.
 
 HANDOFF_CONFORMANT, composition evidence, and synthetic review remain distinct from DEPLOYMENT_AUTHORIZED.
+
+## Implementation Increment 017 — Senate Core-Doctrine Stewardship
+
+Senate now has a bounded executable legislative kernel for versioned Core
+Imperium Doctrine. Studium is explicitly downstream as the Persona-generation
+application of enacted doctrine.
+
+Next bounded candidates after review:
+
+1. define the initial Core Doctrine schema and provision classes without yet
+   enacting substantive doctrine;
+2. define the Office Doctrine Profile contract and Senate propagation response;
+3. return to Secretariat/Castellan after merging the independent Senate and
+   Secretariat foundations.
+
+No Office may treat a propagation notice as permission to silently mutate its
+active profile or existing artifacts.
