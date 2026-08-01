@@ -6,10 +6,14 @@ describe("in-memory transport adapter", () => {
   it("preserves transport correlation through ingress and handoff", () => {
     const result = new InMemoryTransportAdapter().submit({
       transportId: "mem-001",
+      correlationId: "caller-correlation-001",
+      provenanceRef: "petition-source-001",
       request: { content: "Define the professional pattern.", sessionReference: "session-001" },
     });
     expect(result.transportId).toBe("mem-001");
-    expect(result.petition.correlationId).toBe(result.work?.correlationId);
+    expect(result.petition.correlationId).toBe("caller-correlation-001");
+    expect(result.petition.sourceRefs).toContain("petition-source-001");
+    expect(result.work?.correlationId).toBe(result.petition.correlationId);
     expect(result.work?.payload.petitionRef).toContain(result.petition.identity);
   });
 

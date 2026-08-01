@@ -7,6 +7,10 @@ import { WorkSpecification } from "./castellan.js";
 export interface TransportRequest {
   request: OperatorRequest;
   transportId: string;
+  /** Optional caller correlation is preserved when supplied; the adapter never invents a replacement. */
+  correlationId?: string;
+  /** Optional provenance reference remains opaque to the transport boundary. */
+  provenanceRef?: string;
 }
 
 export interface ClarificationRequest {
