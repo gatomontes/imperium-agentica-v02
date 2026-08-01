@@ -32,3 +32,4 @@ export * from "./serialization.js";
 export * from "./store-http-resolver.js";
 export * from "./studium.js";
 export * from "./response.js";
+export * from "./in-memory-transport.js";
