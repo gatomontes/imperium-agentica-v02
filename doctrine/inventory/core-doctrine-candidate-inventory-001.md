@@ -86,6 +86,9 @@ review; `LOW` = currently supported mainly by a pending control.
 
 ## Legislative gaps before v1
 
+`core-doctrine-v1-gap-resolutions-001.md` resolves all ten gaps below as
+binding bill-drafting instructions. The resolutions are not enacted doctrine.
+
 1. Powers and separation among Senate, Tribunalis, Curia, artifact stewards,
    and Runtime enforcement.
 2. The relationship among `PASS`, `FAIL`, `UNRESOLVED`, conditional acceptance,
@@ -101,6 +104,8 @@ review; `LOW` = currently supported mainly by a pending control.
 9. Whether affected-party recourse is universal or applicability-driven.
 10. A minimum judgment contract that preserves chamber dimensions and does not
     collapse them into an unjustified percentage.
+
+Disposition: `RESOLVED_FOR_BILL_DRAFTING` by GR-001 through GR-010.
 
 ## Recommended bill structure
 
@@ -120,5 +125,5 @@ remain downstream.
 
 ## Exit condition
 
-Senate accepts this as a sufficient source map for bill drafting. Inventory
-acceptance must not be recorded as enactment of any candidate.
+The candidate source map and gap resolutions are sufficient to begin bill
+drafting. Their acceptance must not be recorded as enactment of any candidate.

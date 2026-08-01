@@ -211,3 +211,15 @@ preserved corpus into 22 candidate families, separates domain standards and
 Office rules, and records eight tensions and ten legislative gaps. It is not
 law and restores no pre-Senate admission. The next gate is Senate review of
 inventory sufficiency before a Core Doctrine v1 bill is drafted.
+
+## Core Doctrine v1 Gap Resolutions 001
+
+`doctrine/inventory/core-doctrine-v1-gap-resolutions-001.md` resolves all ten
+inventory gaps for bill drafting. The dispositions establish separated powers,
+non-percentage Tribunalis judgment, a minimum governed-artifact envelope,
+bounded fail-closed behavior, quarantine/containment separation, external-
+obligation applicability, Operator-intent limits, doctrine propagation,
+applicability-driven recourse, and non-compensatory chamber synthesis.
+
+These are legislative drafting instructions, not enacted Core Doctrine. The
+next gate is composition of the Core Doctrine v1 bill.

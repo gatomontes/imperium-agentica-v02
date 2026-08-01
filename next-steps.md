@@ -2,13 +2,12 @@
 
 ## Active Post-Reset Queue
 
-1. Review `doctrine/inventory/core-doctrine-candidate-inventory-001.md` for
-   source coverage, classification, contradictions, and legislative gaps.
-2. Record Senate acceptance, correction request, or rejection of the inventory
-   as a source map; this does not enact its candidates.
-3. After acceptance only, compose and pressure-test a Core Doctrine v1 bill.
-4. Enact the bill through Senate.
-5. Define the Office Doctrine Profile contract before reconstructing any Office.
+1. Compose Core Doctrine v1 from the candidate inventory and GR-001 through
+   GR-010 in `core-doctrine-v1-gap-resolutions-001.md`.
+2. Pressure-test the bill against authority, evidence, version, cross-arena,
+   Tribunalis, Operator-intent, and fail-closed cases.
+3. Enact the passing bill through Senate as a separate legislative act.
+4. Define the Office Doctrine Profile contract before reconstructing any Office.
 
 No substantive Core Doctrine or downstream Office implementation is admitted.
 
