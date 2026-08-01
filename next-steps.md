@@ -294,9 +294,10 @@ Completed sequence:
 
 - PR #175 — caller-supplied correlation handoff correction; merged as `d1535ec`.
 - PR #177 — dependency-free `InMemoryTransportAdapter` and focused tests; merged as `d6d84e4`.
-- PR #178 — independent 10/10 transport conformance review; merged in final checkpoint `dedfdd3`.
+- PR #178 — independent 10/10 transport conformance review; merged in pre-fix checkpoint `dedfdd3`.
+- PR #180 — resolved the transport-envelope, correlation-preservation, lineage-refusal, and deterministic-refusal findings; merged as final checkpoint `c7bc6c5`.
 
-The abstract transport leg is closed. Concrete transport, persistence, queues, providers, credentials, Runtime, activation, deployment, live data, and external effects remain closed.
+The abstract transport leg is closed at the corrected dependency-free reference boundary. Concrete transport, persistence, queues, providers, credentials, Runtime, activation, deployment, live data, and external effects remain closed.
 
 ## New-Chat Decision Gate
 
