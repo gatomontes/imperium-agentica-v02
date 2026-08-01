@@ -142,3 +142,8 @@ The dependency-free `InMemoryReferenceBoundary` is implemented and tested as the
 ## Implementation Increment 011 — Reference-Boundary Closure Review
 
 The corrected dependency-free Secretariat → Petition → Castellan boundary passes 15/15 bounded end-to-end closure checks. The review reconciles the Increment 010 finding by returning complete Petition envelopes from `handoffResult`, preserving explicit UNRESOLVED status, and exercising the focused suite through `npm test`. The in-memory reference leg is closed. Abstract transport design is selected next; HTTP, messaging, persistence, credentials, Runtime, activation, deployment, live data, and external effects remain closed.
+
+
+## Implementation Increment 012 — Abstract Transport Design
+
+PR #173 documented the provider-neutral transport port, correlation and lineage rules, serialization/refusal semantics, and an in-memory adapter seam. This increment remains design-only. The abstract transport leg is paused pending explicit selection of its next bounded step: in-memory adapter implementation/tests or independent contract conformance review. HTTP, messaging infrastructure, persistence, queues, providers, credentials, Runtime, activation, deployment, live data, and external effects remain closed.

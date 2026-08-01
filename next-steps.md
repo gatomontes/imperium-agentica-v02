@@ -281,3 +281,8 @@ Completed: `tests/cognitive/implementation-increment-011-reference-boundary-clos
 ## Next Selected Leg — Abstract Transport Design
 
 The next authorized increment is provider-neutral abstract transport design only. It may define an in-memory transport port, request/response correlation, serialization boundary, delivery/refusal semantics, and test seams. It must not introduce HTTP, messaging infrastructure, persistence, queues, providers, credentials, Runtime, activation, deployment, live data, or external effects.
+
+
+## Implementation Increment 012 — Abstract Transport Design
+
+Documented in drafts/implementation-increment-012-abstract-transport-design.md. PR #173 established the provider-neutral transport port and its boundaries. The transport leg is paused pending a new scope decision between implementing the dependency-free in-memory adapter with focused tests and independently reviewing the abstract contract. No concrete transport or operational boundary is authorized.
