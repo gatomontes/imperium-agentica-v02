@@ -1,5 +1,15 @@
 # Imperium Agentica v02
 
+## Current Constitutional Baseline
+
+DR-070 establishes a Senate-first constitutional reset. All pre-Senate Office
+contracts and implementations remain preserved evidence but are not presently
+admitted. Senate is the owner and steward of Core Imperium Doctrine; no
+substantive Core Doctrine version has yet been enacted.
+
+Read `CONSTITUTIONAL-RESET.md` before treating any pre-Senate semantic or
+implementation artifact as current authority.
+
 ## Day 0
 
 Imperium does not begin here as a rebuilt system.

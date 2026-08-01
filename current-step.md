@@ -189,3 +189,17 @@ profiles. Focused Senate evidence is 3/3 PASS; the adjacent regression set is
 No actual Core Doctrine content, Office-profile mutation, mission authority,
 Persona forging, Runtime operation, credential use, Colosseum handoff,
 deployment, or external effect is introduced.
+
+## DR-070 — Senate-First Constitutional Reset
+
+The reset is active. Exact pre-Senate `main` is preserved at
+`archive/v02-pre-senate` (`bad6281`). PR #187 admitted Senate and merged as
+`664cfc2`. PR #186 is closed unmerged and preserved for later reconstruction.
+
+All pre-Senate Office contracts and implementations are now
+`CONFORMANCE_REQUIRED`, `REUSE_CANDIDATE`,
+`LEGISLATIVE_EXTRACTION_REQUIRED`, or architecturally superseded according to
+`conformance/pre-senate-implementation-status.md`.
+
+No substantive Core Doctrine or downstream Office implementation is admitted.
+The active work is legislative inventory for the proposed Core Doctrine v1.
