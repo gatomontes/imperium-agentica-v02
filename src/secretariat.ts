@@ -2,6 +2,7 @@ import { assertArtifactEnvelope } from "./schema.js";
 import { randomUUID } from "node:crypto";
 
 import { createArtifact, ArtifactEnvelope } from "./artifact.js";
+import { MissionDossier, MissionDossierService } from "./mission-dossier.js";
 
 export type PetitionFinding =
   | "PETITION_RECEIVED"
@@ -31,6 +32,24 @@ export interface Petition {
 }
 
 export class Secretariat {
+  constructor(
+    private readonly dossiers = new MissionDossierService(),
+  ) {}
+
+  openDossier(
+    request: OperatorRequest,
+    correlationId?: string,
+  ): {
+    petition: ArtifactEnvelope<Petition>;
+    dossier: ArtifactEnvelope<MissionDossier>;
+  } {
+    const petition = this.receive(request, correlationId);
+    return {
+      petition,
+      dossier: this.dossiers.open(petition),
+    };
+  }
+
   receivePersonaProduction(
     request: Omit<OperatorRequest, "requestedOutput">,
     correlationId?: string,

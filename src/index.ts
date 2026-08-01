@@ -17,6 +17,7 @@ export * from "./iron-gate.js";
 export * from "./ingress.js";
 export * from "./lifecycle.js";
 export * from "./muster.js";
+export * from "./mission-dossier.js";
 export * from "./node-http-server.js";
 export * from "./persistent-transport.js";
 export * from "./pit.js";

@@ -343,3 +343,19 @@ The next separately bounded choice is:
 2. Resume the parked B1.1 Provider-Neutral Deployment Authorization investigation, limited to authorization semantics and without selecting a provider, credential store, Runtime driver, or deployment mechanism.
 
 HANDOFF_CONFORMANT, composition evidence, and synthetic review remain distinct from DEPLOYMENT_AUTHORIZED.
+
+## Implementation Increment 016 — Secretariat Mission-Dossier Intake
+
+Secretariat now has an executable `POST /v1/dossiers` boundary that creates the
+Petition and initial Mission Dossier without asserting that the request is
+understood or executable. Focused evidence is 3/3 PASS.
+
+Next bounded step: implement Castellan's assessment of the exact Dossier version
+and its two permitted outcomes:
+
+1. return an Inquiry Request to Secretariat for customer-friendly presentation;
+2. record that intent is sufficiently resolved for later mission construction.
+
+The next step must not create a Work Specification merely because the Petition
+is non-empty. Persistence, Office-agent Runtime, Persona creation, Colosseum
+handoff, credentials, deployment, and external effects remain separately gated.

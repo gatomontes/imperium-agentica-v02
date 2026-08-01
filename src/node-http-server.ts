@@ -313,6 +313,45 @@ async function route(
     return;
   }
 
+  if (request.method === "POST" && request.url === "/v1/dossiers") {
+    const contentType = request.headers["content-type"]?.split(";")[0];
+    if (contentType !== "application/json") {
+      writeJson(response, 415, {
+        ok: false,
+        requestId,
+        error: {
+          code: "HTTP_UNSUPPORTED_CONTENT_TYPE",
+          message: "content-type must be application/json",
+        },
+      });
+      return;
+    }
+
+    const body = await readJson<{ content: string; sessionReference: string }>(request);
+    if (
+      typeof body.content !== "string" ||
+      typeof body.sessionReference !== "string"
+    ) {
+      writeJson(response, 400, {
+        ok: false,
+        requestId,
+        error: {
+          code: "HTTP_INVALID_BODY",
+          message: "content and sessionReference must be strings",
+        },
+      });
+      return;
+    }
+
+    const result = await handler.openDossier(body, {
+      requestId,
+      operatorInstanceId,
+      authorization,
+    });
+    writeJson(response, result.ok ? 201 : 400, result);
+    return;
+  }
+
   writeJson(response, 404, {
     ok: false,
     requestId,

@@ -1,6 +1,7 @@
 import { HttpResponse } from "./http-contract.js";
 import { HttpAuthorizer } from "./http-auth.js";
 import { ImperiumTransportAdapter } from "./transport.js";
+import { Secretariat } from "./secretariat.js";
 
 export interface HttpSubmitBody {
   content: string;
@@ -15,7 +16,24 @@ export class HttpTransportHandler {
   constructor(
     private readonly adapter: ImperiumTransportAdapter,
     private readonly authorizer?: HttpAuthorizer,
+    private readonly secretariat = new Secretariat(),
   ) {}
+
+  openDossier(
+    body: HttpSubmitBody,
+    metadata: { requestId: string; operatorInstanceId: string; authorization?: string },
+  ) {
+    const metadataError = validateMetadata(metadata);
+    if (metadataError) return metadataError;
+    const authorizationError = authorize(metadata, this.authorizer);
+    if (authorizationError) return authorizationError;
+    try {
+      const result = this.secretariat.openDossier(body, metadata.requestId);
+      return { ok: true as const, requestId: metadata.requestId, result };
+    } catch (error) {
+      return failure(metadata.requestId, error);
+    }
+  }
 
   submit(
     body: HttpSubmitBody,

@@ -176,3 +176,16 @@ PR #183, merged as `a7d12ea`, records the provider-neutral composition contract 
 PR #184, merged as `db037d6`, records the governance/evidence review after Increment 015. It confirms that conformance, composition, correlation, provenance, and synthetic evidence do not become authority, credential custody, provider permission, Runtime readiness, or deployment authorization. No operational boundary is opened.
 
 The two increments are complete. No implementation leg is currently active.
+
+## Implementation Increment 016 — Secretariat Mission-Dossier Intake
+
+The first executable post-reframe Secretariat boundary is implemented on a
+review branch. `POST /v1/dossiers` preserves the Operator request as a Petition
+and opens a correlated Mission Dossier. The Dossier stops at
+`AWAITING_CASTELLAN_ASSESSMENT` or `INTAKE_UNRESOLVED`; no Work Specification or
+mission authority is inferred. The focused test records 3/3 passing cases.
+
+The next bounded increment is Castellan intent assessment and customer-friendly
+inquiry production through Secretariat. Persistence, Persona creation,
+Colosseum handoff, Runtime operation, credentials, deployment, and external
+effects remain closed.
