@@ -229,3 +229,20 @@ Office artifacts, judge for Tribunalis, decide for Curia, or execute Runtime.
 
 These are legislative drafting instructions, not enacted Core Doctrine. The
 next gate is composition of the Core Doctrine v1 bill.
+
+## Core Doctrine v1 Bill 001
+
+The proposed eighteen-provision bill is recorded at
+`doctrine/bills/core-doctrine-v1-bill-001.md`. Its executable representation
+and Senator-led propagation seam pass 12/12 focused cases and focused
+TypeScript validation. Evidence is recorded at
+`tests/doctrine/core-doctrine-v1-pressure-test-001.md`.
+
+Independent review found and corrected a premature-closure weakness: a Senator
+must now prove affected-surface coverage before a dossier can become ready for
+Senate closure, and any exemption requires exact competent authority.
+
+Repository-wide checks continue to expose inherited pre-Senate transport and
+stale-fixture findings already classified by DR-070; no repository-wide
+conformance is claimed. Core Doctrine v1 is proposed, not enacted. The next
+gate is independent Senate review and a separate enactment decision.

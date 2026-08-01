@@ -2,12 +2,11 @@
 
 ## Active Post-Reset Queue
 
-1. Compose Core Doctrine v1 from the candidate inventory and GR-001 through
-   GR-010 in `core-doctrine-v1-gap-resolutions-001.md`.
-2. Pressure-test the bill against authority, evidence, version, cross-arena,
-   Tribunalis, Operator-intent, and fail-closed cases.
+1. Independently review Core Doctrine v1 Bill 001 and Pressure Test 001.
+2. Resolve any review findings without expanding into Office procedure.
 3. Enact the passing bill through Senate as a separate legislative act.
-4. Define the Office Doctrine Profile contract before reconstructing any Office.
+4. Assign the named Senator and emit the first propagation notice.
+5. Define the Office Doctrine Profile contract before reconstructing any Office.
 
 No substantive Core Doctrine or downstream Office implementation is admitted.
 
