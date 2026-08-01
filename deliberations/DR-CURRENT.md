@@ -1,5 +1,20 @@
 # DR-CURRENT — Active Decision Pointer
 
+## Constitutional controlling decisions
+
+### DR-071 — Core Imperium Doctrine v1 Enactment
+
+Status: active enacted constitutional doctrine.
+Path: `deliberations/DR-071.md`
+
+DR-071 enacts Core Doctrine v1, provisions CORE-001 through CORE-018, assigns
+`senator-core-doctrine-001` as propagation steward, and emits the first
+prospective-adoption notice. No Office is re-admitted by enactment alone.
+
+DR-069 and DR-070 remain controlling for Senate ownership and the constitutional
+reset. Any older “active” or “admitted” label is subordinate to DR-070 and
+requires Core Doctrine v1 conformance before reuse.
+
 ## Status
 
 DR-CURRENT is the single active pointer for Imperium's decision state.

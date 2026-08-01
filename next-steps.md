@@ -2,13 +2,14 @@
 
 ## Active Post-Reset Queue
 
-1. Independently review Core Doctrine v1 Bill 001 and Pressure Test 001.
-2. Resolve any review findings without expanding into Office procedure.
-3. Enact the passing bill through Senate as a separate legislative act.
-4. Assign the named Senator and emit the first propagation notice.
-5. Define the Office Doctrine Profile contract before reconstructing any Office.
+1. Define the Office Doctrine Profile contract against exact Core Doctrine v1.
+2. Pressure-test profile derivation, narrowing, conflict, version, propagation,
+   exemption, invalidation, and revalidation behavior.
+3. Admit the passing profile contract through the appropriate authority.
+4. Reconstruct Secretariat first against an exact admitted profile.
 
-No substantive Core Doctrine or downstream Office implementation is admitted.
+Core Doctrine v1 is enacted. No downstream Office profile or implementation is
+admitted.
 
 ## New-Chat Breakpoint
 

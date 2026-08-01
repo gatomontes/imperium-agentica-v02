@@ -29,10 +29,11 @@ does not prove conformance with Senate-enacted Core Doctrine.
 
 - DR-069: Senate owns and stewards Core Imperium Doctrine.
 - DR-070: this constitutional breakpoint and conformance reset.
+- DR-071: Core Imperium Doctrine v1 is enacted.
 - Senate's executable legislative kernel.
 
-No substantive Core Doctrine version has yet been enacted. Until Core Doctrine
-v1 exists, no Office implementation may be re-admitted.
+Core Doctrine v1 now exists. No Office implementation is re-admitted until the
+Office Doctrine Profile contract exists and exact v1 conformance is proven.
 
 ## Reconstruction order
 

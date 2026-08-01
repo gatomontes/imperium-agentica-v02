@@ -186,7 +186,8 @@ prospective-adoption or mandatory-revalidation notices for affected Office
 profiles. Focused Senate evidence is 3/3 PASS; the adjacent regression set is
 11/11 PASS.
 
-No actual Core Doctrine content, Office-profile mutation, mission authority,
+At that Senate-kernel increment, no actual Core Doctrine content,
+Office-profile mutation, mission authority,
 Persona forging, Runtime operation, credential use, Colosseum handoff,
 deployment, or external effect is introduced.
 
@@ -201,8 +202,9 @@ All pre-Senate Office contracts and implementations are now
 `LEGISLATIVE_EXTRACTION_REQUIRED`, or architecturally superseded according to
 `conformance/pre-senate-implementation-status.md`.
 
-No substantive Core Doctrine or downstream Office implementation is admitted.
-The active work is legislative inventory for the proposed Core Doctrine v1.
+This historical reset state was superseded for doctrine content by DR-071.
+Core Doctrine v1 is now enacted; downstream Office implementations remain
+unadmitted.
 
 ## Core Doctrine Candidate Inventory 001
 
@@ -244,5 +246,21 @@ Senate closure, and any exemption requires exact competent authority.
 
 Repository-wide checks continue to expose inherited pre-Senate transport and
 stale-fixture findings already classified by DR-070; no repository-wide
-conformance is claimed. Core Doctrine v1 is proposed, not enacted. The next
-gate is independent Senate review and a separate enactment decision.
+conformance is claimed. At the Bill 001 gate, Core Doctrine v1 remained
+proposed; DR-071 below records the subsequent enactment.
+
+## DR-071 — Core Doctrine v1 Enactment
+
+Core Imperium Doctrine v1 is enacted as one eighteen-provision edition,
+effective `2026-08-02T00:00:00.000Z`. The production manifest is
+`doctrine/production/core-doctrine-v1.md`; the deterministic enactment artifact
+and first propagation notice are exported by
+`src/enacted-core-doctrine-v1.ts`.
+
+Propagation is assigned to the functional identity
+`senator-core-doctrine-001` and begins `IN_PROGRESS`; no Office or arena is
+conformant merely because doctrine exists. The next gate is the Office Doctrine
+Profile contract. No Office reconstruction or operational work is authorized.
+
+Enactment review passes 15/15 focused cases and focused TypeScript validation;
+see `tests/doctrine/core-doctrine-v1-enactment-review-001.md`.
