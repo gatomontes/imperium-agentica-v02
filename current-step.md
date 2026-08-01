@@ -203,3 +203,11 @@ All pre-Senate Office contracts and implementations are now
 
 No substantive Core Doctrine or downstream Office implementation is admitted.
 The active work is legislative inventory for the proposed Core Doctrine v1.
+
+## Core Doctrine Candidate Inventory 001
+
+`doctrine/inventory/core-doctrine-candidate-inventory-001.md` consolidates the
+preserved corpus into 22 candidate families, separates domain standards and
+Office rules, and records eight tensions and ten legislative gaps. It is not
+law and restores no pre-Senate admission. The next gate is Senate review of
+inventory sufficiency before a Core Doctrine v1 bill is drafted.
