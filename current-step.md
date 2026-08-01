@@ -151,7 +151,7 @@ PR #173 documented the provider-neutral transport port, correlation and lineage 
 
 ## Implementation Increment 013 — Abstract Transport Leg Closure
 
-The provider-neutral abstract transport leg is complete at the dependency-free reference boundary. PR #175 corrected caller-supplied correlation handoff and lockfile/test-fixture integrity; PR #177 added the named in-memory transport adapter and focused tests; PR #178 recorded the independent 10/10 conformance review. Final merged transport checkpoint: `dedfdd3`.
+The provider-neutral abstract transport leg is complete at the dependency-free reference boundary. PR #175 corrected caller-supplied correlation handoff and lockfile/test-fixture integrity; PR #177 added the named in-memory transport adapter and focused tests; PR #178 recorded the independent 10/10 conformance review; PR #180 resolved the transport-envelope, correlation-preservation, lineage-refusal, and deterministic-refusal findings. Final merged transport checkpoint: `c7bc6c5`.
 
 The completed leg preserves correlation, lineage, serialization/refusal behavior, clarification and delivery isolation, and the non-live boundary. Concrete HTTP or messaging infrastructure, persistence, queues, providers, credentials, Runtime, activation, deployment, live data, and external effects remain closed.
 
