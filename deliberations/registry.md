@@ -353,6 +353,9 @@ DR-060 passed 28/28 synthetic cross-contract reconciliation criteria and is admi
 
 - CIO Dive token-cost / AI-spend assessment: `assessments/2026-07-31-cio-dive-token-costs-judicature-of-scales-assessment.md` — records Judicature of Scales as a candidate function for proportionate resource expenditure, cost attribution, threshold behavior, and reconciliation; no semantic admission or implementation claimed
 
+- DR-069: `DR-069.md` — Senate is the legislative body and sole owner and steward of Core Imperium Doctrine.
+- DR-070: `DR-070.md` — establishes the Senate-first constitutional breakpoint; all pre-Senate Office implementations require constitutional conformance before re-admission.
+
 
 ### DR-064 — Foundry Input and Conflict Revalidation
 

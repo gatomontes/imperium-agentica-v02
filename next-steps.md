@@ -360,3 +360,18 @@ Next bounded candidates after review:
 
 No Office may treat a propagation notice as permission to silently mutate its
 active profile or existing artifacts.
+
+## DR-070 Reconstruction Queue
+
+1. Inventory Imperium-wide principles across existing CBs, DRs, layer
+   baselines, controls, and tests.
+2. Classify each item as Core Doctrine candidate, domain standard candidate,
+   Office rule, historical observation, or rejected/superseded material.
+3. Resolve contradictions without silently selecting a preferred predecessor.
+4. Compose the proposed Core Doctrine v1 bill with legislative provenance.
+5. Enact Core Doctrine v1 through Senate.
+6. Define and pressure-test the Office Doctrine Profile contract.
+7. Reconstruct Secretariat as the first downstream Office.
+
+No other Office implementation, generic infrastructure reuse, Colosseum work,
+Runtime operation, credentials, deployment, or external effect is selected.

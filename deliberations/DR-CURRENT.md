@@ -6,6 +6,22 @@ DR-CURRENT is the single active pointer for Imperium's decision state.
 
 Numbered DR records remain historical decision records and must not be interpreted as parallel current authorities. A numbered record is current only when DR-CURRENT explicitly lists it as active or retained.
 
+## Constitutional Reset Override — DR-070
+
+DR-070 supersedes the active-status labels below for all pre-Senate Office,
+layer, deployment, and implementation decisions. Those entries remain preserved
+for legislative extraction and reconstruction evidence; they are not presently
+admitted authority.
+
+The only active constitutional decisions are:
+
+- DR-069 — Senate ownership and stewardship of Core Imperium Doctrine.
+- DR-070 — Senate-first constitutional breakpoint and conformance reset.
+
+Senate's legislative kernel is the only admitted Office implementation. No
+substantive Core Doctrine version or downstream Office implementation is
+currently admitted.
+
 ## Active Decisions
 
 ### DR-004 — Locksmith Sole Security-Persistence Accessor
