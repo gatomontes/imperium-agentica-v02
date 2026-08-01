@@ -65,6 +65,8 @@ describe("Senate Core Doctrine stewardship", () => {
           instruction: "Apply prospectively to new Persona doctrine profiles.",
         },
       ],
+      true,
+      ["impact-scope-005@1"],
       [],
       { identityFactory: (prefix) => prefix + "-005" },
     );
@@ -80,6 +82,8 @@ describe("Senate Core Doctrine stewardship", () => {
     expect(() =>
       new Senator("senator-other").assessPropagation(
         result.propagation,
+        [],
+        false,
         [],
         [],
       ),
@@ -99,6 +103,8 @@ describe("Senate Core Doctrine stewardship", () => {
           instruction: "Return cross-arena compatibility conflict to Senate.",
         },
       ],
+      true,
+      ["impact-scope-006@1"],
       ["senate-conflict-001@1"],
     );
     expect(dossier.payload.state).toBe("IN_PROGRESS");
@@ -114,9 +120,34 @@ describe("Senate Core Doctrine stewardship", () => {
             instruction: "Close Citadel propagation.",
           },
         ],
+        true,
+        ["impact-scope-006@1"],
         [],
       ),
     ).toThrow("resolved propagation assessment requires evidence");
+  });
+
+  it("does not claim closure readiness without evidenced impact coverage", () => {
+    const result = new Senate().enact(bill(), "legislation-007");
+    const senator = new Senator("senator-cassian-001");
+    const dossier = senator.assessPropagation(
+      result.propagation,
+      [
+        {
+          surfaceRef: "arena:Citadel",
+          disposition: "ADOPTED",
+          evidenceRefs: ["citadel-adoption@1"],
+          instruction: "Continue impact discovery.",
+        },
+      ],
+      false,
+      [],
+      [],
+    );
+    expect(dossier.payload.state).toBe("IN_PROGRESS");
+    expect(() =>
+      senator.assessPropagation(result.propagation, [], true, [], []),
+    ).toThrow("complete propagation scope requires evidence");
   });
 
   it("amends only exact current Senate-enacted doctrine", () => {

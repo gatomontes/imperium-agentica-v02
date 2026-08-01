@@ -2,7 +2,7 @@
 
 ## Result
 
-`PASS — 11/11 focused executable cases`
+`PASS — 12/12 focused executable cases`
 
 ## Subject
 
@@ -21,6 +21,8 @@
 - non-percentage, non-compensatory Tribunalis judgment;
 - bounded fail-closed behavior;
 - assigned-Senator-only propagation stewardship;
+- evidenced completeness of affected-surface discovery before closure readiness;
+- exact authority for propagation exemptions;
 - unresolved propagation remains open; and
 - resolved propagation requires evidence.
 
@@ -29,7 +31,7 @@
 ```text
 vitest run tests/senate.test.ts tests/core-doctrine-v1.test.ts
 2 files PASS
-11 tests PASS
+12 tests PASS
 
 tsc --noEmit [focused Senate/Core Doctrine surface]
 PASS
@@ -49,6 +51,14 @@ classified by DR-070 rather than changes introduced by this bill:
 These findings remain `REUSE_CANDIDATE_WITH_FINDINGS` / conformance-reset work.
 They do not prevent focused constitutional review, and this record does not
 claim repository-wide conformance.
+
+## Independent review correction
+
+The first focused pass allowed closure readiness after all supplied assessments
+were resolved but did not prove that the Senator had discovered every affected
+surface. The corrected contract requires an explicit `scopeComplete` finding
+with evidence; otherwise propagation remains `IN_PROGRESS`. It also requires
+an exact authority reference for `EXEMPTED` dispositions. The added case passes.
 
 ## Constitutional boundary
 

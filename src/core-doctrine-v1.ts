@@ -18,7 +18,7 @@ export const CORE_DOCTRINE_V1_PROVISIONS = [
   ["CORE-015", "External obligations require applicable authority", "External obligations constrain Imperium only through exact sourced and scoped applicability determinations by competent external authority or an admitted authorized assessor."],
   ["CORE-016", "Recourse is applicability-driven", "Imperium records applicable recourse without manufacturing universal rights; unresolved material applicability denies recourse conformance and dependent action."],
   ["CORE-017", "Controls and conformance require inspectable evidence", "Claimed controls and conformance identify acceptance and failure evidence, limitations, uncertainty, and invalidation conditions; absence is not approval and synthetic evidence is not operational proof."],
-  ["CORE-018", "Doctrine propagation is Senator-stewarded", "Each enactment or amendment assigns a Senator to cognitively assess impact, instruct adoption or revalidation, evaluate responses, escalate conflicts, and maintain closure without individually legislating, judging, deciding, mutating native artifacts, or executing Runtime."],
+  ["CORE-018", "Doctrine propagation is Senator-stewarded", "Each enactment or amendment assigns a Senator to cognitively assess impact, prove affected-surface coverage, instruct adoption or revalidation, evaluate responses, escalate conflicts, and maintain closure without individually legislating, judging, deciding, mutating native artifacts, or executing Runtime; exemption requires exact competent authority."],
 ] as const;
 
 export function coreDoctrineV1Bill(

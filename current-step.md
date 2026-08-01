@@ -234,9 +234,13 @@ next gate is composition of the Core Doctrine v1 bill.
 
 The proposed eighteen-provision bill is recorded at
 `doctrine/bills/core-doctrine-v1-bill-001.md`. Its executable representation
-and Senator-led propagation seam pass 11/11 focused cases and focused
+and Senator-led propagation seam pass 12/12 focused cases and focused
 TypeScript validation. Evidence is recorded at
 `tests/doctrine/core-doctrine-v1-pressure-test-001.md`.
+
+Independent review found and corrected a premature-closure weakness: a Senator
+must now prove affected-surface coverage before a dossier can become ready for
+Senate closure, and any exemption requires exact competent authority.
 
 Repository-wide checks continue to expose inherited pre-Senate transport and
 stale-fixture findings already classified by DR-070; no repository-wide

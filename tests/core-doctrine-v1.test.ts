@@ -85,6 +85,8 @@ describe("Core Doctrine v1 bill pressure boundary", () => {
           instruction: "Hold dependent use pending Colosseum profile evidence.",
         },
       ],
+      true,
+      ["cross-arena-impact-scope@1"],
       ["senate-escalation-colosseum@1"],
     );
     expect(dossier.payload.state).toBe("IN_PROGRESS");

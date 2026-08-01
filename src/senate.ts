@@ -58,6 +58,7 @@ export interface PropagationSurfaceAssessment {
   surfaceRef: string;
   disposition: PropagationSurfaceDisposition;
   evidenceRefs: string[];
+  authorityRef?: string;
   instruction: string;
 }
 
@@ -65,6 +66,8 @@ export interface DoctrinePropagationDossier {
   doctrineRef: string;
   propagationNoticeRef: string;
   assignedSenatorId: string;
+  scopeComplete: boolean;
+  scopeEvidenceRefs: string[];
   assessments: PropagationSurfaceAssessment[];
   escalationRefs: string[];
   state: "IN_PROGRESS" | "READY_FOR_SENATE_CLOSURE";
@@ -156,6 +159,8 @@ export class Senator {
   assessPropagation(
     notice: ArtifactEnvelope<DoctrinePropagationNotice>,
     assessments: PropagationSurfaceAssessment[],
+    scopeComplete: boolean,
+    scopeEvidenceRefs: string[],
     escalationRefs: string[],
     context: ArtifactContext = {},
   ): ArtifactEnvelope<DoctrinePropagationDossier> {
@@ -170,6 +175,9 @@ export class Senator {
       throw new Error("only the assigned Senator may steward propagation");
     }
     validateAssessments(assessments);
+    if (scopeComplete && scopeEvidenceRefs.length === 0) {
+      throw new Error("complete propagation scope requires evidence");
+    }
 
     const noticeRef = notice.identity + "@" + notice.version;
     const unresolved = assessments.some(
@@ -183,6 +191,8 @@ export class Senator {
         doctrineRef: notice.payload.doctrineRef,
         propagationNoticeRef: noticeRef,
         assignedSenatorId: this.senatorId,
+        scopeComplete,
+        scopeEvidenceRefs: [...new Set(scopeEvidenceRefs)].sort(),
         assessments: assessments.map((assessment) => ({
           ...assessment,
           surfaceRef: assessment.surfaceRef.trim(),
@@ -191,11 +201,16 @@ export class Senator {
         })),
         escalationRefs: [...new Set(escalationRefs)].sort(),
         state:
-          unresolved || assessments.length === 0
+          unresolved || assessments.length === 0 || !scopeComplete
             ? "IN_PROGRESS"
             : "READY_FOR_SENATE_CLOSURE",
       },
-      [noticeRef, notice.payload.doctrineRef, ...escalationRefs],
+      [
+        noticeRef,
+        notice.payload.doctrineRef,
+        ...scopeEvidenceRefs,
+        ...escalationRefs,
+      ],
       context,
     );
   }
@@ -287,6 +302,12 @@ function validateAssessments(assessments: PropagationSurfaceAssessment[]): void 
       assessment.evidenceRefs.length === 0
     ) {
       throw new Error("resolved propagation assessment requires evidence");
+    }
+    if (
+      assessment.disposition === "EXEMPTED" &&
+      !assessment.authorityRef?.trim()
+    ) {
+      throw new Error("propagation exemption requires authority");
     }
     surfaceRefs.add(surfaceRef);
   }

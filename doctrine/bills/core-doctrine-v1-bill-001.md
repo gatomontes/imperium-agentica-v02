@@ -153,7 +153,9 @@ Every enactment or amendment shall issue a versioned propagation notice and
 assign one Senator as cognitive propagation steward. The Senator identifies
 affected surfaces, issues bounded adoption or revalidation instructions,
 evaluates conformance responses, escalates adjudicative or legislative issues,
-and maintains the record to closure. The Senator shall not legislate alone,
+proves the completeness of affected-surface discovery, and maintains the
+record to closure. Exemption requires exact competent authority. The Senator
+shall not legislate alone,
 modify native artifacts, judge for Tribunalis, decide for Curia, or execute
 Runtime. Citadel and Colosseum acknowledge and prove conformance independently;
 cross-version composition requires an enacted compatibility rule.
