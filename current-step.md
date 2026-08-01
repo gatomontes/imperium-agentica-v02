@@ -158,3 +158,10 @@ The completed leg preserves correlation, lineage, serialization/refusal behavior
 ## New-Chat Breakpoint
 
 No implementation leg is currently active. The next step is a separately scoped decision after repository reload. Candidate directions are: (1) another provider-neutral reference/design increment, (2) a non-live governance/evidence review, or (3) the parked B1.1 provider-neutral deployment-authorization investigation. Do not infer authorization from the completed transport conformance; HANDOFF_CONFORMANT does not equal DEPLOYMENT_AUTHORIZED.
+
+
+## Implementation Increment 014 — Provider-Neutral Reference Contract Reconciliation
+
+PR #181, merged as `aaebe4f`, reconciled the provider-neutral transport request contract with the existing reference adapter. Caller-supplied correlation and opaque provenance are now explicit in the contract and covered by focused synthetic tests through the in-memory reference path. This increment remains dependency-free and non-live: no provider, lease, credential, Runtime, deployment, persistence, live data, or external effect was introduced. The provider-neutral reference composition seam is explicit, but no provider composition is claimed or exercised.
+
+The increment is complete. No implementation leg is currently active.
