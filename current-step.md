@@ -176,3 +176,16 @@ PR #183, merged as `a7d12ea`, records the provider-neutral composition contract 
 PR #184, merged as `db037d6`, records the governance/evidence review after Increment 015. It confirms that conformance, composition, correlation, provenance, and synthetic evidence do not become authority, credential custody, provider permission, Runtime readiness, or deployment authorization. No operational boundary is opened.
 
 The two increments are complete. No implementation leg is currently active.
+
+## Implementation Increment 017 — Senate Core-Doctrine Stewardship
+
+DR-069 establishes Senate as the legislative body and sole institutional owner
+and steward of Core Imperium Doctrine. The bounded TypeScript kernel enacts and
+amends exact doctrine versions from Senate decision references and emits
+prospective-adoption or mandatory-revalidation notices for affected Office
+profiles. Focused Senate evidence is 3/3 PASS; the adjacent regression set is
+11/11 PASS.
+
+No actual Core Doctrine content, Office-profile mutation, mission authority,
+Persona forging, Runtime operation, credential use, Colosseum handoff,
+deployment, or external effect is introduced.

@@ -27,6 +27,7 @@ export * from "./reference.js";
 export * from "./reference-boundary.js";
 export * from "./repository.js";
 export * from "./schema.js";
+export * from "./senate.js";
 export * from "./secretariat.js";
 export * from "./serialization.js";
 export * from "./store-http-resolver.js";
