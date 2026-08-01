@@ -355,6 +355,7 @@ DR-060 passed 28/28 synthetic cross-contract reconciliation criteria and is admi
 
 - DR-069: `DR-069.md` — Senate is the legislative body and sole owner and steward of Core Imperium Doctrine.
 - DR-070: `DR-070.md` — establishes the Senate-first constitutional breakpoint; all pre-Senate Office implementations require constitutional conformance before re-admission.
+- DR-071: `DR-071.md` — enacts Core Imperium Doctrine v1 as eighteen inseparable provisions and assigns `senator-core-doctrine-001` to steward prospective propagation; no Office conformance is implied.
 
 
 ### DR-064 — Foundry Input and Conflict Revalidation
