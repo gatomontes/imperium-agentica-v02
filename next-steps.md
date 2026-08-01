@@ -310,3 +310,18 @@ After loading the repository and reading the continuity files, select one next l
 Preserved discipline: inspect the canonical repository first; investigate before defining; separate authority, conformance, provenance, and Procedure; keep synthetic/reference evidence separate from production semantics; use bounded increments; require explicit authorization at merge gates; update continuity after each increment.
 
 Preserved invariants: no live provider or credential use; no Runtime/Master Mason operation; no activation or deployment; no external effect; and HANDOFF_CONFORMANT is not DEPLOYMENT_AUTHORIZED. OC implementation remains deferred until after the Execution layer and any separately selected prerequisites.
+
+
+## Implementation Increment 014 — Provider-Neutral Reference Contract Reconciliation
+
+Completed in PR #181, merged as `aaebe4f`. The transport contract now explicitly carries optional caller correlation and opaque provenance, and focused tests verify preservation through the in-memory reference path. No provider, lease, credential, Runtime, deployment, persistence, live data, or external effect was introduced.
+
+## New-Chat Decision Gate
+
+The provider-neutral reference increment is complete. Select the next separately bounded leg:
+
+1. Another provider-neutral reference/design increment.
+2. Non-live governance/evidence or integrity review.
+3. Resume the parked B1.1 Provider-Neutral Deployment Authorization investigation, limited to authorization semantics and without selecting a provider, credential store, Runtime driver, or deployment mechanism.
+
+HANDOFF_CONFORMANT remains distinct from DEPLOYMENT_AUTHORIZED.
