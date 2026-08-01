@@ -264,3 +264,21 @@ Profile contract. No Office reconstruction or operational work is authorized.
 
 Enactment review passes 15/15 focused cases and focused TypeScript validation;
 see `tests/doctrine/core-doctrine-v1-enactment-review-001.md`.
+
+## Blackquill Core Doctrine Review 001
+
+At the Imperator's direction, Blackquill reviewed enacted v1 as an external
+private critique lens. The review found two critical and five major/moderate
+defects, led by a conflict between the canonical bill prose and condensed
+executable Senate rules. Under v1's own manifest, that disagreement leaves the
+representation unresolved.
+
+The proposed full-replacement v2 amendment is recorded at
+`doctrine/bills/core-doctrine-v2-amendment-001.md`, with one exact normative
+source in `src/core-doctrine-v2.ts`. The amendment passes 22/22 focused cases
+and focused TypeScript validation. It requires mandatory revalidation of every
+v1-dependent profile and artifact.
+
+V1 remains the enacted historical/current version until Senate amends it. V2
+is proposed, not enacted. The next gate is independent review and a separate
+Senate amendment decision.
