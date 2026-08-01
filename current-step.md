@@ -147,3 +147,14 @@ The corrected dependency-free Secretariat → Petition → Castellan boundary pa
 ## Implementation Increment 012 — Abstract Transport Design
 
 PR #173 documented the provider-neutral transport port, correlation and lineage rules, serialization/refusal semantics, and an in-memory adapter seam. This increment remains design-only. The abstract transport leg is paused pending explicit selection of its next bounded step: in-memory adapter implementation/tests or independent contract conformance review. HTTP, messaging infrastructure, persistence, queues, providers, credentials, Runtime, activation, deployment, live data, and external effects remain closed.
+
+
+## Implementation Increment 013 — Abstract Transport Leg Closure
+
+The provider-neutral abstract transport leg is complete at the dependency-free reference boundary. PR #175 corrected caller-supplied correlation handoff and lockfile/test-fixture integrity; PR #177 added the named in-memory transport adapter and focused tests; PR #178 recorded the independent 10/10 conformance review; PR #180 resolved the transport-envelope, correlation-preservation, lineage-refusal, and deterministic-refusal findings. Final merged transport checkpoint: `c7bc6c5`.
+
+The completed leg preserves correlation, lineage, serialization/refusal behavior, clarification and delivery isolation, and the non-live boundary. Concrete HTTP or messaging infrastructure, persistence, queues, providers, credentials, Runtime, activation, deployment, live data, and external effects remain closed.
+
+## New-Chat Breakpoint
+
+No implementation leg is currently active. The next step is a separately scoped decision after repository reload. Candidate directions are: (1) another provider-neutral reference/design increment, (2) a non-live governance/evidence review, or (3) the parked B1.1 provider-neutral deployment-authorization investigation. Do not infer authorization from the completed transport conformance; HANDOFF_CONFORMANT does not equal DEPLOYMENT_AUTHORIZED.

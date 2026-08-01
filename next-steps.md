@@ -286,3 +286,27 @@ The next authorized increment is provider-neutral abstract transport design only
 ## Implementation Increment 012 — Abstract Transport Design
 
 Documented in drafts/implementation-increment-012-abstract-transport-design.md. PR #173 established the provider-neutral transport port and its boundaries. The transport leg is paused pending a new scope decision between implementing the dependency-free in-memory adapter with focused tests and independently reviewing the abstract contract. No concrete transport or operational boundary is authorized.
+
+
+## Implementation Increment 013 — Abstract Transport Leg Closed
+
+Completed sequence:
+
+- PR #175 — caller-supplied correlation handoff correction; merged as `d1535ec`.
+- PR #177 — dependency-free `InMemoryTransportAdapter` and focused tests; merged as `d6d84e4`.
+- PR #178 — independent 10/10 transport conformance review; merged in pre-fix checkpoint `dedfdd3`.
+- PR #180 — resolved the transport-envelope, correlation-preservation, lineage-refusal, and deterministic-refusal findings; merged as final checkpoint `c7bc6c5`.
+
+The abstract transport leg is closed at the corrected dependency-free reference boundary. Concrete transport, persistence, queues, providers, credentials, Runtime, activation, deployment, live data, and external effects remain closed.
+
+## New-Chat Decision Gate
+
+After loading the repository and reading the continuity files, select one next leg explicitly:
+
+1. Continue provider-neutral implementation/design with a separately bounded reference increment.
+2. Open a non-live governance/evidence or integrity review.
+3. Resume the parked B1.1 Provider-Neutral Deployment Authorization investigation, limited to the authorization envelope and without selecting a provider, credential store, Runtime driver, or deployment mechanism.
+
+Preserved discipline: inspect the canonical repository first; investigate before defining; separate authority, conformance, provenance, and Procedure; keep synthetic/reference evidence separate from production semantics; use bounded increments; require explicit authorization at merge gates; update continuity after each increment.
+
+Preserved invariants: no live provider or credential use; no Runtime/Master Mason operation; no activation or deployment; no external effect; and HANDOFF_CONFORMANT is not DEPLOYMENT_AUTHORIZED. OC implementation remains deferred until after the Execution layer and any separately selected prerequisites.
