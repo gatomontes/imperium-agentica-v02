@@ -22,6 +22,7 @@ export interface DoctrineBill {
   effectiveAt: string;
   provisions: CoreDoctrineProvision[];
   affectedOfficeProfiles: string[];
+  assignedSenatorId: string;
   transitionRule: DoctrineTransitionRule;
 }
 
@@ -34,14 +35,39 @@ export interface CoreDoctrine {
   senateDecisionRef: string;
   transitionRule: DoctrineTransitionRule;
   affectedOfficeProfiles: string[];
+  assignedSenatorId: string;
   state: "ENACTED";
 }
 
 export interface DoctrinePropagationNotice {
   doctrineRef: string;
   affectedOfficeProfiles: string[];
+  assignedSenatorId: string;
   requiredAction: "ADOPT_PROSPECTIVELY" | "REVALIDATE";
   state: "AWAITING_OFFICE_CONFORMANCE";
+}
+
+export type PropagationSurfaceDisposition =
+  | "ADOPTED"
+  | "REVALIDATED"
+  | "EXEMPTED"
+  | "RETIRED"
+  | "UNRESOLVED";
+
+export interface PropagationSurfaceAssessment {
+  surfaceRef: string;
+  disposition: PropagationSurfaceDisposition;
+  evidenceRefs: string[];
+  instruction: string;
+}
+
+export interface DoctrinePropagationDossier {
+  doctrineRef: string;
+  propagationNoticeRef: string;
+  assignedSenatorId: string;
+  assessments: PropagationSurfaceAssessment[];
+  escalationRefs: string[];
+  state: "IN_PROGRESS" | "READY_FOR_SENATE_CLOSURE";
 }
 
 export interface LegislativeResult {
@@ -114,6 +140,67 @@ export class Senate {
   }
 }
 
+/**
+ * Cognitive propagation officer assigned by Senate.
+ *
+ * A Senator interprets an enacted change, issues bounded instructions, and
+ * evaluates conformance evidence. The Senator does not legislate alone,
+ * mutate Office artifacts, judge for Tribunalis, decide for Curia, or execute
+ * Runtime migrations.
+ */
+export class Senator {
+  constructor(readonly senatorId: string) {
+    if (!senatorId.trim()) throw new Error("Senator identity is required");
+  }
+
+  assessPropagation(
+    notice: ArtifactEnvelope<DoctrinePropagationNotice>,
+    assessments: PropagationSurfaceAssessment[],
+    escalationRefs: string[],
+    context: ArtifactContext = {},
+  ): ArtifactEnvelope<DoctrinePropagationDossier> {
+    assertArtifactEnvelope(notice);
+    if (
+      notice.artifactType !== "DoctrinePropagationNotice" ||
+      notice.producer !== "Senate"
+    ) {
+      throw new Error("Senator requires a Senate propagation notice");
+    }
+    if (notice.payload.assignedSenatorId !== this.senatorId) {
+      throw new Error("only the assigned Senator may steward propagation");
+    }
+    validateAssessments(assessments);
+
+    const noticeRef = notice.identity + "@" + notice.version;
+    const unresolved = assessments.some(
+      (assessment) => assessment.disposition === "UNRESOLVED",
+    );
+    return createArtifact(
+      "DoctrinePropagationDossier",
+      "Senator:" + this.senatorId,
+      notice.correlationId,
+      {
+        doctrineRef: notice.payload.doctrineRef,
+        propagationNoticeRef: noticeRef,
+        assignedSenatorId: this.senatorId,
+        assessments: assessments.map((assessment) => ({
+          ...assessment,
+          surfaceRef: assessment.surfaceRef.trim(),
+          evidenceRefs: [...new Set(assessment.evidenceRefs)].sort(),
+          instruction: assessment.instruction.trim(),
+        })),
+        escalationRefs: [...new Set(escalationRefs)].sort(),
+        state:
+          unresolved || assessments.length === 0
+            ? "IN_PROGRESS"
+            : "READY_FOR_SENATE_CLOSURE",
+      },
+      [noticeRef, notice.payload.doctrineRef, ...escalationRefs],
+      context,
+    );
+  }
+}
+
 function doctrinePayload(bill: DoctrineBill, edition: number): CoreDoctrine {
   return {
     edition,
@@ -128,6 +215,7 @@ function doctrinePayload(bill: DoctrineBill, edition: number): CoreDoctrine {
     senateDecisionRef: bill.senateDecisionRef.trim(),
     transitionRule: bill.transitionRule,
     affectedOfficeProfiles: [...new Set(bill.affectedOfficeProfiles)].sort(),
+    assignedSenatorId: bill.assignedSenatorId.trim(),
     state: "ENACTED",
   };
 }
@@ -144,6 +232,7 @@ function propagationFor(
     {
       doctrineRef,
       affectedOfficeProfiles: doctrine.payload.affectedOfficeProfiles,
+      assignedSenatorId: doctrine.payload.assignedSenatorId,
       requiredAction:
         doctrine.payload.transitionRule === "MANDATORY_REVALIDATION"
           ? "REVALIDATE"
@@ -161,6 +250,9 @@ function validateBill(bill: DoctrineBill): void {
   if (!bill.senateDecisionRef.trim()) {
     throw new Error("Senate decision reference is required");
   }
+  if (!bill.assignedSenatorId.trim()) {
+    throw new Error("assigned Senator identity is required");
+  }
   if (!bill.effectiveAt.trim() || Number.isNaN(Date.parse(bill.effectiveAt))) {
     throw new Error("valid doctrine effective time is required");
   }
@@ -177,5 +269,25 @@ function validateBill(bill: DoctrineBill): void {
       throw new Error("duplicate doctrine provision: " + id);
     }
     provisionIds.add(id);
+  }
+}
+
+function validateAssessments(assessments: PropagationSurfaceAssessment[]): void {
+  const surfaceRefs = new Set<string>();
+  for (const assessment of assessments) {
+    const surfaceRef = assessment.surfaceRef.trim();
+    if (!surfaceRef || !assessment.instruction.trim()) {
+      throw new Error("complete propagation assessments are required");
+    }
+    if (surfaceRefs.has(surfaceRef)) {
+      throw new Error("duplicate propagation surface: " + surfaceRef);
+    }
+    if (
+      assessment.disposition !== "UNRESOLVED" &&
+      assessment.evidenceRefs.length === 0
+    ) {
+      throw new Error("resolved propagation assessment requires evidence");
+    }
+    surfaceRefs.add(surfaceRef);
   }
 }

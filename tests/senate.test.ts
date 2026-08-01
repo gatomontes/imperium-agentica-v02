@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { createArtifact } from "../src/artifact.js";
-import { DoctrineBill, Senate } from "../src/senate.js";
+import { DoctrineBill, Senate, Senator } from "../src/senate.js";
 
 const bill = (overrides: Partial<DoctrineBill> = {}): DoctrineBill => ({
   title: "Core Imperium Doctrine",
@@ -15,6 +15,7 @@ const bill = (overrides: Partial<DoctrineBill> = {}): DoctrineBill => ({
     },
   ],
   affectedOfficeProfiles: ["Tribunalis", "Studium", "Castellan"],
+  assignedSenatorId: "senator-cassian-001",
   transitionRule: "PROSPECTIVE_ADOPTION",
   ...overrides,
 });
@@ -43,9 +44,79 @@ describe("Senate Core Doctrine stewardship", () => {
         doctrineRef: result.doctrine.identity + "@1",
         affectedOfficeProfiles: ["Castellan", "Studium", "Tribunalis"],
         requiredAction: "ADOPT_PROSPECTIVELY",
+        assignedSenatorId: "senator-cassian-001",
         state: "AWAITING_OFFICE_CONFORMANCE",
       },
     });
+  });
+
+  it("assigns cognitive propagation to one Senator without transferring legislation", () => {
+    const result = new Senate().enact(bill(), "legislation-005", {
+      identityFactory: (prefix) => prefix + "-005",
+    });
+    const senator = new Senator("senator-cassian-001");
+    const dossier = senator.assessPropagation(
+      result.propagation,
+      [
+        {
+          surfaceRef: "office-profile:Studium@1",
+          disposition: "ADOPTED",
+          evidenceRefs: ["studium-conformance@1"],
+          instruction: "Apply prospectively to new Persona doctrine profiles.",
+        },
+      ],
+      [],
+      { identityFactory: (prefix) => prefix + "-005" },
+    );
+
+    expect(dossier).toMatchObject({
+      artifactType: "DoctrinePropagationDossier",
+      producer: "Senator:senator-cassian-001",
+      payload: {
+        assignedSenatorId: "senator-cassian-001",
+        state: "READY_FOR_SENATE_CLOSURE",
+      },
+    });
+    expect(() =>
+      new Senator("senator-other").assessPropagation(
+        result.propagation,
+        [],
+        [],
+      ),
+    ).toThrow("only the assigned Senator may steward propagation");
+  });
+
+  it("keeps unresolved propagation open and refuses unsupported closure evidence", () => {
+    const result = new Senate().enact(bill(), "legislation-006");
+    const senator = new Senator("senator-cassian-001");
+    const dossier = senator.assessPropagation(
+      result.propagation,
+      [
+        {
+          surfaceRef: "arena:Colosseum",
+          disposition: "UNRESOLVED",
+          evidenceRefs: [],
+          instruction: "Return cross-arena compatibility conflict to Senate.",
+        },
+      ],
+      ["senate-conflict-001@1"],
+    );
+    expect(dossier.payload.state).toBe("IN_PROGRESS");
+
+    expect(() =>
+      senator.assessPropagation(
+        result.propagation,
+        [
+          {
+            surfaceRef: "arena:Citadel",
+            disposition: "REVALIDATED",
+            evidenceRefs: [],
+            instruction: "Close Citadel propagation.",
+          },
+        ],
+        [],
+      ),
+    ).toThrow("resolved propagation assessment requires evidence");
   });
 
   it("amends only exact current Senate-enacted doctrine", () => {
