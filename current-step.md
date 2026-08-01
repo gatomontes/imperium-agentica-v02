@@ -137,3 +137,8 @@ The independent synthetic closure review is recorded at `tests/cognitive/creatio
 ## Implementation Increment 004 — In-Memory Secretariat/Castellan Boundary
 
 The dependency-free `InMemoryReferenceBoundary` is implemented and tested as the smallest executable coordinator for Secretariat ingress → Petition → Castellan handoff. It sequences injected contracts, preserves identity/version/correlation relationships, and refuses unresolved or non-current Petitions. This remains an in-memory/reference boundary only; transport, persistence, authentication, providers, credentials, Runtime, activation, deployment, live data, and external effects remain closed.
+
+
+## Implementation Increment 011 — Reference-Boundary Closure Review
+
+The corrected dependency-free Secretariat → Petition → Castellan boundary passes 15/15 bounded end-to-end closure checks. The review reconciles the Increment 010 finding by returning complete Petition envelopes from `handoffResult`, preserving explicit UNRESOLVED status, and exercising the focused suite through `npm test`. The in-memory reference leg is closed. Abstract transport design is selected next; HTTP, messaging, persistence, credentials, Runtime, activation, deployment, live data, and external effects remain closed.

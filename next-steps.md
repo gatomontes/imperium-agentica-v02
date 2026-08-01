@@ -272,3 +272,12 @@ Next step, if selected: separately scope and authorize a non-live implementation
 ## Implementation Increment 004 — In-Memory Secretariat/Castellan Boundary
 
 Completed on a dedicated branch as the first executable implementation increment. The coordinator and focused tests are non-live and dependency-free. After admission, the next increment is an independent implementation review of the coordinator’s ownership, refusal, and contract-isolation behavior before any transport or persistence work is considered.
+
+
+## Implementation Increment 011 — Reference-Boundary Closure
+
+Completed: `tests/cognitive/implementation-increment-011-reference-boundary-closure-review-001.md`. The corrected in-memory Secretariat → Petition → Castellan boundary passes 15/15 bounded closure checks, including complete result-envelope return, lifecycle dispositions, lineage, refusal, and test-suite inclusion. The reference implementation leg is closed.
+
+## Next Selected Leg — Abstract Transport Design
+
+The next authorized increment is provider-neutral abstract transport design only. It may define an in-memory transport port, request/response correlation, serialization boundary, delivery/refusal semantics, and test seams. It must not introduce HTTP, messaging infrastructure, persistence, queues, providers, credentials, Runtime, activation, deployment, live data, or external effects.
