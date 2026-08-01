@@ -14,8 +14,8 @@ export class InMemoryReferenceBoundary {
     private readonly ingress: PetitionIngress = new SecretariatIngressAdapter(new Secretariat()),
     private readonly formation: WorkFormation = new CastellanFormationAdapter(new Castellan()),
   ) {}
-  submit(request: OperatorRequest): ReferenceBoundaryResult {
-    const petition = this.ingress.receive(request);
+  submit(request: OperatorRequest, correlationId?: string): ReferenceBoundaryResult {
+    const petition = this.ingress.receive(request, correlationId);
     return { ...this.resultFor(petition), petition };
   }
   handoff(petition: ArtifactEnvelope<Petition>): ArtifactEnvelope<WorkSpecification> | null {
