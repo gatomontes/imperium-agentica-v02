@@ -325,3 +325,21 @@ The provider-neutral reference increment is complete. Select the next separately
 3. Resume the parked B1.1 Provider-Neutral Deployment Authorization investigation, limited to authorization semantics and without selecting a provider, credential store, Runtime driver, or deployment mechanism.
 
 HANDOFF_CONFORMANT remains distinct from DEPLOYMENT_AUTHORIZED.
+
+
+## Implementation Increment 015 — Existing-Lease-to-Provider Composition Seam
+
+Completed in PR #183, merged as `a7d12ea`. The provider-neutral reference contract defines composition of an already-admitted lease reference with an opaque provider reference, with lineage preservation and deterministic refusal. Composition remains distinct from authorization and deployment.
+
+## Non-Live Governance/Evidence Review 001
+
+Completed in PR #184, merged as `db037d6`. The review confirms that synthetic conformance, composition, correlation, and provenance are evidence only; none implies authority or deployment authorization.
+
+## New-Chat Decision Gate
+
+The next separately bounded choice is:
+
+1. Continue provider-neutral reference/design work.
+2. Resume the parked B1.1 Provider-Neutral Deployment Authorization investigation, limited to authorization semantics and without selecting a provider, credential store, Runtime driver, or deployment mechanism.
+
+HANDOFF_CONFORMANT, composition evidence, and synthetic review remain distinct from DEPLOYMENT_AUTHORIZED.

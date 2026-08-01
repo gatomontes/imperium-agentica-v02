@@ -165,3 +165,14 @@ No implementation leg is currently active. The next step is a separately scoped 
 PR #181, merged as `aaebe4f`, reconciled the provider-neutral transport request contract with the existing reference adapter. Caller-supplied correlation and opaque provenance are now explicit in the contract and covered by focused synthetic tests through the in-memory reference path. This increment remains dependency-free and non-live: no provider, lease, credential, Runtime, deployment, persistence, live data, or external effect was introduced. The provider-neutral reference composition seam is explicit, but no provider composition is claimed or exercised.
 
 The increment is complete. No implementation leg is currently active.
+
+
+## Implementation Increment 015 — Existing-Lease-to-Provider Composition Seam
+
+PR #183, merged as `a7d12ea`, records the provider-neutral composition contract for an already-admitted lease reference and an opaque provider reference. Ten bounded synthetic cases cover success, missing/stale/superseded/mismatched inputs, correlation, provenance, refusal, and the explicit rule that composition does not authorize deployment. No provider, credential, Runtime, activation, deployment, live data, or external effect was introduced.
+
+## Non-Live Governance/Evidence Review 001
+
+PR #184, merged as `db037d6`, records the governance/evidence review after Increment 015. It confirms that conformance, composition, correlation, provenance, and synthetic evidence do not become authority, credential custody, provider permission, Runtime readiness, or deployment authorization. No operational boundary is opened.
+
+The two increments are complete. No implementation leg is currently active.
