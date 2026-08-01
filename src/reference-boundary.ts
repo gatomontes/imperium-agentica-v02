@@ -22,11 +22,12 @@ export class InMemoryReferenceBoundary {
     return this.resultFor(petition).work;
   }
   handoffResult(petition: ArtifactEnvelope<Petition>): ReferenceBoundaryResult {
-    return this.resultFor(petition);
+    return { ...this.resultFor(petition), petition };
   }
   private resultFor(petition: ArtifactEnvelope<Petition>): Omit<ReferenceBoundaryResult, "petition"> {
     if (petition.status === "SUPERSEDED") return { work: null, disposition: "STALE" };
     if (petition.status === "INVALIDATED") return { work: null, disposition: "INVALIDATED" };
+    if (petition.status === "UNRESOLVED") return { work: null, disposition: "UNRESOLVED" };
     if (petition.status !== "CURRENT") return { work: null, disposition: "REFUSED" };
     if (petition.payload.finding === "PETITION_UNRESOLVED") return { work: null, disposition: "UNRESOLVED" };
     if (petition.payload.finding !== "PETITION_RECEIVED") return { work: null, disposition: "REFUSED" };
