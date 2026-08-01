@@ -221,5 +221,11 @@ bounded fail-closed behavior, quarantine/containment separation, external-
 obligation applicability, Operator-intent limits, doctrine propagation,
 applicability-driven recourse, and non-compensatory chamber synthesis.
 
+By Imperator decision, GR-008 assigns a Senator to cognitively steward every
+doctrine propagation. Senate enacts; the Senator performs impact analysis,
+issues bounded migration or revalidation instructions, evaluates conformance
+responses, and maintains closure. The Senator does not legislate alone, modify
+Office artifacts, judge for Tribunalis, decide for Curia, or execute Runtime.
+
 These are legislative drafting instructions, not enacted Core Doctrine. The
 next gate is composition of the Core Doctrine v1 bill.

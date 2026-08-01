@@ -146,12 +146,31 @@ access, ownership claims, or desired outcome.
 
 Every Senate enactment or amendment emits a versioned propagation notice that
 names changed provisions, effective ordering, adoption mode, affected profile
-classes, and revalidation requirements.
+classes, revalidation requirements, and the Senator assigned as propagation
+steward.
+
+The assigned Senator performs the cognitive propagation work. The Senator:
+
+- interprets the enacted change without independently legislating;
+- identifies affected domains, Offices, profiles, artifacts, open missions,
+  arena boundaries, and handoff contracts;
+- produces the impact assessment and bounded adoption, migration, retirement,
+  or revalidation instructions;
+- receives and evaluates Office and arena conformance responses;
+- refers judgment questions to Tribunalis and legislative defects or conflicts
+  to Senate; and
+- maintains the propagation record until every affected surface is adopted,
+  revalidated, exempted by competent authority, retired, or formally unresolved.
+
+The Senator may not enact or amend doctrine alone, silently modify an Office
+profile or implementation, declare conformance without evidence, override
+Tribunalis or Curia, operate Runtime, or execute migrations.
 
 Each Office records the exact doctrine and profile versions it applies. Each
 arena—Citadel and Colosseum—independently acknowledges the notice and identifies
 affected profiles, artifacts, open missions, and handoff contracts. A receiving
-arena may not infer the sending arena's conformance.
+arena may not infer the sending arena's conformance. The assigned Senator
+evaluates each response but does not become the native steward of its artifacts.
 
 Prospective changes do not rewrite historical artifacts. Mandatory-revalidation
 changes make affected artifacts unavailable for new dependent use until an
