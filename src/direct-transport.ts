@@ -11,7 +11,7 @@ export class DirectTransportAdapter implements ImperiumTransportAdapter {
   constructor(private readonly imperium = new ImperiumReference()) {}
 
   submit(input: TransportRequest): TransportResponse {
-    const result = this.imperium.submit(input.request);
+    const result = this.imperium.submit(input.request, input.correlationId);
     return {
       transportId: input.transportId,
       petition: result.petition,
