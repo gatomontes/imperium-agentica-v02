@@ -23,6 +23,7 @@ export interface OpenAITransportRequest {
 
 export interface OpenAITransportResult {
   responseId: string;
+  provider: "openai" | "deepseek";
   model: string;
   exactQuestion: string;
 }
@@ -38,6 +39,7 @@ export interface LiveIsoldeResult {
   presentation: GovernedArtifactEnvelope<IsoldeQuestionPresentation>;
   exactQuestion: string;
   providerResponseId: string;
+  provider: "openai" | "deepseek";
   model: string;
   audit: LiveIsoldeAuditEvent[];
 }
@@ -92,9 +94,75 @@ export async function openLocksmithOpenAIAccess({
       const parsed = JSON.parse(outputText) as { exact_question?: unknown };
       if (parsed.exact_question !== request.exactCastellanQuestion) throw new Error("OpenAI altered the exact Castellan question");
       if (typeof payload.id !== "string" || !payload.id.trim()) throw new Error("OpenAI response identity is missing");
-      return { responseId: payload.id, model, exactQuestion: parsed.exact_question };
+      return { responseId: payload.id, provider: "openai", model, exactQuestion: parsed.exact_question };
     },
   });
+}
+
+export async function openLocksmithDeepSeekAccess({
+  directory = process.cwd(),
+  environment = process.env,
+  fetchImplementation = fetch,
+  model = environment.DEEPSEEK_MODEL?.trim() || "deepseek-v4-flash",
+}: {
+  directory?: string;
+  environment?: NodeJS.ProcessEnv;
+  fetchImplementation?: FetchLike;
+  model?: string;
+} = {}): Promise<LocksmithOpenAIAccessPort> {
+  const credential = await readCredential(directory, environment, "DEEPSEEK_API_KEY");
+  if (!credential) throw new Error("DeepSeek credential is not configured; run npm run setup -- deepseek");
+
+  return Object.freeze({
+    configured: true as const,
+    async transportQuestion(request: OpenAITransportRequest): Promise<OpenAITransportResult> {
+      const response = await fetchImplementation("https://api.deepseek.com/chat/completions", {
+        method: "POST",
+        headers: { Authorization: `Bearer ${credential}`, "Content-Type": "application/json" },
+        body: JSON.stringify({
+          model,
+          messages: [
+            {
+              role: "system",
+              content: "You are Isolde, the Secretariat transport officer. Do not interpret, evaluate, answer, summarize, or rewrite Operator text. Return JSON only, exactly in this form: {\"exact_question\":\"the exact Castellan question\"}.",
+            },
+            {
+              role: "user",
+              content: JSON.stringify({ operator_text: request.operatorText, exact_castellan_question: request.exactCastellanQuestion }),
+            },
+          ],
+          thinking: { type: "disabled" },
+          temperature: 0,
+          max_tokens: 256,
+          response_format: { type: "json_object" },
+        }),
+      });
+      const payload = await response.json() as Record<string, unknown>;
+      if (!response.ok) throw providerFailure("DeepSeek", response, payload);
+      const choice = Array.isArray(payload.choices) ? payload.choices[0] : undefined;
+      const message = choice && typeof choice === "object" ? (choice as { message?: unknown }).message : undefined;
+      const content = message && typeof message === "object" ? (message as { content?: unknown }).content : undefined;
+      if (typeof content !== "string" || !content.trim()) throw new Error("DeepSeek response has no text output");
+      const parsed = JSON.parse(content) as { exact_question?: unknown };
+      if (parsed.exact_question !== request.exactCastellanQuestion) throw new Error("DeepSeek altered the exact Castellan question");
+      if (typeof payload.id !== "string" || !payload.id.trim()) throw new Error("DeepSeek response identity is missing");
+      return { responseId: payload.id, provider: "deepseek", model, exactQuestion: parsed.exact_question };
+    },
+  });
+}
+
+export async function openLocksmithLiveIsoldeAccess(options: {
+  directory?: string;
+  environment?: NodeJS.ProcessEnv;
+  fetchImplementation?: FetchLike;
+} = {}): Promise<LocksmithOpenAIAccessPort> {
+  const directory = options.directory ?? process.cwd();
+  const environment = options.environment ?? process.env;
+  const provider = (environment.IMPERIUM_LIVE_PROVIDER?.trim().toLowerCase()
+    || await readSetting(directory, "IMPERIUM_LIVE_PROVIDER")) ?? "openai";
+  if (provider === "deepseek") return openLocksmithDeepSeekAccess({ ...options, directory, environment });
+  if (provider === "openai") return openLocksmithOpenAIAccess({ ...options, directory, environment });
+  throw new Error(`Unsupported live provider: ${provider}`);
 }
 
 export class MasterMasonLiveIsoldeSession {
@@ -117,7 +185,7 @@ export class MasterMasonLiveIsoldeSession {
     if (presented.presentation.payload.exactQuestion !== transported.exactQuestion) throw new Error("Isolde presentation diverged from Castellan inquiry");
     audit.push(event("ISOLDE_PRESENTED", correlationId, true, true));
     audit.push(event("MASTER_MASON_CLOSED", correlationId, true, true));
-    return { dossier: presented.dossier, inquiry, presentation: presented.presentation, exactQuestion: transported.exactQuestion, providerResponseId: transported.responseId, model: transported.model, audit };
+    return { dossier: presented.dossier, inquiry, presentation: presented.presentation, exactQuestion: transported.exactQuestion, providerResponseId: transported.responseId, provider: transported.provider, model: transported.model, audit };
   }
 }
 
@@ -125,13 +193,13 @@ function event(stage: LiveIsoldeAuditEvent["stage"], correlationId: string, cred
   return { stage, correlationId, credentialPresent, credentialExposedToIsolde: false, providerCalled, missionExecuted: false, responseEvaluated: false };
 }
 
-async function readCredential(directory: string, environment: NodeJS.ProcessEnv): Promise<string | undefined> {
-  const injected = environment.OPENAI_API_KEY?.trim();
+async function readCredential(directory: string, environment: NodeJS.ProcessEnv, keyName = "OPENAI_API_KEY"): Promise<string | undefined> {
+  const injected = environment[keyName]?.trim();
   if (injected) return injected;
   try {
     const contents = await readFile(resolve(directory, ".env.local"), "utf8");
     for (const line of contents.split(/\r?\n/u)) {
-      const match = line.match(/^\s*(?:export\s+)?OPENAI_API_KEY\s*=\s*(.*)\s*$/u);
+      const match = line.match(new RegExp(`^\\s*(?:export\\s+)?${keyName}\\s*=\\s*(.*)\\s*$`, "u"));
       if (!match) continue;
       const value = unquote(match[1]).trim();
       if (value) return value;
@@ -140,6 +208,26 @@ async function readCredential(directory: string, environment: NodeJS.ProcessEnv)
     if ((error as NodeJS.ErrnoException).code !== "ENOENT") throw error;
   }
   return undefined;
+}
+
+async function readSetting(directory: string, name: string): Promise<string | undefined> {
+  try {
+    const contents = await readFile(resolve(directory, ".env.local"), "utf8");
+    for (const line of contents.split(/\r?\n/u)) {
+      const match = line.match(new RegExp(`^\\s*(?:export\\s+)?${name}\\s*=\\s*(.*)\\s*$`, "u"));
+      if (match) return unquote(match[1]).trim().toLowerCase() || undefined;
+    }
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code !== "ENOENT") throw error;
+  }
+  return undefined;
+}
+
+function providerFailure(provider: string, response: Response, payload: Record<string, unknown>): Error {
+  const error = payload.error && typeof payload.error === "object" ? payload.error as Record<string, unknown> : {};
+  const code = typeof error.code === "string" && error.code.trim() ? `; code=${error.code}` : "";
+  const requestId = response.headers.get("x-request-id");
+  return new Error(`${provider} transport failed (${response.status}${code}${requestId ? `; request_id=${requestId}` : ""})`);
 }
 
 function unquote(value: string): string {
