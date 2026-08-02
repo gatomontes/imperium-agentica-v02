@@ -392,6 +392,12 @@ active profile or existing artifacts.
 11. DR-084 completes Castellan mission formation through the candidate Mission Specification. Select and reconstruct the first downstream Citadel Office before adding any Castellan request method.
 12. DR-085 supersedes DR-084 and closes the Blackquill findings. Select Castellan's first downstream Citadel Office; do not add a downstream request method before that Office is admitted.
 13. DR-086 admits Isolde's Persona and provider-neutral Secretariat cognitive interface. Select a concrete Isolde cognitive-port adapter before claiming model-live operation, or return to Castellan's downstream Office selection as a separate leg.
+14. Live Isolde Slice 001 implements the separately authorized concrete OpenAI
+    adapter as one bounded question-transport smoke test. After merge, the
+    Operator pulls `main` and runs `npm run live:isolde` locally with the
+    credential created by `npm run setup`, then reports the non-secret output.
+    Do not extend this command into answer evaluation or a second turn without
+    a separate authorization gate.
 
 No other Office implementation, generic infrastructure reuse, Colosseum work,
 Runtime operation, credentials, deployment, or external effect is selected.

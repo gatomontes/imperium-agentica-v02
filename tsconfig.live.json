@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "outDir": ".runtime",
+    "rootDir": "."
+  },
+  "include": ["scripts/live-isolde.ts"]
+}

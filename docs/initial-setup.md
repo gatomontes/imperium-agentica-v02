@@ -20,3 +20,16 @@ This is bootstrap configuration, not transfer of credential custody to Isolde.
 Isolde must never receive, inspect, log, or persist the credential. Provider
 access remains behind the admitted Locksmith custody and Master Mason Runtime
 boundaries.
+
+After setup succeeds, run the bounded one-question live smoke test:
+
+```sh
+npm run live:isolde
+```
+
+The command accepts one Operator utterance, opens one Master Mason-controlled
+OpenAI session, and presents exactly one Castellan-provided question through
+Isolde. It does not accept an answer, evaluate relevance, execute a mission,
+deploy an Operative, enable tools, or continue into a second turn. The provider
+request disables response storage, and the returned question must match the
+Castellan artifact exactly or the session refuses it.
