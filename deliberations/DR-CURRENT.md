@@ -2,6 +2,11 @@
 
 ## Constitutional controlling decisions
 
+### DR-091 — Rector, Resident Castellan Officer
+
+Status: active admitted Officer Persona and provider-neutral operating contract.
+Path: `deliberations/DR-091.md`
+
 ### DR-090 — Cognitionist Office Profile and Connection Contract
 
 Status: active admitted applied-doctrine contract.

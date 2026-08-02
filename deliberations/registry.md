@@ -6,7 +6,7 @@
 - Improvement programs recorded: 7
 - Pending control records: 7
 - Implemented control records: 0
-- Decision records: 60
+- Decision records: 61
 - Initial assessment: `assessments/2026-07-23-mit-ai-risks-imperium-assessment.md`
 - Integration review: `assessments/2026-07-23-ra-integration-review-001.md`
 - Integration execution: `assessments/2026-07-23-ra-integration-review-execution-001.md`
@@ -375,6 +375,7 @@ DR-060 passed 28/28 synthetic cross-contract reconciliation criteria and is admi
 - DR-088: `DR-088.md` — enacts Core Doctrine v6 with exact Lexicon v4 control.
 - DR-089: `DR-089.md` — revalidates Secretariat, Castellan, and Isolde against Doctrine v6 and Lexicon v4 without jurisdiction expansion.
 - DR-090: `DR-090.md` — admits Cognitionist as the shared model-connection steward, excluding credential custody and Runtime execution.
+- DR-091: `DR-091.md` — admits Rector as Castellan's resident cognitive Officer and requires exact Rector interpretation before mission formation.
 
 
 ### DR-064 — Foundry Input and Conflict Revalidation
