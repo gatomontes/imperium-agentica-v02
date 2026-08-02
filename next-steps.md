@@ -2,11 +2,11 @@
 
 ## Active Post-Reset Queue
 
-1. Define the Office Doctrine Profile contract against exact enacted v2.
-2. Pressure-test derivation, narrowing, conflict, version, propagation,
-   exemption, invalidation, and revalidation behavior.
-3. Admit the passing profile contract through its proper authority.
-4. Reconstruct Secretariat first against an exact admitted v2 profile.
+1. Reconstruct Secretariat's exact Core Doctrine v2 Office Profile.
+2. Obtain Tribunalis conformance judgment.
+3. Obtain admission from `senator-core-doctrine-001` under exact authority.
+4. Only then assess reusable Secretariat implementation against the admitted
+   profile.
 
 Core Doctrine v1 is enacted. No downstream Office profile or implementation is
 admitted.

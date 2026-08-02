@@ -357,6 +357,7 @@ DR-060 passed 28/28 synthetic cross-contract reconciliation criteria and is admi
 - DR-070: `DR-070.md` — establishes the Senate-first constitutional breakpoint; all pre-Senate Office implementations require constitutional conformance before re-admission.
 - DR-071: `DR-071.md` — enacts Core Imperium Doctrine v1 as eighteen inseparable provisions and assigns `senator-core-doctrine-001` to steward prospective propagation; no Office conformance is implied.
 - DR-072: `DR-072.md` — supersedes v1 with Blackquill-corrected Core Doctrine v2 and mandates revalidation of all affected profiles and v1-dependent surfaces.
+- DR-073: `DR-073.md` — admits Office Doctrine Profile Contract v1; complete exact-v2 derivation, Tribunalis judgment, and assigned-Senator admission are required before Office reconstruction.
 
 
 ### DR-064 — Foundry Input and Conflict Revalidation

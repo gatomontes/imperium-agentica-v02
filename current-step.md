@@ -296,3 +296,19 @@ gate is the Office Doctrine Profile contract against exact v2.
 
 Enactment review passes 26/26 focused cases and focused TypeScript validation;
 see `tests/doctrine/core-doctrine-v2-enactment-review-001.md`.
+
+## DR-073 — Office Doctrine Profile Contract v1
+
+The common profile contract is admitted against exact Core Doctrine v2. It
+requires complete provision application, exact current-doctrine pointer,
+issuer authority, verification/evidence/invalidation rules, bounded
+non-applicability, immutable successors, Tribunalis judgment, and admission by
+the doctrine-assigned Senator under exact authority.
+
+Independent review corrected same-version candidate/admission mutation,
+count-based condition evidence, weak authority lineage, and stale-v1 pointer
+acceptance. The final focused matrix passes 33/33 with focused TypeScript
+validation.
+
+No actual Office profile or implementation is admitted. The profile leg is
+complete. The next separate leg is Secretariat reconstruction.

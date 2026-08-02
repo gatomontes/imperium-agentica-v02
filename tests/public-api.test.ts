@@ -14,5 +14,7 @@ describe("public reference API", () => {
     expect(Imperium.ExemplarReview).toBeDefined();
     expect(Imperium.IronGate).toBeDefined();
     expect(Imperium.PersonaReadiness).toBeDefined();
+    expect(Imperium.ENACTED_CORE_DOCTRINE_V2).toBeDefined();
+    expect(Imperium.OfficeDoctrineProfileContract).toBeDefined();
   });
 });

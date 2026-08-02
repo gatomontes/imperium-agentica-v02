@@ -10,6 +10,9 @@ are not re-admitted by enactment alone.
 Read `CONSTITUTIONAL-RESET.md` before treating any pre-Senate semantic or
 implementation artifact as current authority.
 
+DR-073 admits the Office Doctrine Profile Contract v1. No actual Office profile
+or implementation is admitted; Secretariat is the first reconstruction target.
+
 ## Day 0
 
 Imperium does not begin here as a rebuilt system.
