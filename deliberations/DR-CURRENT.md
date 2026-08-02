@@ -2,12 +2,19 @@
 
 ## Constitutional controlling decisions
 
-### DR-092 — Isolde Single-Turn Transport and Mission-Inquiry Correction
+### DR-093 — Castellan/Rector Answer-Provenance Correction
 
 Status: active admitted correction and successor revalidation.
+Path: `deliberations/DR-093.md`
+
+Blackquill returns `ACCEPTABLE` for the evidence-bound Castellan/Rector boundary.
+
+### DR-092 — Isolde Single-Turn Transport and Mission-Inquiry Correction
+
+Status: answer-provenance and refusal-transition portions superseded by DR-093; preserved admission history.
 Path: `deliberations/DR-092.md`
 
-Blackquill returns `ACCEPTABLE` for the corrected Isolde boundary.
+Blackquill returns `ACCEPTABLE` for the corrected Isolde boundary preserved by DR-093.
 
 ### DR-091 — Rector, Resident Castellan Officer
 

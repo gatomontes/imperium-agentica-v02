@@ -21,6 +21,9 @@ DR-091 admits Rector as Castellan's resident Officer and makes Rector's exact
 governed predicate interpretation mandatory for candidate mission formation.
 DR-092 corrects the inquiry loop to one question and one exact raw response per
 turn: Isolde transports; Rector assesses; Castellan alone advances or requeries.
+DR-093 binds every accepted predicate value to exact Operator-answer evidence,
+hardens all three formation boundaries, removes the unenacted refusal state,
+and revalidates the affected Offices and resident Officers.
 No provider, model, credential mechanism, deployment, supervision, Runtime, or
 external effect is authorized.
 

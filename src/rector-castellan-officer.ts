@@ -9,7 +9,7 @@ import { MissionDossier, SecretariatDossierHandoff } from "./secretariat-mission
 
 export interface RectorCognitiveDraft { determinations: PredicateDetermination[]; }
 export interface RectorPredicateInterpretation { officerPersonaRef: string; dossierRef: string; handoffRef: string; determinations: PredicateDetermination[]; researchPerformed: false; judgmentRendered: false; authorityCreated: false; }
-export interface RectorCognitivePort { assessMissionPredicates(dossier: MissionDossier): RectorCognitiveDraft; }
+export interface RectorCognitivePort { assessMissionPredicates(dossier: MissionDossier, sourceAnswerRef: string): RectorCognitiveDraft; }
 
 const officerRef = ADMITTED_RECTOR.identity + "@" + ADMITTED_RECTOR.version;
 const officeProfileRef = ADMITTED_CASTELLAN_PROFILE.identity + "@" + ADMITTED_CASTELLAN_PROFILE.version;
@@ -28,7 +28,7 @@ export class RectorCastellanOfficer {
 
   evaluateHandoff(dossier: GovernedArtifactEnvelope<MissionDossier>, handoff: GovernedArtifactEnvelope<SecretariatDossierHandoff>, context: ArtifactContext = {}) {
     assertCastellanHandoffReceipt(dossier, handoff);
-    const draft = this.cognition.assessMissionPredicates(structuredClone(dossier.payload));
+    const draft = this.cognition.assessMissionPredicates(structuredClone(dossier.payload), ref(dossier) + "#answer:" + dossier.payload.answers.at(-1)!.questionId);
     const governance = governed([["LEX-049", "officer"], ["LEX-012", "castellan"], ["LEX-060", "cognitive_process"], ["LEX-063", "mission_formation"]]); gate.assertGovernance(governance);
     const interpretation = createGovernedArtifact<RectorPredicateInterpretation>("RectorPredicateInterpretation", "Rector", dossier.correlationId, { officerPersonaRef: officerRef, dossierRef: ref(dossier), handoffRef: ref(handoff), determinations: draft.determinations, researchPerformed: false, judgmentRendered: false, authorityCreated: false }, governance, [officerRef, officeProfileRef, ref(dossier), ref(handoff), doctrineRef, lexiconRef], context);
     const assessment = this.operatingLayer.recordAssessment(dossier, handoff, interpretation, context);
