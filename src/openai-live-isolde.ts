@@ -2,17 +2,18 @@ import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { GovernedArtifactEnvelope } from "./artifact.js";
 import { IsoldeSecretariatOfficer } from "./isolde-secretariat-officer.js";
-import { RectorCastellanOfficer } from "./rector-castellan-officer.js";
-import { CastellanInquiry, IsoldeQuestionPresentation, MissionDossier } from "./secretariat-mission-dossier.js";
+import { MissionSpecificationCandidate, PredicateDetermination } from "./castellan-mission-formation.js";
+import { RectorCastellanOfficer, RectorCognitiveDraft } from "./rector-castellan-officer.js";
+import { CastellanInquiry, CastellanTurnDisposition, IsoldeQuestionPresentation, MissionDossier } from "./secretariat-mission-dossier.js";
 
 export interface LiveIsoldeAuditEvent {
-  stage: "LOCKSMITH_READY" | "MASTER_MASON_OPENED" | "ISOLDE_PRESENTED" | "MASTER_MASON_CLOSED";
+  stage: "LOCKSMITH_READY" | "MASTER_MASON_OPENED" | "ISOLDE_PRESENTED" | "CASTELLAN_EVALUATED" | "MISSION_INTAKE_COMPLETE" | "MASTER_MASON_CLOSED";
   correlationId: string;
   credentialPresent: boolean;
   credentialExposedToIsolde: false;
   providerCalled: boolean;
   missionExecuted: false;
-  responseEvaluated: false;
+  responseEvaluated: boolean;
 }
 
 export interface OpenAITransportRequest {
@@ -31,6 +32,23 @@ export interface OpenAITransportResult {
 export interface LocksmithOpenAIAccessPort {
   readonly configured: true;
   transportQuestion(request: OpenAITransportRequest): Promise<OpenAITransportResult>;
+  assessAnswer(request: LiveAnswerAssessmentRequest): Promise<LiveAnswerAssessmentResult>;
+}
+
+export interface LiveAnswerAssessmentRequest {
+  correlationId: string;
+  questionId: string;
+  predicate: MissionDossier["presentedQuestions"][number]["predicate"];
+  exactQuestion: string;
+  rawAnswer: string;
+  sourceAnswerRef: string;
+}
+
+export interface LiveAnswerAssessmentResult {
+  responseId: string;
+  provider: "openai" | "deepseek";
+  model: string;
+  draft: RectorCognitiveDraft;
 }
 
 export interface LiveIsoldeResult {
@@ -41,6 +59,15 @@ export interface LiveIsoldeResult {
   providerResponseId: string;
   provider: "openai" | "deepseek";
   model: string;
+  audit: LiveIsoldeAuditEvent[];
+}
+
+export interface LiveIsoldeConversationResult {
+  dossier: GovernedArtifactEnvelope<MissionDossier>;
+  candidate: GovernedArtifactEnvelope<MissionSpecificationCandidate>;
+  provider: "openai" | "deepseek";
+  model: string;
+  turns: number;
   audit: LiveIsoldeAuditEvent[];
 }
 
@@ -96,6 +123,16 @@ export async function openLocksmithOpenAIAccess({
       if (typeof payload.id !== "string" || !payload.id.trim()) throw new Error("OpenAI response identity is missing");
       return { responseId: payload.id, provider: "openai", model, exactQuestion: parsed.exact_question };
     },
+    async assessAnswer(request: LiveAnswerAssessmentRequest): Promise<LiveAnswerAssessmentResult> {
+      const response = await fetchImplementation("https://api.openai.com/v1/responses", {
+        method: "POST", headers: { Authorization: `Bearer ${credential}`, "Content-Type": "application/json" },
+        body: JSON.stringify({ model, store: false, max_output_tokens: 512, instructions: assessmentInstructions(), input: JSON.stringify(request), text: { format: { type: "json_schema", name: "rector_predicate_assessment", strict: true, schema: assessmentSchema() } } }),
+      });
+      const payload = await response.json() as Record<string, unknown>;
+      if (!response.ok) throw providerFailure("OpenAI", response, payload);
+      if (payload.status !== "completed") throw new Error("OpenAI assessment did not complete");
+      return assessmentResult(payload.id, extractOutputText(payload), "openai", model, request);
+    },
   });
 }
 
@@ -148,6 +185,16 @@ export async function openLocksmithDeepSeekAccess({
       if (typeof payload.id !== "string" || !payload.id.trim()) throw new Error("DeepSeek response identity is missing");
       return { responseId: payload.id, provider: "deepseek", model, exactQuestion: parsed.exact_question };
     },
+    async assessAnswer(request: LiveAnswerAssessmentRequest): Promise<LiveAnswerAssessmentResult> {
+      const response = await fetchImplementation("https://api.deepseek.com/chat/completions", {
+        method: "POST", headers: { Authorization: `Bearer ${credential}`, "Content-Type": "application/json" },
+        body: JSON.stringify({ model, messages: [{ role: "system", content: assessmentInstructions() }, { role: "user", content: JSON.stringify(request) }], thinking: { type: "disabled" }, temperature: 0, max_tokens: 512, response_format: { type: "json_object" } }),
+      });
+      const payload = await response.json() as Record<string, unknown>;
+      if (!response.ok) throw providerFailure("DeepSeek", response, payload);
+      const content = deepSeekContent(payload);
+      return assessmentResult(payload.id, content, "deepseek", model, request);
+    },
   });
 }
 
@@ -187,11 +234,57 @@ export class MasterMasonLiveIsoldeSession {
     audit.push(event("MASTER_MASON_CLOSED", correlationId, true, true));
     return { dossier: presented.dossier, inquiry, presentation: presented.presentation, exactQuestion: transported.exactQuestion, providerResponseId: transported.responseId, provider: transported.provider, model: transported.model, audit };
   }
+
+  async runConversation(operatorRef: string, operatorText: string, correlationId: string, receiveAnswer: (question: string) => Promise<string>): Promise<LiveIsoldeConversationResult> {
+    if (!operatorRef.trim() || !operatorText.trim() || !correlationId.trim()) throw new Error("one authenticated Operator input and correlation identity are required");
+    const audit: LiveIsoldeAuditEvent[] = [event("LOCKSMITH_READY", correlationId, true, false), event("MASTER_MASON_OPENED", correlationId, true, false)];
+    let dossier = this.isolde.openMission(operatorRef, operatorText, correlationId);
+    let turns = 0;
+    let provider: "openai" | "deepseek" | undefined;
+    let model: string | undefined;
+    while (true) {
+      const next = this.rector.initiateInquiry(dossier);
+      if (next.artifactType === "MissionSpecificationCandidate") {
+        audit.push(event("MISSION_INTAKE_COMPLETE", correlationId, true, true, true));
+        audit.push(event("MASTER_MASON_CLOSED", correlationId, true, true, true));
+        return { dossier, candidate: next as GovernedArtifactEnvelope<MissionSpecificationCandidate>, provider: provider!, model: model!, turns, audit };
+      }
+      if (next.artifactType !== "CastellanInquiry") throw new Error("Castellan returned an invalid conversation state");
+      const inquiry = next as GovernedArtifactEnvelope<CastellanInquiry>;
+      const transported = await this.access.transportQuestion({ correlationId, operatorText, exactCastellanQuestion: inquiry.payload.question.exactQuestion });
+      provider = transported.provider; model = transported.model;
+      const presented = this.isolde.presentQuestion(dossier, inquiry);
+      dossier = presented.dossier; turns++;
+      audit.push(event("ISOLDE_PRESENTED", correlationId, true, true));
+      const rawAnswer = await receiveAnswer(transported.exactQuestion);
+      const response = this.isolde.recordResponse(dossier, rawAnswer);
+      const sourceAnswerRef = `${response.dossier.identity}@${response.dossier.version}#answer:${inquiry.payload.question.questionId}`;
+      const assessed = await this.access.assessAnswer({ correlationId, questionId: inquiry.payload.question.questionId, predicate: inquiry.payload.question.predicate, exactQuestion: inquiry.payload.question.exactQuestion, rawAnswer, sourceAnswerRef });
+      const rector = new RectorCastellanOfficer({ assessMissionPredicates: () => assessed.draft });
+      const evaluated = rector.evaluateHandoff(response.dossier, response.handoff);
+      if (evaluated.result.artifactType !== "CastellanTurnDisposition") throw new Error("Castellan must dispose exactly one answered turn");
+      dossier = this.isolde.relayDisposition(response.dossier, evaluated.result as GovernedArtifactEnvelope<CastellanTurnDisposition>).dossier;
+      audit.push(event("CASTELLAN_EVALUATED", correlationId, true, true, true));
+    }
+  }
 }
 
-function event(stage: LiveIsoldeAuditEvent["stage"], correlationId: string, credentialPresent: boolean, providerCalled: boolean): LiveIsoldeAuditEvent {
-  return { stage, correlationId, credentialPresent, credentialExposedToIsolde: false, providerCalled, missionExecuted: false, responseEvaluated: false };
+function event(stage: LiveIsoldeAuditEvent["stage"], correlationId: string, credentialPresent: boolean, providerCalled: boolean, responseEvaluated = false): LiveIsoldeAuditEvent {
+  return { stage, correlationId, credentialPresent, credentialExposedToIsolde: false, providerCalled, missionExecuted: false, responseEvaluated };
 }
+
+function assessmentInstructions(): string { return "You are Rector, the admitted Castellan Officer. Assess only the one active question against the exact Operator answer. Castellan alone accepts, rejects, or requeries. Return JSON only. Use RESOLVED only when the answer directly answers the question; DECLARED_NONE only for an explicit none declaration where allowed; AMBIGUOUS when explanation is needed; CONTRADICTORY for incompatible statements; UNUSABLE for nonresponsive material. Never invent or normalize values: a RESOLVED value and its evidence excerpt must be one exact contiguous quotation from rawAnswer. Return one determination."; }
+function assessmentSchema(): Record<string, unknown> { return { type: "object", properties: { disposition: { type: "string", enum: ["RESOLVED", "DECLARED_NONE", "AMBIGUOUS", "CONTRADICTORY", "UNUSABLE"] }, exact_excerpt: { type: "string" }, rationale: { type: "string" } }, required: ["disposition", "exact_excerpt", "rationale"], additionalProperties: false }; }
+function assessmentResult(id: unknown, content: string, provider: "openai" | "deepseek", model: string, request: LiveAnswerAssessmentRequest): LiveAnswerAssessmentResult {
+  if (typeof id !== "string" || !id.trim()) throw new Error(`${provider} assessment response identity is missing`);
+  const parsed = JSON.parse(content) as { disposition?: PredicateDetermination["disposition"]; exact_excerpt?: string; rationale?: string };
+  const allowed = new Set(["RESOLVED", "DECLARED_NONE", "AMBIGUOUS", "CONTRADICTORY", "UNUSABLE"]);
+  if (!parsed.disposition || !allowed.has(parsed.disposition) || typeof parsed.exact_excerpt !== "string" || !parsed.exact_excerpt.trim() || !request.rawAnswer.includes(parsed.exact_excerpt) || typeof parsed.rationale !== "string" || !parsed.rationale.trim()) throw new Error(`${provider} returned an invalid Rector assessment`);
+  const hasValue = parsed.disposition === "RESOLVED";
+  const determination: PredicateDetermination = { questionId: request.questionId, predicate: request.predicate, disposition: parsed.disposition, values: hasValue ? [parsed.exact_excerpt] : [], rationale: parsed.rationale, sourceAnswerRef: request.sourceAnswerRef, evidence: [{ exactExcerpt: parsed.exact_excerpt, derivation: "QUOTED", value: hasValue ? parsed.exact_excerpt : undefined, rationale: parsed.rationale }] };
+  return { responseId: id, provider, model, draft: { determinations: [determination] } };
+}
+function deepSeekContent(payload: Record<string, unknown>): string { const choice = Array.isArray(payload.choices) ? payload.choices[0] : undefined; const message = choice && typeof choice === "object" ? (choice as { message?: unknown }).message : undefined; const content = message && typeof message === "object" ? (message as { content?: unknown }).content : undefined; if (typeof content !== "string" || !content.trim()) throw new Error("DeepSeek response has no text output"); return content; }
 
 async function readCredential(directory: string, environment: NodeJS.ProcessEnv, keyName = "OPENAI_API_KEY"): Promise<string | undefined> {
   const injected = environment[keyName]?.trim();
