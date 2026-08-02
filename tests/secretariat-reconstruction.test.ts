@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { createArtifact } from "../src/artifact.js";
-import { ENACTED_CORE_DOCTRINE_V2 } from "../src/enacted-core-doctrine-v2.js";
+import { ENACTED_CORE_DOCTRINE_V3 } from "../src/enacted-core-doctrine-v3.js";
 import {
   ADMITTED_SECRETARIAT_PROFILE,
   SECRETARIAT_PROFILE_ADMISSION_DECISION,
@@ -37,7 +37,7 @@ function inquiryFor(dossier = open()) {
 describe("Secretariat reconstruction", () => {
   it("admits a complete exact-v2 Office Profile through Tribunalis and the assigned Senator", () => {
     expect(SECRETARIAT_PROFILE_CANDIDATE.payload.applications).toHaveLength(19);
-    expect(SECRETARIAT_PROFILE_CANDIDATE.payload.coreDoctrineRef).toBe(ENACTED_CORE_DOCTRINE_V2.doctrine.identity + "@2");
+    expect(SECRETARIAT_PROFILE_CANDIDATE.payload.coreDoctrineRef).toBe(ENACTED_CORE_DOCTRINE_V3.doctrine.identity + "@3");
     expect(SECRETARIAT_PROFILE_JUDGMENT).toMatchObject({ producer: "Tribunalis", payload: { result: "ACCEPTABLE" } });
     expect(SECRETARIAT_PROFILE_ADMISSION_DECISION.producer).toBe("Senator:senator-core-doctrine-001");
     expect(ADMITTED_SECRETARIAT_PROFILE).toMatchObject({ version: 2, payload: { state: "ADMITTED" } });
@@ -52,6 +52,7 @@ describe("Secretariat reconstruction", () => {
     expect(dossier.payload.externalObligationAssertions).toEqual(["Customer data may be regulated"]);
     expect(dossier.payload.state).toBe("AWAITING_CASTELLAN_INQUIRY");
     expect(dossier.payload.officeProfileRef).toBe(ADMITTED_SECRETARIAT_PROFILE.identity + "@2");
+    expect(dossier.payload.lexiconRef).toBe("imperiumlexicon-core-v1@1");
   });
 
   it("presents only exact Castellan questions and preserves their semantics", () => {

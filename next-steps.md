@@ -2,7 +2,7 @@
 
 ## Active Post-Reset Queue
 
-1. Reconstruct Secretariat's exact Core Doctrine v2 Office Profile.
+1. Reconstruct Secretariat's exact Core Doctrine Office Profile (completed and revalidated against v3/Lexicon v1 by DR-077).
 2. Obtain Tribunalis conformance judgment.
 3. Obtain admission from `senator-core-doctrine-001` under exact authority.
 4. Only then assess reusable Secretariat implementation against the admitted
@@ -383,7 +383,9 @@ active profile or existing artifacts.
 5. Enact Core Doctrine v1 through Senate.
 6. Define and pressure-test the Office Doctrine Profile contract.
 7. Reconstruct Secretariat as the first downstream Office.
-8. Reconstruct Castellan as the internal mission orchestrator, beginning with
+8. Enact the Senate-owned Imperium Lexicon, make it controlling through Core
+   Doctrine v3, and revalidate Secretariat.
+9. Reconstruct Castellan as the internal mission orchestrator, beginning with
    evaluation of an exact current Secretariat dossier and generation of bounded
    clarification inquiries.
 

@@ -359,6 +359,9 @@ DR-060 passed 28/28 synthetic cross-contract reconciliation criteria and is admi
 - DR-072: `DR-072.md` — supersedes v1 with Blackquill-corrected Core Doctrine v2 and mandates revalidation of all affected profiles and v1-dependent surfaces.
 - DR-073: `DR-073.md` — admits Office Doctrine Profile Contract v1; complete exact-v2 derivation, Tribunalis judgment, and assigned-Senator admission are required before Office reconstruction.
 - DR-074: `DR-074.md` — admits the Secretariat Office Profile v1 and bounded Mission Dossier intake/inquiry reconstruction; Secretariat does not form missions or acquire research, judgment, deployment, supervision, or execution authority.
+- DR-075: `DR-075.md` — enacts Imperium Lexicon v1 as the Senate-owned canonical vocabulary and prohibits Office dialects.
+- DR-076: `DR-076.md` — enacts Core Doctrine v3, making exact Lexicon v1 controlling and requiring mandatory revalidation.
+- DR-077: `DR-077.md` — revalidates Secretariat against Core Doctrine v3 and Lexicon v1 without expanding its jurisdiction.
 
 
 ### DR-064 — Foundry Input and Conflict Revalidation
