@@ -35,7 +35,7 @@ describe("Core Doctrine v1 bill pressure boundary", () => {
   });
 
   it("enacts only through Senate with an assigned Senator", () => {
-    const senate = new Senate();
+    const senate = new Senate("coredoctrine-core-v1@1#embedded-controlling-definitions");
     const result = senate.enact(
       coreDoctrineV1Bill(
         "senate-decision-core-v1@1",
@@ -60,7 +60,7 @@ describe("Core Doctrine v1 bill pressure boundary", () => {
   });
 
   it("keeps Citadel and Colosseum conformance independent", () => {
-    const result = new Senate().enact(
+    const result = new Senate("coredoctrine-core-v1@1#embedded-controlling-definitions").enact(
       coreDoctrineV1Bill(
         "senate-decision-core-v1@1",
         "senator-cassian-001",

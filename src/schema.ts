@@ -26,6 +26,17 @@ const artifactEnvelopeSchema = {
     sourceRefs: { type: "array", items: { type: "string" } },
     supersedes: { type: "string" },
     invalidationReason: { type: "string" },
+    governance: {
+      type: "object",
+      required: ["coreDoctrineRef", "lexiconRef", "officeProfileRef", "vocabularyUses"],
+      properties: {
+        coreDoctrineRef: { type: "string", minLength: 1 },
+        lexiconRef: { type: "string", minLength: 1 },
+        officeProfileRef: { type: "string", minLength: 1 },
+        vocabularyUses: { type: "array", minItems: 1, items: { type: "object", required: ["termId", "lexiconRef", "value"], properties: { termId: { type: "string", minLength: 1 }, lexiconRef: { type: "string", minLength: 1 }, value: { type: "string", minLength: 1 } }, additionalProperties: false } },
+      },
+      additionalProperties: false,
+    },
   },
   additionalProperties: false,
 } as const;

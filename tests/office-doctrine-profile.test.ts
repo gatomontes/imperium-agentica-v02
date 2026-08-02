@@ -11,6 +11,7 @@ import {
 
 const contract = new OfficeDoctrineProfileContract(
   ENACTED_CORE_DOCTRINE_V2.doctrine.identity + "@2",
+  ENACTED_CORE_DOCTRINE_V2.doctrine.payload.lexiconRef,
 );
 
 const profileDraft = (

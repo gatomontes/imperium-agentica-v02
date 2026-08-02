@@ -362,6 +362,9 @@ DR-060 passed 28/28 synthetic cross-contract reconciliation criteria and is admi
 - DR-075: `DR-075.md` — enacts Imperium Lexicon v1 as the Senate-owned canonical vocabulary and prohibits Office dialects.
 - DR-076: `DR-076.md` — enacts Core Doctrine v3, making exact Lexicon v1 controlling and requiring mandatory revalidation.
 - DR-077: `DR-077.md` — revalidates Secretariat against Core Doctrine v3 and Lexicon v1 without expanding its jurisdiction.
+- DR-078: `DR-078.md` — enacts Lexicon v2 enforcement corrections for mandatory lineage, bound consumers, contextual aliases, exact snake_case values, legislative authority, amendment impact, and live conformance gates.
+- DR-079: `DR-079.md` — enacts Core Doctrine v4 with exact controlling Lexicon v2 pointer.
+- DR-080: `DR-080.md` — revalidates Secretariat against Doctrine v4 and Lexicon v2 without expanding jurisdiction.
 
 
 ### DR-064 — Foundry Input and Conflict Revalidation

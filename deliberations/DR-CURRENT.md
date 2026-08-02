@@ -2,9 +2,27 @@
 
 ## Constitutional controlling decisions
 
-### DR-077 — Secretariat Lexicon and Doctrine v3 Revalidation
+### DR-080 — Secretariat Lexicon v2 and Doctrine v4 Revalidation
 
 Status: active admitted applied-doctrine contract.
+Path: `deliberations/DR-080.md`
+
+### DR-079 — Core Imperium Doctrine v4 Enactment
+
+Status: active current constitutional doctrine.
+Path: `deliberations/DR-079.md`
+
+### DR-078 — Imperium Lexicon v2 Enforcement Corrections
+
+Status: active current canonical vocabulary and enforcement contract.
+Path: `deliberations/DR-078.md`
+
+Blackquill returns `ACCEPTABLE_WITH_CONDITIONS` for the seven selected
+enforcement corrections. Residual semantic-inventory conditions remain open.
+
+### DR-077 — Secretariat Lexicon and Doctrine v3 Revalidation
+
+Status: superseded by DR-080; preserved revalidation history.
 Path: `deliberations/DR-077.md`
 
 DR-077 revalidates the bounded Secretariat Mission Dossier surface against
@@ -12,14 +30,14 @@ exact Core Doctrine v3 and Imperium Lexicon v1 without expanding jurisdiction.
 
 ### DR-076 — Core Imperium Doctrine v3 Enactment
 
-Status: active current constitutional doctrine.
+Status: superseded by DR-079; preserved enactment history.
 Path: `deliberations/DR-076.md`
 
 DR-076 supersedes v2 and makes `imperiumlexicon-core-v1@1` controlling.
 
 ### DR-075 — Imperium Lexicon v1 Enactment
 
-Status: active current canonical vocabulary.
+Status: superseded by DR-078; preserved enactment history.
 Path: `deliberations/DR-075.md`
 
 DR-075 establishes one Senate-owned language across governed Imperium surfaces.
@@ -77,6 +95,9 @@ The active post-reset constitutional chain is:
 - DR-075 — Imperium Lexicon v1.
 - DR-076 — Core Doctrine v3.
 - DR-077 — revalidated bounded Secretariat reconstruction.
+- DR-078 — corrected Lexicon v2 enforcement contract.
+- DR-079 — Core Doctrine v4.
+- DR-080 — revalidated governed Secretariat surface.
 
 Every other pre-Senate implementation remains subject to the reset unless a
 later decision explicitly re-admits it.

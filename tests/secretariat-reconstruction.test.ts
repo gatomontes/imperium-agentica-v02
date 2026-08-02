@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { createArtifact } from "../src/artifact.js";
-import { ENACTED_CORE_DOCTRINE_V3 } from "../src/enacted-core-doctrine-v3.js";
+import { ENACTED_CORE_DOCTRINE_V4 } from "../src/enacted-core-doctrine-v4.js";
 import {
   ADMITTED_SECRETARIAT_PROFILE,
   SECRETARIAT_PROFILE_ADMISSION_DECISION,
@@ -37,7 +37,7 @@ function inquiryFor(dossier = open()) {
 describe("Secretariat reconstruction", () => {
   it("admits a complete exact-v2 Office Profile through Tribunalis and the assigned Senator", () => {
     expect(SECRETARIAT_PROFILE_CANDIDATE.payload.applications).toHaveLength(19);
-    expect(SECRETARIAT_PROFILE_CANDIDATE.payload.coreDoctrineRef).toBe(ENACTED_CORE_DOCTRINE_V3.doctrine.identity + "@3");
+    expect(SECRETARIAT_PROFILE_CANDIDATE.payload.coreDoctrineRef).toBe(ENACTED_CORE_DOCTRINE_V4.doctrine.identity + "@4");
     expect(SECRETARIAT_PROFILE_JUDGMENT).toMatchObject({ producer: "Tribunalis", payload: { result: "ACCEPTABLE" } });
     expect(SECRETARIAT_PROFILE_ADMISSION_DECISION.producer).toBe("Senator:senator-core-doctrine-001");
     expect(ADMITTED_SECRETARIAT_PROFILE).toMatchObject({ version: 2, payload: { state: "ADMITTED" } });
@@ -52,7 +52,16 @@ describe("Secretariat reconstruction", () => {
     expect(dossier.payload.externalObligationAssertions).toEqual(["Customer data may be regulated"]);
     expect(dossier.payload.state).toBe("AWAITING_CASTELLAN_INQUIRY");
     expect(dossier.payload.officeProfileRef).toBe(ADMITTED_SECRETARIAT_PROFILE.identity + "@2");
-    expect(dossier.payload.lexiconRef).toBe("imperiumlexicon-core-v1@1");
+    expect(dossier.payload.lexiconRef).toBe("imperiumlexicon-core-v1@2");
+    expect(dossier.governance).toMatchObject({
+      coreDoctrineRef: "coredoctrine-core-v1@4",
+      lexiconRef: "imperiumlexicon-core-v1@2",
+      officeProfileRef: ADMITTED_SECRETARIAT_PROFILE.identity + "@2",
+      vocabularyUses: expect.arrayContaining([
+        { termId: "LEX-009", lexiconRef: "imperiumlexicon-core-v1@2", value: "mission_dossier" },
+        { termId: "LEX-011", lexiconRef: "imperiumlexicon-core-v1@2", value: "secretariat" },
+      ]),
+    });
   });
 
   it("presents only exact Castellan questions and preserves their semantics", () => {
@@ -100,6 +109,8 @@ describe("Secretariat reconstruction", () => {
     expect(() => intake.recordAnswers(presented, [{ questionId: "Q-X", rawAnswer: "No" }])).toThrow("answer does not match a presented question");
     expect(() => intake.recordAnswers(presented, [{ questionId: "Q-1", rawAnswer: "A" }, { questionId: "Q-1", rawAnswer: "B" }])).toThrow("duplicate answer for question");
     expect(() => intake.presentInquiry(dossier, { ...inquiryFor(dossier), status: "SUPERSEDED" })).toThrow("exact current Castellan inquiry is required");
+    const dialect = { ...dossier, governance: { ...dossier.governance, vocabularyUses: dossier.governance.vocabularyUses.map((use) => use.termId === "LEX-011" ? { ...use, value: "Secretariat" } : use) } };
+    expect(() => intake.presentInquiry(dialect, inquiryFor(dialect))).toThrow("exact canonical snake_case");
   });
 
   it("exposes no research, judgment, deployment, supervision, or execution operation", () => {

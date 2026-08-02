@@ -17,12 +17,13 @@ const bill = (overrides: Partial<DoctrineBill> = {}): DoctrineBill => ({
   affectedOfficeProfiles: ["Tribunalis", "Studium", "Castellan"],
   assignedSenatorId: "senator-cassian-001",
   transitionRule: "PROSPECTIVE_ADOPTION",
+  lexiconRef: "test-vocabulary@1",
   ...overrides,
 });
 
 describe("Senate Core Doctrine stewardship", () => {
   it("enacts versioned Core Doctrine and emits a propagation notice", () => {
-    const result = new Senate().enact(bill(), "legislation-001", {
+    const result = new Senate("test-vocabulary@1").enact(bill(), "legislation-001", {
       identityFactory: (prefix) => prefix + "-001",
       now: () => "2026-08-01T22:30:00.000Z",
     });
@@ -51,7 +52,7 @@ describe("Senate Core Doctrine stewardship", () => {
   });
 
   it("assigns cognitive propagation to one Senator without transferring legislation", () => {
-    const result = new Senate().enact(bill(), "legislation-005", {
+    const result = new Senate("test-vocabulary@1").enact(bill(), "legislation-005", {
       identityFactory: (prefix) => prefix + "-005",
     });
     const senator = new Senator("senator-cassian-001");
@@ -91,7 +92,7 @@ describe("Senate Core Doctrine stewardship", () => {
   });
 
   it("keeps unresolved propagation open and refuses unsupported closure evidence", () => {
-    const result = new Senate().enact(bill(), "legislation-006");
+    const result = new Senate("test-vocabulary@1").enact(bill(), "legislation-006");
     const senator = new Senator("senator-cassian-001");
     const dossier = senator.assessPropagation(
       result.propagation,
@@ -128,7 +129,7 @@ describe("Senate Core Doctrine stewardship", () => {
   });
 
   it("does not claim closure readiness without evidenced impact coverage", () => {
-    const result = new Senate().enact(bill(), "legislation-007");
+    const result = new Senate("test-vocabulary@1").enact(bill(), "legislation-007");
     const senator = new Senator("senator-cassian-001");
     const dossier = senator.assessPropagation(
       result.propagation,
@@ -151,7 +152,7 @@ describe("Senate Core Doctrine stewardship", () => {
   });
 
   it("amends only exact current Senate-enacted doctrine", () => {
-    const senate = new Senate();
+    const senate = new Senate("test-vocabulary@1");
     const first = senate.enact(bill(), "legislation-002").doctrine;
     const result = senate.amend(
       first,
@@ -188,7 +189,7 @@ describe("Senate Core Doctrine stewardship", () => {
   });
 
   it("refuses legislation without complete authority and provisions", () => {
-    const senate = new Senate();
+    const senate = new Senate("test-vocabulary@1");
     expect(() =>
       senate.enact(bill({ senateDecisionRef: "" }), "legislation-003"),
     ).toThrow("Senate decision reference is required");

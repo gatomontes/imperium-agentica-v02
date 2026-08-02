@@ -1,5 +1,7 @@
 import { DoctrineBill, CoreDoctrineProvision } from "./senate.js";
 
+export const CORE_DOCTRINE_V2_VOCABULARY_REF = "coredoctrine-core-v1@2#embedded-controlling-definitions";
+
 export const CORE_DOCTRINE_V2_PROVISIONS: readonly CoreDoctrineProvision[] = [
   {
     provisionId: "CORE-000",
@@ -113,5 +115,6 @@ export function coreDoctrineV2Bill(
     affectedOfficeProfiles: ["ALL"],
     assignedSenatorId,
     transitionRule: "MANDATORY_REVALIDATION",
+    lexiconRef: CORE_DOCTRINE_V2_VOCABULARY_REF,
   };
 }

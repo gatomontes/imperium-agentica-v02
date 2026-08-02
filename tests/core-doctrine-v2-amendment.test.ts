@@ -12,7 +12,7 @@ describe("Blackquill Core Doctrine v2 amendment", () => {
   });
 
   it("amends v1 as edition two with mandatory revalidation", () => {
-    const result = new Senate().amend(
+    const result = new Senate("coredoctrine-core-v1@2#embedded-controlling-definitions").amend(
       ENACTED_CORE_DOCTRINE_V1.doctrine,
       coreDoctrineV2Bill(
         "senate-decision-core-v2@1",

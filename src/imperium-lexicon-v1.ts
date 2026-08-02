@@ -1,4 +1,5 @@
-import { LexiconCategory, LexiconEntry, LexiconBill, SenateLexicon } from "./senate-lexicon.js";
+import { createArtifact } from "./artifact.js";
+import { LexiconCategory, LexiconEntry, LexiconBill, LexiconLegislativeAuthority, SenateLexicon } from "./senate-lexicon.js";
 
 export const IMPERIUM_LEXICON_V1_DECISION_REF = "DR-075";
 export const IMPERIUM_LEXICON_V1_ASSIGNED_SENATOR = "senator-core-doctrine-001";
@@ -8,6 +9,7 @@ function entry(termId: string, canonicalTerm: string, definition: string, catego
   return {
     termId,
     canonicalTerm,
+    canonicalValue: snakeCase(canonicalTerm),
     definition,
     category,
     permittedUses: ["Use with this exact meaning in every governed artifact, contract, schema, prompt, test, decision, and implementation surface."],
@@ -93,11 +95,26 @@ export function imperiumLexiconV1Bill(): LexiconBill {
     affectedSurfaces: ["ALL"],
     assignedSenatorId: IMPERIUM_LEXICON_V1_ASSIGNED_SENATOR,
     transitionRule: "MANDATORY_REVALIDATION",
+    changes: IMPERIUM_LEXICON_V1_ENTRIES.map((item) => ({ termId: item.termId, kind: "ADDITION", compatibility: "REVALIDATION_REQUIRED", rationale: "Initial canonical admission of " + item.canonicalTerm + ".", affectedSurfaces: ["ALL"], evidenceRefs: ["tests/doctrine/imperium-lexicon-pressure-review-001.md"] })),
   };
 }
 
-export const ENACTED_IMPERIUM_LEXICON_V1 = new SenateLexicon().enact(
+export const IMPERIUM_LEXICON_V1_AUTHORITY = createArtifact<LexiconLegislativeAuthority>(
+  "LexiconLegislativeAuthority",
+  "Senate",
+  "imperium-lexicon-v1",
+  { decisionRef: IMPERIUM_LEXICON_V1_DECISION_REF, action: "ENACT", authorityBasisRef: "DR-069#senate-lexicon-jurisdiction", authorityFindingRef: "DR-075#authority-effective", disposition: "AUTHORIZE" },
+  ["DR-069#senate-lexicon-jurisdiction", "DR-075#authority-effective"],
+  { identityFactory: (prefix) => prefix + "-v1", now: () => IMPERIUM_LEXICON_V1_EFFECTIVE_AT },
+);
+
+export const ENACTED_IMPERIUM_LEXICON_V1 = new SenateLexicon(IMPERIUM_LEXICON_V1_AUTHORITY.identity + "@" + IMPERIUM_LEXICON_V1_AUTHORITY.version).enact(
   imperiumLexiconV1Bill(),
+  IMPERIUM_LEXICON_V1_AUTHORITY,
   "imperium-lexicon-v1",
   { identityFactory: (prefix) => prefix + "-core-v1", now: () => IMPERIUM_LEXICON_V1_EFFECTIVE_AT },
 );
+
+function snakeCase(value: string): string {
+  return value.replace(/([a-z0-9])([A-Z])/g, "$1_$2").replace(/[^A-Za-z0-9]+/g, "_").replace(/^_+|_+$/g, "").toLowerCase();
+}
