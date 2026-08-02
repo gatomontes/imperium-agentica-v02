@@ -2,19 +2,39 @@
 
 ## Constitutional controlling decisions
 
-### DR-083 — Secretariat and Office Terminology-Gate Revalidation
+### DR-090 — Cognitionist Office Profile and Connection Contract
 
 Status: active admitted applied-doctrine contract.
+Path: `deliberations/DR-090.md`
+
+### DR-089 — Doctrine v6 and Lexicon v4 Dependent Revalidation
+
+Status: active admitted revalidation.
+Path: `deliberations/DR-089.md`
+
+### DR-088 — Core Imperium Doctrine v6
+
+Status: active current constitutional doctrine.
+Path: `deliberations/DR-088.md`
+
+### DR-087 — Imperium Lexicon v4 Cognitive-Medium Vocabulary
+
+Status: active current canonical vocabulary.
+Path: `deliberations/DR-087.md`
+
+### DR-083 — Secretariat and Office Terminology-Gate Revalidation
+
+Status: profile revalidation superseded by DR-089; future-Office terminology-gate requirement remains active.
 Path: `deliberations/DR-083.md`
 
 ### DR-082 — Core Imperium Doctrine v5
 
-Status: active current constitutional doctrine.
+Status: superseded by DR-088; preserved enactment history.
 Path: `deliberations/DR-082.md`
 
 ### DR-081 — Imperium Lexicon v3 Semantic Closure
 
-Status: active current canonical vocabulary.
+Status: superseded by DR-087; preserved enactment history.
 Path: `deliberations/DR-081.md`
 
 Blackquill returns `ACCEPTABLE` for bounded semantic closure.

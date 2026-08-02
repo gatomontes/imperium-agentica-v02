@@ -22,9 +22,9 @@ function asInquiry(value: ReturnType<CastellanMissionFormation["evaluate"]>) { i
 describe("Isolde, resident Secretariat Officer", () => {
   it("admits an exact Office-bound Persona under Imperator authority", () => {
     expect(ISOLDE_CANDIDATE.payload).toMatchObject({ officerId: "isolde", displayName: "Isolde", officeId: "Secretariat", role: "RESIDENT_OFFICER", state: "CANDIDATE" });
-    expect(ISOLDE_CANDIDATE.governance.vocabularyUses).toEqual(expect.arrayContaining([{ termId: "LEX-021", value: "persona", lexiconRef: "imperiumlexicon-core-v1@3" }, { termId: "LEX-049", value: "officer", lexiconRef: "imperiumlexicon-core-v1@3" }]));
-    expect(ISOLDE_ADMISSION_DECISION).toMatchObject({ producer: "Imperator", payload: { disposition: "ADMIT", authorityRef: "DR-086#imperator-approval" } });
-    expect(ADMITTED_ISOLDE.payload).toMatchObject({ officerId: "isolde", state: "ADMITTED", officeProfileRef: "officedoctrineprofile-secretariat@2" });
+    expect(ISOLDE_CANDIDATE.governance.vocabularyUses).toEqual(expect.arrayContaining([{ termId: "LEX-021", value: "persona", lexiconRef: "imperiumlexicon-core-v1@4" }, { termId: "LEX-049", value: "officer", lexiconRef: "imperiumlexicon-core-v1@4" }]));
+    expect(ISOLDE_ADMISSION_DECISION).toMatchObject({ producer: "Imperator", payload: { disposition: "ADMIT", authorityRef: "DR-089#imperator-revalidation" } });
+    expect(ADMITTED_ISOLDE.payload).toMatchObject({ officerId: "isolde", state: "ADMITTED", officeProfileRef: "officedoctrineprofile-secretariat-v2@2" });
   });
 
   it("opens a dossier through a governed interpretation while preserving raw Operator language", () => {
