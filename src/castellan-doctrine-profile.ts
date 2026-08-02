@@ -2,12 +2,12 @@ import { createArtifact } from "./artifact.js";
 import { ENACTED_CORE_DOCTRINE_V6 } from "./enacted-core-doctrine-v6.js";
 import { OfficeDoctrineProfileAdmissionDecision, OfficeDoctrineProfileContract, OfficeDoctrineProfileDraft } from "./office-doctrine-profile.js";
 
-export const CASTELLAN_PROFILE_DECISION_REF = "DR-092";
+export const CASTELLAN_PROFILE_DECISION_REF = "DR-093";
 export const CASTELLAN_PROFILE_AUTHORITY_REF = "DR-073#office-profile-admission";
-export const CASTELLAN_PROFILE_EFFECTIVE_AT = "2026-08-03T08:00:00.000Z";
+export const CASTELLAN_PROFILE_EFFECTIVE_AT = "2026-08-03T12:00:00.000Z";
 const doctrineRef = ENACTED_CORE_DOCTRINE_V6.doctrine.identity + "@6";
 const evidenceRef = "tests/castellan-reconstruction.test.ts";
-const reviewRef = "reviews/castellan-blackquill-correction-review-001.md";
+const reviewRef = "reviews/castellan-blackquill-provenance-review-002.md";
 const contract = new OfficeDoctrineProfileContract(doctrineRef, ENACTED_CORE_DOCTRINE_V6.doctrine.payload.lexiconRef);
 
 const applications: Record<string, [string, string, string]> = {
@@ -33,7 +33,7 @@ const applications: Record<string, [string, string, string]> = {
 };
 
 export const CASTELLAN_PROFILE_DRAFT: OfficeDoctrineProfileDraft = {
-  officeId: "Castellan", arena: "CITADEL", title: "Castellan Office Doctrine Profile v4",
+  officeId: "Castellan", arena: "CITADEL", title: "Castellan Office Doctrine Profile v5",
   purpose: "Govern internal mission formation through mandatory intent inquiry, exact cognitive predicate assessment, bounded follow-up inquiry, and candidate Mission Specification production.",
   issuerAuthorityRef: CASTELLAN_PROFILE_AUTHORITY_REF,
   applications: ENACTED_CORE_DOCTRINE_V6.doctrine.payload.provisions.map((provision) => {
@@ -47,6 +47,6 @@ export const CASTELLAN_PROFILE_DRAFT: OfficeDoctrineProfileDraft = {
   terminologyGateEvidenceRefs: [evidenceRef],
 };
 
-export const CASTELLAN_PROFILE_CANDIDATE = contract.draft(ENACTED_CORE_DOCTRINE_V6.doctrine, CASTELLAN_PROFILE_DRAFT, "castellan-profile-004", { identityFactory: (p) => p + "-castellan-v4", now: () => CASTELLAN_PROFILE_EFFECTIVE_AT });
-export const CASTELLAN_PROFILE_ADMISSION_DECISION = createArtifact<OfficeDoctrineProfileAdmissionDecision>("OfficeDoctrineProfileAdmissionDecision", "Senator:" + CASTELLAN_PROFILE_CANDIDATE.payload.assignedSenatorId, CASTELLAN_PROFILE_CANDIDATE.correlationId, { profileCandidateRef: CASTELLAN_PROFILE_CANDIDATE.identity + "@1", conformanceEvidenceRefs: [evidenceRef, reviewRef], admissionAuthorityRef: CASTELLAN_PROFILE_AUTHORITY_REF, authorityFindingRef: CASTELLAN_PROFILE_DECISION_REF + "#authority-effective", disposition: "ADMIT" }, [CASTELLAN_PROFILE_CANDIDATE.identity + "@1", evidenceRef, reviewRef, CASTELLAN_PROFILE_AUTHORITY_REF, CASTELLAN_PROFILE_DECISION_REF + "#authority-effective"], { identityFactory: (p) => p + "-castellan-v4", now: () => CASTELLAN_PROFILE_EFFECTIVE_AT });
+export const CASTELLAN_PROFILE_CANDIDATE = contract.draft(ENACTED_CORE_DOCTRINE_V6.doctrine, CASTELLAN_PROFILE_DRAFT, "castellan-profile-005", { identityFactory: (p) => p + "-castellan-v5", now: () => CASTELLAN_PROFILE_EFFECTIVE_AT });
+export const CASTELLAN_PROFILE_ADMISSION_DECISION = createArtifact<OfficeDoctrineProfileAdmissionDecision>("OfficeDoctrineProfileAdmissionDecision", "Senator:" + CASTELLAN_PROFILE_CANDIDATE.payload.assignedSenatorId, CASTELLAN_PROFILE_CANDIDATE.correlationId, { profileCandidateRef: CASTELLAN_PROFILE_CANDIDATE.identity + "@1", conformanceEvidenceRefs: [evidenceRef, reviewRef], admissionAuthorityRef: CASTELLAN_PROFILE_AUTHORITY_REF, authorityFindingRef: CASTELLAN_PROFILE_DECISION_REF + "#authority-effective", disposition: "ADMIT" }, [CASTELLAN_PROFILE_CANDIDATE.identity + "@1", evidenceRef, reviewRef, CASTELLAN_PROFILE_AUTHORITY_REF, CASTELLAN_PROFILE_DECISION_REF + "#authority-effective"], { identityFactory: (p) => p + "-castellan-v5", now: () => CASTELLAN_PROFILE_EFFECTIVE_AT });
 export const ADMITTED_CASTELLAN_PROFILE = contract.admitByAssignedSenator(CASTELLAN_PROFILE_CANDIDATE, CASTELLAN_PROFILE_ADMISSION_DECISION);

@@ -7,10 +7,10 @@ import {
   OfficeDoctrineProfileJudgment,
 } from "./office-doctrine-profile.js";
 
-export const SECRETARIAT_PROFILE_DECISION_REF = "DR-092";
+export const SECRETARIAT_PROFILE_DECISION_REF = "DR-093";
 export const SECRETARIAT_PROFILE_AUTHORITY_REF = "DR-073#office-profile-admission";
 export const SECRETARIAT_PROFILE_STANDARD_REF = "secretariat-mission-intake-standard@1";
-export const SECRETARIAT_PROFILE_EFFECTIVE_AT = "2026-08-03T08:00:00.000Z";
+export const SECRETARIAT_PROFILE_EFFECTIVE_AT = "2026-08-03T12:00:00.000Z";
 
 const doctrineRef = ENACTED_CORE_DOCTRINE_V6.doctrine.identity + "@6";
 const contract = new OfficeDoctrineProfileContract(doctrineRef, ENACTED_CORE_DOCTRINE_V6.doctrine.payload.lexiconRef);
@@ -40,7 +40,7 @@ const rules: Record<string, [string, string, string, string]> = {
 export const SECRETARIAT_PROFILE_DRAFT: OfficeDoctrineProfileDraft = {
   officeId: "Secretariat",
   arena: "CITADEL",
-  title: "Secretariat Office Doctrine Profile v3",
+  title: "Secretariat Office Doctrine Profile v4",
   purpose: "Govern Operator-facing mission intake, Castellan inquiry presentation, answer recording, and exact handoff without mission formation or operational authority.",
   issuerAuthorityRef: SECRETARIAT_PROFILE_AUTHORITY_REF,
   applications: ENACTED_CORE_DOCTRINE_V6.doctrine.payload.provisions.map((provision) => {
@@ -72,8 +72,8 @@ export const SECRETARIAT_PROFILE_DRAFT: OfficeDoctrineProfileDraft = {
 export const SECRETARIAT_PROFILE_CANDIDATE = contract.draft(
   ENACTED_CORE_DOCTRINE_V6.doctrine,
   SECRETARIAT_PROFILE_DRAFT,
-  "secretariat-profile-001",
-  { identityFactory: (prefix) => prefix + "-secretariat-v3", now: () => SECRETARIAT_PROFILE_EFFECTIVE_AT },
+  "secretariat-profile-004",
+  { identityFactory: (prefix) => prefix + "-secretariat-v4", now: () => SECRETARIAT_PROFILE_EFFECTIVE_AT },
 );
 
 export const SECRETARIAT_PROFILE_JUDGMENT = createArtifact<OfficeDoctrineProfileJudgment>(
@@ -89,7 +89,7 @@ export const SECRETARIAT_PROFILE_JUDGMENT = createArtifact<OfficeDoctrineProfile
     findingRefs: ["tests/doctrine/lexicon-semantic-closure-review-001.md"],
   },
   [SECRETARIAT_PROFILE_CANDIDATE.identity + "@1", doctrineRef],
-  { identityFactory: (prefix) => prefix + "-secretariat-v3", now: () => SECRETARIAT_PROFILE_EFFECTIVE_AT },
+  { identityFactory: (prefix) => prefix + "-secretariat-v4", now: () => SECRETARIAT_PROFILE_EFFECTIVE_AT },
 );
 
 export const SECRETARIAT_PROFILE_ADMISSION_DECISION = createArtifact<OfficeDoctrineProfileAdmissionDecision>(
@@ -104,7 +104,7 @@ export const SECRETARIAT_PROFILE_ADMISSION_DECISION = createArtifact<OfficeDoctr
     disposition: "ADMIT",
   },
   [SECRETARIAT_PROFILE_CANDIDATE.identity + "@1", SECRETARIAT_PROFILE_JUDGMENT.identity + "@1", SECRETARIAT_PROFILE_AUTHORITY_REF, SECRETARIAT_PROFILE_DECISION_REF + "#authority-effective"],
-  { identityFactory: (prefix) => prefix + "-secretariat-v3", now: () => SECRETARIAT_PROFILE_EFFECTIVE_AT },
+  { identityFactory: (prefix) => prefix + "-secretariat-v4", now: () => SECRETARIAT_PROFILE_EFFECTIVE_AT },
 );
 
 export const ADMITTED_SECRETARIAT_PROFILE = contract.admit(

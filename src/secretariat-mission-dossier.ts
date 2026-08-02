@@ -4,15 +4,17 @@ import { ADMITTED_SECRETARIAT_PROFILE } from "./secretariat-doctrine-profile.js"
 import { LexiconAuthority, TerminologyConformanceGate } from "./senate-lexicon.js";
 import { assertArtifactEnvelope } from "./schema.js";
 
-export type MissionDossierState = "AWAITING_CASTELLAN_INQUIRY" | "AWAITING_OPERATOR" | "READY_FOR_CASTELLAN_EVALUATION" | "FORMATION_REFUSED";
+export type MissionDossierState = "AWAITING_CASTELLAN_INQUIRY" | "AWAITING_OPERATOR" | "READY_FOR_CASTELLAN_EVALUATION";
 export type MissionFormationPredicate = "purpose" | "scope" | "constraints" | "acceptance_criteria" | "requested_outputs" | "unknowns" | "material_contradictions" | "resource_requirements";
 export interface MissionIntentRequest { authenticatedOperatorRef: string; rawIntent: string; suppliedClaims?: string[]; assumptions?: string[]; authorityAssertions?: string[]; externalObligationAssertions?: string[]; attachmentRefs?: string[]; officerPersonaRef?: string; }
 export interface MissionInquiryQuestion { questionId: string; predicate: MissionFormationPredicate; exactQuestion: string; rationale: string; answerRequired: true; }
 export interface CastellanInquiry { dossierRef: string; question: MissionInquiryQuestion; }
 export interface OperatorAnswer { questionId: string; rawAnswer: string; }
 export interface RecordedAnswer extends OperatorAnswer { responseReceiptRef?: string; }
-export interface AcceptedMissionDetermination { questionId: string; predicate: MissionFormationPredicate; disposition: "RESOLVED" | "DECLARED_NONE"; values: string[]; rationale: string; assessmentRef: string; }
-export type CastellanTurnAction = "ACCEPT_AND_ADVANCE" | "REQUERY_SAME_QUESTION" | "REQUEST_EXPLANATION" | "REFUSE_MISSION_FORMATION";
+export type DeterminationDerivation = "QUOTED" | "NORMALIZED" | "INFERRED";
+export interface DeterminationEvidence { exactExcerpt: string; derivation: DeterminationDerivation; value?: string; rationale: string; }
+export interface AcceptedMissionDetermination { questionId: string; predicate: MissionFormationPredicate; disposition: "RESOLVED" | "DECLARED_NONE"; values: string[]; rationale: string; sourceAnswerRef: string; evidence: DeterminationEvidence[]; assessmentRef: string; }
+export type CastellanTurnAction = "ACCEPT_AND_ADVANCE" | "REQUERY_SAME_QUESTION" | "REQUEST_EXPLANATION";
 export interface CastellanTurnDisposition { dossierRef: string; questionId: string; action: CastellanTurnAction; operatorFacingMessage: string; acceptedDetermination?: AcceptedMissionDetermination; authorityCreated: false; }
 export interface IsoldeQuestionPresentation { dossierRef: string; inquiryRef: string; officerPersonaRef: string; questionId: string; exactQuestion: string; }
 export interface IsoldeResponseReceipt { dossierRef: string; inquiryRef: string; officerPersonaRef: string; questionId: string; rawResponse: string; }
@@ -60,7 +62,7 @@ export class SecretariatMissionIntake {
     if (disposition.payload.action !== "ACCEPT_AND_ADVANCE" && disposition.payload.acceptedDetermination) throw new Error("non-accepting disposition may not carry accepted determination");
     if (relay) validateRelay(current, disposition, relay);
     const accepted = disposition.payload.acceptedDetermination ? [...current.payload.acceptedDeterminations, structuredClone(disposition.payload.acceptedDetermination)] : current.payload.acceptedDeterminations;
-    return successor(current, { ...current.payload, acceptedDeterminations: accepted, turnDispositionRefs: [...current.payload.turnDispositionRefs, exactRef(disposition)], lastTurnAction: disposition.payload.action, state: disposition.payload.action === "REFUSE_MISSION_FORMATION" ? "FORMATION_REFUSED" : "AWAITING_CASTELLAN_INQUIRY" }, [exactRef(disposition), ...(relay ? [exactRef(relay)] : [])]);
+    return successor(current, { ...current.payload, acceptedDeterminations: accepted, turnDispositionRefs: [...current.payload.turnDispositionRefs, exactRef(disposition)], lastTurnAction: disposition.payload.action, state: "AWAITING_CASTELLAN_INQUIRY" }, [exactRef(disposition), ...(relay ? [exactRef(relay)] : [])]);
   }
 }
 
