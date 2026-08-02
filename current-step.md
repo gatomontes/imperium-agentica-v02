@@ -325,5 +325,19 @@ Secretariat reconstruction suites. Repository-wide TypeScript still exposes the
 pre-existing transport export and stale Petition fixture findings classified by
 DR-070; no live adapter or repository-wide conformance is claimed.
 
-The next separate Office leg is Castellan reconstruction against its own exact-v2
+The next separate Office leg was Castellan reconstruction against its own exact-v2
 Office Profile.
+
+## DR-075 through DR-077 — Canonical Lexicon and v3 Revalidation
+
+Senate enacted the 56-entry Imperium Lexicon v1 as the sole canonical governed
+vocabulary. Core Doctrine v3 supersedes v2 and replaces embedded CORE-000
+definitions with the exact Lexicon pointer and a prohibition on Office dialects.
+
+Secretariat is revalidated against exact Doctrine v3 and Lexicon v1. The Mission
+Dossier now carries both references. Initial vocabulary coverage is bounded;
+the assigned Senator retains the `ALL`-surface propagation dossier until affected
+historical surfaces are assessed.
+
+The next Office leg remains Castellan reconstruction, now against Core Doctrine
+v3 and Imperium Lexicon v1.

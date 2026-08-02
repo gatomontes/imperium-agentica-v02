@@ -2,9 +2,31 @@
 
 ## Constitutional controlling decisions
 
-### DR-074 — Secretariat Office Profile and Reconstruction v1
+### DR-077 — Secretariat Lexicon and Doctrine v3 Revalidation
 
 Status: active admitted applied-doctrine contract.
+Path: `deliberations/DR-077.md`
+
+DR-077 revalidates the bounded Secretariat Mission Dossier surface against
+exact Core Doctrine v3 and Imperium Lexicon v1 without expanding jurisdiction.
+
+### DR-076 — Core Imperium Doctrine v3 Enactment
+
+Status: active current constitutional doctrine.
+Path: `deliberations/DR-076.md`
+
+DR-076 supersedes v2 and makes `imperiumlexicon-core-v1@1` controlling.
+
+### DR-075 — Imperium Lexicon v1 Enactment
+
+Status: active current canonical vocabulary.
+Path: `deliberations/DR-075.md`
+
+DR-075 establishes one Senate-owned language across governed Imperium surfaces.
+
+### DR-074 — Secretariat Office Profile and Reconstruction v1
+
+Status: superseded by DR-077; preserved admission history.
 Path: `deliberations/DR-074.md`
 
 DR-074 admits the bounded Secretariat Mission Dossier intake and Castellan inquiry loop. DR-073 continues to govern complete derivation from exact current Core Doctrine, independent
@@ -14,7 +36,7 @@ research, judgment, deployment, supervision, Runtime, or external effect.
 
 ### DR-072 — Core Imperium Doctrine v2 Enactment
 
-Status: active current constitutional doctrine.
+Status: superseded by DR-076; preserved enactment history.
 Path: `deliberations/DR-072.md`
 
 DR-072 supersedes v1 with the nineteen-provision Blackquill-corrected v2 and
@@ -32,7 +54,7 @@ prospective-adoption notice. DR-072 supersedes v1.
 
 DR-069 and DR-070 remain controlling for Senate ownership and the constitutional
 reset. Any older “active” or “admitted” label is subordinate to DR-070 and
-requires Core Doctrine v1 conformance before reuse.
+requires current Core Doctrine and Lexicon conformance before reuse.
 
 ## Status
 
@@ -47,14 +69,17 @@ layer, deployment, and implementation decisions. Those entries remain preserved
 for legislative extraction and reconstruction evidence; they are not presently
 admitted authority.
 
-The only active constitutional decisions are:
+The active post-reset constitutional chain is:
 
 - DR-069 — Senate ownership and stewardship of Core Imperium Doctrine.
 - DR-070 — Senate-first constitutional breakpoint and conformance reset.
+- DR-073 — Office Doctrine Profile Contract v1.
+- DR-075 — Imperium Lexicon v1.
+- DR-076 — Core Doctrine v3.
+- DR-077 — revalidated bounded Secretariat reconstruction.
 
-Senate's legislative kernel is the only admitted Office implementation. No
-substantive Core Doctrine version or downstream Office implementation is
-currently admitted.
+Every other pre-Senate implementation remains subject to the reset unless a
+later decision explicitly re-admits it.
 
 ## Active Decisions
 

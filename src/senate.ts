@@ -24,6 +24,7 @@ export interface DoctrineBill {
   affectedOfficeProfiles: string[];
   assignedSenatorId: string;
   transitionRule: DoctrineTransitionRule;
+  lexiconRef?: string;
 }
 
 export interface CoreDoctrine {
@@ -34,6 +35,7 @@ export interface CoreDoctrine {
   provisions: CoreDoctrineProvision[];
   senateDecisionRef: string;
   transitionRule: DoctrineTransitionRule;
+  lexiconRef?: string;
   affectedOfficeProfiles: string[];
   assignedSenatorId: string;
   state: "ENACTED";
@@ -229,6 +231,7 @@ function doctrinePayload(bill: DoctrineBill, edition: number): CoreDoctrine {
     })),
     senateDecisionRef: bill.senateDecisionRef.trim(),
     transitionRule: bill.transitionRule,
+    lexiconRef: bill.lexiconRef?.trim(),
     affectedOfficeProfiles: [...new Set(bill.affectedOfficeProfiles)].sort(),
     assignedSenatorId: bill.assignedSenatorId.trim(),
     state: "ENACTED",

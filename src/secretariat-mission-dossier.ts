@@ -52,6 +52,7 @@ export interface PresentedQuestion extends MissionInquiryQuestion {
 
 export interface MissionDossier {
   doctrineRef: string;
+  lexiconRef: string;
   officeProfileRef: string;
   authenticatedOperatorRef: string;
   rawIntent: string;
@@ -84,6 +85,7 @@ export interface SecretariatDossierHandoff {
 
 const profileRef = ADMITTED_SECRETARIAT_PROFILE.identity + "@" + ADMITTED_SECRETARIAT_PROFILE.version;
 const doctrineRef = ADMITTED_SECRETARIAT_PROFILE.payload.coreDoctrineRef;
+const lexiconRef = ADMITTED_SECRETARIAT_PROFILE.payload.lexiconRef;
 
 export class SecretariatMissionIntake {
   open(
@@ -94,12 +96,14 @@ export class SecretariatMissionIntake {
     if (!request.authenticatedOperatorRef.trim()) throw new Error("authenticated Operator reference is required");
     if (!request.rawIntent.trim()) throw new Error("raw Operator intent is required");
     assertAdmittedCurrentProfile();
+    if (!lexiconRef) throw new Error("current Secretariat Office Profile requires an exact Imperium Lexicon");
     return createArtifact(
       "MissionDossier",
       "Secretariat",
       correlationId,
       {
         doctrineRef,
+        lexiconRef,
         officeProfileRef: profileRef,
         authenticatedOperatorRef: request.authenticatedOperatorRef.trim(),
         rawIntent: request.rawIntent,
@@ -125,7 +129,7 @@ export class SecretariatMissionIntake {
           "Core Doctrine or Secretariat Office Profile changes.",
         ],
       },
-      [request.authenticatedOperatorRef.trim(), doctrineRef, profileRef, ...cleanList(request.attachmentRefs)],
+      [request.authenticatedOperatorRef.trim(), doctrineRef, lexiconRef, profileRef, ...cleanList(request.attachmentRefs)],
       context,
     );
   }
@@ -197,7 +201,7 @@ export class SecretariatMissionIntake {
       "Secretariat",
       current.correlationId,
       { dossierRef, recipient: "Castellan", purpose: "MISSION_EVALUATION", authorityCreated: false },
-      [dossierRef, doctrineRef, profileRef],
+      [dossierRef, doctrineRef, lexiconRef!, profileRef],
       context,
     );
   }
@@ -216,8 +220,8 @@ function assertDossier(dossier: ArtifactEnvelope<MissionDossier>): void {
   if (dossier.artifactType !== "MissionDossier" || dossier.producer !== "Secretariat" || dossier.status !== "CURRENT") {
     throw new Error("exact current Secretariat Mission Dossier is required");
   }
-  if (dossier.payload.doctrineRef !== doctrineRef || dossier.payload.officeProfileRef !== profileRef) {
-    throw new Error("dossier doctrine or Office Profile is stale or mismatched");
+  if (dossier.payload.doctrineRef !== doctrineRef || dossier.payload.lexiconRef !== lexiconRef || dossier.payload.officeProfileRef !== profileRef) {
+    throw new Error("dossier doctrine, Lexicon, or Office Profile is stale or mismatched");
   }
 }
 

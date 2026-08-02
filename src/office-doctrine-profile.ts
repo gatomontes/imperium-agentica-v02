@@ -42,6 +42,7 @@ export interface OfficeDoctrineProfile {
   title: string;
   purpose: string;
   coreDoctrineRef: string;
+  lexiconRef?: string;
   assignedSenatorId: string;
   issuerAuthorityRef: string;
   applications: OfficeDoctrineApplication[];
@@ -99,6 +100,7 @@ export class OfficeDoctrineProfileContract {
         title: draft.title.trim(),
         purpose: draft.purpose.trim(),
         coreDoctrineRef: doctrineRef,
+        lexiconRef: doctrine.payload.lexiconRef,
         assignedSenatorId: doctrine.payload.assignedSenatorId,
         issuerAuthorityRef: draft.issuerAuthorityRef.trim(),
         applications: normalizeApplications(draft.applications),
