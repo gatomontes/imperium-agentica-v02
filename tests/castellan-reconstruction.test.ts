@@ -3,7 +3,8 @@ import { CastellanMissionFormation, CastellanOperatingLayer, PredicateDeterminat
 import { ADMITTED_CASTELLAN_PROFILE, CASTELLAN_PROFILE_ADMISSION_DECISION, CASTELLAN_PROFILE_CANDIDATE } from "../src/castellan-doctrine-profile.js";
 import { SecretariatMissionIntake } from "../src/secretariat-mission-dossier.js";
 import type { CastellanInquiry } from "../src/secretariat-mission-dossier.js";
-import type { GovernedArtifactEnvelope } from "../src/artifact.js";
+import { createGovernedArtifact, type GovernedArtifactEnvelope } from "../src/artifact.js";
+import { ADMITTED_RECTOR } from "../src/rector-officer-profile.js";
 
 const intake = new SecretariatMissionIntake(); const castellan = new CastellanMissionFormation(); const operatingLayer = new CastellanOperatingLayer();
 const context = { identityFactory: (p: string) => p + "-test", now: () => "2026-08-02T19:00:00.000Z" };
@@ -11,6 +12,7 @@ function open(complete = false) { return intake.open({ authenticatedOperatorRef:
 function inquiryFor(dossier = open()) { const result = castellan.evaluate(dossier, undefined, undefined, context); if (!("questions" in result.payload)) throw new Error("expected inquiry"); return result as GovernedArtifactEnvelope<CastellanInquiry>; }
 function answerAndHandoff(dossier = open()) { const inquiry = inquiryFor(dossier); const presented = intake.presentInquiry(dossier, inquiry); const answered = intake.recordAnswers(presented, inquiry.payload.questions.map((q) => ({ questionId: q.questionId, rawAnswer: "Operator answer for " + q.predicate }))); return { inquiry, answered, handoff: intake.prepareCastellanHandoff(answered, context) }; }
 function determinations(dossier: ReturnType<typeof open>, disposition: Partial<Record<string, PredicateDetermination["disposition"]>> = {}): PredicateDetermination[] { return dossier.payload.presentedQuestions.map((q) => { const declaredNone = q.predicate === "constraints" || q.predicate === "unknowns" || q.predicate === "material_contradictions"; const selected = disposition[q.predicate] ?? (declaredNone ? "DECLARED_NONE" : "RESOLVED"); return { questionId: q.questionId, predicate: q.predicate, disposition: selected, values: selected === "RESOLVED" ? [q.predicate === "purpose" ? "Improve support" : "Resolved " + q.predicate] : [], rationale: selected === "DECLARED_NONE" ? "Operator explicitly declared none." : "Operating layer found the answer exact and usable." }; }); }
+function rectorInterpretation(dossier: ReturnType<typeof open>, handoff: ReturnType<typeof intake.prepareCastellanHandoff>, values: PredicateDetermination[]) { const profileRef = ADMITTED_CASTELLAN_PROFILE.identity + "@2"; return createGovernedArtifact("RectorPredicateInterpretation", "Rector", dossier.correlationId, { officerPersonaRef: ADMITTED_RECTOR.identity + "@2", dossierRef: dossier.identity + "@" + dossier.version, handoffRef: handoff.identity + "@" + handoff.version, determinations: values, researchPerformed: false as const, judgmentRendered: false as const, authorityCreated: false as const }, { coreDoctrineRef: "coredoctrine-core-v1@6", lexiconRef: "imperiumlexicon-core-v1@4", officeProfileRef: profileRef, vocabularyUses: [{ termId: "LEX-049", value: "officer", lexiconRef: "imperiumlexicon-core-v1@4" }] }, [ADMITTED_RECTOR.identity + "@2", dossier.identity + "@" + dossier.version, handoff.identity + "@" + handoff.version], context); }
 
 describe("Castellan reconstruction correction", () => {
   it("admits through the assigned Senator with provision-specific evidence and no judgment dependency", () => {
@@ -30,20 +32,21 @@ describe("Castellan reconstruction correction", () => {
   it("forms a candidate only through lawful answer, handoff, and cognitive-assessment lineage", () => {
     const { answered, handoff } = answerAndHandoff();
     expect(() => castellan.evaluate(answered, handoff, undefined, context)).toThrow("predicate assessment is required");
-    const assessment = operatingLayer.recordAssessment(answered, handoff, determinations(answered), context);
+    const interpretation = rectorInterpretation(answered, handoff, determinations(answered));
+    const assessment = operatingLayer.recordAssessment(answered, handoff, interpretation, context);
     const result = castellan.evaluate(answered, handoff, assessment, context);
     expect(result).toMatchObject({ artifactType: "MissionSpecificationCandidate", payload: { purpose: "Improve support", constraints: [], unknowns: [], materialContradictions: [], unresolvedPredicates: [], authorityCreated: false } });
-    expect(result.sourceRefs).toEqual(expect.arrayContaining([answered.identity + "@3", handoff.identity + "@1", assessment.identity + "@1"]));
+    expect(assessment.sourceRefs).toContain(interpretation.identity + "@1"); expect(result.sourceRefs).toEqual(expect.arrayContaining([answered.identity + "@3", handoff.identity + "@1", assessment.identity + "@1"]));
   });
 
   it.each(["AMBIGUOUS", "CONTRADICTORY", "UNUSABLE"] as const)("issues further inquiry when an answer is %s", (bad) => {
-    const { answered, handoff } = answerAndHandoff(); const assessment = operatingLayer.recordAssessment(answered, handoff, determinations(answered, { scope: bad }), context);
+    const { answered, handoff } = answerAndHandoff(); const assessment = operatingLayer.recordAssessment(answered, handoff, rectorInterpretation(answered, handoff, determinations(answered, { scope: bad })), context);
     const result = castellan.evaluate(answered, handoff, assessment, context); if (!("questions" in result.payload)) throw new Error("expected follow-up inquiry");
     expect(result.payload.questions.find((q) => q.predicate === "scope")?.exactQuestion).toContain("previous answer was not usable");
   });
 
   it("does not allow unresolved unknowns or contradictions to disappear", () => {
-    const { answered, handoff } = answerAndHandoff(); const assessment = operatingLayer.recordAssessment(answered, handoff, determinations(answered, { unknowns: "RESOLVED" }), context);
+    const { answered, handoff } = answerAndHandoff(); const assessment = operatingLayer.recordAssessment(answered, handoff, rectorInterpretation(answered, handoff, determinations(answered, { unknowns: "RESOLVED" })), context);
     const result = castellan.evaluate(answered, handoff, assessment, context); expect(result.artifactType).toBe("CastellanInquiry");
   });
 
@@ -52,7 +55,7 @@ describe("Castellan reconstruction correction", () => {
     const { answered, handoff } = answerAndHandoff(dossier);
     expect(() => castellan.evaluate(answered, { ...handoff, payload: { ...handoff.payload, dossierRef: "other@1" } }, undefined, context)).toThrow("exact matching Secretariat handoff");
     const stale = { ...answered, payload: { ...answered.payload, officeProfileRef: "secretariat-old@1" } }; expect(() => castellan.evaluate(stale, handoff, undefined, context)).toThrow("Secretariat profile is stale");
-    expect(() => operatingLayer.recordAssessment(answered, handoff, determinations(answered).slice(1), context)).toThrow("exactly one determination");
+    expect(() => operatingLayer.recordAssessment(answered, handoff, rectorInterpretation(answered, handoff, determinations(answered).slice(1)), context)).toThrow("exactly one determination");
   });
 
   it("keeps mission formation free of research, judgment, deployment, supervision, and execution operations", () => {

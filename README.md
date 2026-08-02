@@ -17,6 +17,8 @@ derived profile and bounded reconstruction: Secretariat Mission Dossier intake,
 Castellan inquiry presentation, Operator answer recording, and exact handoff.
 DR-090 admits Cognitionist's provider-neutral model-connection contract while
 reserving credential custody to Locksmith and live execution to Master Mason.
+DR-091 admits Rector as Castellan's resident Officer and makes Rector's exact
+governed predicate interpretation mandatory for candidate mission formation.
 No provider, model, credential mechanism, deployment, supervision, Runtime, or
 external effect is authorized.
 
