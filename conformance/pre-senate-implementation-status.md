@@ -6,12 +6,12 @@ rewrite, or condemn historical work.
 | Surface | Reset status | Required disposition |
 |---|---|---|
 | Senate (`src/senate.ts`) | `CONSTITUTIONAL_ACTIVE` | Retain as legislative kernel |
-| Imperium Lexicon | `CONSTITUTIONAL_ACTIVE_WITH_OPEN_CONDITIONS` | DR-078 admits v2 enforcement corrections; semantic inventory and term-specific metadata conditions remain open |
+| Imperium Lexicon | `CONSTITUTIONAL_ACTIVE` | DR-081 admits bounded semantic closure at v3; newly discovered concepts require Senate petition |
 | Artifact envelopes and stores | `REUSE_CANDIDATE` | Prove doctrine neutrality and lineage conformance |
 | Schema and serialization infrastructure | `REUSE_CANDIDATE` | Revalidate after Core Doctrine and profile schemas exist |
 | Persistence adapters | `REUSE_CANDIDATE` | Revalidate custody, authority, and supersession behavior |
 | Transport and HTTP adapters | `REUSE_CANDIDATE_WITH_FINDINGS` | Repair existing baseline defects; prove no authority is inferred from transport |
-| Secretariat | `RECONSTRUCTED_NON_LIVE` | DR-080 revalidates the exact-v4/Lexicon-v2 profile and governed Mission Dossier intake/inquiry/handoff surface; live adapters remain unadmitted |
+| Secretariat | `RECONSTRUCTED_NON_LIVE` | DR-083 revalidates the exact-v5/Lexicon-v3 profile and governed Mission Dossier intake/inquiry/handoff surface; live adapters remain unadmitted |
 | Castellan | `CONFORMANCE_REQUIRED` | Rebuild as internal mission orchestrator after Secretariat |
 | Guildhall | `CONFORMANCE_REQUIRED` | Reconstruct profession-resolution jurisdiction from enacted doctrine |
 | Garrison | `CONFORMANCE_REQUIRED` | Reconstruct Persona stewardship and exact admission boundaries |
@@ -27,9 +27,9 @@ rewrite, or condemn historical work.
 
 ## Admission rule
 
-DR-073 supplies the common Office Doctrine Profile contract. DR-080 changes only
-the Secretariat row through exact-v4/Lexicon-v2 profile admission and bounded
-implementation conformance. Each remaining Office still requires its own exact v4
+DR-073 supplies the common Office Doctrine Profile contract. DR-083 changes only
+the Secretariat row through exact-v5/Lexicon-v3 profile admission and bounded
+implementation conformance. Each remaining Office still requires its own exact v5
 profile, Tribunalis judgment, assigned-Senator admission, and implementation
 conformance evidence.
 

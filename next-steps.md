@@ -2,7 +2,7 @@
 
 ## Active Post-Reset Queue
 
-1. Reconstruct Secretariat's exact Core Doctrine Office Profile (completed and revalidated against v4/Lexicon v2 by DR-080).
+1. Reconstruct Secretariat's exact Core Doctrine Office Profile (completed and revalidated against v5/Lexicon v3 by DR-083).
 2. Obtain Tribunalis conformance judgment.
 3. Obtain admission from `senator-core-doctrine-001` under exact authority.
 4. Only then assess reusable Secretariat implementation against the admitted
@@ -388,8 +388,7 @@ active profile or existing artifacts.
 9. Reconstruct Castellan as the internal mission orchestrator, beginning with
    evaluation of an exact current Secretariat dossier and generation of bounded
    clarification inquiries.
-10. Carry Lexicon v2's terminology gate into every Office as that Office is
-    reconstructed; separately resolve the open semantic-inventory conditions.
+10. Carry Lexicon v3's mandatory terminology gate into every Office as that Office is reconstructed.
 
 No other Office implementation, generic infrastructure reuse, Colosseum work,
 Runtime operation, credentials, deployment, or external effect is selected.

@@ -43,6 +43,7 @@ const profileDraft = (
     "Core Doctrine changes.",
     "Mission-intake jurisdiction changes.",
   ],
+  terminologyGateEvidenceRefs: ["terminology-gate-test@1"],
   ...overrides,
 });
 
@@ -156,6 +157,10 @@ describe("Office Doctrine Profile contract", () => {
   it("requires exact issuer authority and revision conditions", () => {
     expect(() => contract.draft(ENACTED_CORE_DOCTRINE_V2.doctrine, profileDraft({ issuerAuthorityRef: "" }), "missing-authority")).toThrow("profile issuer authority is required");
     expect(() => contract.draft(ENACTED_CORE_DOCTRINE_V2.doctrine, profileDraft({ profileRevisionConditions: [] }), "missing-revision")).toThrow("profile revision conditions are required");
+  });
+
+  it("requires terminology-gate evidence before any Office profile admission path", () => {
+    expect(() => contract.draft(ENACTED_CORE_DOCTRINE_V2.doctrine, profileDraft({ terminologyGateEvidenceRefs: [] }), "missing-gate")).toThrow("terminology-conformance gate evidence");
   });
 
   it("requires evidence, verification, and invalidation for every application", () => {

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { createArtifact } from "../src/artifact.js";
-import { ENACTED_CORE_DOCTRINE_V4 } from "../src/enacted-core-doctrine-v4.js";
+import { ENACTED_CORE_DOCTRINE_V5 } from "../src/enacted-core-doctrine-v5.js";
 import {
   ADMITTED_SECRETARIAT_PROFILE,
   SECRETARIAT_PROFILE_ADMISSION_DECISION,
@@ -37,7 +37,7 @@ function inquiryFor(dossier = open()) {
 describe("Secretariat reconstruction", () => {
   it("admits a complete exact-v2 Office Profile through Tribunalis and the assigned Senator", () => {
     expect(SECRETARIAT_PROFILE_CANDIDATE.payload.applications).toHaveLength(19);
-    expect(SECRETARIAT_PROFILE_CANDIDATE.payload.coreDoctrineRef).toBe(ENACTED_CORE_DOCTRINE_V4.doctrine.identity + "@4");
+    expect(SECRETARIAT_PROFILE_CANDIDATE.payload.coreDoctrineRef).toBe(ENACTED_CORE_DOCTRINE_V5.doctrine.identity + "@5");
     expect(SECRETARIAT_PROFILE_JUDGMENT).toMatchObject({ producer: "Tribunalis", payload: { result: "ACCEPTABLE" } });
     expect(SECRETARIAT_PROFILE_ADMISSION_DECISION.producer).toBe("Senator:senator-core-doctrine-001");
     expect(ADMITTED_SECRETARIAT_PROFILE).toMatchObject({ version: 2, payload: { state: "ADMITTED" } });
@@ -52,14 +52,14 @@ describe("Secretariat reconstruction", () => {
     expect(dossier.payload.externalObligationAssertions).toEqual(["Customer data may be regulated"]);
     expect(dossier.payload.state).toBe("AWAITING_CASTELLAN_INQUIRY");
     expect(dossier.payload.officeProfileRef).toBe(ADMITTED_SECRETARIAT_PROFILE.identity + "@2");
-    expect(dossier.payload.lexiconRef).toBe("imperiumlexicon-core-v1@2");
+    expect(dossier.payload.lexiconRef).toBe("imperiumlexicon-core-v1@3");
     expect(dossier.governance).toMatchObject({
-      coreDoctrineRef: "coredoctrine-core-v1@4",
-      lexiconRef: "imperiumlexicon-core-v1@2",
+      coreDoctrineRef: "coredoctrine-core-v1@5",
+      lexiconRef: "imperiumlexicon-core-v1@3",
       officeProfileRef: ADMITTED_SECRETARIAT_PROFILE.identity + "@2",
       vocabularyUses: expect.arrayContaining([
-        { termId: "LEX-009", lexiconRef: "imperiumlexicon-core-v1@2", value: "mission_dossier" },
-        { termId: "LEX-011", lexiconRef: "imperiumlexicon-core-v1@2", value: "secretariat" },
+        { termId: "LEX-009", lexiconRef: "imperiumlexicon-core-v1@3", value: "mission_dossier" },
+        { termId: "LEX-011", lexiconRef: "imperiumlexicon-core-v1@3", value: "secretariat" },
       ]),
     });
   });

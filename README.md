@@ -4,15 +4,15 @@
 
 DR-070 establishes a Senate-first constitutional reset. DR-071 enacted Core
 Imperium Doctrine v1; DR-072 superseded it with corrected v2, DR-076 enacted
-v3, and DR-079 now makes Core Doctrine v4 and exact Imperium Lexicon v2 controlling. All
+v3 and v4, and DR-082 now makes Core Doctrine v5 and exact Imperium Lexicon v3 controlling. All
 pre-Senate Office contracts and implementations remain preserved evidence and
 are not re-admitted by enactment alone.
 
 Read `CONSTITUTIONAL-RESET.md` before treating any pre-Senate semantic or
 implementation artifact as current authority.
 
-DR-078 supersedes the initial Lexicon with Blackquill-corrected Lexicon v2;
-DR-079 makes its exact version controlling through Core Doctrine v4. DR-080 revalidates the first
+DR-081 supersedes it with semantically closed Lexicon v3; DR-082 makes its exact
+version controlling through Core Doctrine v5. DR-083 revalidates the first
 derived profile and bounded reconstruction: Secretariat Mission Dossier intake,
 Castellan inquiry presentation, Operator answer recording, and exact handoff.
 No research, judgment, deployment, supervision, Runtime, or external effect is

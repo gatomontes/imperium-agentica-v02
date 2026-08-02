@@ -2,19 +2,36 @@
 
 ## Constitutional controlling decisions
 
-### DR-080 — Secretariat Lexicon v2 and Doctrine v4 Revalidation
+### DR-083 — Secretariat and Office Terminology-Gate Revalidation
 
 Status: active admitted applied-doctrine contract.
+Path: `deliberations/DR-083.md`
+
+### DR-082 — Core Imperium Doctrine v5
+
+Status: active current constitutional doctrine.
+Path: `deliberations/DR-082.md`
+
+### DR-081 — Imperium Lexicon v3 Semantic Closure
+
+Status: active current canonical vocabulary.
+Path: `deliberations/DR-081.md`
+
+Blackquill returns `ACCEPTABLE` for bounded semantic closure.
+
+### DR-080 — Secretariat Lexicon v2 and Doctrine v4 Revalidation
+
+Status: superseded by DR-083; preserved history.
 Path: `deliberations/DR-080.md`
 
 ### DR-079 — Core Imperium Doctrine v4 Enactment
 
-Status: active current constitutional doctrine.
+Status: superseded by DR-082; preserved history.
 Path: `deliberations/DR-079.md`
 
 ### DR-078 — Imperium Lexicon v2 Enforcement Corrections
 
-Status: active current canonical vocabulary and enforcement contract.
+Status: superseded by DR-081; preserved history.
 Path: `deliberations/DR-078.md`
 
 Blackquill returns `ACCEPTABLE_WITH_CONDITIONS` for the seven selected
