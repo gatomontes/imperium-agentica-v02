@@ -25,6 +25,7 @@ export class RectorCastellanOfficer {
   constructor(private readonly cognition: RectorCognitivePort) { if (ADMITTED_RECTOR.payload.state !== "ADMITTED" || ADMITTED_RECTOR.payload.officeProfileRef !== officeProfileRef) throw new Error("current admitted Rector Persona is required"); }
 
   initiateInquiry(dossier: GovernedArtifactEnvelope<MissionDossier>, context: ArtifactContext = {}): CastellanEvaluation { return this.formation.evaluate(dossier, undefined, undefined, context); }
+  formFromAuthenticatedIntent(dossier: GovernedArtifactEnvelope<MissionDossier>, context: ArtifactContext = {}) { return this.formation.evaluateGapDriven(dossier, context); }
 
   evaluateHandoff(dossier: GovernedArtifactEnvelope<MissionDossier>, handoff: GovernedArtifactEnvelope<SecretariatDossierHandoff>, context: ArtifactContext = {}) {
     assertCastellanHandoffReceipt(dossier, handoff);
