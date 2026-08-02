@@ -3,7 +3,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { describe, expect, it, vi } from "vitest";
 import { IsoldeSecretariatOfficer } from "../src/isolde-secretariat-officer.js";
-import { MasterMasonLiveIsoldeSession, openLocksmithDeepSeekAccess, openLocksmithLiveIsoldeAccess, openLocksmithOpenAIAccess } from "../src/openai-live-isolde.js";
+import { LocksmithOpenAIAccessPort, MasterMasonLiveIsoldeSession, openLocksmithDeepSeekAccess, openLocksmithLiveIsoldeAccess, openLocksmithOpenAIAccess } from "../src/openai-live-isolde.js";
 import { RectorCastellanOfficer, RectorCognitivePort } from "../src/rector-castellan-officer.js";
 
 const noEvaluation: RectorCognitivePort = { assessMissionPredicates: () => { throw new Error("response evaluation is outside this slice"); } };
@@ -23,7 +23,7 @@ describe("OpenAI live Isolde one-question slice", () => {
       return providerResponse(question);
     });
     const access = await openLocksmithOpenAIAccess({ environment: { OPENAI_API_KEY: "fixture-secret" }, fetchImplementation: fakeFetch, model: "fixture-model" });
-    expect(Object.keys(access)).toEqual(["configured", "transportQuestion"]);
+    expect(Object.keys(access)).toEqual(["configured", "transportQuestion", "assessAnswer"]);
     const session = new MasterMasonLiveIsoldeSession(access, new IsoldeSecretariatOfficer(), new RectorCastellanOfficer(noEvaluation));
     const result = await session.runOneQuestion("operator@1", "Build a test mission", "live-one");
     expect(result.exactQuestion).toBe("What precise outcome should this mission accomplish?");
@@ -115,5 +115,42 @@ describe("DeepSeek live Isolde provider", () => {
     });
     await expect(access.transportQuestion({ correlationId: "one", operatorText: "mission", exactCastellanQuestion: "Question?" }))
       .rejects.toThrow("DeepSeek transport failed (402; code=insufficient_balance; request_id=req-safe)");
+  });
+});
+
+describe("live Isolde controlled reply loop", () => {
+  function loopAccess(dispositions: Array<"RESOLVED" | "DECLARED_NONE" | "UNUSABLE"> = []): LocksmithOpenAIAccessPort {
+    let assessment = 0;
+    return {
+      configured: true,
+      async transportQuestion(request) { return { responseId: `q-${assessment}`, provider: "deepseek", model: "fixture-model", exactQuestion: request.exactCastellanQuestion }; },
+      async assessAnswer(request) {
+        const disposition = dispositions[assessment++] ?? (["constraints", "unknowns", "material_contradictions", "resource_requirements"].includes(request.predicate) ? "DECLARED_NONE" : "RESOLVED");
+        return { responseId: `a-${assessment}`, provider: "deepseek", model: "fixture-model", draft: { determinations: [{ questionId: request.questionId, predicate: request.predicate, disposition, values: disposition === "RESOLVED" ? [request.rawAnswer] : [], rationale: "Exact bounded assessment.", sourceAnswerRef: request.sourceAnswerRef, evidence: [{ exactExcerpt: request.rawAnswer, derivation: "QUOTED", value: disposition === "RESOLVED" ? request.rawAnswer : undefined, rationale: "Exact Operator wording." }] }] } };
+      },
+    };
+  }
+
+  it("accepts one answer at a time and completes the eight-predicate mission candidate", async () => {
+    const initialOnly: RectorCognitivePort = { assessMissionPredicates: () => { throw new Error("not used"); } };
+    const session = new MasterMasonLiveIsoldeSession(loopAccess(), new IsoldeSecretariatOfficer(), new RectorCastellanOfficer(initialOnly));
+    const questions: string[] = [];
+    const result = await session.runConversation("operator@1", "Research the top ten audience pain points", "live-loop", async (question) => { questions.push(question); return question.includes("none") || question.includes("None") ? "None" : `Answer ${questions.length}`; });
+    expect(result.turns).toBe(8);
+    expect(questions).toHaveLength(8);
+    expect(result.dossier.payload.acceptedDeterminations).toHaveLength(8);
+    expect(result.candidate).toMatchObject({ artifactType: "MissionSpecificationCandidate", payload: { state: "CANDIDATE", purpose: "Answer 1", authorityCreated: false } });
+    expect(result.audit.filter((entry) => entry.stage === "CASTELLAN_EVALUATED")).toHaveLength(8);
+    expect(result.audit.every((entry) => !entry.credentialExposedToIsolde && !entry.missionExecuted)).toBe(true);
+  });
+
+  it("lets Castellan reject and requery the same predicate without advancing", async () => {
+    const initialOnly: RectorCognitivePort = { assessMissionPredicates: () => { throw new Error("not used"); } };
+    const session = new MasterMasonLiveIsoldeSession(loopAccess(["UNUSABLE", "RESOLVED"]), new IsoldeSecretariatOfficer(), new RectorCastellanOfficer(initialOnly));
+    const questions: string[] = [];
+    const result = await session.runConversation("operator@1", "Build mission", "live-requery", async (question) => { questions.push(question); return questions.length === 1 ? "Unrelated material" : question.includes("none") || question.includes("None") ? "None" : `Answer ${questions.length}`; });
+    expect(questions[1]).toBe("That is not what I asked. What precise outcome should this mission accomplish?");
+    expect(result.turns).toBe(9);
+    expect(result.dossier.payload.acceptedDeterminations).toHaveLength(8);
   });
 });
