@@ -29,13 +29,13 @@ export interface MissionIntentRequest {
 
 export interface MissionInquiryQuestion {
   questionId: string;
-  predicate?: MissionFormationPredicate;
+  predicate: MissionFormationPredicate;
   exactQuestion: string;
   rationale: string;
   answerRequired: boolean;
 }
 
-export type MissionFormationPredicate = "purpose" | "scope" | "constraints" | "acceptance_criteria" | "requested_outputs";
+export type MissionFormationPredicate = "purpose" | "scope" | "constraints" | "acceptance_criteria" | "requested_outputs" | "unknowns" | "material_contradictions" | "resource_requirements";
 
 export interface CastellanInquiry {
   dossierRef: string;
@@ -276,7 +276,7 @@ function validateQuestions(questions: MissionInquiryQuestion[]): void {
   if (questions.length === 0) throw new Error("Castellan inquiry requires at least one question");
   const ids = new Set<string>();
   for (const question of questions) {
-    if (!question.questionId.trim() || !question.exactQuestion.trim() || !question.rationale.trim()) {
+    if (!question.questionId.trim() || !question.predicate || !question.exactQuestion.trim() || !question.rationale.trim()) {
       throw new Error("every Castellan question requires identity, exact wording, and rationale");
     }
     if (ids.has(question.questionId)) throw new Error("duplicate Castellan question identity");
