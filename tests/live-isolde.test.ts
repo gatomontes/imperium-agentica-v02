@@ -153,4 +153,21 @@ describe("live Isolde controlled reply loop", () => {
     expect(result.turns).toBe(9);
     expect(result.dossier.payload.acceptedDeterminations).toHaveLength(8);
   });
+
+  it("keeps the exact Operator answer as evidence without asking the provider to reproduce it", async () => {
+    const requests: Record<string, unknown>[] = [];
+    const access = await openLocksmithDeepSeekAccess({
+      environment: { DEEPSEEK_API_KEY: "fixture-secret" },
+      fetchImplementation: async (_input, init) => {
+        const body = JSON.parse(String(init?.body)) as Record<string, unknown>;
+        requests.push(body);
+        return new Response(JSON.stringify({ id: "assessment", choices: [{ message: { content: JSON.stringify({ disposition: "RESOLVED", rationale: "The answer directly states the requested outcome." }) } }] }), { status: 200 });
+      },
+    });
+    const rawAnswer = "A list of the top 10 pain points of sadcore listeners in Youtube";
+    const assessed = await access.assessAnswer({ correlationId: "evidence", questionId: "purpose", predicate: "purpose", exactQuestion: "What precise outcome should this mission accomplish?", rawAnswer, sourceAnswerRef: "answer@1" });
+    expect(assessed.draft.determinations[0]).toMatchObject({ values: [rawAnswer], evidence: [{ exactExcerpt: rawAnswer, value: rawAnswer }] });
+    const messages = requests[0].messages as Array<{ content: string }>;
+    expect(messages[0].content).toContain("Imperium, not you, preserves the exact raw answer as evidence");
+  });
 });
