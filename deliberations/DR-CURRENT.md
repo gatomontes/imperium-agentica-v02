@@ -2,14 +2,15 @@
 
 ## Constitutional controlling decisions
 
-### DR-073 — Office Doctrine Profile Contract v1
+### DR-074 — Secretariat Office Profile and Reconstruction v1
 
 Status: active admitted applied-doctrine contract.
-Path: `deliberations/DR-073.md`
+Path: `deliberations/DR-074.md`
 
-DR-073 governs complete derivation from exact current Core Doctrine, independent
+DR-074 admits the bounded Secretariat Mission Dossier intake and Castellan inquiry loop. DR-073 continues to govern complete derivation from exact current Core Doctrine, independent
 Tribunalis judgment, assigned-Senator admission, immutable versioning, and
-revalidation. It admits no actual Office profile or implementation.
+revalidation. DR-074 does not admit live authentication, transport, persistence,
+research, judgment, deployment, supervision, Runtime, or external effect.
 
 ### DR-072 — Core Imperium Doctrine v2 Enactment
 

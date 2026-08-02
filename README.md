@@ -10,8 +10,11 @@ are not re-admitted by enactment alone.
 Read `CONSTITUTIONAL-RESET.md` before treating any pre-Senate semantic or
 implementation artifact as current authority.
 
-DR-073 admits the Office Doctrine Profile Contract v1. No actual Office profile
-or implementation is admitted; Secretariat is the first reconstruction target.
+DR-073 admits the Office Doctrine Profile Contract v1. DR-074 admits the first
+derived profile and bounded reconstruction: Secretariat Mission Dossier intake,
+Castellan inquiry presentation, Operator answer recording, and exact handoff.
+No research, judgment, deployment, supervision, Runtime, or external effect is
+authorized.
 
 ## Day 0
 

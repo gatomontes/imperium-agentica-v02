@@ -32,6 +32,8 @@ export * from "./core-doctrine-v2.js";
 export * from "./enacted-core-doctrine-v2.js";
 export * from "./office-doctrine-profile.js";
 export * from "./secretariat.js";
+export * from "./secretariat-doctrine-profile.js";
+export * from "./secretariat-mission-dossier.js";
 export * from "./serialization.js";
 export * from "./store-http-resolver.js";
 export * from "./studium.js";
