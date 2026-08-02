@@ -19,6 +19,8 @@ DR-090 admits Cognitionist's provider-neutral model-connection contract while
 reserving credential custody to Locksmith and live execution to Master Mason.
 DR-091 admits Rector as Castellan's resident Officer and makes Rector's exact
 governed predicate interpretation mandatory for candidate mission formation.
+DR-092 corrects the inquiry loop to one question and one exact raw response per
+turn: Isolde transports; Rector assesses; Castellan alone advances or requeries.
 No provider, model, credential mechanism, deployment, supervision, Runtime, or
 external effect is authorized.
 

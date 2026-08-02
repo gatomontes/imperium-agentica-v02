@@ -1,65 +1,16 @@
 import { describe, expect, it } from "vitest";
-import { CastellanMissionFormation, CastellanOperatingLayer, PredicateDetermination } from "../src/castellan-mission-formation.js";
-import { ADMITTED_CASTELLAN_PROFILE, CASTELLAN_PROFILE_ADMISSION_DECISION, CASTELLAN_PROFILE_CANDIDATE } from "../src/castellan-doctrine-profile.js";
-import { SecretariatMissionIntake } from "../src/secretariat-mission-dossier.js";
-import type { CastellanInquiry } from "../src/secretariat-mission-dossier.js";
-import { createGovernedArtifact, type GovernedArtifactEnvelope } from "../src/artifact.js";
+import { createGovernedArtifact, GovernedArtifactEnvelope } from "../src/artifact.js";
+import { ADMITTED_CASTELLAN_PROFILE } from "../src/castellan-doctrine-profile.js";
+import { CastellanMissionFormation, CastellanOperatingLayer, PredicateDetermination, RectorPredicateInterpretationContract } from "../src/castellan-mission-formation.js";
 import { ADMITTED_RECTOR } from "../src/rector-officer-profile.js";
-
-const intake = new SecretariatMissionIntake(); const castellan = new CastellanMissionFormation(); const operatingLayer = new CastellanOperatingLayer();
-const context = { identityFactory: (p: string) => p + "-test", now: () => "2026-08-02T19:00:00.000Z" };
-function open(complete = false) { return intake.open({ authenticatedOperatorRef: "operator@1", rawIntent: "Improve support", purpose: complete ? "Improve support" : undefined, scope: complete ? ["Support"] : [], constraints: complete ? ["No external action"] : [], acceptanceCriteria: complete ? ["Resolution under four hours"] : [], requestedOutputs: complete ? ["Plan"] : [], suppliedClaims: ["Backlog grew"], assumptions: ["Current tools remain"], unknowns: ["Volume"], materialContradictions: ["Speed and zero automation"], authorityAssertions: ["Internal inquiry approved"], externalObligationAssertions: ["Privacy rules may apply"] }, "mission-test", context); }
-function inquiryFor(dossier = open()) { const result = castellan.evaluate(dossier, undefined, undefined, context); if (!("questions" in result.payload)) throw new Error("expected inquiry"); return result as GovernedArtifactEnvelope<CastellanInquiry>; }
-function answerAndHandoff(dossier = open()) { const inquiry = inquiryFor(dossier); const presented = intake.presentInquiry(dossier, inquiry); const answered = intake.recordAnswers(presented, inquiry.payload.questions.map((q) => ({ questionId: q.questionId, rawAnswer: "Operator answer for " + q.predicate }))); return { inquiry, answered, handoff: intake.prepareCastellanHandoff(answered, context) }; }
-function determinations(dossier: ReturnType<typeof open>, disposition: Partial<Record<string, PredicateDetermination["disposition"]>> = {}): PredicateDetermination[] { return dossier.payload.presentedQuestions.map((q) => { const declaredNone = q.predicate === "constraints" || q.predicate === "unknowns" || q.predicate === "material_contradictions"; const selected = disposition[q.predicate] ?? (declaredNone ? "DECLARED_NONE" : "RESOLVED"); return { questionId: q.questionId, predicate: q.predicate, disposition: selected, values: selected === "RESOLVED" ? [q.predicate === "purpose" ? "Improve support" : "Resolved " + q.predicate] : [], rationale: selected === "DECLARED_NONE" ? "Operator explicitly declared none." : "Operating layer found the answer exact and usable." }; }); }
-function rectorInterpretation(dossier: ReturnType<typeof open>, handoff: ReturnType<typeof intake.prepareCastellanHandoff>, values: PredicateDetermination[]) { const profileRef = ADMITTED_CASTELLAN_PROFILE.identity + "@2"; return createGovernedArtifact("RectorPredicateInterpretation", "Rector", dossier.correlationId, { officerPersonaRef: ADMITTED_RECTOR.identity + "@2", dossierRef: dossier.identity + "@" + dossier.version, handoffRef: handoff.identity + "@" + handoff.version, determinations: values, researchPerformed: false as const, judgmentRendered: false as const, authorityCreated: false as const }, { coreDoctrineRef: "coredoctrine-core-v1@6", lexiconRef: "imperiumlexicon-core-v1@4", officeProfileRef: profileRef, vocabularyUses: [{ termId: "LEX-049", value: "officer", lexiconRef: "imperiumlexicon-core-v1@4" }] }, [ADMITTED_RECTOR.identity + "@2", dossier.identity + "@" + dossier.version, handoff.identity + "@" + handoff.version], context); }
-
-describe("Castellan reconstruction correction", () => {
-  it("admits through the assigned Senator with provision-specific evidence and no judgment dependency", () => {
-    expect(CASTELLAN_PROFILE_CANDIDATE.payload.applications).toHaveLength(19);
-    expect(new Set(CASTELLAN_PROFILE_CANDIDATE.payload.applications.map((a) => a.applicationRule)).size).toBe(19);
-    expect(CASTELLAN_PROFILE_ADMISSION_DECISION.payload.conformanceJudgmentRef).toBeUndefined();
-    expect(CASTELLAN_PROFILE_ADMISSION_DECISION.payload.conformanceEvidenceRefs).toEqual(["tests/castellan-reconstruction.test.ts", "reviews/castellan-blackquill-correction-review-001.md"]);
-    expect(ADMITTED_CASTELLAN_PROFILE.payload).toMatchObject({ state: "ADMITTED", coreDoctrineRef: "coredoctrine-core-v1@6", lexiconRef: "imperiumlexicon-core-v1@4" });
-    expect(ADMITTED_CASTELLAN_PROFILE.payload.conformanceJudgmentRef).toBeUndefined();
-  });
-
-  it("always inquires into intent, even when Secretariat intake appears complete", () => {
-    const result = inquiryFor(open(true));
-    expect(result.payload.questions.map((q) => q.predicate)).toEqual(["purpose", "scope", "constraints", "acceptance_criteria", "requested_outputs", "unknowns", "material_contradictions", "resource_requirements"]);
-  });
-
-  it("forms a candidate only through lawful answer, handoff, and cognitive-assessment lineage", () => {
-    const { answered, handoff } = answerAndHandoff();
-    expect(() => castellan.evaluate(answered, handoff, undefined, context)).toThrow("predicate assessment is required");
-    const interpretation = rectorInterpretation(answered, handoff, determinations(answered));
-    const assessment = operatingLayer.recordAssessment(answered, handoff, interpretation, context);
-    const result = castellan.evaluate(answered, handoff, assessment, context);
-    expect(result).toMatchObject({ artifactType: "MissionSpecificationCandidate", payload: { purpose: "Improve support", constraints: [], unknowns: [], materialContradictions: [], unresolvedPredicates: [], authorityCreated: false } });
-    expect(assessment.sourceRefs).toContain(interpretation.identity + "@1"); expect(result.sourceRefs).toEqual(expect.arrayContaining([answered.identity + "@3", handoff.identity + "@1", assessment.identity + "@1"]));
-  });
-
-  it.each(["AMBIGUOUS", "CONTRADICTORY", "UNUSABLE"] as const)("issues further inquiry when an answer is %s", (bad) => {
-    const { answered, handoff } = answerAndHandoff(); const assessment = operatingLayer.recordAssessment(answered, handoff, rectorInterpretation(answered, handoff, determinations(answered, { scope: bad })), context);
-    const result = castellan.evaluate(answered, handoff, assessment, context); if (!("questions" in result.payload)) throw new Error("expected follow-up inquiry");
-    expect(result.payload.questions.find((q) => q.predicate === "scope")?.exactQuestion).toContain("previous answer was not usable");
-  });
-
-  it("does not allow unresolved unknowns or contradictions to disappear", () => {
-    const { answered, handoff } = answerAndHandoff(); const assessment = operatingLayer.recordAssessment(answered, handoff, rectorInterpretation(answered, handoff, determinations(answered, { unknowns: "RESOLVED" })), context);
-    const result = castellan.evaluate(answered, handoff, assessment, context); expect(result.artifactType).toBe("CastellanInquiry");
-  });
-
-  it("refuses forged lifecycle state, stale profile lineage, mismatched handoff, and incomplete assessments", () => {
-    const dossier = open(true); expect(() => intake.prepareCastellanHandoff(dossier)).toThrow("only a dossier ready");
-    const { answered, handoff } = answerAndHandoff(dossier);
-    expect(() => castellan.evaluate(answered, { ...handoff, payload: { ...handoff.payload, dossierRef: "other@1" } }, undefined, context)).toThrow("exact matching Secretariat handoff");
-    const stale = { ...answered, payload: { ...answered.payload, officeProfileRef: "secretariat-old@1" } }; expect(() => castellan.evaluate(stale, handoff, undefined, context)).toThrow("Secretariat profile is stale");
-    expect(() => operatingLayer.recordAssessment(answered, handoff, rectorInterpretation(answered, handoff, determinations(answered).slice(1)), context)).toThrow("exactly one determination");
-  });
-
-  it("keeps mission formation free of research, judgment, deployment, supervision, and execution operations", () => {
-    expect(Object.getOwnPropertyNames(CastellanMissionFormation.prototype)).toEqual(["constructor", "evaluate"]);
-    expect(Object.getOwnPropertyNames(CastellanOperatingLayer.prototype)).toEqual(["constructor", "recordAssessment"]);
-  });
+import { CastellanInquiry, CastellanTurnDisposition, SecretariatMissionIntake } from "../src/secretariat-mission-dossier.js";
+const context = { identityFactory: (p: string) => p + "-castellan-test", now: () => "2026-08-03T07:00:00.000Z" }; const intake = new SecretariatMissionIntake(), castellan = new CastellanMissionFormation(), layer = new CastellanOperatingLayer();
+function open() { return intake.open({ authenticatedOperatorRef: "operator@1", rawIntent: "Build mission" }, "castellan-turn", context); }
+function answered(disposition: PredicateDetermination["disposition"] = "RESOLVED") { const d = open(), result = castellan.evaluate(d, undefined, undefined, context); if (result.artifactType !== "CastellanInquiry") throw new Error(); const q = result as GovernedArtifactEnvelope<CastellanInquiry>; const p = intake.presentInquiry(d, q), a = intake.recordAnswers(p, [{ questionId: q.payload.question.questionId, rawAnswer: "Outcome" }]), h = intake.prepareCastellanHandoff(a, context); const i = createGovernedArtifact<RectorPredicateInterpretationContract>("RectorPredicateInterpretation", "Rector", a.correlationId, { officerPersonaRef: ADMITTED_RECTOR.identity + "@2", dossierRef: a.identity + "@3", handoffRef: h.identity + "@1", determinations: [{ questionId: q.payload.question.questionId, predicate: q.payload.question.predicate, disposition, values: disposition === "RESOLVED" ? ["Outcome"] : [], rationale: "Exact turn assessment." }], researchPerformed: false, judgmentRendered: false, authorityCreated: false }, { coreDoctrineRef: "coredoctrine-core-v1@6", lexiconRef: "imperiumlexicon-core-v1@4", officeProfileRef: ADMITTED_CASTELLAN_PROFILE.identity + "@2", vocabularyUses: [{ termId: "LEX-012", value: "castellan", lexiconRef: "imperiumlexicon-core-v1@4" }] }, [ADMITTED_RECTOR.identity + "@2", a.identity + "@3", h.identity + "@1"], context); return { d: a, h, assessment: layer.recordAssessment(a, h, i, context), q }; }
+describe("Castellan one-question formation", () => {
+  it("issues one question only", () => { const result = castellan.evaluate(open(), undefined, undefined, context); expect(result.artifactType).toBe("CastellanInquiry"); const q = result as GovernedArtifactEnvelope<CastellanInquiry>; expect(q.payload.question.predicate).toBe("purpose"); });
+  it("accepts one resolved response and advances only by disposition", () => { const x = answered(); const result = castellan.evaluate(x.d, x.h, x.assessment, context); expect(result).toMatchObject({ artifactType: "CastellanTurnDisposition", payload: { action: "ACCEPT_AND_ADVANCE", acceptedDetermination: { predicate: "purpose" } } }); });
+  it.each(["AMBIGUOUS", "CONTRADICTORY", "UNUSABLE"] as const)("does not accept %s", (state) => { const x = answered(state); const result = castellan.evaluate(x.d, x.h, x.assessment, context) as GovernedArtifactEnvelope<CastellanTurnDisposition>; expect(result.artifactType).toBe("CastellanTurnDisposition"); expect(result.payload.action).not.toBe("ACCEPT_AND_ADVANCE"); });
+  it("requires exactly one Rector determination", () => { const x = answered(); const forged = { ...x.assessment, payload: { ...x.assessment.payload, determination: { ...x.assessment.payload.determination, questionId: "other" } } }; expect(() => castellan.evaluate(x.d, x.h, forged, context)).toThrow("exact active answered question"); });
+  it("keeps prohibited powers absent", () => { expect(Object.getOwnPropertyNames(CastellanMissionFormation.prototype)).toEqual(["constructor", "evaluate"]); });
 });

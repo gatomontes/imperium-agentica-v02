@@ -2,9 +2,16 @@
 
 ## Constitutional controlling decisions
 
+### DR-092 — Isolde Single-Turn Transport and Mission-Inquiry Correction
+
+Status: active admitted correction and successor revalidation.
+Path: `deliberations/DR-092.md`
+
+Blackquill returns `ACCEPTABLE` for the corrected Isolde boundary.
+
 ### DR-091 — Rector, Resident Castellan Officer
 
-Status: active admitted Officer Persona and provider-neutral operating contract.
+Status: operating contract corrected and successor revalidated by DR-092; preserved admission history.
 Path: `deliberations/DR-091.md`
 
 ### DR-090 — Cognitionist Office Profile and Connection Contract
