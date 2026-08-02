@@ -312,3 +312,18 @@ validation.
 
 No actual Office profile or implementation is admitted. The profile leg is
 complete. The next separate leg is Secretariat reconstruction.
+
+## DR-074 — Secretariat Reconstruction v1
+
+The Secretariat Office Profile v1 and bounded, non-live Mission Dossier surface
+are admitted against exact Core Doctrine v2. Secretariat opens an intent dossier,
+presents exact Castellan inquiries in customer-friendly form, records answers,
+and prepares an exact handoff for Castellan evaluation.
+
+Focused pressure testing passes 23/23 across the DR-073 profile contract and
+Secretariat reconstruction suites. Repository-wide TypeScript still exposes the
+pre-existing transport export and stale Petition fixture findings classified by
+DR-070; no live adapter or repository-wide conformance is claimed.
+
+The next separate Office leg is Castellan reconstruction against its own exact-v2
+Office Profile.

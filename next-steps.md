@@ -383,6 +383,9 @@ active profile or existing artifacts.
 5. Enact Core Doctrine v1 through Senate.
 6. Define and pressure-test the Office Doctrine Profile contract.
 7. Reconstruct Secretariat as the first downstream Office.
+8. Reconstruct Castellan as the internal mission orchestrator, beginning with
+   evaluation of an exact current Secretariat dossier and generation of bounded
+   clarification inquiries.
 
 No other Office implementation, generic infrastructure reuse, Colosseum work,
 Runtime operation, credentials, deployment, or external effect is selected.

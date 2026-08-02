@@ -10,7 +10,7 @@ rewrite, or condemn historical work.
 | Schema and serialization infrastructure | `REUSE_CANDIDATE` | Revalidate after Core Doctrine and profile schemas exist |
 | Persistence adapters | `REUSE_CANDIDATE` | Revalidate custody, authority, and supersession behavior |
 | Transport and HTTP adapters | `REUSE_CANDIDATE_WITH_FINDINGS` | Repair existing baseline defects; prove no authority is inferred from transport |
-| Secretariat | `CONFORMANCE_REQUIRED` | Rebuild against Core Doctrine and its Office Doctrine Profile |
+| Secretariat | `RECONSTRUCTED_NON_LIVE` | DR-074 admits the exact-v2 profile and bounded Mission Dossier intake/inquiry/handoff surface; live adapters remain unadmitted |
 | Castellan | `CONFORMANCE_REQUIRED` | Rebuild as internal mission orchestrator after Secretariat |
 | Guildhall | `CONFORMANCE_REQUIRED` | Reconstruct profession-resolution jurisdiction from enacted doctrine |
 | Garrison | `CONFORMANCE_REQUIRED` | Reconstruct Persona stewardship and exact admission boundaries |
@@ -26,8 +26,9 @@ rewrite, or condemn historical work.
 
 ## Admission rule
 
-DR-073 now supplies the common Office Doctrine Profile contract. This does not
-change any row's reset status. Each Office still requires its own exact v2
+DR-073 supplies the common Office Doctrine Profile contract. DR-074 changes only
+the Secretariat row through exact-v2 profile admission and bounded implementation
+conformance. Each remaining Office still requires its own exact v2
 profile, Tribunalis judgment, assigned-Senator admission, and implementation
 conformance evidence.
 
