@@ -359,3 +359,17 @@ Lexicon v3 admits 84 entry-specific terms, Doctrine v5 advances the controlling
 pointer, and Office Profile admission now requires terminology-gate evidence.
 Blackquill returns `ACCEPTABLE` for bounded closure. Castellan remains next,
 against Doctrine v5 and Lexicon v3.
+
+## DR-084 — Castellan Reconstruction v1
+
+Castellan is admitted as the Citadel's bounded internal mission-formation
+orchestrator against exact Core Doctrine v5 and Lexicon v3. It evaluates exact
+Secretariat dossiers, issues predicate-bound clarification inquiries through
+Secretariat, and produces a candidate Mission Specification only after the
+exact answered-dossier handoff. Focused evidence passes 13/13 across the
+Castellan and Secretariat boundary.
+
+Castellan has no research, profession-selection, Persona-building, judgment,
+deployment, supervision, execution, Runtime, credential, provider, or external-
+action authority. The next leg requires separate selection of Castellan's first
+downstream Citadel Office boundary.

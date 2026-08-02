@@ -389,6 +389,7 @@ active profile or existing artifacts.
    evaluation of an exact current Secretariat dossier and generation of bounded
    clarification inquiries.
 10. Carry Lexicon v3's mandatory terminology gate into every Office as that Office is reconstructed.
+11. DR-084 completes Castellan mission formation through the candidate Mission Specification. Select and reconstruct the first downstream Citadel Office before adding any Castellan request method.
 
 No other Office implementation, generic infrastructure reuse, Colosseum work,
 Runtime operation, credentials, deployment, or external effect is selected.
