@@ -243,11 +243,11 @@ export class MasterMasonLiveIsoldeSession {
     let provider: "openai" | "deepseek" | undefined;
     let model: string | undefined;
     while (true) {
-      const next = this.rector.initiateInquiry(dossier);
+      const next = turns === 0 ? this.rector.formFromAuthenticatedIntent(dossier) : this.rector.initiateInquiry(dossier);
       if (next.artifactType === "MissionSpecificationCandidate") {
-        audit.push(event("MISSION_INTAKE_COMPLETE", correlationId, true, true, true));
-        audit.push(event("MASTER_MASON_CLOSED", correlationId, true, true, true));
-        return { dossier, candidate: next as GovernedArtifactEnvelope<MissionSpecificationCandidate>, provider: provider!, model: model!, turns, audit };
+        audit.push(event("MISSION_INTAKE_COMPLETE", correlationId, true, provider !== undefined, turns > 0));
+        audit.push(event("MASTER_MASON_CLOSED", correlationId, true, provider !== undefined, turns > 0));
+        return { dossier, candidate: next as GovernedArtifactEnvelope<MissionSpecificationCandidate>, provider: provider ?? "deepseek", model: model ?? "not-invoked", turns, audit };
       }
       if (next.artifactType !== "CastellanInquiry") throw new Error("Castellan returned an invalid conversation state");
       const inquiry = next as GovernedArtifactEnvelope<CastellanInquiry>;
