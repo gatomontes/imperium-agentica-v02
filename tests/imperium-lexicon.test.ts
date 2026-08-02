@@ -109,7 +109,7 @@ describe("Senate-owned Imperium Lexicon", () => {
     expect(ENACTED_CORE_DOCTRINE_V5.doctrine).toMatchObject({ version: 5, payload: { lexiconRef: "imperiumlexicon-core-v1@3" } });
     expect(ENACTED_IMPERIUM_LEXICON_V4.lexicon).toMatchObject({ version: 4, payload: { senateDecisionRef: "DR-087" } });
     expect(ENACTED_CORE_DOCTRINE_V6.doctrine).toMatchObject({ version: 6, payload: { senateDecisionRef: "DR-088", lexiconRef: "imperiumlexicon-core-v1@4" } });
-    expect(ADMITTED_SECRETARIAT_PROFILE.payload).toMatchObject({ coreDoctrineRef: "coredoctrine-core-v1@6", lexiconRef: "imperiumlexicon-core-v1@4", state: "ADMITTED", admissionDecisionRef: "officedoctrineprofileadmissiondecision-secretariat-v2@1" });
+    expect(ADMITTED_SECRETARIAT_PROFILE.payload).toMatchObject({ coreDoctrineRef: "coredoctrine-core-v1@6", lexiconRef: "imperiumlexicon-core-v1@4", state: "ADMITTED", admissionDecisionRef: "officedoctrineprofileadmissiondecision-secretariat-v3@1" });
     expect(ADMITTED_SECRETARIAT_PROFILE.payload.applications).toHaveLength(19);
   });
 
