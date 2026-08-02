@@ -387,3 +387,16 @@ doctrine, Lexicon, and profile lineage. Resource requirements are explicit.
 Institutional judgment is absent from Castellan's profile-admission and runtime
 paths. The assigned Senator admits the profile from exact conformance evidence.
 The focused pressure matrix passes 44/44. Operational powers remain closed.
+
+## DR-086 — Isolde, Resident Secretariat Officer
+
+Isolde is admitted as Secretariat's resident Officer Persona and bounded
+Operator-facing cognitive interface. She structures explicitly sourced intake,
+presents Castellan questions without altering their exact semantic core, maps
+raw replies to exact question identities, and acts only through Secretariat's
+deterministic operating layer.
+
+The provider-neutral `IsoldeCognitivePort` is admitted, but no concrete model,
+provider, credential, live Runtime, or external effect is selected. Focused
+evidence passes 40/40 across Isolde, Secretariat, Castellan, and Office-profile
+contracts. The next gate is a separately admitted cognitive-port adapter.

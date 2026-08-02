@@ -391,6 +391,7 @@ active profile or existing artifacts.
 10. Carry Lexicon v3's mandatory terminology gate into every Office as that Office is reconstructed.
 11. DR-084 completes Castellan mission formation through the candidate Mission Specification. Select and reconstruct the first downstream Citadel Office before adding any Castellan request method.
 12. DR-085 supersedes DR-084 and closes the Blackquill findings. Select Castellan's first downstream Citadel Office; do not add a downstream request method before that Office is admitted.
+13. DR-086 admits Isolde's Persona and provider-neutral Secretariat cognitive interface. Select a concrete Isolde cognitive-port adapter before claiming model-live operation, or return to Castellan's downstream Office selection as a separate leg.
 
 No other Office implementation, generic infrastructure reuse, Colosseum work,
 Runtime operation, credentials, deployment, or external effect is selected.

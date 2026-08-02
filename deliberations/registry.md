@@ -370,6 +370,7 @@ DR-060 passed 28/28 synthetic cross-contract reconciliation criteria and is admi
 - DR-083: `DR-083.md` — revalidates Secretariat and requires terminology-gate evidence for every future Office profile.
 - DR-084: `DR-084.md` — admits Castellan's exact Doctrine v5/Lexicon v3 profile, clarification inquiry, and candidate Mission Specification boundary without research or operational authority.
 - DR-085: `DR-085.md` — supersedes DR-084, removes institutional judgment from Castellan, and corrects mandatory inquiry, cognitive assessment, lineage, unresolved-predicate, and test-suite defects.
+- DR-086: `DR-086.md` — admits Isolde as Secretariat's resident Office-bound Persona and provider-neutral cognitive operating contract without model or Runtime activation.
 
 
 ### DR-064 — Foundry Input and Conflict Revalidation
