@@ -34,6 +34,7 @@ export interface OfficeDoctrineProfileDraft {
   domainStandardRefs: string[];
   prohibitedInterpretations: string[];
   profileRevisionConditions: string[];
+  terminologyGateEvidenceRefs: string[];
 }
 
 export interface OfficeDoctrineProfile {
@@ -49,6 +50,7 @@ export interface OfficeDoctrineProfile {
   domainStandardRefs: string[];
   prohibitedInterpretations: string[];
   profileRevisionConditions: string[];
+  terminologyGateEvidenceRefs: string[];
   state: "CANDIDATE" | "ADMITTED";
   conformanceJudgmentRef?: string;
   admissionDecisionRef?: string;
@@ -109,9 +111,10 @@ export class OfficeDoctrineProfileContract {
         domainStandardRefs: uniqueSorted(draft.domainStandardRefs),
         prohibitedInterpretations: uniqueSorted(draft.prohibitedInterpretations),
         profileRevisionConditions: uniqueSorted(draft.profileRevisionConditions),
+        terminologyGateEvidenceRefs: uniqueSorted(draft.terminologyGateEvidenceRefs),
         state: "CANDIDATE",
       },
-      [doctrineRef, draft.issuerAuthorityRef, ...draft.domainStandardRefs],
+      [doctrineRef, draft.issuerAuthorityRef, ...draft.domainStandardRefs, ...draft.terminologyGateEvidenceRefs],
       context,
     );
   }
@@ -249,6 +252,7 @@ function validateDraft(
   if (draft.profileRevisionConditions.length === 0) {
     throw new Error("profile revision conditions are required");
   }
+  if (draft.terminologyGateEvidenceRefs.length === 0) throw new Error("Office profile requires terminology-conformance gate evidence");
   const required = doctrine.payload.provisions.map((provision) => provision.provisionId).sort();
   const supplied = draft.applications.map((application) => application.provisionId.trim()).sort();
   if (new Set(supplied).size !== supplied.length) {

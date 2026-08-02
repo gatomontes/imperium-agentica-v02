@@ -5,6 +5,8 @@ import { ENACTED_CORE_DOCTRINE_V3 } from "../src/enacted-core-doctrine-v3.js";
 import { ENACTED_CORE_DOCTRINE_V4 } from "../src/enacted-core-doctrine-v4.js";
 import { ENACTED_IMPERIUM_LEXICON_V1, IMPERIUM_LEXICON_V1_AUTHORITY, imperiumLexiconV1Bill } from "../src/imperium-lexicon-v1.js";
 import { ENACTED_IMPERIUM_LEXICON_V2 } from "../src/imperium-lexicon-v2.js";
+import { ENACTED_IMPERIUM_LEXICON_V3 } from "../src/imperium-lexicon-v3.js";
+import { ENACTED_CORE_DOCTRINE_V5 } from "../src/enacted-core-doctrine-v5.js";
 import { LexiconAuthority, LexiconLegislativeAuthority, SenateLexicon, TerminologyConformanceGate } from "../src/senate-lexicon.js";
 import { ADMITTED_SECRETARIAT_PROFILE } from "../src/secretariat-doctrine-profile.js";
 
@@ -101,7 +103,17 @@ describe("Senate-owned Imperium Lexicon", () => {
   it("revalidates the admitted Secretariat profile against doctrine v3", () => {
     expect(ENACTED_IMPERIUM_LEXICON_V2.lexicon).toMatchObject({ version: 2, supersedes: "imperiumlexicon-core-v1@1", payload: { senateDecisionRef: "DR-078" } });
     expect(ENACTED_CORE_DOCTRINE_V4.doctrine).toMatchObject({ version: 4, supersedes: "coredoctrine-core-v1@3", payload: { senateDecisionRef: "DR-079", lexiconRef: "imperiumlexicon-core-v1@2" } });
-    expect(ADMITTED_SECRETARIAT_PROFILE.payload).toMatchObject({ coreDoctrineRef: "coredoctrine-core-v1@4", lexiconRef: "imperiumlexicon-core-v1@2", state: "ADMITTED", admissionDecisionRef: "officedoctrineprofileadmissiondecision-secretariat@1" });
+    expect(ENACTED_IMPERIUM_LEXICON_V3.lexicon.payload.entries).toHaveLength(84);
+    expect(ENACTED_CORE_DOCTRINE_V5.doctrine).toMatchObject({ version: 5, payload: { lexiconRef: "imperiumlexicon-core-v1@3" } });
+    expect(ADMITTED_SECRETARIAT_PROFILE.payload).toMatchObject({ coreDoctrineRef: "coredoctrine-core-v1@5", lexiconRef: "imperiumlexicon-core-v1@3", state: "ADMITTED", admissionDecisionRef: "officedoctrineprofileadmissiondecision-secretariat@1" });
     expect(ADMITTED_SECRETARIAT_PROFILE.payload.applications).toHaveLength(19);
+  });
+
+  it("closes generic metadata and missing consequential vocabulary", () => {
+    const entries = ENACTED_IMPERIUM_LEXICON_V3.lexicon.payload.entries;
+    expect(new Set(entries.map((entry) => entry.permittedUses.join("|"))).size).toBe(entries.length);
+    expect(entries.find((entry) => entry.canonicalValue === "jurisdiction")?.termId).toBe("LEX-056");
+    expect(entries.find((entry) => entry.canonicalValue === "verification_method")?.termId).toBe("LEX-072");
+    expect(entries.every((entry) => !entry.permittedUses.some((rule) => rule === "Use with this exact meaning in every governed artifact, contract, schema, prompt, test, decision, and implementation surface."))).toBe(true);
   });
 });

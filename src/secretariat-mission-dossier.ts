@@ -1,5 +1,5 @@
 import { ArtifactContext, ArtifactEnvelope, GovernedArtifactEnvelope, GovernedArtifactContext, createGovernedArtifact } from "./artifact.js";
-import { ENACTED_IMPERIUM_LEXICON_V2 } from "./imperium-lexicon-v2.js";
+import { ENACTED_IMPERIUM_LEXICON_V3 } from "./imperium-lexicon-v3.js";
 import { LexiconAuthority, TerminologyConformanceGate } from "./senate-lexicon.js";
 import { assertArtifactEnvelope } from "./schema.js";
 import { ADMITTED_SECRETARIAT_PROFILE } from "./secretariat-doctrine-profile.js";
@@ -88,7 +88,7 @@ export interface SecretariatDossierHandoff {
 const profileRef = ADMITTED_SECRETARIAT_PROFILE.identity + "@" + ADMITTED_SECRETARIAT_PROFILE.version;
 const doctrineRef = ADMITTED_SECRETARIAT_PROFILE.payload.coreDoctrineRef;
 const lexiconRef = ADMITTED_SECRETARIAT_PROFILE.payload.lexiconRef;
-const vocabularyAuthority = new LexiconAuthority(ENACTED_IMPERIUM_LEXICON_V2.lexicon, lexiconRef);
+const vocabularyAuthority = new LexiconAuthority(ENACTED_IMPERIUM_LEXICON_V3.lexicon, lexiconRef);
 const terminologyGate = new TerminologyConformanceGate(vocabularyAuthority);
 
 export class SecretariatMissionIntake {

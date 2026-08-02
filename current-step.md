@@ -352,3 +352,10 @@ remain open rather than falsely closed.
 
 The next Office leg remains Castellan reconstruction against exact Doctrine v4
 and Lexicon v2.
+
+## DR-081 through DR-083 — Lexicon Semantic Closure
+
+Lexicon v3 admits 84 entry-specific terms, Doctrine v5 advances the controlling
+pointer, and Office Profile admission now requires terminology-gate evidence.
+Blackquill returns `ACCEPTABLE` for bounded closure. Castellan remains next,
+against Doctrine v5 and Lexicon v3.

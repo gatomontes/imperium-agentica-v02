@@ -365,6 +365,9 @@ DR-060 passed 28/28 synthetic cross-contract reconciliation criteria and is admi
 - DR-078: `DR-078.md` — enacts Lexicon v2 enforcement corrections for mandatory lineage, bound consumers, contextual aliases, exact snake_case values, legislative authority, amendment impact, and live conformance gates.
 - DR-079: `DR-079.md` — enacts Core Doctrine v4 with exact controlling Lexicon v2 pointer.
 - DR-080: `DR-080.md` — revalidates Secretariat against Doctrine v4 and Lexicon v2 without expanding jurisdiction.
+- DR-081: `DR-081.md` — enacts Lexicon v3 semantic closure with 84 entry-specific canonical terms.
+- DR-082: `DR-082.md` — enacts Core Doctrine v5 with exact Lexicon v3 pointer.
+- DR-083: `DR-083.md` — revalidates Secretariat and requires terminology-gate evidence for every future Office profile.
 
 
 ### DR-064 — Foundry Input and Conflict Revalidation
