@@ -131,27 +131,18 @@ describe("live Isolde controlled reply loop", () => {
     };
   }
 
-  it("accepts one answer at a time and completes the eight-predicate mission candidate", async () => {
+  it("forms from clear intent without exposing the eight internal predicates as questions", async () => {
     const initialOnly: RectorCognitivePort = { assessMissionPredicates: () => { throw new Error("not used"); } };
     const session = new MasterMasonLiveIsoldeSession(loopAccess(), new IsoldeSecretariatOfficer(), new RectorCastellanOfficer(initialOnly));
     const questions: string[] = [];
-    const result = await session.runConversation("operator@1", "Research the top ten audience pain points", "live-loop", async (question) => { questions.push(question); return question.includes("none") || question.includes("None") ? "None" : `Answer ${questions.length}`; });
-    expect(result.turns).toBe(8);
-    expect(questions).toHaveLength(8);
-    expect(result.dossier.payload.acceptedDeterminations).toHaveLength(8);
-    expect(result.candidate).toMatchObject({ artifactType: "MissionSpecificationCandidate", payload: { state: "CANDIDATE", purpose: "Answer 1", authorityCreated: false } });
-    expect(result.audit.filter((entry) => entry.stage === "CASTELLAN_EVALUATED")).toHaveLength(8);
+    const intent = "Research the top ten audience pain points from YouTube comments";
+    const result = await session.runConversation("operator@1", intent, "live-loop", async (question) => { questions.push(question); return "unexpected"; });
+    expect(result.turns).toBe(0);
+    expect(questions).toHaveLength(0);
+    expect(result.dossier.payload.acceptedDeterminations).toHaveLength(0);
+    expect(result.candidate).toMatchObject({ artifactType: "MissionSpecificationCandidate", payload: { state: "CANDIDATE", purpose: intent, requestedOutputs: [intent], unresolvedPredicates: expect.arrayContaining(["scope", "unknowns", "resource_requirements"]), authorityCreated: false } });
+    expect(result.audit.filter((entry) => entry.stage === "CASTELLAN_EVALUATED")).toHaveLength(0);
     expect(result.audit.every((entry) => !entry.credentialExposedToIsolde && !entry.missionExecuted)).toBe(true);
-  });
-
-  it("lets Castellan reject and requery the same predicate without advancing", async () => {
-    const initialOnly: RectorCognitivePort = { assessMissionPredicates: () => { throw new Error("not used"); } };
-    const session = new MasterMasonLiveIsoldeSession(loopAccess(["UNUSABLE", "RESOLVED"]), new IsoldeSecretariatOfficer(), new RectorCastellanOfficer(initialOnly));
-    const questions: string[] = [];
-    const result = await session.runConversation("operator@1", "Build mission", "live-requery", async (question) => { questions.push(question); return questions.length === 1 ? "Unrelated material" : question.includes("none") || question.includes("None") ? "None" : `Answer ${questions.length}`; });
-    expect(questions[1]).toBe("That is not what I asked. What precise outcome should this mission accomplish?");
-    expect(result.turns).toBe(9);
-    expect(result.dossier.payload.acceptedDeterminations).toHaveLength(8);
   });
 
   it("keeps the exact Operator answer as evidence without asking the provider to reproduce it", async () => {
