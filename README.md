@@ -4,19 +4,21 @@
 
 DR-070 establishes a Senate-first constitutional reset. DR-071 enacted Core
 Imperium Doctrine v1; DR-072 superseded it with corrected v2, DR-076 enacted
-v3 and v4, and DR-082 now makes Core Doctrine v5 and exact Imperium Lexicon v3 controlling. All
+v3 through v5, and DR-088 now makes Core Doctrine v6 and exact Imperium Lexicon v4 controlling. All
 pre-Senate Office contracts and implementations remain preserved evidence and
 are not re-admitted by enactment alone.
 
 Read `CONSTITUTIONAL-RESET.md` before treating any pre-Senate semantic or
 implementation artifact as current authority.
 
-DR-081 supersedes it with semantically closed Lexicon v3; DR-082 makes its exact
-version controlling through Core Doctrine v5. DR-083 revalidates the first
+DR-087 supersedes it with Cognitionist-capable Lexicon v4; DR-088 makes its exact
+version controlling through Core Doctrine v6. DR-089 revalidates the existing
 derived profile and bounded reconstruction: Secretariat Mission Dossier intake,
 Castellan inquiry presentation, Operator answer recording, and exact handoff.
-No research, judgment, deployment, supervision, Runtime, or external effect is
-authorized.
+DR-090 admits Cognitionist's provider-neutral model-connection contract while
+reserving credential custody to Locksmith and live execution to Master Mason.
+No provider, model, credential mechanism, deployment, supervision, Runtime, or
+external effect is authorized.
 
 Imperium has one governed language. Offices possess jurisdiction, not dialects.
 

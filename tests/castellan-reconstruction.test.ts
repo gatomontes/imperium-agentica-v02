@@ -18,7 +18,7 @@ describe("Castellan reconstruction correction", () => {
     expect(new Set(CASTELLAN_PROFILE_CANDIDATE.payload.applications.map((a) => a.applicationRule)).size).toBe(19);
     expect(CASTELLAN_PROFILE_ADMISSION_DECISION.payload.conformanceJudgmentRef).toBeUndefined();
     expect(CASTELLAN_PROFILE_ADMISSION_DECISION.payload.conformanceEvidenceRefs).toEqual(["tests/castellan-reconstruction.test.ts", "reviews/castellan-blackquill-correction-review-001.md"]);
-    expect(ADMITTED_CASTELLAN_PROFILE.payload).toMatchObject({ state: "ADMITTED", coreDoctrineRef: "coredoctrine-core-v1@5", lexiconRef: "imperiumlexicon-core-v1@3" });
+    expect(ADMITTED_CASTELLAN_PROFILE.payload).toMatchObject({ state: "ADMITTED", coreDoctrineRef: "coredoctrine-core-v1@6", lexiconRef: "imperiumlexicon-core-v1@4" });
     expect(ADMITTED_CASTELLAN_PROFILE.payload.conformanceJudgmentRef).toBeUndefined();
   });
 

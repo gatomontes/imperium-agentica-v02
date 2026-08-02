@@ -1,5 +1,5 @@
 import { ArtifactContext, GovernedArtifactContext, GovernedArtifactEnvelope, createGovernedArtifact } from "./artifact.js";
-import { ENACTED_IMPERIUM_LEXICON_V3 } from "./imperium-lexicon-v3.js";
+import { ENACTED_IMPERIUM_LEXICON_V4 } from "./imperium-lexicon-v4.js";
 import { ADMITTED_ISOLDE } from "./isolde-officer-profile.js";
 import { LexiconAuthority, TerminologyConformanceGate } from "./senate-lexicon.js";
 import { ADMITTED_SECRETARIAT_PROFILE } from "./secretariat-doctrine-profile.js";
@@ -20,7 +20,7 @@ const officerRef = ADMITTED_ISOLDE.identity + "@" + ADMITTED_ISOLDE.version;
 const officeProfileRef = ADMITTED_SECRETARIAT_PROFILE.identity + "@" + ADMITTED_SECRETARIAT_PROFILE.version;
 const doctrineRef = ADMITTED_SECRETARIAT_PROFILE.payload.coreDoctrineRef;
 const lexiconRef = ADMITTED_SECRETARIAT_PROFILE.payload.lexiconRef;
-const gate = new TerminologyConformanceGate(new LexiconAuthority(ENACTED_IMPERIUM_LEXICON_V3.lexicon, lexiconRef));
+const gate = new TerminologyConformanceGate(new LexiconAuthority(ENACTED_IMPERIUM_LEXICON_V4.lexicon, lexiconRef));
 const arrayFields = new Set<IntentField>(["scope", "constraints", "acceptance_criteria", "requested_outputs", "supplied_claims", "assumptions", "unknowns", "material_contradictions", "authority_assertions", "external_obligation_assertions", "attachment_refs"]);
 
 export class IsoldeSecretariatOfficer {

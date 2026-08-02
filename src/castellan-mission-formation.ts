@@ -1,6 +1,6 @@
 import { ArtifactContext, ArtifactEnvelope, GovernedArtifactContext, GovernedArtifactEnvelope, createGovernedArtifact } from "./artifact.js";
 import { ADMITTED_CASTELLAN_PROFILE } from "./castellan-doctrine-profile.js";
-import { ENACTED_IMPERIUM_LEXICON_V3 } from "./imperium-lexicon-v3.js";
+import { ENACTED_IMPERIUM_LEXICON_V4 } from "./imperium-lexicon-v4.js";
 import { ADMITTED_SECRETARIAT_PROFILE } from "./secretariat-doctrine-profile.js";
 import { LexiconAuthority, TerminologyConformanceGate } from "./senate-lexicon.js";
 import { CastellanInquiry, MissionDossier, MissionFormationPredicate, SecretariatDossierHandoff } from "./secretariat-mission-dossier.js";
@@ -21,7 +21,7 @@ const profileRef = ADMITTED_CASTELLAN_PROFILE.identity + "@" + ADMITTED_CASTELLA
 const secretariatProfileRef = ADMITTED_SECRETARIAT_PROFILE.identity + "@" + ADMITTED_SECRETARIAT_PROFILE.version;
 const doctrineRef = ADMITTED_CASTELLAN_PROFILE.payload.coreDoctrineRef;
 const lexiconRef = ADMITTED_CASTELLAN_PROFILE.payload.lexiconRef;
-const gate = new TerminologyConformanceGate(new LexiconAuthority(ENACTED_IMPERIUM_LEXICON_V3.lexicon, lexiconRef));
+const gate = new TerminologyConformanceGate(new LexiconAuthority(ENACTED_IMPERIUM_LEXICON_V4.lexicon, lexiconRef));
 const predicateQuestions: Record<MissionFormationPredicate, [string, string]> = {
   purpose: ["What precise outcome should this mission accomplish?", "Castellan must establish the Operator's intended purpose."],
   scope: ["What is explicitly in scope and out of scope?", "Mission scope requires explicit inclusion and exclusion boundaries."],

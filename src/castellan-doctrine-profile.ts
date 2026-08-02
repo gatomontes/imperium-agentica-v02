@@ -1,14 +1,14 @@
 import { createArtifact } from "./artifact.js";
-import { ENACTED_CORE_DOCTRINE_V5 } from "./enacted-core-doctrine-v5.js";
+import { ENACTED_CORE_DOCTRINE_V6 } from "./enacted-core-doctrine-v6.js";
 import { OfficeDoctrineProfileAdmissionDecision, OfficeDoctrineProfileContract, OfficeDoctrineProfileDraft } from "./office-doctrine-profile.js";
 
-export const CASTELLAN_PROFILE_DECISION_REF = "DR-085";
+export const CASTELLAN_PROFILE_DECISION_REF = "DR-089";
 export const CASTELLAN_PROFILE_AUTHORITY_REF = "DR-073#office-profile-admission";
-export const CASTELLAN_PROFILE_EFFECTIVE_AT = "2026-08-02T18:00:00.000Z";
-const doctrineRef = ENACTED_CORE_DOCTRINE_V5.doctrine.identity + "@5";
+export const CASTELLAN_PROFILE_EFFECTIVE_AT = "2026-08-03T02:00:00.000Z";
+const doctrineRef = ENACTED_CORE_DOCTRINE_V6.doctrine.identity + "@6";
 const evidenceRef = "tests/castellan-reconstruction.test.ts";
 const reviewRef = "reviews/castellan-blackquill-correction-review-001.md";
-const contract = new OfficeDoctrineProfileContract(doctrineRef, ENACTED_CORE_DOCTRINE_V5.doctrine.payload.lexiconRef);
+const contract = new OfficeDoctrineProfileContract(doctrineRef, ENACTED_CORE_DOCTRINE_V6.doctrine.payload.lexiconRef);
 
 const applications: Record<string, [string, string, string]> = {
   "CORE-000": ["Classify every mission predicate using only enacted definitions and exact dispositions.", "Exercise every predicate and disposition transition.", "A local meaning changes a governed consequence."],
@@ -36,7 +36,7 @@ export const CASTELLAN_PROFILE_DRAFT: OfficeDoctrineProfileDraft = {
   officeId: "Castellan", arena: "CITADEL", title: "Castellan Office Doctrine Profile v2",
   purpose: "Govern internal mission formation through mandatory intent inquiry, exact cognitive predicate assessment, bounded follow-up inquiry, and candidate Mission Specification production.",
   issuerAuthorityRef: CASTELLAN_PROFILE_AUTHORITY_REF,
-  applications: ENACTED_CORE_DOCTRINE_V5.doctrine.payload.provisions.map((provision) => {
+  applications: ENACTED_CORE_DOCTRINE_V6.doctrine.payload.provisions.map((provision) => {
     const rule = applications[provision.provisionId];
     if (!rule) throw new Error("missing Castellan application for " + provision.provisionId);
     return { provisionId: provision.provisionId, applicability: "APPLIES" as const, applicationRule: rule[0], verificationMethod: rule[1], evidenceRequirements: [evidenceRef, reviewRef], invalidationConditions: [rule[2]] };
@@ -47,6 +47,6 @@ export const CASTELLAN_PROFILE_DRAFT: OfficeDoctrineProfileDraft = {
   terminologyGateEvidenceRefs: [evidenceRef],
 };
 
-export const CASTELLAN_PROFILE_CANDIDATE = contract.draft(ENACTED_CORE_DOCTRINE_V5.doctrine, CASTELLAN_PROFILE_DRAFT, "castellan-profile-002", { identityFactory: (p) => p + "-castellan-v2", now: () => CASTELLAN_PROFILE_EFFECTIVE_AT });
-export const CASTELLAN_PROFILE_ADMISSION_DECISION = createArtifact<OfficeDoctrineProfileAdmissionDecision>("OfficeDoctrineProfileAdmissionDecision", "Senator:" + CASTELLAN_PROFILE_CANDIDATE.payload.assignedSenatorId, CASTELLAN_PROFILE_CANDIDATE.correlationId, { profileCandidateRef: CASTELLAN_PROFILE_CANDIDATE.identity + "@1", conformanceEvidenceRefs: [evidenceRef, reviewRef], admissionAuthorityRef: CASTELLAN_PROFILE_AUTHORITY_REF, authorityFindingRef: CASTELLAN_PROFILE_DECISION_REF + "#authority-effective", disposition: "ADMIT" }, [CASTELLAN_PROFILE_CANDIDATE.identity + "@1", evidenceRef, reviewRef, CASTELLAN_PROFILE_AUTHORITY_REF, CASTELLAN_PROFILE_DECISION_REF + "#authority-effective"], { identityFactory: (p) => p + "-castellan-v2", now: () => CASTELLAN_PROFILE_EFFECTIVE_AT });
+export const CASTELLAN_PROFILE_CANDIDATE = contract.draft(ENACTED_CORE_DOCTRINE_V6.doctrine, CASTELLAN_PROFILE_DRAFT, "castellan-profile-003", { identityFactory: (p) => p + "-castellan-v3", now: () => CASTELLAN_PROFILE_EFFECTIVE_AT });
+export const CASTELLAN_PROFILE_ADMISSION_DECISION = createArtifact<OfficeDoctrineProfileAdmissionDecision>("OfficeDoctrineProfileAdmissionDecision", "Senator:" + CASTELLAN_PROFILE_CANDIDATE.payload.assignedSenatorId, CASTELLAN_PROFILE_CANDIDATE.correlationId, { profileCandidateRef: CASTELLAN_PROFILE_CANDIDATE.identity + "@1", conformanceEvidenceRefs: [evidenceRef, reviewRef], admissionAuthorityRef: CASTELLAN_PROFILE_AUTHORITY_REF, authorityFindingRef: CASTELLAN_PROFILE_DECISION_REF + "#authority-effective", disposition: "ADMIT" }, [CASTELLAN_PROFILE_CANDIDATE.identity + "@1", evidenceRef, reviewRef, CASTELLAN_PROFILE_AUTHORITY_REF, CASTELLAN_PROFILE_DECISION_REF + "#authority-effective"], { identityFactory: (p) => p + "-castellan-v3", now: () => CASTELLAN_PROFILE_EFFECTIVE_AT });
 export const ADMITTED_CASTELLAN_PROFILE = contract.admitByAssignedSenator(CASTELLAN_PROFILE_CANDIDATE, CASTELLAN_PROFILE_ADMISSION_DECISION);

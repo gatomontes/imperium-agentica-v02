@@ -1,5 +1,5 @@
 import { createArtifact } from "./artifact.js";
-import { ENACTED_CORE_DOCTRINE_V5 } from "./enacted-core-doctrine-v5.js";
+import { ENACTED_CORE_DOCTRINE_V6 } from "./enacted-core-doctrine-v6.js";
 import {
   OfficeDoctrineProfileAdmissionDecision,
   OfficeDoctrineProfileContract,
@@ -7,13 +7,13 @@ import {
   OfficeDoctrineProfileJudgment,
 } from "./office-doctrine-profile.js";
 
-export const SECRETARIAT_PROFILE_DECISION_REF = "DR-083";
+export const SECRETARIAT_PROFILE_DECISION_REF = "DR-089";
 export const SECRETARIAT_PROFILE_AUTHORITY_REF = "DR-073#office-profile-admission";
 export const SECRETARIAT_PROFILE_STANDARD_REF = "secretariat-mission-intake-standard@1";
-export const SECRETARIAT_PROFILE_EFFECTIVE_AT = "2026-08-02T13:00:00.000Z";
+export const SECRETARIAT_PROFILE_EFFECTIVE_AT = "2026-08-03T02:00:00.000Z";
 
-const doctrineRef = ENACTED_CORE_DOCTRINE_V5.doctrine.identity + "@5";
-const contract = new OfficeDoctrineProfileContract(doctrineRef, ENACTED_CORE_DOCTRINE_V5.doctrine.payload.lexiconRef);
+const doctrineRef = ENACTED_CORE_DOCTRINE_V6.doctrine.identity + "@6";
+const contract = new OfficeDoctrineProfileContract(doctrineRef, ENACTED_CORE_DOCTRINE_V6.doctrine.payload.lexiconRef);
 
 const rules: Record<string, [string, string, string, string]> = {
   "CORE-000": ["Use Core definitions literally when classifying intake state; an incomplete answer remains UNRESOLVED for the dependent handoff.", "Inspect every dossier state transition for an enacted predicate and explicit unresolved handling.", "mission-dossier state history", "A local synonym changes a Core-defined consequence."],
@@ -43,7 +43,7 @@ export const SECRETARIAT_PROFILE_DRAFT: OfficeDoctrineProfileDraft = {
   title: "Secretariat Office Doctrine Profile v1",
   purpose: "Govern Operator-facing mission intake, Castellan inquiry presentation, answer recording, and exact handoff without mission formation or operational authority.",
   issuerAuthorityRef: SECRETARIAT_PROFILE_AUTHORITY_REF,
-  applications: ENACTED_CORE_DOCTRINE_V5.doctrine.payload.provisions.map((provision) => {
+  applications: ENACTED_CORE_DOCTRINE_V6.doctrine.payload.provisions.map((provision) => {
     const [applicationRule, verificationMethod, evidence, invalidation] = rules[provision.provisionId];
     return {
       provisionId: provision.provisionId,
@@ -70,10 +70,10 @@ export const SECRETARIAT_PROFILE_DRAFT: OfficeDoctrineProfileDraft = {
 };
 
 export const SECRETARIAT_PROFILE_CANDIDATE = contract.draft(
-  ENACTED_CORE_DOCTRINE_V5.doctrine,
+  ENACTED_CORE_DOCTRINE_V6.doctrine,
   SECRETARIAT_PROFILE_DRAFT,
   "secretariat-profile-001",
-  { identityFactory: (prefix) => prefix + "-secretariat", now: () => SECRETARIAT_PROFILE_EFFECTIVE_AT },
+  { identityFactory: (prefix) => prefix + "-secretariat-v2", now: () => SECRETARIAT_PROFILE_EFFECTIVE_AT },
 );
 
 export const SECRETARIAT_PROFILE_JUDGMENT = createArtifact<OfficeDoctrineProfileJudgment>(
@@ -89,7 +89,7 @@ export const SECRETARIAT_PROFILE_JUDGMENT = createArtifact<OfficeDoctrineProfile
     findingRefs: ["tests/doctrine/lexicon-semantic-closure-review-001.md"],
   },
   [SECRETARIAT_PROFILE_CANDIDATE.identity + "@1", doctrineRef],
-  { identityFactory: (prefix) => prefix + "-secretariat", now: () => SECRETARIAT_PROFILE_EFFECTIVE_AT },
+  { identityFactory: (prefix) => prefix + "-secretariat-v2", now: () => SECRETARIAT_PROFILE_EFFECTIVE_AT },
 );
 
 export const SECRETARIAT_PROFILE_ADMISSION_DECISION = createArtifact<OfficeDoctrineProfileAdmissionDecision>(
@@ -104,7 +104,7 @@ export const SECRETARIAT_PROFILE_ADMISSION_DECISION = createArtifact<OfficeDoctr
     disposition: "ADMIT",
   },
   [SECRETARIAT_PROFILE_CANDIDATE.identity + "@1", SECRETARIAT_PROFILE_JUDGMENT.identity + "@1", SECRETARIAT_PROFILE_AUTHORITY_REF, SECRETARIAT_PROFILE_DECISION_REF + "#authority-effective"],
-  { identityFactory: (prefix) => prefix + "-secretariat", now: () => SECRETARIAT_PROFILE_EFFECTIVE_AT },
+  { identityFactory: (prefix) => prefix + "-secretariat-v2", now: () => SECRETARIAT_PROFILE_EFFECTIVE_AT },
 );
 
 export const ADMITTED_SECRETARIAT_PROFILE = contract.admit(

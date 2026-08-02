@@ -7,6 +7,8 @@ import { ENACTED_IMPERIUM_LEXICON_V1, IMPERIUM_LEXICON_V1_AUTHORITY, imperiumLex
 import { ENACTED_IMPERIUM_LEXICON_V2 } from "../src/imperium-lexicon-v2.js";
 import { ENACTED_IMPERIUM_LEXICON_V3 } from "../src/imperium-lexicon-v3.js";
 import { ENACTED_CORE_DOCTRINE_V5 } from "../src/enacted-core-doctrine-v5.js";
+import { ENACTED_CORE_DOCTRINE_V6 } from "../src/enacted-core-doctrine-v6.js";
+import { ENACTED_IMPERIUM_LEXICON_V4 } from "../src/imperium-lexicon-v4.js";
 import { LexiconAuthority, LexiconLegislativeAuthority, SenateLexicon, TerminologyConformanceGate } from "../src/senate-lexicon.js";
 import { ADMITTED_SECRETARIAT_PROFILE } from "../src/secretariat-doctrine-profile.js";
 
@@ -105,7 +107,9 @@ describe("Senate-owned Imperium Lexicon", () => {
     expect(ENACTED_CORE_DOCTRINE_V4.doctrine).toMatchObject({ version: 4, supersedes: "coredoctrine-core-v1@3", payload: { senateDecisionRef: "DR-079", lexiconRef: "imperiumlexicon-core-v1@2" } });
     expect(ENACTED_IMPERIUM_LEXICON_V3.lexicon.payload.entries).toHaveLength(84);
     expect(ENACTED_CORE_DOCTRINE_V5.doctrine).toMatchObject({ version: 5, payload: { lexiconRef: "imperiumlexicon-core-v1@3" } });
-    expect(ADMITTED_SECRETARIAT_PROFILE.payload).toMatchObject({ coreDoctrineRef: "coredoctrine-core-v1@5", lexiconRef: "imperiumlexicon-core-v1@3", state: "ADMITTED", admissionDecisionRef: "officedoctrineprofileadmissiondecision-secretariat@1" });
+    expect(ENACTED_IMPERIUM_LEXICON_V4.lexicon).toMatchObject({ version: 4, payload: { senateDecisionRef: "DR-087" } });
+    expect(ENACTED_CORE_DOCTRINE_V6.doctrine).toMatchObject({ version: 6, payload: { senateDecisionRef: "DR-088", lexiconRef: "imperiumlexicon-core-v1@4" } });
+    expect(ADMITTED_SECRETARIAT_PROFILE.payload).toMatchObject({ coreDoctrineRef: "coredoctrine-core-v1@6", lexiconRef: "imperiumlexicon-core-v1@4", state: "ADMITTED", admissionDecisionRef: "officedoctrineprofileadmissiondecision-secretariat-v2@1" });
     expect(ADMITTED_SECRETARIAT_PROFILE.payload.applications).toHaveLength(19);
   });
 
