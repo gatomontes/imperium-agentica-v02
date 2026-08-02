@@ -1,5 +1,12 @@
 # Imperium Agentica v02
 
+## Initial Setup
+
+Run `npm install` and then `npm run setup`. The setup flow verifies OpenAI
+credential presence without displaying credential material and, when needed,
+collects it through hidden terminal input into the git-ignored `.env.local`.
+See `docs/initial-setup.md` for the exact boundary and non-interactive setup.
+
 ## Current Constitutional Baseline
 
 DR-070 establishes a Senate-first constitutional reset. DR-071 enacted Core
