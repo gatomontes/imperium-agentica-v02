@@ -42,7 +42,7 @@ export interface OfficeDoctrineProfile {
   title: string;
   purpose: string;
   coreDoctrineRef: string;
-  lexiconRef?: string;
+  lexiconRef: string;
   assignedSenatorId: string;
   issuerAuthorityRef: string;
   applications: OfficeDoctrineApplication[];
@@ -75,10 +75,11 @@ export interface OfficeDoctrineProfileAdmissionDecision {
 }
 
 export class OfficeDoctrineProfileContract {
-  constructor(readonly currentDoctrineRef: string) {
+  constructor(readonly currentDoctrineRef: string, readonly currentLexiconRef: string) {
     if (!currentDoctrineRef.trim()) {
       throw new Error("current Core Doctrine reference is required");
     }
+    if (!currentLexiconRef.trim()) throw new Error("current Imperium Lexicon reference is required");
   }
 
   draft(
@@ -88,6 +89,7 @@ export class OfficeDoctrineProfileContract {
     context: ArtifactContext = {},
   ): ArtifactEnvelope<OfficeDoctrineProfile> {
     assertCurrentDoctrine(doctrine, this.currentDoctrineRef);
+    if (doctrine.payload.lexiconRef !== this.currentLexiconRef) throw new Error("Office profile doctrine does not match the current Imperium Lexicon pointer");
     validateDraft(doctrine, draft);
     const doctrineRef = doctrine.identity + "@" + doctrine.version;
     return createArtifact(

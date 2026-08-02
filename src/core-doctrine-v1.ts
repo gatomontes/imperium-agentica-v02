@@ -1,5 +1,7 @@
 import { DoctrineBill } from "./senate.js";
 
+export const CORE_DOCTRINE_V1_VOCABULARY_REF = "coredoctrine-core-v1@1#embedded-controlling-definitions";
+
 export const CORE_DOCTRINE_V1_PROVISIONS = [
   ["CORE-001", "Authority is not manufactured", "Consequential acts require an exact current bounded grant traceable to an independently existing competent authority basis; intent, evidence, provenance, competence, assignment, custody, capability, tools, access, transport, payment, conformance, and desired outcome do not independently create authority."],
   ["CORE-002", "Derived authority only narrows", "Derived authority may narrow but shall not enlarge, repair, silently replace, or outlive its parent."],
@@ -40,5 +42,6 @@ export function coreDoctrineV1Bill(
     affectedOfficeProfiles: ["ALL"],
     assignedSenatorId,
     transitionRule: "PROSPECTIVE_ADOPTION",
+    lexiconRef: CORE_DOCTRINE_V1_VOCABULARY_REF,
   };
 }

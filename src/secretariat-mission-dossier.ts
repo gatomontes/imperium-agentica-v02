@@ -1,4 +1,6 @@
-import { ArtifactContext, ArtifactEnvelope, createArtifact } from "./artifact.js";
+import { ArtifactContext, ArtifactEnvelope, GovernedArtifactEnvelope, GovernedArtifactContext, createGovernedArtifact } from "./artifact.js";
+import { ENACTED_IMPERIUM_LEXICON_V2 } from "./imperium-lexicon-v2.js";
+import { LexiconAuthority, TerminologyConformanceGate } from "./senate-lexicon.js";
 import { assertArtifactEnvelope } from "./schema.js";
 import { ADMITTED_SECRETARIAT_PROFILE } from "./secretariat-doctrine-profile.js";
 
@@ -86,18 +88,26 @@ export interface SecretariatDossierHandoff {
 const profileRef = ADMITTED_SECRETARIAT_PROFILE.identity + "@" + ADMITTED_SECRETARIAT_PROFILE.version;
 const doctrineRef = ADMITTED_SECRETARIAT_PROFILE.payload.coreDoctrineRef;
 const lexiconRef = ADMITTED_SECRETARIAT_PROFILE.payload.lexiconRef;
+const vocabularyAuthority = new LexiconAuthority(ENACTED_IMPERIUM_LEXICON_V2.lexicon, lexiconRef);
+const terminologyGate = new TerminologyConformanceGate(vocabularyAuthority);
 
 export class SecretariatMissionIntake {
   open(
     request: MissionIntentRequest,
     correlationId: string,
     context: ArtifactContext = {},
-  ): ArtifactEnvelope<MissionDossier> {
+  ): GovernedArtifactEnvelope<MissionDossier> {
     if (!request.authenticatedOperatorRef.trim()) throw new Error("authenticated Operator reference is required");
     if (!request.rawIntent.trim()) throw new Error("raw Operator intent is required");
     assertAdmittedCurrentProfile();
     if (!lexiconRef) throw new Error("current Secretariat Office Profile requires an exact Imperium Lexicon");
-    return createArtifact(
+    const governance = governedVocabulary([
+      ["LEX-009", "mission_dossier"],
+      ["LEX-011", "secretariat"],
+      ["LEX-010", "operator"],
+    ]);
+    terminologyGate.assertGovernance(governance);
+    return createGovernedArtifact(
       "MissionDossier",
       "Secretariat",
       correlationId,
@@ -129,15 +139,16 @@ export class SecretariatMissionIntake {
           "Core Doctrine or Secretariat Office Profile changes.",
         ],
       },
+      governance,
       [request.authenticatedOperatorRef.trim(), doctrineRef, lexiconRef, profileRef, ...cleanList(request.attachmentRefs)],
       context,
     );
   }
 
   presentInquiry(
-    current: ArtifactEnvelope<MissionDossier>,
+    current: GovernedArtifactEnvelope<MissionDossier>,
     inquiry: ArtifactEnvelope<CastellanInquiry>,
-  ): ArtifactEnvelope<MissionDossier> {
+  ): GovernedArtifactEnvelope<MissionDossier> {
     assertDossier(current);
     assertArtifactEnvelope(inquiry);
     const currentRef = exactRef(current);
@@ -162,9 +173,9 @@ export class SecretariatMissionIntake {
   }
 
   recordAnswers(
-    current: ArtifactEnvelope<MissionDossier>,
+    current: GovernedArtifactEnvelope<MissionDossier>,
     answers: OperatorAnswer[],
-  ): ArtifactEnvelope<MissionDossier> {
+  ): GovernedArtifactEnvelope<MissionDossier> {
     assertDossier(current);
     if (current.payload.state !== "AWAITING_OPERATOR" || !current.payload.inquiryRef) {
       throw new Error("dossier is not awaiting Operator answers");
@@ -188,19 +199,26 @@ export class SecretariatMissionIntake {
   }
 
   prepareCastellanHandoff(
-    current: ArtifactEnvelope<MissionDossier>,
+    current: GovernedArtifactEnvelope<MissionDossier>,
     context: ArtifactContext = {},
-  ): ArtifactEnvelope<SecretariatDossierHandoff> {
+  ): GovernedArtifactEnvelope<SecretariatDossierHandoff> {
     assertDossier(current);
     if (current.payload.state !== "READY_FOR_CASTELLAN_EVALUATION") {
       throw new Error("only a dossier ready for Castellan evaluation may be handed off");
     }
     const dossierRef = exactRef(current);
-    return createArtifact(
+    const governance = governedVocabulary([
+      ["LEX-042", "handoff"],
+      ["LEX-011", "secretariat"],
+      ["LEX-012", "castellan"],
+    ]);
+    terminologyGate.assertGovernance(governance);
+    return createGovernedArtifact(
       "SecretariatDossierHandoff",
       "Secretariat",
       current.correlationId,
       { dossierRef, recipient: "Castellan", purpose: "MISSION_EVALUATION", authorityCreated: false },
+      governance,
       [dossierRef, doctrineRef, lexiconRef!, profileRef],
       context,
     );
@@ -214,7 +232,7 @@ function assertAdmittedCurrentProfile(): void {
   }
 }
 
-function assertDossier(dossier: ArtifactEnvelope<MissionDossier>): void {
+function assertDossier(dossier: GovernedArtifactEnvelope<MissionDossier>): void {
   assertArtifactEnvelope(dossier);
   assertAdmittedCurrentProfile();
   if (dossier.artifactType !== "MissionDossier" || dossier.producer !== "Secretariat" || dossier.status !== "CURRENT") {
@@ -223,13 +241,15 @@ function assertDossier(dossier: ArtifactEnvelope<MissionDossier>): void {
   if (dossier.payload.doctrineRef !== doctrineRef || dossier.payload.lexiconRef !== lexiconRef || dossier.payload.officeProfileRef !== profileRef) {
     throw new Error("dossier doctrine, Lexicon, or Office Profile is stale or mismatched");
   }
+  terminologyGate.assertGovernance(dossier.governance);
+  if (dossier.governance.coreDoctrineRef !== doctrineRef || dossier.governance.officeProfileRef !== profileRef) throw new Error("governed dossier doctrine or Office Profile lineage is stale or mismatched");
 }
 
 function successor(
-  current: ArtifactEnvelope<MissionDossier>,
+  current: GovernedArtifactEnvelope<MissionDossier>,
   payload: MissionDossier,
   extraRefs: string[] = [],
-): ArtifactEnvelope<MissionDossier> {
+): GovernedArtifactEnvelope<MissionDossier> {
   const currentRef = exactRef(current);
   return {
     ...current,
@@ -237,6 +257,15 @@ function successor(
     supersedes: currentRef,
     payload,
     sourceRefs: [...new Set([...current.sourceRefs, currentRef, ...extraRefs])].sort(),
+  };
+}
+
+function governedVocabulary(uses: Array<[string, string]>): GovernedArtifactContext {
+  return {
+    coreDoctrineRef: doctrineRef,
+    lexiconRef,
+    officeProfileRef: profileRef,
+    vocabularyUses: uses.map(([termId, value]) => ({ termId, value, lexiconRef })),
   };
 }
 

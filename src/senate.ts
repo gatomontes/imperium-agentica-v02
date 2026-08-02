@@ -24,7 +24,7 @@ export interface DoctrineBill {
   affectedOfficeProfiles: string[];
   assignedSenatorId: string;
   transitionRule: DoctrineTransitionRule;
-  lexiconRef?: string;
+  lexiconRef: string;
 }
 
 export interface CoreDoctrine {
@@ -35,7 +35,7 @@ export interface CoreDoctrine {
   provisions: CoreDoctrineProvision[];
   senateDecisionRef: string;
   transitionRule: DoctrineTransitionRule;
-  lexiconRef?: string;
+  lexiconRef: string;
   affectedOfficeProfiles: string[];
   assignedSenatorId: string;
   state: "ENACTED";
@@ -88,12 +88,16 @@ export interface LegislativeResult {
  * operational action.
  */
 export class Senate {
+  constructor(readonly currentLexiconRef: string) {
+    if (!currentLexiconRef.trim()) throw new Error("Senate requires the exact controlling vocabulary or Lexicon pointer");
+  }
+
   enact(
     bill: DoctrineBill,
     correlationId: string,
     context: ArtifactContext = {},
   ): LegislativeResult {
-    validateBill(bill);
+    validateBill(bill, this.currentLexiconRef);
     const doctrine = createArtifact(
       "CoreDoctrine",
       "Senate",
@@ -114,7 +118,7 @@ export class Senate {
     context: ArtifactContext = {},
   ): LegislativeResult {
     assertArtifactEnvelope(current);
-    validateBill(bill);
+    validateBill(bill, this.currentLexiconRef);
     if (current.artifactType !== "CoreDoctrine" || current.producer !== "Senate") {
       throw new Error("Senate may amend only Senate-enacted Core Doctrine");
     }
@@ -231,7 +235,7 @@ function doctrinePayload(bill: DoctrineBill, edition: number): CoreDoctrine {
     })),
     senateDecisionRef: bill.senateDecisionRef.trim(),
     transitionRule: bill.transitionRule,
-    lexiconRef: bill.lexiconRef?.trim(),
+    lexiconRef: bill.lexiconRef.trim(),
     affectedOfficeProfiles: [...new Set(bill.affectedOfficeProfiles)].sort(),
     assignedSenatorId: bill.assignedSenatorId.trim(),
     state: "ENACTED",
@@ -262,7 +266,7 @@ function propagationFor(
   );
 }
 
-function validateBill(bill: DoctrineBill): void {
+function validateBill(bill: DoctrineBill, currentLexiconRef: string): void {
   if (!bill.title.trim()) throw new Error("doctrine title is required");
   if (!bill.rationale.trim()) throw new Error("legislative rationale is required");
   if (!bill.senateDecisionRef.trim()) {
@@ -271,6 +275,8 @@ function validateBill(bill: DoctrineBill): void {
   if (!bill.assignedSenatorId.trim()) {
     throw new Error("assigned Senator identity is required");
   }
+  if (!bill.lexiconRef.trim()) throw new Error("exact controlling vocabulary or Lexicon reference is required");
+  if (bill.lexiconRef !== currentLexiconRef) throw new Error("doctrine bill does not match the exact controlling vocabulary or Lexicon pointer");
   if (!bill.effectiveAt.trim() || Number.isNaN(Date.parse(bill.effectiveAt))) {
     throw new Error("valid doctrine effective time is required");
   }

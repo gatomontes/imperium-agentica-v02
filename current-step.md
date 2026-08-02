@@ -339,5 +339,16 @@ Dossier now carries both references. Initial vocabulary coverage is bounded;
 the assigned Senator retains the `ALL`-surface propagation dossier until affected
 historical surfaces are assessed.
 
-The next Office leg remains Castellan reconstruction, now against Core Doctrine
+The next Office leg was Castellan reconstruction, then against Core Doctrine
 v3 and Imperium Lexicon v1.
+
+## DR-078 through DR-080 — Blackquill Enforcement Corrections
+
+Lexicon v2 supersedes v1 with the seven selected enforcement corrections. Core
+Doctrine v4 advances the exact pointer, and Secretariat is revalidated with a
+governed envelope and live terminology gate. Blackquill returns
+`ACCEPTABLE_WITH_CONDITIONS`; semantic inventory and term-specific entry metadata
+remain open rather than falsely closed.
+
+The next Office leg remains Castellan reconstruction against exact Doctrine v4
+and Lexicon v2.
