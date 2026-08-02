@@ -400,3 +400,23 @@ The provider-neutral `IsoldeCognitivePort` is admitted, but no concrete model,
 provider, credential, live Runtime, or external effect is selected. Focused
 evidence passes 40/40 across Isolde, Secretariat, Castellan, and Office-profile
 contracts. The next gate is a separately admitted cognitive-port adapter.
+
+## Live Isolde Slice 001 — OpenAI One-Question Transport
+
+The Imperator separately authorized the first concrete live-Isolde smoke-test
+slice after DR-086. Rector/Castellan deterministically creates one mission-
+formation inquiry; Master Mason opens and closes one bounded Runtime session;
+Locksmith alone injects the OpenAI credential; and Isolde presents only the
+exact Castellan question returned through strict structured output.
+
+The provider request has no tools, disables response storage, and is bounded to
+256 output tokens. The Runtime refuses altered question text. It accepts no
+Operator answer, performs no Rector evaluation, forms no Mission Specification,
+deploys no Operative, and executes no mission. Focused verification passes
+21/21 across setup, Isolde, Rector, and the new live boundary. Repository-wide
+TypeScript still exposes the inherited pre-Senate transport exports and stale
+Petition fixtures classified by DR-070.
+
+Merged `main` had incorrectly tracked `.env.local`; this increment removes it
+from the current tree and preserves the ignore rule. The tracked assignment was
+empty/unconfigured, and no credential value was inspected or printed.

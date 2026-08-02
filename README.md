@@ -5,6 +5,9 @@
 Run `npm install` and then `npm run setup`. The setup flow verifies OpenAI
 credential presence without displaying credential material and, when needed,
 collects it through hidden terminal input into the git-ignored `.env.local`.
+
+The first bounded live smoke test is `npm run live:isolde`. It performs one
+OpenAI-backed Isolde transport turn and returns exactly one Castellan question.
 See `docs/initial-setup.md` for the exact boundary and non-interactive setup.
 
 ## Current Constitutional Baseline
