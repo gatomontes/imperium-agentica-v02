@@ -282,3 +282,17 @@ v1-dependent profile and artifact.
 V1 remains the enacted historical/current version until Senate amends it. V2
 is proposed, not enacted. The next gate is independent review and a separate
 Senate amendment decision.
+
+## DR-072 — Core Doctrine v2 Enactment
+
+Senate enacted the Blackquill-corrected v2 amendment as the complete successor
+to v1. V2 contains nineteen exact provisions from one normative source,
+supersedes `coredoctrine-core-v1@1`, and requires `MANDATORY_REVALIDATION` for
+`ALL` affected profiles.
+
+The notice is assigned to `senator-core-doctrine-001` and begins open. No
+Office, artifact, mission, or arena is revalidated by enactment alone. The next
+gate is the Office Doctrine Profile contract against exact v2.
+
+Enactment review passes 26/26 focused cases and focused TypeScript validation;
+see `tests/doctrine/core-doctrine-v2-enactment-review-001.md`.
