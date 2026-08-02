@@ -2,12 +2,11 @@
 
 ## Active Post-Reset Queue
 
-1. Independently review Blackquill's Core Doctrine v2 amendment and 22/22
-   pressure record.
-2. Resolve review findings without introducing Office procedure.
-3. Amend v1 through Senate as a separate decision with
-   `MANDATORY_REVALIDATION`.
-4. Resume the Office Doctrine Profile contract against exact enacted v2.
+1. Define the Office Doctrine Profile contract against exact enacted v2.
+2. Pressure-test derivation, narrowing, conflict, version, propagation,
+   exemption, invalidation, and revalidation behavior.
+3. Admit the passing profile contract through its proper authority.
+4. Reconstruct Secretariat first against an exact admitted v2 profile.
 
 Core Doctrine v1 is enacted. No downstream Office profile or implementation is
 admitted.

@@ -2,8 +2,8 @@
 
 ## Current Constitutional Baseline
 
-DR-070 establishes a Senate-first constitutional reset. DR-071 enacts Core
-Imperium Doctrine v1 as the first substantive Senate-owned doctrine. All
+DR-070 establishes a Senate-first constitutional reset. DR-071 enacted Core
+Imperium Doctrine v1; DR-072 supersedes it with corrected Core Doctrine v2. All
 pre-Senate Office contracts and implementations remain preserved evidence and
 are not re-admitted by enactment alone.
 

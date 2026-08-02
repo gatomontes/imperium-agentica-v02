@@ -2,14 +2,23 @@
 
 ## Constitutional controlling decisions
 
+### DR-072 — Core Imperium Doctrine v2 Enactment
+
+Status: active current constitutional doctrine.
+Path: `deliberations/DR-072.md`
+
+DR-072 supersedes v1 with the nineteen-provision Blackquill-corrected v2 and
+requires mandatory revalidation for every affected profile and v1-dependent
+surface. `senator-core-doctrine-001` stewards the open propagation.
+
 ### DR-071 — Core Imperium Doctrine v1 Enactment
 
-Status: active enacted constitutional doctrine.
+Status: superseded enacted constitutional doctrine; preserved history.
 Path: `deliberations/DR-071.md`
 
-DR-071 enacts Core Doctrine v1, provisions CORE-001 through CORE-018, assigns
+DR-071 enacted Core Doctrine v1, provisions CORE-001 through CORE-018, assigned
 `senator-core-doctrine-001` as propagation steward, and emits the first
-prospective-adoption notice. No Office is re-admitted by enactment alone.
+prospective-adoption notice. DR-072 supersedes v1.
 
 DR-069 and DR-070 remain controlling for Senate ownership and the constitutional
 reset. Any older “active” or “admitted” label is subordinate to DR-070 and
