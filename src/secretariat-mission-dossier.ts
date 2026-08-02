@@ -25,6 +25,8 @@ export interface MissionIntentRequest {
   authorityAssertions?: string[];
   externalObligationAssertions?: string[];
   attachmentRefs?: string[];
+  officerPersonaRef?: string;
+  officerInterpretationRef?: string;
 }
 
 export interface MissionInquiryQuestion {
@@ -74,11 +76,26 @@ export interface MissionDossier {
   authorityAssertions: string[];
   externalObligationAssertions: string[];
   attachmentRefs: string[];
+  officerPersonaRef?: string;
+  officerInterpretationRef?: string;
   inquiryRef?: string;
   presentedQuestions: PresentedQuestion[];
   answers: RecordedAnswer[];
   state: MissionDossierState;
   revisionConditions: string[];
+}
+
+export interface OfficerInquiryPresentation {
+  dossierRef: string;
+  inquiryRef: string;
+  officerPersonaRef: string;
+  renderings: Array<{ questionId: string; customerFriendlyQuestion: string }>;
+}
+
+export interface OfficerAnswerMapping {
+  dossierRef: string;
+  officerPersonaRef: string;
+  answers: OperatorAnswer[];
 }
 
 export interface SecretariatDossierHandoff {
@@ -102,6 +119,7 @@ export class SecretariatMissionIntake {
   ): GovernedArtifactEnvelope<MissionDossier> {
     if (!request.authenticatedOperatorRef.trim()) throw new Error("authenticated Operator reference is required");
     if (!request.rawIntent.trim()) throw new Error("raw Operator intent is required");
+    if (!!request.officerPersonaRef !== !!request.officerInterpretationRef) throw new Error("Officer Persona and interpretation references must be supplied together");
     assertAdmittedCurrentProfile();
     if (!lexiconRef) throw new Error("current Secretariat Office Profile requires an exact Imperium Lexicon");
     const governance = governedVocabulary([
@@ -133,6 +151,8 @@ export class SecretariatMissionIntake {
         authorityAssertions: cleanList(request.authorityAssertions),
         externalObligationAssertions: cleanList(request.externalObligationAssertions),
         attachmentRefs: cleanList(request.attachmentRefs),
+        officerPersonaRef: cleanOptional(request.officerPersonaRef),
+        officerInterpretationRef: cleanOptional(request.officerInterpretationRef),
         presentedQuestions: [],
         answers: [],
         state: "AWAITING_CASTELLAN_INQUIRY",
@@ -143,7 +163,7 @@ export class SecretariatMissionIntake {
         ],
       },
       governance,
-      [request.authenticatedOperatorRef.trim(), doctrineRef, lexiconRef, profileRef, ...cleanList(request.attachmentRefs)],
+      [request.authenticatedOperatorRef.trim(), doctrineRef, lexiconRef, profileRef, ...cleanList(request.attachmentRefs), ...cleanList([request.officerPersonaRef ?? "", request.officerInterpretationRef ?? ""])],
       context,
     );
   }
@@ -151,6 +171,7 @@ export class SecretariatMissionIntake {
   presentInquiry(
     current: GovernedArtifactEnvelope<MissionDossier>,
     inquiry: ArtifactEnvelope<CastellanInquiry>,
+    presentation?: ArtifactEnvelope<OfficerInquiryPresentation>,
   ): GovernedArtifactEnvelope<MissionDossier> {
     assertDossier(current);
     assertArtifactEnvelope(inquiry);
@@ -163,26 +184,29 @@ export class SecretariatMissionIntake {
     }
     if (inquiry.payload.dossierRef !== currentRef) throw new Error("inquiry does not target the exact current dossier");
     validateQuestions(inquiry.payload.questions);
+    const renderings = presentation ? validatePresentation(current, inquiry, presentation) : new Map<string, string>();
     return successor(current, {
       ...current.payload,
       inquiryRef: exactRef(inquiry),
       presentedQuestions: inquiry.payload.questions.map((question) => ({
         ...question,
-        customerFriendlyQuestion: friendly(question.exactQuestion),
+        customerFriendlyQuestion: renderings.get(question.questionId) ?? friendly(question.exactQuestion),
       })),
       answers: [],
       state: "AWAITING_OPERATOR",
-    }, [exactRef(inquiry)]);
+    }, [exactRef(inquiry), ...(presentation ? [exactRef(presentation)] : [])]);
   }
 
   recordAnswers(
     current: GovernedArtifactEnvelope<MissionDossier>,
     answers: OperatorAnswer[],
+    mapping?: ArtifactEnvelope<OfficerAnswerMapping>,
   ): GovernedArtifactEnvelope<MissionDossier> {
     assertDossier(current);
     if (current.payload.state !== "AWAITING_OPERATOR" || !current.payload.inquiryRef) {
       throw new Error("dossier is not awaiting Operator answers");
     }
+    if (mapping) validateAnswerMapping(current, answers, mapping);
     const questions = new Map(current.payload.presentedQuestions.map((question) => [question.questionId, question]));
     const seen = new Set<string>();
     const recorded = answers.map((answer) => {
@@ -198,7 +222,7 @@ export class SecretariatMissionIntake {
       ...current.payload,
       answers: recorded,
       state: missingRequired ? "AWAITING_OPERATOR" : "READY_FOR_CASTELLAN_EVALUATION",
-    });
+    }, mapping ? [exactRef(mapping)] : []);
   }
 
   prepareCastellanHandoff(
@@ -282,6 +306,34 @@ function validateQuestions(questions: MissionInquiryQuestion[]): void {
     if (ids.has(question.questionId)) throw new Error("duplicate Castellan question identity");
     ids.add(question.questionId);
   }
+}
+
+function validatePresentation(
+  dossier: GovernedArtifactEnvelope<MissionDossier>,
+  inquiry: ArtifactEnvelope<CastellanInquiry>,
+  presentation: ArtifactEnvelope<OfficerInquiryPresentation>,
+): Map<string, string> {
+  assertArtifactEnvelope(presentation);
+  if (presentation.artifactType !== "OfficerInquiryPresentation" || presentation.producer !== "Isolde" || presentation.status !== "CURRENT") throw new Error("exact current Isolde inquiry presentation is required");
+  if (!dossier.payload.officerPersonaRef || presentation.payload.officerPersonaRef !== dossier.payload.officerPersonaRef || presentation.payload.dossierRef !== exactRef(dossier) || presentation.payload.inquiryRef !== exactRef(inquiry) || presentation.correlationId !== dossier.correlationId) throw new Error("Isolde presentation lineage does not match dossier and inquiry");
+  const byId = new Map(presentation.payload.renderings.map((item) => [item.questionId, item.customerFriendlyQuestion.trim()]));
+  if (byId.size !== inquiry.payload.questions.length) throw new Error("Isolde presentation requires one rendering per exact question");
+  for (const question of inquiry.payload.questions) {
+    const rendering = byId.get(question.questionId);
+    if (!rendering || !rendering.includes(question.exactQuestion)) throw new Error("Isolde presentation must preserve the exact Castellan question verbatim");
+  }
+  return byId;
+}
+
+function validateAnswerMapping(
+  dossier: GovernedArtifactEnvelope<MissionDossier>,
+  answers: OperatorAnswer[],
+  mapping: ArtifactEnvelope<OfficerAnswerMapping>,
+): void {
+  assertArtifactEnvelope(mapping);
+  if (mapping.artifactType !== "OfficerAnswerMapping" || mapping.producer !== "Isolde" || mapping.status !== "CURRENT") throw new Error("exact current Isolde answer mapping is required");
+  if (!dossier.payload.officerPersonaRef || mapping.payload.officerPersonaRef !== dossier.payload.officerPersonaRef || mapping.payload.dossierRef !== exactRef(dossier) || mapping.correlationId !== dossier.correlationId) throw new Error("Isolde answer mapping lineage does not match dossier");
+  if (JSON.stringify(mapping.payload.answers) !== JSON.stringify(answers)) throw new Error("recorded answers must exactly match Isolde mapping");
 }
 
 function friendly(exactQuestion: string): string {
