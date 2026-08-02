@@ -29,10 +29,13 @@ export interface MissionIntentRequest {
 
 export interface MissionInquiryQuestion {
   questionId: string;
+  predicate?: MissionFormationPredicate;
   exactQuestion: string;
   rationale: string;
   answerRequired: boolean;
 }
+
+export type MissionFormationPredicate = "purpose" | "scope" | "constraints" | "acceptance_criteria" | "requested_outputs";
 
 export interface CastellanInquiry {
   dossierRef: string;
