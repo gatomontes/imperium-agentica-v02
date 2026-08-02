@@ -2,6 +2,15 @@
 
 ## Constitutional controlling decisions
 
+### DR-073 — Office Doctrine Profile Contract v1
+
+Status: active admitted applied-doctrine contract.
+Path: `deliberations/DR-073.md`
+
+DR-073 governs complete derivation from exact current Core Doctrine, independent
+Tribunalis judgment, assigned-Senator admission, immutable versioning, and
+revalidation. It admits no actual Office profile or implementation.
+
 ### DR-072 — Core Imperium Doctrine v2 Enactment
 
 Status: active current constitutional doctrine.

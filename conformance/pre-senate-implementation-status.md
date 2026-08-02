@@ -26,6 +26,11 @@ rewrite, or condemn historical work.
 
 ## Admission rule
 
+DR-073 now supplies the common Office Doctrine Profile contract. This does not
+change any row's reset status. Each Office still requires its own exact v2
+profile, Tribunalis judgment, assigned-Senator admission, and implementation
+conformance evidence.
+
 No row marked `CONFORMANCE_REQUIRED`, `REUSE_CANDIDATE`, or
 `LEGISLATIVE_EXTRACTION_REQUIRED` is active implementation authority. A future
 admission must name the exact Core Doctrine version, domain standard, Office
