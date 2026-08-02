@@ -28,8 +28,8 @@ function inquiryFor(dossier = open()) {
   return createArtifact<CastellanInquiry>("CastellanInquiry", "Castellan", dossier.correlationId, {
     dossierRef: dossier.identity + "@" + dossier.version,
     questions: [
-      { questionId: "Q-1", exactQuestion: "Which case types are in scope?", rationale: "Mission scope is unresolved.", answerRequired: true },
-      { questionId: "Q-2", exactQuestion: "What outcome would count as success?", rationale: "Acceptance criteria are unresolved.", answerRequired: true },
+      { questionId: "Q-1", predicate: "scope", exactQuestion: "Which case types are in scope?", rationale: "Mission scope is unresolved.", answerRequired: true },
+      { questionId: "Q-2", predicate: "acceptance_criteria", exactQuestion: "What outcome would count as success?", rationale: "Acceptance criteria are unresolved.", answerRequired: true },
     ],
   }, [dossier.identity + "@" + dossier.version], context);
 }

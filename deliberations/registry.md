@@ -369,6 +369,7 @@ DR-060 passed 28/28 synthetic cross-contract reconciliation criteria and is admi
 - DR-082: `DR-082.md` — enacts Core Doctrine v5 with exact Lexicon v3 pointer.
 - DR-083: `DR-083.md` — revalidates Secretariat and requires terminology-gate evidence for every future Office profile.
 - DR-084: `DR-084.md` — admits Castellan's exact Doctrine v5/Lexicon v3 profile, clarification inquiry, and candidate Mission Specification boundary without research or operational authority.
+- DR-085: `DR-085.md` — supersedes DR-084, removes institutional judgment from Castellan, and corrects mandatory inquiry, cognitive assessment, lineage, unresolved-predicate, and test-suite defects.
 
 
 ### DR-064 — Foundry Input and Conflict Revalidation

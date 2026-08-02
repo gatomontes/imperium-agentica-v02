@@ -70,7 +70,8 @@ export interface OfficeDoctrineProfileJudgment {
 
 export interface OfficeDoctrineProfileAdmissionDecision {
   profileCandidateRef: string;
-  conformanceJudgmentRef: string;
+  conformanceJudgmentRef?: string;
+  conformanceEvidenceRefs?: string[];
   admissionAuthorityRef: string;
   authorityFindingRef: string;
   disposition: "ADMIT" | "DENY";
@@ -222,6 +223,28 @@ export class OfficeDoctrineProfileContract {
         decision.payload.admissionAuthorityRef,
         decision.payload.authorityFindingRef,
       ]),
+    };
+  }
+
+  admitByAssignedSenator(
+    candidate: ArtifactEnvelope<OfficeDoctrineProfile>,
+    decision: ArtifactEnvelope<OfficeDoctrineProfileAdmissionDecision>,
+  ): ArtifactEnvelope<OfficeDoctrineProfile> {
+    assertArtifactEnvelope(candidate);
+    assertArtifactEnvelope(decision);
+    if (candidate.artifactType !== "OfficeDoctrineProfile" || candidate.payload.state !== "CANDIDATE") throw new Error("admission requires a candidate Office Doctrine Profile");
+    const candidateRef = candidate.identity + "@" + candidate.version;
+    if (decision.artifactType !== "OfficeDoctrineProfileAdmissionDecision" || decision.producer !== "Senator:" + candidate.payload.assignedSenatorId) throw new Error("only the doctrine-assigned Senator may admit the profile");
+    if (decision.payload.profileCandidateRef !== candidateRef || decision.payload.conformanceJudgmentRef) throw new Error("Senator-only admission must match the candidate and may not cite a judgment");
+    const evidenceRefs = uniqueSorted(decision.payload.conformanceEvidenceRefs ?? []);
+    if (!evidenceRefs.length || evidenceRefs.some((item) => !decision.sourceRefs.includes(item))) throw new Error("Senator-only admission requires exact conformance evidence lineage");
+    if (!decision.payload.admissionAuthorityRef.trim() || !decision.payload.authorityFindingRef.trim() || !decision.sourceRefs.includes(decision.payload.admissionAuthorityRef) || !decision.sourceRefs.includes(decision.payload.authorityFindingRef) || decision.payload.disposition !== "ADMIT") throw new Error("effective profile admission authority is required");
+    return {
+      ...candidate,
+      version: candidate.version + 1,
+      supersedes: candidateRef,
+      payload: { ...candidate.payload, state: "ADMITTED", admissionDecisionRef: decision.identity + "@" + decision.version },
+      sourceRefs: uniqueSorted([...candidate.sourceRefs, ...decision.sourceRefs, decision.identity + "@" + decision.version]),
     };
   }
 }

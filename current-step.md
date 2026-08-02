@@ -373,3 +373,17 @@ Castellan has no research, profession-selection, Persona-building, judgment,
 deployment, supervision, execution, Runtime, credential, provider, or external-
 action authority. The next leg requires separate selection of Castellan's first
 downstream Citadel Office boundary.
+
+DR-084 is superseded by DR-085.
+
+## DR-085 — Castellan Mission-Formation Correction
+
+The Blackquill correction is admitted. Castellan now always inquires through
+Secretariat, consumes exact predicate assessments from its resident operating
+layer, repeats inquiry for ambiguous, contradictory, unusable, or uncleared
+answers, and forms a candidate only through lawful dossier, handoff, assessment,
+doctrine, Lexicon, and profile lineage. Resource requirements are explicit.
+
+Institutional judgment is absent from Castellan's profile-admission and runtime
+paths. The assigned Senator admits the profile from exact conformance evidence.
+The focused pressure matrix passes 44/44. Operational powers remain closed.
