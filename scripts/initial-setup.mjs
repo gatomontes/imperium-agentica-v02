@@ -3,6 +3,7 @@ import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 export const OPENAI_KEY_NAME = "OPENAI_API_KEY";
+export const DEEPSEEK_KEY_NAME = "DEEPSEEK_API_KEY";
 
 export function parseLocalEnvironment(contents) {
   const result = new Map();
@@ -19,14 +20,18 @@ export function parseLocalEnvironment(contents) {
 }
 
 export async function inspectOpenAIKey({ environment = process.env, directory = process.cwd() } = {}) {
-  if (typeof environment[OPENAI_KEY_NAME] === "string" && environment[OPENAI_KEY_NAME].trim() !== "") {
+  return inspectProviderKey(OPENAI_KEY_NAME, { environment, directory });
+}
+
+export async function inspectProviderKey(keyName, { environment = process.env, directory = process.cwd() } = {}) {
+  if (typeof environment[keyName] === "string" && environment[keyName].trim() !== "") {
     return { configured: true, source: "process-environment" };
   }
 
   const path = resolve(directory, ".env.local");
   try {
     const local = parseLocalEnvironment(await readFile(path, "utf8"));
-    const value = local.get(OPENAI_KEY_NAME);
+    const value = local.get(keyName);
     return value?.trim()
       ? { configured: true, source: "env-local" }
       : { configured: false, source: "none" };
@@ -37,9 +42,20 @@ export async function inspectOpenAIKey({ environment = process.env, directory = 
 }
 
 export async function storeOpenAIKey(key, { directory = process.cwd() } = {}) {
-  const normalized = key.trim();
-  if (!normalized || /[\r\n]/u.test(normalized)) throw new Error("OPENAI_API_KEY must be one non-empty line");
+  return storeProviderKey(OPENAI_KEY_NAME, key, { directory });
+}
 
+export async function storeProviderKey(keyName, key, { directory = process.cwd(), provider } = {}) {
+  const normalized = key.trim();
+  if (!normalized || /[\r\n]/u.test(normalized)) throw new Error(`${keyName} must be one non-empty line`);
+
+  return storeLocalValues(new Map([
+    [keyName, normalized],
+    ...(provider ? [["IMPERIUM_LIVE_PROVIDER", provider]] : []),
+  ]), { directory });
+}
+
+async function storeLocalValues(values, { directory = process.cwd() } = {}) {
   const path = resolve(directory, ".env.local");
   let contents = "";
   try {
@@ -49,10 +65,13 @@ export async function storeOpenAIKey(key, { directory = process.cwd() } = {}) {
   }
 
   const lines = contents === "" ? [] : contents.replace(/\r\n/gu, "\n").split("\n");
-  const assignment = `${OPENAI_KEY_NAME}=${normalized}`;
-  const index = lines.findIndex((line) => /^\s*(?:export\s+)?OPENAI_API_KEY\s*=/u.test(line));
-  if (index >= 0) lines[index] = assignment;
-  else lines.push(assignment);
+  for (const [name, value] of values) {
+    const assignment = `${name}=${value}`;
+    const pattern = new RegExp(`^\\s*(?:export\\s+)?${name}\\s*=`, "u");
+    const index = lines.findIndex((line) => pattern.test(line));
+    if (index >= 0) lines[index] = assignment;
+    else lines.push(assignment);
+  }
 
   const next = `${lines.filter((line, position) => line !== "" || position < lines.length - 1).join("\n")}\n`;
   const temporary = `${path}.tmp-${process.pid}`;
@@ -64,7 +83,7 @@ export async function storeOpenAIKey(key, { directory = process.cwd() } = {}) {
 
 async function readSecret(prompt) {
   if (!process.stdin.isTTY || !process.stdout.isTTY) {
-    throw new Error("Interactive setup requires a terminal. Set OPENAI_API_KEY in the process environment or .env.local, then rerun npm run setup.");
+    throw new Error("Interactive setup requires a terminal. Set the selected provider key in the process environment or .env.local, then rerun npm run setup.");
   }
 
   process.stdout.write(prompt);
@@ -97,23 +116,59 @@ async function readSecret(prompt) {
   });
 }
 
-export async function runInitialSetup({ directory = process.cwd() } = {}) {
-  const status = await inspectOpenAIKey({ directory });
+async function readLine(prompt) {
+  if (!process.stdin.isTTY || !process.stdout.isTTY) {
+    throw new Error("Interactive setup requires a terminal. Pass openai or deepseek explicitly when running non-interactively.");
+  }
+
+  process.stdout.write(prompt);
+  process.stdin.resume();
+  process.stdin.setEncoding("utf8");
+  return await new Promise((resolvePromise, reject) => {
+    const onError = (error) => {
+      process.stdin.off("data", onData);
+      reject(error);
+    };
+    const onData = (value) => {
+      process.stdin.off("error", onError);
+      process.stdin.pause();
+      resolvePromise(value.replace(/[\r\n]+$/u, ""));
+    };
+    process.stdin.once("error", onError);
+    process.stdin.once("data", onData);
+  });
+}
+
+export async function selectProvider({ readSelection = readLine, write = (value) => process.stdout.write(value) } = {}) {
+  write("Available live providers:\n  1) OpenAI API\n  2) DeepSeek API\n");
+  const selection = (await readSelection("Select provider [1-2]: ")).trim().toLowerCase();
+  if (selection === "1" || selection === "openai") return "openai";
+  if (selection === "2" || selection === "deepseek") return "deepseek";
+  throw new Error("Provider selection must be 1 (OpenAI API) or 2 (DeepSeek API)");
+}
+
+export async function runInitialSetup({ directory = process.cwd(), provider, chooseProvider = selectProvider } = {}) {
+  const selectedProvider = (provider || await chooseProvider()).trim().toLowerCase();
+  if (selectedProvider !== "openai" && selectedProvider !== "deepseek") throw new Error("Provider must be openai or deepseek");
+  const keyName = selectedProvider === "deepseek" ? DEEPSEEK_KEY_NAME : OPENAI_KEY_NAME;
+  const label = selectedProvider === "deepseek" ? "DeepSeek" : "OpenAI";
+  const status = await inspectProviderKey(keyName, { directory });
   if (status.configured) {
-    process.stdout.write(`OpenAI credential: configured (${status.source}). Value not displayed.\n`);
+    await storeLocalValues(new Map([["IMPERIUM_LIVE_PROVIDER", selectedProvider]]), { directory });
+    process.stdout.write(`${label} credential: configured (${status.source}) and selected. Value not displayed.\n`);
     return status;
   }
 
-  process.stdout.write("OpenAI credential: not configured.\n");
-  const key = await readSecret("Enter OPENAI_API_KEY (input hidden): ");
-  const stored = await storeOpenAIKey(key, { directory });
-  process.stdout.write("OpenAI credential: configured in .env.local. Value not displayed.\n");
+  process.stdout.write(`${label} credential: not configured.\n`);
+  const key = await readSecret(`Enter ${keyName} (input hidden): `);
+  const stored = await storeProviderKey(keyName, key, { directory, provider: selectedProvider });
+  process.stdout.write(`${label} credential: configured in .env.local and selected. Value not displayed.\n`);
   return stored;
 }
 
 const invokedDirectly = process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url);
 if (invokedDirectly) {
-  runInitialSetup().catch((error) => {
+  runInitialSetup({ provider: process.argv[2] }).catch((error) => {
     process.stderr.write(`Initial setup failed: ${error.message}\n`);
     process.exitCode = 1;
   });

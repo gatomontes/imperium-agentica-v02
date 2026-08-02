@@ -7,7 +7,7 @@ npm install
 npm run setup
 ```
 
-The setup flow checks for `OPENAI_API_KEY` without displaying, logging, or
+The default setup flow checks for `OPENAI_API_KEY` without displaying, logging, or
 returning the credential. It checks the process environment first and then the
 git-ignored repository-root `.env.local` file.
 
@@ -21,6 +21,16 @@ Isolde must never receive, inspect, log, or persist the credential. Provider
 access remains behind the admitted Locksmith custody and Master Mason Runtime
 boundaries.
 
+To configure and select DeepSeek instead, run:
+
+```sh
+npm run setup -- deepseek
+```
+
+This stores `DEEPSEEK_API_KEY` locally and records only the provider selection
+as `IMPERIUM_LIVE_PROVIDER=deepseek`. Running `npm run setup -- openai`
+selects OpenAI again. Neither credential is passed to Isolde.
+
 After setup succeeds, run the bounded one-question live smoke test:
 
 ```sh
@@ -28,7 +38,7 @@ npm run live:isolde
 ```
 
 The command accepts one Operator utterance, opens one Master Mason-controlled
-OpenAI session, and presents exactly one Castellan-provided question through
+selected-provider session, and presents exactly one Castellan-provided question through
 Isolde. It does not accept an answer, evaluate relevance, execute a mission,
 deploy an Operative, enable tools, or continue into a second turn. The provider
 request disables response storage, and the returned question must match the

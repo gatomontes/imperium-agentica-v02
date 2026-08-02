@@ -3,7 +3,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { describe, expect, it, vi } from "vitest";
 import { IsoldeSecretariatOfficer } from "../src/isolde-secretariat-officer.js";
-import { MasterMasonLiveIsoldeSession, openLocksmithOpenAIAccess } from "../src/openai-live-isolde.js";
+import { MasterMasonLiveIsoldeSession, openLocksmithDeepSeekAccess, openLocksmithLiveIsoldeAccess, openLocksmithOpenAIAccess } from "../src/openai-live-isolde.js";
 import { RectorCastellanOfficer, RectorCognitivePort } from "../src/rector-castellan-officer.js";
 
 const noEvaluation: RectorCognitivePort = { assessMissionPredicates: () => { throw new Error("response evaluation is outside this slice"); } };
@@ -67,5 +67,53 @@ describe("OpenAI live Isolde one-question slice", () => {
     const session = new MasterMasonLiveIsoldeSession(access, new IsoldeSecretariatOfficer(), new RectorCastellanOfficer(noEvaluation));
     await session.runOneQuestion("operator@1", "Build mission", "live-no-tools");
     expect(fakeFetch).toHaveBeenCalledOnce();
+  });
+});
+
+describe("DeepSeek live Isolde provider", () => {
+  it("uses the selected DeepSeek profile without exposing its credential", async () => {
+    const calls: Array<{ url: string; init?: RequestInit }> = [];
+    const fakeFetch = vi.fn(async (input: string | URL | Request, init?: RequestInit) => {
+      calls.push({ url: String(input), init });
+      const body = JSON.parse(String(init?.body)) as { messages: Array<{ role: string; content: string }>; response_format: unknown; thinking: unknown; tools?: unknown };
+      const request = JSON.parse(body.messages[1].content) as { exact_castellan_question: string };
+      expect(body.response_format).toEqual({ type: "json_object" });
+      expect(body.thinking).toEqual({ type: "disabled" });
+      expect(body.tools).toBeUndefined();
+      return new Response(JSON.stringify({
+        id: "deepseek-live-fixture",
+        choices: [{ message: { content: JSON.stringify({ exact_question: request.exact_castellan_question }) } }],
+      }), { status: 200, headers: { "Content-Type": "application/json" } });
+    });
+    const access = await openLocksmithDeepSeekAccess({ environment: { DEEPSEEK_API_KEY: "deepseek-fixture-secret" }, fetchImplementation: fakeFetch });
+    const session = new MasterMasonLiveIsoldeSession(access, new IsoldeSecretariatOfficer(), new RectorCastellanOfficer(noEvaluation));
+    const result = await session.runOneQuestion("operator@1", "Build a test mission", "deepseek-live-one");
+    expect(result.provider).toBe("deepseek");
+    expect(result.model).toBe("deepseek-v4-flash");
+    expect(result.exactQuestion).toBe("What precise outcome should this mission accomplish?");
+    expect(calls[0].url).toBe("https://api.deepseek.com/chat/completions");
+    expect(calls[0].init?.headers).toMatchObject({ Authorization: "Bearer deepseek-fixture-secret" });
+    expect(JSON.stringify(result)).not.toContain("deepseek-fixture-secret");
+  });
+
+  it("selects DeepSeek from local provider configuration", async () => {
+    const directory = await mkdtemp(join(tmpdir(), "imperium-live-deepseek-"));
+    await writeFile(join(directory, ".env.local"), "IMPERIUM_LIVE_PROVIDER=deepseek\nDEEPSEEK_API_KEY=fixture-secret\n", { mode: 0o600 });
+    const access = await openLocksmithLiveIsoldeAccess({
+      directory,
+      environment: {},
+      fetchImplementation: async () => new Response(JSON.stringify({ id: "fixture", choices: [{ message: { content: "{}" } }] }), { status: 200 }),
+    });
+    expect(access.configured).toBe(true);
+    expect(JSON.stringify(access)).not.toContain("fixture-secret");
+  });
+
+  it("reports safe DeepSeek failure metadata without provider messages or credentials", async () => {
+    const access = await openLocksmithDeepSeekAccess({
+      environment: { DEEPSEEK_API_KEY: "fixture-secret" },
+      fetchImplementation: async () => new Response(JSON.stringify({ error: { code: "insufficient_balance", message: "sensitive provider text" } }), { status: 402, headers: { "x-request-id": "req-safe" } }),
+    });
+    await expect(access.transportQuestion({ correlationId: "one", operatorText: "mission", exactCastellanQuestion: "Question?" }))
+      .rejects.toThrow("DeepSeek transport failed (402; code=insufficient_balance; request_id=req-safe)");
   });
 });
