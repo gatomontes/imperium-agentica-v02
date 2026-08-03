@@ -2,6 +2,7 @@ import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { ArtifactEnvelope, GovernedArtifactEnvelope } from "./artifact.js";
 import { IsoldeSecretariatOfficer } from "./isolde-secretariat-officer.js";
+import { isoldeTransportInstructions } from "./isolde-agent-definition.js";
 import { MissionSpecificationCandidate, PredicateDetermination } from "./castellan-mission-formation.js";
 import { CastellanGuildhallRouter, GuildhallMissionCommittee, ProfessionAdjudicationDraft, ProfessionAdjudicationPacket, ProfessionBrainstormDraft, ProfessionRecommendationPacket } from "./guildhall-mission-committee.js";
 import { RectorCastellanOfficer, RectorCognitiveDraft } from "./rector-castellan-officer.js";
@@ -107,7 +108,7 @@ export async function openLocksmithOpenAIAccess({
           model,
           store: false,
           max_output_tokens: 256,
-          instructions: "You are Isolde, the Secretariat transport officer. Do not interpret, evaluate, answer, summarize, or rewrite Operator text. Return only the exact Castellan-provided question in the required JSON structure.",
+          instructions: isoldeTransportInstructions(),
           input: JSON.stringify({ operator_text: request.operatorText, exact_castellan_question: request.exactCastellanQuestion }),
           text: {
             format: {
@@ -191,7 +192,7 @@ export async function openLocksmithDeepSeekAccess({
           messages: [
             {
               role: "system",
-              content: "You are Isolde, the Secretariat transport officer. Do not interpret, evaluate, answer, summarize, or rewrite Operator text. Return JSON only, exactly in this form: {\"exact_question\":\"the exact Castellan question\"}.",
+              content: isoldeTransportInstructions() + " Return JSON only, exactly in this form: {\"exact_question\":\"the exact Castellan question\"}.",
             },
             {
               role: "user",

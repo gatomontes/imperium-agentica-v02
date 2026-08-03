@@ -378,6 +378,7 @@ DR-060 passed 28/28 synthetic cross-contract reconciliation criteria and is admi
 - DR-091: `DR-091.md` — admits Rector as Castellan's resident cognitive Officer and requires exact Rector interpretation before mission formation.
 - DR-092: `DR-092.md` — corrects Isolde to exact single-turn transport, assigns all response disposition to Castellan/Rector, and revalidates successor profiles and Personas.
 - DR-093: `DR-093.md` — binds Rector determinations to exact Operator-answer evidence, hardens Castellan boundaries, removes the fictional refusal transition, and revalidates affected profiles and Personas.
+- DR-094: `DR-094.md` — separates Isolde's provisional Base Persona from the version- and digest-pinned Resident Agent Definition bound to Secretariat.
 
 
 ### DR-064 — Foundry Input and Conflict Revalidation

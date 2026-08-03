@@ -6,7 +6,7 @@ import { assertArtifactEnvelope } from "./schema.js";
 
 export type MissionDossierState = "AWAITING_CASTELLAN_INQUIRY" | "AWAITING_OPERATOR" | "READY_FOR_CASTELLAN_EVALUATION";
 export type MissionFormationPredicate = "purpose" | "scope" | "constraints" | "acceptance_criteria" | "requested_outputs" | "unknowns" | "material_contradictions" | "resource_requirements";
-export interface MissionIntentRequest { authenticatedOperatorRef: string; rawIntent: string; suppliedClaims?: string[]; assumptions?: string[]; authorityAssertions?: string[]; externalObligationAssertions?: string[]; attachmentRefs?: string[]; officerPersonaRef?: string; }
+export interface MissionIntentRequest { authenticatedOperatorRef: string; rawIntent: string; suppliedClaims?: string[]; assumptions?: string[]; authorityAssertions?: string[]; externalObligationAssertions?: string[]; attachmentRefs?: string[]; officerPersonaRef?: string; residentAgentDefinitionRef?: string; }
 export interface MissionInquiryQuestion { questionId: string; predicate: MissionFormationPredicate; exactQuestion: string; rationale: string; answerRequired: true; }
 export interface CastellanInquiry { dossierRef: string; question: MissionInquiryQuestion; }
 export interface OperatorAnswer { questionId: string; rawAnswer: string; }
@@ -23,7 +23,7 @@ export interface SecretariatDossierHandoff { dossierRef: string; recipient: "Cas
 export interface MissionDossier {
   doctrineRef: string; lexiconRef: string; officeProfileRef: string; authenticatedOperatorRef: string; rawIntent: string;
   suppliedClaims: string[]; assumptions: string[]; authorityAssertions: string[]; externalObligationAssertions: string[]; attachmentRefs: string[];
-  officerPersonaRef?: string; activeInquiryRef?: string; presentedQuestions: MissionInquiryQuestion[]; answers: RecordedAnswer[];
+  officerPersonaRef?: string; residentAgentDefinitionRef?: string; activeInquiryRef?: string; presentedQuestions: MissionInquiryQuestion[]; answers: RecordedAnswer[];
   acceptedDeterminations: AcceptedMissionDetermination[]; turnDispositionRefs: string[]; lastTurnAction?: CastellanTurnAction; state: MissionDossierState; revisionConditions: string[];
 }
 
@@ -35,7 +35,7 @@ export class SecretariatMissionIntake {
   open(request: MissionIntentRequest, correlationId: string, context: ArtifactContext = {}): GovernedArtifactEnvelope<MissionDossier> {
     if (!request.authenticatedOperatorRef.trim() || !request.rawIntent.trim()) throw new Error("authenticated Operator and raw intent are required");
     const governance = governed([["LEX-009", "mission_dossier"], ["LEX-011", "secretariat"], ["LEX-010", "operator"]]); gate.assertGovernance(governance);
-    return createGovernedArtifact("MissionDossier", "Secretariat", correlationId, { doctrineRef, lexiconRef, officeProfileRef: profileRef, authenticatedOperatorRef: request.authenticatedOperatorRef.trim(), rawIntent: request.rawIntent, suppliedClaims: clean(request.suppliedClaims), assumptions: clean(request.assumptions), authorityAssertions: clean(request.authorityAssertions), externalObligationAssertions: clean(request.externalObligationAssertions), attachmentRefs: clean(request.attachmentRefs), officerPersonaRef: request.officerPersonaRef?.trim() || undefined, presentedQuestions: [], answers: [], acceptedDeterminations: [], turnDispositionRefs: [], state: "AWAITING_CASTELLAN_INQUIRY", revisionConditions: ["Operator supplies a response.", "Castellan issues or disposes one question turn.", "Controlling doctrine or profile changes."] }, governance, [request.authenticatedOperatorRef.trim(), doctrineRef, lexiconRef, profileRef, ...clean(request.attachmentRefs), ...(request.officerPersonaRef ? [request.officerPersonaRef] : [])], context);
+    return createGovernedArtifact("MissionDossier", "Secretariat", correlationId, { doctrineRef, lexiconRef, officeProfileRef: profileRef, authenticatedOperatorRef: request.authenticatedOperatorRef.trim(), rawIntent: request.rawIntent, suppliedClaims: clean(request.suppliedClaims), assumptions: clean(request.assumptions), authorityAssertions: clean(request.authorityAssertions), externalObligationAssertions: clean(request.externalObligationAssertions), attachmentRefs: clean(request.attachmentRefs), officerPersonaRef: request.officerPersonaRef?.trim() || undefined, residentAgentDefinitionRef: request.residentAgentDefinitionRef?.trim() || undefined, presentedQuestions: [], answers: [], acceptedDeterminations: [], turnDispositionRefs: [], state: "AWAITING_CASTELLAN_INQUIRY", revisionConditions: ["Operator supplies a response.", "Castellan issues or disposes one question turn.", "Controlling doctrine or profile changes."] }, governance, [request.authenticatedOperatorRef.trim(), doctrineRef, lexiconRef, profileRef, ...clean(request.attachmentRefs), ...(request.officerPersonaRef ? [request.officerPersonaRef] : []), ...(request.residentAgentDefinitionRef ? [request.residentAgentDefinitionRef] : [])], context);
   }
   presentInquiry(current: GovernedArtifactEnvelope<MissionDossier>, inquiry: ArtifactEnvelope<CastellanInquiry>, presentation?: ArtifactEnvelope<IsoldeQuestionPresentation>): GovernedArtifactEnvelope<MissionDossier> {
     assertDossier(current); assertArtifactEnvelope(inquiry); if (current.payload.state !== "AWAITING_CASTELLAN_INQUIRY") throw new Error("dossier is not accepting a Castellan question");
