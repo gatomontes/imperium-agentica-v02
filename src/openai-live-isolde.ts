@@ -3,7 +3,7 @@ import { resolve } from "node:path";
 import { ArtifactEnvelope, GovernedArtifactEnvelope } from "./artifact.js";
 import { IsoldeSecretariatOfficer } from "./isolde-secretariat-officer.js";
 import { MissionSpecificationCandidate, PredicateDetermination } from "./castellan-mission-formation.js";
-import { CastellanGuildhallRouter, GuildhallMissionCommittee, ProfessionBrainstormDraft, ProfessionRecommendationPacket } from "./guildhall-mission-committee.js";
+import { CastellanGuildhallRouter, GuildhallMissionCommittee, ProfessionAdjudicationDraft, ProfessionAdjudicationPacket, ProfessionBrainstormDraft, ProfessionRecommendationPacket } from "./guildhall-mission-committee.js";
 import { RectorCastellanOfficer, RectorCognitiveDraft } from "./rector-castellan-officer.js";
 import { CastellanInquiry, CastellanTurnDisposition, IsoldeQuestionPresentation, MissionDossier } from "./secretariat-mission-dossier.js";
 
@@ -35,11 +35,15 @@ export interface LocksmithOpenAIAccessPort {
   transportQuestion(request: OpenAITransportRequest): Promise<OpenAITransportResult>;
   assessAnswer(request: LiveAnswerAssessmentRequest): Promise<LiveAnswerAssessmentResult>;
   brainstormProfessions?(request: LiveProfessionBrainstormRequest): Promise<LiveProfessionBrainstormResult>;
+  adjudicateProfessions?(request: LiveProfessionAdjudicationRequest): Promise<LiveProfessionAdjudicationResult>;
 }
 
 export interface LiveProfessionBrainstormRequest { correlationId: string; candidate: MissionSpecificationCandidate; }
 export interface LiveProfessionBrainstormResult { responseId: string; provider: "openai" | "deepseek"; model: string; draft: ProfessionBrainstormDraft; }
 export interface LiveGuildhallResult { packet: ArtifactEnvelope<ProfessionRecommendationPacket>; provider: "openai" | "deepseek"; model: string; providerResponseId: string; }
+export interface LiveProfessionAdjudicationRequest { correlationId: string; candidate: MissionSpecificationCandidate; recommendation: ProfessionRecommendationPacket; }
+export interface LiveProfessionAdjudicationResult { responseId: string; provider: "openai" | "deepseek"; model: string; draft: ProfessionAdjudicationDraft; }
+export interface LiveGuildhallAdjudicationResult { packet: ArtifactEnvelope<ProfessionAdjudicationPacket>; provider: "openai" | "deepseek"; model: string; providerResponseId: string; }
 
 export interface LiveAnswerAssessmentRequest {
   correlationId: string;
@@ -149,6 +153,16 @@ export async function openLocksmithOpenAIAccess({
       if (payload.status !== "completed") throw new Error("OpenAI Guildhall brainstorm did not complete");
       return { responseId: responseId(payload), provider: "openai", model, draft: parseProfessionBrainstorm(extractOutputText(payload), "OpenAI") };
     },
+    async adjudicateProfessions(request: LiveProfessionAdjudicationRequest): Promise<LiveProfessionAdjudicationResult> {
+      const response = await fetchImplementation("https://api.openai.com/v1/responses", {
+        method: "POST", headers: { Authorization: `Bearer ${credential}`, "Content-Type": "application/json" },
+        body: JSON.stringify({ model, store: false, max_output_tokens: 2400, instructions: professionAdjudicationInstructions(), input: JSON.stringify({ candidate: request.candidate, recommendation: request.recommendation }), text: { format: { type: "json_schema", name: "guildhall_profession_adjudication", strict: true, schema: professionAdjudicationSchema() } } }),
+      });
+      const payload = await response.json() as Record<string, unknown>;
+      if (!response.ok) throw providerFailure("OpenAI", response, payload);
+      if (payload.status !== "completed") throw new Error("OpenAI Guildhall adjudication did not complete");
+      return { responseId: responseId(payload), provider: "openai", model, draft: parseProfessionAdjudication(extractOutputText(payload), "OpenAI") };
+    },
   });
 }
 
@@ -231,6 +245,15 @@ export async function openLocksmithDeepSeekAccess({
       }
       throw new Error("DeepSeek Guildhall brainstorm returned no profession possibilities after one bounded repair attempt");
     },
+    async adjudicateProfessions(request: LiveProfessionAdjudicationRequest): Promise<LiveProfessionAdjudicationResult> {
+      const response = await fetchImplementation("https://api.deepseek.com/chat/completions", {
+        method: "POST", headers: { Authorization: `Bearer ${credential}`, "Content-Type": "application/json" },
+        body: JSON.stringify({ model, messages: [{ role: "system", content: professionAdjudicationInstructions() }, { role: "user", content: JSON.stringify({ candidate: request.candidate, recommendation: request.recommendation }) }], thinking: { type: "disabled" }, temperature: 0, max_tokens: 2400, response_format: { type: "json_object" } }),
+      });
+      const payload = await response.json() as Record<string, unknown>;
+      if (!response.ok) throw providerFailure("DeepSeek", response, payload);
+      return { responseId: responseId(payload), provider: "deepseek", model, draft: parseProfessionAdjudication(deepSeekContent(payload), "DeepSeek") };
+    },
   });
 }
 
@@ -239,6 +262,13 @@ export async function runLiveGuildhallBrainstorm(access: LocksmithOpenAIAccessPo
   const handoff = new CastellanGuildhallRouter().handoff(candidate);
   const result = await access.brainstormProfessions({ correlationId: candidate.correlationId, candidate: structuredClone(candidate.payload) });
   const packet = new GuildhallMissionCommittee().recordBrainstorm(candidate, handoff, result.draft);
+  return { packet, provider: result.provider, model: result.model, providerResponseId: result.responseId };
+}
+
+export async function runLiveGuildhallAdjudication(access: LocksmithOpenAIAccessPort, candidate: GovernedArtifactEnvelope<MissionSpecificationCandidate>, recommendation: ArtifactEnvelope<ProfessionRecommendationPacket>): Promise<LiveGuildhallAdjudicationResult> {
+  if (!access.adjudicateProfessions) throw new Error("Locksmith provider does not expose the bounded Guildhall adjudication port");
+  const result = await access.adjudicateProfessions({ correlationId: candidate.correlationId, candidate: structuredClone(candidate.payload), recommendation: structuredClone(recommendation.payload) });
+  const packet = new GuildhallMissionCommittee().adjudicate(candidate, recommendation, result.draft);
   return { packet, provider: result.provider, model: result.model, providerResponseId: result.responseId };
 }
 
@@ -333,6 +363,9 @@ function responseId(payload: Record<string, unknown>): string { if (typeof paylo
 function professionBrainstormInstructions(): string { return "You are the Guildhall profession committee. Brainstorm professions that could contribute to the supplied Mission Specification Candidate. Return one JSON object with exactly this shape: {\"possibilities\":[{\"professionIdentity\":\"string\",\"contribution\":\"string\",\"rationale\":\"string\",\"collaborationMode\":\"INDEPENDENT|SEQUENTIAL|TANDEM\",\"dependsOn\":[\"earlier professionIdentity\"]}],\"overlaps\":[\"string\"],\"missingSpecialties\":[\"string\"]}. Include every field; use [] only for overlaps, missingSpecialties, or dependsOn when those lists are empty. possibilities MUST contain 1 to 8 concrete professions; abstention and an empty possibilities list are invalid. Explore alternatives, overlaps, combinations, and missing specialties. Recommend one or several professions as the work requires. dependsOn may name only professions listed earlier in the possibilities array. Do not select, identify, or invent people, Personas, Operatives, or Officers. Do not plan execution, choose tools, or perform the mission."; }
 function professionBrainstormSchema(): Record<string, unknown> { return { type: "object", properties: { possibilities: { type: "array", minItems: 1, maxItems: 8, items: { type: "object", properties: { professionIdentity: { type: "string" }, contribution: { type: "string" }, rationale: { type: "string" }, collaborationMode: { type: "string", enum: ["INDEPENDENT", "SEQUENTIAL", "TANDEM"] }, dependsOn: { type: "array", items: { type: "string" } } }, required: ["professionIdentity", "contribution", "rationale", "collaborationMode", "dependsOn"], additionalProperties: false } }, overlaps: { type: "array", items: { type: "string" } }, missingSpecialties: { type: "array", items: { type: "string" } } }, required: ["possibilities", "overlaps", "missingSpecialties"], additionalProperties: false }; }
 
+function professionAdjudicationInstructions(): string { return "You are the Guildhall profession committee adjudicating an admitted brainstorm. Return JSON only. For every brainstorm possibility, record exactly one decision: ADMIT it directly, CONSOLIDATE it into a different profession that appears in the final queue, or REJECT it as irrelevant/non-professional/duplicative, with a concrete rationale. Produce an ordered queue of 1 to 8 actual professions. Separate skills or expertise into capabilityRequirements, and tools, APIs, credentials, data access, or websites into toolOrAccessRequirements. Do not turn a capability or tool into a profession. Preserve only mission-relevant professions; consolidate overlaps. Queue dependencies may name only earlier queued professions. Do not select people, Personas, Operatives, or Officers. Do not determine Castellan suitability/usefulness and do not plan or execute the mission. Shape: {\"decisions\":[{\"professionIdentity\":\"exact brainstorm identity\",\"disposition\":\"ADMIT|CONSOLIDATE|REJECT\",\"targetProfessionIdentity\":\"queued profession or empty string\",\"rationale\":\"string\"}],\"queue\":[{\"position\":1,\"professionIdentity\":\"string\",\"contribution\":\"string\",\"rationale\":\"string\",\"collaborationMode\":\"INDEPENDENT|SEQUENTIAL|TANDEM\",\"dependsOn\":[]}],\"capabilityRequirements\":[\"string\"],\"toolOrAccessRequirements\":[\"string\"]}."; }
+function professionAdjudicationSchema(): Record<string, unknown> { const possibility = { type: "object", properties: { position: { type: "integer", minimum: 1, maximum: 8 }, professionIdentity: { type: "string" }, contribution: { type: "string" }, rationale: { type: "string" }, collaborationMode: { type: "string", enum: ["INDEPENDENT", "SEQUENTIAL", "TANDEM"] }, dependsOn: { type: "array", items: { type: "string" } } }, required: ["position", "professionIdentity", "contribution", "rationale", "collaborationMode", "dependsOn"], additionalProperties: false }; return { type: "object", properties: { decisions: { type: "array", items: { type: "object", properties: { professionIdentity: { type: "string" }, disposition: { type: "string", enum: ["ADMIT", "CONSOLIDATE", "REJECT"] }, targetProfessionIdentity: { type: "string" }, rationale: { type: "string" } }, required: ["professionIdentity", "disposition", "targetProfessionIdentity", "rationale"], additionalProperties: false } }, queue: { type: "array", minItems: 1, maxItems: 8, items: possibility }, capabilityRequirements: { type: "array", items: { type: "string" } }, toolOrAccessRequirements: { type: "array", items: { type: "string" } } }, required: ["decisions", "queue", "capabilityRequirements", "toolOrAccessRequirements"], additionalProperties: false }; }
+
 function parseProfessionBrainstorm(content: string, provider: string): ProfessionBrainstormDraft {
   let value: unknown;
   try { value = JSON.parse(content); } catch { throw new Error(`${provider} returned invalid Guildhall JSON`); }
@@ -353,6 +386,27 @@ function parseProfessionBrainstorm(content: string, provider: string): Professio
   const overlaps = draft.overlaps;
   const missingSpecialties = draft.missingSpecialties;
   return { possibilities, overlaps: overlaps === undefined ? [] : overlaps as string[], missingSpecialties: missingSpecialties === undefined ? [] : missingSpecialties as string[] };
+}
+
+function parseProfessionAdjudication(content: string, provider: string): ProfessionAdjudicationDraft {
+  let value: unknown;
+  try { value = JSON.parse(content); } catch { throw new Error(`${provider} returned invalid Guildhall adjudication JSON`); }
+  if (!value || typeof value !== "object" || Array.isArray(value)) throw new Error(`${provider} returned an invalid Guildhall adjudication`);
+  const draft = value as Record<string, unknown>;
+  if (!Array.isArray(draft.decisions) || !Array.isArray(draft.queue) || !isStringArray(draft.capabilityRequirements) || !isStringArray(draft.toolOrAccessRequirements)) throw new Error(`${provider} returned an incomplete Guildhall adjudication`);
+  const decisions = draft.decisions.map((item) => {
+    if (!item || typeof item !== "object" || Array.isArray(item)) throw new Error(`${provider} returned a malformed Guildhall adjudication decision`);
+    const decision = item as Record<string, unknown>;
+    if (typeof decision.professionIdentity !== "string" || typeof decision.disposition !== "string" || typeof decision.rationale !== "string" || (decision.targetProfessionIdentity !== undefined && typeof decision.targetProfessionIdentity !== "string")) throw new Error(`${provider} returned an incomplete Guildhall adjudication decision`);
+    return { professionIdentity: decision.professionIdentity, disposition: decision.disposition as ProfessionAdjudicationDraft["decisions"][number]["disposition"], targetProfessionIdentity: decision.targetProfessionIdentity as string | undefined, rationale: decision.rationale };
+  });
+  const queue = draft.queue.map((item) => {
+    if (!item || typeof item !== "object" || Array.isArray(item)) throw new Error(`${provider} returned a malformed Guildhall adjudicated profession`);
+    const profession = item as Record<string, unknown>;
+    if (typeof profession.position !== "number" || typeof profession.professionIdentity !== "string" || typeof profession.contribution !== "string" || typeof profession.rationale !== "string" || typeof profession.collaborationMode !== "string" || !isStringArray(profession.dependsOn)) throw new Error(`${provider} returned an incomplete Guildhall adjudicated profession`);
+    return profession as unknown as ProfessionAdjudicationDraft["queue"][number];
+  });
+  return { decisions, queue, capabilityRequirements: draft.capabilityRequirements, toolOrAccessRequirements: draft.toolOrAccessRequirements } as ProfessionAdjudicationDraft;
 }
 
 function isStringArray(value: unknown): value is string[] { return Array.isArray(value) && value.every((item) => typeof item === "string"); }
