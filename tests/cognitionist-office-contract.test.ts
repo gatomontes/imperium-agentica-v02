@@ -4,7 +4,7 @@ import { ADMITTED_COGNITIONIST_PROFILE, COGNITIONIST_PROFILE_ADMISSION_DECISION,
 import { AdapterAdmissionDecision, Cognitionist, createCognitivePort, createConnectionRequest } from "../src/cognitionist.js";
 import { ENACTED_CORE_DOCTRINE_V6 } from "../src/enacted-core-doctrine-v6.js";
 import { ENACTED_IMPERIUM_LEXICON_V4 } from "../src/imperium-lexicon-v4.js";
-import { ADMITTED_ISOLDE } from "../src/isolde-officer-profile.js";
+import { ADMITTED_ISOLDE } from "../src/isolde-resident-officer-contract.js";
 import { ADMITTED_SECRETARIAT_PROFILE } from "../src/secretariat-doctrine-profile.js";
 
 const context = { identityFactory: (prefix: string) => prefix + "-cognitionist-test", now: () => "2026-08-03T04:00:00.000Z" };
@@ -12,7 +12,7 @@ const ref = (value: { identity: string; version: number }) => value.identity + "
 const cognitionist = new Cognitionist();
 const port = createCognitivePort({ portId: "isolde.intent.v1", operations: ["interpret_intent"], inputSchemaRefs: ["schema:intent@1"], outputSchemaRefs: ["schema:interpretation@1"], failureModes: ["UNSUPPORTED_INTERPRETATION"], evidenceRequirements: ["source_excerpt"] }, "Secretariat", "cognitionist-flow", ref(ADMITTED_SECRETARIAT_PROFILE), context);
 const adapterDraft = { providerRef: "provider:example@1", modelRef: "model:example@1", adapterVersion: "1.0.0", supportedOperations: ["interpret_intent"], structuredOutput: true, configurationSchemaRef: "schema:adapter-config@1", failureModes: ["PROVIDER_UNAVAILABLE"], usageEvidenceFields: ["provider_request_id"], credentialRequirementClass: "provider_api_credential" };
-const connectionPayload = { officerPersonaRef: ref(ADMITTED_ISOLDE), officeProfileRef: ref(ADMITTED_SECRETARIAT_PROFILE), providerRef: adapterDraft.providerRef, modelRef: adapterDraft.modelRef, resourceEnvelopeRef: "resource-envelope@1", authorityRef: "mission-authority@1" };
+const connectionPayload = { residentOfficerContractRef: ref(ADMITTED_ISOLDE), officeProfileRef: ref(ADMITTED_SECRETARIAT_PROFILE), providerRef: adapterDraft.providerRef, modelRef: adapterDraft.modelRef, resourceEnvelopeRef: "resource-envelope@1", authorityRef: "mission-authority@1" };
 
 function admittedAdapter() {
   const candidate = cognitionist.registerAdapter(port, adapterDraft, "cognitionist-flow", context);
@@ -54,7 +54,7 @@ describe("Cognitionist Office profile and contract", () => {
   it("asks Locksmith for bounded credential access without handling secret material", () => {
     const connection = createConnectionRequest(port, connectionPayload, "credential", context);
     const request = cognitionist.requestCredential(connection, admittedAdapter(), context);
-    expect(request.payload).toMatchObject({ recipient: "Locksmith", secretMaterialIncluded: false, permittedOfficerPersonaRef: ref(ADMITTED_ISOLDE) });
+    expect(request.payload).toMatchObject({ recipient: "Locksmith", secretMaterialIncluded: false, permittedResidentOfficerContractRef: ref(ADMITTED_ISOLDE) });
     expect(JSON.stringify(request)).not.toMatch(/api[_-]?key|password|credential_value/i);
     expect(() => createConnectionRequest(port, { ...connectionPayload, api_key: "forbidden" } as typeof connectionPayload, "bad", context)).toThrow("may not contain credential material");
   });

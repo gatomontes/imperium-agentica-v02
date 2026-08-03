@@ -6,6 +6,7 @@ import { isoldeTransportInstructions } from "./isolde-agent-definition.js";
 import { MissionSpecificationCandidate, PredicateDetermination } from "./castellan-mission-formation.js";
 import { CastellanGuildhallRouter, GuildhallMissionCommittee, ProfessionAdjudicationDraft, ProfessionAdjudicationPacket, ProfessionBrainstormDraft, ProfessionRecommendationPacket } from "./guildhall-mission-committee.js";
 import { RectorCastellanOfficer, RectorCognitiveDraft } from "./rector-castellan-officer.js";
+import { rectorAssessmentInstructions } from "./rector-agent-definition.js";
 import { CastellanInquiry, CastellanTurnDisposition, IsoldeQuestionPresentation, MissionDossier } from "./secretariat-mission-dossier.js";
 
 export interface LiveIsoldeAuditEvent {
@@ -348,7 +349,7 @@ function event(stage: LiveIsoldeAuditEvent["stage"], correlationId: string, cred
   return { stage, correlationId, credentialPresent, credentialExposedToIsolde: false, providerCalled, missionExecuted: false, responseEvaluated };
 }
 
-function assessmentInstructions(): string { return "You are Rector, the admitted Castellan Officer. Assess only the one active question against the exact Operator answer. Castellan alone accepts, rejects, or requeries. Return JSON only. Use RESOLVED only when the answer directly answers the question; DECLARED_NONE only for an explicit none declaration where allowed; AMBIGUOUS when explanation is needed; CONTRADICTORY for incompatible statements; UNUSABLE for nonresponsive material. Never invent or normalize values. Imperium, not you, preserves the exact raw answer as evidence. Return one disposition and its rationale."; }
+function assessmentInstructions(): string { return rectorAssessmentInstructions(); }
 function assessmentSchema(): Record<string, unknown> { return { type: "object", properties: { disposition: { type: "string", enum: ["RESOLVED", "DECLARED_NONE", "AMBIGUOUS", "CONTRADICTORY", "UNUSABLE"] }, rationale: { type: "string" } }, required: ["disposition", "rationale"], additionalProperties: false }; }
 function assessmentResult(id: unknown, content: string, provider: "openai" | "deepseek", model: string, request: LiveAnswerAssessmentRequest): LiveAnswerAssessmentResult {
   if (typeof id !== "string" || !id.trim()) throw new Error(`${provider} assessment response identity is missing`);

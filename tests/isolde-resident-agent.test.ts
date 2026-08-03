@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { ADMITTED_ISOLDE_AGENT, ISOLDE_AGENT_CANDIDATE, isoldeTransportInstructions } from "../src/isolde-agent-definition.js";
 import { ADMITTED_ISOLDE_BASE_PERSONA, ISOLDE_BASE_PERSONA_CANDIDATE } from "../src/isolde-base-persona.js";
+import { ADMITTED_ISOLDE } from "../src/isolde-resident-officer-contract.js";
 import { ResidentAgentContract, digestPersona } from "../src/resident-agent.js";
 import { ADMITTED_SECRETARIAT_PROFILE } from "../src/secretariat-doctrine-profile.js";
 
@@ -17,6 +18,7 @@ describe("Isolde Base Persona and resident Agent definition", () => {
       personaRelease: "0.1.0",
       personaDigest: digestPersona(ADMITTED_ISOLDE_BASE_PERSONA),
       officeProfileRef: `${ADMITTED_SECRETARIAT_PROFILE.identity}@${ADMITTED_SECRETARIAT_PROFILE.version}`,
+      residentOfficerContractRef: `${ADMITTED_ISOLDE.identity}@${ADMITTED_ISOLDE.version}`,
       cognitiveProviderSelectedBy: "Locksmith",
     });
   });
@@ -28,8 +30,9 @@ describe("Isolde Base Persona and resident Agent definition", () => {
 
   it("refuses silent Persona upgrades or digest drift", () => {
     const changedPersona = { ...ADMITTED_ISOLDE_BASE_PERSONA, version: 3, payload: { ...ADMITTED_ISOLDE_BASE_PERSONA.payload, release: "0.2.0", communicationStyle: [...ADMITTED_ISOLDE_BASE_PERSONA.payload.communicationStyle, "Use shorter questions."] } };
-    expect(() => new ResidentAgentContract().assertAssembly(ADMITTED_ISOLDE_AGENT, changedPersona, ADMITTED_SECRETARIAT_PROFILE)).toThrow("Base Persona pin is invalid");
-    expect(() => new ResidentAgentContract().admit({ ...ISOLDE_AGENT_CANDIDATE, payload: { ...ISOLDE_AGENT_CANDIDATE.payload, personaDigest: "sha256:wrong" } }, ADMITTED_ISOLDE_BASE_PERSONA, ADMITTED_SECRETARIAT_PROFILE)).toThrow("exact Base Persona version and digest");
+    expect(() => new ResidentAgentContract().assertAssembly(ADMITTED_ISOLDE_AGENT, changedPersona, ADMITTED_ISOLDE, ADMITTED_SECRETARIAT_PROFILE)).toThrow("Base Persona pin is invalid");
+    expect(() => new ResidentAgentContract().admit({ ...ISOLDE_AGENT_CANDIDATE, payload: { ...ISOLDE_AGENT_CANDIDATE.payload, personaDigest: "sha256:wrong" } }, ADMITTED_ISOLDE_BASE_PERSONA, ADMITTED_ISOLDE, ADMITTED_SECRETARIAT_PROFILE)).toThrow("exact Base Persona version and digest");
+    expect(() => new ResidentAgentContract().assertAssembly({ ...ADMITTED_ISOLDE_AGENT, payload: { ...ADMITTED_ISOLDE_AGENT.payload, residentOfficerContractRef: "other@1" } }, ADMITTED_ISOLDE_BASE_PERSONA, ADMITTED_ISOLDE, ADMITTED_SECRETARIAT_PROFILE)).toThrow("Resident Officer Contract pin is invalid");
   });
 
   it("builds provider instructions from the admitted Persona", () => {

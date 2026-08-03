@@ -404,8 +404,11 @@ Runtime operation, credentials, deployment, or external effect is selected.
 
 ## DR-094 Continuation
 
-Isolde Base Persona `0.1.0` and its pinned Resident Agent Definition are the
-current implementation candidate. Next, pressure-test whether the legacy
-`OfficerPersonaSpecification` should be renamed or reduced to an Officer/Office
-contract without changing admitted authority, then apply the same separation to
-Rector and Guildmaster only through separately approved increments.
+Isolde Base Persona `0.1.0`, Resident Officer Contract, and pinned Resident
+Agent Definition form the current resident-agent assembly. The Agent Definition
+pins exact Persona, contract, and Office Profile references; runtime artifacts
+no longer misidentify the contract as a Persona.
+
+Next, define Rector's Base Persona and Resident Agent Definition through a
+separately approved increment. Guildmaster remains a later, separate resident-
+agent decision.

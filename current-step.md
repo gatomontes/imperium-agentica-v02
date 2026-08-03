@@ -390,7 +390,7 @@ The focused pressure matrix passes 44/44. Operational powers remain closed.
 
 ## DR-086 — Isolde, Resident Secretariat Officer
 
-Isolde is admitted as Secretariat's resident Officer Persona and bounded
+Isolde is admitted as Secretariat's resident Officer under a Resident Officer Contract and bounded
 Operator-facing cognitive interface. She structures explicitly sourced intake,
 presents Castellan questions without altering their exact semantic core, maps
 raw replies to exact question identities, and acts only through Secretariat's
@@ -416,6 +416,15 @@ deploys no Operative, and executes no mission. Focused verification passes
 21/21 across setup, Isolde, Rector, and the new live boundary. Repository-wide
 TypeScript still exposes the inherited pre-Senate transport exports and stale
 Petition fixtures classified by DR-070.
+
+## Resident-Agent Artifact Separation
+
+The former conflated officer-Persona artifact is now the
+`ResidentOfficerContract`. It contains stable office-bound cognition,
+evidence, boundaries, refusal conditions, and revision conditions; it is not a
+Persona. Isolde's Resident Agent Definition pins the exact Base Persona,
+Resident Officer Contract, and Office Profile. Mission and cognition artifacts
+carry the exact `residentOfficerContractRef`.
 
 Merged `main` had incorrectly tracked `.env.local`; this increment removes it
 from the current tree and preserves the ignore rule. The tracked assignment was
