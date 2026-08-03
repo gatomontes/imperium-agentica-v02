@@ -1,10 +1,11 @@
 import { ADMITTED_ISOLDE_BASE_PERSONA } from "./isolde-base-persona.js";
+import { ADMITTED_ISOLDE } from "./isolde-resident-officer-contract.js";
 import { ResidentAgentContract } from "./resident-agent.js";
 import { ADMITTED_SECRETARIAT_PROFILE } from "./secretariat-doctrine-profile.js";
 
 const contract = new ResidentAgentContract();
 
-export const ISOLDE_AGENT_CANDIDATE = contract.define(ADMITTED_ISOLDE_BASE_PERSONA, ADMITTED_SECRETARIAT_PROFILE, {
+export const ISOLDE_AGENT_CANDIDATE = contract.define(ADMITTED_ISOLDE_BASE_PERSONA, ADMITTED_ISOLDE, ADMITTED_SECRETARIAT_PROFILE, {
   agentId: "isolde",
   displayName: "Isolde",
   kind: "RESIDENT_AGENT",
@@ -14,7 +15,7 @@ export const ISOLDE_AGENT_CANDIDATE = contract.define(ADMITTED_ISOLDE_BASE_PERSO
   cognitiveProviderSelectedBy: "Locksmith",
 }, "isolde-agent-definition-001", { identityFactory: () => "agent-isolde-secretariat", now: () => "2026-08-03T18:05:00.000Z" });
 
-export const ADMITTED_ISOLDE_AGENT = contract.admit(ISOLDE_AGENT_CANDIDATE, ADMITTED_ISOLDE_BASE_PERSONA, ADMITTED_SECRETARIAT_PROFILE);
+export const ADMITTED_ISOLDE_AGENT = contract.admit(ISOLDE_AGENT_CANDIDATE, ADMITTED_ISOLDE_BASE_PERSONA, ADMITTED_ISOLDE, ADMITTED_SECRETARIAT_PROFILE);
 
 export function isoldeTransportInstructions(): string {
   const persona = ADMITTED_ISOLDE_BASE_PERSONA.payload;

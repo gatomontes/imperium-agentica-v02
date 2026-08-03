@@ -3,15 +3,19 @@ import { ADMITTED_CASTELLAN_PROFILE } from "./castellan-doctrine-profile.js";
 import { CastellanEvaluation, CastellanMissionFormation, CastellanOperatingLayer, PredicateDetermination, assertCastellanHandoffReceipt } from "./castellan-mission-formation.js";
 import { CognitivePortSpecification, createCognitivePort } from "./cognitionist.js";
 import { ENACTED_IMPERIUM_LEXICON_V4 } from "./imperium-lexicon-v4.js";
-import { ADMITTED_RECTOR } from "./rector-officer-profile.js";
+import { ADMITTED_RECTOR } from "./rector-resident-officer-contract.js";
+import { ADMITTED_RECTOR_AGENT } from "./rector-agent-definition.js";
+import { ADMITTED_RECTOR_BASE_PERSONA } from "./rector-base-persona.js";
+import { ResidentAgentContract } from "./resident-agent.js";
 import { LexiconAuthority, TerminologyConformanceGate } from "./senate-lexicon.js";
 import { MissionDossier, SecretariatDossierHandoff } from "./secretariat-mission-dossier.js";
 
 export interface RectorCognitiveDraft { determinations: PredicateDetermination[]; }
-export interface RectorPredicateInterpretation { officerPersonaRef: string; dossierRef: string; handoffRef: string; determinations: PredicateDetermination[]; researchPerformed: false; judgmentRendered: false; authorityCreated: false; }
+export interface RectorPredicateInterpretation { residentOfficerContractRef: string; residentAgentDefinitionRef: string; dossierRef: string; handoffRef: string; determinations: PredicateDetermination[]; researchPerformed: false; judgmentRendered: false; authorityCreated: false; }
 export interface RectorCognitivePort { assessMissionPredicates(dossier: MissionDossier, sourceAnswerRef: string): RectorCognitiveDraft; }
 
-const officerRef = ADMITTED_RECTOR.identity + "@" + ADMITTED_RECTOR.version;
+const contractRef = ADMITTED_RECTOR.identity + "@" + ADMITTED_RECTOR.version;
+const agentRef = ADMITTED_RECTOR_AGENT.identity + "@" + ADMITTED_RECTOR_AGENT.version;
 const officeProfileRef = ADMITTED_CASTELLAN_PROFILE.identity + "@" + ADMITTED_CASTELLAN_PROFILE.version;
 const doctrineRef = ADMITTED_CASTELLAN_PROFILE.payload.coreDoctrineRef;
 const lexiconRef = ADMITTED_CASTELLAN_PROFILE.payload.lexiconRef;
@@ -22,7 +26,7 @@ export const RECTOR_COGNITIVE_PORT: GovernedArtifactEnvelope<CognitivePortSpecif
 export class RectorCastellanOfficer {
   private readonly formation = new CastellanMissionFormation();
   private readonly operatingLayer = new CastellanOperatingLayer();
-  constructor(private readonly cognition: RectorCognitivePort) { if (ADMITTED_RECTOR.payload.state !== "ADMITTED" || ADMITTED_RECTOR.payload.officeProfileRef !== officeProfileRef) throw new Error("current admitted Rector Persona is required"); }
+  constructor(private readonly cognition: RectorCognitivePort) { if (ADMITTED_RECTOR.payload.state !== "ADMITTED" || ADMITTED_RECTOR.payload.officeProfileRef !== officeProfileRef) throw new Error("current admitted Rector Resident Officer Contract is required"); new ResidentAgentContract().assertAssembly(ADMITTED_RECTOR_AGENT, ADMITTED_RECTOR_BASE_PERSONA, ADMITTED_RECTOR, ADMITTED_CASTELLAN_PROFILE); }
 
   initiateInquiry(dossier: GovernedArtifactEnvelope<MissionDossier>, context: ArtifactContext = {}): CastellanEvaluation { return this.formation.evaluate(dossier, undefined, undefined, context); }
   formFromAuthenticatedIntent(dossier: GovernedArtifactEnvelope<MissionDossier>, context: ArtifactContext = {}) { return this.formation.evaluateGapDriven(dossier, context); }
@@ -31,11 +35,13 @@ export class RectorCastellanOfficer {
     assertCastellanHandoffReceipt(dossier, handoff);
     const draft = this.cognition.assessMissionPredicates(structuredClone(dossier.payload), ref(dossier) + "#answer:" + dossier.payload.answers.at(-1)!.questionId);
     const governance = governed([["LEX-049", "officer"], ["LEX-012", "castellan"], ["LEX-060", "cognitive_process"], ["LEX-063", "mission_formation"]]); gate.assertGovernance(governance);
-    const interpretation = createGovernedArtifact<RectorPredicateInterpretation>("RectorPredicateInterpretation", "Rector", dossier.correlationId, { officerPersonaRef: officerRef, dossierRef: ref(dossier), handoffRef: ref(handoff), determinations: draft.determinations, researchPerformed: false, judgmentRendered: false, authorityCreated: false }, governance, [officerRef, officeProfileRef, ref(dossier), ref(handoff), doctrineRef, lexiconRef], context);
+    const interpretation = createGovernedArtifact<RectorPredicateInterpretation>("RectorPredicateInterpretation", "Rector", dossier.correlationId, { residentOfficerContractRef: contractRef, residentAgentDefinitionRef: agentRef, dossierRef: ref(dossier), handoffRef: ref(handoff), determinations: draft.determinations, researchPerformed: false, judgmentRendered: false, authorityCreated: false }, governance, [contractRef, agentRef, officeProfileRef, ref(dossier), ref(handoff), doctrineRef, lexiconRef], context);
     const assessment = this.operatingLayer.recordAssessment(dossier, handoff, interpretation, context);
     return { interpretation, assessment, result: this.formation.evaluate(dossier, handoff, assessment, context) };
   }
 }
+
+export const RECTOR_RESIDENT_AGENT_REF = agentRef;
 
 function governed(uses: Array<[string, string]>): GovernedArtifactContext { return { coreDoctrineRef: doctrineRef, lexiconRef, officeProfileRef, vocabularyUses: uses.map(([termId, value]) => ({ termId, value, lexiconRef })) }; }
 function ref(value: { identity: string; version: number }): string { return value.identity + "@" + value.version; }
