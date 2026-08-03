@@ -412,3 +412,10 @@ no longer misidentify the contract as a Persona.
 Next, define Rector's Base Persona and Resident Agent Definition through a
 separately approved increment. Guildmaster remains a later, separate resident-
 agent decision.
+## DR-095 Continuation
+
+Guildmaster authority and resident-agent assembly are implemented. The next live
+checkpoint is to rerun `npm run live:isolde` and inspect the Guildmaster-approved
+profession queue and its professional-contribution wording. If conformant, the
+next Guildhall increment converts the approved queue into the existing ordered
+profession-resolution path without selecting people or beginning execution.
