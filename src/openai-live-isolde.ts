@@ -212,13 +212,24 @@ export async function openLocksmithDeepSeekAccess({
       return assessmentResult(payload.id, content, "deepseek", model, request);
     },
     async brainstormProfessions(request: LiveProfessionBrainstormRequest): Promise<LiveProfessionBrainstormResult> {
-      const response = await fetchImplementation("https://api.deepseek.com/chat/completions", {
-        method: "POST", headers: { Authorization: `Bearer ${credential}`, "Content-Type": "application/json" },
-        body: JSON.stringify({ model, messages: [{ role: "system", content: professionBrainstormInstructions() }, { role: "user", content: JSON.stringify(request.candidate) }], thinking: { type: "disabled" }, temperature: 0.2, max_tokens: 1600, response_format: { type: "json_object" } }),
-      });
-      const payload = await response.json() as Record<string, unknown>;
-      if (!response.ok) throw providerFailure("DeepSeek", response, payload);
-      return { responseId: responseId(payload), provider: "deepseek", model, draft: parseProfessionBrainstorm(deepSeekContent(payload), "DeepSeek") };
+      let repairEmptyResult = false;
+      for (let attempt = 0; attempt < 2; attempt++) {
+        const messages = [
+          { role: "system", content: professionBrainstormInstructions() },
+          { role: "user", content: JSON.stringify(request.candidate) },
+        ];
+        if (repairEmptyResult) messages.push({ role: "user", content: "Your previous response violated the Guildhall contract because possibilities was empty. Return 1 to 8 concrete profession possibilities for this admitted brainstorm. Do not abstain and do not return an empty list." });
+        const response = await fetchImplementation("https://api.deepseek.com/chat/completions", {
+          method: "POST", headers: { Authorization: `Bearer ${credential}`, "Content-Type": "application/json" },
+          body: JSON.stringify({ model, messages, thinking: { type: "disabled" }, temperature: 0.2, max_tokens: 1600, response_format: { type: "json_object" } }),
+        });
+        const payload = await response.json() as Record<string, unknown>;
+        if (!response.ok) throw providerFailure("DeepSeek", response, payload);
+        const draft = parseProfessionBrainstorm(deepSeekContent(payload), "DeepSeek");
+        if (draft.possibilities.length > 0) return { responseId: responseId(payload), provider: "deepseek", model, draft };
+        repairEmptyResult = true;
+      }
+      throw new Error("DeepSeek Guildhall brainstorm returned no profession possibilities after one bounded repair attempt");
     },
   });
 }
@@ -319,7 +330,7 @@ function assessmentResult(id: unknown, content: string, provider: "openai" | "de
 }
 function deepSeekContent(payload: Record<string, unknown>): string { const choice = Array.isArray(payload.choices) ? payload.choices[0] : undefined; const message = choice && typeof choice === "object" ? (choice as { message?: unknown }).message : undefined; const content = message && typeof message === "object" ? (message as { content?: unknown }).content : undefined; if (typeof content !== "string" || !content.trim()) throw new Error("DeepSeek response has no text output"); return content; }
 function responseId(payload: Record<string, unknown>): string { if (typeof payload.id !== "string" || !payload.id.trim()) throw new Error("provider response identity is missing"); return payload.id; }
-function professionBrainstormInstructions(): string { return "You are the Guildhall profession committee. Brainstorm professions that could contribute to the supplied Mission Specification Candidate. Return one JSON object with exactly this shape: {\"possibilities\":[{\"professionIdentity\":\"string\",\"contribution\":\"string\",\"rationale\":\"string\",\"collaborationMode\":\"INDEPENDENT|SEQUENTIAL|TANDEM\",\"dependsOn\":[\"earlier professionIdentity\"]}],\"overlaps\":[\"string\"],\"missingSpecialties\":[\"string\"]}. Include every field; use [] when a list is empty. Explore alternatives, overlaps, combinations, and missing specialties. Recommend one or several professions as the work requires. dependsOn may name only professions listed earlier in the possibilities array. Do not select, identify, or invent people, Personas, Operatives, or Officers. Do not plan execution, choose tools, or perform the mission."; }
+function professionBrainstormInstructions(): string { return "You are the Guildhall profession committee. Brainstorm professions that could contribute to the supplied Mission Specification Candidate. Return one JSON object with exactly this shape: {\"possibilities\":[{\"professionIdentity\":\"string\",\"contribution\":\"string\",\"rationale\":\"string\",\"collaborationMode\":\"INDEPENDENT|SEQUENTIAL|TANDEM\",\"dependsOn\":[\"earlier professionIdentity\"]}],\"overlaps\":[\"string\"],\"missingSpecialties\":[\"string\"]}. Include every field; use [] only for overlaps, missingSpecialties, or dependsOn when those lists are empty. possibilities MUST contain 1 to 8 concrete professions; abstention and an empty possibilities list are invalid. Explore alternatives, overlaps, combinations, and missing specialties. Recommend one or several professions as the work requires. dependsOn may name only professions listed earlier in the possibilities array. Do not select, identify, or invent people, Personas, Operatives, or Officers. Do not plan execution, choose tools, or perform the mission."; }
 function professionBrainstormSchema(): Record<string, unknown> { return { type: "object", properties: { possibilities: { type: "array", minItems: 1, maxItems: 8, items: { type: "object", properties: { professionIdentity: { type: "string" }, contribution: { type: "string" }, rationale: { type: "string" }, collaborationMode: { type: "string", enum: ["INDEPENDENT", "SEQUENTIAL", "TANDEM"] }, dependsOn: { type: "array", items: { type: "string" } } }, required: ["professionIdentity", "contribution", "rationale", "collaborationMode", "dependsOn"], additionalProperties: false } }, overlaps: { type: "array", items: { type: "string" } }, missingSpecialties: { type: "array", items: { type: "string" } } }, required: ["possibilities", "overlaps", "missingSpecialties"], additionalProperties: false }; }
 
 function parseProfessionBrainstorm(content: string, provider: string): ProfessionBrainstormDraft {
