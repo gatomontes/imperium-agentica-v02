@@ -420,3 +420,13 @@ Petition fixtures classified by DR-070.
 Merged `main` had incorrectly tracked `.env.local`; this increment removes it
 from the current tree and preserves the ignore rule. The tracked assignment was
 empty/unconfigured, and no credential value was inspected or printed.
+
+## DR-094 — Isolde Base Persona and Resident Agent Definition
+
+Isolde's provider-neutral behavior is now a distinct provisional Base Persona
+at release `0.1.0`. A separately versioned Resident Agent Definition pins its
+exact artifact version and SHA-256 digest to the exact Secretariat Office
+Profile, with capabilities, prohibitions, and Locksmith-owned provider selection
+kept outside the Persona. The live adapter derives Isolde's transport
+instructions from the pinned Persona; the resident officer refuses mismatched or
+silently upgraded assemblies.

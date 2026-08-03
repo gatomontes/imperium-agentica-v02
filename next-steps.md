@@ -401,3 +401,11 @@ active profile or existing artifacts.
 
 No other Office implementation, generic infrastructure reuse, Colosseum work,
 Runtime operation, credentials, deployment, or external effect is selected.
+
+## DR-094 Continuation
+
+Isolde Base Persona `0.1.0` and its pinned Resident Agent Definition are the
+current implementation candidate. Next, pressure-test whether the legacy
+`OfficerPersonaSpecification` should be renamed or reduced to an Officer/Office
+contract without changing admitted authority, then apply the same separation to
+Rector and Guildmaster only through separately approved increments.
