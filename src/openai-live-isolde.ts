@@ -147,7 +147,7 @@ export async function openLocksmithOpenAIAccess({
       const payload = await response.json() as Record<string, unknown>;
       if (!response.ok) throw providerFailure("OpenAI", response, payload);
       if (payload.status !== "completed") throw new Error("OpenAI Guildhall brainstorm did not complete");
-      return { responseId: responseId(payload), provider: "openai", model, draft: JSON.parse(extractOutputText(payload)) as ProfessionBrainstormDraft };
+      return { responseId: responseId(payload), provider: "openai", model, draft: parseProfessionBrainstorm(extractOutputText(payload), "OpenAI") };
     },
   });
 }
@@ -218,7 +218,7 @@ export async function openLocksmithDeepSeekAccess({
       });
       const payload = await response.json() as Record<string, unknown>;
       if (!response.ok) throw providerFailure("DeepSeek", response, payload);
-      return { responseId: responseId(payload), provider: "deepseek", model, draft: JSON.parse(deepSeekContent(payload)) as ProfessionBrainstormDraft };
+      return { responseId: responseId(payload), provider: "deepseek", model, draft: parseProfessionBrainstorm(deepSeekContent(payload), "DeepSeek") };
     },
   });
 }
@@ -319,8 +319,32 @@ function assessmentResult(id: unknown, content: string, provider: "openai" | "de
 }
 function deepSeekContent(payload: Record<string, unknown>): string { const choice = Array.isArray(payload.choices) ? payload.choices[0] : undefined; const message = choice && typeof choice === "object" ? (choice as { message?: unknown }).message : undefined; const content = message && typeof message === "object" ? (message as { content?: unknown }).content : undefined; if (typeof content !== "string" || !content.trim()) throw new Error("DeepSeek response has no text output"); return content; }
 function responseId(payload: Record<string, unknown>): string { if (typeof payload.id !== "string" || !payload.id.trim()) throw new Error("provider response identity is missing"); return payload.id; }
-function professionBrainstormInstructions(): string { return "You are the Guildhall profession committee. Brainstorm professions that could contribute to the supplied Mission Specification Candidate. Return JSON only. Explore alternatives, overlaps, combinations, and missing specialties. Recommend one or several professions as the work requires. collaborationMode must be INDEPENDENT, SEQUENTIAL, or TANDEM. dependsOn may name only professions listed earlier in the possibilities array. Do not select, identify, or invent people, Personas, Operatives, or Officers. Do not plan execution, choose tools, or perform the mission."; }
+function professionBrainstormInstructions(): string { return "You are the Guildhall profession committee. Brainstorm professions that could contribute to the supplied Mission Specification Candidate. Return one JSON object with exactly this shape: {\"possibilities\":[{\"professionIdentity\":\"string\",\"contribution\":\"string\",\"rationale\":\"string\",\"collaborationMode\":\"INDEPENDENT|SEQUENTIAL|TANDEM\",\"dependsOn\":[\"earlier professionIdentity\"]}],\"overlaps\":[\"string\"],\"missingSpecialties\":[\"string\"]}. Include every field; use [] when a list is empty. Explore alternatives, overlaps, combinations, and missing specialties. Recommend one or several professions as the work requires. dependsOn may name only professions listed earlier in the possibilities array. Do not select, identify, or invent people, Personas, Operatives, or Officers. Do not plan execution, choose tools, or perform the mission."; }
 function professionBrainstormSchema(): Record<string, unknown> { return { type: "object", properties: { possibilities: { type: "array", minItems: 1, maxItems: 8, items: { type: "object", properties: { professionIdentity: { type: "string" }, contribution: { type: "string" }, rationale: { type: "string" }, collaborationMode: { type: "string", enum: ["INDEPENDENT", "SEQUENTIAL", "TANDEM"] }, dependsOn: { type: "array", items: { type: "string" } } }, required: ["professionIdentity", "contribution", "rationale", "collaborationMode", "dependsOn"], additionalProperties: false } }, overlaps: { type: "array", items: { type: "string" } }, missingSpecialties: { type: "array", items: { type: "string" } } }, required: ["possibilities", "overlaps", "missingSpecialties"], additionalProperties: false }; }
+
+function parseProfessionBrainstorm(content: string, provider: string): ProfessionBrainstormDraft {
+  let value: unknown;
+  try { value = JSON.parse(content); } catch { throw new Error(`${provider} returned invalid Guildhall JSON`); }
+  if (!value || typeof value !== "object" || Array.isArray(value)) throw new Error(`${provider} returned an invalid Guildhall brainstorm`);
+  const draft = value as Record<string, unknown>;
+  if (!Array.isArray(draft.possibilities)) throw new Error(`${provider} Guildhall brainstorm omitted profession possibilities`);
+  const possibilities = draft.possibilities.map((item) => {
+    if (!item || typeof item !== "object" || Array.isArray(item)) throw new Error(`${provider} returned a malformed Guildhall profession possibility`);
+    const possibility = item as Record<string, unknown>;
+    if (typeof possibility.professionIdentity !== "string" || typeof possibility.contribution !== "string" || typeof possibility.rationale !== "string" || typeof possibility.collaborationMode !== "string") throw new Error(`${provider} returned an incomplete Guildhall profession possibility`);
+    const rawDependsOn = possibility.dependsOn;
+    if (rawDependsOn !== undefined && !isStringArray(rawDependsOn)) throw new Error(`${provider} returned invalid Guildhall profession dependencies`);
+    const dependsOn: string[] = rawDependsOn === undefined ? [] : rawDependsOn as string[];
+    return { professionIdentity: possibility.professionIdentity, contribution: possibility.contribution, rationale: possibility.rationale, collaborationMode: possibility.collaborationMode as ProfessionBrainstormDraft["possibilities"][number]["collaborationMode"], dependsOn };
+  });
+  if (draft.overlaps !== undefined && !isStringArray(draft.overlaps)) throw new Error(`${provider} returned invalid Guildhall overlaps`);
+  if (draft.missingSpecialties !== undefined && !isStringArray(draft.missingSpecialties)) throw new Error(`${provider} returned invalid Guildhall missing specialties`);
+  const overlaps = draft.overlaps;
+  const missingSpecialties = draft.missingSpecialties;
+  return { possibilities, overlaps: overlaps === undefined ? [] : overlaps as string[], missingSpecialties: missingSpecialties === undefined ? [] : missingSpecialties as string[] };
+}
+
+function isStringArray(value: unknown): value is string[] { return Array.isArray(value) && value.every((item) => typeof item === "string"); }
 
 async function readCredential(directory: string, environment: NodeJS.ProcessEnv, keyName = "OPENAI_API_KEY"): Promise<string | undefined> {
   const injected = environment[keyName]?.trim();

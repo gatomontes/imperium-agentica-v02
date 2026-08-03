@@ -108,6 +108,30 @@ describe("DeepSeek live Isolde provider", () => {
     expect(JSON.stringify(access)).not.toContain("fixture-secret");
   });
 
+  it("normalizes omitted empty Guildhall lists instead of crashing on trim", async () => {
+    const access = await openLocksmithDeepSeekAccess({
+      environment: { DEEPSEEK_API_KEY: "fixture-secret" },
+      fetchImplementation: async () => new Response(JSON.stringify({
+        id: "guildhall-shape-fixture",
+        choices: [{ message: { content: JSON.stringify({ possibilities: [{ professionIdentity: "Audience Researcher", contribution: "identify pain points", rationale: "the mission studies an audience", collaborationMode: "INDEPENDENT" }] }) } }],
+      }), { status: 200 }),
+    });
+    const result = await access.brainstormProfessions!({ correlationId: "shape", candidate: {} as never });
+    expect(result.draft).toEqual({
+      possibilities: [{ professionIdentity: "Audience Researcher", contribution: "identify pain points", rationale: "the mission studies an audience", collaborationMode: "INDEPENDENT", dependsOn: [] }],
+      overlaps: [],
+      missingSpecialties: [],
+    });
+  });
+
+  it("reports malformed Guildhall content at the provider boundary", async () => {
+    const access = await openLocksmithDeepSeekAccess({
+      environment: { DEEPSEEK_API_KEY: "fixture-secret" },
+      fetchImplementation: async () => new Response(JSON.stringify({ id: "bad-guildhall", choices: [{ message: { content: JSON.stringify({ possibilities: [{ professionIdentity: "Researcher" }] }) } }] }), { status: 200 }),
+    });
+    await expect(access.brainstormProfessions!({ correlationId: "bad-shape", candidate: {} as never })).rejects.toThrow("incomplete Guildhall profession possibility");
+  });
+
   it("reports safe DeepSeek failure metadata without provider messages or credentials", async () => {
     const access = await openLocksmithDeepSeekAccess({
       environment: { DEEPSEEK_API_KEY: "fixture-secret" },
