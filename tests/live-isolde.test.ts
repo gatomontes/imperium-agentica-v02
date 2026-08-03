@@ -3,7 +3,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { describe, expect, it, vi } from "vitest";
 import { IsoldeSecretariatOfficer } from "../src/isolde-secretariat-officer.js";
-import { LocksmithOpenAIAccessPort, MasterMasonLiveIsoldeSession, openLocksmithDeepSeekAccess, openLocksmithLiveIsoldeAccess, openLocksmithOpenAIAccess, runLiveGuildhallBrainstorm } from "../src/openai-live-isolde.js";
+import { LocksmithOpenAIAccessPort, MasterMasonLiveIsoldeSession, openLocksmithDeepSeekAccess, openLocksmithLiveIsoldeAccess, openLocksmithOpenAIAccess, runLiveGuildhallAdjudication, runLiveGuildhallBrainstorm } from "../src/openai-live-isolde.js";
 import { RectorCastellanOfficer, RectorCognitivePort } from "../src/rector-castellan-officer.js";
 
 const noEvaluation: RectorCognitivePort = { assessMissionPredicates: () => { throw new Error("response evaluation is outside this slice"); } };
@@ -23,7 +23,7 @@ describe("OpenAI live Isolde one-question slice", () => {
       return providerResponse(question);
     });
     const access = await openLocksmithOpenAIAccess({ environment: { OPENAI_API_KEY: "fixture-secret" }, fetchImplementation: fakeFetch, model: "fixture-model" });
-    expect(Object.keys(access)).toEqual(["configured", "transportQuestion", "assessAnswer", "brainstormProfessions"]);
+    expect(Object.keys(access)).toEqual(["configured", "transportQuestion", "assessAnswer", "brainstormProfessions", "adjudicateProfessions"]);
     const session = new MasterMasonLiveIsoldeSession(access, new IsoldeSecretariatOfficer(), new RectorCastellanOfficer(noEvaluation));
     const result = await session.runOneQuestion("operator@1", "Build a test mission", "live-one");
     expect(result.exactQuestion).toBe("What precise outcome should this mission accomplish?");
@@ -237,5 +237,35 @@ describe("live Isolde controlled reply loop", () => {
     const guildhall = await runLiveGuildhallBrainstorm(access, intake.candidate);
     expect(guildhall.packet.payload.possibilities).toHaveLength(2);
     expect(guildhall.packet.payload).toMatchObject({ peopleSelected: false, operativesSelected: false, officersSelected: false });
+  });
+
+  it("continues the brainstorm into bounded Guildhall profession adjudication", async () => {
+    const access: LocksmithOpenAIAccessPort = {
+      configured: true,
+      transportQuestion: async () => { throw new Error("not used"); },
+      assessAnswer: async () => { throw new Error("not used"); },
+      brainstormProfessions: async () => ({ responseId: "brainstorm", provider: "deepseek", model: "fixture-model", draft: {
+        possibilities: [
+          { professionIdentity: "Audience Researcher", contribution: "interpret statements", rationale: "audience context", collaborationMode: "INDEPENDENT", dependsOn: [] },
+          { professionIdentity: "Data Scientist", contribution: "rank patterns", rationale: "quantification", collaborationMode: "TANDEM", dependsOn: ["Audience Researcher"] },
+        ], overlaps: [], missingSpecialties: ["YouTube API usage"],
+      } }),
+      adjudicateProfessions: async () => ({ responseId: "adjudication", provider: "deepseek", model: "fixture-model", draft: {
+        decisions: [
+          { professionIdentity: "Audience Researcher", disposition: "ADMIT", rationale: "required interpretation" },
+          { professionIdentity: "Data Scientist", disposition: "ADMIT", rationale: "required ranking" },
+        ],
+        queue: [
+          { position: 1, professionIdentity: "Audience Researcher", contribution: "interpret statements", rationale: "audience context", collaborationMode: "INDEPENDENT", dependsOn: [] },
+          { position: 2, professionIdentity: "Data Scientist", contribution: "rank patterns", rationale: "quantification", collaborationMode: "TANDEM", dependsOn: ["Audience Researcher"] },
+        ], capabilityRequirements: ["qualitative coding"], toolOrAccessRequirements: ["YouTube Data API access"],
+      } }),
+    };
+    const session = new MasterMasonLiveIsoldeSession(access, new IsoldeSecretariatOfficer(), new RectorCastellanOfficer(noEvaluation));
+    const intake = await session.runConversation("operator@1", "Research sadcore audience pain points", "adjudication-live", async () => "unused");
+    const brainstorm = await runLiveGuildhallBrainstorm(access, intake.candidate);
+    const adjudication = await runLiveGuildhallAdjudication(access, intake.candidate, brainstorm.packet);
+    expect(adjudication.packet.payload.queue).toHaveLength(2);
+    expect(adjudication.packet.payload).toMatchObject({ peopleSelected: false, operativesSelected: false, officersSelected: false, suitabilityDetermined: false });
   });
 });
