@@ -2,7 +2,7 @@ import { randomUUID } from "node:crypto";
 import { createInterface } from "node:readline/promises";
 import { stdin, stdout } from "node:process";
 import { IsoldeSecretariatOfficer } from "../src/isolde-secretariat-officer.js";
-import { MasterMasonLiveIsoldeSession, openLocksmithLiveIsoldeAccess } from "../src/openai-live-isolde.js";
+import { MasterMasonLiveIsoldeSession, openLocksmithLiveIsoldeAccess, runLiveGuildhallBrainstorm } from "../src/openai-live-isolde.js";
 import { RectorCastellanOfficer, RectorCognitivePort } from "../src/rector-castellan-officer.js";
 const initialOnly: RectorCognitivePort = { assessMissionPredicates: () => { throw new Error("live Rector assessment must enter through Locksmith's bounded provider port"); } };
 
@@ -21,7 +21,10 @@ async function main(): Promise<void> {
     });
     stdout.write("Isolde: Castellan has completed the mission intake.\n");
     stdout.write(`Candidate: ${JSON.stringify(result.candidate.payload, null, 2)}\n`);
-    stdout.write(`Audit: provider=${result.provider}; model=${result.model}; credential_exposed_to_isolde=false; responses_evaluated_by_castellan=true; mission_executed=false; turns=${result.turns}\n`);
+    const guildhall = await runLiveGuildhallBrainstorm(access, result.candidate);
+    stdout.write("Guildhall: profession brainstorming complete.\n");
+    stdout.write(`Profession recommendations: ${JSON.stringify(guildhall.packet.payload, null, 2)}\n`);
+    stdout.write(`Audit: provider=${guildhall.provider}; model=${guildhall.model}; credential_exposed_to_isolde=false; people_selected=false; operatives_selected=false; officers_selected=false; mission_executed=false; turns=${result.turns}\n`);
   } finally {
     prompt.close();
   }

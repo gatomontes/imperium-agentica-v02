@@ -3,7 +3,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { describe, expect, it, vi } from "vitest";
 import { IsoldeSecretariatOfficer } from "../src/isolde-secretariat-officer.js";
-import { LocksmithOpenAIAccessPort, MasterMasonLiveIsoldeSession, openLocksmithDeepSeekAccess, openLocksmithLiveIsoldeAccess, openLocksmithOpenAIAccess } from "../src/openai-live-isolde.js";
+import { LocksmithOpenAIAccessPort, MasterMasonLiveIsoldeSession, openLocksmithDeepSeekAccess, openLocksmithLiveIsoldeAccess, openLocksmithOpenAIAccess, runLiveGuildhallBrainstorm } from "../src/openai-live-isolde.js";
 import { RectorCastellanOfficer, RectorCognitivePort } from "../src/rector-castellan-officer.js";
 
 const noEvaluation: RectorCognitivePort = { assessMissionPredicates: () => { throw new Error("response evaluation is outside this slice"); } };
@@ -23,7 +23,7 @@ describe("OpenAI live Isolde one-question slice", () => {
       return providerResponse(question);
     });
     const access = await openLocksmithOpenAIAccess({ environment: { OPENAI_API_KEY: "fixture-secret" }, fetchImplementation: fakeFetch, model: "fixture-model" });
-    expect(Object.keys(access)).toEqual(["configured", "transportQuestion", "assessAnswer"]);
+    expect(Object.keys(access)).toEqual(["configured", "transportQuestion", "assessAnswer", "brainstormProfessions"]);
     const session = new MasterMasonLiveIsoldeSession(access, new IsoldeSecretariatOfficer(), new RectorCastellanOfficer(noEvaluation));
     const result = await session.runOneQuestion("operator@1", "Build a test mission", "live-one");
     expect(result.exactQuestion).toBe("What precise outcome should this mission accomplish?");
@@ -160,5 +160,24 @@ describe("live Isolde controlled reply loop", () => {
     expect(assessed.draft.determinations[0]).toMatchObject({ values: [rawAnswer], evidence: [{ exactExcerpt: rawAnswer, value: rawAnswer }] });
     const messages = requests[0].messages as Array<{ content: string }>;
     expect(messages[0].content).toContain("Imperium, not you, preserves the exact raw answer as evidence");
+  });
+
+  it("continues the formed candidate into bounded Guildhall profession brainstorming", async () => {
+    const access: LocksmithOpenAIAccessPort = {
+      configured: true,
+      transportQuestion: async () => { throw new Error("not used"); },
+      assessAnswer: async () => { throw new Error("not used"); },
+      brainstormProfessions: async () => ({ responseId: "guildhall-1", provider: "deepseek", model: "fixture-model", draft: {
+        possibilities: [
+          { professionIdentity: "YouTube Comment Researcher", contribution: "collect comments", rationale: "source-specific collection", collaborationMode: "INDEPENDENT", dependsOn: [] },
+          { professionIdentity: "Qualitative Data Analyst", contribution: "rank themes", rationale: "thematic analysis", collaborationMode: "SEQUENTIAL", dependsOn: ["YouTube Comment Researcher"] },
+        ], overlaps: [], missingSpecialties: [],
+      } }),
+    };
+    const session = new MasterMasonLiveIsoldeSession(access, new IsoldeSecretariatOfficer(), new RectorCastellanOfficer(noEvaluation));
+    const intake = await session.runConversation("operator@1", "Research the top ten sadcore audience pain points from YouTube comments", "guildhall-live", async () => "unused");
+    const guildhall = await runLiveGuildhallBrainstorm(access, intake.candidate);
+    expect(guildhall.packet.payload.possibilities).toHaveLength(2);
+    expect(guildhall.packet.payload).toMatchObject({ peopleSelected: false, operativesSelected: false, officersSelected: false });
   });
 });

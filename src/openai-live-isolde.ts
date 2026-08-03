@@ -1,8 +1,9 @@
 import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
-import { GovernedArtifactEnvelope } from "./artifact.js";
+import { ArtifactEnvelope, GovernedArtifactEnvelope } from "./artifact.js";
 import { IsoldeSecretariatOfficer } from "./isolde-secretariat-officer.js";
 import { MissionSpecificationCandidate, PredicateDetermination } from "./castellan-mission-formation.js";
+import { CastellanGuildhallRouter, GuildhallMissionCommittee, ProfessionBrainstormDraft, ProfessionRecommendationPacket } from "./guildhall-mission-committee.js";
 import { RectorCastellanOfficer, RectorCognitiveDraft } from "./rector-castellan-officer.js";
 import { CastellanInquiry, CastellanTurnDisposition, IsoldeQuestionPresentation, MissionDossier } from "./secretariat-mission-dossier.js";
 
@@ -33,7 +34,12 @@ export interface LocksmithOpenAIAccessPort {
   readonly configured: true;
   transportQuestion(request: OpenAITransportRequest): Promise<OpenAITransportResult>;
   assessAnswer(request: LiveAnswerAssessmentRequest): Promise<LiveAnswerAssessmentResult>;
+  brainstormProfessions?(request: LiveProfessionBrainstormRequest): Promise<LiveProfessionBrainstormResult>;
 }
+
+export interface LiveProfessionBrainstormRequest { correlationId: string; candidate: MissionSpecificationCandidate; }
+export interface LiveProfessionBrainstormResult { responseId: string; provider: "openai" | "deepseek"; model: string; draft: ProfessionBrainstormDraft; }
+export interface LiveGuildhallResult { packet: ArtifactEnvelope<ProfessionRecommendationPacket>; provider: "openai" | "deepseek"; model: string; providerResponseId: string; }
 
 export interface LiveAnswerAssessmentRequest {
   correlationId: string;
@@ -133,6 +139,16 @@ export async function openLocksmithOpenAIAccess({
       if (payload.status !== "completed") throw new Error("OpenAI assessment did not complete");
       return assessmentResult(payload.id, extractOutputText(payload), "openai", model, request);
     },
+    async brainstormProfessions(request: LiveProfessionBrainstormRequest): Promise<LiveProfessionBrainstormResult> {
+      const response = await fetchImplementation("https://api.openai.com/v1/responses", {
+        method: "POST", headers: { Authorization: `Bearer ${credential}`, "Content-Type": "application/json" },
+        body: JSON.stringify({ model, store: false, max_output_tokens: 1600, instructions: professionBrainstormInstructions(), input: JSON.stringify(request.candidate), text: { format: { type: "json_schema", name: "guildhall_profession_brainstorm", strict: true, schema: professionBrainstormSchema() } } }),
+      });
+      const payload = await response.json() as Record<string, unknown>;
+      if (!response.ok) throw providerFailure("OpenAI", response, payload);
+      if (payload.status !== "completed") throw new Error("OpenAI Guildhall brainstorm did not complete");
+      return { responseId: responseId(payload), provider: "openai", model, draft: JSON.parse(extractOutputText(payload)) as ProfessionBrainstormDraft };
+    },
   });
 }
 
@@ -195,7 +211,24 @@ export async function openLocksmithDeepSeekAccess({
       const content = deepSeekContent(payload);
       return assessmentResult(payload.id, content, "deepseek", model, request);
     },
+    async brainstormProfessions(request: LiveProfessionBrainstormRequest): Promise<LiveProfessionBrainstormResult> {
+      const response = await fetchImplementation("https://api.deepseek.com/chat/completions", {
+        method: "POST", headers: { Authorization: `Bearer ${credential}`, "Content-Type": "application/json" },
+        body: JSON.stringify({ model, messages: [{ role: "system", content: professionBrainstormInstructions() }, { role: "user", content: JSON.stringify(request.candidate) }], thinking: { type: "disabled" }, temperature: 0.2, max_tokens: 1600, response_format: { type: "json_object" } }),
+      });
+      const payload = await response.json() as Record<string, unknown>;
+      if (!response.ok) throw providerFailure("DeepSeek", response, payload);
+      return { responseId: responseId(payload), provider: "deepseek", model, draft: JSON.parse(deepSeekContent(payload)) as ProfessionBrainstormDraft };
+    },
   });
+}
+
+export async function runLiveGuildhallBrainstorm(access: LocksmithOpenAIAccessPort, candidate: GovernedArtifactEnvelope<MissionSpecificationCandidate>): Promise<LiveGuildhallResult> {
+  if (!access.brainstormProfessions) throw new Error("Locksmith provider does not expose the bounded Guildhall brainstorm port");
+  const handoff = new CastellanGuildhallRouter().handoff(candidate);
+  const result = await access.brainstormProfessions({ correlationId: candidate.correlationId, candidate: structuredClone(candidate.payload) });
+  const packet = new GuildhallMissionCommittee().recordBrainstorm(candidate, handoff, result.draft);
+  return { packet, provider: result.provider, model: result.model, providerResponseId: result.responseId };
 }
 
 export async function openLocksmithLiveIsoldeAccess(options: {
@@ -285,6 +318,9 @@ function assessmentResult(id: unknown, content: string, provider: "openai" | "de
   return { responseId: id, provider, model, draft: { determinations: [determination] } };
 }
 function deepSeekContent(payload: Record<string, unknown>): string { const choice = Array.isArray(payload.choices) ? payload.choices[0] : undefined; const message = choice && typeof choice === "object" ? (choice as { message?: unknown }).message : undefined; const content = message && typeof message === "object" ? (message as { content?: unknown }).content : undefined; if (typeof content !== "string" || !content.trim()) throw new Error("DeepSeek response has no text output"); return content; }
+function responseId(payload: Record<string, unknown>): string { if (typeof payload.id !== "string" || !payload.id.trim()) throw new Error("provider response identity is missing"); return payload.id; }
+function professionBrainstormInstructions(): string { return "You are the Guildhall profession committee. Brainstorm professions that could contribute to the supplied Mission Specification Candidate. Return JSON only. Explore alternatives, overlaps, combinations, and missing specialties. Recommend one or several professions as the work requires. collaborationMode must be INDEPENDENT, SEQUENTIAL, or TANDEM. dependsOn may name only professions listed earlier in the possibilities array. Do not select, identify, or invent people, Personas, Operatives, or Officers. Do not plan execution, choose tools, or perform the mission."; }
+function professionBrainstormSchema(): Record<string, unknown> { return { type: "object", properties: { possibilities: { type: "array", minItems: 1, maxItems: 8, items: { type: "object", properties: { professionIdentity: { type: "string" }, contribution: { type: "string" }, rationale: { type: "string" }, collaborationMode: { type: "string", enum: ["INDEPENDENT", "SEQUENTIAL", "TANDEM"] }, dependsOn: { type: "array", items: { type: "string" } } }, required: ["professionIdentity", "contribution", "rationale", "collaborationMode", "dependsOn"], additionalProperties: false } }, overlaps: { type: "array", items: { type: "string" } }, missingSpecialties: { type: "array", items: { type: "string" } } }, required: ["possibilities", "overlaps", "missingSpecialties"], additionalProperties: false }; }
 
 async function readCredential(directory: string, environment: NodeJS.ProcessEnv, keyName = "OPENAI_API_KEY"): Promise<string | undefined> {
   const injected = environment[keyName]?.trim();

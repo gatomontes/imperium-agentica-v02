@@ -7,6 +7,7 @@ export * from "./exemplar-review.js";
 export * from "./foundry.js";
 export * from "./garrison.js";
 export * from "./guildhall.js";
+export * from "./guildhall-mission-committee.js";
 export * from "./hagiography.js";
 export * from "./http-handler.js";
 export * from "./http-resolver.js";
