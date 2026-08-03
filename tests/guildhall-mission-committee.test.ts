@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { CastellanMissionFormation } from "../src/castellan-mission-formation.js";
 import { CastellanGuildhallRouter, GuildhallMissionCommittee } from "../src/guildhall-mission-committee.js";
 import { IsoldeSecretariatOfficer } from "../src/isolde-secretariat-officer.js";
+import { ADMITTED_GUILDMASTER_AGENT } from "../src/guildmaster-agent-definition.js";
 
 function candidate() {
   const dossier = new IsoldeSecretariatOfficer().openMission("operator@1", "Research the top ten sadcore audience pain points from YouTube comments", "guildhall-mission-001");
@@ -78,7 +79,9 @@ describe("Castellan to Guildhall profession brainstorming", () => {
     expect(adjudicated.payload.queue.map((item) => item.professionIdentity)).toEqual(["YouTube Comment Researcher", "Qualitative Data Analyst"]);
     expect(adjudicated.payload.decisions[2]).toMatchObject({ disposition: "CONSOLIDATE", targetProfessionIdentity: "Qualitative Data Analyst" });
     expect(adjudicated.payload.toolOrAccessRequirements).toEqual(["YouTube Data API access"]);
-    expect(adjudicated.payload).toMatchObject({ finding: "PROFESSION_QUEUE_RECOMMENDED", peopleSelected: false, operativesSelected: false, officersSelected: false, suitabilityDetermined: false });
+    expect(adjudicated.producer).toBe("Guildmaster");
+    expect(adjudicated.payload).toMatchObject({ finding: "PROFESSION_QUEUE_RECOMMENDED", peopleSelected: false, operativesSelected: false, officersSelected: false, suitabilityDetermined: true, guildmasterAgentDefinitionRef: `${ADMITTED_GUILDMASTER_AGENT.identity}@${ADMITTED_GUILDMASTER_AGENT.version}` });
+    expect(adjudicated.sourceRefs).toContain(`${ADMITTED_GUILDMASTER_AGENT.identity}@${ADMITTED_GUILDMASTER_AGENT.version}`);
   });
 
   it("refuses adjudication that drops a possibility or targets a nonqueued profession", () => {

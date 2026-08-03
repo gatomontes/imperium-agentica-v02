@@ -1,6 +1,7 @@
 import { ArtifactContext, ArtifactEnvelope, GovernedArtifactEnvelope, createArtifact } from "./artifact.js";
 import { MissionSpecificationCandidate } from "./castellan-mission-formation.js";
 import { assertArtifactEnvelope } from "./schema.js";
+import { ADMITTED_GUILDMASTER_AGENT } from "./guildmaster-agent-definition.js";
 
 export type ProfessionCollaborationMode = "INDEPENDENT" | "SEQUENTIAL" | "TANDEM";
 
@@ -61,7 +62,8 @@ export interface ProfessionAdjudicationPacket extends ProfessionAdjudicationDraf
   peopleSelected: false;
   operativesSelected: false;
   officersSelected: false;
-  suitabilityDetermined: false;
+  suitabilityDetermined: true;
+  guildmasterAgentDefinitionRef: string;
 }
 
 export class CastellanGuildhallRouter {
@@ -154,7 +156,8 @@ export class GuildhallMissionCommittee {
         : decision.disposition === "CONSOLIDATE" && decision.targetProfessionIdentity !== undefined && normalizeIdentity(decision.targetProfessionIdentity) === queueKey);
       if (!justified) throw new Error("every adjudicated queue profession must be justified by an admission or consolidation decision");
     }
-    return createArtifact("ProfessionAdjudicationPacket", "GuildhallCommittee", candidate.correlationId, {
+    const guildmasterAgentDefinitionRef = ref(ADMITTED_GUILDMASTER_AGENT);
+    return createArtifact("ProfessionAdjudicationPacket", "Guildmaster", candidate.correlationId, {
       missionSpecificationCandidateRef: ref(candidate),
       recommendationPacketRef: ref(recommendation),
       decisions,
@@ -165,8 +168,9 @@ export class GuildhallMissionCommittee {
       peopleSelected: false,
       operativesSelected: false,
       officersSelected: false,
-      suitabilityDetermined: false,
-    }, [ref(candidate), ref(recommendation)], context);
+      suitabilityDetermined: true,
+      guildmasterAgentDefinitionRef,
+    }, [ref(candidate), ref(recommendation), guildmasterAgentDefinitionRef], context);
   }
 }
 

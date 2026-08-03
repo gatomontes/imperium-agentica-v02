@@ -439,3 +439,10 @@ Profile, with capabilities, prohibitions, and Locksmith-owned provider selection
 kept outside the Persona. The live adapter derives Isolde's transport
 instructions from the pinned Persona; the resident officer refuses mismatched or
 silently upgraded assemblies.
+## DR-095 — Guildmaster Authority and Resident Agent
+
+Guildmaster now chairs Guildhall adjudication under a pinned Base Persona,
+Resident Officer Contract, Office Profile, and Resident Agent Definition.
+Successful adjudication is Guildmaster-produced and records professional
+suitability as determined. Castellan and Rector retain no professional-
+suitability authority.

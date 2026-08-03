@@ -266,6 +266,6 @@ describe("live Isolde controlled reply loop", () => {
     const brainstorm = await runLiveGuildhallBrainstorm(access, intake.candidate);
     const adjudication = await runLiveGuildhallAdjudication(access, intake.candidate, brainstorm.packet);
     expect(adjudication.packet.payload.queue).toHaveLength(2);
-    expect(adjudication.packet.payload).toMatchObject({ peopleSelected: false, operativesSelected: false, officersSelected: false, suitabilityDetermined: false });
+    expect(adjudication.packet.payload).toMatchObject({ peopleSelected: false, operativesSelected: false, officersSelected: false, suitabilityDetermined: true });
   });
 });
