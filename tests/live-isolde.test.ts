@@ -132,6 +132,40 @@ describe("DeepSeek live Isolde provider", () => {
     await expect(access.brainstormProfessions!({ correlationId: "bad-shape", candidate: {} as never })).rejects.toThrow("incomplete Guildhall profession possibility");
   });
 
+  it("allows one bounded repair attempt when DeepSeek abstains from Guildhall brainstorming", async () => {
+    const requests: Array<Record<string, unknown>> = [];
+    const responses = [
+      { id: "empty-guildhall", choices: [{ message: { content: JSON.stringify({ possibilities: [], overlaps: [], missingSpecialties: [] }) } }] },
+      { id: "repaired-guildhall", choices: [{ message: { content: JSON.stringify({ possibilities: [{ professionIdentity: "Audience Researcher", contribution: "identify audience pain points", rationale: "the mission studies an audience", collaborationMode: "INDEPENDENT", dependsOn: [] }], overlaps: [], missingSpecialties: [] }) } }] },
+    ];
+    const access = await openLocksmithDeepSeekAccess({
+      environment: { DEEPSEEK_API_KEY: "fixture-secret" },
+      fetchImplementation: async (_input, init) => {
+        requests.push(JSON.parse(String(init?.body)) as Record<string, unknown>);
+        return new Response(JSON.stringify(responses.shift()), { status: 200 });
+      },
+    });
+    const result = await access.brainstormProfessions!({ correlationId: "repair-empty", candidate: {} as never });
+    expect(result.responseId).toBe("repaired-guildhall");
+    expect(result.draft.possibilities).toHaveLength(1);
+    expect(requests).toHaveLength(2);
+    expect(JSON.stringify(requests[0])).toContain("possibilities MUST contain 1 to 8 concrete professions");
+    expect(JSON.stringify(requests[1])).toContain("previous response violated the Guildhall contract");
+  });
+
+  it("rejects a second empty Guildhall brainstorm without inventing fallback professions", async () => {
+    let calls = 0;
+    const access = await openLocksmithDeepSeekAccess({
+      environment: { DEEPSEEK_API_KEY: "fixture-secret" },
+      fetchImplementation: async () => {
+        calls++;
+        return new Response(JSON.stringify({ id: `empty-${calls}`, choices: [{ message: { content: JSON.stringify({ possibilities: [], overlaps: [], missingSpecialties: [] }) } }] }), { status: 200 });
+      },
+    });
+    await expect(access.brainstormProfessions!({ correlationId: "still-empty", candidate: {} as never })).rejects.toThrow("after one bounded repair attempt");
+    expect(calls).toBe(2);
+  });
+
   it("reports safe DeepSeek failure metadata without provider messages or credentials", async () => {
     const access = await openLocksmithDeepSeekAccess({
       environment: { DEEPSEEK_API_KEY: "fixture-secret" },
