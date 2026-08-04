@@ -1,5 +1,6 @@
 import { ArtifactEnvelope, createArtifact } from "./artifact.js";
 import { WorkSpecification } from "./castellan.js";
+import { ADMITTED_GUILDMASTER_AGENT } from "./guildmaster-agent-definition.js";
 
 export type ProfessionFinding =
   | "PROFESSION_CONFORMANT"
@@ -13,6 +14,8 @@ export interface ProfessionSpecification {
   suitabilityCriteria: string[];
   workSpecificationRef: string;
   finding: ProfessionFinding;
+  admissionState?: "CANDIDATE" | "ADMITTED";
+  admissionAuthorityRef?: string;
   professionQueueRef?: string;
   queuePosition?: number;
 }
@@ -47,6 +50,19 @@ export interface CommitteeDisposition {
 }
 
 export class Guildhall {
+  admitProfessionSpecification(candidate: ArtifactEnvelope<ProfessionSpecification>, guildmasterAgentDefinitionRef: string): ArtifactEnvelope<ProfessionSpecification> {
+    if (candidate.artifactType !== "ProfessionSpecification" || candidate.producer !== "Guildhall" || candidate.status !== "CURRENT" || candidate.payload.finding !== "PROFESSION_CONFORMANT" || candidate.payload.admissionState === "ADMITTED") throw new Error("exact current conformant Profession Specification candidate is required");
+    if (guildmasterAgentDefinitionRef !== ADMITTED_GUILDMASTER_AGENT.identity + "@" + ADMITTED_GUILDMASTER_AGENT.version) throw new Error("exact admitted Guildmaster Agent Definition authority is required");
+    return {
+      ...candidate,
+      version: candidate.version + 1,
+      createdAt: new Date().toISOString(),
+      supersedes: candidate.identity + "@" + candidate.version,
+      payload: { ...candidate.payload, admissionState: "ADMITTED", admissionAuthorityRef: guildmasterAgentDefinitionRef },
+      sourceRefs: [...new Set([...candidate.sourceRefs, candidate.identity + "@" + candidate.version, guildmasterAgentDefinitionRef])],
+    };
+  }
+
   queue(work: ArtifactEnvelope<WorkSpecification>, items: ProfessionQueueItem[]): ArtifactEnvelope<ProfessionQueue> {
     const valid = items.length > 0 && items.every((item, index) =>
       item.position === index + 1 && item.professionIdentity.trim() && item.taskCluster.trim() && item.rationale.trim(),
@@ -95,6 +111,7 @@ export class Guildhall {
         professionQueueRef: queue.identity + "@" + queue.version,
         queuePosition: position,
         finding: valid ? "PROFESSION_CONFORMANT" : "PROFESSION_UNRESOLVED",
+        admissionState: "CANDIDATE",
       },
       [
         work.identity + "@" + work.version,
@@ -129,6 +146,7 @@ export class Guildhall {
         suitabilityCriteria: criteria,
         workSpecificationRef: work.identity + "@" + work.version,
         finding,
+        admissionState: "CANDIDATE",
       },
       [work.identity + "@" + work.version],
     );

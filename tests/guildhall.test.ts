@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { Castellan } from "../src/castellan.js";
 import { Guildhall } from "../src/guildhall.js";
+import { ADMITTED_GUILDMASTER_AGENT } from "../src/guildmaster-agent-definition.js";
 import { Secretariat } from "../src/secretariat.js";
 
 function workSpecification() {
@@ -123,5 +124,16 @@ describe("Guildhall reference resolver", () => {
     });
 
     expect(profession.payload.finding).toBe("PROFESSION_UNRESOLVED");
+  });
+
+  it("admits a conformant Profession Specification only under Guildmaster authority", () => {
+    const candidate = new Guildhall().resolve(workSpecification(), {
+      professionIdentity: "research analyst", requiredCompetence: ["source evaluation"], practiceBoundaries: ["no unsupported conclusions"], suitabilityCriteria: ["evidence discipline"],
+    });
+    const guildmasterRef = `${ADMITTED_GUILDMASTER_AGENT.identity}@${ADMITTED_GUILDMASTER_AGENT.version}`;
+    const admitted = new Guildhall().admitProfessionSpecification(candidate, guildmasterRef);
+    expect(admitted.payload.admissionState).toBe("ADMITTED");
+    expect(admitted.payload.admissionAuthorityRef).toBe(guildmasterRef);
+    expect(admitted.supersedes).toBe(`${candidate.identity}@1`);
   });
 });
