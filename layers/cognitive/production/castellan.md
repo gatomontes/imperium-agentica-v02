@@ -52,9 +52,9 @@ Those belong elsewhere.
 
 The Castellan sends an approved work specification to Guildhall.
 
-Guildhall maps the work to the relevant profession, compiles or resolves the profession specification, and determines whether persona construction work must be issued to Foundry.
+Guildhall determines the required profession or professions, their boundaries, and their admitted queue order. Guildhall returns the Guildmaster-admitted Profession Determination Packet to Castellan.
 
-The Castellan does not determine professional truth.
+Castellan then hands the admitted determination, approved Work Specification, operator requirements, and relevant mission context to Foundry. Castellan does not write the Profession Specification, determine professional truth, or govern Foundry's production queue.
 
 ---
 
@@ -88,6 +88,7 @@ The Castellan may produce:
 - approved work specification
 - mission continuation note
 - mission handoff summary
+- Foundry entry packet carrying the admitted Profession Determination Packet
 - request for deployment preparation
 
 ---
@@ -116,6 +117,9 @@ The Castellan must not:
 Secretariat
 → Castellan
 → Guildhall
+→ Guildmaster admission
+→ Castellan
+→ Foundry
 
 Castellan
 → Collegium
@@ -138,8 +142,10 @@ Garrisoned persona
 
 ```text
 Castellan forms missions and specifies work.
-Guildhall determines the profession.
-Foundry forges the persona.
+Guildhall determines the required profession or professions.
+Guildmaster admits the determination.
+Castellan hands the admitted determination to Foundry.
+Foundry governs persona production.
 Muster assembles the mission-bound Deployment Package.
 Judicature judges returns.
 ```
