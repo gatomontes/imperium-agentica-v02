@@ -24,7 +24,7 @@ The production case begins:
 Castellan → Artificer → Profession Queue → first profession → Hagiography → research packet → Artificer
 ```
 
-For each queue item, the Artificer commissions Hagiography to research profession-relevant exemplars, demonstrated accomplishments, methods, and evidenced attributes. Hagiography returns an evidence-backed research packet to Foundry; it does not forge or recommend the persona. Queue advancement and all later forging stages remain governed by the Artificer.
+For each queue item, the Artificer commissions Hagiography to research profession-relevant exemplars, demonstrated accomplishments, methods, and evidenced attributes. Hagiography's Sanctographer directs the Chroniclers, verifies their collected material, compiles the acceptable evidence, and returns an authenticated Hagiography Research Packet to the Artificer. Hagiography does not forge or recommend the persona. Queue advancement and all later forging stages remain governed by the Artificer.
 
 The existing chamber production line is:
 
@@ -51,7 +51,7 @@ The Artificer may return unresolved defects to the responsible upstream authorit
 - Guildmaster-admitted Profession Determination Packet
 - approved Work Specification
 - operator requirements and relevant mission context
-- Hagiography research packet for the active queue item
+- Sanctographer-authenticated Hagiography Research Packet for the active queue item
 - Persona Governance Doctrine when the later forging stage requires it
 - authorized reusable persona patterns
 
