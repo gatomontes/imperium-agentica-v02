@@ -249,13 +249,24 @@ export async function openLocksmithDeepSeekAccess({
       throw new Error("DeepSeek Guildhall brainstorm returned no profession possibilities after one bounded repair attempt");
     },
     async adjudicateProfessions(request: LiveProfessionAdjudicationRequest): Promise<LiveProfessionAdjudicationResult> {
-      const response = await fetchImplementation("https://api.deepseek.com/chat/completions", {
-        method: "POST", headers: { Authorization: `Bearer ${credential}`, "Content-Type": "application/json" },
-        body: JSON.stringify({ model, messages: [{ role: "system", content: professionAdjudicationInstructions() }, { role: "user", content: JSON.stringify({ candidate: request.candidate, recommendation: request.recommendation }) }], thinking: { type: "disabled" }, temperature: 0, max_tokens: 2400, response_format: { type: "json_object" } }),
-      });
-      const payload = await response.json() as Record<string, unknown>;
-      if (!response.ok) throw providerFailure("DeepSeek", response, payload);
-      return { responseId: responseId(payload), provider: "deepseek", model, draft: parseProfessionAdjudication(deepSeekContent(payload), "DeepSeek") };
+      let repairReason: string | undefined;
+      for (let attempt = 0; attempt < 2; attempt++) {
+        const messages = [{ role: "system", content: professionAdjudicationInstructions() }, { role: "user", content: JSON.stringify({ candidate: request.candidate, recommendation: request.recommendation }) }];
+        if (repairReason) messages.push({ role: "user", content: `Your previous response violated the Guildmaster adjudication contract: ${repairReason}. Return the complete required JSON shape. Supply every substantive queue field and every decision rationale; use [] only for genuinely empty list fields. Do not invent fallback professions.` });
+        const response = await fetchImplementation("https://api.deepseek.com/chat/completions", {
+          method: "POST", headers: { Authorization: `Bearer ${credential}`, "Content-Type": "application/json" },
+          body: JSON.stringify({ model, messages, thinking: { type: "disabled" }, temperature: 0, max_tokens: 2400, response_format: { type: "json_object" } }),
+        });
+        const payload = await response.json() as Record<string, unknown>;
+        if (!response.ok) throw providerFailure("DeepSeek", response, payload);
+        try {
+          return { responseId: responseId(payload), provider: "deepseek", model, draft: parseProfessionAdjudication(deepSeekContent(payload), "DeepSeek") };
+        } catch (error) {
+          if (attempt === 1) throw new Error(`DeepSeek Guildmaster adjudication remained invalid after one bounded repair attempt: ${(error as Error).message}`);
+          repairReason = (error as Error).message;
+        }
+      }
+      throw new Error("DeepSeek Guildmaster adjudication repair loop ended unexpectedly");
     },
   });
 }
@@ -406,8 +417,8 @@ function parseProfessionAdjudication(content: string, provider: string): Profess
   const queue = draft.queue.map((item) => {
     if (!item || typeof item !== "object" || Array.isArray(item)) throw new Error(`${provider} returned a malformed Guildhall adjudicated profession`);
     const profession = item as Record<string, unknown>;
-    if (typeof profession.position !== "number" || typeof profession.professionIdentity !== "string" || typeof profession.contribution !== "string" || typeof profession.rationale !== "string" || typeof profession.collaborationMode !== "string" || !isStringArray(profession.dependsOn)) throw new Error(`${provider} returned an incomplete Guildhall adjudicated profession`);
-    return profession as unknown as ProfessionAdjudicationDraft["queue"][number];
+    if (typeof profession.position !== "number" || typeof profession.professionIdentity !== "string" || typeof profession.contribution !== "string" || typeof profession.rationale !== "string" || typeof profession.collaborationMode !== "string" || (profession.dependsOn !== undefined && !isStringArray(profession.dependsOn))) throw new Error(`${provider} returned an incomplete Guildhall adjudicated profession`);
+    return { ...profession, dependsOn: profession.dependsOn === undefined ? [] : profession.dependsOn } as ProfessionAdjudicationDraft["queue"][number];
   });
   return { decisions, queue, capabilityRequirements: draft.capabilityRequirements, toolOrAccessRequirements: draft.toolOrAccessRequirements } as ProfessionAdjudicationDraft;
 }
