@@ -309,21 +309,25 @@ describe("live Isolde controlled reply loop", () => {
   });
 
   it("continues the formed candidate into bounded Guildhall profession brainstorming", async () => {
+    const committeeSeats: string[] = [];
     const access: LocksmithOpenAIAccessPort = {
       configured: true,
       transportQuestion: async () => { throw new Error("not used"); },
       assessAnswer: async () => { throw new Error("not used"); },
-      brainstormProfessions: async () => ({ responseId: "guildhall-1", provider: "deepseek", model: "fixture-model", draft: {
+      brainstormProfessions: async (request) => { committeeSeats.push(String(request.committeeSeatId)); return ({ responseId: `guildhall-${committeeSeats.length}`, provider: "deepseek", model: "fixture-model", draft: {
         possibilities: [
           { professionIdentity: "YouTube Comment Researcher", contribution: "collect comments", rationale: "source-specific collection", collaborationMode: "INDEPENDENT", dependsOn: [] },
           { professionIdentity: "Qualitative Data Analyst", contribution: "rank themes", rationale: "thematic analysis", collaborationMode: "SEQUENTIAL", dependsOn: ["YouTube Comment Researcher"] },
         ], overlaps: [], missingSpecialties: [],
-      } }),
+      } }); },
     };
     const session = new MasterMasonLiveIsoldeSession(access, new IsoldeSecretariatOfficer(), new RectorCastellanOfficer(noEvaluation));
     const intake = await session.runConversation("operator@1", "Research the top ten sadcore audience pain points from YouTube comments", "guildhall-live", async () => "unused");
     const guildhall = await runLiveGuildhallBrainstorm(access, intake.candidate);
     expect(guildhall.packet.payload.possibilities).toHaveLength(2);
+    expect(committeeSeats).toEqual(["disciplinary-fit", "composition", "boundary-challenge"]);
+    expect(guildhall.packet.payload.memberContributionRefs).toHaveLength(3);
+    expect(guildhall.packet.sourceRefs).toEqual(expect.arrayContaining(guildhall.packet.payload.memberContributionRefs));
     expect(guildhall.packet.payload).toMatchObject({ peopleSelected: false, operativesSelected: false, officersSelected: false });
   });
 

@@ -2,6 +2,7 @@ import { ArtifactContext, ArtifactEnvelope, GovernedArtifactEnvelope, createArti
 import { MissionSpecificationCandidate } from "./castellan-mission-formation.js";
 import { assertArtifactEnvelope } from "./schema.js";
 import { ADMITTED_GUILDMASTER_AGENT } from "./guildmaster-agent-definition.js";
+import { ADMITTED_GUILDHALL_COMMITTEE_MEMBERS, GuildhallCommitteeSeatId } from "./guildhall-committee-members.js";
 
 export type ProfessionCollaborationMode = "INDEPENDENT" | "SEQUENTIAL" | "TANDEM";
 
@@ -19,6 +20,15 @@ export interface ProfessionBrainstormDraft {
   missingSpecialties: string[];
 }
 
+export interface CommitteeMemberContributionPacket extends ProfessionBrainstormDraft {
+  missionSpecificationCandidateRef: string;
+  handoffRef: string;
+  committeeSeatId: GuildhallCommitteeSeatId;
+  committeeMemberAgentDefinitionRef: string;
+  finding: "PROFESSION_POSSIBILITIES_CONTRIBUTED";
+  suitabilityDetermined: false;
+}
+
 export interface CastellanGuildhallHandoff {
   missionSpecificationCandidateRef: string;
   recipient: "GUILDHALL_COMMITTEE";
@@ -29,6 +39,7 @@ export interface CastellanGuildhallHandoff {
 export interface ProfessionRecommendationPacket extends ProfessionBrainstormDraft {
   missionSpecificationCandidateRef: string;
   handoffRef: string;
+  memberContributionRefs: string[];
   finding: "PROFESSION_POSSIBILITIES_RECORDED";
   peopleSelected: false;
   operativesSelected: false;
@@ -79,37 +90,49 @@ export class CastellanGuildhallRouter {
 }
 
 export class GuildhallMissionCommittee {
-  recordBrainstorm(
+  recordMemberContribution(
     candidate: GovernedArtifactEnvelope<MissionSpecificationCandidate>,
     handoff: ArtifactEnvelope<CastellanGuildhallHandoff>,
+    seatId: GuildhallCommitteeSeatId,
     draft: ProfessionBrainstormDraft,
     context: ArtifactContext = {},
-  ): ArtifactEnvelope<ProfessionRecommendationPacket> {
+  ): ArtifactEnvelope<CommitteeMemberContributionPacket> {
     assertCandidate(candidate);
     assertHandoff(candidate, handoff);
-    const possibilities = draft.possibilities.map(cleanPossibility);
-    if (possibilities.length === 0 || possibilities.length > 8) throw new Error("Guildhall brainstorm requires one to eight profession possibilities");
-    const identities = new Set<string>();
-    for (const possibility of possibilities) {
-      const key = possibility.professionIdentity.toLowerCase();
-      if (identities.has(key)) throw new Error("Guildhall profession possibilities must be distinct");
-      for (const dependency of possibility.dependsOn) {
-        if (!identities.has(dependency.toLowerCase())) throw new Error("Guildhall dependencies must name an earlier profession possibility");
-      }
-      if (possibility.collaborationMode === "INDEPENDENT" && possibility.dependsOn.length) throw new Error("independent professions may not declare dependencies");
-      identities.add(key);
+    const member = ADMITTED_GUILDHALL_COMMITTEE_MEMBERS.find((item) => item.seatId === seatId);
+    if (!member) throw new Error("exact admitted Guildhall committee seat is required");
+    const possibilities = validatePossibilities(draft.possibilities, "committee member contribution");
+    const committeeMemberAgentDefinitionRef = ref(member.agent);
+    return createArtifact("CommitteeMemberContributionPacket", member.persona.payload.displayName, candidate.correlationId, {
+      missionSpecificationCandidateRef: ref(candidate), handoffRef: ref(handoff), committeeSeatId: seatId,
+      committeeMemberAgentDefinitionRef, possibilities, overlaps: cleanList(draft.overlaps), missingSpecialties: cleanList(draft.missingSpecialties),
+      finding: "PROFESSION_POSSIBILITIES_CONTRIBUTED", suitabilityDetermined: false,
+    }, [ref(candidate), ref(handoff), committeeMemberAgentDefinitionRef], context);
+  }
+
+  assembleRecommendation(
+    candidate: GovernedArtifactEnvelope<MissionSpecificationCandidate>,
+    handoff: ArtifactEnvelope<CastellanGuildhallHandoff>,
+    contributions: ArtifactEnvelope<CommitteeMemberContributionPacket>[],
+    context: ArtifactContext = {},
+  ): ArtifactEnvelope<ProfessionRecommendationPacket> {
+    assertCandidate(candidate); assertHandoff(candidate, handoff);
+    if (contributions.length !== ADMITTED_GUILDHALL_COMMITTEE_MEMBERS.length) throw new Error("every admitted Guildhall committee member must contribute exactly once");
+    const seats = new Set<GuildhallCommitteeSeatId>();
+    for (const contribution of contributions) {
+      assertArtifactEnvelope(contribution);
+      const member = ADMITTED_GUILDHALL_COMMITTEE_MEMBERS.find((item) => item.seatId === contribution.payload.committeeSeatId);
+      if (!member || seats.has(member.seatId) || contribution.artifactType !== "CommitteeMemberContributionPacket" || contribution.status !== "CURRENT" || contribution.correlationId !== candidate.correlationId || contribution.payload.missionSpecificationCandidateRef !== ref(candidate) || contribution.payload.handoffRef !== ref(handoff) || contribution.payload.committeeMemberAgentDefinitionRef !== ref(member.agent) || contribution.payload.suitabilityDetermined !== false || !contribution.sourceRefs.includes(ref(member.agent))) throw new Error("exact attributable committee member contribution is required");
+      seats.add(member.seatId);
     }
+    const possibilities = mergePossibilities(contributions.flatMap((item) => item.payload.possibilities));
+    if (!possibilities.length || possibilities.length > 24) throw new Error("assembled Guildhall recommendation requires one to twenty-four distinct profession possibilities");
+    const memberContributionRefs = contributions.map(ref);
     return createArtifact("ProfessionRecommendationPacket", "GuildhallCommittee", candidate.correlationId, {
-      missionSpecificationCandidateRef: ref(candidate),
-      handoffRef: ref(handoff),
-      possibilities,
-      overlaps: cleanList(draft.overlaps),
-      missingSpecialties: cleanList(draft.missingSpecialties),
-      finding: "PROFESSION_POSSIBILITIES_RECORDED",
-      peopleSelected: false,
-      operativesSelected: false,
-      officersSelected: false,
-    }, [ref(candidate), ref(handoff)], context);
+      missionSpecificationCandidateRef: ref(candidate), handoffRef: ref(handoff), memberContributionRefs,
+      possibilities, overlaps: cleanList(contributions.flatMap((item) => item.payload.overlaps)), missingSpecialties: cleanList(contributions.flatMap((item) => item.payload.missingSpecialties)),
+      finding: "PROFESSION_POSSIBILITIES_RECORDED", peopleSelected: false, operativesSelected: false, officersSelected: false,
+    }, [ref(candidate), ref(handoff), ...memberContributionRefs], context);
   }
 
   adjudicate(
@@ -190,9 +213,34 @@ function assertHandoff(candidate: GovernedArtifactEnvelope<MissionSpecificationC
 
 function assertRecommendation(candidate: GovernedArtifactEnvelope<MissionSpecificationCandidate>, recommendation: ArtifactEnvelope<ProfessionRecommendationPacket>): void {
   assertArtifactEnvelope(recommendation);
-  if (recommendation.artifactType !== "ProfessionRecommendationPacket" || recommendation.producer !== "GuildhallCommittee" || recommendation.status !== "CURRENT" || recommendation.correlationId !== candidate.correlationId || recommendation.payload.missionSpecificationCandidateRef !== ref(candidate) || recommendation.payload.finding !== "PROFESSION_POSSIBILITIES_RECORDED" || recommendation.payload.peopleSelected !== false || recommendation.payload.operativesSelected !== false || recommendation.payload.officersSelected !== false || !recommendation.sourceRefs.includes(ref(candidate))) {
+  if (recommendation.artifactType !== "ProfessionRecommendationPacket" || recommendation.producer !== "GuildhallCommittee" || recommendation.status !== "CURRENT" || recommendation.correlationId !== candidate.correlationId || recommendation.payload.missionSpecificationCandidateRef !== ref(candidate) || recommendation.payload.finding !== "PROFESSION_POSSIBILITIES_RECORDED" || recommendation.payload.peopleSelected !== false || recommendation.payload.operativesSelected !== false || recommendation.payload.officersSelected !== false || recommendation.payload.memberContributionRefs.length !== ADMITTED_GUILDHALL_COMMITTEE_MEMBERS.length || recommendation.payload.memberContributionRefs.some((item) => !recommendation.sourceRefs.includes(item)) || !recommendation.sourceRefs.includes(ref(candidate))) {
     throw new Error("exact current Guildhall profession recommendation packet is required");
   }
+}
+
+function validatePossibilities(values: ProfessionPossibility[], label: string): ProfessionPossibility[] {
+  const possibilities = values.map(cleanPossibility);
+  if (!possibilities.length || possibilities.length > 8) throw new Error(`${label} requires one to eight profession possibilities`);
+  const identities = new Set<string>();
+  for (const possibility of possibilities) {
+    const key = normalizeIdentity(possibility.professionIdentity);
+    if (identities.has(key)) throw new Error(`${label} profession possibilities must be distinct`);
+    for (const dependency of possibility.dependsOn) if (!identities.has(normalizeIdentity(dependency))) throw new Error(`${label} dependencies must name an earlier profession possibility`);
+    if (possibility.collaborationMode === "INDEPENDENT" && possibility.dependsOn.length) throw new Error("independent professions may not declare dependencies");
+    identities.add(key);
+  }
+  return possibilities;
+}
+
+function mergePossibilities(values: ProfessionPossibility[]): ProfessionPossibility[] {
+  const merged = new Map<string, ProfessionPossibility>();
+  for (const value of values.map(cleanPossibility)) {
+    const key = normalizeIdentity(value.professionIdentity);
+    const prior = merged.get(key);
+    if (!prior) merged.set(key, { ...value, collaborationMode: "INDEPENDENT", dependsOn: [] });
+    else merged.set(key, { ...prior, rationale: cleanList([prior.rationale, value.rationale]).join(" ") });
+  }
+  return [...merged.values()];
 }
 
 function cleanPossibility(value: ProfessionPossibility): ProfessionPossibility {

@@ -5,6 +5,7 @@ import { IsoldeSecretariatOfficer } from "./isolde-secretariat-officer.js";
 import { isoldeTransportInstructions } from "./isolde-agent-definition.js";
 import { MissionSpecificationCandidate, PredicateDetermination } from "./castellan-mission-formation.js";
 import { CastellanGuildhallRouter, GuildhallMissionCommittee, ProfessionAdjudicationDraft, ProfessionAdjudicationPacket, ProfessionBrainstormDraft, ProfessionRecommendationPacket } from "./guildhall-mission-committee.js";
+import { ADMITTED_GUILDHALL_COMMITTEE_MEMBERS, GuildhallCommitteeSeatId, guildhallCommitteeMemberInstructions } from "./guildhall-committee-members.js";
 import { RectorCastellanOfficer, RectorCognitiveDraft } from "./rector-castellan-officer.js";
 import { rectorAssessmentInstructions } from "./rector-agent-definition.js";
 import { guildmasterAdjudicationInstructions } from "./guildmaster-agent-definition.js";
@@ -41,7 +42,7 @@ export interface LocksmithOpenAIAccessPort {
   adjudicateProfessions?(request: LiveProfessionAdjudicationRequest): Promise<LiveProfessionAdjudicationResult>;
 }
 
-export interface LiveProfessionBrainstormRequest { correlationId: string; candidate: MissionSpecificationCandidate; }
+export interface LiveProfessionBrainstormRequest { correlationId: string; candidate: MissionSpecificationCandidate; committeeSeatId?: GuildhallCommitteeSeatId; }
 export interface LiveProfessionBrainstormResult { responseId: string; provider: "openai" | "deepseek"; model: string; draft: ProfessionBrainstormDraft; }
 export interface LiveGuildhallResult { packet: ArtifactEnvelope<ProfessionRecommendationPacket>; provider: "openai" | "deepseek"; model: string; providerResponseId: string; }
 export interface LiveProfessionAdjudicationRequest { correlationId: string; candidate: MissionSpecificationCandidate; recommendation: ProfessionRecommendationPacket; }
@@ -161,7 +162,7 @@ export async function openLocksmithOpenAIAccess({
     async brainstormProfessions(request: LiveProfessionBrainstormRequest): Promise<LiveProfessionBrainstormResult> {
       const response = await fetchImplementation("https://api.openai.com/v1/responses", {
         method: "POST", headers: { Authorization: `Bearer ${credential}`, "Content-Type": "application/json" },
-        body: JSON.stringify({ model, store: false, max_output_tokens: 1600, instructions: professionBrainstormInstructions(), input: JSON.stringify(request.candidate), text: { format: { type: "json_schema", name: "guildhall_profession_brainstorm", strict: true, schema: professionBrainstormSchema() } } }),
+        body: JSON.stringify({ model, store: false, max_output_tokens: 1600, instructions: professionBrainstormInstructions(request.committeeSeatId ?? "disciplinary-fit"), input: JSON.stringify(request.candidate), text: { format: { type: "json_schema", name: "guildhall_profession_brainstorm", strict: true, schema: professionBrainstormSchema() } } }),
       });
       const payload = await response.json() as Record<string, unknown>;
       if (!response.ok) throw providerFailure("OpenAI", response, payload);
@@ -256,7 +257,7 @@ export async function openLocksmithDeepSeekAccess({
       let repairEmptyResult = false;
       for (let attempt = 0; attempt < 2; attempt++) {
         const messages = [
-          { role: "system", content: professionBrainstormInstructions() },
+          { role: "system", content: professionBrainstormInstructions(request.committeeSeatId ?? "disciplinary-fit") },
           { role: "user", content: JSON.stringify(request.candidate) },
         ];
         if (repairEmptyResult) messages.push({ role: "user", content: "Your previous response violated the Guildhall contract because possibilities was empty. Return 1 to 8 concrete profession possibilities for this admitted brainstorm. Do not abstain and do not return an empty list." });
@@ -304,9 +305,16 @@ export async function openLocksmithDeepSeekAccess({
 export async function runLiveGuildhallBrainstorm(access: LocksmithOpenAIAccessPort, candidate: GovernedArtifactEnvelope<MissionSpecificationCandidate>): Promise<LiveGuildhallResult> {
   if (!access.brainstormProfessions) throw new Error("Locksmith provider does not expose the bounded Guildhall brainstorm port");
   const handoff = new CastellanGuildhallRouter().handoff(candidate);
-  const result = await access.brainstormProfessions({ correlationId: candidate.correlationId, candidate: structuredClone(candidate.payload) });
-  const packet = new GuildhallMissionCommittee().recordBrainstorm(candidate, handoff, result.draft);
-  return { packet, provider: result.provider, model: result.model, providerResponseId: result.responseId };
+  const committee = new GuildhallMissionCommittee();
+  const results = [];
+  for (const member of ADMITTED_GUILDHALL_COMMITTEE_MEMBERS) {
+    const result = await access.brainstormProfessions({ correlationId: candidate.correlationId, candidate: structuredClone(candidate.payload), committeeSeatId: member.seatId });
+    results.push({ result, contribution: committee.recordMemberContribution(candidate, handoff, member.seatId, result.draft) });
+  }
+  const first = results[0]?.result;
+  if (!first || results.some(({ result }) => result.provider !== first.provider || result.model !== first.model)) throw new Error("Guildhall committee contributions require one consistent provider and model");
+  const packet = committee.assembleRecommendation(candidate, handoff, results.map((item) => item.contribution));
+  return { packet, provider: first.provider, model: first.model, providerResponseId: results.map((item) => item.result.responseId).join(",") };
 }
 
 export async function runLiveGuildhallAdjudication(access: LocksmithOpenAIAccessPort, candidate: GovernedArtifactEnvelope<MissionSpecificationCandidate>, recommendation: ArtifactEnvelope<ProfessionRecommendationPacket>): Promise<LiveGuildhallAdjudicationResult> {
@@ -404,7 +412,7 @@ function assessmentResult(id: unknown, content: string, provider: "openai" | "de
 }
 function deepSeekContent(payload: Record<string, unknown>): string { const choice = Array.isArray(payload.choices) ? payload.choices[0] : undefined; const message = choice && typeof choice === "object" ? (choice as { message?: unknown }).message : undefined; const content = message && typeof message === "object" ? (message as { content?: unknown }).content : undefined; if (typeof content !== "string" || !content.trim()) throw new Error("DeepSeek response has no text output"); return content; }
 function responseId(payload: Record<string, unknown>): string { if (typeof payload.id !== "string" || !payload.id.trim()) throw new Error("provider response identity is missing"); return payload.id; }
-function professionBrainstormInstructions(): string { return "You are the Guildhall profession committee. Brainstorm professions that could contribute to the supplied Mission Specification Candidate. Return one JSON object with exactly this shape: {\"possibilities\":[{\"professionIdentity\":\"string\",\"contribution\":\"string\",\"rationale\":\"string\",\"collaborationMode\":\"INDEPENDENT|SEQUENTIAL|TANDEM\",\"dependsOn\":[\"earlier professionIdentity\"]}],\"overlaps\":[\"string\"],\"missingSpecialties\":[\"string\"]}. Include every field; use [] only for overlaps, missingSpecialties, or dependsOn when those lists are empty. possibilities MUST contain 1 to 8 concrete professions; abstention and an empty possibilities list are invalid. Explore alternatives, overlaps, combinations, and missing specialties. Recommend one or several professions as the work requires. dependsOn may name only professions listed earlier in the possibilities array. Do not select, identify, or invent people, Personas, Operatives, or Officers. Do not plan execution, choose tools, or perform the mission."; }
+function professionBrainstormInstructions(seatId: GuildhallCommitteeSeatId): string { return guildhallCommitteeMemberInstructions(seatId) + " Return one JSON object with exactly this shape: {\"possibilities\":[{\"professionIdentity\":\"string\",\"contribution\":\"string\",\"rationale\":\"string\",\"collaborationMode\":\"INDEPENDENT|SEQUENTIAL|TANDEM\",\"dependsOn\":[\"earlier professionIdentity\"]}],\"overlaps\":[\"string\"],\"missingSpecialties\":[\"string\"]}. Include every field; use [] only for overlaps, missingSpecialties, or dependsOn when those lists are empty. possibilities MUST contain 1 to 8 concrete professions; abstention and an empty possibilities list are invalid. Recommend only from your assigned perspective. Guildmaster, not you, will adjudicate suitability and order. dependsOn may name only professions listed earlier in your own possibilities array. Do not select, identify, or invent people, Personas, Operatives, or Officers. Do not plan execution, choose tools, or perform the mission."; }
 function professionBrainstormSchema(): Record<string, unknown> { return { type: "object", properties: { possibilities: { type: "array", minItems: 1, maxItems: 8, items: { type: "object", properties: { professionIdentity: { type: "string" }, contribution: { type: "string" }, rationale: { type: "string" }, collaborationMode: { type: "string", enum: ["INDEPENDENT", "SEQUENTIAL", "TANDEM"] }, dependsOn: { type: "array", items: { type: "string" } } }, required: ["professionIdentity", "contribution", "rationale", "collaborationMode", "dependsOn"], additionalProperties: false } }, overlaps: { type: "array", items: { type: "string" } }, missingSpecialties: { type: "array", items: { type: "string" } } }, required: ["possibilities", "overlaps", "missingSpecialties"], additionalProperties: false }; }
 
 function professionAdjudicationInstructions(): string { return guildmasterAdjudicationInstructions() + " Return JSON only. For every brainstorm possibility, record exactly one decision: ADMIT it directly, CONSOLIDATE it into a different profession that appears in the final queue, or REJECT it as irrelevant, non-professional, or duplicative, with a concrete rationale. Produce an ordered, sufficient queue of 1 to 8 actual professions. Separate skills into capabilityRequirements and tools, APIs, credentials, data access, or websites into toolOrAccessRequirements. Queue dependencies may name only earlier queued professions. Every contribution MUST begin exactly with 'Professional capacity to ' and describe a capability or expected professional contribution; never phrase it as an instruction, assignment, or execution step. Do not select people, Personas, Operatives, or Officers; do not plan or execute. Shape: {\"decisions\":[{\"professionIdentity\":\"exact brainstorm identity\",\"disposition\":\"ADMIT|CONSOLIDATE|REJECT\",\"targetProfessionIdentity\":\"queued profession or empty string\",\"rationale\":\"string\"}],\"queue\":[{\"position\":1,\"professionIdentity\":\"string\",\"contribution\":\"Professional capacity to ...\",\"rationale\":\"string\",\"collaborationMode\":\"INDEPENDENT|SEQUENTIAL|TANDEM\",\"dependsOn\":[]}],\"capabilityRequirements\":[\"string\"],\"toolOrAccessRequirements\":[\"string\"]}."; }
