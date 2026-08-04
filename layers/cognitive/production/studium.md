@@ -25,7 +25,7 @@ The Studium develops and stewards two distinct governance artifacts:
 - `Persona Governance Doctrine` for Foundry
 - `Officer Governance Doctrine` for Smith
 
-It receives Profession Specifications from Guildhall and expresses the governable dimensions of professional practice as doctrine embodied by Foundry.
+For persona work, it receives exact admitted professional and production inputs through the Foundry production case and expresses governable obligations as doctrine for later embodiment by Foundry. The exact point at which Artificer commissions Studium after receiving Hagiography's packet is not yet defined.
 
 It also receives durable Advisory Role Requirements from Collegium and expresses the governable dimensions of Curial counsel as doctrine embodied by Smith.
 
@@ -113,13 +113,9 @@ Open ambiguities:
 
 ## Relationship To Guildhall
 
-Guildhall supplies the profession specification.
+Guildhall determines the profession or professions required by the mission and their admitted order. It does not write a Profession Specification for Studium.
 
-Studium derives governable doctrine from the profession's scope, responsibilities, boundaries, standards, and risks, subject to applicable Imperium authority and operator constraints.
-
-Guildhall describes the profession.
-
-Studium makes its governable obligations explicit.
+Studium must preserve the exact Guildmaster-admitted Profession Determination Packet and may surface a professional-boundary defect for return through the production case. It may not redefine, add, remove, or reorder the admitted professions.
 
 ---
 
@@ -127,7 +123,7 @@ Studium makes its governable obligations explicit.
 
 Studium and Foundry work iteratively.
 
-Studium supplies Persona Governance Doctrine for embodiment in the canonical persona specification.
+Studium supplies Persona Governance Doctrine for embodiment in the Persona Specification Candidate when commissioned through the Foundry production case.
 
 Foundry may return ambiguities, contradictions, or non-operable provisions exposed during construction.
 
@@ -165,7 +161,8 @@ The Studium must not:
 
 - become a synonym for all Imperium governance
 - define mission intent
-- redefine the profession without returning the issue to Guildhall
+- redefine, add, remove, or reorder an admitted profession
+- treat Guildhall's Profession Determination Packet as a completed Profession Specification
 - forge the persona or Officer
 - canonize human or Officer traits
 - determine Curia composition
@@ -180,7 +177,7 @@ The Studium must not:
 ## Boundary Maxim
 
 ```text
-Guildhall specifies professional practice.
+Guildhall determines required professions and order.
 Collegium specifies the durable advisory role.
 Studium authors the distinct governance doctrine.
 Foundry embodies Persona Governance Doctrine.
