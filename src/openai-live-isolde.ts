@@ -48,6 +48,18 @@ export interface LiveProfessionAdjudicationRequest { correlationId: string; cand
 export interface LiveProfessionAdjudicationResult { responseId: string; provider: "openai" | "deepseek"; model: string; draft: ProfessionAdjudicationDraft; }
 export interface LiveGuildhallAdjudicationResult { packet: ArtifactEnvelope<ProfessionAdjudicationPacket>; provider: "openai" | "deepseek"; model: string; providerResponseId: string; }
 
+export interface GuildmasterValidationDefect { path: string; reason: string; }
+
+export class GuildmasterAdjudicationValidationError extends Error {
+  constructor(
+    readonly defects: readonly GuildmasterValidationDefect[],
+    readonly debugAttempts: readonly { attempt: number; responseId?: string; output: string; defects: readonly GuildmasterValidationDefect[] }[] = [],
+  ) {
+    super(`Guildmaster adjudication ${debugAttempts.length > 1 ? "invalid after one bounded repair" : "invalid"}: ${formatGuildmasterDefects(defects)}`);
+    this.name = "GuildmasterAdjudicationValidationError";
+  }
+}
+
 export interface LiveAnswerAssessmentRequest {
   correlationId: string;
   questionId: string;
@@ -250,6 +262,7 @@ export async function openLocksmithDeepSeekAccess({
     },
     async adjudicateProfessions(request: LiveProfessionAdjudicationRequest): Promise<LiveProfessionAdjudicationResult> {
       let repairReason: string | undefined;
+      const debugAttempts: Array<{ attempt: number; responseId?: string; output: string; defects: readonly GuildmasterValidationDefect[] }> = [];
       for (let attempt = 0; attempt < 2; attempt++) {
         const messages = [{ role: "system", content: professionAdjudicationInstructions() }, { role: "user", content: JSON.stringify({ candidate: request.candidate, recommendation: request.recommendation }) }];
         if (repairReason) messages.push({ role: "user", content: `Your previous response violated the Guildmaster adjudication contract: ${repairReason}. Return the complete required JSON shape. Supply every substantive queue field and every decision rationale; use [] only for genuinely empty list fields. Do not invent fallback professions.` });
@@ -259,11 +272,16 @@ export async function openLocksmithDeepSeekAccess({
         });
         const payload = await response.json() as Record<string, unknown>;
         if (!response.ok) throw providerFailure("DeepSeek", response, payload);
+        const content = deepSeekContent(payload);
         try {
-          return { responseId: responseId(payload), provider: "deepseek", model, draft: parseProfessionAdjudication(deepSeekContent(payload), "DeepSeek") };
+          return { responseId: responseId(payload), provider: "deepseek", model, draft: parseProfessionAdjudication(content, "DeepSeek") };
         } catch (error) {
-          if (attempt === 1) throw new Error(`DeepSeek Guildmaster adjudication remained invalid after one bounded repair attempt: ${(error as Error).message}`);
-          repairReason = (error as Error).message;
+          const defects = error instanceof GuildmasterAdjudicationValidationError
+            ? error.defects
+            : [{ path: "$", reason: error instanceof Error ? error.message : "unknown validation failure" }];
+          debugAttempts.push({ attempt: attempt + 1, responseId: typeof payload.id === "string" ? payload.id : undefined, output: content, defects });
+          repairReason = formatGuildmasterDefects(defects);
+          if (attempt === 1) throw new GuildmasterAdjudicationValidationError(defects, debugAttempts);
         }
       }
       throw new Error("DeepSeek Guildmaster adjudication repair loop ended unexpectedly");
@@ -404,24 +422,48 @@ function parseProfessionBrainstorm(content: string, provider: string): Professio
 
 function parseProfessionAdjudication(content: string, provider: string): ProfessionAdjudicationDraft {
   let value: unknown;
-  try { value = JSON.parse(content); } catch { throw new Error(`${provider} returned invalid Guildhall adjudication JSON`); }
-  if (!value || typeof value !== "object" || Array.isArray(value)) throw new Error(`${provider} returned an invalid Guildhall adjudication`);
+  try { value = JSON.parse(content); } catch { throw new GuildmasterAdjudicationValidationError([{ path: "$", reason: `${provider} returned invalid JSON` }]); }
+  if (!value || typeof value !== "object" || Array.isArray(value)) throw new GuildmasterAdjudicationValidationError([{ path: "$", reason: "required JSON object" }]);
   const draft = value as Record<string, unknown>;
-  if (!Array.isArray(draft.decisions) || !Array.isArray(draft.queue) || !isStringArray(draft.capabilityRequirements) || !isStringArray(draft.toolOrAccessRequirements)) throw new Error(`${provider} returned an incomplete Guildhall adjudication`);
-  const decisions = draft.decisions.map((item) => {
-    if (!item || typeof item !== "object" || Array.isArray(item)) throw new Error(`${provider} returned a malformed Guildhall adjudication decision`);
+  const defects: GuildmasterValidationDefect[] = [];
+  if (!Array.isArray(draft.decisions)) defects.push({ path: "decisions", reason: "required array" });
+  if (!Array.isArray(draft.queue)) defects.push({ path: "queue", reason: "required array" });
+  if (!isStringArray(draft.capabilityRequirements)) defects.push({ path: "capabilityRequirements", reason: "required string array" });
+  if (!isStringArray(draft.toolOrAccessRequirements)) defects.push({ path: "toolOrAccessRequirements", reason: "required string array" });
+  if (defects.length) throw new GuildmasterAdjudicationValidationError(defects);
+  const rawDecisions = draft.decisions as unknown[];
+  const rawQueue = draft.queue as unknown[];
+  const decisions = rawDecisions.map((item, index) => {
+    if (!item || typeof item !== "object" || Array.isArray(item)) { defects.push({ path: `decisions[${index}]`, reason: "required object" }); return {} as ProfessionAdjudicationDraft["decisions"][number]; }
     const decision = item as Record<string, unknown>;
-    if (typeof decision.professionIdentity !== "string" || typeof decision.disposition !== "string" || typeof decision.rationale !== "string" || (decision.targetProfessionIdentity !== undefined && typeof decision.targetProfessionIdentity !== "string")) throw new Error(`${provider} returned an incomplete Guildhall adjudication decision`);
+    requireNonblankString(decision, "professionIdentity", `decisions[${index}].professionIdentity`, defects);
+    if (!new Set(["ADMIT", "CONSOLIDATE", "REJECT"]).has(String(decision.disposition))) defects.push({ path: `decisions[${index}].disposition`, reason: "required ADMIT, CONSOLIDATE, or REJECT" });
+    requireNonblankString(decision, "rationale", `decisions[${index}].rationale`, defects);
+    if (decision.targetProfessionIdentity !== undefined && typeof decision.targetProfessionIdentity !== "string") defects.push({ path: `decisions[${index}].targetProfessionIdentity`, reason: "required string when present" });
     return { professionIdentity: decision.professionIdentity, disposition: decision.disposition as ProfessionAdjudicationDraft["decisions"][number]["disposition"], targetProfessionIdentity: decision.targetProfessionIdentity as string | undefined, rationale: decision.rationale };
   });
-  const queue = draft.queue.map((item) => {
-    if (!item || typeof item !== "object" || Array.isArray(item)) throw new Error(`${provider} returned a malformed Guildhall adjudicated profession`);
+  const queue = rawQueue.map((item, index) => {
+    if (!item || typeof item !== "object" || Array.isArray(item)) { defects.push({ path: `queue[${index}]`, reason: "required object" }); return {} as ProfessionAdjudicationDraft["queue"][number]; }
     const profession = item as Record<string, unknown>;
-    if (typeof profession.position !== "number" || typeof profession.professionIdentity !== "string" || typeof profession.contribution !== "string" || typeof profession.rationale !== "string" || typeof profession.collaborationMode !== "string" || (profession.dependsOn !== undefined && !isStringArray(profession.dependsOn))) throw new Error(`${provider} returned an incomplete Guildhall adjudicated profession`);
-    if (!profession.contribution.startsWith("Professional capacity to ")) throw new Error(`${provider} phrased a Guildhall contribution as assigned mission work`);
+    if (!Number.isInteger(profession.position) || Number(profession.position) < 1) defects.push({ path: `queue[${index}].position`, reason: "required positive integer" });
+    requireNonblankString(profession, "professionIdentity", `queue[${index}].professionIdentity`, defects);
+    requireNonblankString(profession, "contribution", `queue[${index}].contribution`, defects);
+    requireNonblankString(profession, "rationale", `queue[${index}].rationale`, defects);
+    if (!new Set(["INDEPENDENT", "SEQUENTIAL", "TANDEM"]).has(String(profession.collaborationMode))) defects.push({ path: `queue[${index}].collaborationMode`, reason: "required INDEPENDENT, SEQUENTIAL, or TANDEM" });
+    if (profession.dependsOn !== undefined && !isStringArray(profession.dependsOn)) defects.push({ path: `queue[${index}].dependsOn`, reason: "required string array when present" });
+    if (typeof profession.contribution === "string" && profession.contribution.trim() && !profession.contribution.startsWith("Professional capacity to ")) defects.push({ path: `queue[${index}].contribution`, reason: "must begin with 'Professional capacity to '" });
     return { ...profession, dependsOn: profession.dependsOn === undefined ? [] : profession.dependsOn } as ProfessionAdjudicationDraft["queue"][number];
   });
+  if (defects.length) throw new GuildmasterAdjudicationValidationError(defects);
   return { decisions, queue, capabilityRequirements: draft.capabilityRequirements, toolOrAccessRequirements: draft.toolOrAccessRequirements } as ProfessionAdjudicationDraft;
+}
+
+function requireNonblankString(record: Record<string, unknown>, key: string, path: string, defects: GuildmasterValidationDefect[]): void {
+  if (typeof record[key] !== "string" || !(record[key] as string).trim()) defects.push({ path, reason: "required nonblank string" });
+}
+
+export function formatGuildmasterDefects(defects: readonly GuildmasterValidationDefect[]): string {
+  return defects.map((defect) => `${defect.path}: ${defect.reason}`).join("; ");
 }
 
 function isStringArray(value: unknown): value is string[] { return Array.isArray(value) && value.every((item) => typeof item === "string"); }

@@ -3,7 +3,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { describe, expect, it, vi } from "vitest";
 import { IsoldeSecretariatOfficer } from "../src/isolde-secretariat-officer.js";
-import { LocksmithOpenAIAccessPort, MasterMasonLiveIsoldeSession, openLocksmithDeepSeekAccess, openLocksmithLiveIsoldeAccess, openLocksmithOpenAIAccess, runLiveGuildhallAdjudication, runLiveGuildhallBrainstorm } from "../src/openai-live-isolde.js";
+import { GuildmasterAdjudicationValidationError, LocksmithOpenAIAccessPort, MasterMasonLiveIsoldeSession, openLocksmithDeepSeekAccess, openLocksmithLiveIsoldeAccess, openLocksmithOpenAIAccess, runLiveGuildhallAdjudication, runLiveGuildhallBrainstorm } from "../src/openai-live-isolde.js";
 import { RectorCastellanOfficer, RectorCognitivePort } from "../src/rector-castellan-officer.js";
 
 const noEvaluation: RectorCognitivePort = { assessMissionPredicates: () => { throw new Error("response evaluation is outside this slice"); } };
@@ -208,8 +208,36 @@ describe("DeepSeek live Isolde provider", () => {
         return new Response(JSON.stringify({ id: `incomplete-${calls}`, choices: [{ message: { content: JSON.stringify({ decisions: [], queue: [{ position: 1, professionIdentity: "Data Scientist", contribution: "Professional capacity to provide analysis.", collaborationMode: "INDEPENDENT", dependsOn: [] }], capabilityRequirements: [], toolOrAccessRequirements: [] }) } }] }), { status: 200 });
       },
     });
-    await expect(access.adjudicateProfessions!({ correlationId: "still-incomplete", candidate: {} as never, recommendation: {} as never })).rejects.toThrow("after one bounded repair attempt");
+    const failure = await access.adjudicateProfessions!({ correlationId: "still-incomplete", candidate: {} as never, recommendation: {} as never }).catch((error: unknown) => error);
+    expect(failure).toBeInstanceOf(GuildmasterAdjudicationValidationError);
+    expect((failure as GuildmasterAdjudicationValidationError).message).toContain("queue[0].rationale: required nonblank string");
+    expect((failure as GuildmasterAdjudicationValidationError).debugAttempts).toHaveLength(2);
+    expect((failure as GuildmasterAdjudicationValidationError).debugAttempts[0].responseId).toBe("incomplete-1");
+    expect(JSON.stringify(failure)).not.toContain("fixture-secret");
     expect(calls).toBe(2);
+  });
+
+  it("reports all sanitized Guildmaster field defects and uses them in the repair request", async () => {
+    const requests: Array<{ messages: Array<{ content: string }> }> = [];
+    const access = await openLocksmithDeepSeekAccess({
+      environment: { DEEPSEEK_API_KEY: "fixture-secret" },
+      fetchImplementation: async (_input, init) => {
+        requests.push(JSON.parse(String(init?.body)) as { messages: Array<{ content: string }> });
+        return new Response(JSON.stringify({ id: `defects-${requests.length}`, choices: [{ message: { content: JSON.stringify({
+          decisions: [{ professionIdentity: "", disposition: "MAYBE" }],
+          queue: [{ position: 0, professionIdentity: "Data Scientist", contribution: "collect comments", collaborationMode: "SOLO" }],
+          capabilityRequirements: [], toolOrAccessRequirements: [],
+        }) } }] }), { status: 200 });
+      },
+    });
+    const failure = await access.adjudicateProfessions!({ correlationId: "many-defects", candidate: {} as never, recommendation: {} as never }).catch((error: unknown) => error);
+    expect(failure).toBeInstanceOf(GuildmasterAdjudicationValidationError);
+    const message = (failure as Error).message;
+    expect(message).toContain("decisions[0].professionIdentity: required nonblank string");
+    expect(message).toContain("decisions[0].rationale: required nonblank string");
+    expect(message).toContain("queue[0].position: required positive integer");
+    expect(message).toContain("queue[0].contribution: must begin with 'Professional capacity to '");
+    expect(requests[1].messages.at(-1)?.content).toContain("queue[0].rationale: required nonblank string");
   });
 
   it("reports safe DeepSeek failure metadata without provider messages or credentials", async () => {
