@@ -4,6 +4,7 @@ import { stdin, stdout } from "node:process";
 import { IsoldeSecretariatOfficer } from "../src/isolde-secretariat-officer.js";
 import { MasterMasonLiveIsoldeSession, openLocksmithLiveIsoldeAccess, runLiveGuildhallAdjudication, runLiveGuildhallBrainstorm } from "../src/openai-live-isolde.js";
 import { RectorCastellanOfficer, RectorCognitivePort } from "../src/rector-castellan-officer.js";
+import { GuildhallProfessionRegistry } from "../src/profession-resolution.js";
 const initialOnly: RectorCognitivePort = { assessMissionPredicates: () => { throw new Error("live Rector assessment must enter through Locksmith's bounded provider port"); } };
 
 async function main(): Promise<void> {
@@ -27,7 +28,10 @@ async function main(): Promise<void> {
     const adjudication = await runLiveGuildhallAdjudication(access, result.candidate, guildhall.packet);
     stdout.write("Guildhall: profession adjudication complete.\n");
     stdout.write(`Adjudicated profession queue: ${JSON.stringify(adjudication.packet.payload, null, 2)}\n`);
-    stdout.write(`Audit: provider=${adjudication.provider}; model=${adjudication.model}; credential_exposed_to_isolde=false; people_selected=false; operatives_selected=false; officers_selected=false; suitability_determined=false; mission_executed=false; turns=${result.turns}\n`);
+    const resolution = new GuildhallProfessionRegistry([]).resolve(adjudication.packet);
+    stdout.write("Guildhall: profession registry resolution complete.\n");
+    stdout.write(`Profession resolution: ${JSON.stringify(resolution.payload, null, 2)}\n`);
+    stdout.write(`Audit: provider=${adjudication.provider}; model=${adjudication.model}; credential_exposed_to_isolde=false; people_selected=false; personas_selected=false; operatives_selected=false; officers_selected=false; suitability_determined=true; mission_executed=false; turns=${result.turns}\n`);
   } finally {
     prompt.close();
   }

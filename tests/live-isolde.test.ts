@@ -171,7 +171,7 @@ describe("DeepSeek live Isolde provider", () => {
       environment: { DEEPSEEK_API_KEY: "fixture-secret" },
       fetchImplementation: async () => new Response(JSON.stringify({ id: "adjudication-shape", choices: [{ message: { content: JSON.stringify({
         decisions: [{ professionIdentity: "Data Scientist", disposition: "ADMIT", targetProfessionIdentity: "Data Scientist", rationale: "Distinct analytical contribution." }],
-        queue: [{ position: 1, professionIdentity: "Data Scientist", contribution: "Provide evidence analysis.", rationale: "The mission requires ranked evidence.", collaborationMode: "INDEPENDENT" }],
+        queue: [{ position: 1, professionIdentity: "Data Scientist", contribution: "Professional capacity to provide evidence analysis.", rationale: "The mission requires ranked evidence.", collaborationMode: "INDEPENDENT" }],
         capabilityRequirements: [], toolOrAccessRequirements: [],
       }) } }] }), { status: 200 }),
     });
@@ -183,8 +183,8 @@ describe("DeepSeek live Isolde provider", () => {
     const requests: Array<Record<string, unknown>> = [];
     const base = { decisions: [{ professionIdentity: "Data Scientist", disposition: "ADMIT", targetProfessionIdentity: "Data Scientist", rationale: "Distinct contribution." }], capabilityRequirements: [], toolOrAccessRequirements: [] };
     const responses = [
-      { id: "incomplete-adjudication", choices: [{ message: { content: JSON.stringify({ ...base, queue: [{ position: 1, professionIdentity: "Data Scientist", contribution: "Provide analysis.", collaborationMode: "INDEPENDENT", dependsOn: [] }] }) } }] },
-      { id: "repaired-adjudication", choices: [{ message: { content: JSON.stringify({ ...base, queue: [{ position: 1, professionIdentity: "Data Scientist", contribution: "Provide analysis.", rationale: "The mission requires evidence analysis.", collaborationMode: "INDEPENDENT", dependsOn: [] }] }) } }] },
+      { id: "incomplete-adjudication", choices: [{ message: { content: JSON.stringify({ ...base, queue: [{ position: 1, professionIdentity: "Data Scientist", contribution: "Professional capacity to provide analysis.", collaborationMode: "INDEPENDENT", dependsOn: [] }] }) } }] },
+      { id: "repaired-adjudication", choices: [{ message: { content: JSON.stringify({ ...base, queue: [{ position: 1, professionIdentity: "Data Scientist", contribution: "Professional capacity to provide analysis.", rationale: "The mission requires evidence analysis.", collaborationMode: "INDEPENDENT", dependsOn: [] }] }) } }] },
     ];
     const access = await openLocksmithDeepSeekAccess({
       environment: { DEEPSEEK_API_KEY: "fixture-secret" },
@@ -205,7 +205,7 @@ describe("DeepSeek live Isolde provider", () => {
       environment: { DEEPSEEK_API_KEY: "fixture-secret" },
       fetchImplementation: async () => {
         calls++;
-        return new Response(JSON.stringify({ id: `incomplete-${calls}`, choices: [{ message: { content: JSON.stringify({ decisions: [], queue: [{ position: 1, professionIdentity: "Data Scientist", contribution: "Provide analysis.", collaborationMode: "INDEPENDENT", dependsOn: [] }], capabilityRequirements: [], toolOrAccessRequirements: [] }) } }] }), { status: 200 });
+        return new Response(JSON.stringify({ id: `incomplete-${calls}`, choices: [{ message: { content: JSON.stringify({ decisions: [], queue: [{ position: 1, professionIdentity: "Data Scientist", contribution: "Professional capacity to provide analysis.", collaborationMode: "INDEPENDENT", dependsOn: [] }], capabilityRequirements: [], toolOrAccessRequirements: [] }) } }] }), { status: 200 });
       },
     });
     await expect(access.adjudicateProfessions!({ correlationId: "still-incomplete", candidate: {} as never, recommendation: {} as never })).rejects.toThrow("after one bounded repair attempt");
@@ -302,8 +302,8 @@ describe("live Isolde controlled reply loop", () => {
           { professionIdentity: "Data Scientist", disposition: "ADMIT", rationale: "required ranking" },
         ],
         queue: [
-          { position: 1, professionIdentity: "Audience Researcher", contribution: "interpret statements", rationale: "audience context", collaborationMode: "INDEPENDENT", dependsOn: [] },
-          { position: 2, professionIdentity: "Data Scientist", contribution: "rank patterns", rationale: "quantification", collaborationMode: "TANDEM", dependsOn: ["Audience Researcher"] },
+          { position: 1, professionIdentity: "Audience Researcher", contribution: "Professional capacity to interpret statements", rationale: "audience context", collaborationMode: "INDEPENDENT", dependsOn: [] },
+          { position: 2, professionIdentity: "Data Scientist", contribution: "Professional capacity to rank patterns", rationale: "quantification", collaborationMode: "TANDEM", dependsOn: ["Audience Researcher"] },
         ], capabilityRequirements: ["qualitative coding"], toolOrAccessRequirements: ["YouTube Data API access"],
       } }),
     };

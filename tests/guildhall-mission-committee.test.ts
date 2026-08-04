@@ -72,8 +72,8 @@ describe("Castellan to Guildhall profession brainstorming", () => {
         { professionIdentity: "Content Analyst", disposition: "CONSOLIDATE", targetProfessionIdentity: "Qualitative Data Analyst", rationale: "duplicates thematic analysis" },
       ],
       queue: [
-        { position: 1, professionIdentity: "YouTube Comment Researcher", contribution: "collect comments", rationale: "source collection", collaborationMode: "INDEPENDENT", dependsOn: [] },
-        { position: 2, professionIdentity: "Qualitative Data Analyst", contribution: "rank themes", rationale: "thematic analysis", collaborationMode: "SEQUENTIAL", dependsOn: ["YouTube Comment Researcher"] },
+        { position: 1, professionIdentity: "YouTube Comment Researcher", contribution: "Professional capacity to collect comments", rationale: "source collection", collaborationMode: "INDEPENDENT", dependsOn: [] },
+        { position: 2, professionIdentity: "Qualitative Data Analyst", contribution: "Professional capacity to rank themes", rationale: "thematic analysis", collaborationMode: "SEQUENTIAL", dependsOn: ["YouTube Comment Researcher"] },
       ], capabilityRequirements: ["YouTube-comment sampling"], toolOrAccessRequirements: ["YouTube Data API access"],
     });
     expect(adjudicated.payload.queue.map((item) => item.professionIdentity)).toEqual(["YouTube Comment Researcher", "Qualitative Data Analyst"]);
@@ -94,14 +94,14 @@ describe("Castellan to Guildhall profession brainstorming", () => {
     ], overlaps: [], missingSpecialties: [] });
     expect(() => committee.adjudicate(mission, recommendation, {
       decisions: [{ professionIdentity: "Researcher", disposition: "ADMIT", rationale: "needed" }],
-      queue: [{ position: 1, professionIdentity: "Researcher", contribution: "collect", rationale: "needed", collaborationMode: "INDEPENDENT", dependsOn: [] }], capabilityRequirements: [], toolOrAccessRequirements: [],
+      queue: [{ position: 1, professionIdentity: "Researcher", contribution: "Professional capacity to collect", rationale: "needed", collaborationMode: "INDEPENDENT", dependsOn: [] }], capabilityRequirements: [], toolOrAccessRequirements: [],
     })).toThrow("exactly one decision");
     expect(() => committee.adjudicate(mission, recommendation, {
       decisions: [
         { professionIdentity: "Researcher", disposition: "ADMIT", rationale: "needed" },
         { professionIdentity: "Analyst", disposition: "CONSOLIDATE", targetProfessionIdentity: "Statistician", rationale: "overlap" },
       ],
-      queue: [{ position: 1, professionIdentity: "Researcher", contribution: "collect", rationale: "needed", collaborationMode: "INDEPENDENT", dependsOn: [] }], capabilityRequirements: [], toolOrAccessRequirements: [],
+      queue: [{ position: 1, professionIdentity: "Researcher", contribution: "Professional capacity to collect", rationale: "needed", collaborationMode: "INDEPENDENT", dependsOn: [] }], capabilityRequirements: [], toolOrAccessRequirements: [],
     })).toThrow("different queued profession");
   });
 });

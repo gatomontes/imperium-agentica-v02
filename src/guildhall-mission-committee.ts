@@ -206,7 +206,11 @@ function cleanDecision(value: ProfessionPossibilityDecision): ProfessionPossibil
   if (!decision.professionIdentity || !decision.rationale || !["ADMIT", "CONSOLIDATE", "REJECT"].includes(decision.disposition)) throw new Error("each Guildhall adjudication decision requires a profession, disposition, and rationale");
   return decision;
 }
-function cleanQueueItem(value: AdjudicatedProfessionQueueItem): AdjudicatedProfessionQueueItem { return { ...cleanPossibility(value), position: value.position }; }
+function cleanQueueItem(value: AdjudicatedProfessionQueueItem): AdjudicatedProfessionQueueItem {
+  const item = { ...cleanPossibility(value), position: value.position };
+  if (!item.contribution.startsWith("Professional capacity to ")) throw new Error("Guildmaster contributions must describe professional capacity rather than assign mission work");
+  return item;
+}
 function normalizeIdentity(value: string): string { return value.trim().toLowerCase(); }
 function cleanList(values: string[]): string[] { return [...new Set(values.map((value) => value.trim()).filter(Boolean))]; }
 function ref(value: { identity: string; version: number }): string { return value.identity + "@" + value.version; }
