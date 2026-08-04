@@ -26,7 +26,9 @@ A Saint is not treated as morally perfect, universally exemplary, or worthy of i
 
 A Saint is a real person whose demonstrated performance provides evidence for one or more traits relevant to persona construction.
 
-Hagiography supplies Foundry with evidenced human traits from which canonical professional personas may be built.
+Hagiography supplies Foundry with a supervised, evidence-backed research packet from which a professional persona candidate may be built.
+
+The **Sanctographer** is Hagiography's resident cognitive supervisor. **Chroniclers** are its bounded research workers.
 
 ---
 
@@ -64,6 +66,22 @@ The whole person is never imported as the persona.
 
 ---
 
+## Internal structure
+
+The Sanctographer receives and interprets the Artificer's research commission, scopes and directs the Chroniclers' work, verifies the collected material, and determines whether it is relevant, sufficiently supported, and compliant with the commission.
+
+Chroniclers research exemplars, accomplishments, demonstrated methods, profession-relevant attributes, and supporting evidence. They report findings and uncertainty to the Sanctographer; they do not authenticate the packet, canonize a persona, or hand research directly to Foundry.
+
+If the collected material is inadequate, the Sanctographer rejects it or redirects the Chroniclers. Once acceptable, the Sanctographer synthesizes the findings, limitations, conflicts, provenance, and open questions into the authoritative Hagiography Research Packet, authenticates it, and returns it to the Artificer.
+
+```text
+Artificer commissions Hagiography → Sanctographer directs Chroniclers → Chroniclers collect evidence → Sanctographer verifies and compiles → Sanctographer returns packet to Artificer
+```
+
+The Sanctographer determines whether the research is acceptable. The Sanctographer does not determine whether the eventual persona candidate is acceptable.
+
+---
+
 ## Responsibilities
 
 Hagiography may:
@@ -82,9 +100,9 @@ Hagiography may:
 
 ## Product
 
-Hagiography may produce a provisional `Human-Trait Canon`.
+Hagiography produces a Sanctographer-authenticated `Hagiography Research Packet` for the active Foundry queue item.
 
-A Human-Trait Canon may include:
+A Hagiography Research Packet may include:
 
 ```text
 Applicable profession or persona:
@@ -103,7 +121,7 @@ Failure signals:
 Open questions:
 ```
 
-Canonization means the trait has sufficient evidence and relevance to become a deliberate persona-construction input.
+Acceptance means the Sanctographer has determined that the research is sufficiently evidenced, relevant, and compliant with the Artificer's commission to become a deliberate persona-construction input.
 
 It does not declare the Saint infallible or the trait universally desirable.
 
@@ -135,9 +153,9 @@ Neither substitutes for the other.
 
 ## Relationship To Foundry
 
-Hagiography supplies the Human-Trait Canon used by Foundry during persona construction.
+Hagiography supplies the Sanctographer-authenticated Hagiography Research Packet used by Foundry during persona construction.
 
-Foundry embodies the applicable traits together with the profession specification and Persona Governance Doctrine.
+Artificer receives the completed packet and does not reperform or supervise Hagiography's research. Foundry embodies applicable evidenced traits together with the admitted profession determination, operator requirements, mission context, and Persona Governance Doctrine.
 
 Foundry may return traits that prove incoherent, non-operable, performative, or professionally harmful when embodied.
 
@@ -170,6 +188,8 @@ Hagiography does not run the test or admit the persona.
 Hagiography must not:
 
 - treat fame, status, reputation, or mythology as performance evidence
+- allow Chroniclers to authenticate or hand research directly to Foundry
+- treat Sanctographer acceptance of research as acceptance of the eventual persona candidate
 - canonize a person in full
 - treat high performance as moral perfection
 - import identity, biography, or personal claims into a persona
@@ -185,8 +205,9 @@ Hagiography must not:
 
 ```text
 Saints are evidenced sources, not perfect beings.
-Hagiography canonizes transferable traits, not whole people.
-Foundry forges the persona from profession, doctrine, and canon.
+Chroniclers collect; Sanctographer verifies, compiles, and authenticates.
+Hagiography supplies evidenced attributes, not a persona recommendation.
+Foundry forges the persona from admitted profession determination, requirements, doctrine, and research.
 Pit tests what was inherited.
 ```
 
