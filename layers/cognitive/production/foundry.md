@@ -10,23 +10,33 @@ Admission: `Production Admission Review 003`.
 
 Evidence: `Constitutional Test Run 015 — 30 PASS / 0 FAIL`.
 
-Foundry integrates governed professional inputs into a deployment-medium-agnostic Persona Specification Candidate. Its forging process is governed by the Artificer and organized into bounded functional stations, or chambers. When a station requires bounded cognitive labor, an Artisan performs that work.
+Foundry assembles governed professional inputs into a deployment-medium-agnostic Persona Candidate. Its construction process is governed by the Artificer and organized through bounded functional stations, or chambers.
 
 ## Station model
 
-Foundry is an office, not a single undifferentiated action. The **Artificer** is Foundry's resident cognitive foreman and orchestrator. The Artificer owns the production case, creates and preserves the profession queue from the Guildmaster-admitted determination received through Castellan, commissions required upstream work, governs each candidate packet's passage through bounded stations, requests rework, preserves coherence, and authenticates the assembled result. The Artificer must preserve the admitted order and may not independently add, remove, or reprioritize professions.
+Foundry is an office, not a single undifferentiated action. The **Artificer** is Foundry's resident cognitive foreman, orchestrator, and default persona assembler. The Artificer owns the production case, creates and preserves the profession queue from the Guildmaster-admitted determination received through Castellan, commissions required upstream work, governs each candidate's passage through bounded stations, requests rework, preserves coherence, populates the exact versioned Persona Template, and authenticates the assembled result. The Artificer must preserve the admitted order and may not independently add, remove, or reprioritize professions.
 
-Each station is a functional part of Foundry, not an independent office. A station that requires bounded cognitive labor may be occupied by an **Artisan** assigned to that work. Artisans are workers, not foremen, officers, or authorities. A station does not require an Artisan when deterministic Runtime mechanisms can perform its work without judgment.
+Each station is a functional part of Foundry, not an independent office. Deterministic Runtime mechanisms may perform work that requires no judgment. An **Artisan** is not an assumed member of the production line. Artisans may be introduced only if a later, explicit necessity finding identifies bounded cognitive work that should not remain with the Artificer. Until then, the Artificer performs the cognitive assembly.
 
 The production case begins:
 
 ```text
-Castellan → Artificer → Profession Queue → first profession → Hagiography → research packet → Artificer
+Castellan → Artificer → Profession Queue → first profession → Hagiography → Hagiography Research Packet → Artificer
 ```
 
-For each queue item, the Artificer commissions Hagiography to research profession-relevant exemplars, demonstrated accomplishments, methods, and evidenced attributes. Hagiography's Sanctographer directs the Chroniclers, verifies their collected material, compiles the acceptable evidence, and returns an authenticated Hagiography Research Packet to the Artificer. Hagiography does not forge or recommend the persona. Queue advancement and all later forging stages remain governed by the Artificer.
+For each queue item, the Artificer commissions Hagiography to research profession-relevant exemplars, demonstrated accomplishments, methods, and evidenced attributes. Hagiography's Sanctographer directs the Chroniclers, verifies their collected material, compiles the acceptable evidence, and returns an authenticated Hagiography Research Packet to the Artificer. Hagiography does not forge or recommend the persona.
 
-The existing chamber production line is:
+After receiving the packet, the Artificer obtains the exact active version of the tagged Persona Template and begins populating a Persona Candidate from:
+
+- Castellan's Foundry entry packet and operator requirements
+- the Guildmaster-admitted Profession Determination Packet
+- the Sanctographer-authenticated Hagiography Research Packet
+- applicable Persona Governance Doctrine from Studium when commissioned
+- authorized reusable persona patterns, if any
+
+The tagged template defines the required anatomy of the Persona Candidate. It does not supply generic personality content, preselect attributes, or substitute for evidence. The Artificer may select, reconcile, and synthesize supported material, but may not invent unsupported attributes or silently alter upstream requirements.
+
+The chamber production line is:
 
 ```text
 Artificer → Receiving → Confluence → Temperance → Specification → Provenance → Dispatch → Pit
@@ -35,15 +45,33 @@ Artificer → Receiving → Confluence → Temperance → Specification → Prov
 The stations are:
 
 - **Receiving:** accepts and verifies Castellan's Foundry entry packet, including the exact Guildmaster-admitted Profession Determination Packet, Work Specification, operator requirements, and relevant mission context.
-- **Confluence:** integrates profession, exemplar material, doctrine, traits, methods, duties, limits, and required persona characteristics.
+- **Confluence:** maps the exact construction inputs into the applicable tagged Persona Template.
 - **Temperance:** identifies and resolves permitted conflicts, excesses, omissions, and tensions without weakening upstream authority.
-- **Specification:** composes the coherent, testable Persona Specification Candidate.
-- **Provenance:** preserves lineage for consequential features, transformations, decisions, and unresolved tensions.
-- **Dispatch:** verifies completeness and releases the candidate to Pit.
+- **Specification:** completes a coherent, testable Persona Candidate in the tagged template.
+- **Provenance:** preserves lineage for consequential features, transformations, decisions, unresolved tensions, and every exact upstream artifact version.
+- **Dispatch:** verifies template completeness and releases the candidate to Pit.
 
-Chambers are functions, not officers or independent authorities. Deterministic Runtime mechanisms may perform schema validation, formatting, versioning, and record linkage. Artisans perform only the bounded intelligent work that a chamber actually requires.
+Chambers are functions, not officers or independent authorities. Deterministic Runtime mechanisms may perform schema validation, formatting, versioning, digest calculation, and record linkage. Their operation does not create or justify an Artisan.
 
-The Artificer may return unresolved defects to the responsible upstream authority. The Artificer governs the passage and authenticates the result; the Artificer does not replace necessary Artisans or absorb their bounded specialist work.
+The Artificer may return unresolved defects to the responsible upstream authority. The Artificer governs the passage and authenticates the result; authentication means that the candidate is complete enough to leave Foundry, not that it has been admitted as a Persona.
+
+## Persona Template
+
+The Persona Template is a stable, versioned Markdown artifact whose structured tags form Foundry's machine-readable construction schema.
+
+The template:
+
+- defines mandatory tagged fields and their permitted multiplicity
+- is identified by exact version and SHA-256 digest
+- is immutable once used by a dispatched candidate
+- may be superseded only by a new version
+- contains no profession-specific or mission-specific persona content
+- must be populated only from attributable construction inputs
+- must remain distinguishable from both a Persona Candidate and an admitted Persona
+
+A Persona Candidate must fingerprint the exact Persona Template and exact upstream artifact versions used to assemble it. Missing required tags, malformed nesting, unsupported content, or broken lineage are dispatch defects.
+
+The active template artifact is `persona-template.md`.
 
 ## Inputs
 
@@ -52,22 +80,26 @@ The Artificer may return unresolved defects to the responsible upstream authorit
 - approved Work Specification
 - operator requirements and relevant mission context
 - Sanctographer-authenticated Hagiography Research Packet for the active queue item
-- Persona Governance Doctrine when the later forging stage requires it
-- authorized reusable persona patterns
+- Persona Governance Doctrine when commissioned
+- authorized reusable persona patterns, if any
+- exact active Persona Template version and digest
 
 ## Product
 
-The Persona Specification Candidate makes testable:
+Foundry produces a tagged `Persona Candidate`.
 
-- professional competence
-- reasoning and evidence behavior
+The candidate makes testable:
+
+- role and professional mandate
+- evidence-backed identity and attributes
+- methods, reasoning, and evidence behavior
 - communication behavior
-- governance and refusal boundaries
-- tool-use expectations without granting tools
+- governance, refusal, and escalation boundaries
 - expected inputs and outputs
-- uncertainty and escalation duties
 - acceptance criteria
-- exact upstream versions
+- exact template and upstream provenance
+
+The candidate is neither an admitted Persona nor an agent definition.
 
 ## Revision
 
@@ -75,7 +107,7 @@ Foundry may return conflicts to Castellan, Guildhall, Studium, or Hagiography.
 
 It does not silently repair an upstream authority or evidence defect.
 
-Pit findings may return the candidate for a new version.
+Pit findings may return the candidate for a new immutable version.
 
 ## Non-Authority
 
@@ -86,19 +118,21 @@ Foundry must not:
 - author missing governance
 - canonize traits
 - impersonate a source human
+- populate unsupported persona content
+- alter the tagged Persona Template within a production case
 - admit its own candidate
-- produce a platform-specific operative
+- produce an agent definition or platform-specific operative
 - grant tools, credentials, mission authority, or deployment
-- mutate an admitted Canonical Persona in place
+- mutate an admitted Persona in place
 
 ## Artificer–Artisan boundary
 
 ```text
-The Artificer governs and orchestrates the production case.
-Artisans perform necessary bounded chamber work.
+The Artificer governs, orchestrates, and performs the present cognitive assembly.
 Runtime mechanisms perform deterministic work.
+Artisans do not participate unless later necessity is explicitly established.
 Pit tests the candidate.
-Guildhall admits, recycles, or discards.
+The admission authority remains outside Foundry.
 ```
 
 The Artificer must not construct Officers; that responsibility belongs to Smith. Smith must not govern Foundry persona production.
@@ -111,6 +145,7 @@ Guildmaster admits the determination.
 Castellan hands the admitted packet to Foundry.
 Artificer creates and preserves the production queue.
 Hagiography supplies evidence; it does not forge.
-Foundry integrates.
-Pit tests.
+The tagged Persona Template defines required anatomy; it does not supply content.
+Artificer assembles the Persona Candidate.
+Pit tests the candidate.
 ```

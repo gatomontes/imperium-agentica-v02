@@ -135,7 +135,7 @@ The persona may inherit traits from multiple Saints.
 
 It must not impersonate, reproduce, or claim the identity of any source human.
 
-Its traits remain bounded by the Guildhall profession specification and Studium governance doctrine.
+Its traits remain bounded by the Guildmaster-admitted Profession Determination Packet and applicable Studium Persona Governance Doctrine.
 
 ---
 
