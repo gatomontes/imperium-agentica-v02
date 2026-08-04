@@ -68,6 +68,20 @@ describe("OpenAI live Isolde one-question slice", () => {
     await session.runOneQuestion("operator@1", "Build mission", "live-no-tools");
     expect(fakeFetch).toHaveBeenCalledOnce();
   });
+
+  it("allows one bounded OpenAI repair for invalid Guildmaster contribution phrasing", async () => {
+    let calls = 0;
+    const base = { decisions: [{ professionIdentity: "Data Scientist", disposition: "ADMIT", targetProfessionIdentity: "Data Scientist", rationale: "distinct contribution" }], capabilityRequirements: [], toolOrAccessRequirements: [] };
+    const fetchImplementation = async () => {
+      calls++;
+      const contribution = calls === 1 ? "Collect and analyze comments." : "Professional capacity to collect and analyze comments.";
+      return providerResponse("unused", { id: `openai-adjudication-${calls}`, output: [{ type: "message", content: [{ type: "output_text", text: JSON.stringify({ ...base, queue: [{ position: 1, professionIdentity: "Data Scientist", contribution, rationale: "evidence analysis", collaborationMode: "INDEPENDENT", dependsOn: [] }] }) }] }] });
+    };
+    const access = await openLocksmithOpenAIAccess({ environment: { OPENAI_API_KEY: "fixture-secret" }, fetchImplementation });
+    const result = await access.adjudicateProfessions!({ correlationId: "openai-repair", candidate: {} as never, recommendation: {} as never });
+    expect(calls).toBe(2);
+    expect(result.responseId).toBe("openai-adjudication-2");
+  });
 });
 
 describe("DeepSeek live Isolde provider", () => {

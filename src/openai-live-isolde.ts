@@ -169,14 +169,26 @@ export async function openLocksmithOpenAIAccess({
       return { responseId: responseId(payload), provider: "openai", model, draft: parseProfessionBrainstorm(extractOutputText(payload), "OpenAI") };
     },
     async adjudicateProfessions(request: LiveProfessionAdjudicationRequest): Promise<LiveProfessionAdjudicationResult> {
-      const response = await fetchImplementation("https://api.openai.com/v1/responses", {
-        method: "POST", headers: { Authorization: `Bearer ${credential}`, "Content-Type": "application/json" },
-        body: JSON.stringify({ model, store: false, max_output_tokens: 2400, instructions: professionAdjudicationInstructions(), input: JSON.stringify({ candidate: request.candidate, recommendation: request.recommendation }), text: { format: { type: "json_schema", name: "guildhall_profession_adjudication", strict: true, schema: professionAdjudicationSchema() } } }),
-      });
-      const payload = await response.json() as Record<string, unknown>;
-      if (!response.ok) throw providerFailure("OpenAI", response, payload);
-      if (payload.status !== "completed") throw new Error("OpenAI Guildhall adjudication did not complete");
-      return { responseId: responseId(payload), provider: "openai", model, draft: parseProfessionAdjudication(extractOutputText(payload), "OpenAI") };
+      let repairReason: string | undefined;
+      const attempts: { attempt: number; responseId?: string; output: string; defects: readonly GuildmasterValidationDefect[] }[] = [];
+      for (let attempt = 0; attempt < 2; attempt++) {
+        const response = await fetchImplementation("https://api.openai.com/v1/responses", {
+          method: "POST", headers: { Authorization: `Bearer ${credential}`, "Content-Type": "application/json" },
+          body: JSON.stringify({ model, store: false, max_output_tokens: 2400, instructions: professionAdjudicationInstructions() + (repairReason ? ` Your previous response violated the contract: ${repairReason}. Repair every listed defect.` : ""), input: JSON.stringify({ candidate: request.candidate, recommendation: request.recommendation }), text: { format: { type: "json_schema", name: "guildhall_profession_adjudication", strict: true, schema: professionAdjudicationSchema() } } }),
+        });
+        const payload = await response.json() as Record<string, unknown>;
+        if (!response.ok) throw providerFailure("OpenAI", response, payload);
+        if (payload.status !== "completed") throw new Error("OpenAI Guildhall adjudication did not complete");
+        const output = extractOutputText(payload);
+        try { return { responseId: responseId(payload), provider: "openai", model, draft: parseProfessionAdjudication(output, "OpenAI") }; }
+        catch (error) {
+          if (!(error instanceof GuildmasterAdjudicationValidationError)) throw error;
+          attempts.push({ attempt: attempt + 1, responseId: typeof payload.id === "string" ? payload.id : undefined, output, defects: error.defects });
+          if (attempt === 1) throw new GuildmasterAdjudicationValidationError(error.defects, attempts);
+          repairReason = formatGuildmasterDefects(error.defects);
+        }
+      }
+      throw new Error("OpenAI Guildmaster adjudication repair loop ended unexpectedly");
     },
   });
 }

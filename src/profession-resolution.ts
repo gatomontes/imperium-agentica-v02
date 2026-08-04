@@ -63,7 +63,7 @@ function assertAdjudicatedQueue(queue: ArtifactEnvelope<ProfessionAdjudicationPa
 }
 
 function isAdmittedMatch(candidate: ArtifactEnvelope<ProfessionSpecification>, professionIdentity: string): boolean {
-  return candidate.artifactType === "ProfessionSpecification" && candidate.producer === "Guildhall" && candidate.status === "CURRENT" && candidate.payload.finding === "PROFESSION_CONFORMANT" && candidate.payload.admissionState === "ADMITTED" && candidate.payload.admissionAuthorityRef === ref(ADMITTED_GUILDMASTER_AGENT) && normalize(candidate.payload.professionIdentity) === normalize(professionIdentity);
+  return candidate.artifactType === "ProfessionSpecification" && candidate.producer === "Guildhall" && candidate.status === "CURRENT" && candidate.payload.finding === "PROFESSION_CONFORMANT" && candidate.payload.admissionState === "ADMITTED" && candidate.payload.admissionAuthorityRef === ref(ADMITTED_GUILDMASTER_AGENT) && candidate.payload.reuseScope === "PROFESSION_WIDE" && normalize(candidate.payload.professionIdentity) === normalize(professionIdentity);
 }
 
 function canonical(value: unknown): string {

@@ -21,7 +21,7 @@ function profession(identity: string) {
   const candidate = createArtifact<ProfessionSpecification>("ProfessionSpecification", "Guildhall", "profession-catalogue", {
     professionIdentity: identity, requiredCompetence: ["domain competence"], practiceBoundaries: ["remain within domain"], suitabilityCriteria: ["demonstrated competence"], workSpecificationRef: "originating-work@1", finding: "PROFESSION_CONFORMANT",
   }, ["originating-work@1"], { identityFactory: () => `profession-${identity.toLowerCase().replaceAll(" ", "-")}` });
-  return { ...candidate, version: 2, supersedes: `${candidate.identity}@1`, payload: { ...candidate.payload, admissionState: "ADMITTED" as const, admissionAuthorityRef: guildmasterRef }, sourceRefs: [...candidate.sourceRefs, `${candidate.identity}@1`, guildmasterRef] };
+  return { ...candidate, version: 2, supersedes: `${candidate.identity}@1`, payload: { ...candidate.payload, admissionState: "ADMITTED" as const, admissionAuthorityRef: guildmasterRef, reuseScope: "PROFESSION_WIDE" as const }, sourceRefs: [...candidate.sourceRefs, `${candidate.identity}@1`, guildmasterRef] };
 }
 
 describe("Guildhall profession resolution", () => {
@@ -46,6 +46,13 @@ describe("Guildhall profession resolution", () => {
     const admitted = profession("Data Scientist");
     const candidate = { ...admitted, version: 1, supersedes: undefined, payload: { ...admitted.payload, admissionState: "CANDIDATE" as const, admissionAuthorityRef: undefined } };
     const result = new GuildhallProfessionRegistry([candidate]).resolve(queue("Data Scientist"));
+    expect(result.payload.items[0].disposition).toBe("PROFSPEC_CREATION_REQUIRED");
+  });
+
+  it("does not reuse a mission-scoped specification merely because its profession name matches", () => {
+    const base = profession("Data Scientist");
+    const admitted = { ...base, payload: { ...base.payload, reuseScope: "MISSION_SCOPED" as const, professionQueueRef: "different-mission-queue@1" } };
+    const result = new GuildhallProfessionRegistry([admitted]).resolve(queue("Data Scientist"));
     expect(result.payload.items[0].disposition).toBe("PROFSPEC_CREATION_REQUIRED");
   });
 
