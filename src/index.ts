@@ -8,6 +8,7 @@ export * from "./foundry.js";
 export * from "./garrison.js";
 export * from "./guildhall.js";
 export * from "./guildhall-mission-committee.js";
+export * from "./guildhall-committee-members.js";
 export * from "./profession-resolution.js";
 export * from "./hagiography.js";
 export * from "./http-handler.js";
