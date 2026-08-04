@@ -14,11 +14,19 @@ Foundry integrates governed professional inputs into a deployment-medium-agnosti
 
 ## Station model
 
-Foundry is an office, not a single undifferentiated action. The **Artificer** is Foundry's resident cognitive foreman and orchestrator. The Artificer owns the production case, preserves the profession queue received through Castellan, commissions required upstream work, governs each candidate packet's passage through bounded stations, requests rework, preserves coherence, and authenticates the assembled result.
+Foundry is an office, not a single undifferentiated action. The **Artificer** is Foundry's resident cognitive foreman and orchestrator. The Artificer owns the production case, creates and preserves the profession queue from the Guildmaster-admitted determination received through Castellan, commissions required upstream work, governs each candidate packet's passage through bounded stations, requests rework, preserves coherence, and authenticates the assembled result. The Artificer must preserve the admitted order and may not independently add, remove, or reprioritize professions.
 
 Each station is a functional part of Foundry, not an independent office. A station that requires bounded cognitive labor may be occupied by an **Artisan** assigned to that work. Artisans are workers, not foremen, officers, or authorities. A station does not require an Artisan when deterministic Runtime mechanisms can perform its work without judgment.
 
-The production line is:
+The production case begins:
+
+```text
+Castellan → Artificer → Profession Queue → first profession → Hagiography → research packet → Artificer
+```
+
+For each queue item, the Artificer commissions Hagiography to research profession-relevant exemplars, demonstrated accomplishments, methods, and evidenced attributes. Hagiography returns an evidence-backed research packet to Foundry; it does not forge or recommend the persona. Queue advancement and all later forging stages remain governed by the Artificer.
+
+The existing chamber production line is:
 
 ```text
 Artificer → Receiving → Confluence → Temperance → Specification → Provenance → Dispatch → Pit
@@ -26,7 +34,7 @@ Artificer → Receiving → Confluence → Temperance → Specification → Prov
 
 The stations are:
 
-- **Receiving:** accepts and verifies the approved Foundry entry packet and post-approval Studium doctrinal packet.
+- **Receiving:** accepts and verifies Castellan's Foundry entry packet, including the exact Guildmaster-admitted Profession Determination Packet, Work Specification, operator requirements, and relevant mission context.
 - **Confluence:** integrates profession, exemplar material, doctrine, traits, methods, duties, limits, and required persona characteristics.
 - **Temperance:** identifies and resolves permitted conflicts, excesses, omissions, and tensions without weakening upstream authority.
 - **Specification:** composes the coherent, testable Persona Specification Candidate.
@@ -39,11 +47,13 @@ The Artificer may return unresolved defects to the responsible upstream authorit
 
 ## Inputs
 
-- Work Specification
-- Profession Specification
-- Persona Governance Doctrine
-- Human-Trait Canon when applicable
-- authorized reusable persona patterns and operator constraints
+- Castellan Foundry entry packet
+- Guildmaster-admitted Profession Determination Packet
+- approved Work Specification
+- operator requirements and relevant mission context
+- Hagiography research packet for the active queue item
+- Persona Governance Doctrine when the later forging stage requires it
+- authorized reusable persona patterns
 
 ## Product
 
@@ -71,7 +81,8 @@ Pit findings may return the candidate for a new version.
 
 Foundry must not:
 
-- define the profession
+- determine, add, remove, or reorder required professions
+- treat Guildhall's determination as a completed Profession Specification
 - author missing governance
 - canonize traits
 - impersonate a source human
@@ -95,9 +106,11 @@ The Artificer must not construct Officers; that responsibility belongs to Smith.
 ## Boundary Maxim
 
 ```text
-Guildhall specifies profession.
-Studium governs.
-Hagiography supplies evidenced traits.
+Guildhall determines required professions and order.
+Guildmaster admits the determination.
+Castellan hands the admitted packet to Foundry.
+Artificer creates and preserves the production queue.
+Hagiography supplies evidence; it does not forge.
 Foundry integrates.
 Pit tests.
 ```
