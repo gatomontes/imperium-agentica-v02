@@ -419,3 +419,53 @@ checkpoint is to rerun `npm run live:isolde` and inspect the Guildmaster-approve
 profession queue and its professional-contribution wording. If conformant, the
 next Guildhall increment converts the approved queue into the existing ordered
 profession-resolution path without selecting people or beginning execution.
+
+## New-Chat Breakpoint — Sequential Profession Specification Creation
+
+The governed Guildhall committee is merged through PR #223
+(`4228e1e`) and has passed its live checkpoint. Three separately versioned,
+individually attributable committee members recommend; Guildmaster alone
+adjudicates suitability and queue order.
+
+The live profession-resolution result contains seven ordered
+`PROFSPEC_CREATION_REQUIRED` entries because Guildhall has no admitted,
+reusable `PROFESSION_WIDE` Profession Specification for:
+
+1. Certified Public Accountant
+2. Internal Auditor
+3. Forensic Accountant
+4. Data Analyst
+5. Compliance Officer
+6. Tax Advisor
+7. Legal Counsel
+
+### Selected next leg
+
+Begin sequential Profession Specification creation with **Certified Public
+Accountant**. For each queue position:
+
+1. Forge a profession-wide candidate specification; do not encode this
+   mission's tasks as the profession itself.
+2. Run the existing conformance review.
+3. Require explicit Guildmaster admission; conformance alone is insufficient.
+4. Record the exact admitted artifact version and SHA-256 digest.
+5. Advance to the next queue position only after admission or stop at a
+   concrete defect/decision.
+
+Preserve these boundaries:
+
+- Profession Specification admission does not imply Persona admission.
+- Persona admission does not imply an available or mission-authorized
+  Operative.
+- A future Persona must fingerprint the exact admitted Profession
+  Specification; a future Operative must fingerprint the exact admitted
+  Persona.
+- Do not query Garrison, create Personas, recruit Operatives, select tools or
+  credentials, or execute the mission during this leg.
+- Guildhall committee members recommend only; Guildmaster alone adjudicates
+  suitability and admits conformant Profession Specifications.
+
+Verification baseline before this breakpoint: the governed-committee focused
+suite passed 30/30; the repository full suite remained at 249 passing with only
+the inherited `petition-source-001` transport-correlation failure.
+
