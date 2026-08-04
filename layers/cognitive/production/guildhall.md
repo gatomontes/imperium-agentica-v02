@@ -10,12 +10,12 @@ Admission: `Production Admission Review 003`.
 
 Evidence: `Constitutional Test Run 015 — 30 PASS / 0 FAIL`.
 
-Guildhall determines the legitimate professional pattern required by a Work Specification.
+Guildhall determines which legitimate profession or professions a Work Specification requires, and their necessary order when more than one is required.
 
 ## Core Question
 
 ```text
-What profession can legitimately perform this work, under what competence and limits?
+Which profession or professions are required to perform this work legitimately, why is each required, where are their boundaries, and in what order must they be resolved?
 ```
 
 ## Inputs
@@ -26,19 +26,16 @@ What profession can legitimately perform this work, under what competence and li
 
 ## Product
 
-Guildhall produces a versioned Profession Specification containing:
+Guildhall produces a versioned Profession Determination Packet containing:
 
-- profession identity
-- required competence
-- legitimate practice boundaries
-- adjacent and excluded professions
-- evidence and escalation expectations
-- applicable professional risks
-- suitability criteria for Garrison search
+- each required profession
+- why each profession is necessary
+- the boundary between adjacent professions
+- exclusions and category-error findings
+- the admitted resolution order when more than one profession is required
+- unresolved professional-fit questions, if any
 
-Guildhall then searches Garrison for a suitable admitted Canonical Persona by the resolved profession.
-
-If none exists, it refers the Profession Specification into the persona-production path.
+The Guildmaster alone admits or rejects the committee's determination and queue order. Guildhall returns the admitted Profession Determination Packet to Castellan. Guildhall does not write a Profession Specification, search Garrison, or initiate persona production.
 
 ## Non-Authority
 
@@ -47,7 +44,10 @@ Guildhall must not:
 - infer profession from tone or style alone
 - author Persona Governance Doctrine
 - canonize human traits
+- write a Profession Specification
 - forge or test a persona
+- search Garrison
+- initiate persona production
 - recruit or deploy an operative
 - rewrite the Work Specification
 - select mission tools or access
@@ -56,6 +56,7 @@ Guildhall must not:
 
 ```text
 Castellan specifies the work.
-Guildhall specifies the profession.
-Garrison answers whether a suitable persona already exists.
+Guildhall determines the required profession or professions.
+Guildmaster admits the determination.
+Castellan routes the admitted determination onward.
 ```
