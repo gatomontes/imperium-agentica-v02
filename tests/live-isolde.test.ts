@@ -166,6 +166,52 @@ describe("DeepSeek live Isolde provider", () => {
     expect(calls).toBe(2);
   });
 
+  it("normalizes an omitted empty dependency list in Guildmaster adjudication", async () => {
+    const access = await openLocksmithDeepSeekAccess({
+      environment: { DEEPSEEK_API_KEY: "fixture-secret" },
+      fetchImplementation: async () => new Response(JSON.stringify({ id: "adjudication-shape", choices: [{ message: { content: JSON.stringify({
+        decisions: [{ professionIdentity: "Data Scientist", disposition: "ADMIT", targetProfessionIdentity: "Data Scientist", rationale: "Distinct analytical contribution." }],
+        queue: [{ position: 1, professionIdentity: "Data Scientist", contribution: "Provide evidence analysis.", rationale: "The mission requires ranked evidence.", collaborationMode: "INDEPENDENT" }],
+        capabilityRequirements: [], toolOrAccessRequirements: [],
+      }) } }] }), { status: 200 }),
+    });
+    const result = await access.adjudicateProfessions!({ correlationId: "adjudication-shape", candidate: {} as never, recommendation: {} as never });
+    expect(result.draft.queue[0].dependsOn).toEqual([]);
+  });
+
+  it("allows one bounded repair when DeepSeek omits a substantive adjudication field", async () => {
+    const requests: Array<Record<string, unknown>> = [];
+    const base = { decisions: [{ professionIdentity: "Data Scientist", disposition: "ADMIT", targetProfessionIdentity: "Data Scientist", rationale: "Distinct contribution." }], capabilityRequirements: [], toolOrAccessRequirements: [] };
+    const responses = [
+      { id: "incomplete-adjudication", choices: [{ message: { content: JSON.stringify({ ...base, queue: [{ position: 1, professionIdentity: "Data Scientist", contribution: "Provide analysis.", collaborationMode: "INDEPENDENT", dependsOn: [] }] }) } }] },
+      { id: "repaired-adjudication", choices: [{ message: { content: JSON.stringify({ ...base, queue: [{ position: 1, professionIdentity: "Data Scientist", contribution: "Provide analysis.", rationale: "The mission requires evidence analysis.", collaborationMode: "INDEPENDENT", dependsOn: [] }] }) } }] },
+    ];
+    const access = await openLocksmithDeepSeekAccess({
+      environment: { DEEPSEEK_API_KEY: "fixture-secret" },
+      fetchImplementation: async (_input, init) => {
+        requests.push(JSON.parse(String(init?.body)) as Record<string, unknown>);
+        return new Response(JSON.stringify(responses.shift()), { status: 200 });
+      },
+    });
+    const result = await access.adjudicateProfessions!({ correlationId: "repair-adjudication", candidate: {} as never, recommendation: {} as never });
+    expect(result.responseId).toBe("repaired-adjudication");
+    expect(requests).toHaveLength(2);
+    expect(JSON.stringify(requests[1])).toContain("previous response violated the Guildmaster adjudication contract");
+  });
+
+  it("rejects a second incomplete Guildmaster adjudication without manufacturing content", async () => {
+    let calls = 0;
+    const access = await openLocksmithDeepSeekAccess({
+      environment: { DEEPSEEK_API_KEY: "fixture-secret" },
+      fetchImplementation: async () => {
+        calls++;
+        return new Response(JSON.stringify({ id: `incomplete-${calls}`, choices: [{ message: { content: JSON.stringify({ decisions: [], queue: [{ position: 1, professionIdentity: "Data Scientist", contribution: "Provide analysis.", collaborationMode: "INDEPENDENT", dependsOn: [] }], capabilityRequirements: [], toolOrAccessRequirements: [] }) } }] }), { status: 200 });
+      },
+    });
+    await expect(access.adjudicateProfessions!({ correlationId: "still-incomplete", candidate: {} as never, recommendation: {} as never })).rejects.toThrow("after one bounded repair attempt");
+    expect(calls).toBe(2);
+  });
+
   it("reports safe DeepSeek failure metadata without provider messages or credentials", async () => {
     const access = await openLocksmithDeepSeekAccess({
       environment: { DEEPSEEK_API_KEY: "fixture-secret" },
