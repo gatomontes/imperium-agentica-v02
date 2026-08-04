@@ -446,3 +446,41 @@ Resident Officer Contract, Office Profile, and Resident Agent Definition.
 Successful adjudication is Guildmaster-produced and records professional
 suitability as determined. Castellan and Rector retain no professional-
 suitability authority.
+
+## Governed Guildhall Committee and Live Profession Resolution Checkpoint
+
+PR #223, merged as `4228e1e`, replaces Guildhall's former collective
+brainstorm mechanism with three independently governed resident committee
+members: Disciplinary-Fit, Composition, and Boundary-Challenge. Each member has
+a versioned Base Persona, Resident Officer Contract, Guildhall Office Profile
+binding, and Resident Agent Definition. Each contributes through a separate,
+individually attributable provider call. No committee member may determine
+professional suitability or admit a Profession Specification; Guildmaster
+remains the sole adjudicator.
+
+The subsequent live Isolde mission passed the governed-committee checkpoint.
+The three committee members produced thirteen possibilities; Guildmaster
+adjudicated seven approved professions in this exact queue order:
+
+1. Certified Public Accountant
+2. Internal Auditor
+3. Forensic Accountant
+4. Data Analyst
+5. Compliance Officer
+6. Tax Advisor
+7. Legal Counsel
+
+Guildhall found no admitted reusable `PROFESSION_WIDE` Profession
+Specification for any queue position. All seven therefore resolved to
+`PROFSPEC_CREATION_REQUIRED`. A conformant candidate is not an admitted
+Profession Specification, and name equality alone does not authorize reuse.
+No Garrison lookup occurred; no Persona, Operative, or Officer was selected;
+and no mission execution occurred.
+
+The active next leg is sequential Profession Specification creation, beginning
+with Certified Public Accountant. Each candidate must be profession-wide, pass
+conformance review, and receive explicit Guildmaster admission before the queue
+advances. Every admitted Profession Specification must expose its exact version
+and SHA-256 digest for direct Persona lineage. Garrison and Persona resolution
+remain downstream and unopened until profession resolution is complete.
+
