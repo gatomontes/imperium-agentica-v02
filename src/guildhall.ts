@@ -16,6 +16,7 @@ export interface ProfessionSpecification {
   finding: ProfessionFinding;
   admissionState?: "CANDIDATE" | "ADMITTED";
   admissionAuthorityRef?: string;
+  reuseScope?: "MISSION_SCOPED" | "PROFESSION_WIDE";
   professionQueueRef?: string;
   queuePosition?: number;
 }
@@ -58,7 +59,7 @@ export class Guildhall {
       version: candidate.version + 1,
       createdAt: new Date().toISOString(),
       supersedes: candidate.identity + "@" + candidate.version,
-      payload: { ...candidate.payload, admissionState: "ADMITTED", admissionAuthorityRef: guildmasterAgentDefinitionRef },
+      payload: { ...candidate.payload, admissionState: "ADMITTED", admissionAuthorityRef: guildmasterAgentDefinitionRef, reuseScope: candidate.payload.professionQueueRef ? "MISSION_SCOPED" : "PROFESSION_WIDE" },
       sourceRefs: [...new Set([...candidate.sourceRefs, candidate.identity + "@" + candidate.version, guildmasterAgentDefinitionRef])],
     };
   }
