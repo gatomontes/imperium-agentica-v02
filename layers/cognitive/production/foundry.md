@@ -101,13 +101,17 @@ The candidate makes testable:
 
 The candidate is neither an admitted Persona nor an agent definition.
 
+After a passing Pit examination, Foundry produces a versioned Foundry Release Packet containing the exact production-approved Persona, exact passing Pit Brief, Persona Template fingerprint, upstream artifact fingerprints, complete revision lineage, Artificer authentication, and Foundry production-approval record. Foundry sends that packet to Castellan.
+
 ## Revision
 
 Foundry may return conflicts to Castellan, Guildhall, Studium, or Hagiography.
 
 It does not silently repair an upstream authority or evidence defect.
 
-Pit findings may return the candidate for a new immutable version.
+A failed Pit examination returns the exact candidate and authenticated failure brief to Artificer. Artificer coordinates permitted repair, assembles a new immutable candidate version with `SUPERSEDES` lineage and a new digest, and resubmits it for complete Pit re-examination. Prior candidates and Pit records remain immutable.
+
+A passing Pit examination returns the exact tested candidate and authenticated passing brief to Foundry. Artificer verifies candidate identity, version, digest, template lineage, upstream lineage, and the matching Pit result. Foundry may then grant production approval and assemble the Foundry Release Packet for Castellan. Production approval certifies completion of Foundry production only; it is not Persona admission.
 
 ## Non-Authority
 
@@ -120,7 +124,7 @@ Foundry must not:
 - impersonate a source human
 - populate unsupported persona content
 - alter the tagged Persona Template within a production case
-- admit its own candidate
+- admit a Persona to Garrison
 - produce an agent definition or platform-specific operative
 - grant tools, credentials, mission authority, or deployment
 - mutate an admitted Persona in place
@@ -132,7 +136,8 @@ The Artificer governs, orchestrates, and performs the present cognitive assembly
 Runtime mechanisms perform deterministic work.
 Artisans do not participate unless later necessity is explicitly established.
 Pit tests the candidate.
-The admission authority remains outside Foundry.
+Foundry production approval requires the exact passing Pit result.
+Castellan alone decides Persona admission.
 ```
 
 The Artificer must not construct Officers; that responsibility belongs to Smith. Smith must not govern Foundry persona production.
@@ -147,5 +152,7 @@ Artificer creates and preserves the production queue.
 Hagiography supplies evidence; it does not forge.
 The tagged Persona Template defines required anatomy; it does not supply content.
 Artificer assembles the Persona Candidate.
-Pit tests the candidate.
+Pit failure returns to Artificer for correction and complete retest.
+Pit success returns to Foundry for production approval.
+Foundry releases the approved Persona package to Castellan.
 ```
