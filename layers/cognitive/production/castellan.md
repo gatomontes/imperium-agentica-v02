@@ -24,7 +24,7 @@ It receives a shaped Petition or operator need from the Secretariat, forms the m
 
 The Castellan coordinates the mission at the highest internal level.
 
-It does not determine the profession, forge personas, recruit personas into operatives, deploy operatives, or judge returns.
+It does not determine the profession, forge personas, recruit personas into operatives, deploy operatives, or judge mission returns. It is, however, the authority that decides whether a Foundry-production-approved Persona is admitted into Garrison.
 
 ---
 
@@ -55,6 +55,18 @@ The Castellan sends an approved work specification to Guildhall.
 Guildhall determines the required profession or professions, their boundaries, and their admitted queue order. Guildhall returns the Guildmaster-admitted Profession Determination Packet to Castellan.
 
 Castellan then hands the admitted determination, approved Work Specification, operator requirements, and relevant mission context to Foundry. Castellan does not write the Profession Specification, determine professional truth, or govern Foundry's production queue.
+
+---
+
+## Relationship To Foundry And Garrison
+
+Foundry returns a versioned Foundry Release Packet containing the exact production-approved Persona, the matching authenticated passing Pit Brief, exact template and upstream fingerprints, revision lineage, Artificer authentication, and Foundry production-approval record.
+
+Castellan verifies that the release packet is complete and internally consistent, then decides `ADMIT` or `REJECT`. A passing Pit examination and Foundry production approval are necessary inputs but do not compel admission.
+
+On `ADMIT`, Castellan creates an immutable admission record bound to the exact Persona version and digest and hands the admitted package to Garrison for custody. Garrison records the admission; it does not adjudicate it.
+
+On `REJECT`, Castellan records the reason and returns the case to Foundry. Rejection does not authorize silent mutation. Any corrected Persona must become a new immutable candidate version, pass Pit again, receive new Foundry production approval, and return in a new release packet.
 
 ---
 
@@ -89,6 +101,8 @@ The Castellan may produce:
 - mission continuation note
 - mission handoff summary
 - Foundry entry packet carrying the admitted Profession Determination Packet
+- Persona admission or rejection record bound to an exact Foundry Release Packet
+- admitted Persona package for Garrison custody
 - request for deployment preparation
 
 ---
@@ -102,7 +116,8 @@ The Castellan must not:
 - forge personas
 - author Persona Governance Doctrine
 - recruit personas into operatives
-- admit personas to Garrison
+- delegate Persona admission to Foundry, Pit, or Garrison
+- admit a Persona without the exact production-approved release packet and matching passing Pit Brief
 - issue tools or credentials
 - write detailed mission dossiers by assumption
 - deploy operatives
@@ -120,6 +135,9 @@ Secretariat
 → Guildmaster admission
 → Castellan
 → Foundry
+→ Pit examination and Foundry production approval
+→ Castellan admission decision
+→ Garrison custody
 
 Castellan
 → Collegium
@@ -145,7 +163,10 @@ Castellan forms missions and specifies work.
 Guildhall determines the required profession or professions.
 Guildmaster admits the determination.
 Castellan hands the admitted determination to Foundry.
-Foundry governs persona production.
+Foundry governs persona production and production approval.
+Pit certifies examination only.
+Castellan admits the exact approved Persona.
+Garrison preserves the admitted Persona.
 Muster assembles the mission-bound Deployment Package.
 Judicature judges returns.
 ```
