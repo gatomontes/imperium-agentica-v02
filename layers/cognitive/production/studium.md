@@ -25,7 +25,7 @@ The Studium develops and stewards two distinct governance artifacts:
 - `Persona Governance Doctrine` for Foundry
 - `Officer Governance Doctrine` for Smith
 
-For persona work, it receives exact admitted professional and production inputs through the Foundry production case and expresses governable obligations as doctrine for later embodiment by Foundry. The exact point at which Artificer commissions Studium after receiving Hagiography's packet is not yet defined.
+For persona work, its resident cognitive author is the **Notary**. After Artificer verifies the Sanctographer-authored sections, Notary receives the exact in-progress candidate and writes the doctrine-derived tagged sections: governance, boundaries, refusals, escalation, and stop conditions. Notary authenticates those sections and returns the candidate to Artificer.
 
 It also receives durable Advisory Role Requirements from Collegium and expresses the governable dimensions of Curial counsel as doctrine embodied by Smith.
 
@@ -123,11 +123,11 @@ Studium must preserve the exact Guildmaster-admitted Profession Determination Pa
 
 Studium and Foundry work iteratively.
 
-Studium supplies Persona Governance Doctrine for embodiment in the Persona Specification Candidate when commissioned through the Foundry production case.
+Notary writes and authenticates the Persona Governance Doctrine sections in the in-progress tagged Persona Candidate when commissioned through the Foundry production case.
 
 Foundry may return ambiguities, contradictions, or non-operable provisions exposed during construction.
 
-Studium may refine the doctrine without assuming Foundry's persona-engineering responsibility.
+Notary may refine the doctrine without rewriting Sanctographer-authored evidence sections or assuming Artificer's orchestration and validation responsibility.
 
 ---
 
@@ -179,8 +179,8 @@ The Studium must not:
 ```text
 Guildhall determines required professions and order.
 Collegium specifies the durable advisory role.
-Studium authors the distinct governance doctrine.
-Foundry embodies Persona Governance Doctrine.
+Notary authors the distinct Persona Governance Doctrine sections.
+Artificer verifies section completeness, authorship, schema, identity, and provenance without writing specialized substance.
 Smith embodies Officer Governance Doctrine.
 ```
 

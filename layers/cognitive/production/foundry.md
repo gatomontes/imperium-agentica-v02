@@ -14,7 +14,7 @@ Foundry assembles governed professional inputs into a deployment-medium-agnostic
 
 ## Station model
 
-Foundry is an office, not a single undifferentiated action. The **Artificer** is Foundry's resident cognitive foreman, orchestrator, and default persona assembler. The Artificer owns the production case, creates and preserves the profession queue from the Guildmaster-admitted determination received through Castellan, commissions required upstream work, governs each candidate's passage through bounded stations, requests rework, preserves coherence, populates the exact versioned Persona Template, and authenticates the assembled result. The Artificer must preserve the admitted order and may not independently add, remove, or reprioritize professions.
+Foundry is an office, not a single undifferentiated action. The **Artificer** is Foundry's resident cognitive foreman and orchestrator. The Artificer owns the production case, creates and preserves the profession queue from the Guildmaster-admitted determination received through Castellan, commissions required upstream work, governs each candidate's passage through bounded stations, requests rework, preserves coherence, verifies specialized authorship in the exact versioned Persona Template, and authenticates the assembled result. The Artificer must preserve the admitted order and may not independently add, remove, or reprioritize professions.
 
 Each station is a functional part of Foundry, not an independent office. Deterministic Runtime mechanisms may perform work that requires no judgment. An **Artisan** is not an assumed member of the production line. Artisans may be introduced only if a later, explicit necessity finding identifies bounded cognitive work that should not remain with the Artificer. Until then, the Artificer performs the cognitive assembly.
 
@@ -26,7 +26,7 @@ Castellan → Artificer → Profession Queue → first profession → Hagiograph
 
 For each queue item, the Artificer commissions Hagiography to research profession-relevant exemplars, demonstrated accomplishments, methods, and evidenced attributes. Hagiography's Sanctographer directs the Chroniclers, verifies their collected material, compiles the acceptable evidence, and returns an authenticated Hagiography Research Packet to the Artificer. Hagiography does not forge or recommend the persona.
 
-After receiving the packet, the Artificer obtains the exact active version of the tagged Persona Template and begins populating a Persona Candidate from:
+After receiving the packet, the Artificer obtains the exact active version of the tagged Persona Template, verifies the Sanctographer-authored evidence sections, and routes the in-progress Persona Candidate to Notary for doctrine authorship. The construction artifact binds:
 
 - Castellan's Foundry entry packet and operator requirements
 - the Guildmaster-admitted Profession Determination Packet
@@ -45,7 +45,7 @@ Artificer → Receiving → Confluence → Temperance → Specification → Prov
 The stations are:
 
 - **Receiving:** accepts and verifies Castellan's Foundry entry packet, including the exact Guildmaster-admitted Profession Determination Packet, Work Specification, operator requirements, and relevant mission context.
-- **Confluence:** maps the exact construction inputs into the applicable tagged Persona Template.
+- **Confluence:** verifies that each specialized author has populated the correct tagged Persona Template fields and routes the in-progress candidate to the next author.
 - **Temperance:** identifies and resolves permitted conflicts, excesses, omissions, and tensions without weakening upstream authority.
 - **Specification:** completes a coherent, testable Persona Candidate in the tagged template.
 - **Provenance:** preserves lineage for consequential features, transformations, decisions, unresolved tensions, and every exact upstream artifact version.
@@ -148,7 +148,7 @@ Foundry must not:
 ## Artificer–Artisan boundary
 
 ```text
-The Artificer governs, orchestrates, and performs the present cognitive assembly.
+The Artificer governs and orchestrates assembly, verifies completeness and authorship, and performs no specialized substantive authorship.
 Runtime mechanisms perform deterministic work.
 Artisans do not participate unless later necessity is explicitly established.
 Pit tests the candidate.
@@ -167,7 +167,8 @@ Castellan hands the admitted packet to Foundry.
 Artificer creates and preserves the production queue.
 Hagiography supplies evidence; it does not forge.
 The tagged Persona Template defines required anatomy; it does not supply content.
-Artificer assembles the Persona Candidate.
+Sanctographer writes evidence-derived sections; Notary writes doctrine-derived sections.
+Artificer checks, routes, versions, authenticates, and dispatches the Persona Candidate.
 Pit failure returns to Artificer for correction and complete retest.
 Pit success returns to Foundry for production approval.
 Foundry releases the approved Persona package to Castellan.

@@ -72,13 +72,13 @@ The Sanctographer receives and interprets the Artificer's research commission, s
 
 Chroniclers research exemplars, accomplishments, demonstrated methods, profession-relevant attributes, and supporting evidence. They report findings and uncertainty to the Sanctographer; they do not authenticate the packet, canonize a persona, or hand research directly to Foundry.
 
-If the collected material is inadequate, the Sanctographer rejects it or redirects the Chroniclers. Once acceptable, the Sanctographer synthesizes the findings, limitations, conflicts, provenance, and open questions into the authoritative Hagiography Research Packet, authenticates it, and returns it to the Artificer.
+If the collected material is inadequate, the Sanctographer rejects it or redirects the Chroniclers. Once acceptable, the Sanctographer synthesizes the findings, limitations, conflicts, provenance, and open questions into the authoritative Hagiography Research Packet. The Sanctographer also writes the evidence-derived tagged Persona Candidate sections, authenticates both the research and those sections, and returns the in-progress construction artifact to the Artificer.
 
 ```text
 Artificer commissions Hagiography → Sanctographer directs Chroniclers → Chroniclers collect evidence → Sanctographer verifies and compiles → Sanctographer returns packet to Artificer
 ```
 
-The Sanctographer determines whether the research is acceptable. The Sanctographer does not determine whether the eventual persona candidate is acceptable.
+The Sanctographer determines whether the research is acceptable and authors only the evidence-derived sections supported by that research. The Sanctographer does not write governance doctrine or determine whether the eventual persona candidate is acceptable.
 
 ---
 
@@ -119,6 +119,8 @@ Conflicting evidence:
 Confidence:
 Failure signals:
 Open questions:
+Evidence-derived Persona Template sections:
+Sanctographer authorship and authentication:
 ```
 
 Acceptance means the Sanctographer has determined that the research is sufficiently evidenced, relevant, and compliant with the Artificer's commission to become a deliberate persona-construction input.
@@ -155,7 +157,7 @@ Neither substitutes for the other.
 
 Hagiography supplies the Sanctographer-authenticated Hagiography Research Packet used by Foundry during persona construction.
 
-Artificer receives the completed packet and does not reperform or supervise Hagiography's research. Foundry embodies applicable evidenced traits together with the admitted profession determination, operator requirements, mission context, and Persona Governance Doctrine.
+Artificer receives the completed packet and does not reperform, supervise, or rewrite Hagiography's research or evidence-derived tagged sections. Artificer checks that the required Hagiography tags and authorship evidence are complete, then routes the in-progress candidate to Studium.
 
 Foundry may return traits that prove incoherent, non-operable, performative, or professionally harmful when embodied.
 
