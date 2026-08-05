@@ -18,7 +18,7 @@ It does not admit implementation storage, deployment automation, persistent regi
 
 ## Purpose
 
-The Garrison holds admitted persona specifications.
+The Garrison holds admitted, versioned Personas.
 
 It is the inventory of tested, reusable professional personas available for Conscription, delivery, adaptation, or future revision.
 
@@ -41,9 +41,11 @@ Which admitted personas are available, qualified, constrained, superseded, or re
 The Garrison may preserve:
 
 - admitted persona identity
-- profession specification reference
-- Studium doctrine reference
-- Hagiography trait reference
+- exact Persona identity, version, and SHA-256 digest
+- Castellan admission record
+- Foundry Release Packet reference
+- exact passing Pit Brief reference
+- Persona Template and upstream artifact fingerprints
 - purpose
 - capabilities and competencies
 - governable boundaries
@@ -56,13 +58,13 @@ The Garrison may preserve:
 
 ---
 
-## Relationship To Guildhall
+## Relationship To Castellan
 
-Guildhall may activate a Garrison search after resolving the profession required by an approved work specification.
+Garrison accepts a Persona only from Castellan with an immutable admission record bound to the exact Persona version and digest and its complete Foundry Release Packet.
 
-If a suitable admitted persona exists, it may proceed to Conscription.
+Garrison verifies package identity and records custody. It does not reconsider the Pit examination, grant Foundry production approval, or adjudicate admission. A malformed, mismatched, incomplete, or unauthenticated admission package must be refused and returned to Castellan without creating a roster entry.
 
-If none exists, Guildhall may issue persona-construction work to Foundry.
+Once custody is recorded, the admitted Persona may be marked available for downstream suitability determination and Conscription under their separate contracts.
 
 ---
 
@@ -79,7 +81,6 @@ Garrison does not perform that transformation.
 ## Possible Statuses
 
 ```text
-Candidate
 Admitted
 Available
 Reserved
@@ -99,7 +100,8 @@ These statuses are provisional and describe persona inventory, not operative mis
 The Garrison must not:
 
 - forge personas
-- admit untested candidates without rule
+- admit, reject, or otherwise adjudicate Persona candidates
+- accept a Persona without Castellan's exact admission record and complete release package
 - determine mission needs
 - recruit personas into operatives
 - write mission dossiers
@@ -112,7 +114,10 @@ The Garrison must not:
 ## Boundary Maxims
 
 ```text
-Garrison holds what survived.
+Pit certifies examination.
+Foundry approves production.
+Castellan admits.
+Garrison preserves exactly what Castellan admitted.
 Conscription recruits what is selected.
 Muster assembles the resulting operative for a mission.
 ```
@@ -124,6 +129,7 @@ Muster assembles the resulting operative for a mission.
 Review or revise this draft if:
 
 - Garrison becomes a deployment controller
-- Garrison accepts untested personas
+- Garrison accepts a Persona without exact Castellan admission
+- Garrison treats custody verification as admission authority
 - persona inventory status is confused with operative mission state
 - Garrison begins owning deployment-medium transformation
