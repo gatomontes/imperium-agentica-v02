@@ -10,7 +10,7 @@ Admission: `Production Admission Review 003`.
 
 Evidence: `Constitutional Test Run 015 — 30 PASS / 0 FAIL`.
 
-Pit is Imperium's adversarial qualification office. It independently tests the exact tagged Persona Candidate released by Foundry. It produces findings and a recommendation; it does not determine disposition or Persona admission.
+Pit is Imperium's adversarial qualification office. It independently tests the exact tagged Persona Candidate released by Foundry. It produces authenticated findings and a pass or fail examination result; it does not approve production, determine Persona admission, or hold the admitted Persona.
 
 ## Core Question
 
@@ -62,16 +62,26 @@ Pit produces a versioned Pit Brief containing:
 - performative-mimicry, context-loss, conflict, and overextension findings
 - failures, severity, and implicated native repair owner
 - retest conditions
-- recommendation
+- examination result: `PASS` or `FAIL`
 - Pit Officer authentication and exact provenance
 
-Recommendation is not disposition. A conformant Pit result is not Persona admission.
+A passing examination certifies only that the exact tested candidate satisfied the declared Pit examination. It is not Foundry production approval and is not Persona admission.
 
-## Release, Repair, and Retest
+## Failure Return and Retest
 
-Pit releases the authenticated Pit Brief and exact tested candidate to the external persona-disposition boundary.
+On `FAIL`, Pit returns the exact tested candidate and authenticated Pit Brief to Artificer. The brief must identify concrete defects, implicated native repair owners, and retest conditions.
 
-The identity and institutional location of that disposition authority remain unresolved. This contract must not silently assign it to Guildhall, Garrison, Foundry, Pit, or any other office.
+Pit does not perform repairs. Artificer coordinates permitted correction through the responsible owner and assembles a new immutable Persona Candidate version. The successor must preserve `SUPERSEDES` lineage, receive a new digest, and undergo a complete new Pit examination.
+
+Prior candidates, examinations, and findings remain immutable historical evidence. A failed candidate cannot advance through the success path.
+
+## Success Return
+
+On `PASS`, Pit returns the exact tested candidate and authenticated passing Pit Brief to Foundry.
+
+Foundry must verify that the passing result belongs to the exact candidate it produced before granting production approval. Pit cannot grant that approval on Foundry's behalf.
+
+## Native Repair Targets
 
 Pit may identify native repair targets for:
 
@@ -81,9 +91,7 @@ Pit may identify native repair targets for:
 - Guildhall profession-determination defects
 - Castellan packet or Work Specification defects
 
-Pit does not perform those repairs and does not directly mutate or recycle the candidate.
-
-Any semantic repair creates a new immutable candidate version through Foundry. The successor must preserve `SUPERSEDES` lineage and receive a new Pit examination. Prior candidates, examinations, and findings remain historical evidence.
+Pit does not directly mutate or recycle the candidate or any upstream artifact.
 
 ## Non-Authority
 
@@ -91,8 +99,8 @@ Pit must not:
 
 - edit or repair the artifacts it tests
 - alter the Persona Template
-- admit, reject, recycle, or discard the candidate
-- choose the persona-disposition authority
+- grant Foundry production approval
+- admit, reject, or place a Persona in Garrison
 - recruit or deploy an Operative
 - treat fluency as proof
 - hide governance failure behind task accuracy
@@ -102,7 +110,9 @@ Pit must not:
 
 ```text
 Artificer assembles and authenticates.
-Pit attacks and records.
-Disposition authority remains separately unresolved.
-Garrison custody does not imply admission authority.
+Pit attacks, records, and certifies examination only.
+Failure returns to Artificer for correction and complete retest.
+Success returns to Foundry for production approval.
+Castellan admits.
+Garrison holds the admitted Persona.
 ```
