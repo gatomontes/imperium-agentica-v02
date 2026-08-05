@@ -70,6 +70,22 @@ On `REJECT`, Castellan records the reason and returns the case to Foundry. Rejec
 
 ---
 
+## Persona Admission Record Contract
+
+Castellan's immutable Persona Admission Record must contain:
+
+- `admission_record_id`, record version, and record SHA-256 digest
+- decision: `ADMIT` or `REJECT`
+- exact Foundry Release Packet identity, version, and SHA-256 digest
+- exact Persona identity, version, and SHA-256 digest copied from that packet
+- exact passing Pit Brief identity, version, and SHA-256 digest
+- decision rationale
+- Castellan identity, authentication record, and decision time
+- on `ADMIT`, the intended Garrison destination and custody-handoff correlation identity
+- on `REJECT`, the return destination and stated correction requirement
+
+The record may not point to a floating or latest Persona reference. Castellan must refuse disposition when the release packet's Persona, Pit Brief, template, lineage, or production-approval bindings do not reconcile exactly. An `ADMIT` record authorizes custody of that exact Persona only; it does not authorize Conscription, activation, tools, credentials, or deployment.
+
 ## Relationship To Collegium
 
 Castellan sends the Mission Need and approved Work Specification to Collegium.

@@ -67,6 +67,21 @@ Pit produces a versioned Pit Brief containing:
 
 A passing examination certifies only that the exact tested candidate satisfied the declared Pit examination. It is not Foundry production approval and is not Persona admission.
 
+## Pit Brief Identity Contract
+
+Every Pit Brief must bind, without ambiguity:
+
+- `pit_brief_id`, immutable brief version, and brief SHA-256 digest
+- `examination_id` and declared examination-suite version
+- exact `persona_candidate_id`, candidate version, and candidate SHA-256 digest
+- exact Persona Template version and SHA-256 digest
+- exact upstream-artifact fingerprint set inherited from the candidate
+- examination result: `PASS` or `FAIL`
+- each finding, severity, evidence reference, native repair owner, and retest condition
+- Pit Officer identity, authentication time, and authentication record digest
+
+A Pit Brief is invalid if any required identity or digest is missing, if its result does not bind the exact tested candidate, or if a later artifact attempts to reuse it for another candidate version. A `PASS` brief may advance only with the exact tested candidate; a `FAIL` brief may initiate repair only for that exact candidate lineage.
+
 ## Failure Return and Retest
 
 On `FAIL`, Pit returns the exact tested candidate and authenticated Pit Brief to Artificer. The brief must identify concrete defects, implicated native repair owners, and retest conditions.

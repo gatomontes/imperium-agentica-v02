@@ -103,6 +103,22 @@ The candidate is neither an admitted Persona nor an agent definition.
 
 After a passing Pit examination, Foundry produces a versioned Foundry Release Packet containing the exact production-approved Persona, exact passing Pit Brief, Persona Template fingerprint, upstream artifact fingerprints, complete revision lineage, Artificer authentication, and Foundry production-approval record. Foundry sends that packet to Castellan.
 
+## Foundry Release Packet Contract
+
+A Foundry Release Packet is immutable and must contain:
+
+- `release_packet_id`, packet version, and packet SHA-256 digest
+- exact production-approved `persona_id`, Persona version, and Persona SHA-256 digest
+- exact passing `pit_brief_id`, Pit Brief version, and Pit Brief SHA-256 digest
+- exact Persona Template version and SHA-256 digest
+- complete upstream-artifact fingerprint set
+- complete candidate revision and `SUPERSEDES` lineage
+- Artificer identity, authentication record, and authentication time
+- Foundry production-approval decision, decision time, and approval-record digest
+- Castellan destination and handoff correlation identity
+
+The production-approved Persona must be byte-identical to the exact candidate bound by the passing Pit Brief. Foundry must refuse release if any identity, version, digest, lineage, authentication, or approval reference is absent or mismatched. The packet cannot substitute a later Persona revision for the tested candidate.
+
 ## Revision
 
 Foundry may return conflicts to Castellan, Guildhall, Studium, or Hagiography.
