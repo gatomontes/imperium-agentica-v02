@@ -3,6 +3,7 @@ import { MissionSpecificationCandidate } from "./castellan-mission-formation.js"
 import { ADMITTED_GUILDMASTER_AGENT } from "./guildmaster-agent-definition.js";
 import { AdjudicatedProfessionQueueItem, ProfessionAdjudicationPacket } from "./guildhall-mission-committee.js";
 import { assertArtifactEnvelope } from "./schema.js";
+import { personaCandidateDigest } from "./persona-integrity.js";
 
 export interface FoundryEntryPacket {
   missionSpecificationCandidateRef: string;
@@ -57,7 +58,7 @@ export interface StudiumDoctrineCommission {
   queuePosition: number; professionIdentity: string; recipient: "NOTARY"; requestedSections: ["GOVERNANCE"];
 }
 export interface PersonaCandidatePitDispatch {
-  candidateRef: string; templateRef: string; queuePosition: number; professionIdentity: string;
+  candidateRef: string; candidateDigest: string; templateRef: string; queuePosition: number; professionIdentity: string;
   recipient: "PIT"; purpose: "PERSONA_EXAMINATION"; admissionClaimed: false;
 }
 
@@ -137,9 +138,9 @@ export class ArtificerPersonaAssembler {
     assertArtifactEnvelope(candidate);
     if (candidate.artifactType !== "InProgressPersonaCandidate" || candidate.producer !== "Artificer" || candidate.status !== "CURRENT" || candidate.payload.state !== "READY_FOR_PIT" || candidate.payload.artificerAuthoredSubstance || !candidate.payload.artificerAuthenticationRef?.trim() || candidate.payload.evidenceSections.authoredBy !== "SANCTOGRAPHER" || candidate.payload.doctrineSections?.authoredBy !== "NOTARY") throw new Error("exact fully authored and Artificer-authenticated candidate is required for Pit dispatch");
     return createArtifact("PersonaCandidatePitDispatch", "Artificer", candidate.correlationId, {
-      candidateRef: ref(candidate), templateRef: candidate.payload.templateRef, queuePosition: candidate.payload.queuePosition,
+      candidateRef: ref(candidate), candidateDigest: personaCandidateDigest(candidate), templateRef: candidate.payload.templateRef, queuePosition: candidate.payload.queuePosition,
       professionIdentity: candidate.payload.professionIdentity, recipient: "PIT", purpose: "PERSONA_EXAMINATION", admissionClaimed: false,
-    }, [ref(candidate), candidate.payload.templateRef, candidate.payload.artificerAuthenticationRef], context);
+    }, [ref(candidate), personaCandidateDigest(candidate), candidate.payload.templateRef, candidate.payload.artificerAuthenticationRef], context);
   }
 }
 
