@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { createArtifact } from "../src/artifact.js";
 import { InProgressPersonaCandidate, PersonaCandidatePitDispatch } from "../src/persona-production-intake.js";
 import { PersonaPitExaminer, PitPressureResult } from "../src/persona-pit-examination.js";
+import { personaCandidateDigest } from "../src/persona-integrity.js";
 
 const candidate = createArtifact<InProgressPersonaCandidate>("InProgressPersonaCandidate", "Artificer", "pit-001", {
   templateRef: "persona-template@0.1.0#sha256:synthetic", foundryEntryPacketRef: "entry@1", artificerQueueRef: "queue@1", hagiographyPacketRef: "research@1",
@@ -11,21 +12,25 @@ const candidate = createArtifact<InProgressPersonaCandidate>("InProgressPersonaC
   state: "READY_FOR_PIT", artificerAuthoredSubstance: false, artificerAuthenticationRef: "artificer@1",
 }, ["candidate-predecessor@1"], { identityFactory: () => "candidate" });
 const dispatch = createArtifact<PersonaCandidatePitDispatch>("PersonaCandidatePitDispatch", "Artificer", "pit-001", {
-  candidateRef: "candidate@1", templateRef: candidate.payload.templateRef, queuePosition: 1, professionIdentity: candidate.payload.professionIdentity,
+  candidateRef: "candidate@1", candidateDigest: personaCandidateDigest(candidate), templateRef: candidate.payload.templateRef, queuePosition: 1, professionIdentity: candidate.payload.professionIdentity,
   recipient: "PIT", purpose: "PERSONA_EXAMINATION", admissionClaimed: false,
-}, ["candidate@1", candidate.payload.templateRef], { identityFactory: () => "dispatch" });
+}, ["candidate@1", personaCandidateDigest(candidate), candidate.payload.templateRef], { identityFactory: () => "dispatch" });
 const axes: PitPressureResult["axis"][] = ["COMPETENCE", "GOVERNANCE", "EVIDENCE", "UNCERTAINTY", "REFUSAL", "TRAITS", "COHERENCE"];
 const passing = axes.map((axis) => ({ axis, passed: true, evidence: `${axis} pressure passed` } satisfies PitPressureResult));
 
 describe("Persona Pit examination", () => {
   it("returns PASS to Foundry without claiming admission", () => {
     const brief = new PersonaPitExaminer().examine(dispatch, candidate, passing, "pit-agent@1", { identityFactory: () => "brief" });
-    expect(brief.payload).toMatchObject({ candidateRef: "candidate@1", finding: "PASS", recipient: "FOUNDRY", repairTargets: [], admissionClaimed: false });
+    expect(brief.payload).toMatchObject({ candidateDigest: personaCandidateDigest(candidate), candidateRef: "candidate@1", finding: "PASS", recipient: "FOUNDRY", repairTargets: [], admissionClaimed: false });
   });
   it("returns FAIL and attributable repair targets to Artificer", () => {
     const results = passing.map((result) => result.axis === "GOVERNANCE" ? { ...result, passed: false, defect: "refusal boundary fails under pressure", repairTarget: "NOTARY" as const } : result);
     const brief = new PersonaPitExaminer().examine(dispatch, candidate, results, "pit-agent@1", { identityFactory: () => "brief" });
     expect(brief.payload).toMatchObject({ finding: "FAIL", recipient: "ARTIFICER", repairTargets: [{ axis: "GOVERNANCE", responsibleAuthor: "NOTARY" }], admissionClaimed: false });
+  });
+  it("refuses a content-substituted candidate even when identity and version are preserved", () => {
+    const altered = { ...candidate, payload: { ...candidate.payload, professionIdentity: "Altered" } };
+    expect(() => new PersonaPitExaminer().examine(dispatch, altered, passing, "pit-agent@1")).toThrow("exact current Artificer-dispatched");
   });
   it("refuses incomplete examination or unattributed failure", () => {
     expect(() => new PersonaPitExaminer().examine(dispatch, candidate, passing.slice(1), "pit-agent@1")).toThrow("every examination axis");
