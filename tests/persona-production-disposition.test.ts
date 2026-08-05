@@ -3,6 +3,7 @@ import { createArtifact } from "../src/artifact.js";
 import { ArtificerPersonaDisposition } from "../src/persona-production-disposition.js";
 import { InProgressPersonaCandidate, PersonaCandidatePitDispatch } from "../src/persona-production-intake.js";
 import { PersonaPitBrief } from "../src/persona-pit-examination.js";
+import { personaCandidateDigest } from "../src/persona-integrity.js";
 
 const candidate = createArtifact<InProgressPersonaCandidate>("InProgressPersonaCandidate", "Artificer", "repair-001", {
   templateRef: "persona-template@0.1.0#sha256:synthetic", foundryEntryPacketRef: "entry@1", artificerQueueRef: "queue@1", hagiographyPacketRef: "research@1",
@@ -12,18 +13,18 @@ const candidate = createArtifact<InProgressPersonaCandidate>("InProgressPersonaC
   state: "READY_FOR_PIT", artificerAuthoredSubstance: false, artificerAuthenticationRef: "artificer@1",
 }, [], { identityFactory: () => "candidate" });
 const dispatch = createArtifact<PersonaCandidatePitDispatch>("PersonaCandidatePitDispatch", "Artificer", "repair-001", {
-  candidateRef: "candidate@1", templateRef: candidate.payload.templateRef, queuePosition: 1, professionIdentity: candidate.payload.professionIdentity,
+  candidateRef: "candidate@1", candidateDigest: personaCandidateDigest(candidate), templateRef: candidate.payload.templateRef, queuePosition: 1, professionIdentity: candidate.payload.professionIdentity,
   recipient: "PIT", purpose: "PERSONA_EXAMINATION", admissionClaimed: false,
-}, ["candidate@1"], { identityFactory: () => "dispatch" });
+}, ["candidate@1", personaCandidateDigest(candidate)], { identityFactory: () => "dispatch" });
 const failed = createArtifact<PersonaPitBrief>("PersonaPitBrief", "Pit", "repair-001", {
-  dispatchRef: "dispatch@1", candidateRef: "candidate@1", candidateTemplateRef: candidate.payload.templateRef,
+  dispatchRef: "dispatch@1", candidateRef: "candidate@1", candidateDigest: personaCandidateDigest(candidate), candidateTemplateRef: candidate.payload.templateRef,
   examination: [], finding: "FAIL", repairTargets: [{ axis: "GOVERNANCE", defect: "weak refusal", responsibleAuthor: "NOTARY" }],
   recipient: "ARTIFICER", pitAuthenticationRef: "pit@1", admissionClaimed: false,
-}, ["dispatch@1", "candidate@1"], { identityFactory: () => "failed" });
+}, ["dispatch@1", "candidate@1", personaCandidateDigest(candidate)], { identityFactory: () => "failed" });
 const passing = createArtifact<PersonaPitBrief>("PersonaPitBrief", "Pit", "repair-001", {
-  dispatchRef: "dispatch@1", candidateRef: "candidate@1", candidateTemplateRef: candidate.payload.templateRef,
+  dispatchRef: "dispatch@1", candidateRef: "candidate@1", candidateDigest: personaCandidateDigest(candidate), candidateTemplateRef: candidate.payload.templateRef,
   examination: [], finding: "PASS", repairTargets: [], recipient: "FOUNDRY", pitAuthenticationRef: "pit@2", admissionClaimed: false,
-}, ["dispatch@1", "candidate@1"], { identityFactory: () => "passing" });
+}, ["dispatch@1", "candidate@1", personaCandidateDigest(candidate)], { identityFactory: () => "passing" });
 
 describe("Persona repair and Foundry production approval", () => {
   it("routes failure and creates a new immutable candidate version for full retest", () => {
@@ -44,7 +45,7 @@ describe("Persona repair and Foundry production approval", () => {
 
   it("approves production only for the exact candidate-dispatch-PASS chain", () => {
     const release = new ArtificerPersonaDisposition().approveProduction(dispatch, candidate, passing, "artificer@approval", { identityFactory: () => "release" });
-    expect(release.payload).toMatchObject({ candidateRef: "candidate@1", pitDispatchRef: "dispatch@1", passingPitBriefRef: "passing@1", productionApproved: true, recipient: "CASTELLAN", admissionClaimed: false });
+    expect(release.payload).toMatchObject({ candidateRef: "candidate@1", candidateDigest: personaCandidateDigest(candidate), pitDispatchRef: "dispatch@1", passingPitBriefRef: "passing@1", productionApproved: true, recipient: "CASTELLAN", admissionClaimed: false });
   });
 
   it("refuses production approval for a failed examination", () => {
