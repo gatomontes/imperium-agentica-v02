@@ -1,6 +1,6 @@
 import { createHash } from "node:crypto";
-import { ArtifactEnvelope } from "./artifact.js";
-import { InProgressPersonaCandidate } from "./persona-production-intake.js";
+import type { ArtifactEnvelope } from "./artifact.js";
+import type { InProgressPersonaCandidate } from "./persona-production-intake.js";
 
 export function personaCandidateDigest(candidate: ArtifactEnvelope<InProgressPersonaCandidate>): string {
   return "sha256:" + createHash("sha256").update(canonicalJson(candidate.payload)).digest("hex");
