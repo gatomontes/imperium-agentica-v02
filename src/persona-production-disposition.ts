@@ -67,6 +67,7 @@ export class ArtificerPersonaDisposition {
       commission.payload.failedCandidateRef !== ref(original) || commission.payload.failedPitBriefRef !== ref(brief) ||
       !commission.sourceRefs.includes(ref(original)) || !commission.sourceRefs.includes(ref(brief)) ||
       brief.payload.finding !== "FAIL" || brief.payload.candidateRef !== ref(original) ||
+      brief.payload.candidateDigest !== personaCandidateDigest(original) || !brief.sourceRefs.includes(brief.payload.candidateDigest) ||
       original.payload.state !== "READY_FOR_PIT" || commission.correlationId !== original.correlationId) {
       throw new Error("exact current repair commission, failed brief, and candidate are required");
     }
@@ -107,11 +108,11 @@ export class ArtificerPersonaDisposition {
     assertArtifactEnvelope(dispatch); assertArtifactEnvelope(candidate); assertArtifactEnvelope(brief);
     const authentication = artificerAuthenticationRef.trim();
     if (!authentication || candidate.payload.state !== "READY_FOR_PIT" || dispatch.payload.candidateRef !== ref(candidate) ||
-      dispatch.payload.candidateDigest !== personaCandidateDigest(candidate) || dispatch.payload.recipient !== "PIT" || dispatch.payload.admissionClaimed || !dispatch.sourceRefs.includes(ref(candidate)) ||
+      dispatch.payload.candidateDigest !== personaCandidateDigest(candidate) || dispatch.payload.recipient !== "PIT" || dispatch.payload.admissionClaimed || !dispatch.sourceRefs.includes(ref(candidate)) || !dispatch.sourceRefs.includes(dispatch.payload.candidateDigest) ||
       brief.artifactType !== "PersonaPitBrief" || brief.producer !== "Pit" || brief.status !== "CURRENT" ||
       brief.payload.finding !== "PASS" || brief.payload.recipient !== "FOUNDRY" || brief.payload.admissionClaimed ||
       brief.payload.candidateRef !== ref(candidate) || brief.payload.candidateDigest !== dispatch.payload.candidateDigest || brief.payload.dispatchRef !== ref(dispatch) ||
-      !brief.sourceRefs.includes(ref(candidate)) || !brief.sourceRefs.includes(ref(dispatch)) ||
+      !brief.sourceRefs.includes(ref(candidate)) || !brief.sourceRefs.includes(ref(dispatch)) || !brief.sourceRefs.includes(brief.payload.candidateDigest) ||
       dispatch.correlationId !== candidate.correlationId || brief.correlationId !== candidate.correlationId) {
       throw new Error("Foundry approval requires the exact candidate, dispatch, and passing Pit brief");
     }
