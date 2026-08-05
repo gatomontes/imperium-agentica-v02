@@ -68,6 +68,32 @@ Once custody is recorded, the admitted Persona may be marked available for downs
 
 ---
 
+## Garrison Custody Record Contract
+
+For every accepted admission package, Garrison creates an immutable custody record containing:
+
+- `custody_record_id`, record version, and record SHA-256 digest
+- exact Persona identity, version, and SHA-256 digest
+- exact Castellan Admission Record identity, version, and SHA-256 digest
+- exact Foundry Release Packet identity, version, and SHA-256 digest
+- exact passing Pit Brief identity, version, and SHA-256 digest
+- exact Persona Template and upstream-artifact fingerprints
+- custody status and status-effective time
+- Garrison receiving identity, verification record, and receipt time
+- handoff correlation identity matching Castellan's admitted package
+
+Garrison must verify the complete identity chain before creating the roster entry:
+
+```text
+Persona
+↔ passing Pit Brief
+↔ Foundry Release Packet
+↔ Castellan Admission Record
+↔ Garrison Custody Record
+```
+
+Any mismatch, omission, mutable reference, or broken correlation requires refusal and return to Castellan. Garrison records the refusal separately and must not create a provisional admitted entry.
+
 ## Relationship To Conscription
 
 Conscription searches Garrison for an admitted persona that satisfies the requested professional capability.
