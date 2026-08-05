@@ -55,3 +55,4 @@ export * from "./in-memory-transport.js";
 export * from "./openai-live-isolde.js";
 export * from "./persona-production-intake.js";
 export * from "./persona-pit-examination.js";
+export * from "./persona-production-disposition.js";
