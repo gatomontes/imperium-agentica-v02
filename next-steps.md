@@ -469,3 +469,25 @@ Verification baseline before this breakpoint: the governed-committee focused
 suite passed 30/30; the repository full suite remained at 249 passing with only
 the inherited `petition-source-001` transport-correlation failure.
 
+
+
+## New-Chat Breakpoint — Corrected Persona Production Implementation
+
+The prior sequential Guildhall-authored `PROFESSION_WIDE` Profession Specification plan is superseded by PRs #225–#231.
+
+Authoritative flow:
+
+1. Guildhall determines the required profession or ordered professions; Guildmaster admits the determination.
+2. Guildhall returns the admitted determination to Castellan.
+3. Castellan sends the complete Foundry entry packet to Artificer.
+4. Artificer creates and preserves the profession queue.
+5. Artificer commissions Hagiography for the first queue item.
+6. Chroniclers collect evidence; Sanctographer supervises, accepts or redirects their work, compiles the acceptable evidence, authenticates the Hagiography Research Packet, and returns it to Artificer.
+7. Artificer populates the exact versioned tagged Persona Template. Artisans remain absent unless later necessity is explicitly established.
+8. Pit failure loops to Artificer for immutable repair and complete retest. Pit success returns to Foundry and does not equal admission.
+9. Foundry grants production approval and releases the exact passed Persona to Castellan.
+10. Castellan alone admits or rejects; Garrison verifies and preserves admitted Personas without adjudication.
+
+### Selected next increment
+
+Implement and test the dependency-free reference boundary from Castellan's Foundry entry packet through Artificer's ordered queue and Hagiography commission/return. Use synthetic packets only. Do not perform real-person research, create or admit a live Persona, select providers, use credentials, operate Runtime, recruit, activate, deploy, or create external effects.
