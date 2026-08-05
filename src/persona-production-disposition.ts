@@ -2,6 +2,7 @@ import { ArtifactContext, ArtifactEnvelope, createArtifact } from "./artifact.js
 import { EvidenceAuthoredSections, InProgressPersonaCandidate, DoctrineAuthoredSections, PersonaCandidatePitDispatch } from "./persona-production-intake.js";
 import { PersonaPitBrief } from "./persona-pit-examination.js";
 import { assertArtifactEnvelope } from "./schema.js";
+import { personaCandidateDigest } from "./persona-integrity.js";
 
 type RepairAuthor = "SANCTOGRAPHER" | "NOTARY" | "ARTIFICER";
 
@@ -16,6 +17,7 @@ export interface PersonaRepairCommission {
 
 export interface FoundryReleasePacket {
   candidateRef: string;
+  candidateDigest: string;
   pitDispatchRef: string;
   passingPitBriefRef: string;
   templateRef: string;
@@ -35,7 +37,7 @@ export class ArtificerPersonaDisposition {
     assertArtifactEnvelope(brief); assertArtifactEnvelope(candidate);
     if (brief.artifactType !== "PersonaPitBrief" || brief.producer !== "Pit" || brief.status !== "CURRENT" ||
       brief.payload.finding !== "FAIL" || brief.payload.recipient !== "ARTIFICER" || brief.payload.admissionClaimed ||
-      brief.payload.candidateRef !== ref(candidate) || !brief.sourceRefs.includes(ref(candidate)) ||
+      brief.payload.candidateRef !== ref(candidate) || brief.payload.candidateDigest !== personaCandidateDigest(candidate) || !brief.sourceRefs.includes(ref(candidate)) || !brief.sourceRefs.includes(brief.payload.candidateDigest) ||
       candidate.artifactType !== "InProgressPersonaCandidate" || candidate.producer !== "Artificer" ||
       candidate.status !== "CURRENT" || candidate.payload.state !== "READY_FOR_PIT" ||
       brief.correlationId !== candidate.correlationId || brief.payload.repairTargets.length === 0) {
@@ -105,20 +107,20 @@ export class ArtificerPersonaDisposition {
     assertArtifactEnvelope(dispatch); assertArtifactEnvelope(candidate); assertArtifactEnvelope(brief);
     const authentication = artificerAuthenticationRef.trim();
     if (!authentication || candidate.payload.state !== "READY_FOR_PIT" || dispatch.payload.candidateRef !== ref(candidate) ||
-      dispatch.payload.recipient !== "PIT" || dispatch.payload.admissionClaimed || !dispatch.sourceRefs.includes(ref(candidate)) ||
+      dispatch.payload.candidateDigest !== personaCandidateDigest(candidate) || dispatch.payload.recipient !== "PIT" || dispatch.payload.admissionClaimed || !dispatch.sourceRefs.includes(ref(candidate)) ||
       brief.artifactType !== "PersonaPitBrief" || brief.producer !== "Pit" || brief.status !== "CURRENT" ||
       brief.payload.finding !== "PASS" || brief.payload.recipient !== "FOUNDRY" || brief.payload.admissionClaimed ||
-      brief.payload.candidateRef !== ref(candidate) || brief.payload.dispatchRef !== ref(dispatch) ||
+      brief.payload.candidateRef !== ref(candidate) || brief.payload.candidateDigest !== dispatch.payload.candidateDigest || brief.payload.dispatchRef !== ref(dispatch) ||
       !brief.sourceRefs.includes(ref(candidate)) || !brief.sourceRefs.includes(ref(dispatch)) ||
       dispatch.correlationId !== candidate.correlationId || brief.correlationId !== candidate.correlationId) {
       throw new Error("Foundry approval requires the exact candidate, dispatch, and passing Pit brief");
     }
     return createArtifact("FoundryReleasePacket", "Artificer", candidate.correlationId, {
-      candidateRef: ref(candidate), pitDispatchRef: ref(dispatch), passingPitBriefRef: ref(brief),
+      candidateRef: ref(candidate), candidateDigest: personaCandidateDigest(candidate), pitDispatchRef: ref(dispatch), passingPitBriefRef: ref(brief),
       templateRef: candidate.payload.templateRef, professionIdentity: candidate.payload.professionIdentity,
       productionApproved: true, recipient: "CASTELLAN", admissionClaimed: false,
       artificerAuthenticationRef: authentication,
-    }, [ref(candidate), ref(dispatch), ref(brief), candidate.payload.templateRef, authentication], context);
+    }, [ref(candidate), personaCandidateDigest(candidate), ref(dispatch), ref(brief), candidate.payload.templateRef, authentication], context);
   }
 }
 
