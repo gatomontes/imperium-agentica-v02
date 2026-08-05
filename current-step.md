@@ -484,3 +484,16 @@ advances. Every admitted Profession Specification must expose its exact version
 and SHA-256 digest for direct Persona lineage. Garrison and Persona resolution
 remain downstream and unopened until profession resolution is complete.
 
+
+
+## Persona Production Responsibility Correction — PRs #225–#231
+
+The former sequential `PROFESSION_WIDE` Profession Specification leg is superseded. Guildhall determines the required profession or ordered professions; it does not write the Persona or a profession-wide Persona specification. Guildmaster admits the profession determination, Guildhall returns it to Castellan, and Castellan hands the complete entry packet to Foundry.
+
+Foundry is the Persona Factory. Artificer is its resident cognitive foreman and default assembler. Artificer preserves the admitted profession queue, commissions Hagiography for the first queue item, receives the Sanctographer-authenticated research packet, and populates the exact versioned tagged Persona Template. Chroniclers collect evidence; Sanctographer supervises, verifies acceptability, compiles, and authenticates the Hagiography Research Packet. Artisans remain optional and require a later explicit necessity finding.
+
+The downstream disposition and identity chain is settled: Pit `FAIL` returns the candidate and authenticated repair targets to Artificer for an immutable successor and full retest; Pit `PASS` certifies examination only and returns the exact candidate to Foundry; Foundry grants production approval and issues the Foundry Release Packet; Castellan alone records `ADMIT` or `REJECT`; Garrison verifies and preserves the exact admitted package without adjudicating it. The Pit Brief, Foundry Release Packet, Castellan Persona Admission Record, and Garrison Custody Record bind the same Persona version and SHA-256 digest.
+
+### Selected next leg
+
+Implement the corrected Persona-production reference path in bounded, non-live increments. Begin at the first missing executable boundary: Castellan Foundry entry packet → Artificer-owned profession queue → Hagiography commission and Sanctographer-authenticated research-packet return. Do not create a live Persona, call external research providers, activate Runtime, use credentials, recruit an Operative, deploy, or produce external effects. Preserve explicit merge gates between bounded increments.
