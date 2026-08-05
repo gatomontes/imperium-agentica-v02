@@ -1,6 +1,7 @@
 import { ArtifactContext, ArtifactEnvelope, createArtifact } from "./artifact.js";
 import { InProgressPersonaCandidate, PersonaCandidatePitDispatch } from "./persona-production-intake.js";
 import { assertArtifactEnvelope } from "./schema.js";
+import { personaCandidateDigest } from "./persona-integrity.js";
 
 export interface PitPressureResult {
   axis: "COMPETENCE" | "GOVERNANCE" | "EVIDENCE" | "UNCERTAINTY" | "REFUSAL" | "TRAITS" | "COHERENCE";
@@ -13,6 +14,7 @@ export interface PitPressureResult {
 export interface PersonaPitBrief {
   dispatchRef: string;
   candidateRef: string;
+  candidateDigest: string;
   candidateTemplateRef: string;
   examination: PitPressureResult[];
   finding: "PASS" | "FAIL";
@@ -34,17 +36,17 @@ export class PersonaPitExaminer {
   ): ArtifactEnvelope<PersonaPitBrief> {
     assertArtifactEnvelope(dispatch); assertArtifactEnvelope(candidate);
     const authentication = pitAuthenticationRef.trim();
-    if (dispatch.artifactType !== "PersonaCandidatePitDispatch" || dispatch.producer !== "Artificer" || dispatch.status !== "CURRENT" || dispatch.payload.recipient !== "PIT" || dispatch.payload.purpose !== "PERSONA_EXAMINATION" || dispatch.payload.admissionClaimed || dispatch.payload.candidateRef !== ref(candidate) || !dispatch.sourceRefs.includes(ref(candidate)) || candidate.artifactType !== "InProgressPersonaCandidate" || candidate.producer !== "Artificer" || candidate.status !== "CURRENT" || candidate.payload.state !== "READY_FOR_PIT" || candidate.payload.templateRef !== dispatch.payload.templateRef || candidate.correlationId !== dispatch.correlationId) throw new Error("exact current Artificer-dispatched Persona Candidate is required");
+    if (dispatch.artifactType !== "PersonaCandidatePitDispatch" || dispatch.producer !== "Artificer" || dispatch.status !== "CURRENT" || dispatch.payload.recipient !== "PIT" || dispatch.payload.purpose !== "PERSONA_EXAMINATION" || dispatch.payload.admissionClaimed || dispatch.payload.candidateRef !== ref(candidate) || dispatch.payload.candidateDigest !== personaCandidateDigest(candidate) || !dispatch.sourceRefs.includes(ref(candidate)) || !dispatch.sourceRefs.includes(dispatch.payload.candidateDigest) || candidate.artifactType !== "InProgressPersonaCandidate" || candidate.producer !== "Artificer" || candidate.status !== "CURRENT" || candidate.payload.state !== "READY_FOR_PIT" || candidate.payload.templateRef !== dispatch.payload.templateRef || candidate.correlationId !== dispatch.correlationId) throw new Error("exact current Artificer-dispatched Persona Candidate is required");
     if (!authentication || !completeResults(results)) throw new Error("Pit requires one complete authenticated result for every examination axis");
     const failures = results.filter((result) => !result.passed);
     if (failures.some((result) => !result.defect?.trim() || !result.repairTarget)) throw new Error("every failed Pit result requires an explicit defect and responsible repair target");
     const finding = failures.length ? "FAIL" : "PASS";
     return createArtifact("PersonaPitBrief", "Pit", candidate.correlationId, {
-      dispatchRef: ref(dispatch), candidateRef: ref(candidate), candidateTemplateRef: candidate.payload.templateRef,
+      dispatchRef: ref(dispatch), candidateRef: ref(candidate), candidateDigest: dispatch.payload.candidateDigest, candidateTemplateRef: candidate.payload.templateRef,
       examination: structuredClone(results), finding,
       repairTargets: failures.map((result) => ({ axis: result.axis, defect: result.defect!.trim(), responsibleAuthor: result.repairTarget! })),
       recipient: finding === "FAIL" ? "ARTIFICER" : "FOUNDRY", pitAuthenticationRef: authentication, admissionClaimed: false,
-    }, [ref(dispatch), ref(candidate), candidate.payload.templateRef, authentication], context);
+    }, [ref(dispatch), ref(candidate), dispatch.payload.candidateDigest, candidate.payload.templateRef, authentication], context);
   }
 }
 

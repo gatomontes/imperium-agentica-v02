@@ -3,6 +3,8 @@ import { createArtifact } from "../src/artifact.js";
 import { CastellanPersonaAdmission, GarrisonPersonaCustody } from "../src/persona-admission-custody.js";
 import { FoundryReleasePacket } from "../src/persona-production-disposition.js";
 import { InProgressPersonaCandidate } from "../src/persona-production-intake.js";
+import { PersonaPitBrief } from "../src/persona-pit-examination.js";
+import { personaCandidateDigest } from "../src/persona-integrity.js";
 
 const candidate = createArtifact<InProgressPersonaCandidate>("InProgressPersonaCandidate", "Artificer", "admission-001", {
   templateRef: "persona-template@0.1.0#sha256:synthetic", foundryEntryPacketRef: "entry@1",
@@ -21,35 +23,51 @@ const candidate = createArtifact<InProgressPersonaCandidate>("InProgressPersonaC
   state: "READY_FOR_PIT", artificerAuthoredSubstance: false, artificerAuthenticationRef: "artificer@1",
 }, [], { identityFactory: () => "candidate" });
 
+const passingBrief = createArtifact<PersonaPitBrief>("PersonaPitBrief", "Pit", "admission-001", {
+  dispatchRef: "dispatch@1", candidateRef: "candidate@1", candidateDigest: personaCandidateDigest(candidate),
+  candidateTemplateRef: candidate.payload.templateRef, examination: [], finding: "PASS", repairTargets: [],
+  recipient: "FOUNDRY", pitAuthenticationRef: "pit@1", admissionClaimed: false,
+}, ["dispatch@1", "candidate@1", personaCandidateDigest(candidate), "pit@1"], { identityFactory: () => "pass" });
+
 const release = createArtifact<FoundryReleasePacket>("FoundryReleasePacket", "Artificer", "admission-001", {
-  candidateRef: "candidate@1", pitDispatchRef: "dispatch@1", passingPitBriefRef: "pass@1",
+  candidateRef: "candidate@1", candidateDigest: personaCandidateDigest(candidate), pitDispatchRef: "dispatch@1", passingPitBriefRef: "pass@1",
   templateRef: candidate.payload.templateRef, professionIdentity: candidate.payload.professionIdentity,
   productionApproved: true, recipient: "CASTELLAN", admissionClaimed: false,
   artificerAuthenticationRef: "artificer@approval",
-}, ["candidate@1", "dispatch@1", "pass@1"], { identityFactory: () => "release" });
+}, ["candidate@1", personaCandidateDigest(candidate), "dispatch@1", "pass@1"], { identityFactory: () => "release" });
 
 describe("Castellan admission and Garrison custody", () => {
   it("admits the exact release and lets Garrison preserve it without adjudication", () => {
-    const admission = new CastellanPersonaAdmission().decide(release, candidate, "ADMIT", "Complete and suitable for roster admission", "castellan@1", { identityFactory: () => "admission" });
-    const custody = new GarrisonPersonaCustody().accept(admission, release, candidate, "garrison@1", { identityFactory: () => "custody" });
+    const admission = new CastellanPersonaAdmission().decide(release, candidate, passingBrief, "ADMIT", "Complete and suitable for roster admission", "castellan@1", { identityFactory: () => "admission" });
+    const custody = new GarrisonPersonaCustody().accept(admission, release, candidate, passingBrief, "garrison@1", { identityFactory: () => "custody" });
     expect(admission.payload).toMatchObject({ disposition: "ADMIT", recipient: "GARRISON", candidateRef: "candidate@1", releasePacketRef: "release@1" });
     expect(custody.payload).toMatchObject({ admittedBy: "CASTELLAN", custodyAccepted: true, rosterStatus: "AVAILABLE", admissionAdjudicatedByGarrison: false });
   });
 
   it("returns a rejected Persona to Foundry and bars Garrison custody", () => {
-    const rejection = new CastellanPersonaAdmission().decide(release, candidate, "REJECT", "Not admitted to the roster", "castellan@2");
+    const rejection = new CastellanPersonaAdmission().decide(release, candidate, passingBrief, "REJECT", "Not admitted to the roster", "castellan@2");
     expect(rejection.payload).toMatchObject({ disposition: "REJECT", recipient: "FOUNDRY" });
-    expect(() => new GarrisonPersonaCustody().accept(rejection, release, candidate, "garrison@1")).toThrow("Castellan-admitted");
+    expect(() => new GarrisonPersonaCustody().accept(rejection, release, candidate, passingBrief, "garrison@1")).toThrow("Castellan-admitted");
   });
 
   it("refuses a release that does not bind the exact candidate", () => {
     const altered = { ...candidate, identity: "altered-candidate" };
-    expect(() => new CastellanPersonaAdmission().decide(release, altered, "ADMIT", "admit", "castellan@1")).toThrow("exact production-approved");
+    expect(() => new CastellanPersonaAdmission().decide(release, altered, passingBrief, "ADMIT", "admit", "castellan@1")).toThrow("exact production-approved");
+  });
+
+  it("refuses content substitution under the same candidate identity and version", () => {
+    const altered = { ...candidate, payload: { ...candidate.payload, evidenceSections: { ...candidate.payload.evidenceSections, role: "Altered" } } };
+    expect(() => new CastellanPersonaAdmission().decide(release, altered, passingBrief, "ADMIT", "admit", "castellan@1")).toThrow("content digest");
+  });
+
+  it("refuses an unverified passing-brief substitution", () => {
+    const substitutedBrief = { ...passingBrief, identity: "substituted-pass" };
+    expect(() => new CastellanPersonaAdmission().decide(release, candidate, substitutedBrief, "ADMIT", "admit", "castellan@1")).toThrow("verified passing Pit brief");
   });
 
   it("refuses custody when the admitted release is substituted", () => {
-    const admission = new CastellanPersonaAdmission().decide(release, candidate, "ADMIT", "admit", "castellan@1");
+    const admission = new CastellanPersonaAdmission().decide(release, candidate, passingBrief, "ADMIT", "admit", "castellan@1");
     const substituted = { ...release, identity: "substituted-release" };
-    expect(() => new GarrisonPersonaCustody().accept(admission, substituted, candidate, "garrison@1")).toThrow("exact Castellan-admitted");
+    expect(() => new GarrisonPersonaCustody().accept(admission, substituted, candidate, passingBrief, "garrison@1")).toThrow("exact Castellan-admitted");
   });
 });
