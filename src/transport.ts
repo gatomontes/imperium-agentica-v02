@@ -25,6 +25,27 @@ export interface TransportResponse {
   work: ArtifactEnvelope<WorkSpecification> | null;
 }
 
+export const TRANSPORT_SCHEMA = "imperium.transport-envelope" as const;
+export const TRANSPORT_SCHEMA_VERSION = 1 as const;
+
+export interface TransportEnvelope<T = unknown> {
+  schema: typeof TRANSPORT_SCHEMA;
+  schemaVersion: typeof TRANSPORT_SCHEMA_VERSION;
+  transportId: string;
+  correlationId: string;
+  provenanceRef: string;
+  request?: OperatorRequest;
+  artifact?: ArtifactEnvelope<T>;
+}
+
+export interface TransportEnvelopeResult {
+  transportId: string;
+  correlationId: string;
+  disposition: "ACCEPTED" | "UNRESOLVED" | "REFUSED";
+  refusalReason?: string;
+  result?: TransportResponse;
+}
+
 export interface ImperiumTransportAdapter {
   submit(input: TransportRequest): TransportResponse;
   clarify(input: ClarificationRequest): TransportResponse;

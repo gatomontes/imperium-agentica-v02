@@ -491,3 +491,19 @@ Authoritative flow:
 ### Selected next increment
 
 Implement and test the dependency-free reference boundary from Castellan's Foundry entry packet through Artificer's ordered queue and Hagiography commission/return. Use synthetic packets only. Do not perform real-person research, create or admit a live Persona, select providers, use credentials, operate Runtime, recruit, activate, deploy, or create external effects.
+
+## Superseding Checkpoint — Persona Production Complete Through Custody
+
+PRs #233–#239 implement and verify the corrected synthetic Persona-production
+chain through an exact Garrison Custody Record. The earlier selected Hagiography
+intake increment is complete and no longer current.
+
+### Selected next increment
+
+Define and implement the smallest dependency-free boundary from Garrison's
+exact admitted Persona package to Conscription/Recruitment agent-definition
+generation. Before generating anything, verify the admitted Persona version,
+canonical content digest, Castellan admission record, Garrison custody record,
+and passing Pit proof. The output must remain inactive and must fingerprint the
+exact admitted Persona. Do not select a provider or medium, use credentials,
+operate Runtime, activate, deploy, or produce external effects.

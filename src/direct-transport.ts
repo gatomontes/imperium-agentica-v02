@@ -12,9 +12,15 @@ export class DirectTransportAdapter implements ImperiumTransportAdapter {
 
   submit(input: TransportRequest): TransportResponse {
     const result = this.imperium.submit(input.request, input.correlationId);
+    const petition = input.provenanceRef
+      ? {
+          ...result.petition,
+          sourceRefs: [...new Set([...result.petition.sourceRefs, input.provenanceRef])],
+        }
+      : result.petition;
     return {
       transportId: input.transportId,
-      petition: result.petition,
+      petition,
       work: result.work,
     };
   }
