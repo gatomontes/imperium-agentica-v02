@@ -497,3 +497,25 @@ The downstream disposition and identity chain is settled: Pit `FAIL` returns the
 ### Selected next leg
 
 Implement the corrected Persona-production reference path in bounded, non-live increments. Begin at the first missing executable boundary: Castellan Foundry entry packet → Artificer-owned profession queue → Hagiography commission and Sanctographer-authenticated research-packet return. Do not create a live Persona, call external research providers, activate Runtime, use credentials, recruit an Operative, deploy, or produce external effects. Preserve explicit merge gates between bounded increments.
+
+## Persona Production Runtime Completion — PRs #233–#239
+
+The corrected dependency-free, synthetic Persona-production path is implemented
+and tested end to end through Garrison custody. Sanctographer authors the
+evidence-derived sections; Notary authors the doctrine-derived sections;
+Artificer validates, routes, versions, authenticates, and dispatches without
+substantive authorship. Pit failure returns attributable repair targets and
+requires an immutable successor plus complete retest. Pit success certifies
+examination only. Foundry approves production, Castellan alone admits or
+rejects, and Garrison verifies and preserves the exact admitted package.
+
+The full integration path binds the same canonical SHA-256 Persona digest and
+actual authenticated passing Pit Brief through Foundry release, Castellan
+admission, and Garrison custody. The synthetic failure/repair/retest/admission
+scenario is merged through PR #239 (`b55fe21`). No real-person research,
+provider selection, credential use, live Persona, Runtime operation,
+Recruitment, activation, deployment, or external effect is authorized.
+
+The selected next implementation boundary is Garrison's exact admitted Persona
+package to Conscription/Recruitment agent-definition generation. It must remain
+dependency-free, synthetic, inactive, and separately merge-gated.
