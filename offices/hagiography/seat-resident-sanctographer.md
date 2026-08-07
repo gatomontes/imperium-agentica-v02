@@ -1,8 +1,9 @@
 ---
 title: Sanctographer Seat
 status: office-seat
-scope: offices/hagiography/seat-sanctographer
+scope: offices/hagiography/seat-resident-sanctographer
 inherits: [/imperium-doctrine.md, ./doctrine.md]
+activation_policy: resident
 ---
 # Sanctographer Seat
 

@@ -7,7 +7,7 @@ Guildhall is Imperium's profession-resolution Office. It determines which legiti
 This directory contains:
 
 - [`doctrine.md`](doctrine.md) — Guildhall's jurisdiction, committee, product, and handoffs.
-- [`seat-guildmaster.md`](seat-guildmaster.md) and [`profile-guildmaster.md`](profile-guildmaster.md) — the resident adjudicating Seat and its qualification.
+- [`seat-resident-guildmaster.md`](seat-resident-guildmaster.md) and [`profile-guildmaster.md`](profile-guildmaster.md) — the resident adjudicating Seat and its qualification.
 - Three committee Seat/Profile pairs: disciplinary fit, composition, and boundary challenge.
 
 ## Constituent distinction

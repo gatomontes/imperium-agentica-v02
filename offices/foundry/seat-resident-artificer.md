@@ -1,10 +1,11 @@
 ---
 title: Artificer Seat
 status: office-seat
-scope: offices/foundry/seat-artificer
+scope: offices/foundry/seat-resident-artificer
 inherits:
   - /imperium-doctrine.md
   - ./doctrine.md
+activation_policy: resident
 ---
 
 # Artificer Seat

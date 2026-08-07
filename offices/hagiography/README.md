@@ -8,7 +8,7 @@ Its resident Officer is the **Sanctographer**. Its research committee is compose
 
 - [Doctrine](./doctrine.md)
 - [Mechanics](./mechanics.md)
-- [Sanctographer Seat](./seat-sanctographer.md)
+- [Sanctographer Seat](./seat-resident-sanctographer.md)
 - [Sanctographer Profile](./profile-sanctographer.md)
 - [Versioned Chronicler Committee Seat pattern](./seat-committee-chronicler-{version}.md)
 - [Versioned Chronicler Committee Profile pattern](./profile-committee-chronicler-{version}.md)

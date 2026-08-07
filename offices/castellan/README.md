@@ -7,7 +7,7 @@ Castellan is Imperium's mission-formation Office. It interprets authenticated Op
 This directory contains:
 
 - [`doctrine.md`](doctrine.md) — Castellan's jurisdiction, products, boundaries, and handoffs.
-- [`seat-rector.md`](seat-rector.md) — the resident Seat through which Castellan exercises its authority.
+- [`seat-resident-rector.md`](seat-resident-rector.md) — the resident Seat through which Castellan exercises its authority.
 - [`profile-rector.md`](profile-rector.md) — the installable qualification required to occupy the Rector Seat.
 
 ## Constituent distinction
