@@ -7,7 +7,7 @@ Secretariat is Imperium's operator-facing administrative Office: its point of en
 This directory gathers the current theoretical constituents of the Office:
 
 - [`doctrine.md`](doctrine.md) — the Office's purpose, jurisdiction, responsibilities, boundaries, and handoffs.
-- [`seat-secretary.md`](seat-secretary.md) — the Office-owned position through which Secretariat authority may be exercised.
+- [`seat-resident-secretary.md`](seat-resident-secretary.md) — the Office-owned position through which Secretariat authority may be exercised.
 - [`profile-secretary.md`](profile-secretary.md) — the installable qualification required for a generic Officer to occupy the Secretary Seat.
 
 ## Constituent distinction
