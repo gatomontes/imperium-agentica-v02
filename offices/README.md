@@ -37,6 +37,11 @@ Mechanics do not reason, interpret evidence, decide relevance, approve substance
 | Register Chronicler assignments and returns | Hagiography | `register-assignment`, `dispatch-research-task`, `record-research-return` |
 | Preserve provenance and bind attributed research | Hagiography | `preserve-evidence-record`, `bind-research-packet` |
 | Submit and close an inquiry | Hagiography | `submit-research-packet`, `record-inquiry-disposition`, `close-inquiry` |
+| Open and preserve a doctrine case | Studium | `open-doctrine-case` |
+| Register, dispatch, and correlate specialized Notary work | Studium | `register-notary-assignment`, `dispatch-notary-assignment`, `record-notary-return` |
+| Bind and version attributable doctrine sections | Studium | `bind-doctrine-sections`, `version-doctrine` |
+| Record doctrine disposition and issue its packet | Studium | `record-doctrine-disposition`, `issue-doctrine-packet` |
+| Correlate semantic amendments with revalidation duties | Studium | `register-revalidation-impact` |
 
 ## Authority boundary
 
