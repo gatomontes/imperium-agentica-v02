@@ -7,7 +7,7 @@ Garrison is Imperium's custody and retrieval Office for admitted Personas and qu
 This directory contains:
 
 - [`doctrine.md`](doctrine.md) — Garrison's jurisdiction, custody contract, boundaries, and handoffs.
-- [`seat-constable.md`](seat-constable.md) — the resident Seat through which Garrison exercises custodial authority.
+- [`seat-resident-constable.md`](seat-resident-constable.md) — the resident Seat through which Garrison exercises custodial authority.
 - [`profile-constable.md`](profile-constable.md) — the installable qualification required to occupy the Constable Seat.
 
 ## Constituent distinction
