@@ -1,59 +1,26 @@
 ---
-inherits:
-  - /imperium-doctrine.md
-  - ./doctrine.md
+inherits: [/imperium-doctrine.md, ./doctrine.md]
 ---
-
 # Secretariat Mechanics
 
-Mechanics expose capabilities; they do not create authority beyond Secretariat doctrine. Substantive actions require an occupied Secretary Seat.
+These functions preserve and transport operator-facing material. They do not interpret answers or decide what to ask.
 
-## receive-operator-intent
-
-- **Trigger:** authenticated Operator submission
-- **Inputs:** Operator identity, raw utterance, supplied materials, authority assertions
-- **Outputs:** provenance-preserving intake receipt and opened or correlated Mission Dossier
-- **Failures:** unauthenticated source, malformed submission, broken correlation
-- **Performed by:** occupied Secretary Seat
+## register-intake
+Preserve exact authenticated submission, source, time, and correlation; output an intake receipt and Mission Dossier reference.
 
 ## present-question
+Expose one exact competent-Seat question unchanged; output a presentation receipt and active-question cursor.
 
-- **Trigger:** exact question authorized by a competent Office
-- **Inputs:** question, presentation instructions, question cursor, correlation identity
-- **Outputs:** one question presented to the Operator
-- **Failures:** missing authority, multiple active questions, stale cursor, ambiguous recipient
-- **Performed by:** occupied Secretary Seat
-
-## record-and-return-answer
-
-- **Trigger:** Operator response to the active question
-- **Inputs:** raw response, active question identity, dossier correlation
-- **Outputs:** exact response receipt and handoff to the questioning Office
-- **Failures:** no active question, broken correlation, unverifiable source
-- **Performed by:** occupied Secretary Seat
-
-Secretariat preserves the answer; it does not interpret, allocate, normalize, accept, or reject it.
+## record-answer
+Preserve the raw response and bind it to the exact question and dossier; output an answer receipt and return envelope.
 
 ## relay-disposition
-
-- **Trigger:** competent Office disposition or next question
-- **Inputs:** exact disposition, authority, correlation identity
-- **Outputs:** unaltered relay to the Operator
-- **Failures:** missing authority, stale disposition, broken correlation
-- **Performed by:** occupied Secretary Seat
+Transmit an exact competent-Office disposition unchanged; output a relay receipt.
 
 ## package-delivery
-
-- **Trigger:** authorized final artifact ready for delivery
-- **Inputs:** exact artifact, approved format, recipient, delivery authority
-- **Outputs:** Delivery Package preserving substance, provenance, uncertainty, and disposition
-- **Failures:** incomplete artifact, unauthorized transformation, recipient mismatch
-- **Performed by:** occupied Secretary Seat
+Bind the exact authorized artifact, provenance, format, recipient, and authority into an immutable Delivery Package.
 
 ## deliver-package
+Transmit a valid Delivery Package and record delivery or bounded failure.
 
-- **Trigger:** valid Delivery Package
-- **Inputs:** package, authenticated recipient, delivery route
-- **Outputs:** delivery result and administrative receipt
-- **Failures:** unauthorized recipient, unavailable route, integrity failure
-- **Performed by:** occupied Secretary Seat
+Every function fails closed on missing authority, source, identity, integrity, recipient, cursor, or correlation.
