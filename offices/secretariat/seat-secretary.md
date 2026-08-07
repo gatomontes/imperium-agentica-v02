@@ -1,3 +1,9 @@
+---
+inherits:
+  - /imperium-doctrine.md
+  - ./doctrine.md
+---
+
 # Secretary Seat
 
 ## Status
