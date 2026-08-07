@@ -1,3 +1,8 @@
+---
+inherits:
+  - /imperium-doctrine.md
+---
+
 # Secretariat Doctrine
 
 ## Status
