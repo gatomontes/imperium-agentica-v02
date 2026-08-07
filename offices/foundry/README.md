@@ -8,7 +8,7 @@ Its resident Officer is the **Artificer**.
 
 - [Doctrine](./doctrine.md)
 - [Mechanics](./mechanics.md)
-- [Artificer Seat](./seat-artificer.md)
+- [Artificer Seat](./seat-resident-artificer.md)
 - [Artificer Profile](./profile-artificer.md)
 
 ## Governing distinction
