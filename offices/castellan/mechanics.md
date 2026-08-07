@@ -1,67 +1,23 @@
 ---
-inherits:
-  - /imperium-doctrine.md
-  - ./doctrine.md
+inherits: [/imperium-doctrine.md, ./doctrine.md]
 ---
-
 # Castellan Mechanics
 
-Mechanics expose capabilities; they do not create authority beyond Castellan doctrine. Substantive actions require an occupied Rector Seat.
+These functions support Rector cognition. They do not interpret intent, formulate questions, judge answers, define missions, assess conformance, or admit Personas.
 
-## open-mission-formation
+## open-mission-dossier
+Create dossier identity and preserve exact intake and provenance.
 
-- **Trigger:** authenticated intake material from Secretariat
-- **Inputs:** Mission Dossier, raw Operator intent, supplied-material provenance
-- **Outputs:** mission-formation state and first unresolved predicate
-- **Failures:** unauthenticated intake, broken provenance, malformed dossier
-- **Performed by:** occupied Rector Seat
+## version-mission-dossier
+Create an immutable successor linked to the prior dossier by `SUPERSEDES`.
 
-## issue-intake-question
+## dispatch-intake-question
+Bind one Rector-authored question to dossier and cursor, then route it to Secretariat.
 
-- **Trigger:** unresolved mission predicate
-- **Inputs:** current dossier, question cursor, prior dispositions
-- **Outputs:** exactly one authorized question for Secretariat to present
-- **Failures:** no unresolved predicate, stale cursor, contradictory dossier state
-- **Performed by:** occupied Rector Seat
+## record-rector-disposition
+Preserve the exact disposition, affected material, rationale, and authority.
 
-## assess-intake-answer
+## issue-mission-artifact
+Bind a Rector-authorized Mission Need, Mission Specification, conformance return, or Persona-admission record to version, fingerprints, lineage, destination, and authority; transmit unchanged.
 
-- **Trigger:** exact Operator response returned by Secretariat
-- **Inputs:** active question, raw answer, dossier and cursor identity
-- **Outputs:** accept, requery, explain, nonresponsive, contradictory, or unresolved disposition
-- **Failures:** mismatched question, altered answer, broken correlation
-- **Performed by:** occupied Rector Seat
-
-## form-mission-need
-
-- **Trigger:** sufficient accepted intake determinations
-- **Inputs:** exact accepted values and their evidence lineage
-- **Outputs:** versioned Mission Need
-- **Failures:** unresolved required predicate, contradiction, missing provenance
-- **Performed by:** occupied Rector Seat
-
-## issue-mission-specification
-
-- **Trigger:** mission formation is complete
-- **Inputs:** Mission Need, accepted constraints, exact intake lineage
-- **Outputs:** accepted versioned Mission Specification and authorized handoff
-- **Failures:** incomplete mission, unsupported value, unresolved ambiguity
-- **Performed by:** occupied Rector Seat
-
-## assess-mission-conformance
-
-- **Trigger:** downstream return requiring contract comparison
-- **Inputs:** exact Mission Specification, returned artifact, lineage
-- **Outputs:** conformance finding or bounded defect return
-- **Failures:** wrong version, incomplete artifact, broken lineage
-- **Performed by:** occupied Rector Seat
-
-## disposition-persona-admission
-
-- **Trigger:** exact Foundry Release Packet submitted under the separately assigned admission responsibility
-- **Inputs:** candidate Persona, passing Pit evidence, Foundry approval, fingerprints, lineage
-- **Outputs:** admission or rejection of that exact candidate version
-- **Failures:** incomplete packet, identity mismatch, absent passing evidence, stale candidate
-- **Performed by:** occupied Rector Seat
-
-This function exists only while Persona-admission authority remains assigned to Castellan.
+Every function fails closed on missing authority, stale state, malformed binding, identity mismatch, or broken lineage.

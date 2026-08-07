@@ -1,51 +1,26 @@
 ---
-inherits:
-  - /imperium-doctrine.md
-  - ./doctrine.md
+inherits: [/imperium-doctrine.md, ./doctrine.md]
 ---
-
 # Guildhall Mechanics
 
-Mechanics expose capabilities; they do not create authority beyond Guildhall doctrine. Committee analysis requires the corresponding occupied Committee Seat; admission requires the occupied Guildmaster Seat.
+These functions support Guildhall cognition. They do not determine professions, compose the queue, challenge boundaries, or adjudicate recommendations.
 
-## assess-disciplinary-fit
+## open-resolution-case
+Preserve exact Castellan inputs, versions, provenance, and correlation in a resolution-case record.
 
-- **Trigger:** accepted Work Specification received from Castellan
-- **Inputs:** Mission Need, Work Specification, relevant Operator constraints
-- **Outputs:** attributable candidate professions and body-of-practice rationale
-- **Failures:** unaccepted specification, insufficient professional basis, category ambiguity
-- **Performed by:** occupied Disciplinary-Fit Committee Seat
+## dispatch-committee-assignment
+Route a Guildmaster-authorized bounded assignment to the named Committee Seat and record attribution.
 
-## assess-composition
+## record-committee-return
+Preserve the exact return with Seat, Profile version, author, sources, and case identity.
 
-- **Trigger:** professional candidates available for composition review
-- **Inputs:** candidate professions, required outcomes, dependencies
-- **Outputs:** attributable one-or-many profession analysis, collaboration mode, overlap, and proposed order
-- **Failures:** missing candidates, unresolved dependency, inseparable or duplicative scopes
-- **Performed by:** occupied Composition Committee Seat
+## assemble-committee-record
+Bind attributable returns without reconciling their meaning; output a committee record for Guildmaster review.
 
-## challenge-boundaries
+## record-guildmaster-disposition
+Preserve the exact Guildmaster disposition, rationale, contributions, version, and authority.
 
-- **Trigger:** candidate profession resolution available for challenge
-- **Inputs:** candidates, rationales, boundaries, proposed order
-- **Outputs:** attributable category-error, omission, vague-title, overlap, and mission-drift findings
-- **Failures:** insufficient evidence, untraceable proposal, unresolved boundary collision
-- **Performed by:** occupied Boundary-Challenge Committee Seat
+## issue-profession-packet
+Package and transmit the exact admitted Profession Determination Packet to Castellan.
 
-## adjudicate-professions
-
-- **Trigger:** complete attributable recommendations from all three current Committee Seats
-- **Inputs:** committee contributions, Mission Need, Work Specification
-- **Outputs:** admitted, rejected, consolidated, or requery disposition
-- **Failures:** vacant Committee Seat, incomplete attribution, unresolved contradiction
-- **Performed by:** occupied Guildmaster Seat
-
-Only the Guildmaster adjudicates. Committee members recommend.
-
-## issue-profession-determination
-
-- **Trigger:** Guildmaster admits the professional resolution
-- **Inputs:** adjudication, profession boundaries, rationale, order, contribution lineage
-- **Outputs:** versioned Profession Determination Packet returned to Castellan
-- **Failures:** incomplete lineage, unresolved profession, missing Guildmaster disposition
-- **Performed by:** occupied Guildmaster Seat
+Every function fails closed on missing authority, attribution, identity, version, integrity, or correlation.

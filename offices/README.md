@@ -4,54 +4,54 @@ This directory is the Office-first doctrinal view of Imperium.
 
 Each Office defines:
 
-- `doctrine.md` — what the Office is obligated and permitted to do
-- `mechanics.md` — the concrete functions the Office can perform
+- `doctrine.md` — institutional purpose, jurisdiction, cognitive responsibilities, and boundaries
+- `mechanics.md` — non-cognitive operations that move, preserve, correlate, version, structurally verify, and expose the Office's work
 - `seat-*.md` — where Office authority is localized
-- `profile-*.md` — what qualifies a generic agent to occupy a Seat
+- `profile-*.md` — cognition and qualifications required to occupy a Seat
 
-Mechanics expose capabilities; they do not create authority. Every mechanic inherits the Imperium constitution and its Office doctrine.
+Mechanics do not reason, interpret evidence, decide relevance, approve substance, or create authority. Those acts belong to an occupied Seat operating through its Profile. A mechanic may execute an already-made disposition; it may not make the disposition.
 
-## Capability index
+## Mechanical capability index
 
-| Capability | Owning Office | Mechanic |
+| Mechanical capability | Owning Office | Mechanic |
 |---|---|---|
-| Receive Operator intent | Secretariat | `receive-operator-intent` |
-| Present one authorized question | Secretariat | `present-question` |
-| Preserve and return an exact answer | Secretariat | `record-and-return-answer` |
-| Relay a competent-Office disposition | Secretariat | `relay-disposition` |
-| Package and deliver authorized results | Secretariat | `package-delivery`, `deliver-package` |
-| Determine disciplinary fit | Guildhall | `assess-disciplinary-fit` |
-| Determine profession composition and order | Guildhall | `assess-composition` |
-| Challenge professional boundaries | Guildhall | `challenge-boundaries` |
-| Adjudicate and issue profession determination | Guildhall | `adjudicate-professions`, `issue-profession-determination` |
-| Form a mission through controlled inquiry | Castellan | `open-mission-formation`, `issue-intake-question`, `assess-intake-answer` |
-| Produce Mission Need and Mission Specification | Castellan | `form-mission-need`, `issue-mission-specification` |
-| Assess mission-contract conformance | Castellan | `assess-mission-conformance` |
-| Disposition Persona admission, while assigned | Castellan | `disposition-persona-admission` |
-| Accept or refuse custody | Garrison | `accept-custody`, `refuse-custody` |
-| Report inventory and availability facts | Garrison | `report-inventory` |
-| Retrieve and release an exact held artifact | Garrison | `retrieve-artifact`, `release-artifact` |
-| Change custodial state | Garrison | `change-custodial-state` |
-| Verify a custody record | Garrison | `verify-custody-record` |
+| Register intake and preserve exact material | Secretariat | `register-intake` |
+| Present one authorized question and correlate its answer | Secretariat | `present-question`, `record-answer` |
+| Package and deliver an authorized artifact | Secretariat | `package-delivery`, `deliver-package` |
+| Open a profession-resolution case | Guildhall | `open-resolution-case` |
+| Dispatch and correlate committee work | Guildhall | `dispatch-committee-assignment`, `record-committee-return` |
+| Assemble attributed committee material | Guildhall | `assemble-committee-record` |
+| Record and issue Guildmaster disposition | Guildhall | `record-guildmaster-disposition`, `issue-profession-packet` |
+| Open and version a mission dossier | Castellan | `open-mission-dossier`, `version-mission-dossier` |
+| Dispatch one Rector-authored question | Castellan | `dispatch-intake-question` |
+| Record Rector dispositions and issue artifacts | Castellan | `record-rector-disposition`, `issue-mission-artifact` |
+| Register, retrieve, and release held artifacts | Garrison | `register-custody`, `retrieve-held-artifact`, `release-held-artifact` |
+| Query inventory and record custodial state | Garrison | `query-inventory`, `record-custodial-state` |
+| Verify custody-record integrity | Garrison | `verify-custody-integrity` |
 | Open and preserve a Persona production case | Foundry | `open-production-case` |
-| Commission profession-bound Hagiography research | Foundry | `commission-hagiography` |
-| Initialize and assemble a Persona Candidate | Foundry | `initialize-persona-candidate`, `assemble-persona-candidate` |
-| Route specialized Persona authorship | Foundry | `route-specialized-authorship` |
-| Validate and dispatch a candidate to Pit | Foundry | `validate-and-dispatch-to-pit` |
-| Coordinate correction after Pit failure | Foundry | `coordinate-pit-repair` |
-| Approve completed Foundry production | Foundry | `approve-foundry-production` |
-| Issue a Foundry Release Packet to Castellan | Foundry | `issue-foundry-release-packet` |
+| Dispatch and correlate specialized commissions | Foundry | `dispatch-commission`, `record-specialized-return` |
+| Bind and version candidate sections | Foundry | `bind-candidate-sections`, `version-candidate` |
+| Dispatch to Pit and route its return | Foundry | `dispatch-to-pit`, `route-pit-return` |
+| Record production disposition and issue release | Foundry | `record-production-disposition`, `issue-release-packet` |
+| Open and preserve an evidentiary inquiry | Hagiography | `open-inquiry` |
+| Register Chronicler assignments and returns | Hagiography | `register-assignment`, `dispatch-research-task`, `record-research-return` |
+| Preserve provenance and bind attributed research | Hagiography | `preserve-evidence-record`, `bind-research-packet` |
+| Submit and close an inquiry | Hagiography | `submit-research-packet`, `record-inquiry-disposition`, `close-inquiry` |
 
 ## Authority boundary
 
-    Imperium doctrine
-        ↓
-    Office doctrine
-        ↓
-    Seat authority
-        ↓
-    Office mechanics
-        ↓
-    Runtime implementation
+```text
+Imperium doctrine
+    ↓
+Office doctrine
+    ↓
+Seat authority + Profile cognition
+    ↓
+Cognitive disposition
+    ↓
+Office mechanics
+    ↓
+Runtime implementation
+```
 
-A listed capability means only that the Office has a defined mechanical function. Invocation still requires the exact trigger, authority, inputs, occupied Seat, and doctrinal conditions stated by that Office.
+Mechanical success proves only that an operation completed; it does not prove that the underlying judgment was correct or authorized.
