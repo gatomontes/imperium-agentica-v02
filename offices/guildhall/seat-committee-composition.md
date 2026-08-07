@@ -2,6 +2,7 @@
 inherits:
   - /imperium-doctrine.md
   - ./doctrine.md
+activation_policy: committee
 ---
 
 # Composition Committee Seat

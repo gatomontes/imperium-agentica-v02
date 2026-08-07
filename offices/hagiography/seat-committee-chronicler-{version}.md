@@ -3,6 +3,7 @@ title: Versioned Chronicler Committee Seat Pattern
 status: office-seat-pattern
 scope: offices/hagiography/seat-committee-chronicler-{version}
 inherits: [/imperium-doctrine.md, ./doctrine.md]
+activation_policy: committee
 ---
 # Chronicler Committee Seat — {version}
 
