@@ -33,6 +33,14 @@ Mechanics expose capabilities; they do not create authority. Every mechanic inhe
 | Retrieve and release an exact held artifact | Garrison | `retrieve-artifact`, `release-artifact` |
 | Change custodial state | Garrison | `change-custodial-state` |
 | Verify a custody record | Garrison | `verify-custody-record` |
+| Open and preserve a Persona production case | Foundry | `open-production-case` |
+| Commission profession-bound Hagiography research | Foundry | `commission-hagiography` |
+| Initialize and assemble a Persona Candidate | Foundry | `initialize-persona-candidate`, `assemble-persona-candidate` |
+| Route specialized Persona authorship | Foundry | `route-specialized-authorship` |
+| Validate and dispatch a candidate to Pit | Foundry | `validate-and-dispatch-to-pit` |
+| Coordinate correction after Pit failure | Foundry | `coordinate-pit-repair` |
+| Approve completed Foundry production | Foundry | `approve-foundry-production` |
+| Issue a Foundry Release Packet to Castellan | Foundry | `issue-foundry-release-packet` |
 
 ## Authority boundary
 
