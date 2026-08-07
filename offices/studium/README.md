@@ -6,9 +6,9 @@ Studium is Imperium's Office for authoring and stewarding governance doctrine fo
 
 - [Doctrine](./doctrine.md)
 - [Mechanics](./mechanics.md)
-- [Chancellor Seat](./seat-chancellor.md)
+- [Chancellor Seat](./seat-resident-chancellor.md)
 - [Chancellor Profile](./profile-chancellor.md)
-- [Specialized Notary Seat contract](./seat-notary-{specialization}.md)
+- [Specialized Notary Seat contract](./seat-demand-notary-{specialization}.md)
 - [Specialized Notary Profile contract](./profile-notary-{specialization}.md)
 
 ## Constitutional distinction
