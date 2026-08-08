@@ -9,7 +9,7 @@ Current theoretical definition of Officer construction, Profile installation, qu
 
 ## Purpose
 
-Conscription turns the generic Officer substrate into a Profile-qualified Officer for a requesting Seat. It preserves the distinction between generic cognition, installed qualification, constructed Officer, and activated Office authority.
+Conscription turns the generic Officer substrate into an Officer qualified against an installed Profile for a requesting Seat. It preserves the distinction between generic cognition, Profile installation, Officer qualification, constructed Officer, and activated Office authority.
 
 Conscription is the construction and qualification Office. It does not author another Office's Profile, own another Office's Seat, or confer Office authority by construction alone.
 
@@ -36,20 +36,22 @@ The requesting Office owns:
 - its Seat
 - the Profile required by that Seat
 - the authority exposed through occupancy
-- the decision to accept a delivered qualified Officer into occupancy
+- stewardship of its exact current/active, Imperator-signed Profile
+
+Imperator owns the constitutional authority to bind a properly qualified Officer to the exact vacant Seat. This binding activates the Seat's pre-existing authority; neither Imperator nor Conscription thereby acquires the Office's jurisdiction.
 
 ## Standard construction path
 
 For every Officer except Recruiter:
 
-1. A vacant Seat sends its exact current Profile and activation request to Conscription.
-2. Conscription validates identity, version, ownership, requesting Seat, and correlation.
+1. A vacant Seat supplies its exact current/active Profile and activation request to Conscription.
+2. Conscription validates identity, version, ownership, target Seat, content digest, current/active status, valid Imperator signature, and correlation.
 3. The occupied Recruiter Seat selects an authorized generic Officer substrate.
 4. Recruiter installs the supplied Profile without rewriting or supplementing it.
 5. Recruiter examines the resulting agent against the Profile's qualification checks and Seat requirements.
 6. Recruiter issues one attributable qualification disposition.
 7. On success, mechanics bind the Officer, Profile version, qualification record, and intended Seat and deliver them to the requesting Office.
-8. The requesting Office separately admits the Officer to Seat occupancy.
+8. Imperator authorizes non-cognitive binding of the qualified Officer to the exact vacant Seat after every declared invariant succeeds.
 
 Qualification failure produces no partially qualified Officer and no authority.
 
@@ -59,17 +61,19 @@ Recruiter cannot cognitively construct itself before the Recruiter Seat is occup
 
 ```text
 vacant resident Recruiter Seat
-→ validate exact current Recruiter Profile and authorized generic substrate
+→ Imperator authorizes bootstrap
+→ validate exact current/active, Imperator-signed Recruiter Profile and authorized generic substrate
 → instantiate substrate
 → install Recruiter Profile exactly
 → bind resulting Recruiter to the Recruiter Seat
 → record bootstrap
-→ occupy resident Recruiter Seat
+→ Imperator binds Recruiter to resident Recruiter Seat
 ```
 
 This exception:
 
 - applies only to the exact current Recruiter Profile and resident Recruiter Seat
+- requires Imperator authorization and a valid Imperator signature on the exact Profile
 - performs no interpretive selection, rewriting, discretionary qualification, or substitution
 - fails closed on any mismatch, ambiguity, missing version, invalid substrate, or occupied Seat
 - may not target another Profile, Officer, or Seat
@@ -82,6 +86,7 @@ The mechanical bootstrap does not prove broad qualification through cognitive ex
 The Recruiter:
 
 - receives exact activation requests, Profiles, and Seat requirements
+- verifies current/active designation, content digest, target Seat, and Imperator signature before installation
 - preserves Profile ownership and version identity
 - installs Profiles into authorized generic Officer substrates
 - conducts the qualification checks declared by the Profile and Seat
@@ -95,9 +100,9 @@ The Recruiter:
 
 Conscription and Recruiter must not:
 
-- author, repair, reinterpret, expand, or approve another Office's Profile
+- author, repair, reinterpret, expand, approve, sign, or activate another Office's Profile
 - decide that another Office needs an Officer without a valid activation request
-- occupy another Office's Seat on its behalf
+- bind or occupy another Office's Seat without Imperator authorization
 - treat construction, installation, qualification, delivery, or spawning as Seat occupancy
 - confer authority outside the requesting Seat
 - retain or reuse another Office's Profile as an independent grant
@@ -124,7 +129,7 @@ Conscription may produce or steward:
 ```text
 Mechanics bootstrap Recruiter only.
 Recruiter constructs and qualifies every other Officer.
-The requesting Office activates authority through Seat occupancy.
+Imperator binds qualified Officers; occupied Seats activate Office authority.
 ```
 
 ## Revision conditions
@@ -137,4 +142,3 @@ Review this doctrine when:
 - any path attempts to generalize the Recruiter bootstrap
 - qualification begins authoring Profiles or granting Office authority
 - governing Office doctrine or shared vocabulary changes
-

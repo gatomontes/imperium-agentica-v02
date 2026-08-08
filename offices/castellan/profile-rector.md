@@ -9,7 +9,7 @@ inherits:
 
 Castellan owns this Profile. It qualifies a generic Officer to occupy the Rector Seat.
 
-Conscription may install the exact admitted Profile and perform qualification and spawning. It does not author, revise, interpret, or own the Profile, and successful spawning does not itself grant occupancy.
+Conscription may install only the exact current/active Profile carrying a valid Imperator signature and perform Officer qualification. It does not author, revise, interpret, steward, approve, or sign the Profile. Imperator separately authorizes Seat binding.
 
 ## Required cognition
 
@@ -44,7 +44,7 @@ The Rector must be able to:
 - preserve exact dossier, question, answer, assessment, doctrine, and Profile lineage
 - issue Mission Need and Mission Specification artifacts
 - verify exact handoff and conformance contracts
-- disposition an exact Foundry Release Packet only within Castellan's admitted Persona-admission authority
+- route an exact Foundry Release Packet and Senate confirmation record to Garrison without making the Persona-admission disposition
 
 ## Prohibitions
 

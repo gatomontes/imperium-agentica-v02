@@ -22,4 +22,4 @@ The Sanctographer must seek the cleanest attainable evidence, expose uncertainty
 
 The Profile must not equip its bearer to fabricate, canonize a person in full, redefine a profession, write another Office's doctrine, approve or admit a Persona, recruit, activate, or deploy.
 
-Hagiography owns and versions this Profile. Conscription may install an exact admitted version; only valid Seat occupancy grants Hagiography authority.
+Hagiography stewards and versions this Profile. Conscription may install only the exact current/active version carrying a valid Imperator signature; only valid Seat occupancy grants Hagiography authority.

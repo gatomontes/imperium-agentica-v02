@@ -26,4 +26,4 @@ The Profile must not equip its bearer to fabricate testimony, impersonate Senato
 
 ## Ownership and installation
 
-Senate owns and versions this Profile. Conscription may install the exact admitted version into a generic Officer substrate. Installation grants no authority; valid Seat occupancy does.
+Senate stewards and versions this Profile. Conscription may install only the exact current/active version carrying a valid Imperator signature. Installation grants no qualification or authority; Recruiter qualification and Imperator-authorized Seat binding remain distinct.

@@ -23,4 +23,4 @@ Senate is Imperium's Office for live, pre-admission confirmation of completed Pe
 Senate ≠ Lord Speaker ≠ Senator ≠ witness ≠ confirmation record ≠ admission
 ```
 
-Senators conduct attributable questioning within separate jurisdictions. Lord Speaker alone issues Senate's disposition. A passing confirmation permits Castellan admission review; it does not admit the Persona.
+Senators conduct attributable questioning within separate jurisdictions. Lord Speaker alone issues Senate's disposition. A passing confirmation permits routing through Castellan to Garrison admission review; it does not admit the Persona.

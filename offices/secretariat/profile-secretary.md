@@ -109,7 +109,7 @@ Failed qualification returns the candidate for correction or replacement. It doe
 
 ## Versioning and replacement
 
-A Profile revision never floats into an existing Officer. The revised Profile must be separately admitted, installed, qualified, and bound. An occupant carrying a superseded or invalid Profile cannot continue exercising the predecessor Profile's authority by default.
+A Profile revision never floats into an existing Officer. The revised Profile must be separately designated current/active by its stewarding Office, signed by Imperator, installed, used to qualify a new Officer candidate, and bound. An occupant carrying a superseded or invalid Profile cannot continue exercising the predecessor Profile's authority by default.
 
 ## Revision conditions
 

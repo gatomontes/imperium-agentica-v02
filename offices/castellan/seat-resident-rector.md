@@ -42,7 +42,7 @@ The Rector may, on behalf of Castellan:
 - accept and issue the versioned Mission Specification
 - issue exact downstream handoffs
 - determine mission-contract conformance
-- exercise Castellan's exact Persona-admission responsibility when all required evidence and lineage are present
+- route an exact confirmed Persona package to Garrison for Constable's admission disposition
 
 ## Boundaries
 

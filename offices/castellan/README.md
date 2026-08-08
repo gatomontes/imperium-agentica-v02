@@ -15,4 +15,4 @@ Castellan ≠ Rector Seat ≠ Rector Profile ≠ Rector Persona
           ≠ generic agent ≠ spawned Rector
 ```
 
-Castellan owns the Rector Seat and Rector Profile. Conscription may install the exact admitted Profile into a generic agent and spawn the qualified candidate, but neither installation nor spawning constitutes Seat occupancy or creates Castellan authority.
+Castellan owns the Rector Seat and stewards the Rector Profile. Conscription may install only its exact current/active, Imperator-signed version and qualify the candidate. Imperator separately binds the qualified Officer to the Seat; installation and qualification create no Castellan authority.

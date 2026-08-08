@@ -1,6 +1,6 @@
 # Garrison
 
-Garrison is Imperium's custody and retrieval Office for admitted Personas and qualified Profile records. It preserves exact identity, version, status, evidence, provenance, and lineage without acquiring authority over what it holds.
+Garrison is Imperium's admission, custody, and retrieval Office for Personas. Constable renders its sole Persona-admission disposition; mechanics preserve exact identity, version, status, evidence, provenance, and lineage. Garrison has no Profile jurisdiction.
 
 This directory contains:
 
@@ -15,4 +15,4 @@ Garrison ≠ Constable Seat ≠ Constable Profile ≠ held Persona
          ≠ held Profile record ≠ generic agent ≠ spawned Constable
 ```
 
-Garrison owns the Constable Seat and Constable Profile. The Offices that author Personas or Profiles retain ownership of their meaning. Garrison holds admitted versions and their custody records. Conscription may install the exact admitted Constable Profile into a generic agent and spawn the qualified candidate, but neither installation nor spawning constitutes Seat occupancy or creates Garrison authority.
+Garrison owns and stewards the Constable Seat and Constable Profile. Imperator approves the exact current/active Constable Profile by digital signature. Garrison admits and holds Persona versions and their custody records; it does not hold Profiles. Conscription may install the exact signed current/active Constable Profile into a generic agent and qualify the candidate, after which Imperator may bind it to the Seat.

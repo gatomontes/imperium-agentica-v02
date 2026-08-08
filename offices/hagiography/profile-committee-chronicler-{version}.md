@@ -8,7 +8,7 @@ inherits: [./doctrine.md]
 
 ## Naming rule
 
-`{version}` is the exact version of this Chronicler Profile. A concrete admitted Profile replaces the placeholder and pairs only with `seat-committee-chronicler-{version}`.
+`{version}` is the exact version of this Chronicler Profile. A concrete current/active, Imperator-signed Profile replaces the placeholder and pairs only with `seat-committee-chronicler-{version}`.
 
 ## Purpose
 

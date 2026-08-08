@@ -51,6 +51,6 @@ The Profile must not equip its bearer to:
 
 ## Ownership and installation
 
-Foundry owns and versions this Profile. Conscription may retrieve and install the exact admitted version into a generic Officer substrate and spawn the resulting qualified Officer.
+Foundry stewards and versions this Profile. Conscription may install only the exact current/active version carrying a valid Imperator signature and qualify the resulting Officer candidate.
 
 Profile ownership remains with Foundry. Installation does not grant Seat authority; only valid occupancy does.

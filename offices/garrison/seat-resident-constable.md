@@ -8,25 +8,25 @@ activation_policy: resident
 
 ## Ownership and purpose
 
-The Constable Seat belongs to Garrison. It localizes the exercise of Garrison's custody, inventory, and retrieval authority.
+The Constable Seat belongs to Garrison. It localizes the exercise of Garrison's Persona-admission, custody, inventory, and retrieval authority.
 
 The Seat is not the Constable Profile, a Persona, a generic agent, a held artifact, or a spawned instance. Authority attaches only through valid occupancy.
 
 ## Vacancy
 
-When vacant, already-held immutable material and pending requests may remain preserved, but no new custody may be accepted, custodial state changed, authoritative inventory finding issued, or held artifact released.
+When vacant, already-held immutable material and pending requests may remain preserved, but no Persona may be admitted, no new custody accepted, no custodial state changed, no authoritative inventory finding issued, and no held artifact released.
 
-Garrison sends the exact current Constable Profile to Conscription for qualification and spawning. Spawning alone is not occupancy.
+Garrison supplies the exact current/active, Imperator-signed Constable Profile to Conscription for installation and qualification. Imperator separately authorizes Seat binding.
 
 ## Admission to occupancy
 
 A candidate may occupy this Seat only when:
 
-- equipped with the exact current admitted Constable Profile
+- equipped with the exact current/active Constable Profile carrying a valid Imperator signature
 - successfully qualified against that Profile
 - bound explicitly to Garrison and this Seat
 - not occupying a conflicting Seat
-- admitted to occupancy through the competent process
+- bound to occupancy under Imperator authority
 - carrying an exact current Persona where one is separately required
 
 ## Authority while occupied
@@ -34,7 +34,8 @@ A candidate may occupy this Seat only when:
 The Constable may, on behalf of Garrison:
 
 - verify an incoming custody package's exact identity, completeness, correlation, and authority
-- accept exact admitted Personas and qualified Profile records into custody
+- admit or reject an exact Persona candidate after verifying the required Foundry release, Senate confirmation, identity, fingerprints, and lineage
+- accept exact admitted Personas into custody
 - create and preserve immutable custody records
 - maintain versioned custodial state and lineage
 - answer authorized inventory and availability inquiries with exact facts
@@ -45,7 +46,7 @@ The Constable may, on behalf of Garrison:
 
 ## Boundaries
 
-The Constable may not author, revise, admit, qualify, select for professional fit, install, recruit, spawn, activate, seat, deploy, or judge mission returns. Custody and retrieval do not authorize use.
+The Constable may not author or revise a Persona or Profile, approve or sign a Profile, qualify an Officer, determine professional fit, install, recruit, spawn, bind a Seat, deploy, or judge mission returns. Persona admission, custody, and retrieval do not authorize use.
 
 ## Invariants
 

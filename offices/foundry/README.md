@@ -23,4 +23,4 @@ Foundry owns the Artificer Seat and Profile. Conscription may install that Profi
 
 Foundry constructs Personas and subjects each completed candidate artifact to an independent adversarial review before production approval. The review examines the artifact; it does not instantiate or behaviorally test the Persona.
 
-Foundry does not create qualified Profiles, install Profiles, spawn agents, occupy Seats, or admit Personas to Garrison.
+Foundry does not approve or sign Officer Profiles, install Profiles, qualify agents, occupy Seats, or admit Personas to Garrison.

@@ -38,4 +38,4 @@ The Guildmaster must not determine mission intent, invent professional legitimac
 
 ## Qualification and versioning
 
-Qualification must prove that the candidate preserves all three committee perspectives, exercises sole adjudication without impersonating the committee, disposes every proposal explicitly, and refuses stale or incomplete committee composition. A revised Profile must be separately admitted, installed, qualified, and bound.
+Qualification must prove that the candidate preserves all three committee perspectives, exercises sole adjudication without impersonating the committee, disposes every proposal explicitly, and refuses stale or incomplete committee composition. A revised Profile must be separately designated current/active, signed by Imperator, installed, used to qualify a candidate, and bound.
