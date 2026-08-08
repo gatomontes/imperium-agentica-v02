@@ -1,1 +1,22 @@
-IyBIYWdpb2dyYXBoeQoKSGFnaW9ncmFwaHkgaXMgSW1wZXJpdW0ncyBPZmZpY2UgZm9yIGRlcml2aW5nIGJvdW5kZWQsIHRyYW5zZmVyYWJsZSBQZXJzb25hIG1hdGVyaWFsIGZyb20gZXZpZGVuY2Ugb2YgaGlnaC1wZXJmb3JtaW5nIHJlYWwgaHVtYW5zLgoKSXRzIHJlc2lkZW50IE9mZmljZXIgaXMgdGhlICoqU2FuY3RvZ3JhcGhlcioqLiBJdHMgcmVzZWFyY2ggY29tbWl0dGVlIGlzIGNvbXBvc2VkIG9mIHNlcGFyYXRlbHkgYXR0cmlidXRhYmxlICoqQ2hyb25pY2xlcnMqKiwgZWFjaCBvY2N1cHlpbmcgYSBTZWF0IHRpZWQgdG8gYW4gZXhhY3QgdmVyc2lvbmVkIENocm9uaWNsZXIgUHJvZmlsZS4KCiMjIENvbnN0aXR1ZW50cwoKLSBbRG9jdHJpbmVdKC4vZG9jdHJpbmUubWQpCi0gW01lY2hhbmljc10oLi9tZWNoYW5pY3MubWQpCi0gW1NhbmN0b2dyYXBoZXIgU2VhdF0oLi9zZWF0LXJlc2lkZW50LXNhbmN0b2dyYXBoZXIubWQpCi0gW1NhbmN0b2dyYXBoZXIgUHJvZmlsZV0oLi9wcm9maWxlLXNhbmN0b2dyYXBoZXIubWQpCi0gW1ZlcnNpb25lZCBDaHJvbmljbGVyIENvbW1pdHRlZSBTZWF0IHBhdHRlcm5dKC4vc2VhdC1jb21taXR0ZWUtY2hyb25pY2xlci17dmVyc2lvbn0ubWQpCi0gW1ZlcnNpb25lZCBDaHJvbmljbGVyIENvbW1pdHRlZSBQcm9maWxlIHBhdHRlcm5dKC4vcHJvZmlsZS1jb21taXR0ZWUtY2hyb25pY2xlci17dmVyc2lvbn0ubWQpCgpgYGB0ZXh0CkhhZ2lvZ3JhcGh5IE9mZmljZQrilJzilIDilIAgU2FuY3RvZ3JhcGhlciBTZWF0ICsgUHJvZmlsZQrilJTilIDilIAgQ2hyb25pY2xlciBDb21taXR0ZWUgU2VhdCB7dmVyc2lvbn0gKyBQcm9maWxlIHt2ZXJzaW9ufQpgYGAKClRoZSBwbGFjZWhvbGRlciBkZW5vdGVzIHRoZSBleGFjdCBhcHByb3ZlZCwgY3VycmVudC9hY3RpdmUgQ2hyb25pY2xlciBQcm9maWxlIHZlcnNpb24gdXNlZCBmb3IgdGhhdCBjb21taXR0ZWUgcG9zaXRpb24uIEl0IGlzIG5vdCBhIGdlbmVyaWMgdW52ZXJzaW9uZWQgQ2hyb25pY2xlciBhbmQgbm90IGEgdmVyc2lvbiBvZiB0aGUgY29tbWl0dGVlIGFzIGEgY29sbGVjdGl2ZSBib2R5Lgo=
+# Hagiography
+
+Hagiography is Imperium's Office for deriving bounded, transferable Persona material from evidence of high-performing real humans.
+
+Its resident Officer is the **Sanctographer**. Its research committee is composed of separately attributable **Chroniclers**, each occupying a Seat tied to an exact versioned Chronicler Profile.
+
+## Constituents
+
+- [Doctrine](./doctrine.md)
+- [Mechanics](./mechanics.md)
+- [Sanctographer Seat](./seat-resident-sanctographer.md)
+- [Sanctographer Profile](./profile-sanctographer.md)
+- [Versioned Chronicler Committee Seat pattern](./seat-committee-chronicler-{version}.md)
+- [Versioned Chronicler Committee Profile pattern](./profile-committee-chronicler-{version}.md)
+
+```text
+Hagiography Office
+├── Sanctographer Seat + Profile
+└── Chronicler Committee Seat {version} + Profile {version}
+```
+
+The placeholder denotes the exact approved, current/active Chronicler Profile version used for that committee position. It is not a generic unversioned Chronicler and not a version of the committee as a collective body.
