@@ -20,7 +20,7 @@ MasterMason may not discover, select, upgrade, repair, or substitute any primord
 
 ## Bootstrap
 
-Initial bootstrap is governed exclusively by the pinned [Bootstrap State Machine Contract](contracts/bootstrap-state-machine.md). Ordinary spawning and recovery do not share or enter through that machine.
+Initial bootstrap is governed exclusively by the pinned [Bootstrap State Machine Contract](contracts/bootstrap-state-machine.md), with failures and retries governed by the pinned [Bootstrap Forward-Recovery Contract](contracts/bootstrap-forward-recovery.md). Ordinary spawning and disaster recovery do not share or enter through those machines.
 
 After the Launcher has verified the complete pinned composition, MasterMason bootstraps Imperium's primordial operational triad in dependency order:
 
@@ -37,7 +37,7 @@ After the Launcher has verified the complete pinned composition, MasterMason boo
 
 Ordinary Recruiter succession must complete before any Secretary or Rector commission. Conscription must precede Secretariat and Castellan because Recruiter supplies their resident cognition. Secretariat and Castellan are both primordial because Secretary's one-question-at-a-time intake depends upon immediate Rector direction and disposition.
 
-Secretary and Rector do not accept work before the readiness declaration. If either manifestation, Office activation, binding, or required route fails, neither Office is exposed; MasterMason records the bounded failure and preserves a retryable pre-ready state.
+Secretary and Rector do not accept work before the readiness declaration. If either manifestation, Office activation, binding, or required route fails, neither Office is exposed. MasterMason preserves the last durable checkpoint, quarantines and retires failed candidates, reconciles every partial effect, explicitly releases or renews reservations, and retries only under a pinned recovery receipt with fresh commissions and identities. Any unresolved effect halts bootstrap.
 
 Every bootstrap event must carry the bootstrap transaction, instance, Bootstrap Manifest, and Charter-generation identifiers. MasterMason executes only the pinned transition whose predecessor state, inputs, predicates, action, output, failure code, and retry edge all match. A mismatch refuses the dependent transition.
 

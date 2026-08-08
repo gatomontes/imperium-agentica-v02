@@ -97,6 +97,11 @@ unsigned_payload:
       version: <version>
       digest: <digest>
 
+    bootstrap_recovery_machine:
+      artifact: <reference>
+      version: <version>
+      digest: <digest>
+
   compatibility:
     declaration: <artifact-reference>
     version: <version>
@@ -125,6 +130,7 @@ The Manifest pins the entire primordial operational structure:
 - the succession contract that limits the provisional Recruiter to producing and qualifying one ordinary Recruiter successor before Secretary or Rector may be commissioned
 - permitted primordial routes
 - the [bootstrap state-machine and transition table](bootstrap-state-machine.md), governing initial bootstrap only
+- the [bootstrap forward-recovery machine](bootstrap-forward-recovery.md), governing failure cleanup and retry from durable checkpoints
 - the compatibility declaration binding all named versions
 - signature policy, trusted signer keys, and the exact revocation snapshot used at launch
 
