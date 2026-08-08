@@ -3,7 +3,6 @@ title: Adversarial Reviewer Seat
 status: office-seat
 scope: offices/foundry/seat-demand-reviewer-adversarial
 inherits:
-  - /imperium-doctrine.md
   - ./doctrine.md
 activation_policy: demand
 ---

@@ -3,7 +3,6 @@ title: Specialized Notary Profile Contract
 status: office-profile-pattern
 scope: offices/studium/profile-notary-{specialization}
 inherits:
-  - /imperium-doctrine.md
   - ./doctrine.md
 ---
 

@@ -2,7 +2,7 @@
 title: Senator of Practice Profile
 status: office-profile
 scope: offices/senate/profile-senator-practice
-inherits: [/imperium-doctrine.md, ./doctrine.md]
+inherits: [./doctrine.md]
 ---
 
 # Senator of Practice Profile

@@ -3,7 +3,6 @@ title: Lord Speaker Profile
 status: office-profile
 scope: offices/senate/profile-lord-speaker
 inherits:
-  - /imperium-doctrine.md
   - ./doctrine.md
 ---
 

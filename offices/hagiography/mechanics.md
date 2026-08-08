@@ -2,7 +2,7 @@
 title: Hagiography Mechanics
 status: office-mechanics
 scope: offices/hagiography
-inherits: [/imperium-doctrine.md, ./doctrine.md]
+inherits: [./doctrine.md]
 ---
 # Hagiography Mechanics
 

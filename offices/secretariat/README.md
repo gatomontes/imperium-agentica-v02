@@ -1,7 +1,5 @@
 # Secretariat
 
-Secretariat and every constituent in this directory inherit the general canons in [`/imperium-doctrine.md`](../../imperium-doctrine.md).
-
 Secretariat is Imperium's operator-facing administrative Office: its point of entry, question-and-response surface, and final delivery surface.
 
 This directory gathers the current theoretical constituents of the Office:

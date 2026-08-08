@@ -1,6 +1,5 @@
 ---
 inherits:
-  - /imperium-doctrine.md
   - ./doctrine.md
 activation_policy: resident
 ---

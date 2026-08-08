@@ -1,5 +1,5 @@
 ---
-inherits: [/imperium-doctrine.md, ./doctrine.md]
+inherits: [./doctrine.md]
 ---
 # Castellan Mechanics
 

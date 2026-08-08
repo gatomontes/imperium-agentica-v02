@@ -1,8 +1,0 @@
-{
-  "name": "imperium-runtime-reference-implementation-001",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "test": "node --test"
-  }
-}

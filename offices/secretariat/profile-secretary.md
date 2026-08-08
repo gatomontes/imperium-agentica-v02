@@ -1,6 +1,5 @@
 ---
 inherits:
-  - /imperium-doctrine.md
   - ./doctrine.md
 ---
 
@@ -120,4 +119,4 @@ Revise this Profile when:
 - intake, inquiry, handoff, or delivery contracts change
 - cognition fails semantic fidelity or single-turn discipline
 - qualification testing reveals invented meaning, authority expansion, or broken lineage
-- Core Doctrine or the Imperium Lexicon changes
+- governing Secretariat doctrine or shared vocabulary changes

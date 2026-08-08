@@ -3,7 +3,6 @@ title: Adversarial Reviewer Profile
 status: office-profile
 scope: offices/foundry/profile-reviewer-adversarial
 inherits:
-  - /imperium-doctrine.md
   - ./doctrine.md
 ---
 

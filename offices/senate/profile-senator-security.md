@@ -2,7 +2,7 @@
 title: Senator of Security Profile
 status: office-profile
 scope: offices/senate/profile-senator-security
-inherits: [/imperium-doctrine.md, ./doctrine.md]
+inherits: [./doctrine.md]
 ---
 
 # Senator of Security Profile

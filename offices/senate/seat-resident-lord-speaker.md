@@ -3,7 +3,6 @@ title: Lord Speaker Seat
 status: office-seat
 scope: offices/senate/seat-resident-lord-speaker
 inherits:
-  - /imperium-doctrine.md
   - ./doctrine.md
 activation_policy: resident
 ---

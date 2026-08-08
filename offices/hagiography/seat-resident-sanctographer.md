@@ -2,7 +2,7 @@
 title: Sanctographer Seat
 status: office-seat
 scope: offices/hagiography/seat-resident-sanctographer
-inherits: [/imperium-doctrine.md, ./doctrine.md]
+inherits: [./doctrine.md]
 activation_policy: resident
 ---
 # Sanctographer Seat
@@ -17,7 +17,7 @@ The occupied Seat may interpret an Artificer commission; scope an inquiry; const
 
 ## Limits
 
-The Seat may not redefine the profession, fabricate evidence, import a whole person, write Studium doctrine, forge or approve the complete Persona, perform Pit examination, admit or lodge a Persona, qualify or install Profiles, spawn agents, or deploy operatives.
+The Seat may not redefine the profession, fabricate evidence, import a whole person, write Studium doctrine, forge or approve the complete Persona, perform adversarial artifact review or live Senate confirmation, admit or lodge a Persona, qualify or install Profiles, spawn agents, or deploy operatives.
 
 ## Vacancy and occupancy
 

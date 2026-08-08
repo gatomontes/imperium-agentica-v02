@@ -2,7 +2,7 @@
 title: Senator of Security Seat
 status: office-seat
 scope: offices/senate/seat-committee-senator-security
-inherits: [/imperium-doctrine.md, ./doctrine.md]
+inherits: [./doctrine.md]
 activation_policy: committee
 ---
 

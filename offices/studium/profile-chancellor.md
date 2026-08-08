@@ -3,7 +3,6 @@ title: Chancellor Profile
 status: office-profile
 scope: offices/studium/profile-chancellor
 inherits:
-  - /imperium-doctrine.md
   - ./doctrine.md
 ---
 

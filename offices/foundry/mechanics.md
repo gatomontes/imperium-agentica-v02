@@ -2,7 +2,7 @@
 title: Foundry Mechanics
 status: office-mechanics
 scope: offices/foundry
-inherits: [/imperium-doctrine.md, ./doctrine.md]
+inherits: [./doctrine.md]
 ---
 # Foundry Mechanics
 

@@ -2,7 +2,7 @@
 title: Versioned Chronicler Committee Profile Pattern
 status: office-profile-pattern
 scope: offices/hagiography/profile-committee-chronicler-{version}
-inherits: [/imperium-doctrine.md, ./doctrine.md]
+inherits: [./doctrine.md]
 ---
 # Chronicler Committee Profile — {version}
 
@@ -22,6 +22,6 @@ A concrete version must specify the evidentiary focus it adds to the committee a
 
 The Chronicler must remain inside the Sanctographer's commission, expose gaps and conflicts, cite sources, preserve exact meaning, and return only attributable findings.
 
-The Profile must not grant Sanctographer authority, packet authentication, trait canonization, Persona authorship or admission, profession determination, doctrine authorship, recruitment, activation, or deployment.
+The Profile must not grant Sanctographer authority, packet authentication, trait canonization, Persona authorship or admission, profession determination, doctrine authorship, Profile installation, spawning, activation, or deployment.
 
 Hagiography owns and versions each concrete Chronicler Profile. Installation does not grant authority; only occupancy of the exactly matching Committee Seat does.

@@ -2,7 +2,7 @@
 title: Senator of Consistency Profile
 status: office-profile
 scope: offices/senate/profile-senator-consistency
-inherits: [/imperium-doctrine.md, ./doctrine.md]
+inherits: [./doctrine.md]
 ---
 
 # Senator of Consistency Profile

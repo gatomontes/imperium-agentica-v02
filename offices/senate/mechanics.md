@@ -2,7 +2,7 @@
 title: Senate Mechanics
 status: office-mechanics
 scope: offices/senate
-inherits: [/imperium-doctrine.md, ./doctrine.md]
+inherits: [./doctrine.md]
 ---
 
 # Senate Mechanics

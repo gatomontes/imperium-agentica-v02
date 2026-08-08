@@ -1,6 +1,4 @@
 ---
-inherits:
-  - /imperium-doctrine.md
 ---
 
 # Guildhall Doctrine

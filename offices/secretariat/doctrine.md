@@ -1,6 +1,4 @@
 ---
-inherits:
-  - /imperium-doctrine.md
 ---
 
 # Secretariat Doctrine
@@ -143,5 +141,5 @@ Review this doctrine when:
 - intake or delivery transformations become semantically lossy
 - Seat occupancy or Profile qualification rules change
 - the Castellan inquiry or mission-intake contract changes
-- Core Doctrine or the Imperium Lexicon changes
+- governing Office doctrine or shared vocabulary changes
 - evidence reveals authority expansion, invented meaning, or broken lineage

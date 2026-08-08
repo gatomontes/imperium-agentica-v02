@@ -1,7 +1,5 @@
 # Castellan
 
-Castellan and every constituent in this directory inherit the general canons in [`/imperium-doctrine.md`](../../imperium-doctrine.md).
-
 Castellan is Imperium's mission-formation Office. It interprets authenticated Operator intent, directs the bounded clarification exchange, and produces the accepted Mission Specification required by downstream Offices.
 
 This directory contains:

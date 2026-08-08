@@ -1,6 +1,4 @@
 ---
-inherits:
-  - /imperium-doctrine.md
 ---
 
 # Castellan Doctrine
@@ -31,7 +29,7 @@ Castellan owns:
 - mission-contract conformance of downstream returns
 - its Rector Seat and Rector Profile
 
-Castellan may also disposition an exact Foundry Release Packet for Persona admission to Garrison when that responsibility is invoked. That decision is bound to the exact candidate Persona, passing Pit evidence, production approval, fingerprints, and lineage; it creates no recruitment, activation, tool, credential, or deployment authority.
+Castellan may also disposition an exact Foundry Release Packet for Persona admission to Garrison when that responsibility is invoked. That decision is bound to the exact candidate Persona, its passing Senate confirmation record, production approval, fingerprints, and lineage; it creates no installation, spawning, activation, tool, credential, or deployment authority.
 
 ## Mission-formation discipline
 
@@ -59,7 +57,6 @@ Castellan may produce:
 - Mission Need
 - versioned Mission Specification
 - mission continuation or handoff note
-- approved Work Specification where the legacy contract requires that name
 - exact handoff package for Guildhall, Collegium, or another competent Office
 - mission-contract conformance finding
 - exact Persona admission or rejection record when exercising the separately established Garrison-admission responsibility
@@ -135,6 +132,6 @@ Review this doctrine when:
 - Secretariat begins deciding answer quality or mission meaning
 - accepted values lose exact answer provenance
 - mission formation begins creating operational authority
-- Castellan absorbs profession, production, recruitment, deployment, or return-judgment authority
+- Castellan absorbs profession, production, installation, spawning, deployment, or return-judgment authority
 - Persona admission is reassigned, narrowed, or removed
 - the Mission Dossier, Mission Specification, Seat, or Profile contract changes
