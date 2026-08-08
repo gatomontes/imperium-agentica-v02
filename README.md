@@ -9,6 +9,11 @@ Each Office owns its doctrine, Seats, Profiles, and non-cognitive mechanics.
 of the authenticated Charter. MasterMason bootstraps the primordial Offices,
 manages every spawning request, commissions Conscription, binds qualified
 manifestations, activates Offices, and manages declared routes.
+The [Bootstrap Manifest contract](contracts/bootstrap-manifest.md) requires one
+signed, immutable artifact to pin the exact Charter, Launcher, MasterMason,
+Conscription, Secretariat, Castellan, primordial Seats, Profiles, substrates,
+routes, state machine, trust material, and compatibility declaration. No valid
+Manifest means no launch.
 [`imperator.md`](imperator.md) reserves the name Imperator for the
 authenticated exceptional SuperAdmin principal. Imperator is absent from
 bootstrap and ordinary runtime sequence.
