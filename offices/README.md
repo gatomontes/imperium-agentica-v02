@@ -2,6 +2,11 @@
 
 This directory is the Office-first doctrinal view of Imperium.
 
+Every Office and Office-owned constituent inherits the constitutional canons
+in [`imperium-doctrine.md`](../imperium-doctrine.md). Office doctrine may
+specify or narrow those canons within its jurisdiction; it may not silently
+contradict, waive, or enlarge them.
+
 Each Office defines:
 
 - `doctrine.md` — institutional purpose, jurisdiction, cognitive responsibilities, and boundaries
@@ -18,10 +23,14 @@ Imperator is the primordial owner of Imperium, not an Office. At activation it c
 | Mechanical capability | Owning Office | Mechanic |
 |---|---|---|
 | Register an Officer activation request | Conscription | `register-activation-request` |
-| Instantiate the generic Officer substrate and install an exact Profile | Conscription | `instantiate-generic-officer`, `install-profile` |
+| Instantiate the generic-agent substrate and install an exact approved Profile | Conscription | `instantiate-generic-agent`, `install-profile` |
 | Preserve qualification and bind a successful construction | Conscription | `record-qualification-disposition`, `bind-qualified-officer` |
 | Deliver a qualified Officer for Imperator-authorized Seat binding | Conscription | `deliver-qualified-officer` |
 | Bootstrap the resident Recruiter through the sole mechanical spawning exception | Conscription | `bootstrap-recruiter` |
+| Open and preserve a Persona-transformation case | Laboratorium | `open-transformation-case` |
+| Bind requirements, target contract, and exact admitted Persona source | Laboratorium | `bind-transformation-inputs` |
+| Version a derived artifact without mutating its source | Laboratorium | `version-derived-artifact` |
+| Record Alchemist disposition and issue the derived-artifact packet | Laboratorium | `record-transformation-disposition`, `issue-derived-artifact-packet` |
 | Register intake and preserve exact material | Secretariat | `register-intake` |
 | Present one authorized question and correlate its answer | Secretariat | `present-question`, `record-answer` |
 | Package and deliver an authorized artifact | Secretariat | `package-delivery`, `deliver-package` |

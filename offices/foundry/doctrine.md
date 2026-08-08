@@ -96,7 +96,8 @@ Foundry must not:
 - create a Profile, agent definition, or platform-specific operative;
 - install a Profile, spawn an agent, or occupy a Seat;
 - grant tools, credentials, mission authority, or deployment; or
-- mutate an admitted Persona in place.
+- mutate an admitted Persona in place; or
+- derive a Profile, skill, agent definition, or other target-specific cognitive artifact from an admitted Persona.
 
 ## Boundary maxim
 
@@ -111,4 +112,5 @@ Adverse findings return for owned correction and complete re-review.
 A clean exact-version review permits Artificer to consider production approval.
 Persona admission remains outside Foundry.
 Garrison holds what is admitted.
+Laboratorium transforms an admitted Persona into versioned target-specific artifacts.
 ```

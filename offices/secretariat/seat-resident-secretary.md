@@ -22,11 +22,11 @@ The Seat binds a qualified occupant to Secretariat's jurisdiction. Occupancy gra
 
 ## Vacancy
 
-When the Seat is vacant:
+After Imperator has turned on Recruiter, when the Secretary Seat is vacant:
 
 - Secretariat cannot perform cognitive intake or Operator-facing dialogue through a Secretary
 - an incoming request remains pending rather than being silently handled by another Office
-- Secretariat sends the Secretary Profile and pending request to Conscription
+- Secretariat sends the Secretary Profile and pending activation request to Conscription
 - Conscription obtains a generic Officer, installs the exact current Secretary Profile, spawns the qualified Secretary, and returns it for occupancy
 - no authority is exercised merely because a request exists or spawning has begun
 

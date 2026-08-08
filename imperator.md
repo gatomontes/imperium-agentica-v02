@@ -19,10 +19,11 @@ Upon Imperium activation, mechanics instantiate Imperator from the authenticated
 3. verifies each Office-stewarded Profile's identity, target Seat, digest, version, and current/active designation
 4. signs the exact current/active Profile version, thereby approving it for installation
 5. detects vacant resident Seats
-6. authorizes Conscription's sole mechanical Recruiter bootstrap
-7. binds the mechanically originated Recruiter to the resident Recruiter Seat
-8. binds each subsequently qualified Officer to its exact target Seat
-9. records every constitution, signature, binding, suspension, vacation, and restoration event
+6. directs Conscription mechanics to prepare the sole mechanical Recruiter bootstrap
+7. verifies the prepared Recruiter and turns it on in the resident Recruiter Seat
+8. permits Secretariat to submit the pending Secretary activation request only after Recruiter is active
+9. binds each subsequently qualified Officer to its exact target Seat
+10. records every constitution, signature, activation, binding, suspension, vacation, and restoration event
 
 ## Profile approval
 
@@ -52,7 +53,7 @@ Imperator may:
 - verify and constitute the canonical Office corpus
 - approve exact current/active Profiles by digital signature
 - hold Offices while their resident Seats are vacant
-- authorize the Recruiter bootstrap
+- direct preparation of the Recruiter bootstrap and turn on the exact prepared Recruiter
 - bind properly constructed and qualified Officers to exact Seats
 - suspend or vacate invalid occupancy
 - restore resident occupancy
