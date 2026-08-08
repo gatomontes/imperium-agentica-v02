@@ -9,7 +9,7 @@ inherits:
 
 Garrison owns and stewards this Profile. It specifies the cognition and qualification required to occupy the Constable Seat.
 
-Garrison stewards this Profile. Conscription may install only its exact current/active version carrying a valid Imperator signature and perform Officer qualification. It does not author, revise, interpret, steward, approve, or sign the Profile; Imperator separately authorizes Seat binding.
+Garrison stewards this Profile. Conscription may install only its exact current/active version with a structurally valid approval chain and perform Officer qualification. It does not author, revise, interpret, steward, approve, or sign the Profile; MasterMason separately performs Seat binding.
 
 ## Required cognition
 
@@ -74,4 +74,4 @@ Qualification must prove that the candidate:
 - maintains bounded failure and explicit refusal
 - respects ownership by the artifact's originating Office
 
-Every revised Constable Profile is a distinct version requiring separate current/active designation, Imperator signature, installation, Officer qualification, and Seat binding. A predecessor's occupancy authority does not silently survive a material Profile change.
+Every revised Constable Profile is a distinct version requiring separate current/active designation, competent approval attestation, installation, Officer qualification, and Seat binding. A predecessor's occupancy authority does not silently survive a material Profile change.

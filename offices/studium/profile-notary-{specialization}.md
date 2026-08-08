@@ -32,6 +32,6 @@ The Profile must not equip its bearer to claim general legal authority, adjudica
 
 ## Ownership and installation
 
-Studium owns and versions each approved specialized Notary Profile. Conscription may install only the exact Imperator-signed version that Studium has designated current/active into a generic agent substrate.
+Studium owns and versions each approved specialized Notary Profile. Conscription may install only the exact competently approved version that Studium has designated current/active into a generic agent substrate.
 
 Installation does not grant authority. Only valid occupancy of the matching specialized Notary Seat does.

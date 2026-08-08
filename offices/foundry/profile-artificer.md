@@ -51,6 +51,6 @@ The Profile must not equip its bearer to:
 
 ## Ownership and installation
 
-Foundry stewards and versions this Profile. Conscription may install only the exact current/active version carrying a valid Imperator signature and qualify the resulting Officer candidate.
+Foundry stewards and versions this Profile. Conscription may install only the exact current/active version with a structurally valid approval chain and qualify the resulting Officer candidate.
 
 Profile ownership remains with Foundry. Installation does not grant Seat authority; only valid occupancy does.

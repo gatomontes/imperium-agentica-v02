@@ -19,4 +19,4 @@ Hagiography Office
 └── Chronicler Committee Seat {version} + Profile {version}
 ```
 
-The placeholder denotes the exact approved, Imperator-signed, current/active Chronicler Profile version used for that committee position. It is not a generic unversioned Chronicler and not a version of the committee as a collective body.
+The placeholder denotes the exact approved, current/active Chronicler Profile version used for that committee position. It is not a generic unversioned Chronicler and not a version of the committee as a collective body.

@@ -36,4 +36,4 @@ When vacant, Laboratorium retains its doctrine, cases, artifacts, and ownership 
 
 ## Occupancy
 
-Only an Officer bearing the exact current/active, Imperator-signed Alchemist Profile and properly bound by Imperator may occupy this Seat. Installation and qualification alone do not establish occupancy.
+Only an Officer bearing the exact approved, current/active Alchemist Profile with a structurally valid approval chain and properly bound by MasterMason may occupy this Seat. Installation and qualification alone do not establish occupancy.

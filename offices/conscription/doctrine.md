@@ -1,4 +1,6 @@
 ---
+inherits:
+  - /imperium-doctrine.md
 ---
 
 # Conscription Doctrine
@@ -11,7 +13,7 @@ Current theoretical definition of Officer and operative incarnation, Profile ins
 
 Conscription attaches an exact approved Profile to an authorized generic-agent substrate and qualifies the resulting manifestation for its declared Seat, role, or mission destination. It preserves the distinction between generic cognition, Profile installation, candidate manifestation, qualification, working Officer or operative, and activated authority.
 
-Conscription is the incarnation and qualification Office. It does not derive or author Profiles, own another Office's Seat, or confer Office or mission authority by construction alone.
+Conscription is the incarnation and qualification Office. It does not derive or author Profiles, own another Office's Seat, manage spawning requests, or confer Office or mission authority by construction alone.
 
 ## Core question
 
@@ -31,86 +33,88 @@ Conscription owns:
 - Officer and operative construction and qualification records
 - the qualification disposition for a constructed manifestation
 
-The requesting Office owns:
+The destination Office owns:
 
 - its Seat
 - the Profile required by that Seat
 - the authority exposed through occupancy
-- stewardship of its exact current/active, Imperator-signed Profile
+- stewardship of its exact current/active Profile
 
-Imperator owns the constitutional authority to bind a properly qualified Officer to the exact vacant Seat. This binding activates the Seat's pre-existing authority; neither Imperator nor Conscription thereby acquires the Office's jurisdiction.
+MasterMason manages every spawning request and owns the mechanical transition that binds a properly qualified manifestation to an exact vacant Seat. Binding activates the Seat's pre-existing authority; neither MasterMason nor Conscription thereby acquires the Office's jurisdiction.
 
 ## Standard construction path
 
 For every Officer except Recruiter:
 
-1. A vacant Seat supplies its exact current/active Profile and activation request to Conscription.
-2. Conscription validates identity, version, ownership, target Seat, content digest, current/active status, valid Imperator signature, and correlation.
-3. The occupied Recruiter Seat selects an authorized generic Officer substrate.
+1. MasterMason validates an attributable spawning request and commissions Conscription with the exact target Seat, current/active Profile, correlation, and Charter basis.
+2. Conscription validates Profile identity, version, ownership, target, content digest, current/active designation, approval attestations, and correlation.
+3. The occupied Recruiter Seat selects an authorized generic-agent substrate.
 4. Recruiter installs the supplied Profile without rewriting or supplementing it.
-5. Recruiter examines the resulting agent against the Profile's qualification checks and Seat requirements.
+5. Recruiter examines the resulting manifestation against the Profile's qualification checks and Seat requirements.
 6. Recruiter issues one attributable qualification disposition.
-7. On success, mechanics bind the Officer, Profile version, qualification record, and intended Seat and deliver them to the requesting Office.
-8. Imperator authorizes non-cognitive binding of the qualified Officer to the exact vacant Seat after every declared invariant succeeds.
+7. On success, Conscription seals the manifestation, Profile version, qualification record, and intended Seat into a delivery packet and returns it to MasterMason.
+8. MasterMason verifies the packet and mechanically binds the qualified manifestation to the exact vacant Seat.
 
-Qualification failure produces no partially qualified Officer and no authority.
+Qualification failure produces no partially qualified manifestation and no authority. Conscription returns the bounded failure to MasterMason under the original correlation.
 
 ## Operative incarnation path
 
-For an operative, Conscription receives an exact approved, lineage-bound Profile derived by Laboratorium from an admitted Persona, together with its declared destination and qualification contract. Recruiter verifies the applicable approval, installs the Profile into an authorized generic-agent instance, examines the complete manifestation, and issues one attributable qualification disposition.
+For an operative, Conscription receives from MasterMason an exact approved, lineage-bound Profile derived by Laboratorium from an admitted Persona, together with its declared destination and qualification contract. Recruiter verifies the applicable approval, installs the Profile into an authorized generic-agent instance, examines the complete manifestation, and issues one attributable qualification disposition.
 
 Successful qualification produces a working operative eligible for the separately authorized deployment path. It does not itself grant tools, credentials, mission authority, or deployment. Conscription neither re-derives the Profile nor mutates its source Persona lineage.
 
 ## Senate examination assembly path
 
-Senate may submit an assembly request containing an exact Foundry-approved, pending-admission Persona and examination contract. Conscription commissions Laboratorium to derive an `examination_only` Profile from that exact Persona, receives the returned Profile, and assembles a sealed examination assembly packet.
+Senate submits its assembly request to MasterMason containing an exact Foundry-approved, pending-admission Persona and examination contract. MasterMason validates the route and commissions Conscription. Conscription commissions Laboratorium to derive an `examination_only` Profile from that exact Persona, receives the returned Profile, and assembles a sealed examination assembly packet.
 
-Conscription returns the packet to Senate; it does not activate or transfer a live manifestation. The packet binds the exact Persona and Profile versions and digests, authorized generic-agent substrate, model and runtime configuration, applicable doctrine, permitted synthetic facilities, resource limits, examination identity, launch contract, expiry and disposal conditions, and an integrity digest over the complete composition.
+Conscription returns the packet through MasterMason to the Senate case; it does not activate or transfer a live manifestation. The packet binds the exact Persona and Profile versions and digests, authorized generic-agent substrate, model and runtime configuration, applicable doctrine, permitted synthetic facilities, resource limits, examination identity, launch contract, expiry and disposal conditions, and an integrity digest over the complete composition.
 
 Senate-owned mechanics verify and instantiate the packet on the stand. The resulting witness has no Seat, mission, operational authority, real assets, or eligibility for reuse outside the named proceeding. Assembly success is not Persona confirmation, Profile approval, or qualification for any operational destination.
 
 ## Primordial Recruiter bootstrap
 
-Recruiter cannot cognitively construct itself before the Recruiter Seat is occupied. Conscription therefore owns one narrow mechanical exception:
+Recruiter cannot cognitively construct itself before the Recruiter Seat is occupied. The Charter therefore declares one narrow mechanical exception managed by MasterMason:
 
 ```text
-vacant resident Recruiter Seat
-→ Imperator directs mechanical bootstrap preparation
-→ validate exact current/active, Imperator-signed Recruiter Profile and authorized generic substrate
+authenticated Charter + compatible MasterMason
+→ vacant resident Recruiter Seat
+→ MasterMason invokes bootstrap
+→ validate exact Charter-recognized current/active Recruiter Profile
+→ validate authorized generic substrate
 → instantiate substrate
 → install Recruiter Profile exactly
 → prepare resulting Recruiter for the exact Recruiter Seat
 → record mechanical origin
-→ Imperator verifies and turns on Recruiter in the resident Recruiter Seat
-→ Secretariat submits the pending Secretary activation request
+→ MasterMason verifies, binds, and activates Recruiter
+→ MasterMason commissions Secretary and Rector
 ```
 
 This exception:
 
 - applies only to the exact current Recruiter Profile and resident Recruiter Seat
-- requires Imperator direction and a valid Imperator signature on the exact Profile
+- requires an exact Charter-declared transition and structurally valid Profile approval chain
 - performs no interpretive selection, rewriting, discretionary qualification, or substitution
 - fails closed on any mismatch, ambiguity, missing version, invalid substrate, or occupied Seat
-- may not target another Profile, Officer, or Seat
+- may not target another Profile, manifestation, or Seat
 - may not be generalized as an alternate spawning route
 
-The mechanical bootstrap does not prove broad qualification through cognitive examination. It establishes the primordial Recruiter from the Office's exact predeclared substrate, Profile, and binding so that normal cognitive qualification can begin. Its origin remains explicit in the Officer and occupancy records.
+The mechanical bootstrap does not prove broad qualification through cognitive examination. It establishes the primordial Recruiter from the exact predeclared substrate, Profile, and binding so that normal cognitive qualification can begin. Its origin remains explicit in the manifestation and occupancy records.
 
 ## Responsibilities
 
 The Recruiter:
 
-- receives exact activation requests, Profiles, and Seat requirements
-- verifies current/active designation, content digest, target Seat, and Imperator signature before installation
+- receives exact MasterMason commissions, Profiles, and destination requirements
+- verifies current/active designation, content digest, target, and approval chain before installation
 - preserves Profile ownership and version identity
-- installs Profiles into authorized generic Officer substrates
-- conducts the qualification checks declared by the Profile and Seat
+- installs Profiles into authorized generic-agent substrates
+- conducts the qualification checks declared by the Profile and destination
 - distinguishes installation success from qualification success
 - rejects partial, ambiguous, stale, altered, or cross-boundary construction
 - issues the sole Conscription qualification disposition
-- returns attributable failures to the requesting Office
-- delivers only version-bound qualified Officers
-- commissions exact `examination_only` Profiles and returns sealed examination assembly packets when Senate validly requests them
+- returns attributable failures to MasterMason
+- delivers only version-bound qualified manifestations
+- commissions exact `examination_only` Profiles and returns sealed examination assembly packets when MasterMason validly commissions them
 
 ## Non-authority
 
@@ -118,14 +122,15 @@ Conscription and Recruiter must not:
 
 - author, repair, reinterpret, expand, approve, sign, or activate another Office's Profile
 - derive a Profile or other usable form from a Persona
-- decide that another Office needs an Officer without a valid activation request
-- bind or occupy another Office's Seat without Imperator authorization
+- decide that another Office needs an Officer without a valid MasterMason commission
+- manage a spawning request
+- bind or occupy another Office's Seat
 - treat construction, installation, qualification, delivery, or spawning as Seat occupancy
-- confer authority outside the requesting Seat
+- confer authority outside the target Seat or mission
 - retain or reuse another Office's Profile as an independent grant
 - mechanically bootstrap any Officer other than Recruiter
 - activate, deploy, or transfer a live Senate examination witness
-- allow a superseded Profile to float into an existing Officer
+- allow a superseded Profile to float into an existing manifestation
 - conceal bootstrap origin, failed qualification, substitutions, or version lineage
 
 ## Profile contract verification
@@ -145,30 +150,31 @@ ordinary installability path.
 
 Conscription may produce or steward:
 
-- activation receipt
+- commission receipt
 - substrate-instance record
 - Profile-installation record
 - qualification case and attributable findings
 - qualification disposition
-- Officer construction record
-- Seat-target binding
-- delivery package
+- manifestation construction record
+- Seat-target binding proposal
+- delivery packet
 - Recruiter bootstrap record
 - Senate examination assembly packet
 
 ## Boundary maxim
 
 ```text
-Mechanics prepare Recruiter only; Imperator turns Recruiter on.
-Recruiter constructs and qualifies every other Officer.
-Imperator binds qualified Officers; occupied Seats activate Office authority.
+MasterMason manages every spawning request and every runtime transition.
+Mechanics prepare Recruiter only; MasterMason binds and activates Recruiter.
+Recruiter assembles and qualifies every other manifestation.
+MasterMason binds qualified manifestations to their destinations.
 ```
 
 ## Revision conditions
 
 Review this doctrine when:
 
-- the generic Officer substrate changes
+- the generic-agent substrate changes
 - Profile installation or qualification semantics change
 - Seat occupancy requirements change
 - any path attempts to generalize the Recruiter bootstrap

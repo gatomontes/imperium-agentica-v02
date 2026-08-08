@@ -5,13 +5,13 @@ root. The Office architecture in [`offices/`](offices/README.md) is the sole
 active cognitive definition beneath it.
 
 Each Office owns its doctrine, Seats, Profiles, and non-cognitive mechanics.
-[`imperator.md`](imperator.md) defines the primordial constitutional authority
-that owns the Imperium instance, constitutes and holds the Offices, approves
-exact current/active Profiles by digital signature, and vests bounded runtime
-authority without operating the runtime or exercising an Office's jurisdiction.
-[`mastermason.md`](mastermason.md) defines the non-cognizant runtime authority
-that mechanically activates Offices, obtains qualified manifestations through
-Conscription, binds them to Seats, and manages declared routes.
+[`mastermason.md`](mastermason.md) defines the non-cognizant executable form
+of the authenticated Charter. MasterMason bootstraps the primordial Offices,
+manages every spawning request, commissions Conscription, binds qualified
+manifestations, activates Offices, and manages declared routes.
+[`imperator.md`](imperator.md) reserves the name Imperator for the
+authenticated exceptional SuperAdmin principal. Imperator is absent from
+bootstrap and ordinary runtime sequence.
 
 Laboratorium transforms admitted Personas into lineage-bound, versioned Profiles,
 skills, agent definitions, and other target-specific cognitive artifacts.

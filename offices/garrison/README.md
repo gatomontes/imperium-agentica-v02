@@ -15,4 +15,4 @@ Garrison ≠ Constable Seat ≠ Constable Profile ≠ held Persona
          ≠ held Profile record ≠ generic agent ≠ spawned Constable
 ```
 
-Garrison owns and stewards the Constable Seat and Constable Profile. Imperator approves the exact current/active Constable Profile by digital signature. Garrison admits and holds Persona versions and their custody records; it does not hold Profiles. Conscription may install the exact signed current/active Constable Profile into a generic agent and qualify the candidate, after which Imperator may bind it to the Seat.
+Garrison owns and stewards the Constable Seat and Constable Profile. The Charter assigns competent Profile-approval jurisdiction; Garrison designates the exact approved version current/active. Garrison admits and holds Persona versions and their custody records; it does not hold Profiles. Conscription may install the exact approved current/active Constable Profile into a generic agent and qualify the candidate, after which MasterMason may bind it to the Seat.

@@ -39,7 +39,7 @@ Every Profile derives from one exact Persona version.
   approval evidence, and the exact Senate examination identity.
 
 An `examination_only` Profile may target only its named Senate proceeding. It
-cannot be approved, signed, designated current/active, installed for ordinary
+cannot be approved, designated current/active, installed for ordinary
 qualification, occupy a Seat, perform a mission, or be converted into another
 artifact class. Closure of the proceeding or rejection of the Persona expires
 it and its assembly packet.
@@ -48,8 +48,9 @@ it and its assembly packet.
 
 Lifecycle state is not written into the immutable envelope. Each transition is
 an append-only attestation referencing the exact `profile_id`,
-`profile_version`, and `content_digest`. This keeps signatures verifiable and
-prevents a status update from mutating the signed artifact.
+`profile_version`, and `content_digest`. This prevents a status update from
+mutating the authenticated artifact.
+
 The canonical record shape is defined by
 [`profile-attestation.schema.json`](profile-attestation.schema.json).
 
@@ -63,19 +64,23 @@ candidate
 → superseded | revoked | expired
 ```
 
-An approval attestation must name the competent authority and the exact
-examination disposition on which approval depends. For an Officer Profile,
-approval requires Imperator's digital signature over the Profile identity,
-version, digest, owning Office, target Seat, and approval disposition.
+An approval attestation must name the exact competent authority established by
+the Charter and the exact examination disposition on which approval depends.
+No administrative identity, including Imperator, is an approval authority
+unless a separate Charter provision explicitly assigns that exact
+artifact-class jurisdiction.
 
 A `current_active` designation is issued by the destination steward only after
 approval. At most one Profile version may be current/active for a given steward
 and target. Designating a successor current/active requires a `SUPERSEDES`
 relation and a supersession attestation for the predecessor.
 
-The approval authorities for operative and framework-specific products remain
-unassigned. Such artifacts remain non-installable until their class-specific
-authority is constitutionally defined and has issued a valid attestation.
+Approval authority for each artifact class must be constitutionally assigned.
+An artifact remains non-installable until its class-specific competent
+authority has issued a structurally and cryptographically valid attestation.
+The authenticated initial bootstrap corpus may identify predeclared Profiles
+and approval attestations required to establish the primordial runtime; their
+validity derives from that corpus, not from a runtime SuperAdmin signature.
 
 `examination_only` Profiles use a closed lifecycle:
 
@@ -95,11 +100,16 @@ structurally and cryptographically valid:
 - immutable envelope and content digest;
 - source Persona lineage and admission evidence;
 - favorable Laboratorium disposition;
-- required examination and approval attestations;
+- required examination and competent-approval attestations;
 - destination-steward `current_active` designation;
 - target correlation; and
 - no later supersession, revocation, or expiration attestation.
 
+MasterMason must validate the complete installability chain before
+commissioning Conscription. Conscription independently verifies the supplied
+chain before installation.
+
 For a Senate assembly, Conscription may package an `examination_only` Profile
-only for its exact commissioning case. It is not an installable ordinary
-Profile and does not enter the ordinary approval lifecycle.
+only for its exact MasterMason commission and originating Senate case. It is not
+an installable ordinary Profile and does not enter the ordinary approval
+lifecycle.

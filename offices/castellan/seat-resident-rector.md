@@ -22,7 +22,7 @@ Castellan sends the exact current Rector Profile to Conscription for qualificati
 
 A candidate may occupy this Seat only when:
 
-- qualified against the exact approved, Imperator-signed, current/active Rector Profile
+- qualified against the exact approved, current/active Rector Profile
 - successfully qualified against that Profile
 - bound explicitly to Castellan and this Seat
 - not occupying a conflicting Seat

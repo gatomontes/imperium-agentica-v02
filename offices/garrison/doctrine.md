@@ -114,7 +114,7 @@ Foundry produces and releases the exact approved Persona. Senate supplies the li
 
 ### Conscription
 
-Conscription does not retrieve Officer Profiles from Garrison. It receives an exact current/active, Imperator-signed Profile from its stewarding Office and verifies that status before installation. Garrison performs none of those transformations.
+Conscription does not retrieve Officer Profiles from Garrison. It receives an exact approved, current/active Profile with a structurally valid approval chain from its stewarding Office and verifies that status before installation. Garrison performs none of those transformations.
 
 ### Guildhall and other suitability authorities
 
@@ -158,7 +158,7 @@ Garrison sends the exact current Constable Profile with the request for qualific
 
 ```text
 Constable admits Personas; Garrison mechanics preserve exactly what was dispositioned.
-Offices steward Profiles; Imperator signs exact current/active versions.
+Offices steward Profiles; the Charter assigns competent approval jurisdiction, and destination stewards designate exact approved versions current/active.
 Garrison reports custody facts; it does not decide fitness or use.
 Conscription installs and spawns under its own authority.
 Runtime realizes; it does not reinterpret.

@@ -82,7 +82,7 @@ Senate assembly request + exact pending-admission Persona
 → Senate stand
 ```
 
-Imperium Officer Profiles become installable only when the destination Office designates the exact version current/active and Imperator signs it. External products require the competent approval defined for their artifact class.
+Imperium Officer Profiles become installable only when the destination Office designates the exact version current/active and the complete competent-approval chain is structurally and cryptographically valid. External products require the competent approval defined for their artifact class.
 
 ## Non-authority
 

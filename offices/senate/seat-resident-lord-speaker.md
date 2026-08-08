@@ -27,4 +27,4 @@ When vacant, Senate may preserve existing artifacts but cannot convene hearings,
 
 ## Occupancy
 
-Only a candidate qualified against the exact approved, Imperator-signed, current/active Lord Speaker Profile may occupy this Seat. Installation or spawning does not establish occupancy.
+Only a candidate qualified against the exact approved, current/active Lord Speaker Profile may occupy this Seat. Installation or spawning does not establish occupancy.

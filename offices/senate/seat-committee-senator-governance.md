@@ -22,4 +22,4 @@ The Seat may not author doctrine, amend the subject, examine outside jurisdictio
 
 ## Occupancy
 
-Occupation is hearing-bound and ends with accepted return or closure. Only a candidate qualified against the exact approved, Imperator-signed, current/active Senator of Governance Profile may occupy this Seat.
+Occupation is hearing-bound and ends with accepted return or closure. Only a candidate qualified against the exact approved, current/active Senator of Governance Profile may occupy this Seat.

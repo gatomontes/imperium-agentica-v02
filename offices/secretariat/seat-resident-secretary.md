@@ -22,7 +22,7 @@ The Seat binds a qualified occupant to Secretariat's jurisdiction. Occupancy gra
 
 ## Vacancy
 
-After Imperator has turned on Recruiter, when the Secretary Seat is vacant:
+After MasterMason has turned on Recruiter, when the Secretary Seat is vacant:
 
 - Secretariat cannot perform cognitive intake or Operator-facing dialogue through a Secretary
 - an incoming request remains pending rather than being silently handled by another Office

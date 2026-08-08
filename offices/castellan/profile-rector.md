@@ -9,7 +9,7 @@ inherits:
 
 Castellan owns this Profile. It qualifies a generic Officer to occupy the Rector Seat.
 
-Conscription may install only the exact current/active Profile carrying a valid Imperator signature and perform Officer qualification. It does not author, revise, interpret, steward, approve, or sign the Profile. Imperator separately authorizes Seat binding.
+Conscription may install only the exact current/active Profile with a structurally valid approval chain and perform Officer qualification. It does not author, revise, interpret, steward, approve, or sign the Profile. MasterMason separately performs Seat binding.
 
 ## Required cognition
 

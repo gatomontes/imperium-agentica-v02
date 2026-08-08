@@ -15,4 +15,4 @@ Castellan ≠ Rector Seat ≠ Rector Profile ≠ Rector Persona
           ≠ generic agent ≠ spawned Rector
 ```
 
-Castellan owns the Rector Seat and stewards the Rector Profile. Conscription may install only its exact current/active, Imperator-signed version and qualify the candidate. Imperator separately binds the qualified Officer to the Seat; installation and qualification create no Castellan authority.
+Castellan owns the Rector Seat and stewards the Rector Profile. Conscription may install only its exact approved, current/active version with a structurally valid approval chain and qualify the candidate. MasterMason separately binds the qualified manifestation to the Seat; installation and qualification create no Castellan authority.

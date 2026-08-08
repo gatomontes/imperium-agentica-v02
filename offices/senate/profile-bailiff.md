@@ -21,4 +21,4 @@ It must not equip its bearer to judge Persona merit, vote, issue disposition, al
 
 ## Ownership and installation
 
-Senate stewards and versions this Profile. Conscription may install only the exact current/active version carrying a valid Imperator signature. Installation, Officer qualification, and Imperator-authorized Seat binding are distinct; authority requires valid Bailiff Seat occupancy.
+Senate stewards and versions this Profile. Conscription may install only the exact current/active version with a structurally valid approval chain. Installation, Officer qualification, and MasterMason Seat binding are distinct; authority requires valid Bailiff Seat occupancy.

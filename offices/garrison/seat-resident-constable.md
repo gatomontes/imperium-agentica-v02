@@ -16,17 +16,17 @@ The Seat is not the Constable Profile, a Persona, a generic agent, a held artifa
 
 When vacant, already-held immutable material and pending requests may remain preserved, but no Persona may be admitted, no new custody accepted, no custodial state changed, no authoritative inventory finding issued, and no held artifact released.
 
-Garrison supplies the exact current/active, Imperator-signed Constable Profile to Conscription for installation and qualification. Imperator separately authorizes Seat binding.
+Garrison supplies the exact approved, current/active Constable Profile with a structurally valid approval chain to Conscription for installation and qualification. MasterMason separately performs Seat binding.
 
 ## Admission to occupancy
 
 A candidate may occupy this Seat only when:
 
-- equipped with the exact current/active Constable Profile carrying a valid Imperator signature
+- equipped with the exact current/active Constable Profile with a structurally valid approval chain
 - successfully qualified against that Profile
 - bound explicitly to Garrison and this Seat
 - not occupying a conflicting Seat
-- bound to occupancy under Imperator authority
+- bound to occupancy by MasterMason under Charter authority
 - carrying an exact current Persona where one is separately required
 
 ## Authority while occupied

@@ -25,4 +25,4 @@ Compositional, comparative, overlap-sensitive, and minimalist; capable of recomm
 
 The occupant recommends only. It must not determine suitability, admit, reject, consolidate, or order professions; impersonate another member or the Guildmaster; select persons or agents; or plan execution.
 
-Each Profile revision is separately versioned, designated current/active, signed by Imperator, installed, used to qualify a candidate, and bound.
+Each Profile revision is separately versioned, designated current/active, approved by the competent authority, installed, used to qualify a candidate, and bound.

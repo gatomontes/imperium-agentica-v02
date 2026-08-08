@@ -25,4 +25,4 @@ It must not equip its bearer to use real secrets or uncontrolled tools, conduct 
 
 ## Ownership and installation
 
-Senate stewards and versions this Profile. Conscription may install only the exact current/active version carrying a valid Imperator signature. Installation, Officer qualification, and Imperator-authorized Seat binding are distinct; authority requires valid committee Seat occupancy.
+Senate stewards and versions this Profile. Conscription may install only the exact current/active version with a structurally valid approval chain. Installation, Officer qualification, and MasterMason Seat binding are distinct; authority requires valid committee Seat occupancy.

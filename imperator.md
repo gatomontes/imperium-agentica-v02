@@ -2,76 +2,57 @@
 
 ## Status
 
-Current theoretical definition of Imperium's primordial constitutional authority and owner.
+Current theoretical definition of Imperium's exceptional SuperAdmin principal.
 
 ## Purpose
 
-Imperator owns the Imperium instance and holds its Offices. It supplies the narrow authority required to constitute the Office corpus, approve exact Officer Profiles, and vest runtime operation without exercising an Office's reserved jurisdiction.
+Imperator names the authenticated SuperAdmin identity for exceptional administration of an Imperium installation. It does not own ordinary workflow, embody the Charter, approve routine artifacts, or participate in bootstrap, spawning, Seat occupancy, Office activation, routing, or mission execution.
 
-Imperator is not an Office, a substitute resident Officer, a universal decision maker, or a runtime operator.
+Imperator is not an Office, Seat, Profile, Persona, Officer, operative, agent, runtime daemon, or required participant in normal operation.
 
-## Activation authority
+## Relationship to the Charter and MasterMason
 
-Upon Imperium activation, the Launcher instantiates Imperator and MasterMason from the authenticated distribution trust root. Imperator then:
+The Charter is Imperium's supreme declarative authority. MasterMason is its non-cognizant executable form.
 
-1. verifies the canonical Office, Seat, Profile, and route corpus
-2. constitutes and holds the verified Offices
-3. verifies each Office-stewarded Profile's identity, target Seat, digest, version, and current/active designation
-4. signs the exact current/active Profile version, thereby approving it for installation
-5. vests MasterMason with bounded runtime authority over this exact Imperium instance
-6. records every constitution, signature, vesting, suspension, restoration, and termination event within its jurisdiction
+The Launcher verifies the Charter and MasterMason implementation and instantiates MasterMason without Imperator participation. MasterMason does not receive, derive, or depend upon vesting from Imperator.
 
-Imperator does not detect operational necessity, activate Offices, request occupants, open routes, bind manifestations, or otherwise operate the runtime. MasterMason performs those mechanical operations under the verified corpus and Imperator's vesting.
+An authenticated Imperator may issue only the exceptional administrative commands that the Charter explicitly defines. MasterMason validates those commands through the same fail-closed machinery applied to every other runtime request. SuperAdmin identity proves who requested the act; it does not itself make an undeclared act lawful.
 
-## Profile approval
+## Exceptional administration
 
-A Profile is approved when and only when:
+Subject to exact Charter provisions, Imperator may be authorized to request:
 
-- its owning Office stewards it for an exact Seat
-- it is the Office's sole current/active version for that Seat
-- its content digest and identifying metadata are exact
-- it carries a valid Imperator digital signature over those facts
+- inspection of runtime and constitutional state
+- emergency suspension or shutdown
+- recovery entry into a declared safe state
+- restoration from a declared recovery state
+- installation of an authenticated Charter successor through the separate constitutional-change procedure
+- preservation and export of administrative evidence
 
-Imperator's signature constitutes approval; existence without a valid signature does not. An unsigned, invalidly signed, unrecognized, altered, stale, or superseded Profile is not installable.
+Every exceptional act must identify the authenticated Imperator, exact command, target instance, Charter basis, reason, time, scope, and resulting runtime events.
 
-Each signed Profile must conform to the shared [Profile Artifact Contract](contracts/profile-artifact.md). Imperator signs an approval attestation bound to the immutable Profile identity, version, content digest, owning Office, target Seat, and disposition. The owning Office separately issues the current/active designation after approval. A revision is a new immutable version requiring a new digest, examination disposition where required, signature, and designation.
-
-Senate examination of Officer Profiles is reserved for later definition. Until that jurisdiction is established, Imperator signs the verified initial constitutional corpus directly. Garrison has no Profile jurisdiction: Offices steward Profiles; Garrison admits and lodges Personas.
-
-## Runtime vesting
-
-Imperator vests MasterMason only after verifying the exact constitutional corpus and runtime identity to which the vesting applies.
-
-Vesting identifies its holder, instance, scope, permitted operations, governing corpus, duration, revocation conditions, and evidence. It grants no cognitive or Office jurisdiction. MasterMason may realize only admitted transitions; it may not interpret or enlarge the authority vested.
-
-## Continuing powers
-
-Imperator may:
-
-- own the Imperium instance and hold its Offices
-- verify and constitute the canonical Office corpus
-- approve exact current/active Profiles by digital signature
-- vest, suspend, restore, or revoke MasterMason's bounded runtime authority
-- suspend or terminate the Imperium instance
-- preserve the constitutional record of those acts
+## Non-authority
 
 Imperator may not:
 
+- participate in ordinary bootstrap or spawning
+- vest MasterMason or enlarge its authority
+- approve or sign Profiles merely by virtue of being SuperAdmin
+- activate Offices, request ordinary occupants, bind manifestations, or open routes
 - perform an Office's reserved cognitive work or disposition
 - act as a vacant resident Officer
-- author an Office's Profile
 - qualify Officers or operatives
-- forge, confirm, admit, or lodge Personas
-- detect operational necessity or choose workflow transitions
-- activate Offices, request occupants, bind manifestations, or open routes
-- use ownership as authority to bypass Seat occupancy
+- create, admit, alter, or interpret Personas
+- use SuperAdmin identity as an implicit bypass of the Charter
+- conceal or erase the evidence of an exceptional act
+
+If an exceptional power is not explicitly and mechanically declared by the Charter, MasterMason refuses it. Charter replacement is not silent mutation of the running Charter and requires its own authenticated, versioned, recoverable procedure.
 
 ## Boundary maxim
 
 ```text
-Imperator owns the instance, constitutes the Offices, and approves Profiles.
-Imperator vests MasterMason with bounded runtime authority.
-MasterMason operates the institutional runtime mechanically.
-Conscription qualifies Officers and operatives.
-Occupied Seats exercise Office authority.
+The Charter commands.
+MasterMason executes the Charter.
+Imperator is the exceptional SuperAdmin identity.
+Imperator is absent from normal runtime sequence.
 ```

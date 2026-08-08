@@ -35,6 +35,6 @@ The Profile must not equip its bearer to alter or impersonate the source Persona
 
 ## Ownership and installation
 
-Laboratorium stewards and versions this Profile. Conscription may install only the exact current/active version carrying a valid Imperator signature and qualify the resulting Officer candidate.
+Laboratorium stewards and versions this Profile. Conscription may install only the exact current/active version with a structurally valid approval chain and qualify the resulting Officer candidate.
 
 Profile ownership remains with Laboratorium. Installation does not grant Seat authority; only valid occupancy does.

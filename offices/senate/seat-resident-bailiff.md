@@ -26,4 +26,4 @@ When vacant, Senate may preserve artifacts but no live confirmation proceeding m
 
 ## Occupancy
 
-Only a candidate qualified against the exact approved, Imperator-signed, current/active Bailiff Profile may occupy this Seat. Installation or spawning does not establish occupancy. Initial activation is unresolved.
+Only a candidate qualified against the exact approved, current/active Bailiff Profile may occupy this Seat. Installation or spawning does not establish occupancy. Initial activation is unresolved.

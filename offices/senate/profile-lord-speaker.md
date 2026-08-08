@@ -26,4 +26,4 @@ The Profile must not equip its bearer to fabricate testimony, impersonate Senato
 
 ## Ownership and installation
 
-Senate stewards and versions this Profile. Conscription may install only the exact current/active version carrying a valid Imperator signature. Installation grants no qualification or authority; Recruiter qualification and Imperator-authorized Seat binding remain distinct.
+Senate stewards and versions this Profile. Conscription may install only the exact current/active version with a structurally valid approval chain. Installation grants no qualification or authority; Recruiter qualification and MasterMason Seat binding remain distinct.

@@ -37,6 +37,6 @@ The Profile must not equip its bearer to fabricate authority, professional meani
 
 ## Ownership and installation
 
-Studium stewards and versions this Profile. Conscription may install only the exact current/active version carrying a valid Imperator signature, then qualify the resulting Officer candidate.
+Studium stewards and versions this Profile. Conscription may install only the exact current/active version with a structurally valid approval chain, then qualify the resulting Officer candidate.
 
 Installation does not grant Seat authority; only valid occupancy does.
