@@ -22,19 +22,21 @@ The Launcher may only verify a supplied Manifest and the artifacts it names. Mas
 
 ## Canonical envelope
 
-The serialized Manifest must use one canonical, machine-readable encoding. Its identifier is the digest of the canonical unsigned payload. The signature envelope is outside that payload and must bind its digest.
+The serialized Manifest must use one canonical, machine-readable encoding. `manifest_id` is the digest of the canonical `unsigned_payload` only; the identifier and signatures are excluded from that digest. Every signature must bind `manifest_id`.
 
-At minimum the payload must contain:
+At minimum the envelope must contain:
 
 ```yaml
 schema: imperium.bootstrap-manifest/v1
 manifest_id: <digest-of-canonical-unsigned-payload>
-charter_generation: <immutable-generation-id>
-instance_class: <declared-instance-class>
-issued_at: <timestamp>
-expires_at: <timestamp-or-null>
 
-trust:
+unsigned_payload:
+  charter_generation: <immutable-generation-id>
+  instance_class: <declared-instance-class>
+  issued_at: <timestamp>
+  expires_at: <timestamp-or-null>
+
+  trust:
   signature_policy: <exact-policy-id-and-digest>
   accepted_signers:
     - key_id: <stable-key-id>
@@ -45,18 +47,18 @@ trust:
     digest: <digest>
     valid_at: <timestamp>
 
-launcher:
+  launcher:
   artifact: <artifact-reference>
   version: <version>
   digest: <digest>
 
-mastermason:
+  mastermason:
   artifact: <artifact-reference>
   version: <version>
   digest: <digest>
   compatible_charter_generation: <exact-generation>
 
-primordial:
+  primordial:
   charter:
     artifact: <artifact-reference>
     version: <version>
@@ -92,7 +94,7 @@ primordial:
     version: <version>
     digest: <digest>
 
-compatibility:
+  compatibility:
   declaration: <artifact-reference>
   version: <version>
   digest: <digest>
@@ -129,7 +131,7 @@ References alone are insufficient. Every artifact entry must include an immutabl
 Before any Imperium state is created, the Launcher must mechanically:
 
 1. parse the canonical Manifest schema without extension-based authority
-2. recompute the unsigned payload digest and match `manifest_id`
+2. canonicalize `unsigned_payload`, recompute its digest, and match `manifest_id`
 3. verify the required signature threshold and signer identities
 4. verify that the revocation snapshot is authentic and valid for the declared launch time
 5. resolve only the exact artifact references named by the Manifest
