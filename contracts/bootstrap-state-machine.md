@@ -15,7 +15,7 @@ This contract defines the deterministic state machine by which MasterMason conve
 
 It governs initial bootstrap only. Ordinary spawning, Office reactivation, succession, upgrade, and disaster recovery require separate state machines and may not enter through this contract.
 
-The exact serialized transition table implementing this contract must be pinned as `primordial.bootstrap_machine` in the Bootstrap Manifest. Prose is explanatory; only the pinned machine-readable predicates and transitions are executable.
+The exact serialized transition table implementing this contract must be pinned as `primordial.bootstrap_machine` in the Bootstrap Manifest. Its failure cleanup and retry actions must be pinned separately as `primordial.bootstrap_recovery_machine` under the [Bootstrap Forward-Recovery Contract](bootstrap-forward-recovery.md). Prose is explanatory; only those pinned machine-readable predicates and transitions are executable.
 
 ## Fixed bindings
 
@@ -46,7 +46,7 @@ UNINITIALIZED
 
 No state may be skipped, inferred, or entered from an undeclared predecessor. `READY` is the sole state in which Secretariat may be exposed to the Operator.
 
-A failed transition does not create another success state. It produces a failure event while the machine remains at the last durably completed state.
+A failed transition does not create another success state. It produces a durable failure event while the machine remains at the last durably completed checkpoint. All cleanup and retry are governed by the pinned forward-recovery machine; no transition may improvise rollback.
 
 ## Transition table
 
@@ -99,7 +99,7 @@ A failed transition does not create another success state. It produces a failure
 - From: `PROVISIONAL_RECRUITER_BOUND`
 - Input: one single-use succession commission containing the pinned ordinary Recruiter Profile, substrate, resident Seat, and qualification contract
 - Predicates:
-  - provisional ordinary Recruiter occupancy remains identical to T04 output
+  - provisional Recruiter occupancy remains identical to T03 output
   - its authority is limited to this exact succession commission
   - the commission, ordinary Profile, and substrate match the Manifest and bound Charter generation
   - the commission has not been consumed
@@ -115,7 +115,7 @@ A failed transition does not create another success state. It produces a failure
 - From: `ORDINARY_RECRUITER_BOUND`
 - Input: two single-use commissions containing the pinned Secretary and Rector Seats, Profiles, substrates, and qualification contracts
 - Predicates:
-  - Recruiter occupancy remains identical to T03 output
+  - ordinary Recruiter occupancy remains identical to T04 output
   - both commissions match the Manifest and bound Charter generation
   - both target Seats are vacant and reserved by this transaction
   - neither commission has been consumed
@@ -202,7 +202,7 @@ MasterMason may execute only the action named by the admitted transition. It may
 
 Before `READY`, no Operator work may enter Secretariat, Castellan, or Conscription. Failed resources remain governed by the exact cleanup or forward-recovery rule attached to the pinned machine; they may not be silently reused.
 
-This contract identifies allowed retry edges but does not define general rollback, cleanup, crash recovery, or disaster recovery. Those are separate required contracts. Their absence keeps the affected retry or recovery path unavailable; it does not authorize MasterMason to improvise.
+Rollback is forbidden. Cleanup, crash reconciliation, resource disposition, reservation release, fresh-identity requirements, and retry admission are governed by the pinned [Bootstrap Forward-Recovery Contract](bootstrap-forward-recovery.md). Disaster recovery remains a separate required contract. Absence or failure of the pinned recovery machine keeps the affected retry path unavailable; it does not authorize MasterMason to improvise.
 
 ## Completion
 
