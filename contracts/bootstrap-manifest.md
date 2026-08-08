@@ -120,7 +120,7 @@ The Manifest pins the entire primordial operational structure:
 - Recruiter, Secretary, and Rector Profile artifacts, including their approval/current-active attestations
 - the exact authorized generic substrate for each primordial manifestation
 - permitted primordial routes
-- the bootstrap state-machine and transition table
+- the [bootstrap state-machine and transition table](bootstrap-state-machine.md), governing initial bootstrap only
 - the compatibility declaration binding all named versions
 - signature policy, trusted signer keys, and the exact revocation snapshot used at launch
 
