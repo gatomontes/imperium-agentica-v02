@@ -1,6 +1,6 @@
 # Conscription
 
-Conscription is Imperium's Officer-construction and qualification Office. It owns the generic Officer substrate, installs Office-provided Profiles, determines whether the resulting agent is qualified, and delivers a qualified Officer for Seat occupancy.
+Conscription is Imperium's agent-incarnation and qualification Office. It owns the generic-agent substrate, installs approved usable Profiles, determines whether the resulting manifestation is qualified, and delivers a working Officer or operative to its authorized destination.
 
 This directory gathers the current theoretical constituents of the Office:
 
@@ -15,7 +15,8 @@ This directory gathers the current theoretical constituents of the Office:
 Conscription ≠ Recruiter Seat ≠ Recruiter Profile ≠ generic Officer ≠ Officer
 ```
 
-Conscription owns the generic Officer substrate, Recruiter Seat, and Recruiter Profile. Other Offices own the Profiles and Seats for their Officers.
+Conscription owns the generic-agent substrate, Recruiter Seat, and Recruiter Profile. Other Offices own and steward the Profiles for their Officers; competent operational stewards hold approved operative Profiles.
 
 The Recruiter is the sole Officer that Conscription mechanics may spawn directly. Once mechanically bootstrapped into its resident Seat, the Recruiter cognitively constructs and qualifies every other Officer.
 
+For ordinary Officers and operatives, Laboratorium derives the usable Profile from an admitted Persona; competent authority approves it; Conscription attaches the exact approved Profile to an authorized generic-agent instance and qualifies the complete manifestation. Conscription does not perform the derivation.

@@ -1,13 +1,17 @@
 # Imperium Agentica v02
 
-The Office architecture in [`offices/`](offices/README.md) is the sole active
-cognitive definition of Imperium.
+[`imperium-doctrine.md`](imperium-doctrine.md) is Imperium's constitutional
+root. The Office architecture in [`offices/`](offices/README.md) is the sole
+active cognitive definition beneath it.
 
 Each Office owns its doctrine, Seats, Profiles, and non-cognitive mechanics.
 [`imperator.md`](imperator.md) defines the bootstrap agent that owns Imperium,
 constitutes and holds the Offices, approves exact current/active Profiles by
 digital signature, and binds qualified Officers to Seats without exercising an
 Office's reserved jurisdiction.
+
+Laboratorium transforms admitted Personas into lineage-bound, versioned Profiles,
+skills, agent definitions, and other target-specific cognitive artifacts.
 No earlier cognitive map, runtime, implementation, schema, fixture, test, or
 continuity document remains active in this tree. Repository history preserves
 the discarded work.

@@ -9,8 +9,8 @@ These functions instantiate, preserve, bind, and transport exact construction ar
 ## register-activation-request
 Validate and preserve the requesting Office, vacant Seat, exact Profile version and digest, current/active designation, owning Office, target Seat, valid Imperator signature, requested cognition, correlation, and authority to request construction.
 
-## instantiate-generic-officer
-Instantiate the authorized generic Officer substrate identified by a valid construction or Recruiter-bootstrap case; output an immutable substrate-instance record.
+## instantiate-generic-agent
+Instantiate the authorized generic-agent substrate identified by a valid Officer, operative, or Recruiter-bootstrap case; output an immutable substrate-instance record.
 
 ## install-profile
 Install the exact supplied Profile into the correlated generic Officer instance without rewriting, supplementation, or semantic transformation; output a Profile-installation record.
@@ -25,8 +25,8 @@ Bind a successful qualification record to the constructed Officer and its intend
 Transmit the qualified Officer and exact construction record for Imperator-authorized binding to the target Seat; record delivery or bounded failure.
 
 ## bootstrap-recruiter
-When and only when Imperator authorizes bootstrap and the resident Recruiter Seat is vacant, mechanically validate the exact current/active, Imperator-signed Recruiter Profile and authorized generic substrate, instantiate the substrate, install that Profile, bind the resulting Recruiter exclusively to the Recruiter Seat under Imperator authority, record its mechanical origin, and occupy the Seat.
+When and only when Imperator directs bootstrap preparation and the resident Recruiter Seat is vacant, mechanically validate the exact current/active, Imperator-signed Recruiter Profile and authorized generic substrate, instantiate the substrate, install that Profile, bind the resulting Recruiter exclusively to the Recruiter Seat, and record its mechanical origin. Imperator then verifies the prepared result and turns Recruiter on in the resident Recruiter Seat.
 
-`bootstrap-recruiter` accepts no alternate Profile or Seat and contains no cognitive judgment. Any mismatch, ambiguity, missing version, invalid substrate, existing occupant, or attempted reuse fails closed.
+`bootstrap-recruiter` accepts no alternate Profile or Seat and contains no cognitive judgment. It cannot turn itself on. Any mismatch, ambiguity, missing version, invalid substrate, existing occupant, or attempted reuse fails closed.
 
 Every function preserves exact identity, version, lineage, correlation, and disposition. Mechanical completion is not proof of ordinary cognitive qualification or authority outside valid Seat occupancy.
