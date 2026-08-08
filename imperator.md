@@ -36,7 +36,7 @@ A Profile is approved when and only when:
 
 Imperator's signature constitutes approval; existence without a valid signature does not. An unsigned, invalidly signed, unrecognized, altered, stale, or superseded Profile is not installable.
 
-Each signed Profile must identify at least its Profile identity and version, owning Office, target Seat, content digest, current/active status, signer, signature, and signing time. A revision is a new immutable version requiring a new digest and signature.
+Each signed Profile must conform to the shared [Profile Artifact Contract](contracts/profile-artifact.md). Imperator signs an approval attestation bound to the immutable Profile identity, version, content digest, owning Office, target Seat, and disposition. The owning Office separately issues the current/active designation after approval. A revision is a new immutable version requiring a new digest, examination disposition where required, signature, and designation.
 
 Senate examination of Officer Profiles is reserved for later definition. Until that jurisdiction is established, Imperator signs the verified initial constitutional corpus directly. Garrison has no Profile jurisdiction: Offices steward Profiles; Garrison admits and lodges Personas.
 
