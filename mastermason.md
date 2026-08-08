@@ -24,17 +24,18 @@ Initial bootstrap is governed exclusively by the pinned [Bootstrap State Machine
 
 After the Launcher has verified the complete pinned composition, MasterMason bootstraps Imperium's primordial operational triad in dependency order:
 
-1. activate the pinned Conscription runtime and invoke the sole pinned mechanical Recruiter bootstrap
-2. verify the prepared Recruiter against the pinned Profile, substrate, Seat, and mechanical invariants, then bind it to the resident Recruiter Seat
-3. commission occupied Conscription to assemble and qualify the pinned Secretary and Rector manifestations
-4. verify both returned manifestation packets against their pinned Profiles, substrates, Seats, and Charter generation
-5. activate the pinned Secretariat and Castellan definitions
-6. bind Secretary and Rector to their exact pinned resident Seats
-7. verify and open only the pinned Secretariat–Castellan routes
-8. declare the primordial triad ready
-9. expose Secretariat as the Operator-facing cognitive interface
+1. activate the pinned Conscription runtime and invoke the sole pinned mechanical bootstrap for a provisional Recruiter
+2. verify and bind that provisional Recruiter to the resident Recruiter Seat with authority limited to producing one ordinary Recruiter successor
+3. commission the provisional Recruiter to assemble and qualify that distinct successor
+4. verify the succession packet, atomically retire the provisional Recruiter, and bind the ordinary Recruiter to the resident Seat
+5. commission the ordinary Recruiter to assemble and qualify the pinned Secretary and Rector manifestations
+6. verify both returned manifestation packets against their pinned Profiles, substrates, Seats, and Charter generation
+7. activate the pinned Secretariat and Castellan definitions
+8. bind Secretary and Rector to their exact pinned resident Seats
+9. verify and open only the pinned Secretariat–Castellan routes
+10. declare the primordial triad ready and expose Secretariat as the Operator-facing cognitive interface
 
-Conscription must precede Secretariat and Castellan because Recruiter supplies their resident cognition. Secretariat and Castellan are both primordial because Secretary's one-question-at-a-time intake depends upon immediate Rector direction and disposition.
+Ordinary Recruiter succession must complete before any Secretary or Rector commission. Conscription must precede Secretariat and Castellan because Recruiter supplies their resident cognition. Secretariat and Castellan are both primordial because Secretary's one-question-at-a-time intake depends upon immediate Rector direction and disposition.
 
 Secretary and Rector do not accept work before the readiness declaration. If either manifestation, Office activation, binding, or required route fails, neither Office is exposed; MasterMason records the bounded failure and preserves a retryable pre-ready state.
 
@@ -66,7 +67,7 @@ MasterMason may:
 - validate and manage every spawning request
 - start, suspend, resume, and retire Office runtime instances
 - read and enforce the authenticated Charter and verified Office, Seat, Profile, route, and lifecycle declarations
-- invoke the sole mechanical Recruiter bootstrap
+- invoke the sole mechanical provisional-Recruiter bootstrap
 - commission occupied Conscription
 - verify returned manifestation packets
 - bind qualified manifestations to exact vacant Seats
