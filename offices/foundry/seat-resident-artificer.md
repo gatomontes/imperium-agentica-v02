@@ -12,7 +12,7 @@ activation_policy: resident
 
 ## Purpose
 
-The Artificer Seat localizes Foundry's authority to govern a Persona production case from accepted entry packet through candidate construction, Pit disposition, and release to Castellan.
+The Artificer Seat localizes Foundry's authority to govern a Persona production case from accepted entry packet through candidate construction, adversarial-review disposition, production approval, and authorized release.
 
 ## Authority while occupied
 
@@ -24,9 +24,10 @@ The occupied Seat may:
 - govern passage through Foundry's functional stations;
 - verify specialized authorship, completeness, schema, identity, and provenance;
 - reconcile only what admitted upstream authority permits;
-- authenticate and dispatch a Persona Candidate to Pit;
+- authenticate and dispatch an immutable Persona Candidate to the occupied Adversarial Reviewer Seat;
+- receive the exact attributed review record;
 - coordinate correction with each defect's native owner;
-- grant Foundry production approval after an exact matching Pit pass; and
+- grant Foundry production approval only after a clean review of the exact candidate version; and
 - authenticate and issue the Foundry Release Packet.
 
 ## Limits
@@ -36,7 +37,8 @@ The Seat may not:
 - alter the professions or their admitted order;
 - write specialized evidence or doctrine on another Office's behalf;
 - repair an upstream authority defect by invention;
-- perform Pit's examination;
+- perform or influence the independent adversarial review;
+- instantiate or behaviorally test the Persona;
 - decide Persona admission or Garrison custody;
 - qualify a Profile, install it, spawn an agent, or deploy an operative; or
 - treat vacancy, technical success, or missing evidence as authority.
