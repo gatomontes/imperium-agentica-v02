@@ -19,8 +19,9 @@ Foundry owns:
 - the Persona production case and profession queue received through Castellan;
 - the exact versioned Persona Template used for construction;
 - assembly, reconciliation, versioning, provenance, and dispatch of the Persona Candidate;
-- correction coordination after a failed Pit examination;
-- production approval after an exact matching Pit pass; and
+- final adversarial review of the completed Persona artifact;
+- correction coordination after an adverse review; and
+- production approval after a clean adversarial review; and
 - assembly of the Foundry Release Packet for Castellan.
 
 The Artificer governs this work through the occupied Artificer Seat.
@@ -47,7 +48,7 @@ The Persona Candidate is assembled in one tagged, versioned template while autho
 - Notary writes and authenticates doctrine-derived sections.
 - Artificer verifies authorship, completeness, schema, identity, provenance, and coherence; routes the artifact; and performs only the synthesis permitted by the admitted inputs.
 
-Artificer must not impersonate Sanctographer, Notary, Guildmaster, Rector, or Pit.
+Artificer must not impersonate Sanctographer, Notary, Guildmaster, Rector, or Adversarial Reviewer.
 
 ## Functional stations
 
@@ -58,28 +59,31 @@ Foundry's chambers are bounded functions, not independent Offices or presumed Of
 - **Temperance** resolves permitted conflicts, omissions, and excesses without weakening upstream authority.
 - **Specification** completes the coherent, testable candidate.
 - **Provenance** preserves exact lineage, transformations, uncertainty, and decisions.
-- **Dispatch** verifies readiness and releases the candidate to Pit.
+- **Adversarial Review** subjects the completed candidate artifact to independent hostile analysis for contradictions, gaps, ambiguities, conflicting precedence, unreachable obligations, authority leaks, and exploitable instructions.
+- **Dispatch** verifies the exact reviewed candidate and releases the production-approved Persona for its next authorized disposition.
 
 Deterministic Runtime may perform schema validation, formatting, digesting, versioning, and record linkage. Capability does not transfer Foundry authority to Runtime.
 
-## Pit disposition
+## Adversarial-review disposition
 
-A failed examination returns the exact candidate and Pit Brief to Artificer. Artificer sends each substantive defect to its native owner, coordinates permitted correction, creates a new immutable candidate version with `SUPERSEDES` lineage, and submits it for a complete new examination.
+When construction is complete, Artificer submits the exact immutable candidate version for independent adversarial review. The Adversarial Reviewer examines the Persona artifact as code. The Reviewer does not instantiate the Persona, test manifested behavior, rewrite the candidate, or decide admission.
 
-A passing examination returns the exact tested candidate and passing Pit Brief to Foundry. Foundry must verify their identity, version, digest, template, and lineage match before granting production approval.
+An adverse review returns the exact candidate and attributed findings to Artificer. Artificer sends each substantive defect to its native owner, coordinates permitted correction, creates a new immutable candidate version with `SUPERSEDES` lineage, and submits that complete version for a fresh adversarial review.
 
-Pit passage is not Foundry approval. Foundry approval is not Persona admission.
+A clean review returns the exact reviewed candidate and review record to Artificer. Foundry must verify identity, version, digest, template, and lineage before Artificer may grant production approval.
+
+A clean adversarial review is not Foundry approval. Foundry approval is not Persona admission.
 
 ## Products
 
 Foundry produces:
 
-1. a versioned Persona Candidate for Pit; and
-2. after an exact matching pass, a versioned Foundry Release Packet for Castellan.
+1. a versioned Persona Candidate for adversarial artifact review; and
+2. after a clean exact-version review and Foundry approval, a versioned Foundry Release Packet for the next authorized disposition.
 
-The release packet binds the production-approved Persona, passing Pit Brief, template fingerprint, upstream fingerprints, revision lineage, Artificer authentication, Foundry approval record, and Castellan destination.
+The release packet binds the production-approved Persona, adversarial-review record, template fingerprint, upstream fingerprints, revision lineage, Artificer authentication, Foundry approval record, and the authorized destination.
 
-Castellan alone makes Persona-admission disposition. Garrison only holds an admitted Persona.
+Foundry does not decide Persona admission. Garrison only holds an admitted Persona.
 
 ## Non-authority
 
@@ -89,7 +93,7 @@ Foundry must not:
 - author missing governance or evidence;
 - canonize traits or impersonate an exemplar;
 - alter the template within an active production case;
-- treat authentication, Pit passage, or production approval as admission;
+- treat authentication, a clean adversarial review, or production approval as admission;
 - admit or lodge a Persona;
 - create a Profile, agent definition, or platform-specific operative;
 - install a Profile, spawn an agent, or occupy a Seat;
@@ -104,8 +108,9 @@ Castellan delivers the admitted production packet.
 Sanctographer writes evidence-derived sections.
 Notary writes doctrine-derived sections.
 Artificer checks, reconciles, routes, versions, authenticates, and dispatches.
-Pit failure returns for owned correction and complete retest.
-Pit success returns for Foundry production approval.
-Castellan decides admission.
+Adversarial review attacks the completed artifact without rewriting it.
+Adverse findings return for owned correction and complete re-review.
+A clean exact-version review permits Artificer to consider production approval.
+Persona admission remains outside Foundry.
 Garrison holds what is admitted.
 ```

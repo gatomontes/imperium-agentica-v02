@@ -31,7 +31,7 @@ Mechanics do not reason, interpret evidence, decide relevance, approve substance
 | Open and preserve a Persona production case | Foundry | `open-production-case` |
 | Dispatch and correlate specialized commissions | Foundry | `dispatch-commission`, `record-specialized-return` |
 | Bind and version candidate sections | Foundry | `bind-candidate-sections`, `version-candidate` |
-| Dispatch to Pit and route its return | Foundry | `dispatch-to-pit`, `route-pit-return` |
+| Dispatch for adversarial artifact review and correlate its return | Foundry | `dispatch-for-adversarial-review`, `record-adversarial-return`, `route-adversarial-return` |
 | Record production disposition and issue release | Foundry | `record-production-disposition`, `issue-release-packet` |
 | Open and preserve an evidentiary inquiry | Hagiography | `open-inquiry` |
 | Register Chronicler assignments and returns | Hagiography | `register-assignment`, `dispatch-research-task`, `record-research-return` |
