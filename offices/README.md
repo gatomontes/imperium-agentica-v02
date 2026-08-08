@@ -20,7 +20,7 @@ artifacts exchanged by Offices must conform to the shared
 
 Mechanics do not reason, interpret evidence, decide relevance, approve substance, or create authority. Those acts belong to an occupied Seat operating through its Profile. A mechanic may execute an already-made disposition; it may not make the disposition.
 
-Imperator is the primordial owner of Imperium, not an Office. At activation it constitutes and holds the verified Offices, signs their exact current/active Profile versions, and authorizes binding of properly qualified Officers to exact Seats. Offices steward their Profiles; Conscription verifies Profile status and signature before installation; Garrison admits and lodges Personas only.
+Imperator is the primordial owner of Imperium, not an Office. At activation it constitutes and holds the verified Offices, signs their exact current/active Profile versions, and vests MasterMason with bounded runtime authority. MasterMason is non-cognizant and mechanically activates Offices, requests qualified manifestations through Conscription, binds them to exact Seats, and manages declared routes. Offices steward their Profiles; Conscription verifies Profile status and signature before installation; Garrison admits and lodges Personas only.
 
 ## Mechanical capability index
 
@@ -29,7 +29,7 @@ Imperator is the primordial owner of Imperium, not an Office. At activation it c
 | Register an Officer activation request | Conscription | `register-activation-request` |
 | Instantiate the generic-agent substrate and install an exact approved Profile | Conscription | `instantiate-generic-agent`, `install-profile` |
 | Preserve qualification and bind a successful construction | Conscription | `record-qualification-disposition`, `bind-qualified-officer` |
-| Deliver a qualified Officer for Imperator-authorized Seat binding | Conscription | `deliver-qualified-officer` |
+| Deliver a qualified Officer for MasterMason binding under Imperator-vested runtime authority | Conscription | `deliver-qualified-officer` |
 | Bootstrap the resident Recruiter through the sole mechanical spawning exception | Conscription | `bootstrap-recruiter` |
 | Open and preserve a Persona-transformation case | Laboratorium | `open-transformation-case` |
 | Bind requirements, target contract, and exact admitted Persona source | Laboratorium | `bind-transformation-inputs` |
@@ -73,6 +73,8 @@ Imperator is the primordial owner of Imperium, not an Office. At activation it c
 
 ```text
 Imperator-verified constitutional corpus
+    ↓
+Imperator-vested MasterMason runtime authority
     ↓
 Office doctrine
     ↓
