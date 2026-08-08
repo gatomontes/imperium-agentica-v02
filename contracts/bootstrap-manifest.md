@@ -37,67 +37,67 @@ unsigned_payload:
   expires_at: <timestamp-or-null>
 
   trust:
-  signature_policy: <exact-policy-id-and-digest>
-  accepted_signers:
-    - key_id: <stable-key-id>
-      public_key_digest: <digest>
-  revocation_snapshot:
-    source_id: <source>
-    generation: <generation>
-    digest: <digest>
-    valid_at: <timestamp>
+    signature_policy: <exact-policy-id-and-digest>
+    accepted_signers:
+      - key_id: <stable-key-id>
+        public_key_digest: <digest>
+    revocation_snapshot:
+      source_id: <source>
+      generation: <generation>
+      digest: <digest>
+      valid_at: <timestamp>
 
   launcher:
-  artifact: <artifact-reference>
-  version: <version>
-  digest: <digest>
-
-  mastermason:
-  artifact: <artifact-reference>
-  version: <version>
-  digest: <digest>
-  compatible_charter_generation: <exact-generation>
-
-  primordial:
-  charter:
     artifact: <artifact-reference>
     version: <version>
     digest: <digest>
 
-  offices:
-    conscription: { artifact: <reference>, version: <version>, digest: <digest> }
-    secretariat:  { artifact: <reference>, version: <version>, digest: <digest> }
-    castellan:    { artifact: <reference>, version: <version>, digest: <digest> }
-
-  seats:
-    recruiter: { artifact: <reference>, version: <version>, digest: <digest> }
-    secretary: { artifact: <reference>, version: <version>, digest: <digest> }
-    rector:    { artifact: <reference>, version: <version>, digest: <digest> }
-
-  profiles:
-    recruiter: { artifact: <reference>, version: <version>, digest: <digest> }
-    secretary: { artifact: <reference>, version: <version>, digest: <digest> }
-    rector:    { artifact: <reference>, version: <version>, digest: <digest> }
-
-  substrates:
-    recruiter: { artifact: <reference>, version: <version>, digest: <digest> }
-    secretary: { artifact: <reference>, version: <version>, digest: <digest> }
-    rector:    { artifact: <reference>, version: <version>, digest: <digest> }
-
-  routes:
-    artifact: <reference>
+  mastermason:
+    artifact: <artifact-reference>
     version: <version>
     digest: <digest>
+    compatible_charter_generation: <exact-generation>
 
-  bootstrap_machine:
-    artifact: <reference>
-    version: <version>
-    digest: <digest>
+  primordial:
+    charter:
+      artifact: <artifact-reference>
+      version: <version>
+      digest: <digest>
+
+    offices:
+      conscription: { artifact: <reference>, version: <version>, digest: <digest> }
+      secretariat:  { artifact: <reference>, version: <version>, digest: <digest> }
+      castellan:    { artifact: <reference>, version: <version>, digest: <digest> }
+
+    seats:
+      recruiter: { artifact: <reference>, version: <version>, digest: <digest> }
+      secretary: { artifact: <reference>, version: <version>, digest: <digest> }
+      rector:    { artifact: <reference>, version: <version>, digest: <digest> }
+
+    profiles:
+      recruiter: { artifact: <reference>, version: <version>, digest: <digest> }
+      secretary: { artifact: <reference>, version: <version>, digest: <digest> }
+      rector:    { artifact: <reference>, version: <version>, digest: <digest> }
+
+    substrates:
+      recruiter: { artifact: <reference>, version: <version>, digest: <digest> }
+      secretary: { artifact: <reference>, version: <version>, digest: <digest> }
+      rector:    { artifact: <reference>, version: <version>, digest: <digest> }
+
+    routes:
+      artifact: <reference>
+      version: <version>
+      digest: <digest>
+
+    bootstrap_machine:
+      artifact: <reference>
+      version: <version>
+      digest: <digest>
 
   compatibility:
-  declaration: <artifact-reference>
-  version: <version>
-  digest: <digest>
+    declaration: <artifact-reference>
+    version: <version>
+    digest: <digest>
 
 signatures:
   - key_id: <stable-key-id>
