@@ -114,7 +114,7 @@ Existence establishes no lifecycle disposition. Drafting, testing, successful ex
 The governed noun determines the disposition:
 
 - a Persona is **admitted** or rejected by Garrison under the competent admission disposition;
-- a Profile is **approved**, bound to its exact version and digest, and, for an Imperium Officer Profile, signed by Imperator before its owning Office may designate it **current/active**;
+- a Profile is **approved**, bound to its exact version and digest, by the exact competent authority established by the Charter before its owning steward may designate it **current/active**;
 - an assembled Officer or operative manifestation is **qualified** or rejected by Conscription against its exact Profile contract; and
 - a Seat is **occupied** only through the competent binding authority.
 
@@ -122,7 +122,7 @@ These terms are not interchangeable. In particular, no Profile is admitted or qu
 
 “Production” means accepted for current semantic use under the lifecycle disposition applicable to the exact constituent. It does not mean permanent, implemented, deployed, or externally authorized.
 
-Every disposition must identify the exact version, governing authority, and supporting evidence. It may later be narrowed, suspended, superseded, demoted, retired, restored, or removed. Prior versions remain distinct lineage.
+Every disposition must identify the exact version, governing authority, and supporting evidence. SuperAdmin identity does not substitute for competent artifact jurisdiction. It may later be narrowed, suspended, superseded, demoted, retired, restored, or removed. Prior versions remain distinct lineage.
 
 ### XI. Change requires reassessment
 
