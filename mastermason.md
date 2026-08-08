@@ -22,6 +22,8 @@ MasterMason may not discover, select, upgrade, repair, or substitute any primord
 
 Initial bootstrap is governed exclusively by the pinned [Bootstrap State Machine Contract](contracts/bootstrap-state-machine.md), with failures and retries governed by the pinned [Bootstrap Forward-Recovery Contract](contracts/bootstrap-forward-recovery.md). Ordinary spawning and disaster recovery do not share or enter through those machines.
 
+After `READY`, unexpected and irrecoverable loss of the ordinary Recruiter is governed exclusively by the [Recruiter Disaster-Recovery Contract](contracts/recruiter-disaster-recovery.md). MasterMason may instantiate only a fresh, recovery-only Recruiter under an exact Charter-declared authorization; it never reactivates the retired provisional Recruiter.
+
 Bootstrap and ordinary spawning inherit the same [Runtime Concurrency and Replay Primitive Contract](contracts/runtime-concurrency-replay.md). They share exact reservation, single-use commission, idempotency, expected-generation, replay-ledger, and Charter-pinning semantics while retaining separate authority, transition, readiness, and recovery machines.
 
 After the Launcher has verified the complete pinned composition, MasterMason bootstraps Imperium's primordial operational triad in dependency order:
@@ -72,6 +74,7 @@ MasterMason may:
 - start, suspend, resume, and retire Office runtime instances
 - read and enforce the authenticated Charter and verified Office, Seat, Profile, route, and lifecycle declarations
 - invoke the sole mechanical provisional-Recruiter bootstrap
+- execute the separate Charter-declared Recruiter disaster-recovery machine
 - commission occupied Conscription
 - verify returned manifestation packets
 - bind qualified manifestations to exact vacant Seats
@@ -91,6 +94,7 @@ MasterMason may not:
 - discover, select, substitute, or infer compatibility among primordial artifacts
 - operate an Office through a vacant Seat
 - accept an administrative identity as permission to bypass the Charter
+- resurrect a retired provisional or recovery Recruiter
 
 Any mismatch, ambiguity, missing authority, invalid signature, stale artifact, occupied target Seat, undeclared route, or failed invariant fails closed at the smallest dependent boundary.
 
