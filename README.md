@@ -13,7 +13,9 @@ The [Bootstrap Manifest contract](contracts/bootstrap-manifest.md) requires one
 signed, immutable artifact to pin the exact Charter, Launcher, MasterMason,
 Conscription, Secretariat, Castellan, primordial Seats, Profiles, substrates,
 routes, state machine, trust material, and compatibility declaration. No valid
-Manifest means no launch.
+Manifest means no launch. The [Bootstrap State Machine contract](contracts/bootstrap-state-machine.md)
+defines the deterministic initial-bootstrap states, guards, outputs, failures,
+and retry edges; ordinary spawning remains a separate machine.
 [`imperator.md`](imperator.md) reserves the name Imperator for the
 authenticated exceptional SuperAdmin principal. Imperator is absent from
 bootstrap and ordinary runtime sequence.

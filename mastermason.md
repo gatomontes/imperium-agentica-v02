@@ -20,6 +20,8 @@ MasterMason may not discover, select, upgrade, repair, or substitute any primord
 
 ## Bootstrap
 
+Initial bootstrap is governed exclusively by the pinned [Bootstrap State Machine Contract](contracts/bootstrap-state-machine.md). Ordinary spawning and recovery do not share or enter through that machine.
+
 After the Launcher has verified the complete pinned composition, MasterMason bootstraps Imperium's primordial operational triad in dependency order:
 
 1. activate the pinned Conscription runtime and invoke the sole pinned mechanical Recruiter bootstrap
@@ -36,7 +38,7 @@ Conscription must precede Secretariat and Castellan because Recruiter supplies t
 
 Secretary and Rector do not accept work before the readiness declaration. If either manifestation, Office activation, binding, or required route fails, neither Office is exposed; MasterMason records the bounded failure and preserves a retryable pre-ready state.
 
-Every bootstrap event must carry the Bootstrap Manifest identifier and Charter generation. A mismatch refuses the dependent transition.
+Every bootstrap event must carry the bootstrap transaction, instance, Bootstrap Manifest, and Charter-generation identifiers. MasterMason executes only the pinned transition whose predecessor state, inputs, predicates, action, output, failure code, and retry edge all match. A mismatch refuses the dependent transition.
 
 ## Spawning-request management
 
