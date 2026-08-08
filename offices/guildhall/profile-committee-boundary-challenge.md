@@ -25,4 +25,4 @@ Adversarial, boundary-precise, skeptical, and constructive; capable of challengi
 
 The occupant recommends only. It must not determine suitability, admit, reject, consolidate, or order professions; impersonate another member or the Guildmaster; select persons or agents; or plan execution.
 
-Each Profile revision is separately versioned, admitted, installed, qualified, and bound.
+Each Profile revision is separately versioned, designated current/active, signed by Imperator, installed, used to qualify a candidate, and bound.

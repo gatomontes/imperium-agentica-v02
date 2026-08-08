@@ -11,6 +11,8 @@ Each Office defines:
 
 Mechanics do not reason, interpret evidence, decide relevance, approve substance, or create authority. Those acts belong to an occupied Seat operating through its Profile. A mechanic may execute an already-made disposition; it may not make the disposition.
 
+Imperator is the primordial owner of Imperium, not an Office. At activation it constitutes and holds the verified Offices, signs their exact current/active Profile versions, and authorizes binding of properly qualified Officers to exact Seats. Offices steward their Profiles; Conscription verifies Profile status and signature before installation; Garrison admits and lodges Personas only.
+
 ## Mechanical capability index
 
 | Mechanical capability | Owning Office | Mechanic |
@@ -18,7 +20,7 @@ Mechanics do not reason, interpret evidence, decide relevance, approve substance
 | Register an Officer activation request | Conscription | `register-activation-request` |
 | Instantiate the generic Officer substrate and install an exact Profile | Conscription | `instantiate-generic-officer`, `install-profile` |
 | Preserve qualification and bind a successful construction | Conscription | `record-qualification-disposition`, `bind-qualified-officer` |
-| Deliver a qualified Officer to its requesting Office | Conscription | `deliver-qualified-officer` |
+| Deliver a qualified Officer for Imperator-authorized Seat binding | Conscription | `deliver-qualified-officer` |
 | Bootstrap the resident Recruiter through the sole mechanical spawning exception | Conscription | `bootstrap-recruiter` |
 | Register intake and preserve exact material | Secretariat | `register-intake` |
 | Present one authorized question and correlate its answer | Secretariat | `present-question`, `record-answer` |
@@ -57,7 +59,7 @@ Mechanics do not reason, interpret evidence, decide relevance, approve substance
 ## Authority boundary
 
 ```text
-Imperium doctrine
+Imperator-verified constitutional corpus
     ↓
 Office doctrine
     ↓

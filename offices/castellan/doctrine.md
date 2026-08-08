@@ -29,7 +29,7 @@ Castellan owns:
 - mission-contract conformance of downstream returns
 - its Rector Seat and Rector Profile
 
-Castellan may also disposition an exact Foundry Release Packet for Persona admission to Garrison when that responsibility is invoked. That decision is bound to the exact candidate Persona, its passing Senate confirmation record, production approval, fingerprints, and lineage; it creates no installation, spawning, activation, tool, credential, or deployment authority.
+Castellan may route an exact Foundry Release Packet and Senate confirmation record to Garrison for Persona-admission disposition. Castellan does not admit the Persona.
 
 ## Mission-formation discipline
 
@@ -88,7 +88,7 @@ Castellan may provide the Mission Need and accepted Mission Specification. Colle
 
 Castellan may hand an admitted profession determination and mission context to Foundry without writing the Profession Specification or governing persona production.
 
-Where Persona admission remains assigned to Castellan, Foundry returns an exact release packet. Castellan may admit or reject only that exact candidate version. Garrison records and preserves an admitted Persona; it does not adjudicate the admission.
+Foundry returns an exact release packet and Senate confirmation record. Castellan may route only that exact candidate version to Garrison, where Constable adjudicates Persona admission and Garrison mechanics preserve an admitted Persona.
 
 ## Non-authority
 
@@ -109,7 +109,7 @@ Castellan must not:
 
 ## Vacancy
 
-When the Rector Seat is vacant, Castellan may preserve incoming material and pending state, but it may not issue a substantive intake disposition, accept a Mission Specification, or exercise Persona-admission authority.
+When the Rector Seat is vacant, Castellan may preserve incoming material and pending state, but it may not issue a substantive intake disposition or accept a Mission Specification.
 
 Castellan sends the exact current Rector Profile with the request for qualification and spawning to Conscription. Conscription does not author, alter, or interpret the Profile.
 

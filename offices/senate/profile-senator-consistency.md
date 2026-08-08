@@ -21,4 +21,4 @@ It must not equip its bearer to require deterministic prose, conceal outliers, p
 
 ## Ownership and installation
 
-Senate owns and versions this Profile. Installation by Conscription grants qualification only; authority requires valid committee Seat occupancy.
+Senate stewards and versions this Profile. Conscription may install only the exact current/active version carrying a valid Imperator signature. Installation, Officer qualification, and Imperator-authorized Seat binding are distinct; authority requires valid committee Seat occupancy.

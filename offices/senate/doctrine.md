@@ -59,7 +59,7 @@ NOT_CONFIRMED
 CONFIRMATION_UNRESOLVED
 ```
 
-Lord Speaker alone issues the disposition. A confirmed result proceeds to Castellan for admission disposition. Failure or unresolved confirmation returns to Artificer with the complete record. Any corrected Persona receives a new version and a complete new hearing.
+Lord Speaker alone issues the disposition. A confirmed result proceeds through Castellan to Garrison for Constable's admission disposition. Failure or unresolved confirmation returns to Artificer with the complete record. Any corrected Persona receives a new version and a complete new hearing.
 
 ## Boundaries
 
