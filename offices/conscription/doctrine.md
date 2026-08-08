@@ -103,6 +103,12 @@ This exception:
 
 The mechanical bootstrap does not prove broad qualification through cognitive examination. It establishes only a provisional root Recruiter from the exact predeclared substrate, Profile, and binding. That root has no ordinary Conscription jurisdiction: it may construct and qualify exactly one distinct ordinary Recruiter successor. MasterMason then retires the provisional manifestation and binds the successor to the resident Recruiter Seat. Only the ordinary Recruiter may qualify Secretary, Rector, or any later manifestation. Both identities and the complete succession lineage remain explicit in the manifestation and occupancy records.
 
+## Recruiter disaster recovery
+
+If the ordinary Recruiter is unexpectedly and irrecoverably lost after readiness, MasterMason may enter only the separate [Recruiter Disaster-Recovery Contract](../../contracts/recruiter-disaster-recovery.md). The initial provisional Recruiter remains permanently retired.
+
+Under exact Charter-declared recovery authorization, MasterMason mechanically creates a fresh recovery Recruiter with a new identity. That manifestation may qualify exactly one distinct ordinary Recruiter successor and may perform no other Conscription work. MasterMason verifies the succession packet, atomically retires the recovery Recruiter, and binds the ordinary successor. Recovery origin and complete lineage remain explicit forever.
+
 ## Responsibilities
 
 The Recruiter:
@@ -163,6 +169,7 @@ Conscription may produce or steward:
 - delivery packet
 - provisional Recruiter bootstrap record
 - Recruiter succession packet and provenance record
+- Recruiter disaster-recovery authorization, receipts, and provenance record
 - Senate examination assembly packet
 
 ## Boundary maxim
@@ -183,5 +190,6 @@ Review this doctrine when:
 - Profile installation or qualification semantics change
 - Seat occupancy requirements change
 - any path attempts to generalize the Recruiter bootstrap
+- Recruiter loss, succession, or disaster-recovery semantics change
 - qualification begins authoring Profiles or granting Office authority
 - governing Office doctrine or shared vocabulary changes
