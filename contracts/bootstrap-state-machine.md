@@ -5,6 +5,7 @@ scope: initial-bootstrap-only
 inherits:
   - /imperium-doctrine.md
   - /contracts/bootstrap-manifest.md
+  - /contracts/runtime-concurrency-replay.md
 ---
 
 # Bootstrap State Machine Contract
@@ -15,7 +16,7 @@ This contract defines the deterministic state machine by which MasterMason conve
 
 It governs initial bootstrap only. Ordinary spawning, Office reactivation, succession, upgrade, and disaster recovery require separate state machines and may not enter through this contract.
 
-The exact serialized transition table implementing this contract must be pinned as `primordial.bootstrap_machine` in the Bootstrap Manifest. Its failure cleanup and retry actions must be pinned separately as `primordial.bootstrap_recovery_machine` under the [Bootstrap Forward-Recovery Contract](bootstrap-forward-recovery.md). Prose is explanatory; only those pinned machine-readable predicates and transitions are executable.
+The exact serialized transition table implementing this contract must be pinned as `primordial.bootstrap_machine` in the Bootstrap Manifest. Its failure cleanup and retry actions must be pinned separately as `primordial.bootstrap_recovery_machine` under the [Bootstrap Forward-Recovery Contract](bootstrap-forward-recovery.md). Prose is explanatory; only those pinned machine-readable predicates and transitions are executable. Reservation, commission, idempotency, generation, replay-ledger, and Charter-pinning semantics are inherited unchanged from the shared [Runtime Concurrency and Replay Primitive Contract](runtime-concurrency-replay.md).
 
 ## Fixed bindings
 

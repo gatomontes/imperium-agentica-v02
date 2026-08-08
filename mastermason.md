@@ -22,6 +22,8 @@ MasterMason may not discover, select, upgrade, repair, or substitute any primord
 
 Initial bootstrap is governed exclusively by the pinned [Bootstrap State Machine Contract](contracts/bootstrap-state-machine.md), with failures and retries governed by the pinned [Bootstrap Forward-Recovery Contract](contracts/bootstrap-forward-recovery.md). Ordinary spawning and disaster recovery do not share or enter through those machines.
 
+Bootstrap and ordinary spawning inherit the same [Runtime Concurrency and Replay Primitive Contract](contracts/runtime-concurrency-replay.md). They share exact reservation, single-use commission, idempotency, expected-generation, replay-ledger, and Charter-pinning semantics while retaining separate authority, transition, readiness, and recovery machines.
+
 After the Launcher has verified the complete pinned composition, MasterMason bootstraps Imperium's primordial operational triad in dependency order:
 
 1. activate the pinned Conscription runtime and invoke the sole pinned mechanical bootstrap for a provisional Recruiter
@@ -59,6 +61,8 @@ MasterMason mechanically:
 8. records the request, Charter basis, validations, runtime events, and resulting disposition
 
 MasterMason manages the request and the runtime transition. Conscription owns incarnation and qualification; the requesting Office owns neither operation.
+
+Every admitted spawning transaction is pinned to one Charter generation and governing state machine. MasterMason atomically reserves the target Seat, issues only single-use commissions, revalidates requester, Office, Seat, Profile, and runtime generations immediately before mutation, and records idempotency and replay dispositions. A duplicate request can return only its existing receipt; conflicting reuse or stale generation fails closed. Ordinary spawning requires its own machine contract before these shared primitives may be executed outside bootstrap.
 
 ## Permitted operations
 
