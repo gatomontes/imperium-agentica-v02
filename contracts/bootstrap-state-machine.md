@@ -107,7 +107,7 @@ A failed transition does not create another success state. It produces a failure
 - Action: provisional Recruiter constructs and qualifies one distinct ordinary Recruiter; MasterMason verifies the succession packet, atomically retires and vacates the provisional manifestation, and binds the successor to the same resident Recruiter Seat
 - Output: retired provisional identity and provenance record; ordinary Recruiter identity, qualification packet, binding record, and new occupancy generation
 - To: `ORDINARY_RECRUITER_BOUND`
-- Failure codes: `B80_PROVISIONAL_RECRUITER_CHANGED`, `B81_SUCCESSION_COMMISSION_MISMATCH`, `B82_SUCCESSOR_QUALIFICATION_FAILED`, `B83_SUCCESSION_PACKET_INVALID`, `B44_SUCCESSION_SWAP_FAILED`
+- Failure codes: `B30_PROVISIONAL_RECRUITER_CHANGED`, `B31_SUCCESSION_COMMISSION_MISMATCH`, `B32_SUCCESSOR_QUALIFICATION_FAILED`, `B33_SUCCESSION_PACKET_INVALID`, `B34_SUCCESSION_SWAP_FAILED`
 - Retry: same transition from `PROVISIONAL_RECRUITER_BOUND` with a new single-use commission; a failed successor identity may not be reused
 
 ### T05 — Assemble Secretary and Rector
@@ -122,8 +122,8 @@ A failed transition does not create another success state. It produces a failure
 - Action: Conscription constructs and qualifies both manifestations; MasterMason verifies both delivery packets
 - Output: sealed Secretary and Rector delivery packets plus qualification records
 - To: `TRIAD_ASSEMBLED`
-- Failure codes: `B80_RECRUITER_CHANGED`, `B81_COMMISSION_MISMATCH`, `B82_TARGET_UNAVAILABLE`, `B83_ASSEMBLY_FAILED`, `B44_QUALIFICATION_FAILED`, `B45_DELIVERY_PACKET_INVALID`
-- Retry: same transition from `RECRUITER_BOUND` with new single-use commission identifiers; success requires both valid packets from the same attempt
+- Failure codes: `B40_RECRUITER_CHANGED`, `B41_COMMISSION_MISMATCH`, `B42_TARGET_UNAVAILABLE`, `B43_ASSEMBLY_FAILED`, `B44_QUALIFICATION_FAILED`, `B45_DELIVERY_PACKET_INVALID`
+- Retry: same transition from `ORDINARY_RECRUITER_BOUND` with new single-use commission identifiers; success requires both valid packets from the same attempt
 
 ### T06 — Activate Secretariat and Castellan
 
@@ -136,7 +136,7 @@ A failed transition does not create another success state. It produces a failure
 - Action: create both Office runtimes in active-but-unavailable mode
 - Output: Secretariat and Castellan runtime identities and activation records
 - To: `OFFICES_ACTIVE`
-- Failure codes: `B80_OFFICE_MISMATCH`, `B81_PACKET_STALE`, `B82_OFFICE_EXISTS`, `B83_OFFICE_ACTIVATION_FAILED`
+- Failure codes: `B50_OFFICE_MISMATCH`, `B51_PACKET_STALE`, `B52_OFFICE_EXISTS`, `B53_OFFICE_ACTIVATION_FAILED`
 - Retry: same transition from `TRIAD_ASSEMBLED`; failure must not leave either Office addressable
 
 ### T07 — Bind triad inactive
@@ -144,14 +144,14 @@ A failed transition does not create another success state. It produces a failure
 - From: `OFFICES_ACTIVE`
 - Input: verified Secretary and Rector delivery packets and exact resident Seats
 - Predicates:
-  - Office runtime identities match T05 output
+  - Office runtime identities match T06 output
   - delivery packets and Seat reservations remain valid
   - both Seats are vacant
   - Profile and Charter generations remain pinned and unchanged
 - Action: bind Secretary and Rector as inactive occupants in one bootstrap transaction
 - Output: both binding records and occupancy generations
 - To: `TRIAD_BOUND_INACTIVE`
-- Failure codes: `B80_RUNTIME_CHANGED`, `B81_PACKET_OR_RESERVATION_INVALID`, `B82_SEAT_NOT_VACANT`, `B83_BINDING_FAILED`
+- Failure codes: `B60_RUNTIME_CHANGED`, `B61_PACKET_OR_RESERVATION_INVALID`, `B62_SEAT_NOT_VACANT`, `B63_BINDING_FAILED`
 - Retry: same transition from `OFFICES_ACTIVE`; partial binding is not a completed state and neither occupant may become active
 
 ### T08 — Verify routes
@@ -166,7 +166,7 @@ A failed transition does not create another success state. It produces a failure
 - Action: configure the pinned routes while keeping both occupants inactive
 - Output: route-configuration digest and probe record
 - To: `ROUTES_VERIFIED`
-- Failure codes: `B80_ROUTE_MISMATCH`, `B81_ENDPOINT_MISMATCH`, `B82_UNDECLARED_ROUTE`, `B83_ROUTE_PROBE_FAILED`
+- Failure codes: `B70_ROUTE_MISMATCH`, `B71_ENDPOINT_MISMATCH`, `B72_UNDECLARED_ROUTE`, `B73_ROUTE_PROBE_FAILED`
 - Retry: same transition from `TRIAD_BOUND_INACTIVE`; failed route configuration must remain closed
 
 ### T09 — Commit readiness
