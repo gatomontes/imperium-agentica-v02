@@ -53,6 +53,8 @@ Laboratorium may derive:
 
 Every candidate and released artifact must bind artifact identity, class, immutable version, source Persona identity/version/digest/admission, destination requirements and steward, target contract, transformation specification, content digest, findings, limitations, and `DERIVED_FROM`/`SUPERSEDES` lineage.
 
+Every Profile product must conform to the shared [Profile Artifact Contract](../../contracts/profile-artifact.md). Laboratorium creates the immutable Profile envelope. It does not write examination, approval, signature, current/active, supersession, revocation, or expiration into that envelope; the competent actors issue separate append-only attestations bound to its exact identity, version, and digest.
+
 ## Transformation disposition
 
 Alchemist determines whether the exact derived artifact faithfully manifests the admitted Persona within the supplied destination and target constraints. A favorable disposition permits release for examination; it does not approve, sign, activate, install, qualify, or deploy the artifact.

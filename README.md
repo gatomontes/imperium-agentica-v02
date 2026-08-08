@@ -12,9 +12,11 @@ Office's reserved jurisdiction.
 
 Laboratorium transforms admitted Personas into lineage-bound, versioned Profiles,
 skills, agent definitions, and other target-specific cognitive artifacts.
-No earlier cognitive map, runtime, implementation, schema, fixture, test, or
-continuity document remains active in this tree. Repository history preserves
-the discarded work.
+The shared machine-readable Profile envelope and lifecycle are defined in
+[`contracts/profile-artifact.md`](contracts/profile-artifact.md).
+No superseded cognitive map, runtime, implementation contract, fixture, test,
+or continuity document remains active in this tree. Repository history
+preserves the discarded work.
 
 The next implementation must begin directly from the Office architecture. It
 must not import or emulate a superseded runtime or executable contract.

@@ -128,6 +128,19 @@ Conscription and Recruiter must not:
 - allow a superseded Profile to float into an existing Officer
 - conceal bootstrap origin, failed qualification, substitutions, or version lineage
 
+## Profile contract verification
+
+Before ordinary installation, Conscription must verify the exact immutable
+envelope and complete attestation chain required by the shared
+[Profile Artifact Contract](../../contracts/profile-artifact.md). A prose
+declaration of approval or current/active status is not evidence. Missing,
+ambiguous, stale, out-of-order, digest-mismatched, or invalidly signed records
+make the Profile non-installable.
+
+An `examination_only` Profile follows only the Senate assembly lifecycle in the
+contract. It is packageable for its exact examination but never enters the
+ordinary installability path.
+
 ## Products
 
 Conscription may produce or steward:

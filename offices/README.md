@@ -14,6 +14,10 @@ Each Office defines:
 - `seat-*.md` — where Office authority is localized
 - `profile-*.md` — cognition and qualifications required to occupy a Seat
 
+Profile definitions are architectural source material. Runtime Profile
+artifacts exchanged by Offices must conform to the shared
+[`Profile Artifact Contract`](../contracts/profile-artifact.md).
+
 Mechanics do not reason, interpret evidence, decide relevance, approve substance, or create authority. Those acts belong to an occupied Seat operating through its Profile. A mechanic may execute an already-made disposition; it may not make the disposition.
 
 Imperator is the primordial owner of Imperium, not an Office. At activation it constitutes and holds the verified Offices, signs their exact current/active Profile versions, and authorizes binding of properly qualified Officers to exact Seats. Offices steward their Profiles; Conscription verifies Profile status and signature before installation; Garrison admits and lodges Personas only.
