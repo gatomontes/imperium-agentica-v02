@@ -102,6 +102,11 @@ unsigned_payload:
       version: <version>
       digest: <digest>
 
+    runtime_concurrency_replay:
+      artifact: <reference>
+      version: <version>
+      digest: <digest>
+
   compatibility:
     declaration: <artifact-reference>
     version: <version>
@@ -131,6 +136,7 @@ The Manifest pins the entire primordial operational structure:
 - permitted primordial routes
 - the [bootstrap state-machine and transition table](bootstrap-state-machine.md), governing initial bootstrap only
 - the [bootstrap forward-recovery machine](bootstrap-forward-recovery.md), governing failure cleanup and retry from durable checkpoints
+- the shared [runtime concurrency and replay primitive contract](runtime-concurrency-replay.md), including its canonical encoding and validation implementation
 - the compatibility declaration binding all named versions
 - signature policy, trusted signer keys, and the exact revocation snapshot used at launch
 

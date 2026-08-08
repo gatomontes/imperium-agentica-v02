@@ -6,6 +6,7 @@ inherits:
   - /imperium-doctrine.md
   - /contracts/bootstrap-manifest.md
   - /contracts/bootstrap-state-machine.md
+  - /contracts/runtime-concurrency-replay.md
 ---
 
 # Bootstrap Forward-Recovery Contract
@@ -14,7 +15,7 @@ inherits:
 
 This contract governs cleanup and retry after a failed initial-bootstrap transition. Bootstrap recovers forward from the last durably completed state. It never pretends that created identities, records, commissions, reservations, or runtime effects did not exist.
 
-The exact serialized recovery table implementing this contract must be pinned as `primordial.bootstrap_recovery_machine` in the Bootstrap Manifest. Prose is explanatory; MasterMason may execute only pinned machine-readable recovery actions.
+The exact serialized recovery table implementing this contract must be pinned as `primordial.bootstrap_recovery_machine` in the Bootstrap Manifest. Prose is explanatory; MasterMason may execute only pinned machine-readable recovery actions. Recovery uses the shared primitives without resetting, transferring, or weakening their replay history.
 
 ## Durable checkpoint rule
 
