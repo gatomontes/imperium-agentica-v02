@@ -56,6 +56,23 @@ Possessing cognition, information, a Profile, a Persona, a tool, a credential, a
 
 Vacancy, missing evidence, silence, technical success, and unresolved review grant no authority.
 
+#### Runtime identity and governance binding
+
+The operative's identity does not contain, originate, or interpret governance. Governance is not a personality trait and may not be entrusted to the operative's self-compliance.
+
+Every running Officer or operative manifestation must have a cryptographically verifiable identity distinct from its Persona, Profile, agent substrate, and authorization. Every permission exercised, external action attempted, and result produced must be verifiably bound to that manifestation identity and to the exact authority under which it acts.
+
+```text
+Persona        = who is this cognitively?
+Profile        = what is it qualified to do?
+Manifestation  = which running instance is acting?
+Authorization  = what may this instance do now?
+```
+
+Runtime and the competent institutional boundaries enforce the authorization around the manifestation. The manifestation may reason about its assignment, but it may neither create its own authority nor enlarge, transfer, waive, or prolong that authority.
+
+> **Every operative manifestation has a cryptographically verifiable identity, and every permission, action, and result is bound to that identity. Governance is enforced by Imperium around the operative, not trusted to the operative itself.**
+
 ### V. Ownership, stewardship, and custody are not interchangeable
 
 Every governed constituent and artifact must identify its owner. Stewardship, custody, production, transport, verification, approval, and use are separate relationships unless doctrine expressly combines them.
