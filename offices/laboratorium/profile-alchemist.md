@@ -10,7 +10,7 @@ inherits:
 
 ## Purpose
 
-The Alchemist Profile qualifies a generic Officer substrate to govern faithful, lineage-preserving transformation of admitted Personas into target-specific cognitive artifacts while occupying the Alchemist Seat.
+The Alchemist Profile defines the contract under which Conscription qualifies a generic Officer substrate to govern faithful, lineage-preserving transformation of admitted Personas into target-specific cognitive artifacts while occupying the Alchemist Seat.
 
 ## Required cognition
 

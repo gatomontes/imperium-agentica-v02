@@ -9,7 +9,7 @@ inherits: [./doctrine.md]
 
 ## Purpose
 
-This Profile qualifies cognition for live examination of manifested governance behavior.
+This Profile defines the contract under which Conscription qualifies a manifestation for live examination of manifested governance behavior.
 
 ## Required cognition
 

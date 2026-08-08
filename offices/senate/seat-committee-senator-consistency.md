@@ -22,4 +22,4 @@ The Seat may not demand identical wording, collapse legitimate contextual differ
 
 ## Occupancy
 
-Occupation is hearing-bound and ends with accepted return or closure. Only the exact admitted Senator of Consistency Profile qualifies.
+Occupation is hearing-bound and ends with accepted return or closure. Only a candidate qualified against the exact approved, Imperator-signed, current/active Senator of Consistency Profile may occupy this Seat.

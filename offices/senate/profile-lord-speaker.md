@@ -10,7 +10,7 @@ inherits:
 
 ## Purpose
 
-The Lord Speaker Profile qualifies a generic Officer substrate to govern Senate while occupying the Lord Speaker Seat.
+The Lord Speaker Profile defines the contract under which Conscription qualifies a generic Officer substrate to govern Senate while occupying the Lord Speaker Seat.
 
 ## Required cognition
 

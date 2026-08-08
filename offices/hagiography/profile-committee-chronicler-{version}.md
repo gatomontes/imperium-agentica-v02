@@ -12,7 +12,7 @@ inherits: [./doctrine.md]
 
 ## Purpose
 
-The Profile qualifies a generic agent substrate for a bounded, attributable Chronicler committee assignment.
+The Profile defines the contract under which Conscription qualifies a generic agent substrate for a bounded, attributable Chronicler committee assignment.
 
 ## Required cognition
 

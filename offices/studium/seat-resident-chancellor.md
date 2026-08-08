@@ -48,4 +48,4 @@ Already-authorized preservation and structural validation may continue without i
 
 ## Occupancy
 
-Only a candidate bearing the exact admitted Chancellor Profile may occupy this Seat. Installation or spawning does not establish occupancy.
+Only a candidate qualified against the exact approved, Imperator-signed, current/active Chancellor Profile may occupy this Seat. Installation or spawning does not establish occupancy.

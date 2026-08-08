@@ -10,7 +10,7 @@ inherits:
 
 ## Purpose
 
-The Artificer Profile qualifies a generic Officer substrate to govern Foundry's Persona-construction process while occupying the Artificer Seat.
+The Artificer Profile defines the contract under which Conscription qualifies a generic Officer substrate to govern Foundry's Persona-construction process while occupying the Artificer Seat.
 
 ## Required cognition
 

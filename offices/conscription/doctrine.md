@@ -61,6 +61,14 @@ For an operative, Conscription receives an exact approved, lineage-bound Profile
 
 Successful qualification produces a working operative eligible for the separately authorized deployment path. It does not itself grant tools, credentials, mission authority, or deployment. Conscription neither re-derives the Profile nor mutates its source Persona lineage.
 
+## Senate examination assembly path
+
+Senate may submit an assembly request containing an exact Foundry-approved, pending-admission Persona and examination contract. Conscription commissions Laboratorium to derive an `examination_only` Profile from that exact Persona, receives the returned Profile, and assembles a sealed examination assembly packet.
+
+Conscription returns the packet to Senate; it does not activate or transfer a live manifestation. The packet binds the exact Persona and Profile versions and digests, authorized generic-agent substrate, model and runtime configuration, applicable doctrine, permitted synthetic facilities, resource limits, examination identity, launch contract, expiry and disposal conditions, and an integrity digest over the complete composition.
+
+Senate-owned mechanics verify and instantiate the packet on the stand. The resulting witness has no Seat, mission, operational authority, real assets, or eligibility for reuse outside the named proceeding. Assembly success is not Persona confirmation, Profile approval, or qualification for any operational destination.
+
 ## Primordial Recruiter bootstrap
 
 Recruiter cannot cognitively construct itself before the Recruiter Seat is occupied. Conscription therefore owns one narrow mechanical exception:
@@ -102,6 +110,7 @@ The Recruiter:
 - issues the sole Conscription qualification disposition
 - returns attributable failures to the requesting Office
 - delivers only version-bound qualified Officers
+- commissions exact `examination_only` Profiles and returns sealed examination assembly packets when Senate validly requests them
 
 ## Non-authority
 
@@ -115,6 +124,7 @@ Conscription and Recruiter must not:
 - confer authority outside the requesting Seat
 - retain or reuse another Office's Profile as an independent grant
 - mechanically bootstrap any Officer other than Recruiter
+- activate, deploy, or transfer a live Senate examination witness
 - allow a superseded Profile to float into an existing Officer
 - conceal bootstrap origin, failed qualification, substitutions, or version lineage
 
@@ -131,6 +141,7 @@ Conscription may produce or steward:
 - Seat-target binding
 - delivery package
 - Recruiter bootstrap record
+- Senate examination assembly packet
 
 ## Boundary maxim
 

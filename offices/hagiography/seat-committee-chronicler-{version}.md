@@ -9,7 +9,7 @@ activation_policy: committee
 
 ## Naming rule
 
-`{version}` is replaced by the exact admitted Chronicler Profile version assigned to this committee position. Each version identifies a distinct Seat/Profile contract and preserves attribution; it is not a version of the committee as a collective entity.
+`{version}` is replaced by the exact approved, Imperator-signed, current/active Chronicler Profile version assigned to this committee position. Each version identifies a distinct Seat/Profile contract and preserves attribution; it is not a version of the committee as a collective entity.
 
 ## Purpose
 
