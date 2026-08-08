@@ -10,7 +10,7 @@ inherits:
 
 ## Purpose
 
-The Adversarial Reviewer Profile qualifies a generic Officer substrate to attack a completed Persona artifact for construction defects while occupying the Adversarial Reviewer Seat.
+The Adversarial Reviewer Profile defines the contract under which Conscription qualifies a generic Officer substrate to attack a completed Persona artifact for construction defects while occupying the Adversarial Reviewer Seat.
 
 ## Required cognition
 

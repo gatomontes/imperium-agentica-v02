@@ -50,4 +50,4 @@ Deterministic preservation and validation may continue only where already author
 
 ## Occupancy
 
-Only a candidate bearing the exact admitted Artificer Profile may occupy this Seat. Installation or spawning alone does not establish occupancy, and occupancy does not transfer Foundry ownership to the Officer.
+Only a candidate qualified against the exact approved, Imperator-signed, current/active Artificer Profile may occupy this Seat. Installation or spawning alone does not establish occupancy, and occupancy does not transfer Foundry ownership to the Officer.

@@ -23,4 +23,4 @@ The Seat may not redefine the profession, fabricate evidence, import a whole per
 
 When vacant, deterministic custody and routing may continue where authorized, but no inquiry may be cognitively scoped, evaluated, synthesized, accepted, or authenticated.
 
-Only a candidate bearing the exact admitted Sanctographer Profile may occupy this Seat. Profile installation or spawning alone does not establish occupancy.
+Only a candidate qualified against the exact approved, Imperator-signed, current/active Sanctographer Profile may occupy this Seat. Profile installation or spawning alone does not establish occupancy.

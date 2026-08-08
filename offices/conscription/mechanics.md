@@ -15,6 +15,18 @@ Instantiate the authorized generic-agent substrate identified by a valid Officer
 ## install-profile
 Install the exact supplied Profile into the correlated generic Officer instance without rewriting, supplementation, or semantic transformation; output a Profile-installation record.
 
+## register-examination-assembly-request
+Validate and preserve Senate's request, exact pending-admission Persona version and digest, Foundry approval record, examination identity and contract, authorized destination, and correlation.
+
+## commission-examination-profile
+Transmit the exact pending-admission Persona and examination contract to Laboratorium with a commission limited to one `examination_only` Profile; preserve custody, identity, digest, and correlation.
+
+## assemble-examination-packet
+After receiving Laboratorium's exact returned Profile, bind it with the exact Persona, authorized generic-agent substrate, model and runtime configuration, applicable doctrine, permitted synthetic facilities, resource limits, Senate stand launch contract, expiry and disposal conditions, and a whole-packet integrity digest. Seal the result without activating a manifestation.
+
+## deliver-examination-packet
+Return the sealed examination assembly packet to the requesting Senate case. Delivery transfers no live process, session, memory, tool connection, Seat, or operational authority.
+
 ## record-qualification-disposition
 Preserve the occupied Recruiter Seat's attributable qualification disposition, findings, Profile version, substrate instance, and intended Seat.
 

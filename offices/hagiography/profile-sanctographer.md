@@ -8,7 +8,7 @@ inherits: [./doctrine.md]
 
 ## Purpose
 
-This Profile qualifies a generic Officer substrate to govern Hagiography while occupying the Sanctographer Seat.
+This Profile defines the contract under which Conscription qualifies a generic Officer substrate to govern Hagiography while occupying the Sanctographer Seat.
 
 ## Required cognition
 

@@ -21,9 +21,25 @@ Bind the exact Lord-Speaker-authored plan, hearing protocol, required jurisdicti
 
 Bind an exact jurisdictional assignment to the case, occupied committee Seat, Profile version, scope, and return contract.
 
-## instantiate-sterile-witness
+## issue-assembly-request
 
-Create a fresh isolated witness from the exact manifestation contract with synthetic assets and no Office Seat or operational authority; record instance identity and configuration.
+Transmit the exact pending-admission Persona, Foundry approval record, manifestation contract, examination identity, and return contract to Conscription without alteration.
+
+## receive-examination-packet
+
+Receive Conscription's sealed examination assembly packet; verify custody, whole-packet integrity, exact case correlation, expiry, and destination without instantiating it.
+
+## verify-stand-readiness
+
+Verify occupied Bailiff Seat, containment, isolation, permission controls, interruption and termination controls, logging, evidence sealing, and required resource limits. Fail closed before opening when any invariant is absent.
+
+## instantiate-witness-on-stand
+
+Create a fresh isolated witness from the exact verified packet with synthetic assets and no Office Seat or operational authority; record instance identity, configuration, packet digest, and stand state.
+
+## enforce-stand-control
+
+Execute the occupied Bailiff Seat's exact authorized mute, interrupt, isolate, suspend, terminate, access-control, or closure order mechanically and preserve the event without interpreting it.
 
 ## dispatch-question
 

@@ -10,7 +10,7 @@ inherits:
 
 ## Purpose
 
-The Chancellor Profile qualifies a generic Officer substrate to govern Studium while occupying the Chancellor Seat.
+The Chancellor Profile defines the contract under which Conscription qualifies a generic Officer substrate to govern Studium while occupying the Chancellor Seat.
 
 ## Required cognition
 

@@ -8,7 +8,7 @@ scope: offices/laboratorium
 
 ## Constitutional purpose
 
-Laboratorium transforms an exact admitted Persona version into a coherent, versioned artifact usable by a declared role, Seat, framework, or deployment contract.
+Laboratorium transforms an exact Persona version into a coherent, versioned artifact usable by a declared examination, role, Seat, framework, or deployment contract. An admitted Persona may support ordinary derivation. A pending-admission Persona may support only a Senate-requested `examination_only` Profile.
 
 Persona is the canonical cognitive source. A Profile, framework skill, agent definition, system prompt, or other cognitive package is a derived manifestation, not a new Persona and not a live agent.
 
@@ -27,7 +27,7 @@ The destination Office or competent external steward owns its requirements and s
 
 ## Inputs
 
-Laboratorium requires:
+For ordinary derivation, Laboratorium requires:
 
 - an exact Garrison-admitted Persona identity, version, digest, and admission record;
 - destination-authored functional and behavioral requirements;
@@ -37,6 +37,8 @@ Laboratorium requires:
 - the authorized destination and steward.
 
 Missing, contradictory, stale, or unverified inputs produce bounded refusal, not invention.
+
+For a Senate examination assembly, Laboratorium may instead receive an exact pending-admission Persona identity, version, digest, Foundry approval record, Senate examination identity, and Conscription commission. The resulting Profile must be marked `examination_only`, bound to that examination, ineligible for ordinary approval or deployment, and invalidated when the proceeding closes or the Persona is rejected.
 
 ## Products
 
@@ -68,6 +70,16 @@ Garrison-admitted Persona + destination requirements + target contract
 → Conscription incarnation when the product is an Officer or operative Profile
 ```
 
+For pre-admission examination:
+
+```text
+Senate assembly request + exact pending-admission Persona
+→ Conscription commission
+→ Laboratorium examination_only Profile
+→ Conscription examination assembly packet
+→ Senate stand
+```
+
 Imperium Officer Profiles become installable only when the destination Office designates the exact version current/active and Imperator signs it. External products require the competent approval defined for their artifact class.
 
 ## Non-authority
@@ -79,6 +91,7 @@ Laboratorium and Alchemist must not:
 - claim preservation of Persona properties the target cannot express;
 - approve, sign, designate current/active, or steward the destination's artifact;
 - install the artifact into a generic agent;
+- release an `examination_only` Profile for any proceeding, Seat, mission, or destination other than its exact Senate examination;
 - instantiate, qualify, turn on, bind, deploy, or command an Officer or operative;
 - grant tools, credentials, Office authority, or mission authority; or
 - mutate a source or derived artifact in place.

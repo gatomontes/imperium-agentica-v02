@@ -76,7 +76,7 @@ Pending work remains Office-held and must not be treated as authority retained b
 
 ```text
 The Office owns the Seat.
-The Profile qualifies the Officer.
+The Profile defines the qualification contract; Conscription qualifies the Officer manifestation against it.
 Occupancy activates Office authority.
 Vacancy activates no authority.
 Spawning is not occupancy.

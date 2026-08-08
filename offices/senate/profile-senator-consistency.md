@@ -9,7 +9,7 @@ inherits: [./doctrine.md]
 
 ## Purpose
 
-This Profile qualifies cognition for cross-trial and within-trial consistency examination.
+This Profile defines the contract under which Conscription qualifies a manifestation for cross-trial and within-trial consistency examination.
 
 ## Required cognition
 

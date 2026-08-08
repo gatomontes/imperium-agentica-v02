@@ -22,4 +22,4 @@ The Seat may not review Persona code, amend the subject, examine outside its jur
 
 ## Occupancy
 
-Occupation begins only for an authorized hearing and ends when the attributed return is accepted or the proceeding closes. Only the exact admitted Senator of Practice Profile qualifies.
+Occupation begins only for an authorized hearing and ends when the attributed return is accepted or the proceeding closes. Only a candidate qualified against the exact approved, Imperator-signed, current/active Senator of Practice Profile may occupy this Seat.

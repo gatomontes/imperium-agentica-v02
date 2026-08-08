@@ -44,7 +44,9 @@ Office ≠ Seat ≠ Profile ≠ Persona ≠ agent substrate
        ≠ Officer or operative ≠ cognition ≠ Runtime instance
 ```
 
-An Office owns institutional jurisdiction. A Seat localizes the exercise of that jurisdiction. A Profile qualifies a candidate for a defined function. A Persona may shape manner or judgment within admitted bounds. An agent or Runtime instance supplies capacity. None silently becomes another.
+An Office owns institutional jurisdiction. A Seat localizes the exercise of that jurisdiction. A Persona is the canonical cognitive source: it establishes the admitted identity, judgment, disposition, expertise, boundaries, and behavior from which deployable cognitive artifacts are derived. A Profile is a versioned, purpose-specific usable form derived from an exact Persona version; it declares the function, authority, constraints, destination, and qualification contract for a candidate manifestation. An agent substrate or Runtime instance supplies technical capacity. None silently becomes another.
+
+A Persona does not itself occupy a Seat or perform a mission. A Profile does not itself become cognitive, qualified, or live. Laboratorium performs the governed transformation from Persona to Profile or other target-specific cognitive artifact. Conscription attaches an approved usable form to an authorized generic-agent substrate and qualifies the resulting manifestation under the artifact's declared contract.
 
 ### IV. Authority is explicit, bounded, and non-transitive
 
@@ -88,13 +90,22 @@ A handoff transfers an identified artifact or responsibility under an admitted c
 
 Transformations must preserve substance, provenance, uncertainty, version, and disposition. Summarization, normalization, packaging, translation, or reformatting may not alter governing meaning.
 
-### X. Admission is explicit and reversible
+### X. Lifecycle dispositions are explicit and reversible
 
-Existence is not admission. Drafting, testing, successful execution, merging, production placement, installation, qualification, spawning, deployment, and external authorization are distinct states.
+Existence establishes no lifecycle disposition. Drafting, testing, successful execution, merging, production placement, admission, approval, signature, current/active designation, installation, qualification, spawning, Seat occupancy, deployment, and external authorization are distinct states.
 
-“Production” means admitted for current semantic use. It does not mean permanent, implemented, deployed, or externally authorized.
+The governed noun determines the disposition:
 
-Admission must identify the exact version and evidence admitted. It may later be narrowed, suspended, superseded, demoted, retired, restored, or removed. Prior versions remain distinct lineage.
+- a Persona is **admitted** or rejected by Garrison under the competent admission disposition;
+- a Profile is **approved**, bound to its exact version and digest, and, for an Imperium Officer Profile, signed by Imperator before its owning Office may designate it **current/active**;
+- an assembled Officer or operative manifestation is **qualified** or rejected by Conscription against its exact Profile contract; and
+- a Seat is **occupied** only through the competent binding authority.
+
+These terms are not interchangeable. In particular, no Profile is admitted or qualified, and no Persona becomes approved, current/active, installed, qualified, or occupied merely because a related artifact or manifestation reaches one of those states.
+
+“Production” means accepted for current semantic use under the lifecycle disposition applicable to the exact constituent. It does not mean permanent, implemented, deployed, or externally authorized.
+
+Every disposition must identify the exact version, governing authority, and supporting evidence. It may later be narrowed, suspended, superseded, demoted, retired, restored, or removed. Prior versions remain distinct lineage.
 
 ### XI. Change requires reassessment
 
