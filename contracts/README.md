@@ -20,3 +20,6 @@ lineage, state, and evidence required by doctrine structurally explicit.
   reservation, commission, idempotency, generation-pinning, and replay
   primitives shared by bootstrap and ordinary spawning without merging their
   state machines.
+- [`recruiter-disaster-recovery.md`](recruiter-disaster-recovery.md) defines
+  the exceptional, recovery-only path that creates a fresh narrow Recruiter
+  to qualify one ordinary successor after confirmed incumbent loss.

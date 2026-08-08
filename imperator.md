@@ -26,10 +26,13 @@ Subject to exact Charter provisions, Imperator may be authorized to request:
 - emergency suspension or shutdown
 - recovery entry into a declared safe state
 - restoration from a declared recovery state
+- authorization of Recruiter disaster recovery when the Charter explicitly requires SuperAdmin assent
 - installation of an authenticated Charter successor through the separate constitutional-change procedure
 - preservation and export of administrative evidence
 
 Every exceptional act must identify the authenticated Imperator, exact command, target instance, Charter basis, reason, time, scope, and resulting runtime events.
+
+When required for Recruiter disaster recovery, Imperator authorizes only the exceptional recovery request. MasterMason establishes vacancy, validates the authorization, instantiates the recovery Recruiter, and executes the transitions. Imperator does not select, construct, qualify, bind, or operate any manifestation.
 
 ## Non-authority
 
