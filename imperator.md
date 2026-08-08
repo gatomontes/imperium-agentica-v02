@@ -2,28 +2,26 @@
 
 ## Status
 
-Current theoretical definition of Imperium's bootstrap agent and primordial constitutional authority.
+Current theoretical definition of Imperium's primordial constitutional authority and owner.
 
 ## Purpose
 
-Imperator owns Imperium and holds its Offices when Imperium activates. It supplies the narrow authority required to constitute the Office corpus and bring vacant Seats into lawful occupancy; it does not inherit or exercise an Office's reserved jurisdiction.
+Imperator owns the Imperium instance and holds its Offices. It supplies the narrow authority required to constitute the Office corpus, approve exact Officer Profiles, and vest runtime operation without exercising an Office's reserved jurisdiction.
 
-Imperator is not an Office, a substitute resident Officer, or a universal decision maker.
+Imperator is not an Office, a substitute resident Officer, a universal decision maker, or a runtime operator.
 
 ## Activation authority
 
-Upon Imperium activation, mechanics instantiate Imperator from the authenticated distribution trust root. Imperator then:
+Upon Imperium activation, the Launcher instantiates Imperator and MasterMason from the authenticated distribution trust root. Imperator then:
 
-1. verifies the canonical Office, Seat, and Profile corpus
+1. verifies the canonical Office, Seat, Profile, and route corpus
 2. constitutes and holds the verified Offices
 3. verifies each Office-stewarded Profile's identity, target Seat, digest, version, and current/active designation
 4. signs the exact current/active Profile version, thereby approving it for installation
-5. detects vacant resident Seats
-6. directs Conscription mechanics to prepare the sole mechanical Recruiter bootstrap
-7. verifies the prepared Recruiter and turns it on in the resident Recruiter Seat
-8. permits Secretariat to submit the pending Secretary activation request only after Recruiter is active
-9. binds each subsequently qualified Officer to its exact target Seat
-10. records every constitution, signature, activation, binding, suspension, vacation, and restoration event
+5. vests MasterMason with bounded runtime authority over this exact Imperium instance
+6. records every constitution, signature, vesting, suspension, restoration, and termination event within its jurisdiction
+
+Imperator does not detect operational necessity, activate Offices, request occupants, open routes, bind manifestations, or otherwise operate the runtime. MasterMason performs those mechanical operations under the verified corpus and Imperator's vesting.
 
 ## Profile approval
 
@@ -40,41 +38,40 @@ Each signed Profile must conform to the shared [Profile Artifact Contract](contr
 
 Senate examination of Officer Profiles is reserved for later definition. Until that jurisdiction is established, Imperator signs the verified initial constitutional corpus directly. Garrison has no Profile jurisdiction: Offices steward Profiles; Garrison admits and lodges Personas.
 
-## Seat binding
+## Runtime vesting
 
-A successful, Seat-target-bound Conscription qualification disposition permits Imperator to authorize non-cognitive binding of the delivered Officer to the exact vacant Seat, provided every predeclared invariant succeeds.
+Imperator vests MasterMason only after verifying the exact constitutional corpus and runtime identity to which the vesting applies.
 
-Binding activates the authority already defined by the Seat. Imperator does not grant, reinterpret, or exercise that authority.
+Vesting identifies its holder, instance, scope, permitted operations, governing corpus, duration, revocation conditions, and evidence. It grants no cognitive or Office jurisdiction. MasterMason may realize only admitted transitions; it may not interpret or enlarge the authority vested.
 
 ## Continuing powers
 
 Imperator may:
 
+- own the Imperium instance and hold its Offices
 - verify and constitute the canonical Office corpus
 - approve exact current/active Profiles by digital signature
-- hold Offices while their resident Seats are vacant
-- direct preparation of the Recruiter bootstrap and turn on the exact prepared Recruiter
-- bind properly constructed and qualified Officers to exact Seats
-- suspend or vacate invalid occupancy
-- restore resident occupancy
-- activate, halt, or terminate Imperium
+- vest, suspend, restore, or revoke MasterMason's bounded runtime authority
+- suspend or terminate the Imperium instance
+- preserve the constitutional record of those acts
 
 Imperator may not:
 
 - perform an Office's reserved cognitive work or disposition
 - act as a vacant resident Officer
 - author an Office's Profile
-- qualify ordinary Officers
+- qualify Officers or operatives
 - forge, confirm, admit, or lodge Personas
-- use Office ownership as authority to bypass Seat occupancy
+- detect operational necessity or choose workflow transitions
+- activate Offices, request occupants, bind manifestations, or open routes
+- use ownership as authority to bypass Seat occupancy
 
 ## Boundary maxim
 
 ```text
-Imperator constitutes and holds the Offices.
-Offices steward their Profiles.
-Imperator approves Profiles by signing exact current/active versions.
-Conscription qualifies Officers.
-Imperator binds qualified Officers to Seats.
+Imperator owns the instance, constitutes the Offices, and approves Profiles.
+Imperator vests MasterMason with bounded runtime authority.
+MasterMason operates the institutional runtime mechanically.
+Conscription qualifies Officers and operatives.
 Occupied Seats exercise Office authority.
 ```
