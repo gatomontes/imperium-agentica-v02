@@ -83,22 +83,25 @@ authenticated Charter + compatible MasterMason
 → validate authorized generic substrate
 → instantiate substrate
 → install Recruiter Profile exactly
-→ prepare resulting Recruiter for the exact Recruiter Seat
-→ record mechanical origin
-→ MasterMason verifies, binds, and activates Recruiter
-→ MasterMason commissions Secretary and Rector
+→ prepare provisional Recruiter for the exact Recruiter Seat
+→ record mechanical origin and succession-only authority
+→ MasterMason verifies, binds, and activates provisional Recruiter
+→ provisional Recruiter assembles and qualifies one distinct ordinary Recruiter successor
+→ MasterMason verifies the succession packet
+→ MasterMason atomically retires the provisional Recruiter and binds the ordinary Recruiter
+→ ordinary Recruiter commissions may then produce Secretary and Rector
 ```
 
 This exception:
 
-- applies only to the exact current Recruiter Profile and resident Recruiter Seat
+- applies only to the exact provisional Recruiter Profile and resident Recruiter Seat
 - requires an exact Charter-declared transition and structurally valid Profile approval chain
 - performs no interpretive selection, rewriting, discretionary qualification, or substitution
 - fails closed on any mismatch, ambiguity, missing version, invalid substrate, or occupied Seat
-- may not target another Profile, manifestation, or Seat
+- may target only one distinct ordinary Recruiter successor under the pinned succession commission and may not target Secretary, Rector, any other Profile, manifestation, or Seat
 - may not be generalized as an alternate spawning route
 
-The mechanical bootstrap does not prove broad qualification through cognitive examination. It establishes the primordial Recruiter from the exact predeclared substrate, Profile, and binding so that normal cognitive qualification can begin. Its origin remains explicit in the manifestation and occupancy records.
+The mechanical bootstrap does not prove broad qualification through cognitive examination. It establishes only a provisional root Recruiter from the exact predeclared substrate, Profile, and binding. That root has no ordinary Conscription jurisdiction: it may construct and qualify exactly one distinct ordinary Recruiter successor. MasterMason then retires the provisional manifestation and binds the successor to the resident Recruiter Seat. Only the ordinary Recruiter may qualify Secretary, Rector, or any later manifestation. Both identities and the complete succession lineage remain explicit in the manifestation and occupancy records.
 
 ## Responsibilities
 
@@ -128,7 +131,7 @@ Conscription and Recruiter must not:
 - treat construction, installation, qualification, delivery, or spawning as Seat occupancy
 - confer authority outside the target Seat or mission
 - retain or reuse another Office's Profile as an independent grant
-- mechanically bootstrap any Officer other than Recruiter
+- mechanically bootstrap any Officer other than the provisional Recruiter, or allow that provisional Recruiter to qualify anyone except its one ordinary Recruiter successor
 - activate, deploy, or transfer a live Senate examination witness
 - allow a superseded Profile to float into an existing manifestation
 - conceal bootstrap origin, failed qualification, substitutions, or version lineage
@@ -158,15 +161,17 @@ Conscription may produce or steward:
 - manifestation construction record
 - Seat-target binding proposal
 - delivery packet
-- Recruiter bootstrap record
+- provisional Recruiter bootstrap record
+- Recruiter succession packet and provenance record
 - Senate examination assembly packet
 
 ## Boundary maxim
 
 ```text
 MasterMason manages every spawning request and every runtime transition.
-Mechanics prepare Recruiter only; MasterMason binds and activates Recruiter.
-Recruiter assembles and qualifies every other manifestation.
+Mechanics prepare only the provisional Recruiter; MasterMason binds it with succession-only authority.
+The provisional Recruiter qualifies one distinct ordinary successor and is retired.
+The ordinary Recruiter assembles and qualifies every other manifestation.
 MasterMason binds qualified manifestations to their destinations.
 ```
 

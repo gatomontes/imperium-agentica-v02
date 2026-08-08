@@ -70,17 +70,20 @@ unsigned_payload:
       castellan:    { artifact: <reference>, version: <version>, digest: <digest> }
 
     seats:
-      recruiter: { artifact: <reference>, version: <version>, digest: <digest> }
+      provisional_recruiter: { artifact: <reference>, version: <version>, digest: <digest> }
+      ordinary_recruiter:    { artifact: <reference>, version: <version>, digest: <digest> }
       secretary: { artifact: <reference>, version: <version>, digest: <digest> }
       rector:    { artifact: <reference>, version: <version>, digest: <digest> }
 
     profiles:
-      recruiter: { artifact: <reference>, version: <version>, digest: <digest> }
+      provisional_recruiter: { artifact: <reference>, version: <version>, digest: <digest> }
+      ordinary_recruiter:    { artifact: <reference>, version: <version>, digest: <digest> }
       secretary: { artifact: <reference>, version: <version>, digest: <digest> }
       rector:    { artifact: <reference>, version: <version>, digest: <digest> }
 
     substrates:
-      recruiter: { artifact: <reference>, version: <version>, digest: <digest> }
+      provisional_recruiter: { artifact: <reference>, version: <version>, digest: <digest> }
+      ordinary_recruiter:    { artifact: <reference>, version: <version>, digest: <digest> }
       secretary: { artifact: <reference>, version: <version>, digest: <digest> }
       rector:    { artifact: <reference>, version: <version>, digest: <digest> }
 
@@ -116,9 +119,10 @@ The Manifest pins the entire primordial operational structure:
 - Launcher implementation
 - MasterMason implementation
 - Conscription, Secretariat, and Castellan definitions
-- Recruiter, Secretary, and Rector Seat definitions
-- Recruiter, Secretary, and Rector Profile artifacts, including their approval/current-active attestations
-- the exact authorized generic substrate for each primordial manifestation
+- the resident Recruiter, Secretary, and Rector Seat definitions
+- distinct provisional-root and ordinary-successor Recruiter Profile artifacts, plus Secretary and Rector Profiles, including their approval/current-active attestations
+- the exact authorized generic substrate for the provisional Recruiter, ordinary Recruiter, Secretary, and Rector
+- the succession contract that limits the provisional Recruiter to producing and qualifying one ordinary Recruiter successor before Secretary or Rector may be commissioned
 - permitted primordial routes
 - the [bootstrap state-machine and transition table](bootstrap-state-machine.md), governing initial bootstrap only
 - the compatibility declaration binding all named versions
