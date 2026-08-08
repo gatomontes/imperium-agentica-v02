@@ -12,21 +12,23 @@ MasterMason is not an Office, Seat, Profile, Persona, Officer, operative, or age
 
 ## Authority
 
-The Launcher verifies the Charter and compatible MasterMason implementation, then instantiates MasterMason bound to that exact Charter and Imperium instance.
+The Launcher verifies one canonical Bootstrap Manifest under [the Bootstrap Manifest contract](contracts/bootstrap-manifest.md). That Manifest pins the exact Charter generation, compatible MasterMason implementation, and entire primordial operational structure. Only after all-or-nothing verification may the Launcher instantiate MasterMason bound to that Manifest, Charter generation, and Imperium instance.
 
-MasterMason's authority is the mechanically enforceable authority declared by the authenticated Charter. No cognitive constituent grants, vests, expands, or approves that authority at runtime. MasterMason may realize only transitions that the Charter explicitly permits. Missing or non-mechanically-decidable authority is refusal, not interpretive discretion.
+MasterMason's authority is the mechanically enforceable authority declared by the authenticated Charter. No cognitive constituent grants, vests, expands, or approves that authority at runtime. MasterMason may realize only transitions that the Charter and pinned bootstrap composition explicitly permit. Missing or non-mechanically-decidable authority is refusal, not interpretive discretion.
+
+MasterMason may not discover, select, upgrade, repair, or substitute any primordial artifact. An absent, invalid, incomplete, revoked, incompatible, or mismatched Bootstrap Manifest makes launch invalid.
 
 ## Bootstrap
 
-MasterMason bootstraps Imperium's primordial operational triad in dependency order:
+After the Launcher has verified the complete pinned composition, MasterMason bootstraps Imperium's primordial operational triad in dependency order:
 
-1. activate Conscription's runtime and invoke the sole mechanical Recruiter bootstrap
-2. verify the prepared Recruiter against the declared mechanical invariants and bind it to the resident Recruiter Seat
-3. commission occupied Conscription to assemble and qualify the Secretary and Rector manifestations
-4. verify both returned manifestation packets
-5. activate Secretariat and Castellan
-6. bind Secretary and Rector to their exact resident Seats
-7. verify and open the declared Secretariat–Castellan routes
+1. activate the pinned Conscription runtime and invoke the sole pinned mechanical Recruiter bootstrap
+2. verify the prepared Recruiter against the pinned Profile, substrate, Seat, and mechanical invariants, then bind it to the resident Recruiter Seat
+3. commission occupied Conscription to assemble and qualify the pinned Secretary and Rector manifestations
+4. verify both returned manifestation packets against their pinned Profiles, substrates, Seats, and Charter generation
+5. activate the pinned Secretariat and Castellan definitions
+6. bind Secretary and Rector to their exact pinned resident Seats
+7. verify and open only the pinned Secretariat–Castellan routes
 8. declare the primordial triad ready
 9. expose Secretariat as the Operator-facing cognitive interface
 
@@ -34,11 +36,13 @@ Conscription must precede Secretariat and Castellan because Recruiter supplies t
 
 Secretary and Rector do not accept work before the readiness declaration. If either manifestation, Office activation, binding, or required route fails, neither Office is exposed; MasterMason records the bounded failure and preserves a retryable pre-ready state.
 
+Every bootstrap event must carry the Bootstrap Manifest identifier and Charter generation. A mismatch refuses the dependent transition.
+
 ## Spawning-request management
 
 Every spawning request enters through MasterMason.
 
-During bootstrap, MasterMason originates only the exact Charter-declared primordial commissions. During continuing operation, an authorized occupied Office declares institutional necessity and submits an attributable structured request to MasterMason. A vacant Seat is the target of a request; it is never the requester.
+During bootstrap, MasterMason originates only the exact Charter-declared and Manifest-pinned primordial commissions. During continuing operation, an authorized occupied Office declares institutional necessity and submits an attributable structured request to MasterMason. A vacant Seat is the target of a request; it is never the requester.
 
 MasterMason mechanically:
 
@@ -77,6 +81,7 @@ MasterMason may not:
 - create, admit, alter, or interpret a Persona
 - assemble or qualify a manifestation
 - originate authority or enlarge an admitted route
+- discover, select, substitute, or infer compatibility among primordial artifacts
 - operate an Office through a vacant Seat
 - accept an administrative identity as permission to bypass the Charter
 
@@ -86,7 +91,9 @@ Any mismatch, ambiguity, missing authority, invalid signature, stale artifact, o
 
 ```text
 The Charter commands.
-MasterMason makes the Charter executable.
+The Bootstrap Manifest pins one complete primordial composition.
+The Launcher verifies; it does not choose.
+MasterMason makes the pinned Charter executable.
 Occupied Offices declare institutional necessity.
 MasterMason manages every spawning request.
 Conscription assembles and qualifies.
