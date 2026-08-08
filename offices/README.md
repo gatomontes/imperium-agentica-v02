@@ -15,6 +15,11 @@ Mechanics do not reason, interpret evidence, decide relevance, approve substance
 
 | Mechanical capability | Owning Office | Mechanic |
 |---|---|---|
+| Register an Officer activation request | Conscription | `register-activation-request` |
+| Instantiate the generic Officer substrate and install an exact Profile | Conscription | `instantiate-generic-officer`, `install-profile` |
+| Preserve qualification and bind a successful construction | Conscription | `record-qualification-disposition`, `bind-qualified-officer` |
+| Deliver a qualified Officer to its requesting Office | Conscription | `deliver-qualified-officer` |
+| Bootstrap the resident Recruiter through the sole mechanical spawning exception | Conscription | `bootstrap-recruiter` |
 | Register intake and preserve exact material | Secretariat | `register-intake` |
 | Present one authorized question and correlate its answer | Secretariat | `present-question`, `record-answer` |
 | Package and deliver an authorized artifact | Secretariat | `package-delivery`, `deliver-package` |
