@@ -35,7 +35,8 @@ These values are immutable for the transaction. A missing or changed binding ref
 UNINITIALIZED
 → MANIFEST_BOUND
 → CONSCRIPTION_ACTIVE
-→ RECRUITER_BOUND
+→ PROVISIONAL_RECRUITER_BOUND
+→ ORDINARY_RECRUITER_BOUND
 → TRIAD_ASSEMBLED
 → OFFICES_ACTIVE
 → TRIAD_BOUND_INACTIVE
@@ -77,25 +78,41 @@ A failed transition does not create another success state. It produces a failure
 - Failure codes: `B10_CONSCRIPTION_MISMATCH`, `B11_CONSCRIPTION_EXISTS`, `B12_CONSCRIPTION_ACTIVATION_FAILED`
 - Retry: same transition from `MANIFEST_BOUND`; the failed attempt must not leave an addressable Conscription runtime
 
-### T03 — Mechanically bind Recruiter
+### T03 — Mechanically bind provisional Recruiter
 
 - From: `CONSCRIPTION_ACTIVE`
-- Input: pinned Recruiter Seat, Profile, substrate, and mechanical-bootstrap declaration
+- Input: pinned Recruiter Seat, provisional Recruiter Profile, provisional substrate, and mechanical-bootstrap declaration
 - Predicates:
   - all versions and digests match the Manifest
   - Recruiter Seat is vacant and reserved by this bootstrap transaction
-  - Profile approval/current-active attestations are valid for the bound Charter generation
+  - provisional Profile approval/current-active attestations are valid for the bound Charter generation
   - substrate and installation procedure match the pinned compatibility declaration
-  - the bootstrap declaration targets only this Recruiter Seat
-- Action: instantiate the substrate, install the exact Profile, run the pinned mechanical conformance checks, seal the manifestation, bind it, and activate the Recruiter Seat
-- Output: Recruiter manifestation identity, conformance record, binding record, occupancy generation
-- To: `RECRUITER_BOUND`
+  - the bootstrap declaration targets only this Recruiter Seat and provisional Profile
+- Action: instantiate the substrate, install the exact provisional Profile, run the pinned mechanical conformance checks, seal the manifestation, bind it, and activate it with succession-only authority
+- Output: provisional Recruiter manifestation identity, conformance record, binding record, occupancy generation, and authority-limitation record
+- To: `PROVISIONAL_RECRUITER_BOUND`
 - Failure codes: `B20_RECRUITER_ARTIFACT_MISMATCH`, `B21_RECRUITER_SEAT_UNAVAILABLE`, `B22_RECRUITER_ATTESTATION_INVALID`, `B23_RECRUITER_CONFORMANCE_FAILED`, `B24_RECRUITER_BINDING_FAILED`
 - Retry: same transition from `CONSCRIPTION_ACTIVE`; no failed candidate identity or Seat reservation may be reused unless the pinned machine explicitly marks it reusable
 
-### T04 — Assemble Secretary and Rector
+### T04 — Install ordinary Recruiter successor
 
-- From: `RECRUITER_BOUND`
+- From: `PROVISIONAL_RECRUITER_BOUND`
+- Input: one single-use succession commission containing the pinned ordinary Recruiter Profile, substrate, resident Seat, and qualification contract
+- Predicates:
+  - provisional ordinary Recruiter occupancy remains identical to T04 output
+  - its authority is limited to this exact succession commission
+  - the commission, ordinary Profile, and substrate match the Manifest and bound Charter generation
+  - the commission has not been consumed
+  - no Secretary or Rector commission exists
+- Action: provisional Recruiter constructs and qualifies one distinct ordinary Recruiter; MasterMason verifies the succession packet, atomically retires and vacates the provisional manifestation, and binds the successor to the same resident Recruiter Seat
+- Output: retired provisional identity and provenance record; ordinary Recruiter identity, qualification packet, binding record, and new occupancy generation
+- To: `ORDINARY_RECRUITER_BOUND`
+- Failure codes: `B80_PROVISIONAL_RECRUITER_CHANGED`, `B81_SUCCESSION_COMMISSION_MISMATCH`, `B82_SUCCESSOR_QUALIFICATION_FAILED`, `B83_SUCCESSION_PACKET_INVALID`, `B44_SUCCESSION_SWAP_FAILED`
+- Retry: same transition from `PROVISIONAL_RECRUITER_BOUND` with a new single-use commission; a failed successor identity may not be reused
+
+### T05 — Assemble Secretary and Rector
+
+- From: `ORDINARY_RECRUITER_BOUND`
 - Input: two single-use commissions containing the pinned Secretary and Rector Seats, Profiles, substrates, and qualification contracts
 - Predicates:
   - Recruiter occupancy remains identical to T03 output
@@ -105,10 +122,10 @@ A failed transition does not create another success state. It produces a failure
 - Action: Conscription constructs and qualifies both manifestations; MasterMason verifies both delivery packets
 - Output: sealed Secretary and Rector delivery packets plus qualification records
 - To: `TRIAD_ASSEMBLED`
-- Failure codes: `B30_RECRUITER_CHANGED`, `B31_COMMISSION_MISMATCH`, `B32_TARGET_UNAVAILABLE`, `B33_ASSEMBLY_FAILED`, `B34_QUALIFICATION_FAILED`, `B35_DELIVERY_PACKET_INVALID`
+- Failure codes: `B80_RECRUITER_CHANGED`, `B81_COMMISSION_MISMATCH`, `B82_TARGET_UNAVAILABLE`, `B83_ASSEMBLY_FAILED`, `B44_QUALIFICATION_FAILED`, `B45_DELIVERY_PACKET_INVALID`
 - Retry: same transition from `RECRUITER_BOUND` with new single-use commission identifiers; success requires both valid packets from the same attempt
 
-### T05 — Activate Secretariat and Castellan
+### T06 — Activate Secretariat and Castellan
 
 - From: `TRIAD_ASSEMBLED`
 - Input: pinned Secretariat and Castellan definitions
@@ -119,10 +136,10 @@ A failed transition does not create another success state. It produces a failure
 - Action: create both Office runtimes in active-but-unavailable mode
 - Output: Secretariat and Castellan runtime identities and activation records
 - To: `OFFICES_ACTIVE`
-- Failure codes: `B40_OFFICE_MISMATCH`, `B41_PACKET_STALE`, `B42_OFFICE_EXISTS`, `B43_OFFICE_ACTIVATION_FAILED`
+- Failure codes: `B80_OFFICE_MISMATCH`, `B81_PACKET_STALE`, `B82_OFFICE_EXISTS`, `B83_OFFICE_ACTIVATION_FAILED`
 - Retry: same transition from `TRIAD_ASSEMBLED`; failure must not leave either Office addressable
 
-### T06 — Bind triad inactive
+### T07 — Bind triad inactive
 
 - From: `OFFICES_ACTIVE`
 - Input: verified Secretary and Rector delivery packets and exact resident Seats
@@ -134,10 +151,10 @@ A failed transition does not create another success state. It produces a failure
 - Action: bind Secretary and Rector as inactive occupants in one bootstrap transaction
 - Output: both binding records and occupancy generations
 - To: `TRIAD_BOUND_INACTIVE`
-- Failure codes: `B50_RUNTIME_CHANGED`, `B51_PACKET_OR_RESERVATION_INVALID`, `B52_SEAT_NOT_VACANT`, `B53_BINDING_FAILED`
+- Failure codes: `B80_RUNTIME_CHANGED`, `B81_PACKET_OR_RESERVATION_INVALID`, `B82_SEAT_NOT_VACANT`, `B83_BINDING_FAILED`
 - Retry: same transition from `OFFICES_ACTIVE`; partial binding is not a completed state and neither occupant may become active
 
-### T07 — Verify routes
+### T08 — Verify routes
 
 - From: `TRIAD_BOUND_INACTIVE`
 - Input: pinned primordial route artifact and both occupancy generations
@@ -149,13 +166,13 @@ A failed transition does not create another success state. It produces a failure
 - Action: configure the pinned routes while keeping both occupants inactive
 - Output: route-configuration digest and probe record
 - To: `ROUTES_VERIFIED`
-- Failure codes: `B60_ROUTE_MISMATCH`, `B61_ENDPOINT_MISMATCH`, `B62_UNDECLARED_ROUTE`, `B63_ROUTE_PROBE_FAILED`
+- Failure codes: `B80_ROUTE_MISMATCH`, `B81_ENDPOINT_MISMATCH`, `B82_UNDECLARED_ROUTE`, `B83_ROUTE_PROBE_FAILED`
 - Retry: same transition from `TRIAD_BOUND_INACTIVE`; failed route configuration must remain closed
 
-### T08 — Commit readiness
+### T09 — Commit readiness
 
 - From: `ROUTES_VERIFIED`
-- Input: complete transition receipts T01–T07
+- Input: complete transition receipts T01–T08
 - Predicates:
   - every receipt belongs to the same transaction, Manifest, Charter generation, and instance
   - Recruiter, Secretary, Rector, all three Offices, bindings, and routes still match their recorded generations
@@ -163,7 +180,7 @@ A failed transition does not create another success state. It produces a failure
 - Action: atomically mark the primordial structure ready, activate Secretary and Rector, enable the verified routes, and expose Secretariat
 - Output: signed or integrity-protected readiness record and ready-generation identifier
 - To: `READY`
-- Failure codes: `B70_RECEIPT_CHAIN_INVALID`, `B71_PRIMORDIAL_STATE_CHANGED`, `B72_UNRESOLVED_FAILURE`, `B73_READINESS_COMMIT_FAILED`
+- Failure codes: `B80_RECEIPT_CHAIN_INVALID`, `B81_PRIMORDIAL_STATE_CHANGED`, `B82_UNRESOLVED_FAILURE`, `B83_READINESS_COMMIT_FAILED`
 - Retry: same transition from `ROUTES_VERIFIED` only if all predicates are freshly revalidated; otherwise refuse and require the separately governed recovery path
 
 ## Global invariants
@@ -189,6 +206,6 @@ This contract identifies allowed retry edges but does not define general rollbac
 
 ## Completion
 
-Bootstrap succeeds only when T08 durably commits `READY`. Process liveness, individual Office activation, Seat binding, or successful route probes are not bootstrap completion.
+Bootstrap succeeds only when T09 durably commits `READY`. Process liveness, individual Office activation, Seat binding, or successful route probes are not bootstrap completion.
 
 > No READY record, no operational Imperium.
