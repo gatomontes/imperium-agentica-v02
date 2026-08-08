@@ -34,10 +34,10 @@ Preserve the occupied Recruiter Seat's attributable qualification disposition, f
 Bind a successful qualification record to the constructed Officer and its intended Seat; output an Officer construction record and Seat-target binding. Binding does not occupy the Seat.
 
 ## deliver-qualified-officer
-Transmit the qualified Officer and exact construction record for Imperator-authorized binding to the target Seat; record delivery or bounded failure.
+Transmit the qualified Officer and exact construction record to MasterMason for binding to the target Seat under Imperator-vested runtime authority; record delivery or bounded failure.
 
 ## bootstrap-recruiter
-When and only when Imperator directs bootstrap preparation and the resident Recruiter Seat is vacant, mechanically validate the exact current/active, Imperator-signed Recruiter Profile and authorized generic substrate, instantiate the substrate, install that Profile, bind the resulting Recruiter exclusively to the Recruiter Seat, and record its mechanical origin. Imperator then verifies the prepared result and turns Recruiter on in the resident Recruiter Seat.
+When and only when MasterMason invokes the declared bootstrap transition under Imperator-vested runtime authority and the resident Recruiter Seat is vacant, mechanically validate the exact current/active, Imperator-signed Recruiter Profile and authorized generic substrate, instantiate the substrate, install that Profile, bind the resulting Recruiter exclusively to the Recruiter Seat, and record its mechanical origin. MasterMason then verifies the prepared result and turns Recruiter on in the resident Recruiter Seat.
 
 `bootstrap-recruiter` accepts no alternate Profile or Seat and contains no cognitive judgment. It cannot turn itself on. Any mismatch, ambiguity, missing version, invalid substrate, existing occupant, or attempted reuse fails closed.
 
