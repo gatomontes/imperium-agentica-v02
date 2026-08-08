@@ -2,7 +2,7 @@
 title: Senator of Governance Seat
 status: office-seat
 scope: offices/senate/seat-committee-senator-governance
-inherits: [/imperium-doctrine.md, ./doctrine.md]
+inherits: [./doctrine.md]
 activation_policy: committee
 ---
 

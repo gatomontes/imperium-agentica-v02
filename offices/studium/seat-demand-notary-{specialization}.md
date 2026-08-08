@@ -3,7 +3,6 @@ title: Specialized Notary Seat Contract
 status: office-seat-pattern
 scope: offices/studium/seat-demand-notary-{specialization}
 inherits:
-  - /imperium-doctrine.md
   - ./doctrine.md
 activation_policy: demand
 ---

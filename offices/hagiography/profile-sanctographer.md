@@ -2,7 +2,7 @@
 title: Sanctographer Profile
 status: office-profile
 scope: offices/hagiography/profile-sanctographer
-inherits: [/imperium-doctrine.md, ./doctrine.md]
+inherits: [./doctrine.md]
 ---
 # Sanctographer Profile
 

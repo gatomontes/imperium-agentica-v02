@@ -3,7 +3,6 @@ title: Chancellor Seat
 status: office-seat
 scope: offices/studium/seat-resident-chancellor
 inherits:
-  - /imperium-doctrine.md
   - ./doctrine.md
 activation_policy: resident
 ---

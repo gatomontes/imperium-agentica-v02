@@ -2,7 +2,7 @@
 title: Senator of Consistency Seat
 status: office-seat
 scope: offices/senate/seat-committee-senator-consistency
-inherits: [/imperium-doctrine.md, ./doctrine.md]
+inherits: [./doctrine.md]
 activation_policy: committee
 ---
 

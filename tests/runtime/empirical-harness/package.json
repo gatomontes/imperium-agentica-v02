@@ -1,8 +1,0 @@
-{
-  "name": "imperium-runtime-empirical-harness",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "test": "node --test"
-  }
-}

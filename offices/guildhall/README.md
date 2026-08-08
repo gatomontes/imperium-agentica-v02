@@ -1,7 +1,5 @@
 # Guildhall
 
-Guildhall and every constituent in this directory inherit the general canons in [`/imperium-doctrine.md`](../../imperium-doctrine.md).
-
 Guildhall is Imperium's profession-resolution Office. It determines which legitimate profession or professions an approved Work Specification requires, their boundaries, and their necessary order.
 
 This directory contains:

@@ -2,8 +2,6 @@
 title: Hagiography Doctrine
 status: office-doctrine
 scope: offices/hagiography
-inherits:
-  - /imperium-doctrine.md
 ---
 
 # Hagiography Doctrine
@@ -51,16 +49,16 @@ The whole person, identity, biography, and unrelated traits must not be imported
 
 Hagiography receives an exact Artificer commission bound to an admitted profession queue item. It produces a Sanctographer-authenticated Hagiography Research Packet containing attributable Chronicler findings, accepted evidence, derived bounded attributes and methods, limitations, uncertainty, provenance, and evidence-derived Persona sections.
 
-Sanctographer acceptance means only that Hagiography's research satisfies its commission and evidence standard. It is not Foundry approval, Pit passage, Persona admission, Profile qualification, recruitment, activation, or deployment.
+Sanctographer acceptance means only that Hagiography's research satisfies its commission and evidence standard. It is not Foundry approval, Senate confirmation, Persona admission, Profile qualification, installation, spawning, activation, or deployment.
 
 ## Relationships
 
 - **Foundry:** Artificer commissions and receives; Artificer does not rewrite Hagiography's owned substance.
 - **Studium:** Notary authors doctrine-derived sections; Hagiography does not.
-- **Pit:** may challenge inherited traits; findings return to the native owner for revision.
+- **Foundry adversarial review:** may expose contradictions, gaps, or ambiguity involving inherited traits; findings return to the native owner for revision.
 - **Guildhall:** owns profession determination; Hagiography may not redefine the profession.
 - **Garrison:** may later hold an admitted Persona but does not own Hagiography's meaning.
 
 ## Non-authority
 
-Hagiography must not invent missing evidence, engineer evidence toward a preferred conclusion, impersonate a source human, define professions, author governance doctrine, forge the complete Persona, examine it in Pit, approve or admit it, create Profiles, install Profiles, spawn agents, or deploy operatives.
+Hagiography must not invent missing evidence, engineer evidence toward a preferred conclusion, impersonate a source human, define professions, author governance doctrine, forge the complete Persona, perform adversarial artifact review or live Senate confirmation, approve or admit it, create Profiles, install Profiles, spawn agents, or deploy operatives.

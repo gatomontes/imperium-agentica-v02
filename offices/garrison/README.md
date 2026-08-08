@@ -1,7 +1,5 @@
 # Garrison
 
-Garrison and every constituent in this directory inherit the general canons in [`/imperium-doctrine.md`](../../imperium-doctrine.md).
-
 Garrison is Imperium's custody and retrieval Office for admitted Personas and qualified Profile records. It preserves exact identity, version, status, evidence, provenance, and lineage without acquiring authority over what it holds.
 
 This directory contains:

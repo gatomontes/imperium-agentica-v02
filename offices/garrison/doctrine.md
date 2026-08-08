@@ -1,6 +1,4 @@
 ---
-inherits:
-  - /imperium-doctrine.md
 ---
 
 # Garrison Doctrine
@@ -48,7 +46,7 @@ Garrison may record custody only when the competent authority provides an exact,
 - current status and status-effective time
 - the handoff correlation identity
 
-For a Persona, the chain must preserve the exact candidate, passing Pit evidence, Foundry release, competent admission disposition, and resulting custody record.
+For a Persona, the chain must preserve the exact candidate, passing Senate confirmation record, Foundry release, competent admission disposition, and resulting custody record.
 
 For a qualified Profile, the chain must preserve the Office-owned Profile version, qualification evidence, competent qualification disposition, and resulting custody record.
 
@@ -112,9 +110,9 @@ An Office retains ownership of the meaning of its Personas and Profiles. Garriso
 
 Where Castellan remains the competent Persona-admission authority, Garrison accepts only the exact admitted release package and records custody. Garrison does not adjudicate admission.
 
-### Foundry and Pit
+### Foundry and Senate
 
-Pit supplies examination evidence. Foundry produces and releases the exact approved Persona. Neither event alone authorizes Garrison custody.
+Foundry produces and releases the exact approved Persona. Senate supplies the live confirmation record for the exact tested manifestation. Neither event alone authorizes Garrison custody.
 
 ### Conscription
 

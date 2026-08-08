@@ -2,7 +2,7 @@
 title: Studium Mechanics
 status: office-mechanics
 scope: offices/studium
-inherits: [/imperium-doctrine.md, ./doctrine.md]
+inherits: [./doctrine.md]
 ---
 
 # Studium Mechanics

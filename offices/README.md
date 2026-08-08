@@ -42,8 +42,6 @@ Mechanics do not reason, interpret evidence, decide relevance, approve substance
 | Bind and version attributable doctrine sections | Studium | `bind-doctrine-sections`, `version-doctrine` |
 | Record doctrine disposition and issue its packet | Studium | `record-doctrine-disposition`, `issue-doctrine-packet` |
 | Correlate semantic amendments with revalidation duties | Studium | `register-revalidation-impact` |
-
-
 | Open and preserve a manifestation-bound confirmation case | Senate | `open-confirmation-case` |
 | Register the confirmation plan and Senator assignments | Senate | `register-confirmation-plan`, `register-senator-assignment` |
 | Create and close sterile witness instances | Senate | `instantiate-sterile-witness`, `close-witness-instance` |

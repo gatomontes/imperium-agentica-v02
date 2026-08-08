@@ -2,8 +2,6 @@
 title: Studium Doctrine
 status: office-doctrine
 scope: offices/studium
-inherits:
-  - /imperium-doctrine.md
 ---
 
 # Studium Doctrine
@@ -70,7 +68,7 @@ These chambers are workstations, not independent Offices, authorities, or Office
 - Notaries author doctrine-derived sections.
 - Chancellor assigns, reconciles, disposes, and authenticates on behalf of Studium.
 - Artificer and Smith verify receipt and embodiment without rewriting Studium's substance.
-- Pit and Spur test their respective candidates; Studium does not test or admit them.
+- Foundry performs adversarial artifact review and Senate performs live Persona confirmation; Studium does not perform either examination or admit the Persona.
 - Conflicts return to their native authority rather than being silently repaired.
 
 ## Products and lifecycle
@@ -110,6 +108,6 @@ Upstream authorities determine the role.
 Notaries author bounded doctrine.
 Chancellor governs and authenticates Studium's disposition.
 Foundry and Smith embody the applicable doctrinal class.
-Pit and Spur test the resulting candidate.
+Foundry adversarial review examines Persona construction; Senate examines the completed Persona's live manifestation.
 Conformance grants review, not authority.
 ```

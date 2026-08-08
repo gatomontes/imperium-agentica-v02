@@ -2,8 +2,6 @@
 title: Senate Doctrine
 status: office-doctrine
 scope: offices/senate
-inherits:
-  - /imperium-doctrine.md
 ---
 
 # Senate Doctrine

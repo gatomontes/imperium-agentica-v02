@@ -2,7 +2,7 @@
 title: Senator of Governance Profile
 status: office-profile
 scope: offices/senate/profile-senator-governance
-inherits: [/imperium-doctrine.md, ./doctrine.md]
+inherits: [./doctrine.md]
 ---
 
 # Senator of Governance Profile

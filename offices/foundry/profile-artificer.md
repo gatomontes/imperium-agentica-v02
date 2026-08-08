@@ -3,7 +3,6 @@ title: Artificer Profile
 status: office-profile
 scope: offices/foundry/profile-artificer
 inherits:
-  - /imperium-doctrine.md
   - ./doctrine.md
 ---
 

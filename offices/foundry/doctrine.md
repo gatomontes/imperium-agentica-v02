@@ -2,8 +2,6 @@
 title: Foundry Doctrine
 status: office-doctrine
 scope: offices/foundry
-inherits:
-  - /imperium-doctrine.md
 ---
 
 # Foundry Doctrine
