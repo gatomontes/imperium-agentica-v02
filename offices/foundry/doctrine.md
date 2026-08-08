@@ -48,7 +48,7 @@ The Persona Candidate is assembled in one tagged, versioned template while autho
 - Notary writes and authenticates doctrine-derived sections.
 - Artificer verifies authorship, completeness, schema, identity, provenance, and coherence; routes the artifact; and performs only the synthesis permitted by the admitted inputs.
 
-Artificer must not impersonate Sanctographer, Notary, Guildmaster, Rector, or Pit.
+Artificer must not impersonate Sanctographer, Notary, Guildmaster, Rector, or Adversarial Reviewer.
 
 ## Functional stations
 
@@ -81,9 +81,9 @@ Foundry produces:
 1. a versioned Persona Candidate for adversarial artifact review; and
 2. after a clean exact-version review and Foundry approval, a versioned Foundry Release Packet for the next authorized disposition.
 
-The release packet binds the production-approved Persona, adversarial-review record, template fingerprint, upstream fingerprints, revision lineage, Artificer authentication, Foundry approval record, and Castellan destination.
+The release packet binds the production-approved Persona, adversarial-review record, template fingerprint, upstream fingerprints, revision lineage, Artificer authentication, Foundry approval record, and the authorized destination.
 
-Castellan alone makes Persona-admission disposition. Garrison only holds an admitted Persona.
+Foundry does not decide Persona admission. Garrison only holds an admitted Persona.
 
 ## Non-authority
 
@@ -111,6 +111,6 @@ Artificer checks, reconciles, routes, versions, authenticates, and dispatches.
 Adversarial review attacks the completed artifact without rewriting it.
 Adverse findings return for owned correction and complete re-review.
 A clean exact-version review permits Artificer to consider production approval.
-Castellan decides admission.
+Persona admission remains outside Foundry.
 Garrison holds what is admitted.
 ```
